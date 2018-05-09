@@ -38,6 +38,11 @@ NB: Do not forget to edit `data.tex`.
 
 ## Making your index
 
+The only files to be edited when making a new index are:
+
+1. `data.tex`: Define the course attributes there (title, code, date).
+2. `main.idx`: Define the index entries there.
+
 ### `idx` File Structure
 
 `main.idx` file comes organized with a few example sections. Basically, one section represents a symbol, a digit or a letter for sorting the references. In this template:
@@ -80,28 +85,28 @@ One can format the page number by using the "`|`" symbol:
 
       \indexentry{...@\blankline|comment}{0}
 
-  > \indexentry{1b@\blankline|comment}{0}
+  > Example: `\indexentry{1b@\blankline|comment}{0}`
 
 - Insert a page break: `\newpage` (standard in LaTeX)
 
       \indexentry{...@\blankline|newpage \comment}{0}
 
-  > \indexentry{999@\blankline|newpage \comment}{0}
+  > Example: `\indexentry{999@\blankline|newpage \comment}{0}`
 
 - Fill in the page number with the book code: `\book{x}`
 
       \indexentry{...|book{x}}{...}
 
-  > \indexentry{A reference in the third book|book{3}}{123}
+  > Example: `\indexentry{A reference in the third book|book{3}}{123}`
 
 - Insert a rating with stars: `\rate{x}`
 
       \indexentry{... \rate{x}|...}{...}
 
-  > \indexentry{A very useful reference \rate{5}|book{1}}{45}
+  > Example: `\indexentry{A very useful reference \rate{5}|book{1}}{45}`
 
 - Insert graphics: `\linux`, `\mac`, `\win`, `\all`, ...
 
       \indexentry{... \[graphic]|...}{...}
 
-  > \indexentry{A Windows-related reference \win|book{2}}{67}
+  > Example: `\indexentry{A Windows-related reference \win|book{2}}{67}`
