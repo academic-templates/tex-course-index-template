@@ -50,7 +50,7 @@ The only files to be edited when making a new index are:
 - Digits are reserved for the *Categories* section (e.g. for sorting interesting resources such as tools, commands, standards, ...)
 - Letters are used normally
 
-This behavior is defined in `lib/std.ist`.
+The *Topics* and *Categories* titles are defined in `lib/std.ist`.
 
 ### LaTeX Indexing Basics
 
@@ -63,6 +63,12 @@ The raw material of an `idx` file is the `indexentry`. The signature of this com
 It is possible to provide a reference and to alias it with a desired text thanks to the "`@`" symbol:
 
     \indexentry{reference@some_text}{page_number_or_range}
+
+> **Important note**: The format of `reference` affects the index reference location. That is, an alias consisting of:
+> 
+> - 1+ digits and 1+ letters: will be sorted as a symbol, thus in the *Topics* section.
+> - only digits: will be sorted as a number, thus in the *Categories* section.
+> - 1+ letters then anything else: will be sorted as text, thus in the letter sections.
 
 It is also possible to indent a reference under another one thanks to the "`!`" symbol:
 
