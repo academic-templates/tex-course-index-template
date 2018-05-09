@@ -1,0 +1,107 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{Course Philosophy}|book{1}}{1-10}
+
+\indexentry{1b@\blankline|comment}{0}
+
+\indexentry{1c@\textbf{Definitions}|book{1}}{11-50}
+
+\indexentry{1d@\blankline|comment}{0}
+
+\indexentry{2a@\textbf{Chapters}!1) First chapter|book{2}}{1-60}
+\indexentry{2a@\textbf{Chapters}!2) Second chapter|book{2}}{61-100}
+\indexentry{2a@\textbf{Chapters}!3) Third chapter|book{3}}{1-80}
+\indexentry{2a@\textbf{Chapters}!4) Fourth chapter|book{3}}{81-120}
+
+\indexentry{2z@\blankline|comment}{0}
+
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{20@\textbf{Basic Principles}!1@\#1 First principle|book{1}}{51-60}
+\indexentry{20@\textbf{Basic Principles}!2@\#2 Second principle|book{1}}{61-70}
+\indexentry{20@\textbf{Basic Principles}!3@\#3 Third principle|book{1}}{71-80}
+\indexentry{20@\textbf{Basic Principles}!4@\#4 Fourth principle|book{1}}{81-90}
+
+\indexentry{21@\blankline|comment}{0}
+
+\indexentry{100@\textbf{Labs}!1@Lab Setup|book{4}\lab}{1}
+\indexentry{100@\textbf{Labs}!2@First lab|book{4}\lab}{2}
+\indexentry{100@\textbf{Labs}!3@Second lab|book{4}\lab}{3}
+\indexentry{100@\textbf{Labs}!4@Third lab|book{4}\lab}{4}
+
+\indexentry{101@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools}!A nice tool|book{1}}{57}
+\indexentry{200@\textbf{Tools}!Another nice tool|book{3}}{22}
+
+\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{My first reference|book{1}}{6}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{A useful reference|book{2}}{72}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Another useful reference|book{3}}{21}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Last reference|book{4}}{89}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{A sample cross-reference \goto A useful reference|comment}{0}
