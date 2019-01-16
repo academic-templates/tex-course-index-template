@@ -298,8 +298,8 @@ if __name__ == '__main__':
                         help="output IDX file (default: none)")
     parser.add_argument("-r", "--rewrite", action="store_true",
                         help="rewrite the IDX result (default: false)\n"
-                             " (that is, drop the previous imports)\n"
-                             " NB: this option has no effect without -o")
+                             " (that is, drop the previous imports)\n",
+                        note="this option has no effect without -o")
     parser.add_argument("-s", "--show", action="store_true",
                         help="show the IDX result (default: false)")
     initialize(globals())
