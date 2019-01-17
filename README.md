@@ -2,13 +2,15 @@
 
 The goal of this template is to provide a way to write very condensed indexes typically for courses with multiple books. It leverages [LaTeX indexing](https://en.wikibooks.org/wiki/LaTeX/Indexing) by using a `.idx` file for organizing the index entries. The way this template can be used is by directly editing the `.idx` file.
 
+> See folder [`examples`](examples/) for some real-life indexes which have already desmontrated their effectiveness.
+
 ## Structure
 
 The template is structured in the following way:
 
 - `main.tex`: This is the main TeX file to be compiled. No need to edit this file unless you require to adapt the layout of the course index.
 - `main.idx`: This holds the index entries of the books of the course to be indexed.
-- `data.tex`: This defines a few course-related variables (title, code and date) to be used in `main.tex`.
+- `data.tex`: This defines a few course-related variables (title, code, date and version) to be used in `main.tex`.
 - `lib`: This folder contains the images called in `main.tex` and for use in `main.idx` (useful e.g. for mentioning that a tool is only for linux ; then use the `\linux` command in the `\indexentry`).
 
 ## Compilation
@@ -40,7 +42,7 @@ NB: Do not forget to edit `data.tex`.
 
 The only files to be edited when making a new index are:
 
-1. `data.tex`: Define the course attributes there (title, code, date).
+1. `data.tex`: Define the course attributes there (title, code, date, version).
 2. `main.idx`: Define the index entries there.
 
 ### `idx` File Structure
