@@ -22,7 +22,7 @@ The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org
 3. Go to tab *Quick Build*
 4. In the field *User : (...)*, replace the command with:
 
-       makeindex %.idx -s lib/std.ist|pdflatex -synctex=1 -interaction=nonstopmode %.tex|evince %.pdf|rm %.ilg %.ind %.aux %.synctex.gz
+       makeindex %.idx -s lib/std.ist|pdflatex -synctex=1 -interaction=nonstopmode %.tex|evince %.pdf|cp %.idx %.idx.bak|rm %.ilg %.ind %.aux %.synctex.gz
 
 5. Then click *OK*
 
@@ -37,6 +37,8 @@ When editing the index with [Texmaker](https://en.wikipedia.org/wiki/Texmaker):
 This will produce `main.pdf` with all the index entries organized in a two-columns document.
 
 NB: Do not forget to edit `data.tex`.
+
+> **Important**: It could happen that Texmaker is configured to remove temporary files while exiting, including the `main.idx` file. That's why the *Quick Build* herebefore includes `cp %.idx %.idx.bak` to backup this file and not to loose hours of work adding index entries. If removal still occurred, simply restore `main.idx.bak` to `main.idx`.
 
 ## Making your index
 
