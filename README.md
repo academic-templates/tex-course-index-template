@@ -38,7 +38,7 @@ This will produce `main.pdf` with all the index entries organized in a two-colum
 
 NB: Do not forget to edit `data.tex`.
 
-> **Important**: It could happen that Texmaker is configured to remove temporary files while exiting, including the `main.idx` file. That's why the *Quick Build* herebefore includes `cp %.idx %.idx.bak` to backup this file and not to loose hours of work adding index entries. If removal still occurred, simply restore `main.idx.bak` to `main.idx`.
+> **Important**: It could happen that Texmaker is configured to remove temporary files while exiting, including `main.idx`. That's why the *Quick Build* herebefore includes `cp %.idx %.idx.bak` to backup this file and not to loose hours of work adding index entries. If removal still occurred, simply restore `main.idx.bak` to `main.idx`. Note that, consequently, the **backup is not made if you do not build the document**. So, **mind clicking regularly on the *Quick Build* button** !
 
 ## Making your index
 
