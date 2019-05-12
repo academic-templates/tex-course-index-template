@@ -4,6 +4,10 @@ The goal of this template is to provide a way to write very condensed indexes ty
 
 > See folder [`examples`](examples/) for some real-life indexes which have already desmontrated their effectiveness.
 
+Here is an example preview:
+
+![](doc/preview.png)
+
 ## Structure
 
 The template is structured in the following way:
