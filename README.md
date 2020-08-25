@@ -12,10 +12,10 @@ Here is an example preview:
 
 The template is structured in the following way:
 
-- `main.tex`: This is the main TeX file to be compiled. No need to edit this file unless you require to adapt the layout of the course index.
-- `main.idx`: This holds the index entries of the books of the course to be indexed.
-- `data.tex`: This defines a few course-related variables (title, code, date and version) to be used in `main.tex`.
-- `lib`: This folder contains the images called in `main.tex` and for use in `main.idx` (useful e.g. for mentioning that a tool is only for linux ; then use the `\linux` command in the `\indexentry`).
+- [`main.tex`](src/main.tex): This is the main TeX file to be compiled. No need to edit this file unless you require to adapt the layout of the course index.
+- [`main.idx`](src/main.idx): This holds the index entries of the books of the course to be indexed.
+- [`data.tex`](src/data.tex): This defines a few course-related variables (title, code, date and version) to be used in [`main.tex`](src/main.tex).
+- [`lib`](src/lib): This folder contains the images called in [`main.tex`](src/main.tex) and for use in [`main.idx`](src/main.idx) (useful e.g. for mentioning that a tool is only for linux ; then use the `\linux` command in the `\indexentry`).
 
 ## Compilation
 
@@ -32,15 +32,15 @@ The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org
 
 When editing the index with [Texmaker](https://en.wikipedia.org/wiki/Texmaker):
 
-1. Open `main.tex`
+1. Open [`main.tex`](src/main.tex)
 2. Go to the menu *Options*
 3. Select *Define Current Document as "Master Document"*
-4. Open `main.idx` for edition
+4. Open [`main.idx`](src/main.idx) for edition
 5. Click on *Quick Build* to compile
 
-This will produce `main.pdf` with all the index entries organized in a two-columns document.
+This will produce [`main.pdf`](src/main.pdf) with all the index entries organized in a two-columns document.
 
-NB: Do not forget to edit `data.tex`.
+NB: Do not forget to edit [`data.tex`](src/data.tex).
 
 > **Important**: It could happen that Texmaker is configured to remove temporary files while exiting, including `main.idx`. That's why the *Quick Build* herebefore includes `cp %.idx %.idx.bak` to backup this file and not to loose hours of work adding index entries. If removal still occurred, simply restore `main.idx.bak` to `main.idx`. Note that, consequently, the **backup is not made if you do not build the document**. So, **mind clicking regularly on the *Quick Build* button** !
 
@@ -48,17 +48,17 @@ NB: Do not forget to edit `data.tex`.
 
 The only files to be edited when making a new index are:
 
-1. `data.tex`: Define the course attributes there (title, code, date, version).
-2. `main.idx`: Define the index entries there.
+1. [`data.tex`](src/data.tex): Define the course attributes there (title, code, date, version).
+2. [`main.idx`](src/main.idx): Define the index entries there.
 
 ### `idx` File Structure
 
-`main.idx` file comes organized with a few example sections. Basically, one section represents a symbol, a digit or a letter for sorting the references. In this template:
+[`main.idx`](src/main.idx) file comes organized with a few example sections. Basically, one section represents a symbol, a digit or a letter for sorting the references. In this template:
 - Symbols are reserved for the *Topics* section (e.g. for providing the course structure)
 - Digits are reserved for the *Categories* section (e.g. for sorting interesting resources such as tools, commands, standards, ...)
 - Letters are used normally
 
-The *Topics* and *Categories* titles are defined in `lib/std.ist`.
+The *Topics* and *Categories* titles are defined in [`lib/std.ist`](src/lib/std.ist).
 
 ### LaTeX Indexing Basics
 
@@ -124,3 +124,25 @@ One can format the page number by using the "`|`" symbol:
       \indexentry{... \[graphic]|...}{...}
 
   > Example: `\indexentry{A Windows-related reference \win|book{2}}{67}`
+
+
+### Predefined Icons
+
+For convenience, multiple shorcuts are predefined in [`main.tex`](src/main.tex) and the [`lib`](src/lib) folder for displaying icons:
+
+- `\all`: cross-platform ; Linux, Windows and Mac
+- `\android`: Android
+- `\cloud`: cloud icon with a server
+- `\coin`: dollar (for paid asset)
+- `\ios`: iOS
+- `\linux`: Linux
+- `\mac`: Mac OS
+- `\note`: paper note with a pen
+- `\portable`: USB key
+- `\python`: Python script
+- `\script`: general-purpose script
+- `\question`: red question mark (e.g. for pointing an entry related to an exam question)
+- `\solaris`: Soralis
+- `\web`: Web-related asset
+- `\win`: Windows
+
