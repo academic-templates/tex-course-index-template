@@ -9,6 +9,7 @@ SANS course indexes:
 - [:link:](https://www.sans.org/course/web-app-penetration-testing-ethical-hacking) [SEC542 – Web App Pen Testing & Ethical Hacking](sans/sec542.pdf)
 - [:link:](https://www.sans.org/course/network-penetration-testing-ethical-hacking) [SEC560 – Network Pen Testing & Ethical Hacking](sans/sec560.pdf)
 - [:link:](https://www.sans.org/course/implementing-auditing-critical-security-controls) [SEC566 – Implementing & Auditing CSC In Depth](sans/sec566.pdf)
+- [:link:](https://www.sans.org/cyber-security-courses/mobile-device-security-ethical-hacking/) [SEC575 – Mobile Device Security and Ethical Hacking](sans/sec575.pdf)
 
 > **Disclaimer**: At the time of adding these indexes to this repository, they relate to outdated versions of the corresponding courses and are therefore hard to use with more recent versions.
 
