@@ -6,7 +6,8 @@ The goal of this template is to provide a way to write very condensed indexes ty
 
 Here is an example preview:
 
-<p align="center"><img src="https://raw.githubusercontent.com/dhondta/tex-course-index-template/master/doc/preview.png"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dhondta/tex-course-index-template/master/doc/preview.png">
+<sub><sup>Preview image generated with <a href="https://gist.github.com/dhondta/f57dfde304905644ca5c43e48c249125">this tool</a></sup></sub></p>
 
 ## Structure
 
