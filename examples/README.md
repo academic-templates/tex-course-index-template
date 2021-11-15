@@ -12,6 +12,7 @@ SANS courses:
 | ![GPEN](https://www.giac.org/images/design/custom/icons/certs/small/gpen-gold.png) | [:link:](https://www.sans.org/course/network-penetration-testing-ethical-hacking) [SEC560 – Network Pen Testing & Ethical Hacking](sans/sec560.pdf) |
 | ![GCCC](https://www.giac.org/images/design/custom/icons/certs/small/gccc-gold.png) | [:link:](https://www.sans.org/course/implementing-auditing-critical-security-controls) [SEC566 – Implementing & Auditing CSC In Depth](sans/sec566.pdf) |
 | ![GMOB](https://www.giac.org/images/design/custom/icons/certs/small/gmob-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/mobile-device-security-ethical-hacking/) [SEC575 – Mobile Device Security and Ethical Hacking](sans/sec575.pdf) |
+| ![GCPN](https://www.giac.org/images/design/custom/icons/certs/small/gcpn-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/cloud-penetration-testing/) [SEC588 – Cloud Penetration Testing](sans/sec588.pdf) |
 
 > **Other courses**: See https://github.com/ancailliau/sans-indexes
 
