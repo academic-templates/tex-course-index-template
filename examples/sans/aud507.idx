@@ -1,0 +1,1420 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{Effective Audit, Risk Assessment \& Report}!1) Introduction|book{1}}{2-30}
+\indexentry{1a@\textbf{Effective Audit, Risk Assessment \& Report}!2) Basic Risk|book{1}}{31-40}
+\indexentry{1a@\textbf{Effective Audit, Risk Assessment \& Report}!3) Practical Risk Assessment|book{1}}{41-63}
+\indexentry{1a@\textbf{Effective Audit, Risk Assessment \& Report}!4) Time Based Security|book{1}}{64-93}
+\indexentry{1a@\textbf{Effective Audit, Risk Assessment \& Report}!5) The Audit Process|book{1}}{94-128}
+\indexentry{1a@\textbf{Effective Audit, Risk Assessment \& Report}!6) Auditing the Cloud|book{1}}{129-160}
+
+\indexentry{1x@\blankline|comment}{0}
+\indexentry{1y@\blankline|comment}{0}
+\indexentry{1z@\blankline|comment}{0}
+
+\indexentry{2a@\textbf{Effective Network \& Perimeter Auditing}!1) Introduction|book{2}}{2-7}
+\indexentry{2a@\textbf{Effective Network \& Perimeter Auditing}!2) Networks|book{2}}{8-37}
+\indexentry{2a@\textbf{Effective Network \& Perimeter Auditing}!3) Firewalls \& Routers|book{2}}{38-82}
+\indexentry{2a@\textbf{Effective Network \& Perimeter Auditing}!4) Network Access|book{2}}{83-97}
+\indexentry{2a@\textbf{Effective Network \& Perimeter Auditing}!5) Public Services|book{2}}{98-114}
+\indexentry{2a@\textbf{Effective Network \& Perimeter Auditing}!6) Population Auditing|book{2}}{115-125}
+\indexentry{2a@\textbf{Effective Network \& Perimeter Auditing}!7) Remediation|book{2}}{126-139}
+
+\indexentry{2x@\blankline|comment}{0}
+\indexentry{2y@\blankline|comment}{0}
+\indexentry{2z@\blankline|comment}{0}
+
+\indexentry{3a@\textbf{Web Application Auditing}!1) Stating the Problem|book{3}}{3-22}
+\indexentry{3a@\textbf{Web Application Auditing}!2) Web Basics|book{3}}{23-52}
+\indexentry{3a@\textbf{Web Application Auditing}!3) Server Security|book{3}}{53-66}
+\indexentry{3a@\textbf{Web Application Auditing}!4) Configuration Testing|book{3}}{67-80}
+\indexentry{3a@\textbf{Web Application Auditing}!5) Authentication|book{3}}{81-98}
+\indexentry{3a@\textbf{Web Application Auditing}!6) Session Management|book{3}}{99-122}
+\indexentry{3a@\textbf{Web Application Auditing}!7) Sensitive Information|book{3}}{123-175}
+
+\indexentry{3x@\blankline|comment}{0}
+\indexentry{3y@\blankline|comment}{0}
+\indexentry{3z@\blankline|comment}{0}
+
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!1) Introduction|book{4}}{3-12}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!2) WMIC|book{4}}{13-24}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!3) Scripting Basics|book{4}}{25-44}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!4) Basic System Information|book{4}}{45-76}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!5) Users, Groups \& Passwords|book{4}}{77-110}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!6) Protecting Data|book{4}}{111-134}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!7) OS \& Application Security|book{4}}{135-156}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!8) Auditing \& Logging|book{4}}{157-180}
+\indexentry{4a@\textbf{Advanced Windows Auditing \& Monitoring}!9) Continuous Monitoring|book{4}}{181-185}
+
+\indexentry{4x@\blankline|comment}{0}
+\indexentry{4y@\blankline|comment}{0}
+\indexentry{4z@\blankline|comment}{0}
+
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!1) Introduction|book{5}}{3-4}
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!2) Accreditation|book{5}}{5-10}
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!3) Scripting|book{5}}{11-40}
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!4) Auditing Unix|book{5}}{41-56}
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!5) Objectives \& Activities|book{5}}{57-140}
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!6) Unix Logging|book{5}}{141-152}
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!7) Extra Tools \& Ongoing Auditing|book{5}}{153-161}
+\indexentry{5a@\textbf{Advanced Unix Auditing \& Monitoring}!Appendix - Unix Basics|book{5}}{161-193}
+
+\indexentry{5z@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{10@\textbf{Summary}!Auditing|book{1}}{30}
+\indexentry{10@\textbf{Summary}!Time Based Security|book{1}}{93}
+\indexentry{10@\textbf{Summary}!Web Applications|book{3}}{22}
+\indexentry{10@\textbf{Summary}!Web Applications}{51}
+\indexentry{10@\textbf{Summary}!Web Applications}{78-79}
+\indexentry{10@\textbf{Summary}!Authentication|book{3}}{97}
+\indexentry{10@\textbf{Summary}!Session Tracking|book{3}}{121}
+\indexentry{10@\textbf{Summary}!Sensitive Information|book{3}}{174}
+
+\indexentry{11@\blankline|comment}{0}
+
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!01@ 1- Basic OS Information|book{4}}{47-48}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!02@  2- System Patches/Updates|book{4}}{55}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!03@  3- Unnecessary Components/Services|book{4}}{64}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!04@  4- Valid Users|book{4}}{80}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!05@  5- Appropriate Groups|book{4}}{96}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!06@  6- Strong Passwords|book{4}}{99}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!07@  7- Restrict Access to Resources|book{4}}{111}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!08@  8- File Integrity|book{4}}{131}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!09@  9- OS-Specific Vulnerabilities|book{4}}{136}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!10@  10- Audit Trail|book{4}}{157}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!11@  11- Log Review \& Mgt|book{4}}{166}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!11@  11- Log Review \& Mgt}{169}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\win!11@  11- Log Review \& Mgt}{176}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!01@ 1- System Information|book{5}}{58}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!02@ 2- Operating Profile (Services)|book{5}}{67}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!03@ 3- Unauthorized Access (Network-level)|book{5}}{84}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!04@ 4- User Management/Access|book{5}}{90}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!05@ 5- Unauthorized Access (User-level)|book{5}}{105}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!06@ 6- Unauthorized Access (Critical files)|book{5}}{105}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!07@ 7- Operating Profile (Info disclosure)|book{5}}{127}
+\indexentry{14@\textbf{Audit Objectives \& Activities}!\linux!08@ 8- Secure Configuration|book{5}}{135}
+
+\indexentry{15@\blankline|comment}{0}
+
+\indexentry{20@\textbf{Checklist Items}!Virtualization|book{1}}{160}
+\indexentry{20@\textbf{Checklist Items}!VLAN|book{2}}{15}
+\indexentry{20@\textbf{Checklist Items}!Cisco|book{2}}{18}
+\indexentry{20@\textbf{Checklist Items}!SNMP|book{2}}{21}
+\indexentry{20@\textbf{Checklist Items}!Logging|book{2}}{22}
+\indexentry{20@\textbf{Checklist Items}!Patching|book{2}}{24}
+\indexentry{20@\textbf{Checklist Items}!Network Device|book{2}}{40}
+\indexentry{20@\textbf{Checklist Items}!Routing Protections|book{2}}{65}
+\indexentry{20@\textbf{Checklist Items}!Out of Band Management|book{2}}{95}
+\indexentry{20@\textbf{Checklist Items}!Third Parties / Contracts|book{2}}{96}
+\indexentry{20@\textbf{Checklist Items}!DNS|book{2}}{104}
+\indexentry{20@\textbf{Checklist Items}!Web Application|book{3}}{78-79}
+\indexentry{20@\textbf{Checklist Items}!Authentication|book{3}}{97}
+\indexentry{20@\textbf{Checklist Items}!Session Tracking|book{3}}{121}
+\indexentry{20@\textbf{Checklist Items}!Web Application Input/Output|book{3}}{174}
+\indexentry{20@\textbf{Checklist Items}!Basic OS Information \win|book{4}}{51}
+\indexentry{20@\textbf{Checklist Items}!System Patches/Updates \win|book{4}}{63}
+\indexentry{20@\textbf{Checklist Items}!Unnecessary Components/Services \win|book{4}}{75}
+\indexentry{20@\textbf{Checklist Items}!User Account Management \win|book{4}}{108}
+\indexentry{20@\textbf{Checklist Items}!Group Management \win|book{4}}{108}
+\indexentry{20@\textbf{Checklist Items}!Passwords \win|book{4}}{108}
+\indexentry{20@\textbf{Checklist Items}!Permissions \win|book{4}}{133}
+\indexentry{20@\textbf{Checklist Items}!Group Policy \win|book{4}}{146-147}
+\indexentry{20@\textbf{Checklist Items}!Security Policy \win|book{4}}{153}
+\indexentry{20@\textbf{Checklist Items}!Network Behavior \linux|book{5}}{81}
+
+\indexentry{21@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Network Miner \win|book{2}}{37}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!HPing|book{2}}{55-56}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Firewalk|book{2}}{56}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Socat|book{2}}{65}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Nipper \win|book{2}}{81}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!InSSIDer \win|book{2}}{84}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!InSSIDer \win}{97}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!LinSSID \linux|book{2}}{97}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Mapper@\texttt{mapper.rb}|book{2}}{107}
+\indexentry{200@\textbf{Tools}!Security@\textbf{Security Assessment}!Metasploit|book{2}}{107}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!NetScanToolsPro \win \coin|book{2}}{113}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Nslookup|book{2}}{114}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Nmap|book{2}}{120-121}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!OpenView NMS|book{2}}{120}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Netdisco|book{2}}{120}
+\indexentry{200@\textbf{Tools}!Reporting@\textbf{Reporting}!Yandiff|book{2}}{124}
+\indexentry{200@\textbf{Tools}!Reporting@\textbf{Reporting}!QualysGuard \coin|book{2}}{136}
+\indexentry{200@\textbf{Tools}!Reporting@\textbf{Reporting}!OpenVMS|book{2}}{137}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!WebScarab|book{3}}{49}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!WebScarab}{52}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!BURP Suite|book{3}}{50}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!BURP Suite}{52}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!URLScan|book{3}}{69}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!IISBanner|book{3}}{69}
+\indexentry{200@\textbf{Tools}!Reporting@\textbf{Reporting}!Nessus \coin|book{3}}{72}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!WebInspect|book{3}}{74}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!Wikto|book{3}}{74}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!Acunetix|book{3}}{74}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!AppScan|book{3}}{74}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!N-Stalker|book{3}}{74}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!WebScarab}{77}
+\indexentry{200@\textbf{Tools}!Reporting@\textbf{Reporting}!Nessus \coin}{77}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!Brutus|book{3}}{96}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!Hydra|book{3}}{96}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!Burp|book{3}}{96}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!WebScarab}{117}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!J-Baah|book{3}}{117}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!WebScarab}{119}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!BURP Suite}{119}
+\indexentry{200@\textbf{Tools}!Web@\textbf{Web}!J-Baah}{119}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WMIC|book{4}}{13-24}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Powershell|book{4}}{43-44}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Systeminfo@\texttt{systeminfo.exe}|book{4}}{48-50}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Msinfo32@\texttt{msinfo32.exe}|book{4}}{48}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Ver@\texttt{ver}|book{4}}{48}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Winver@\texttt{winver}|book{4}}{48}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WMIC}{49}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Psinfo (Sysinternals)|book{4}}{52}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WMIC}{53-54}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!MBSA|book{4}}{56}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!HFNetChk|book{4}}{56}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!WSUS|book{4}}{56}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!SCCM|book{4}}{56}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!Patchlink|book{4}}{56}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!Shavlik|book{4}}{56}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!BigFix|book{4}}{56}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!WSUS}{60-61}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!SCCM}{60}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!Patchlink}{60}
+\indexentry{200@\textbf{Tools}!Patch@\textbf{Patch \win}!BigFix}{60}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!MMC|book{4}}{60}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Nmap@ |book{4}}{64}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Netstat|book{4}}{64}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Psservice (Sysinternals)|book{4}}{64}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Sc@\texttt{sc.exe}|book{4}}{64}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Tasklist|book{4}}{64}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!MMC}{67}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WMIC}{67}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Psservice (Sysinternals)}{67}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Sc@\texttt{sc.exe}}{67}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Tasklist}{67}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Netstat}{67}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Nmap@ }{68}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!FPort|book{4}}{69}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Openports|book{4}}{69}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!MMC}{70-71}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WMIC}{70}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Psservice (Sysinternals)}{71}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Sc@\texttt{sc.exe}}{71}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WMIC}{72}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Tasklist}{73}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WMIC}{74}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Net|book{4}}{80}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Addusers|book{4}}{80}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!DumpSec|book{4}}{80}
+\indexentry{200@\textbf{Tools}!Active Directory@\textbf{Active Directory \win}!DSQuery|book{4}}{82-87}
+\indexentry{200@\textbf{Tools}!Active Directory@\textbf{Active Directory \win}!DSQuery}{91}
+\indexentry{200@\textbf{Tools}!Active Directory@\textbf{Active Directory \win}!ADSchema@\texttt{ADSchema.xls}|book{4}}{96}
+\indexentry{200@\textbf{Tools}!Active Directory@\textbf{Active Directory \win}!ADExplorer|book{4}}{93}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!DumpSec}{94}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Hyena|book{4}}{94}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!DumpSec}{96}
+\indexentry{200@\textbf{Tools}!Active Directory@\textbf{Active Directory \win}!DSQuery}{96}
+\indexentry{200@\textbf{Tools}!Active Directory@\textbf{Active Directory \win}!DSQuery}{98}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Net}{98}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Showmbrs/Showusrs|book{4}}{98}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!DumpSec}{99}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!LophtCrack|book{4}}{106}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!Rainbowcrack|book{4}}{106}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!Cain \& Abel|book{4}}{106}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!John The Ripper|book{4}}{106}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!MBSA}{106}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!FGDump|book{4}}{107}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!PWDumpX|book{4}}{107}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!AccessEnum (Sysinternals)|book{4}}{111}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!DumpSec}{111}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!SCA (MMC)|book{4}}{111}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Mimikatz|book{4}}{114}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Cacls@\texttt{cacls.exe}|book{4}}{114}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!DumpSec}{126}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!ShareEnum (Sysinternals)|book{4}}{130}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!DumpSec}{130}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!WinInterrogate|book{4}}{132}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!SCA (MMC)}{140-144}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Secedit@\texttt{secedit.exe}|book{4}}{143}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Gpupdate@\texttt{gpupdate.exe}|book{4}}{143}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Group Policy Editor|book{4}}{145}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Group Policy|book{4}}{148}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Gpresult@\texttt{gpresult.exe}|book{4}}{148}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!SCA (MMC)}{149-150}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Secedit@\texttt{secedit.exe}}{149}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!GPMC|book{4}}{152}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!RSoP|book{4}}{152}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!MBSA}{155}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Event Viewer|book{4}}{158}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!LogParser|book{4}}{158}
+\indexentry{200@\textbf{Tools}!Log Management@\textbf{Log Management \win}!Splunk|book{4}}{177}
+\indexentry{200@\textbf{Tools}!Log Management@\textbf{Log Management \win}!ArcSight|book{4}}{177}
+\indexentry{200@\textbf{Tools}!Log Management@\textbf{Log Management \win}!MOM/ACS|book{4}}{177}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!ACS|book{4}}{178}
+\indexentry{200@\textbf{Tools}!System@\textbf{System \win}!Event Viewer}{178}
+\indexentry{200@\textbf{Tools}!Log Management@\textbf{Log Management \win}!DAD/Lassie|book{4}}{179-180}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Gcc@\texttt{gcc}|book{5}}{52}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Ldd@\texttt{ldd}|book{5}}{52}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Script@\texttt{script}|book{5}}{55}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Uname@\texttt{uname}|book{5}}{59}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Mount@\texttt{mount}|book{5}}{60}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Fdisk@\texttt{fdisk}|book{5}}{61}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Free@\texttt{free}|book{5}}{64}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Patchdiag@\texttt{patchdiag}|book{5}}{65}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Up2date@\texttt{up2date}|book{5}}{65}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Netstat@ |book{5}}{67-69}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Lsof@\texttt{lsof}|book{5}}{67}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Ps@\texttt{ps}|book{5}}{67}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Top@\texttt{top}|book{5}}{67}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Chkconfig@\texttt{chkconfig}|book{5}}{68}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Lsof@\texttt{lsof}}{70-71}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Inetd@\texttt{inetd}|book{5}}{72-73}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Xinetd@\texttt{xinetd}|book{5}}{72}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Xinetd@\texttt{xinetd}}{74-75}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Launchd@\texttt{launchd}|book{5}}{76}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Initctl@\texttt{initctl}|book{5}}{77}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Launchctl@\texttt{launchctl}|book{5}}{79}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!PSlist@\texttt{pslist}|book{5}}{79}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Sysctl@\texttt{sysctl}|book{5}}{82-83}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Inetd@\texttt{inetd}}{85}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Mail@\texttt{mail}|book{5}}{87}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Inetd@\texttt{inetd}}{88}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Xinetd@\texttt{xinetd}}{88}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Inittab@\texttt{inittab}|book{5}}{95}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Useradd@\texttt{useradd}|book{5}}{102}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Su@\texttt{su}|book{5}}{102}
+\indexentry{200@\textbf{Tools}!Cracking@\textbf{Cracking}!John The Ripper@ |book{5}}{104}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Su@\texttt{su}}{106}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Sudo@\texttt{sudo}|book{5}}{106}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Find@\texttt{find}|book{5}}{108-110}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Touch@\texttt{touch}|book{5}}{110-111}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Lsof@\texttt{lsof}}{113}
+\indexentry{200@\textbf{Tools}!Reporting@\textbf{Reporting}!Tripwire|book{5}}{117-124}
+\indexentry{200@\textbf{Tools}!File Integrity@\textbf{File Integrity \linux}!Tripwire|book{5}}{117-124}
+\indexentry{200@\textbf{Tools}!File Integrity@\textbf{File Integrity \linux}!Samhain|book{5}}{117}
+\indexentry{200@\textbf{Tools}!File Integrity@\textbf{File Integrity \linux}!AIDE|book{5}}{117}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Rpm@\texttt{rpm}|book{5}}{125-126}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Pkginfo@\texttt{pkginfo}|book{5}}{126}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Rpcinfo@\texttt{rpcinfo}|book{5}}{128}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Exportfs@\texttt{exportfs}|book{5}}{128-129}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Mount@\texttt{mount}}{128}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Mount@\texttt{mount}}{130}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Rpcinfo@\texttt{rpcinfo}}{131}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Ps@\texttt{ps}}{131}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Ifconfig@\texttt{ifconfig}|book{5}}{131}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Ifstatus@\texttt{ifstatus}|book{5}}{131}
+\indexentry{200@\textbf{Tools}!Security@\textbf{Security Assessment}!Lynis \linux|book{5}}{136}
+\indexentry{200@\textbf{Tools}!Security@\textbf{Security Assessment}!Tiger \linux|book{5}}{137-138}
+\indexentry{200@\textbf{Tools}!Security@\textbf{Security Assessment}!COPS|book{5}}{137}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Finger@\texttt{finger}|book{5}}{144}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Users@\texttt{users}|book{5}}{144}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Who@\texttt{who}|book{5}}{144-146}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Finger@\texttt{finger}}{146}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Last@\texttt{last}|book{5}}{146-147}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Lastb@\texttt{lastb}|book{5}}{148-149}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Touch@\texttt{touch}}{148}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Last@\texttt{last}}{149}
+\indexentry{200@\textbf{Tools}!Network@\textbf{Network}!Nfstrace@\texttt{nfstrace}|book{5}}{154}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Chkwtmp@\texttt{chkwtmp}|book{5}}{155-156}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Chklastlog@\texttt{chklastlog}|book{5}}{155-156}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Chkrootkit@\texttt{chkrootkit}|book{5}}{156}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Lsof@\texttt{lsof}}{156}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Chmod@\texttt{chmod}|book{5}}{174}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Ls@\texttt{ls}|book{5}}{176}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Cat@\texttt{cat}|book{5}}{177}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!More@\texttt{more}|book{5}}{178}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Less@\texttt{less}|book{5}}{178}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Head@\texttt{head}|book{5}}{178}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Tail@\texttt{tail}|book{5}}{178}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Man@\texttt{man}|book{5}}{179}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Apropos@\texttt{apropos}|book{5}}{179}
+\indexentry{200@\textbf{Tools}!System2@\textbf{System \linux}!Rpcinfo@\texttt{rpcinfo}}{185}
+
+\indexentry{209@\blankline|comment}{0}
+
+\indexentry{210@\textbf{Labs}!1.1 Calculating Samples \& Errors|book{1}}{118}
+\indexentry{210@\textbf{Labs}!1.2 Examining an ESXi Server|book{1}}{161}
+\indexentry{210@\textbf{Labs}!2.1 Layer 2 Traffic|book{2}}{37}
+\indexentry{210@\textbf{Labs}!2.2 Network Response|book{2}}{56}
+\indexentry{210@\textbf{Labs}!2.3 Firewall Config, ACLs and Validation|book{2}}{81}
+\indexentry{210@\textbf{Labs}!2.4 Wireless Clients|book{2}}{97}
+\indexentry{210@\textbf{Labs}!2.5 DNS \& SMTP Configuration|book{2}}{114}
+\indexentry{210@\textbf{Labs}!2.6 Network Population Management|book{2}}{125}
+\indexentry{210@\textbf{Labs}!3.1 Using Burp/WebScarab|book{3}}{52}
+\indexentry{210@\textbf{Labs}!3.2 WebScarab Fuzzing|book{3}}{80}
+\indexentry{210@\textbf{Labs}!3.3 Brute Forcing|book{3}}{98}
+\indexentry{210@\textbf{Labs}!3.4 Session Analysis|book{3}}{122}
+\indexentry{210@\textbf{Labs}!3.5 Complete Audit|book{3}}{175}
+\indexentry{210@\textbf{Labs}!4.1 WMIC|book{4}}{16}
+\indexentry{210@\textbf{Labs}!4.1 WMIC}{19}
+\indexentry{210@\textbf{Labs}!4.1 WMIC}{23}
+\indexentry{210@\textbf{Labs}!4.2 Basic Windows Scripting|book{4}}{41}
+\indexentry{210@\textbf{Labs}!4.1 WMIC}{53-54}
+\indexentry{210@\textbf{Labs}!4.3 Open Ports \& Running Services|book{4}}{76}
+\indexentry{210@\textbf{Labs}!4.4 LDAP/DSQuery|book{4}}{92}
+\indexentry{210@\textbf{Labs}!4.5 Users, Groups \& Passwords|book{4}}{109}
+\indexentry{210@\textbf{Labs}!4.6 Protecting Data|book{4}}{134}
+\indexentry{210@\textbf{Labs}!4.7 Security Config \& Analysis|book{4}}{154}
+\indexentry{210@\textbf{Labs}!5.1 Basic Unix Scripting|book{5}}{14-16}
+\indexentry{210@\textbf{Labs}!5.1 Basic Unix Scripting}{20-22}
+\indexentry{210@\textbf{Labs}!5.1 Basic Unix Scripting}{36}
+\indexentry{210@\textbf{Labs}!5.1 Basic Unix Scripting}{39}
+\indexentry{210@\textbf{Labs}!5.2 Auditing Unix|book{5}}{56}
+\indexentry{210@\textbf{Labs}!5.3 User Mgt \& Unauthorized Access|book{5}}{114}
+\indexentry{210@\textbf{Labs}!5.4 Operating Profile \& Secure Config|book{5}}{139}
+\indexentry{210@\textbf{Labs}!5.5 Logging \& Additional Tools|book{5}}{159}
+
+%\indexentry{219@\blankline|comment}{0}
+
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}|book{1}}{12}
+%
+%\indexentry{299@\blankline|comment}{0}
+
+%\indexentry{300@\textbf{Download Sources}!Blocklist Text Files For Firewalls|book{4}}{10}
+%
+%\indexentry{349@\blankline|comment}{0}
+%
+%\indexentry{350@\textbf{CD-ROM Files}!\cmd{Set-ServiceRecoveryOptions.ps1}|book{5}}{32}
+%
+\indexentry{999@\blankline|newpage \comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Auditing Terms|book{1}}{9}
+\indexentry{Security Audit|book{1}}{9}
+\indexentry{Audit|book{1}}{9}
+\indexentry{Audit!Exception|book{1}}{9}
+\indexentry{Audit!Levels|book{1}}{9}
+\indexentry{Policy|book{1}}{9}
+\indexentry{Firewall|book{1}}{11}
+\indexentry{Controls|book{1}}{13}
+\indexentry{Objectives|book{1}}{13}
+\indexentry{Mission Statement|book{1}}{13-15}
+\indexentry{Strategy|book{1}}{15}
+\indexentry{Auditor|book{1}}{16}
+\indexentry{Sysadmins|book{1}}{16}
+\indexentry{Baseline|book{1}}{17-19}
+\indexentry{Checklists|book{1}}{20-22}
+\indexentry{Entrance Conference|book{1}}{22}
+\indexentry{Policy}{23}
+\indexentry{Incident Handling|book{1}}{23}
+\indexentry{Hoelzer's Law|book{1}}{24}
+\indexentry{Principles!Hoelzer's Law|book{1}}{24}
+\indexentry{Speed Limit Test|book{1}}{25}
+\indexentry{Cooperative Audit|book{1}}{28}
+\indexentry{Elevator Statements|book{1}}{29}
+\indexentry{Risk|book{1}}{32}
+\indexentry{Risk!Assessment!Formula|book{1}}{32}
+\indexentry{Threat|book{1}}{32}
+\indexentry{Vulnerability|book{1}}{32}
+\indexentry{Formula|book{1}}{32}
+\indexentry{Threat!Internal|book{1}}{33-40}
+\indexentry{Vulnerability}{37}
+\indexentry{Risk!Assessment|book{1}}{41}
+\indexentry{Controls}{42-43}
+\indexentry{Standards|book{1}}{42}
+\indexentry{Audit!Fail|book{1}}{42-44}
+\indexentry{Correct Process|book{1}}{45}
+\indexentry{Standards}{45}
+\indexentry{Critical Processes|book{1}}{45}
+\indexentry{Risk!Assessment!Characteristics|book{1}}{46}
+\indexentry{Strategy}{47}
+\indexentry{Root Cause|book{1}}{47-48}
+\indexentry{Event Tree|book{1}}{50-54}
+\indexentry{Controls}{50-51}
+\indexentry{Critical Failure|book{1}}{50}
+\indexentry{Failure Scenario|book{1}}{51}
+\indexentry{Audit!Exception}{51}
+\indexentry{CCA!Use Case (Event Tree)|book{1}}{52-54}
+\indexentry{Downtime|book{1}}{55}
+\indexentry{Formula}{55}
+\indexentry{Fault Tree|book{1}}{57-60}
+\indexentry{CCA!Use Case (Fault Tree)|book{1}}{59}
+\indexentry{CCA|book{1}}{60}
+\indexentry{Consequence Cause Analysis|book{1}}{60}
+\indexentry{Event Tree}{60}
+\indexentry{Auditor}{61}
+\indexentry{Fix|book{1}}{61}
+\indexentry{Root Cause}{60-61}
+\indexentry{CCA}{62}
+\indexentry{Risk!Assessment}{62}
+\indexentry{Controls}{62}
+\indexentry{Standards}{63}
+\indexentry{Time Based Security|book{1}}{65-93}
+\indexentry{Defense-in-Depth|book{1}}{67-69}
+\indexentry{Time Based Security!Formula|book{1}}{70-72}
+\indexentry{Formula}{70}
+\indexentry{Time Based Security!Lessons Learned|book{1}}{72}
+\indexentry{Defense-in-Depth}{73}
+\indexentry{Time Based Security!Use Case|book{1}}{75}
+\indexentry{Time Based Security!Analysis Process|book{1}}{76-79}
+\indexentry{Risk!Assessment!Use Case (Wireless)|book{1}}{81-83}
+\indexentry{Kerckhoffs' Principle|book{1}}{83}
+\indexentry{Principles!Kerckhoffs|book{1}}{83}
+\indexentry{Subjective Risk Analysis|book{1}}{83}
+\indexentry{Time Based Security!Exposure Time|book{1}}{84}
+\indexentry{Risk!Assessment!Use Case (Wireless)}{85}
+\indexentry{Risk!Analysis Process Using TBS|book{1}}{82-89}
+\indexentry{Time Based Security!Exposure Time}{88}
+\indexentry{Time Based Security!Exposure Time}{90}
+\indexentry{Time Based Security!Auditing|book{1}}{91}
+\indexentry{Risk!Assessment!Formula}{92}
+\indexentry{Auditor!Primary Objective|book{1}}{96-97}
+\indexentry{Auditor!Reporting|book{1}}{98}
+\indexentry{Six-Step Auditing Process|book{1}}{98}
+\indexentry{Six-Step Auditing Process!1- Audit Planning|book{1}}{100-106}
+\indexentry{Audit!Planning|book{1}}{100-106}
+\indexentry{FISCAM|book{1}}{102}
+\indexentry{COBIT|book{1}}{102}
+\indexentry{CONNECT|book{1}}{102}
+\indexentry{CIS|book{1}}{103}
+\indexentry{Strategy}{106}
+\indexentry{Six-Step Auditing Process!2- Entrance Conference|book{1}}{107-110}
+\indexentry{Entrance Conference}{107-110}
+\indexentry{Six-Step Auditing Process!3- Fieldwork|book{1}}{111-118}
+\indexentry{Fieldwork|book{1}}{111-118}
+\indexentry{Sampling|book{1}}{114-118}
+\indexentry{Six-Step Auditing Process!4- Preparing the Report|book{1}}{119-120}
+\indexentry{Reporting|book{1}}{119-120}
+\indexentry{Six-Step Auditing Process!5- Exit Conference|book{1}}{121-124}
+\indexentry{Exit Conference|book{1}}{121-124}
+\indexentry{Six-Step Auditing Process!6- Report to Management|book{1}}{125-128}
+\indexentry{Report to Management|book{1}}{125-128}
+\indexentry{NIST|book{1}}{130}
+\indexentry{Cloud|book{1}}{130}
+\indexentry{Cloud!Auditing|book{1}}{131}
+\indexentry{Cloud}{132-133}
+\indexentry{IaaS|book{1}}{133}
+\indexentry{PaaS|book{1}}{133}
+\indexentry{SaaS|book{1}}{133}
+\indexentry{Cloud!Hybrid|book{1}}{133}
+\indexentry{Cloud!Auditing}{134-135}
+\indexentry{Virtualization|book{1}}{134-161}
+\indexentry{Virtualization!Lessons Learned|book{1}}{135}
+\indexentry{Hypervisor|book{1}}{136}
+\indexentry{ESXi|book{1}}{136}
+\indexentry{vSphere|book{1}}{136-138}
+\indexentry{VSAN|book{1}}{137}
+\indexentry{NSX|book{1}}{137}
+\indexentry{ESXi}{138-146}
+\indexentry{SSH|book{1}}{140}
+\indexentry{ESXi!Remote|book{1}}{141}
+\indexentry{ESXi!Password|book{1}}{145}
+\indexentry{ESXi!Setup Guide|book{1}}{146}
+\indexentry{vSphere}{146}
+\indexentry{vSphere!Admin Role|book{1}}{146}
+\indexentry{DC|book{1}}{149}
+\indexentry{SoD|book{1}}{150}
+\indexentry{Principles!Separation of Duties|book{1}}{150}
+\indexentry{Virtualization!Cluster|book{1}}{149}
+\indexentry{Virtualization!Audit Checklist|book{1}}{160}
+\indexentry{Domain Administrators|book{1}}{151-152}
+\indexentry{PoLP|book{1}}{152}
+\indexentry{Principles!Least Privileges|book{1}}{152}
+\indexentry{SoD}{152}
+\indexentry{Principles!Separation of Duties}{152}
+\indexentry{Network Segregation|book{1}}{153-159}
+\indexentry{VMKernel|book{1}}{155-157}
+\indexentry{SAN|book{1}}{155-159}
+\indexentry{SAN!Permissions|book{1}}{157}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Risk!Driven Process|book{2}}{5}
+\indexentry{Ethernet|book{2}}{9}
+\indexentry{Switch|book{2}}{10}
+\indexentry{VLAN|book{2}}{11-15}
+\indexentry{L2 Management Protocols|book{2}}{13}
+\indexentry{VTP|book{2}}{13-14}
+\indexentry{GVRP|book{2}}{13}
+\indexentry{MVRP|book{2}}{13}
+\indexentry{STP|book{2}}{13-14}
+\indexentry{MSTP|book{2}}{13}
+\indexentry{SPB|book{2}}{13}
+\indexentry{TRILL|book{2}}{13-14}
+\indexentry{SSL|book{2}}{16}
+\indexentry{IPSec|book{2}}{16}
+\indexentry{SSH@ |book{2}}{16}
+\indexentry{SNMP|book{2}}{16}
+\indexentry{TACACS|book{2}}{17-18}
+\indexentry{RADIUS|book{2}}{17-19}
+\indexentry{Cisco|book{2}}{17-20}
+\indexentry{AAA|book{2}}{18-19}
+\indexentry{SSH@ }{19}
+\indexentry{Cisco!Configuration Example|book{2}}{19}
+\indexentry{Switch!Configuration Example|book{2}}{19}
+\indexentry{Cisco!Password Type 5 \& 7|book{2}}{20}
+\indexentry{Credentials|book{2}}{20}
+\indexentry{SNMP}{21}
+\indexentry{DES|book{2}}{21}
+\indexentry{AES|book{2}}{21}
+\indexentry{Logging|book{2}}{22}
+\indexentry{Cisco!Configuration Example}{23}
+\indexentry{NTP|book{2}}{23}
+\indexentry{Switch!Configuration Example}{23}
+\indexentry{Patching|book{2}}{24-25}
+\indexentry{Administrator|book{2}}{25}
+\indexentry{PoLP@ |book{2}}{26}
+\indexentry{Principles!Least Privileges@ |book{2}}{26}
+\indexentry{Principles!Economy of Mechanism|book{2}}{26}
+\indexentry{BOOTP|book{2}}{26-27}
+\indexentry{CDP|book{2}}{26-27}
+\indexentry{Principles!Unneeded Services|book{2}}{26}
+\indexentry{Services|book{2}}{26-27}
+\indexentry{Cisco!Configuration Example}{27}
+\indexentry{Switch!Configuration Example}{27}
+\indexentry{VAX|book{2}}{27}
+\indexentry{VMS|book{2}}{27}
+\indexentry{MOP|book{2}}{27}
+\indexentry{LLDP|book{2}}{27}
+\indexentry{VLAN}{28-30}
+\indexentry{L2 Management Protocols}{28}
+\indexentry{VOIP|book{2}}{28}
+\indexentry{VTP}{28-29}
+\indexentry{STP}{28-29}
+\indexentry{BPDU|book{2}}{28-29}
+\indexentry{Cisco!Configuration Example}{29}
+\indexentry{Switch!Configuration Example}{29}
+\indexentry{Cisco!Configuration Example}{31}
+\indexentry{Switch!Configuration Example}{31}
+\indexentry{Switch!ARP Attack|book{2}}{32}
+\indexentry{ARP|book{2}}{32}
+\indexentry{Switch!Private VLAN Bypass|book{2}}{33}
+\indexentry{Private VLAN Bypass|book{2}}{33}
+\indexentry{MAC|book{2}}{32}
+\indexentry{L2 Management Protocols}{34}
+\indexentry{VTP}{34}
+\indexentry{GVRP}{34}
+\indexentry{STP}{34}
+\indexentry{MSTP}{34}
+%\indexentry{HSRP|book{2}}{34}
+%\indexentry{VLMP|book{2}}{34}
+\indexentry{MVRP}{34}
+\indexentry{L2 Management Protocols}{36}
+\indexentry{Defense-in-Depth@ |book{2}}{40-41}
+\indexentry{Patching}{40}
+\indexentry{ACL|book{2}}{40}
+\indexentry{Standards@ |book{2}}{40}
+\indexentry{PCI|book{2}}{42}
+\indexentry{Information Flow|book{2}}{42-49}
+\indexentry{VPN|book{2}}{50}
+\indexentry{Firewall!Information Flow|book{2}}{50}
+\indexentry{IPSec}{50}
+\indexentry{Topology (adding Firewall)|book{2}}{50-51}
+\indexentry{Firewall! |book{2}}{50-54}
+\indexentry{Firewall!Types|book{2}}{52}
+\indexentry{Stateful Filtering|book{2}}{52}
+\indexentry{Proxy|book{2}}{52}
+\indexentry{Static Packet Filtering|book{2}}{52-54}
+\indexentry{ACL}{52-53}
+\indexentry{Router|book{2}}{52}
+\indexentry{Three-way Handshake|book{2}}{54}
+\indexentry{ACK|book{2}}{54-55}
+\indexentry{SYN|book{2}}{54-55}
+\indexentry{Cisco}{54}
+\indexentry{ACK!Crafting|book{2}}{55}
+\indexentry{PCI}{57}
+\indexentry{Stateful Filtering}{58}
+\indexentry{ACL}{59-66}
+\indexentry{ACK}{58}
+\indexentry{SYN}{58}
+\indexentry{Cisco}{59}
+\indexentry{ACL!Types|book{2}}{59}
+\indexentry{ACL!Example|book{2}}{60}
+\indexentry{Cisco!Configuration Example}{60}
+\indexentry{Switch!Configuration Example}{60}
+\indexentry{Cisco}{61-62}
+\indexentry{Wildcards|book{2}}{61-62}
+\indexentry{Firewall!Rules|book{2}}{63-64}
+\indexentry{Router}{64}
+\indexentry{Routing Protection|book{2}}{65}
+\indexentry{RIP|book{2}}{65}
+\indexentry{OSPF|book{2}}{65}
+\indexentry{EIGRP|book{2}}{65}
+\indexentry{ICMP|book{2}}{65-66}
+\indexentry{IPv6|book{2}}{65-66}
+\indexentry{Source Routing|book{2}}{65-69}
+\indexentry{Source Routing!Example|book{2}}{67-69}
+\indexentry{Firewall!Rules}{70}
+\indexentry{Firewall!Validation|book{2}}{71-80}
+\indexentry{Firewall!Rules}{72}
+\indexentry{Rules|book{2}}{72}
+\indexentry{Sniffer|book{2}}{73-74}
+\indexentry{Principles!Validation|book{2}}{75}
+\indexentry{Validation How To|book{2}}{75-76}
+\indexentry{Auditor! |book{2}}{76}
+\indexentry{Administrator}{76}
+\indexentry{Netscreen|book{2}}{79}
+\indexentry{Firewall!Next Generation|book{2}}{82}
+\indexentry{Deep Packet Inspection|book{2}}{82}
+\indexentry{Wireless|book{2}}{84-92}
+\indexentry{CSMA/C[A,D]|book{2}}{84}
+\indexentry{WPA2|book{2}}{84}
+\indexentry{Enterprise Mode|book{2}}{84}
+\indexentry{Wireless!Encryption|book{2}}{85-87}
+\indexentry{WEP|book{2}}{85}
+\indexentry{RC-4|book{2}}{85-87}
+\indexentry{PFS|book{2}}{85}
+\indexentry{IV|book{2}}{85}
+\indexentry{DSSS|book{2}}{85}
+\indexentry{WPA|book{2}}{86}
+\indexentry{TKIP|book{2}}{86}
+\indexentry{WPA2}{87}
+\indexentry{AES}{87}
+\indexentry{PSK|book{2}}{87}
+\indexentry{Enterprise Mode}{87-88}
+\indexentry{EAP|book{2}}{88}
+\indexentry{Vulnerability!Scanner|book{2}}{89}
+\indexentry{Sniffer}{89}
+\indexentry{MAC!Filtering|book{2}}{90}
+\indexentry{Wireless!IPS|book{2}}{91}
+\indexentry{Wireless!Typical Deployment|book{2}}{92}
+\indexentry{VPN}{93-95}
+\indexentry{SoD@ |book{2}}{93}
+\indexentry{Principles!Separation of Duties@ |book{2}}{93}
+\indexentry{Principles!Economy of Mechanism}{93}
+\indexentry{Out of Band Management|book{2}}{95}
+\indexentry{Third Parties|book{2}}{96}
+\indexentry{Contracts|book{2}}{96}
+\indexentry{Principles|book{2}}{99}
+\indexentry{Patching}{100}
+\indexentry{Time Based Security!Example|book{2}}{101}
+\indexentry{DNS|book{2}}{102-108}
+\indexentry{Whois|book{2}}{102}
+\indexentry{Social Engineering|book{2}}{103}
+\indexentry{DNS!Zone Transfer|book{2}}{104}
+\indexentry{DNS!Recursion|book{2}}{104}
+\indexentry{DNS!Cache Poisoning|book{2}}{104}
+\indexentry{Zone Transfer|book{2}}{104}
+\indexentry{Split-DNS|book{2}}{105}
+\indexentry{DNS!Reverse Query|book{2}}{106}
+\indexentry{DNSSec|book{2}}{108}
+\indexentry{SMTP|book{2}}{109-113}
+\indexentry{DNS}{113}
+\indexentry{Smarthost|book{2}}{109}
+\indexentry{VRFY|book{2}}{110}
+\indexentry{EXPN|book{2}}{110}
+\indexentry{OWA|book{2}}{111}
+\indexentry{S/MIME|book{2}}{112}
+\indexentry{PGP|book{2}}{112}
+\indexentry{CRL|book{2}}{112}
+\indexentry{PKI|book{2}}{112}
+\indexentry{Risk!Based Approach|book{2}}{118-119}
+\indexentry{Network Mapping/Scanning|book{2}}{116-124}
+\indexentry{SNMP}{120}
+\indexentry{Nmap|book{2}}{121}
+\indexentry{Nmap!Scans|book{2}}{121}
+\indexentry{ICMP}{121}
+\indexentry{ACK}{121}
+\indexentry{UDP|book{2}}{121}
+\indexentry{Three-way Handshake}{121}
+\indexentry{UDP}{123}
+\indexentry{Vulnerability!Assessment|book{2}}{127-130}
+\indexentry{Risk!High-Level Assessment|book{2}}{130}
+\indexentry{Reporting@ |book{2}}{128-130}
+\indexentry{Principles!Validation}{130}
+\indexentry{Vulnerability!Scanner}{131-138}
+\indexentry{Firewall! }{131}
+\indexentry{IDS/IPS|book{2}}{131}
+\indexentry{CVE|book{2}}{131}
+\indexentry{Reporting@ }{134}
+\indexentry{Remediation|book{2}}{135}
+\indexentry{MTTR|book{2}}{135}
+\indexentry{Qualys|book{2}}{136}
+\indexentry{Signatures|book{2}}{137}
+\indexentry{False Positives/Negatives|book{2}}{137-138}
+\indexentry{Tenable|book{2}}{137}
+\indexentry{Sniffer}{138}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Web Applications|book{3}}{4-6}
+\indexentry{CGI|book{3}}{5}
+\indexentry{Google|book{3}}{7}
+\indexentry{GHDB|book{3}}{7-9}
+\indexentry{CMS|book{3}}{9}
+\indexentry{PHP Fusion|book{3}}{9}
+\indexentry{Web Applications!Programming Errors|book{3}}{10}
+\indexentry{Credentials@ |book{3}}{11}
+\indexentry{SSH@  |book{3}}{12}
+\indexentry{RSA|book{3}}{12}
+\indexentry{OWASP|book{3}}{13}
+\indexentry{Web Applications!Good Practice|book{3}}{13}
+\indexentry{Principles!Trust Nothing|book{3}}{14}
+\indexentry{Principles!Robust Error Handling|book{3}}{14}
+\indexentry{Moscow Rule|book{3}}{14}
+\indexentry{OWASP}{15}
+\indexentry{SQL!Injection|book{3}}{16}
+\indexentry{Web Applications!Good Practice}{17}
+\indexentry{Principles!Complete Mediation|book{3}}{19}
+\indexentry{Multi-Tiered Solution|book{3}}{20-21}
+\indexentry{Presentation|book{3}}{20}
+\indexentry{Application|book{3}}{20}
+\indexentry{Persistent|book{3}}{20}
+\indexentry{Web Applications}{22}
+\indexentry{HTML|book{3}}{24-30}
+\indexentry{HTML!Rules|book{3}}{27}
+\indexentry{HTTP|book{3}}{28-37}
+\indexentry{HTML!Forms|book{3}}{30}
+\indexentry{HTTP!GET/POST|book{3}}{31}
+\indexentry{HTTP!HEAD|book{3}}{31}
+\indexentry{HTTP!Verbs|book{3}}{31-32}
+\indexentry{WebDAV|book{3}}{32}
+\indexentry{SOA|book{3}}{32}
+\indexentry{Google}{33}
+\indexentry{URL|book{3}}{34}
+\indexentry{Schwab|book{3}}{35}
+\indexentry{HTTP!GET/POST}{37}
+\indexentry{Web Applications!Rule of Thumb|book{3}}{37}
+\indexentry{Cookies|book{3}}{38-43}
+%\indexentry{Javascript|book{3}}{42}
+\indexentry{Flash|book{3}}{42}
+\indexentry{Cross Domain Request|book{3}}{42}
+\indexentry{Cookies!Types|book{3}}{43}
+\indexentry{SSL@ |book{3}}{44}
+\indexentry{TLS|book{3}}{44}
+%\indexentry{Javascript}{45}
+\indexentry{XML|book{3}}{45}
+\indexentry{AJAX|book{3}}{45-46}
+\indexentry{CSS|book{3}}{47}
+\indexentry{OWASP}{48}
+\indexentry{Web Applications!Firewall|book{3}}{48}
+\indexentry{WebScarab|book{3}}{49-50}
+\indexentry{Man in the Middle|book{3}}{49}
+\indexentry{BURP|book{3}}{50}
+\indexentry{Directory Indexing|book{3}}{55}
+\indexentry{Easter Egg|book{3}}{57}
+\indexentry{Web Applications!Hidden Content|book{3}}{58}
+\indexentry{Client-Side Authentication|book{3}}{58}
+\indexentry{Robots@\texttt{robots.txt}|book{3}}{59-60}
+\indexentry{Lazy Configuration|book{3}}{61-63}
+\indexentry{WebScarab}{62}
+\indexentry{CGI}{61-63}
+\indexentry{Administration Interface|book{3}}{64-66}
+\indexentry{Vulnerability!Scanner@ |book{3}}{68}
+\indexentry{IIS|book{3}}{69}
+\indexentry{Apache|book{3}}{69-70}
+\indexentry{IIS}{71}
+\indexentry{Vulnerability!Scanner@ }{72-73}
+\indexentry{Automated Scanning Caveat|book{3}}{75}
+\indexentry{BURP}{76}
+\indexentry{Vulnerability!Scanner@ }{76}
+\indexentry{Fuzzer|book{3}}{77}
+\indexentry{Authentication|book{3}}{82-98}
+\indexentry{Authentication!HTTP Digest|book{3}}{82}
+\indexentry{Authentication!HTTP Basic|book{3}}{83}
+\indexentry{Authentication!Form-Based|book{3}}{84}
+\indexentry{Authentication!Client Side Certificate|book{3}}{85}
+\indexentry{X.509 Certificate|book{3}}{85}
+\indexentry{Certificate|book{3}}{85}
+\indexentry{CA|book{3}}{85}
+\indexentry{Authentication!NTLM|book{3}}{86}
+\indexentry{IIS}{86}
+\indexentry{Banner|book{3}}{87}
+\indexentry{User!Name Harvesting|book{3}}{88-90}
+\indexentry{Gmail|book{3}}{89}
+\indexentry{Password|book{3}}{91}
+\indexentry{Schwab}{92}
+\indexentry{User!Name Harvesting}{93-94}
+\indexentry{DoS|book{3}}{95}
+\indexentry{Brute Force|book{3}}{95-96}
+\indexentry{Account Lockouts|book{3}}{95}
+\indexentry{Speed Bump|book{3}}{95}
+\indexentry{Session Tracking|book{3}}{100-121}
+\indexentry{HTTP}{100}
+\indexentry{Web Applications!Flow|book{3}}{101}
+\indexentry{Session Tracking!ID|book{3}}{101-102}
+\indexentry{Session Tracking!Methods|book{3}}{103}
+\indexentry{Session Tracking!Methods!URL Rewriting|book{3}}{104}
+\indexentry{URL!Rewriting|book{3}}{104}
+\indexentry{HTTP!Referer|book{3}}{104}
+\indexentry{Session Tracking!Methods!Cookies|book{3}}{105-107}
+\indexentry{Cookies}{105-107}
+\indexentry{WebScarab}{107}
+\indexentry{Session Tracking!Methods!Basic Authentication|book{3}}{108-112}
+\indexentry{HTTP!Basic Authentication|book{3}}{108-112}
+\indexentry{Www-authenticate@\texttt{WWW-authenticate}|book{3}}{109}
+\indexentry{Base-64|book{3}}{110}
+\indexentry{Credentials@ }{111}
+\indexentry{IIS}{111}
+\indexentry{Session Tracking!Methods!Hidden Fields|book{3}}{113}
+\indexentry{HTML!Hidden Fields|book{3}}{113}
+\indexentry{Viewstate|book{3}}{113}
+\indexentry{Session Tracking!Auditing|book{3}}{114}
+\indexentry{Session Tracking!ID}{114-115}
+\indexentry{Session Tracking!ID!Properties|book{3}}{115}
+\indexentry{Session Tracking!ID!Best Practice|book{3}}{115}
+\indexentry{Session Tracking!Attacks|book{3}}{116-118}
+\indexentry{Brute Force}{116}
+\indexentry{Eavesdropping|book{3}}{116}
+\indexentry{XSS|book{3}}{116}
+\indexentry{Session Tracking!Auditing}{119-120}
+\indexentry{Session Tracking!ID!Best Practice}{119}
+\indexentry{User!Inputs|book{3}}{124}
+\indexentry{HTTP!GET/POST}{124}
+%\indexentry{Yahoo|book{3}}{125}
+\indexentry{Amazon|book{3}}{125}
+\indexentry{REST|book{3}}{126}
+\indexentry{CRUD|book{3}}{126}
+\indexentry{HTTP!Verbs}{126}
+\indexentry{HTTP!GET Exposure|book{3}}{127-133}
+\indexentry{HTTP!Referer}{132}
+\indexentry{Whitelisting|book{3}}{134-135}
+\indexentry{User!Inputs}{133-134}
+\indexentry{Anti-Caching|book{3}}{136}
+\indexentry{SSL@ }{136-137}
+\indexentry{TLS}{136-137}
+\indexentry{DES@ |book{3}}{137}
+\indexentry{Heartbleed|book{3}}{137}
+\indexentry{BREACH|book{3}}{137}
+\indexentry{POODLE|book{3}}{137}
+\indexentry{Cipher Inventory|book{3}}{138}
+\indexentry{Qualys@ |book{3}}{139-140}
+\indexentry{Mixed Content/Frames|book{3}}{141-142}
+\indexentry{SSL@ }{142}
+\indexentry{Anti-Caching}{143-144}
+\indexentry{HTTP!Expires|book{3}}{144}
+\indexentry{Input Testing|book{3}}{145}
+\indexentry{SQL|book{3}}{145}
+\indexentry{SQL!Injection}{146-160}
+\indexentry{SQL!Injection!Protection|book{3}}{160}
+\indexentry{XSS}{161-168}
+\indexentry{XSS!Types|book{3}}{168}
+\indexentry{CSRF|book{3}}{169-172}
+\indexentry{Web Applications!Protection|book{3}}{173}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Windows|book{4}}{6-8}
+\indexentry{Windows!Important Dates|book{4}}{7}
+\indexentry{Baseline@ |book{4}}{9}
+\indexentry{Gold Disk|book{4}}{9}
+\indexentry{Standards@  |book{4}}{9}
+\indexentry{Windows!Domain Auditing|book{4}}{10}
+\indexentry{SoD@  |book{4}}{11}
+\indexentry{PoLP@  |book{4}}{11}
+\indexentry{NIST@ |book{4}}{11}
+\indexentry{High-Level OS Checklist|book{4}}{12}
+\indexentry{WMIC|book{4}}{13-24}
+\indexentry{WMIC!History|book{4}}{15}
+\indexentry{CIM|book{4}}{17}
+\indexentry{WMIC!Compatibility|book{4}}{16}
+\indexentry{WMIC!Functionalities|book{4}}{17}
+\indexentry{WMIC!Reporting|book{4}}{19-21}
+\indexentry{Batch|book{4}}{26-42}
+\indexentry{Batch!Variables|book{4}}{28}
+\indexentry{Batch!If|book{4}}{31-32}
+\indexentry{Batch!Return Code|book{4}}{33}
+\indexentry{Batch!Labels|book{4}}{34-36}
+\indexentry{Batch!For|book{4}}{38-40}
+\indexentry{VBS|book{4}}{27}
+\indexentry{Powershell|book{4}}{43-44}
+\indexentry{Windows!Domain Auditing}{46}
+\indexentry{Basic OS Information|book{4}}{47-50}
+\indexentry{NTFS|book{4}}{51-52}
+\indexentry{FAT32|book{4}}{51-52}
+\indexentry{WinFS|book{4}}{51}
+\indexentry{Service Pack|book{4}}{51}
+\indexentry{WMIC}{53-54}
+\indexentry{NTFS}{54}
+\indexentry{FAT32}{54}
+\indexentry{Patching! |book{4}}{55}
+\indexentry{Service Pack}{57}
+\indexentry{Hotfix|book{4}}{57-58}
+\indexentry{Critical Update|book{4}}{57}
+\indexentry{QFE|book{4}}{57}
+\indexentry{Patching!Install|book{4}}{58}
+\indexentry{Security Bulletin|book{4}}{59}
+\indexentry{Patching!Validation|book{4}}{59}
+\indexentry{KB|book{4}}{59}
+\indexentry{Knowledge Base (Microsoft)|book{4}}{59}
+\indexentry{Patching!Process|book{4}}{62}
+\indexentry{Change Control|book{4}}{63}
+\indexentry{Maintenance|book{4}}{63}
+\indexentry{Compliance|book{4}}{63}
+\indexentry{Exception|book{4}}{63}
+\indexentry{IAVA|book{4}}{63}
+\indexentry{HIPAA|book{4}}{63}
+\indexentry{FISMA|book{4}}{63}
+\indexentry{Components/Services|book{4}}{65}
+\indexentry{Principles!Unneeded Services@ |book{4}}{66}
+\indexentry{VNC|book{4}}{68}
+\indexentry{Port List|book{4}}{68}
+\indexentry{Nmap!Example|book{4}}{68}
+\indexentry{Trojan|book{4}}{69}
+\indexentry{Security Template|book{4}}{70}
+\indexentry{PSTools|book{4}}{71}
+\indexentry{Startup Mode|book{4}}{72}
+\indexentry{Password! |book{4}}{78}
+\indexentry{User|book{4}}{78}
+\indexentry{Group|book{4}}{78}
+\indexentry{Membership|book{4}}{78}
+\indexentry{Accounts|book{4}}{79-85}
+\indexentry{Accounts!Local|book{4}}{79}
+\indexentry{Accounts!Domain|book{4}}{79}
+\indexentry{Active Directory|book{4}}{80}
+\indexentry{Accounts!Orphaned/Unused|book{4}}{81-82}
+\indexentry{DSQuery Formulas|book{4}}{84}
+\indexentry{Accounts!Special|book{4}}{85}
+\indexentry{Administrator@ |book{4}}{85}
+\indexentry{Guest|book{4}}{85}
+\indexentry{IUSR|book{4}}{85}
+\indexentry{IWAM|book{4}}{85}
+\indexentry{HelpAssistant|book{4}}{85}
+\indexentry{SUPPORT|book{4}}{85}
+\indexentry{PoLP@  }{85}
+\indexentry{LDAP|book{4}}{86-91}
+\indexentry{LDAP!Queries|book{4}}{87}
+\indexentry{Infix|book{4}}{88}
+\indexentry{Postfix|book{4}}{88}
+\indexentry{Prefix|book{4}}{88}
+\indexentry{Active Directory}{88}
+\indexentry{Active Directory!Objects|book{4}}{89}
+\indexentry{LDAP!Objects|book{4}}{89}
+\indexentry{Bitwise UserAccountControl|book{4}}{90}
+\indexentry{UserAccountControl|book{4}}{90}
+\indexentry{Active Directory}{90}
+\indexentry{Accounts!Service|book{4}}{95}
+\indexentry{LocalSystem|book{4}}{95}
+\indexentry{SYSTEM|book{4}}{95}
+\indexentry{Local Service|book{4}}{95}
+\indexentry{Network Service|book{4}}{95}
+\indexentry{Group!Built-In|book{4}}{97}
+\indexentry{User!Rights|book{4}}{97}
+\indexentry{Group!Rights|book{4}}{97}
+\indexentry{User!Permissions|book{4}}{97}
+\indexentry{Group!Permissions|book{4}}{97}
+\indexentry{Schema Admins|book{4}}{97}
+\indexentry{Password!Policy|book{4}}{99}
+\indexentry{Authentication! |book{4}}{100}
+\indexentry{Password! }{100-101}
+\indexentry{Authentication!Two-Factor|book{4}}{101}
+\indexentry{LM|book{4}}{101}
+\indexentry{NTLM|book{4}}{101}
+\indexentry{DES@  |book{4}}{101}
+\indexentry{BitLocker|book{4}}{102}
+\indexentry{EFS|book{4}}{102}
+\indexentry{Roaming Profiles|book{4}}{102}
+\indexentry{Disk Encryption|book{4}}{102}
+\indexentry{Active Directory}{103}
+\indexentry{SAM|book{4}}{103}
+\indexentry{LM}{103-104}
+\indexentry{NTLM}{103-104}
+\indexentry{DES@  }{103}
+\indexentry{MD4|book{4}}{103}
+\indexentry{SYSKEY|book{4}}{103}
+\indexentry{NoLMHash|book{4}}{103}
+\indexentry{Replay Attack|book{4}}{104}
+\indexentry{Group!Policy|book{4}}{104}
+\indexentry{SAT|book{4}}{104}
+\indexentry{Password!Testing|book{4}}{105}
+\indexentry{Dictionary Attack|book{4}}{105}
+\indexentry{Hybrid Attack|book{4}}{105}
+\indexentry{Brute Force!Attack|book{4}}{105}
+\indexentry{Password!Assessment|book{4}}{106}
+\indexentry{Hash|book{4}}{107}
+\indexentry{Windows!Backup|book{4}}{107}
+\indexentry{VSC|book{4}}{107}
+\indexentry{NTFS}{111}
+\indexentry{FAT32}{111}
+\indexentry{DACL|book{4}}{111}
+\indexentry{ACL!Discretionary|book{4}}{111}
+\indexentry{Authorization|book{4}}{111}
+\indexentry{Authentication! }{111}
+\indexentry{Resource|book{4}}{111}
+\indexentry{Permissions|book{4}}{111-112}
+\indexentry{Insider Attack|book{4}}{112}
+\indexentry{Access Control|book{4}}{112}
+\indexentry{Sensitive Data|book{4}}{113}
+\indexentry{Encryption|book{4}}{113}
+\indexentry{Confidentiality|book{4}}{113}
+\indexentry{Integrity|book{4}}{113}
+\indexentry{Availability|book{4}}{113}
+\indexentry{NTFS}{113}
+\indexentry{SAM}{113}
+\indexentry{EFS}{113}
+\indexentry{Rights|book{4}}{114}
+\indexentry{Permissions}{114}
+\indexentry{Access Control}{114}
+\indexentry{Object|book{4}}{114}
+\indexentry{RBAC|book{4}}{115}
+\indexentry{AGULP|book{4}}{115}
+\indexentry{Group!Nested|book{4}}{115}
+\indexentry{Single-Domain|book{4}}{115}
+\indexentry{Multi-Domain|book{4}}{115}
+\indexentry{Permissions!Best Practice|book{4}}{115}
+\indexentry{Windows!Rights|book{4}}{116-125}
+\indexentry{Rights!Recommendations|book{4}}{114-125}
+\indexentry{LSASS|book{4}}{125}
+\indexentry{Security Template}{126}
+\indexentry{User!Rights}{126}
+\indexentry{Registry|book{4}}{126}
+\indexentry{Group!Policy}{126}
+\indexentry{Permissions}{127-129}
+\indexentry{ADMIN\$|book{4}}{129}
+\indexentry{Windows!Default Shares|book{4}}{129}
+\indexentry{NTFS!Permissions|book{4}}{127-129}
+\indexentry{Windows!NTFS Permissions|book{4}}{127-129}
+\indexentry{Group!Special|book{4}}{128}
+\indexentry{Everyone|book{4}}{128-130}
+\indexentry{Authenticated Users|book{4}}{128}
+\indexentry{Creator/Owner|book{4}}{128}
+\indexentry{Group}{128}
+\indexentry{IUSR}{128}
+\indexentry{IWAM}{128}
+\indexentry{Object!Shared|book{4}}{129}
+\indexentry{Klez|book{4}}{129}
+\indexentry{Bugbear|book{4}}{129}
+\indexentry{Opaserv|book{4}}{129}
+\indexentry{File Integrity|book{4}}{131}
+\indexentry{Hash}{132}
+\indexentry{MD5|book{4}}{132}
+\indexentry{SHA1|book{4}}{132}
+\indexentry{Null Session|book{4}}{136}
+\indexentry{Windows!Vulnerabilities|book{4}}{138}
+\indexentry{Null Session}{138}
+\indexentry{USGCB|book{4}}{138}
+\indexentry{Security Template}{142}
+\indexentry{Security Template!Secure|book{4}}{142}
+\indexentry{Security Template!Hisec|book{4}}{142}
+\indexentry{Group!Policy}{146-153}
+\indexentry{Group!Policy!Structure|book{4}}{147}
+\indexentry{GPO|book{4}}{147}
+\indexentry{Group!Policy!Audit|book{4}}{148}
+\indexentry{Group!Policy!Application Frequency|book{4}}{148}
+\indexentry{Group!Policy!Testing|book{4}}{148}
+\indexentry{WMI|book{4}}{149}
+\indexentry{Security Template}{151}
+\indexentry{GPO}{151}
+\indexentry{Active Directory}{151}
+\indexentry{Group!Policy!Principle|book{4}}{150}
+\indexentry{Group!Policy!Application Frequency|book{4}}{151}
+\indexentry{HIPAA}{153}
+\indexentry{FISMA}{153}
+\indexentry{Vulnerability!Scanner@  |book{4}}{155}
+\indexentry{Log|book{4}}{158-160}
+\indexentry{Event Viewer|book{4}}{158-159}
+\indexentry{Retention|book{4}}{160}
+\indexentry{Log!Audit|book{4}}{162}
+\indexentry{Logon|book{4}}{164}
+\indexentry{Log!Audit}{165}
+\indexentry{Process Tracking|book{4}}{165}
+\indexentry{System Events|book{4}}{165}
+\indexentry{Event Viewer!ID|book{4}}{165}
+\indexentry{Event Viewer}{167-169}
+\indexentry{Group!Policy}{167}
+\indexentry{Log!Subscription|book{4}}{167}
+\indexentry{Logon}{170-171}
+\indexentry{Event Viewer!ID}{171}
+\indexentry{Knowledge Base (Microsoft)}{172}
+\indexentry{Event Viewer!ID}{173}
+\indexentry{Log!Management|book{4}}{174}
+\indexentry{Event Viewer!ID}{175}
+\indexentry{Log!Management}{176-179}
+\indexentry{Log!Management!Best Practice|book{4}}{177}
+\indexentry{Event Viewer}{178}
+\indexentry{RC-4@ |book{4}}{178}
+\indexentry{Cyber-Defense|book{4}}{179}
+\indexentry{DAD|book{4}}{179}
+\indexentry{MOM|book{4}}{179}
+\indexentry{Monitoring|book{4}}{182}
+\indexentry{Baseline@ }{182}
+\indexentry{Audit!Plan|book{4}}{184}
+
+
+\comment{********************************************************************************************
+                                      FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Shell Scripting|book{5}}{11-39}
+\indexentry{Bash|book{5}}{12}
+\indexentry{Bash!Shabang|book{5}}{13}
+\indexentry{Bash!Variables|book{5}}{14}
+\indexentry{Bash!Echo|book{5}}{11-39}
+\indexentry{Bash!If|book{5}}{16-21}
+\indexentry{Bash!Function|book{5}}{22}
+\indexentry{Bash!Grep|book{5}}{26-34}
+\indexentry{Regular Expression|book{5}}{27-28}
+\indexentry{Metacharacters|book{5}}{27-28}
+\indexentry{Regex|book{5}}{29-34}
+\indexentry{Bash!Sed|book{5}}{35}
+\indexentry{Bash!Awk|book{5}}{36}
+\indexentry{LRK5|book{5}}{42-47}
+\indexentry{Toolkit|book{5}}{48-51}
+\indexentry{Kali|book{5}}{49}
+\indexentry{Ubuntu|book{5}}{49}
+\indexentry{Helix|book{5}}{49}
+\indexentry{Solaris|book{5}}{49}
+\indexentry{HP-UX|book{5}}{49}
+\indexentry{AIX|book{5}}{49}
+\indexentry{Dynamically Linked Executables|book{5}}{52-53}
+\indexentry{Statically Linked Executables|book{5}}{52-53}
+\indexentry{Toolkit}{54}
+\indexentry{Clean Shell|book{5}}{54}
+\indexentry{BSD|book{5}}{61}
+\indexentry{Partition|book{5}}{62-63}
+\indexentry{Swap|book{5}}{64}
+\indexentry{Memory|book{5}}{64}
+\indexentry{RedHat|book{5}}{65-66}
+\indexentry{Solaris}{65-66}
+\indexentry{Ubuntu}{66}
+\indexentry{Debian|book{5}}{66}
+\indexentry{AIX}{66}
+\indexentry{Sun|book{5}}{66}
+\indexentry{Oracle|book{5}}{66}
+\indexentry{SunSolve|book{5}}{66}
+\indexentry{OS X|book{5}}{69}
+\indexentry{Service \linux!Listening|book{5}}{71}
+\indexentry{Service \linux|book{5}}{72}
+\indexentry{Super Daemon|book{5}}{72}
+\indexentry{TCPWrappers|book{5}}{73-74}
+\indexentry{Rsync@\texttt{rsync}|book{5}}{75}
+\indexentry{Startup|book{5}}{76-80}
+\indexentry{Etc@\texttt{etc}|book{5}}{76}
+\indexentry{OS X}{76}
+\indexentry{Upstart|book{5}}{77}
+\indexentry{Event Driven Startup|book{5}}{77}
+\indexentry{Runlevel|book{5}}{78}
+\indexentry{OS X}{79}
+\indexentry{Boot Process|book{5}}{80}
+\indexentry{DoS@ |book{5}}{81}
+\indexentry{Source Routing! |book{5}}{81}
+\indexentry{Sysctl@\texttt{sysctl.conf}|book{5}}{82}
+\indexentry{Routing Protection@ |book{5}}{81-83}
+\indexentry{OS X}{83}
+\indexentry{TCPWrappers}{85-86}
+\indexentry{ACL! |book{5}}{86}
+\indexentry{Hosts@\texttt{hosts.}[\texttt{allow},\texttt{deny}]|book{5}}{86}
+\indexentry{SSH@    |book{5}}{87}
+\indexentry{FTP|book{5}}{88}
+\indexentry{Telnet|book{5}}{88}
+\indexentry{Finger|book{5}}{88}
+\indexentry{SOCKS|book{5}}{88}
+\indexentry{Blacklist|book{5}}{88}
+\indexentry{SYN@ |book{5}}{88}
+\indexentry{Active Defense|book{5}}{88}
+\indexentry{TCPWrappers}{88}
+\indexentry{Backdoor|book{5}}{89}
+\indexentry{Boot Time Security|book{5}}{91}
+\indexentry{Password!Boot Time|book{5}}{91}
+\indexentry{Physical Access|book{5}}{91}
+\indexentry{Encrypted Drive|book{5}}{92}
+\indexentry{VPN@ |book{5}}{92}
+\indexentry{ESXi! |book{5}}{92}
+\indexentry{Bootloader|book{5}}{93}
+\indexentry{LILO|book{5}}{93}
+\indexentry{Grub|book{5}}{93-94}
+\indexentry{Upstart}{95}
+\indexentry{Password!  |book{5}}{94}
+\indexentry{RedHat}{94}
+\indexentry{Control-Alt-Delete|book{5}}{95}
+\indexentry{Hot Key|book{5}}{95}
+\indexentry{Remote Access|book{5}}{96-99}
+\indexentry{Securetty@\texttt{securetty}|book{5}}{96-97}
+\indexentry{SSH@    }{97-99}
+\indexentry{Sshd\_config@\texttt{sshd\_config}|book{5}}{97}
+\indexentry{OpenSSH|book{5}}{98}
+\indexentry{Key|book{5}}{98-99}
+\indexentry{Certificate@ |book{5}}{98-99}
+\indexentry{Log!Login Attempts|book{5}}{99}
+\indexentry{Password!File \linux|book{5}}{100}
+\indexentry{Shadow File \linux|book{5}}{101-102}
+\indexentry{MD5@ |book{5}}{101}
+\indexentry{Hash@ |book{5}}{100}
+\indexentry{Password!Policy@ |book{5}}{101}
+\indexentry{Accounts! |book{5}}{102}
+\indexentry{Cron!Job|book{5}}{102}
+\indexentry{Credentials@  |book{5}}{102}
+\indexentry{PAM|book{5}}{103}
+\indexentry{LDAP! |book{5}}{103}
+\indexentry{Active Directory! |book{5}}{103}
+\indexentry{Kerberos|book{5}}{103}
+\indexentry{BSD}{103}
+\indexentry{User!Control \linux|book{5}}{103}
+\indexentry{Authorization@ |book{5}}{106}
+\indexentry{SUID|book{5}}{107}
+\indexentry{SGID|book{5}}{107}
+\indexentry{UID|book{5}}{107}
+\indexentry{Etc@\texttt{etc}}{107}
+\indexentry{SUID}{109}
+\indexentry{Timestamp \linux|book{5}}{110}
+\indexentry{Timestamp \linux!Format|book{5}}{111}
+\indexentry{Hidden Disk Space|book{5}}{112}
+%\indexentry{Trojan@ |book{5}}{112}
+\indexentry{File \linux|book{5}}{113}
+\indexentry{Process \linux|book{5}}{113}
+\indexentry{Proc@\texttt{proc}|book{5}}{113}
+\indexentry{Link Count|book{5}}{113}
+\indexentry{Rhosts@\texttt{.rhosts}|book{5}}{116}
+\indexentry{Kevin Mitnick|book{5}}{116}
+\indexentry{Shimomura|book{5}}{116}
+\indexentry{FIA|book{5}}{116-126}
+\indexentry{File Integrity Assessment|book{5}}{117-126}
+\indexentry{Tripwire|book{5}}{118}
+\indexentry{Solaris}{118}
+\indexentry{BSD}{118}
+\indexentry{Reporting@  |book{5}}{118}
+\indexentry{ASR|book{5}}{119}
+\indexentry{Baseline@  |book{5}}{120}
+\indexentry{Change Control@ |book{5}}{122-123}
+\indexentry{RedHat}{125}
+\indexentry{MD5@ }{125}
+\indexentry{Package Manager \linux|book{5}}{126}
+\indexentry{NFS|book{5}}{128-131}
+\indexentry{RPC|book{5}}{128}
+\indexentry{Etc@\texttt{etc}}{128}
+\indexentry{Fstab@\texttt{fstab}|book{5}}{128-129}
+\indexentry{Mtab@\texttt{mtab}|book{5}}{128}
+\indexentry{Exports@\texttt{exports}|book{5}}{128-129}
+\indexentry{Share Permissions|book{5}}{128}
+\indexentry{SAMBA|book{5}}{128}
+\indexentry{Proc@\texttt{proc}}{130}
+\indexentry{Dev@\texttt{dev}|book{5}}{130}
+\indexentry{Device \linux|book{5}}{130}
+\indexentry{SMB|book{5}}{130}
+\indexentry{AFP|book{5}}{130}
+\indexentry{Process \linux!Table|book{5}}{131}
+\indexentry{RPC}{131}
+\indexentry{Issue@\texttt{issue}|book{5}}{132-133}
+\indexentry{Banner|book{5}}{132-133}
+\indexentry{Etc@\texttt{etc}}{132}
+\indexentry{Startup}{133}
+\indexentry{Solaris}{134}
+\indexentry{Promiscuous Mode|book{5}}{134}
+\indexentry{Network Interfaces|book{5}}{134}
+\indexentry{Rootkit|book{5}}{134}
+\indexentry{Sniffer@ |book{5}}{134}
+\indexentry{Host Based Assessment|book{5}}{136}
+\indexentry{Vulnerability!Assessment@ |book{5}}{136-138}
+\indexentry{Solaris}{136}
+\indexentry{BSD}{136}
+\indexentry{HP-UX}{136}
+\indexentry{Log!Unix|book{5}}{141-151}
+\indexentry{Var@\texttt{var}|book{5}}{141}
+\indexentry{Utmp@\texttt{utmp}|book{5}}{141}
+\indexentry{Wtmp@\texttt{wtmp}|book{5}}{141}
+\indexentry{Btmp@\texttt{btmp}|book{5}}{141}
+\indexentry{Messages@\texttt{messages}|book{5}}{141-143}
+\indexentry{Secure@\texttt{secure}|book{5}}{141}
+\indexentry{Syslog@\texttt{syslog}|book{5}}{142-143}
+\indexentry{Secure@\texttt{secure}}{143}
+\indexentry{TCPWrappers}{143}
+\indexentry{PAM}{143}
+\indexentry{Utmp@\texttt{utmp}}{144-145}
+\indexentry{User!Active/Idle \linux|book{5}}{145}
+\indexentry{Wtmp@\texttt{wtmp}}{146-147}
+\indexentry{Investigation|book{5}}{147}
+\indexentry{Failed Login|book{5}}{148}
+\indexentry{Btmp@\texttt{btmp}}{148-149}
+\indexentry{UNKNOWN|book{5}}{149}
+\indexentry{Log!Configuration|book{5}}{150}
+\indexentry{Log!Rotation \linux|book{5}}{150}
+\indexentry{Syslog@\texttt{syslog}}{150}
+\indexentry{Logrotate@\texttt{logrotate.conf}|book{5}}{150}
+\indexentry{Facility|book{5}}{150}
+\indexentry{Log!Location \linux|book{5}}{150}
+\indexentry{Logging! |book{5}}{151}
+\indexentry{Logging!Levels \linux|book{5}}{150}
+\indexentry{Bastille|book{5}}{153}
+\indexentry{Hardening|book{5}}{153}
+\indexentry{Baseline@  }{153}
+\indexentry{Security Template! |book{5}}{153}
+\indexentry{HP-UX}{153}
+\indexentry{OS X}{153}
+%\indexentry{JASS|book{5}}{153}
+\indexentry{SECUR|book{5}}{153}
+\indexentry{Cron!Job}{153}
+\indexentry{NFS}{154}
+\indexentry{IDS/IPS@ |book{5}}{154}
+\indexentry{Sniffer@ }{154}
+\indexentry{Wtmp@\texttt{wtmp}}{155}
+\indexentry{Log!Zeroed Entry \linux|book{5}}{155}
+\indexentry{Rootkit}{156}
+\indexentry{Automated Report|book{5}}{157}
+\indexentry{Cron|book{5}}{157-158}
+\indexentry{Baseline@  }{157}
+\indexentry{Audit!Architecture|book{5}}{158}
+\indexentry{Unix|book{5}}{164-193}
+\indexentry{Unix!Philosophy|book{5}}{167-169}
+\indexentry{Unix!Files \& Permissions|book{5}}{170-175}
+\indexentry{EUID|book{5}}{170}
+\indexentry{SUID}{170-173}
+\indexentry{USMASK|book{5}}{171}
+\indexentry{SGID}{171-173}
+\indexentry{Sticky Bit|book{5}}{171-173}
+\indexentry{Unix!Links|book{5}}{172}
+\indexentry{Unix!Services|book{5}}{181-189}
+\indexentry{RPC}{182-185}
+\indexentry{RPC!Working|book{5}}{183}
+\indexentry{Portmapper|book{5}}{183-184}
+\indexentry{NFS}{183}
+\indexentry{NFS}{187}
+\indexentry{NFS!Configuration|book{5}}{188}
+\indexentry{Exports@\texttt{exports}}{188}
+\indexentry{Fstab@\texttt{fstab}}{188}
+\indexentry{Hosts@\texttt{hosts.}[\texttt{allow},\texttt{deny}]}{188}
+\indexentry{Unix!GUI|book{5}}{190-192}
+\indexentry{X-Window|book{5}}{190-191}
+\indexentry{XDM|book{5}}{190}
+\indexentry{GDM|book{5}}{190}
+\indexentry{CDE|book{5}}{191-192}
+\indexentry{RPC}{192}
+\indexentry{Portmapper}{192}
+
+
+\comment{********************************************************************************************
+                                      WORKBOOK SECTION
+*****************************************************************************************************}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+%\indexentry{Claims \goto DAC|comment}{0}

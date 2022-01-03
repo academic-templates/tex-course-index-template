@@ -18,6 +18,8 @@ SANS courses:
 
 > **Disclaimer**: At the time of adding these indexes to this repository, some of these relate to outdated versions of the corresponding courses and are therefore hard to use with more recent versions.
 
+> **Sources**: You can find the `.idx` files [here](https://github.com/dhondta/tex-course-index-template/tree/master/examples/sans). Feel free to adapt/update it.
+
 ULB course:
 
 - [INFO-Y114 – Aspects légaux de l'informatique et de la sécurité informatique](ulb/info-y114.pdf)

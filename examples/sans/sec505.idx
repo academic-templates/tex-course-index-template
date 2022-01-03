@@ -1,0 +1,2443 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{Windows OS \& Apps Hardening}!1) Sec Templates \& Group Policy|book{1}}{15-74}
+\indexentry{1a@\textbf{Windows OS \& Apps Hardening}!2) Anti-Malware Strategies|book{1}}{75-118}
+\indexentry{1a@\textbf{Windows OS \& Apps Hardening}!3) Hardening Vulnerable Apps|book{1}}{119-170}
+\indexentry{1z@\blankline|comment}{0}
+
+\indexentry{2a@\textbf{HVT \& Restricting Admin Compromise}!1) Securing HVT|book{2}}{9-96}
+\indexentry{2a@\textbf{HVT \& Restricting Admin Compromise}!2) AD Permissions \& Auditing|book{2}}{98-139}
+\indexentry{2a@\textbf{HVT \& Restricting Admin Compromise}!3) Patch Management|book{2}}{141-176}
+
+\indexentry{2z@\blankline|comment}{0}
+
+\indexentry{3a@\textbf{PKI, BitLocker, and Secure Boot}!1) What Is A Public Key Infra ?|book{3}}{8-47}
+\indexentry{3a@\textbf{PKI, BitLocker, and Secure Boot}!2) Installing Certificate Services|book{3}}{49-85}
+\indexentry{3a@\textbf{PKI, BitLocker, and Secure Boot}!3) Securing Private Keys|book{3}}{87-105}
+\indexentry{3a@\textbf{PKI, BitLocker, and Secure Boot}!4) Managing PKI and Smart Cards|book{3}}{107-152}
+\indexentry{3a@\textbf{PKI, BitLocker, and Secure Boot}!5) BitLocker and Secure Boot|book{3}}{154-181}
+
+\indexentry{3z@\blankline|comment}{0}
+
+\indexentry{4a@\textbf{IPSec, Firewall, DNS, and Wireless}!1) Windows Firewall|book{4}}{8-34}
+\indexentry{4a@\textbf{IPSec, Firewall, DNS, and Wireless}!2) IPSec Encryption and Port Control|book{4}}{36-83}
+\indexentry{4a@\textbf{IPSec, Firewall, DNS, and Wireless}!3) Enterprise Testing and Deployment|book{4}}{85-95}
+\indexentry{4a@\textbf{IPSec, Firewall, DNS, and Wireless}!4) DNS Security|book{4}}{97-139}
+\indexentry{4a@\textbf{IPSec, Firewall, DNS, and Wireless}!5) Wireless/Wired Network Access|book{4}}{141-203}
+
+\indexentry{4z@\blankline|comment}{0}
+
+\indexentry{5a@\textbf{Server Hardening \& Dynamic Access Ctl}!1) Windows Server Hardening|book{5}}{9-137}
+\indexentry{5a@\textbf{Server Hardening \& Dynamic Access Ctl}!2) Dynamic Access Control|book{5}}{139-237}
+
+\indexentry{5z@\blankline|comment}{0}
+
+\indexentry{6a@\textbf{Windows Powershell Scripting}!1) Overview, Installation \& Security|book{6}}{8-31}
+\indexentry{6a@\textbf{Windows Powershell Scripting}!2) Getting Around Inside The Shell|book{6}}{33-57}
+\indexentry{6a@\textbf{Windows Powershell Scripting}!3) Running Cmdlets, Func \& Scripts|book{6}}{59-115}
+\indexentry{6a@\textbf{Windows Powershell Scripting}!4) Ex: AD, Event Logs \& Nmap|book{6}}{117-139}
+\indexentry{6a@\textbf{Windows Powershell Scripting}!5) writing Own Functions \& Scripts|book{6}}{141-185}
+\indexentry{6a@\textbf{Windows Powershell Scripting}!6) Windows Mgt Instrumentation|book{6}}{187-201}
+
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{8@\textbf{Appendix}!Becoming A Domain Controller|book{1}}{172}
+\indexentry{8@\textbf{Appendix}!Social Engineering|book{1}}{180}
+\indexentry{8@\textbf{Appendix}!Editing Security Templates By Hand|book{1}}{186}
+\indexentry{8@\textbf{Appendix}!ADM/ADMX Templates|book{1}}{192}
+\indexentry{8@\textbf{Appendix}!Network Unlock|book{3}}{183}
+\indexentry{8@\textbf{Appendix}!802.11 Wireless Concepts Refresher|book{4}}{205}
+\indexentry{8@\textbf{Appendix}!Accounting = Logging|book{4}}{211}
+\indexentry{8@\textbf{Appendix}!RADIUS Account Lockout|book{4}}{215}
+\indexentry{8@\textbf{Appendix}!NTLMv2 Authentication|book{5}}{239}
+\indexentry{8@\textbf{Appendix}!Restricting Anonymous Access|book{5}}{249}
+
+\indexentry{9@\blankline|comment}{0}
+
+\indexentry{10@\textbf{Best Practices \& Tips}!GPO Scripts|book{1}}{71}
+\indexentry{10@\textbf{Best Practices \& Tips}!GPO Scripts}{73}
+\indexentry{10@\textbf{Best Practices \& Tips}!Good-to-have Security Features|book{1}}{79-80}
+\indexentry{10@\textbf{Best Practices \& Tips}!Application Whitelisting|book{1}}{82}
+\indexentry{10@\textbf{Best Practices \& Tips}!AppLocker Default Rules Creation|book{1}}{94}
+\indexentry{10@\textbf{Best Practices \& Tips}!Deny NTFS Exec Permission on Paths|book{1}}{94}
+\indexentry{10@\textbf{Best Practices \& Tips}!Get AppLocker Warning Messages|book{1}}{96}
+\indexentry{10@\textbf{Best Practices \& Tips}!Anti-Malware Training|book{1}}{102}
+\indexentry{10@\textbf{Best Practices \& Tips}!Virtual Desktop Infrastructure|book{1}}{114}
+\indexentry{10@\textbf{Best Practices \& Tips}!Desktop Management|book{1}}{114}
+\indexentry{10@\textbf{Best Practices \& Tips}!Software Inventory|book{1}}{120}
+\indexentry{10@\textbf{Best Practices \& Tips}!EMET Configuration|book{1}}{127}
+\indexentry{10@\textbf{Best Practices \& Tips}!EMET Configuration}{128}
+\indexentry{10@\textbf{Best Practices \& Tips}!EMET Configuration}{129}
+\indexentry{10@\textbf{Best Practices \& Tips}!WPAD Hardening|book{1}}{148}
+\indexentry{10@\textbf{Best Practices \& Tips}!Java Security Recommendations|book{1}}{165}
+\indexentry{10@\textbf{Best Practices \& Tips}!User Rights List|book{2}}{17}
+\indexentry{10@\textbf{Best Practices \& Tips}!Logon Restrictions|book{2}}{19}
+\indexentry{10@\textbf{Best Practices \& Tips}!Privileges List|book{2}}{23}
+\indexentry{10@\textbf{Best Practices \& Tips}!Debug Program Privilege|book{2}}{32}
+\indexentry{10@\textbf{Best Practices \& Tips}!Token Abuse/Pass-the-hash|book{2}}{33-39}
+\indexentry{10@\textbf{Best Practices \& Tips}!Principle of Least Privileges|book{2}}{42}
+\indexentry{10@\textbf{Best Practices \& Tips}!Local Administrators Group|book{2}}{47}
+\indexentry{10@\textbf{Best Practices \& Tips}!Two-Account Strategy|book{2}}{49-50}
+\indexentry{10@\textbf{Best Practices \& Tips}!Picture Password And PIN|book{2}}{82-84}
+\indexentry{10@\textbf{Best Practices \& Tips}!Password Managers|book{2}}{88-90}
+\indexentry{10@\textbf{Best Practices \& Tips}!Local Accounts And Passwords|book{2}}{92-95}
+\indexentry{10@\textbf{Best Practices \& Tips}!Delegation Of Authority|book{2}}{117-118}
+\indexentry{10@\textbf{Best Practices \& Tips}!Auditing|book{2}}{139}
+\indexentry{10@\textbf{Best Practices \& Tips}!Patch Management Update Cycle|book{2}}{142-143}
+\indexentry{10@\textbf{Best Practices \& Tips}!Load Balancing|book{2}}{160}
+\indexentry{10@\textbf{Best Practices \& Tips}!CA Hierarchy Design|book{3}}{57-58}
+\indexentry{10@\textbf{Best Practices \& Tips}!Certificate Template Permissions|book{3}}{84-85}
+\indexentry{10@\textbf{Best Practices \& Tips}!Private Keys Protection|book{3}}{98-105}
+\indexentry{10@\textbf{Best Practices \& Tips}!BitLocker, TPM, Secure Boot|book{3}}{177-181}
+\indexentry{10@\textbf{Best Practices \& Tips}!Permieter Firewall Policies|book{4}}{9}
+\indexentry{10@\textbf{Best Practices \& Tips}!Disable NetBIOS And LLMNR|book{4}}{97-103}
+\indexentry{10@\textbf{Best Practices \& Tips}!Import/Change DNS Records|book{4}}{108}
+\indexentry{10@\textbf{Best Practices \& Tips}!DNS Security|book{4}}{133-139}
+\indexentry{10@\textbf{Best Practices \& Tips}!Wireless Security|book{4}}{197-203}
+\indexentry{10@\textbf{Best Practices \& Tips}!Service Account Identities|book{4}}{36}
+\indexentry{10@\textbf{Best Practices \& Tips}!Scheduled Tasks|book{5}}{55-57}
+\indexentry{10@\textbf{Best Practices \& Tips}!SMB 3.0|book{5}}{98}
+\indexentry{10@\textbf{Best Practices \& Tips}!RDP|book{5}}{112-113}
+\indexentry{10@\textbf{Best Practices \& Tips}!DAC -- Upgrade Servers \& Clients First|book{5}}{141}
+
+\indexentry{49@\blankline|comment}{0}
+
+\indexentry{50@\textbf{Group Policy Configurables}!Scripts|book{1}}{70}
+\indexentry{50@\textbf{Group Policy Configurables}!Scripts}{72-73}
+\indexentry{50@\textbf{Group Policy Configurables}!Make Desktops Like Appliances|book{1}}{85-88}
+\indexentry{50@\textbf{Group Policy Configurables}!AppLocker|book{1}}{90-93}
+\indexentry{50@\textbf{Group Policy Configurables}!Custom Tech Support Link|book{1}}{95}
+\indexentry{50@\textbf{Group Policy Configurables}!AutoPlay|book{1}}{101}
+\indexentry{50@\textbf{Group Policy Configurables}!Removable Devices Control|book{1}}{104}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption|book{1}}{106}
+\indexentry{50@\textbf{Group Policy Configurables}!EMET|book{1}}{126}
+\indexentry{50@\textbf{Group Policy Configurables}!Internet Explorer Hardening|book{1}}{130}
+\indexentry{50@\textbf{Group Policy Configurables}!Internet Explorer Hardening}{136}
+\indexentry{50@\textbf{Group Policy Configurables}!Internet Explorer Hardening}{137}
+\indexentry{50@\textbf{Group Policy Configurables}!Proxy Settings|book{1}}{146}
+\indexentry{50@\textbf{Group Policy Configurables}!Google Chrome|book{1}}{151}
+\indexentry{50@\textbf{Group Policy Configurables}!Java APPLET Element Support|book{1}}{161}
+\indexentry{50@\textbf{Group Policy Configurables}!Java Configuration Files|book{1}}{161}
+\indexentry{50@\textbf{Group Policy Configurables}!User Rights Assignment|book{2}}{17}
+\indexentry{50@\textbf{Group Policy Configurables}!Require Smart Card Authentication|book{2}}{21}
+\indexentry{50@\textbf{Group Policy Configurables}!User Rights Assignment}{22}
+\indexentry{50@\textbf{Group Policy Configurables}!Privileges|book{2}}{22}
+\indexentry{50@\textbf{Group Policy Configurables}!RDP Restricted Admin Mode|book{2}}{37}
+\indexentry{50@\textbf{Group Policy Configurables}!CredSSP Credentials Sharing|book{2}}{37}
+\indexentry{50@\textbf{Group Policy Configurables}!Credentials Caching|book{2}}{39}
+\indexentry{50@\textbf{Group Policy Configurables}!Global Groups|book{2}}{43}
+\indexentry{50@\textbf{Group Policy Configurables}!Local Groups|book{2}}{45}
+\indexentry{50@\textbf{Group Policy Configurables}!User Account Control|book{2}}{54}
+\indexentry{50@\textbf{Group Policy Configurables}!User Account Control}{60}
+\indexentry{50@\textbf{Group Policy Configurables}!Account Policies|book{2}}{64-68}
+\indexentry{50@\textbf{Group Policy Configurables}!Password Complexity Filtering|book{2}}{70}
+\indexentry{50@\textbf{Group Policy Configurables}!Credentials Storage|book{2}}{87}
+\indexentry{50@\textbf{Group Policy Configurables}!Scripts! |book{2}}{91}
+\indexentry{50@\textbf{Group Policy Configurables}!Scheduled Jobs|book{2}}{92}
+\indexentry{50@\textbf{Group Policy Configurables}!Local Accounts|book{2}}{93}
+\indexentry{50@\textbf{Group Policy Configurables}!Console Logon Authentication|book{2}}{93}
+\indexentry{50@\textbf{Group Policy Configurables}!Network Authentication|book{2}}{93}
+\indexentry{50@\textbf{Group Policy Configurables}!Local Passwords|book{2}}{93-94}
+\indexentry{50@\textbf{Group Policy Configurables}!Windows Updates|book{2}}{159}
+\indexentry{50@\textbf{Group Policy Configurables}!Auto-Enrollment Settings|book{3}}{108}
+\indexentry{50@\textbf{Group Policy Configurables}!Credential Roaming|book{3}}{115}
+\indexentry{50@\textbf{Group Policy Configurables}!Turn Off Root CA Updates|book{3}}{119}
+\indexentry{50@\textbf{Group Policy Configurables}!Certificate Path Validation Settings|book{3}}{121}
+\indexentry{50@\textbf{Group Policy Configurables}!Integrity Checking (Re-Enable)|book{3}}{162}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption! |book{3}}{162}
+\indexentry{50@\textbf{Group Policy Configurables}!Integrity Checking (Re-Enable)}{164}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption! }{164}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption!Passphrase (Enable)|book{3}}{165}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption!PIN/USB Option (Show)|book{3}}{165}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption!AD Backup|book{3}}{175}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption!Unique Identifiers|book{3}}{176}
+\indexentry{50@\textbf{Group Policy Configurables}!BitLocker Drive Encryption!Data Recovery Agent (Add)|book{3}}{176}
+\indexentry{50@\textbf{Group Policy Configurables}!Network Profiles|book{4}}{25}
+\indexentry{50@\textbf{Group Policy Configurables}!Windows Firewall|book{4}}{89-90}
+\indexentry{50@\textbf{Group Policy Configurables}!IPSec Policies|book{4}}{90}
+\indexentry{50@\textbf{Group Policy Configurables}!LLMNR (Disable)|book{4}}{102}
+\indexentry{50@\textbf{Group Policy Configurables}!DCHP Audit Logging (Enable)|book{4}}{113}
+\indexentry{50@\textbf{Group Policy Configurables}!Name Resolution Policy|book{4}}{126}
+\indexentry{50@\textbf{Group Policy Configurables}!Wireless Network Policy|book{4}}{179}
+\indexentry{50@\textbf{Group Policy Configurables}!Network Bridging (Disable)|book{4}}{182}
+\indexentry{50@\textbf{Group Policy Configurables}!Internet Connection Sharing (Limit)|book{4}}{182}
+\indexentry{50@\textbf{Group Policy Configurables}!801.X Configuration|book{4}}{193}
+\indexentry{50@\textbf{Group Policy Configurables}!Server Manager Default Source Path|book{5}}{17}
+\indexentry{50@\textbf{Group Policy Configurables}!Services Settings|book{5}}{32}
+\indexentry{50@\textbf{Group Policy Configurables}!Scheduled Tasks|book{5}}{53}
+\indexentry{50@\textbf{Group Policy Configurables}!Credentials Storage! |book{5}}{55}
+\indexentry{50@\textbf{Group Policy Configurables}!Audit Policies|book{5}}{68}
+\indexentry{50@\textbf{Group Policy Configurables}!Audit Policies!Advanced Configuration|book{5}}{72}
+\indexentry{50@\textbf{Group Policy Configurables}!Event Log Settings|book{5}}{73}
+\indexentry{50@\textbf{Group Policy Configurables}!NTP Settings|book{5}}{77}
+\indexentry{50@\textbf{Group Policy Configurables}!System Restore Setting|book{5}}{80}
+\indexentry{50@\textbf{Group Policy Configurables}!IE Browing History|book{5}}{81}
+\indexentry{50@\textbf{Group Policy Configurables}!SMB Signing|book{5}}{97}
+\indexentry{50@\textbf{Group Policy Configurables}!Prevent Ignoring Certificate Errors|book{5}}{103}
+\indexentry{50@\textbf{Group Policy Configurables}!Credentials Caching! |book{5}}{106}
+\indexentry{50@\textbf{Group Policy Configurables}!Credentials Delegation|book{5}}{111-112}
+\indexentry{50@\textbf{Group Policy Configurables}!NTLM Restriction|book{5}}{117}
+\indexentry{50@\textbf{Group Policy Configurables}!Audit Policies}{215}
+
+\indexentry{149@\blankline|comment}{0}
+
+%\indexentry{150@\textbf{\textit{Try It Now}}!Setup|book{1}}{12}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Sec Templates Snap-in|book{1}}{15-16}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Sec Templates Snap-in}{18}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in|book{1}}{33-34}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Backup/Restore|book{1}}{33}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!HTML Report|book{1}}{34}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Group Policy Modeling Wizard|book{1}}{34}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Group Policy Results Wizard|book{1}}{34}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Group Policy Links|book{1}}{42-43}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!GPO Enforced|book{1}}{46}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in|book{1}}{40}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Deny Read and Deny Apply|book{1}}{47}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Delegation of Control|book{1}}{48}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Loopback Processing Mode|book{1}}{51}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!WMI Filtering|book{1}}{52}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Disable GPO|book{1}}{53}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Import Templates|book{1}}{57}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Create Central Store|book{1}}{59}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!AppLocker - Enforce/Audit|book{1}}{91}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!AppLocker - Create/Generate Rules|book{1}}{92}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Server Manager!VDI Quick Start|book{1}}{117}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Restricted Groups|book{2}}{44}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MIC Lab Experiments|book{2}}{60-62}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center|book{2}}{75}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC ADSI Edit Snap-in|book{2}}{79}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Register Snap-in DLL|book{2}}{100}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in|book{2}}{99}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Deleg. of Control Wizard|book{2}}{119}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Deleg. of Control Wizard}{123-124}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Edit Domain Attribute|book{2}}{127}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Add Computer to OU|book{2}}{128}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Mgt Snap-in!Enable AD Auditing|book{2}}{134}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Modify Audit Settings|book{2}}{135}
+%\indexentry{150@\textbf{\textit{Try It Now}}!See Current Audit Policies|book{2}}{137}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificates Snap-in|book{3}}{13-14}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Mark As Trusted For Delegation|book{3}}{16}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificates Snap-in}{25}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificates Snap-in!Display Physical Storage Locations|book{3}}{26}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in|book{3}}{13}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Backup Certificate Sv DB \& Log|book{3}}{70}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Backup CA's Certificate \& Private Key|book{3}}{70}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Configure CA's Policy Module|book{3}}{72}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Configure CA's Exit Module|book{3}}{72}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Enable Auditing|book{3}}{75}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificate Templates Snap-in|book{3}}{77}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificate Templates Snap-in!Make Template Copy|book{3}}{78}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificate Templates Snap-in!Require Private Key Archival|book{3}}{79}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificate Templates Snap-in!Enable Certificate Auto-Enrollment|book{3}}{79}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certificate Templates Snap-in!Force Re-Enrollment|book{3}}{79}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Certificate Enrollment|book{3}}{81}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Make Certificate Template Available|book{3}}{82}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Change Permissions Of Cert Template|book{3}}{84}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Change Current System Key|book{3}}{101}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Configure Auto-Enrollment|book{3}}{108}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Add CA Cert To Trusted Root CA|book{3}}{118}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Trust CA Using CTL|book{3}}{120}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Internet Explorer!Modify Cert's Acceptable Purposes|book{3}}{121}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Certificate Revocation|book{3}}{123}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Change CDP Of Enterprise CA|book{3}}{124}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Change Publication Period Of CRL|book{3}}{124}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Certification Authority Snap-in!Force CRL Immediate Publication|book{3}}{124}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Windows Firewall Snap-in|book{4}}{15}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC IP Security Policies Snap-in|book{4}}{17}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC IP Security Policies Snap-in!Install|book{4}}{18}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Windows Firewall Snap-in!Edit Per-Network Defaults|book{4}}{27}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Windows Firewall Snap-in!Edit Inbound/Outbound Rules|book{4}}{30}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Windows Firewall Snap-in!See Default IPSec Settings|book{4}}{33}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Windows Firewall Snap-in!Make FW Dialog Box Disappear|book{4}}{33}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Network Sharing Center!Disable NetBIOS Over TCP/IP|book{4}}{98}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in|book{4}}{104}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Store DNS Domain's Data In AD|book{4}}{108}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Users and Comp Snap-in!Edit DNS Records' Permissions|book{4}}{110}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DHCP Snap-in|book{4}}{110}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DHCP Snap-in!Configure DNS Dynamic Updates|book{4}}{110}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Add Root Zone's DS Info|book{4}}{121}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Sign DNS Zone|book{4}}{123}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Enable TA Auto Distribution|book{4}}{124}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Import TA On Non-DC DNS Server|book{4}}{125}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Transfer Master Key Role|book{4}}{125}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Create NRPT Rule|book{4}}{127}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Disable Zone Transfers|book{4}}{136}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Enable DNS Activity Logging|book{4}}{137}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC DNS Snap-in!Enable Cache Poisoning Protection|book{4}}{138}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Server Manager!Install NPS|book{4}}{148}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC NPS Snap-in|book{4}}{148}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC NPS Snap-in!Register NPS With AD|book{4}}{148}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC NPS Snap-in!Create NPS Policy|book{4}}{152}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC NPS Snap-in!Configure Policy To Accept EAP-TLS|book{4}}{163}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC NPS Snap-in!Create Connection Request Policy|book{4}}{164}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Create Wireless Policy|book{4}}{179}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Network Sharing Center!Configure 802.1X Auth (Ethernet)|book{4}}{192}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Configure 802.1X Wired Auth|book{4}}{193}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Server Manager|book{5}}{12-14}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Detect File System Changes (BAT)|book{5}}{67}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Network Sharing Center!Unbind Networking Component|book{5}}{82}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Network Sharing Center!Disable NetBIOS Over TCP/IP@ |book{5}}{84}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Configure RDP Encryption|book{5}}{108}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Configure RDP Authentication|book{5}}{109}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Prevent Ignoring RDP Auth Errors|book{5}}{109}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Configure RDP NLA|book{5}}{110}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable Kerb Armoring On DC|book{5}}{115}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable Kerb Armoring Clients|book{5}}{116}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Domains \& Trusts Snap-in|book{5}}{128}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC AD Domains \& Trusts Snap-in!Raise Functional Level Of A Domain|book{5}}{129}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!Attach Cond To NTFS Perm|book{5}}{150}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!See Final Permissions On File|book{5}}{154}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!Experiment Eff Access \& Cond Expr|book{5}}{154}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable Kerb Armoring On DC}{158}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable Kerb Armoring Clients}{159}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!See Existing Claim Types|book{5}}{165}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Create New Claim Type|book{5}}{165}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Modify \texttt{c} Attribute For Computer|book{5}}{167}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Create List Of Suggested Values|book{5}}{167}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!Classify An NTFS File|book{5}}{177}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!See \& Enable Resource Properties|book{5}}{178}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Create Resource Property|book{5}}{179}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Edit Suggested Values Of Res Prop|book{5}}{179}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Delete Resource Property|book{5}}{180}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Create Reference Resource Property|book{5}}{180}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Create Resource Property List|book{5}}{181}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Edit Global Resource Property List|book{5}}{181}
+%\indexentry{150@\textbf{\textit{Try It Now}}!PowerShell!Download Immediately Res Properties|book{5}}{184}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!Attach Cond To NTFS Perm}{187}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Create Central Access Rule|book{5}}{194}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Create Central Access Policy|book{5}}{197}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Advertise Central Access Policies|book{5}}{201}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!Apply Central Access Policy To Folder|book{5}}{202}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!Modify Classification Of Test File|book{5}}{205}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Explorer!Troubleshoot Permission Problems|book{5}}{206}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC File Server Resource Manager Snap-in!Configure Access-Denied Assistance|book{5}}{211}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC File Server Resource Manager Snap-in!Configure Error Assistance Per Folder|book{5}}{211}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable Access-Denied Assistance OU|book{5}}{211}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable A-D Assistance On Clients|book{5}}{212}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Prevent Audit Policy Conflicts|book{5}}{215}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable Global Obj Access Auditing|book{5}}{215}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Active Directory Admin Center!Add Proposed Permissions To CAR|book{5}}{216}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC File Server Resource Manager Snap-in!Define Set Of Folders|book{5}}{222}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC File Server Resource Manager Snap-in!Assign A-D Assist \& Mail To Folders|book{5}}{222}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC File Server Resource Manager Snap-in!Create Classification Rule|book{5}}{223}
+%\indexentry{150@\textbf{\textit{Try It Now}}!Server Manager!Create Shared Folder Using Wizard|book{5}}{224}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable Obj Access Auditing For FS|book{5}}{232}
+%\indexentry{150@\textbf{\textit{Try It Now}}!MMC Group Policy Snap-in!Enable GOAA For FS|book{5}}{233}
+%
+%\indexentry{199@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{MMC.EXE}|book{1}}{15}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REGEDIT.EXE}|book{1}}{18}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{GREP.EXE}|book{1}}{27}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{FINDSTR.EXE}|book{1}}{27}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SECEDIT.EXE}|book{1}}{27}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REGEDIT.EXE}}{27}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SECEDIT.EXE}}{29-30}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{GPUPDATE.EXE}|book{1}}{31}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{MMC.EXE}}{32}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{GPUPDATE.EXE}}{35}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{GPOTOOL.EXE}|book{1}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SECEDIT.EXE}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{GPRESULT.EXE}|book{1}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{ADDIAG.EXE}|book{1}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{DCGPOFIX.EXE}|book{1}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!ADMX Migrator|book{1}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!ADMX Migrator}{61}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CSCRIPT.EXE}|book{1}}{70}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WSCRIPT.EXE}|book{1}}{70}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CMD.EXE}|book{1}}{70}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Bit9 Security Platform|book{1}}{82}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!CoreTrace Bouncer|book{1}}{82}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Lumension Application Control|book{1}}{82}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!McAfee Application Control|book{1}}{82}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Microsoft AppLocker|book{1}}{82}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!SignaCert Entreprise Trust|book{1}}{82}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{EXPLORER.EXE}|book{1}}{84}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CMD.EXE}}{84}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{NOTEPAD.EXE}|book{1}}{84}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CSCRIPT.EXE}}{96}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WSCRIPT.EXE}}{96}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{POWERSHELL.EXE}|book{1}}{96}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CMD.EXE}}{88}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{EXPLORER.EXE}}{88}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Bit9 Security Platform}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!CoSoSys Endpoint Protector|book{1}}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!DeviceLock|book{1}}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Kapersky Device Control|book{1}}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Lumension Device Control|book{1}}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!McAfee Device Control|book{1}}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Sophos SafeGuard|book{1}}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!Symantec Endpoint Protection|book{1}}{107}
+\indexentry{200@\textbf{Tools \win}!Products@\textbf{Products \coin}!VMWare Workstation|book{1}}{110}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RECIMG.EXE}|book{1}}{112}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SYSPREP.EXE}|book{1}}{118}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!EMET|book{1}}{123}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{IEXPLORE.EXE}|book{1}}{135}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{IEXPLORE.EXE}}{142}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{DNSCMD.EXE}|book{1}}{147}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WHOAMI.EXE}|book{2}}{22}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Incognito|book{2}}{29}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RUNAS.EXE}|book{2}}{30}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{PSEXEC.EXE}|book{2}}{30}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{LSASS.EXE}|book{2}}{31}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!OllyDbg|book{2}}{31}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Cain|book{2}}{31}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RUNAS.EXE}}{32}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Windows Credentials Editor|book{2}}{32}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Runhash|book{2}}{32}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Metasploit|book{1}}{77}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Metasploit@ |book{2}}{32}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{LSASS.EXE}}{34}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SCHTASKS.EXE}|book{2}}{35}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{PSEXEC.EXE}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WMIC.EXE}|book{2}}{36}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{MSTSC.EXE}|book{2}}{36}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{KERBTRAY.EXE}|book{2}}{38}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{GPUPDATE.EXE}@ |book{2}}{44}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RUNAS.EXE}}{49}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RUNAS.EXE}}{50}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{PSEXEC.EXE}}{50}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{AUTOIT.EXE}|book{2}}{50}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CPAU.EXE}|book{2}}{50}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{TQCRUNAS.EXE}|book{2}}{50}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{AUTO2EXE.EXE}|book{2}}{50}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{EPAL.EXE}|book{2}}{50}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REGEDIT.EXE}@ |book{2}}{52}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{NET.EXE}|book{2}}{52}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WHOAMI.EXE}}{53}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WHOAMI.EXE}}{54}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Process Hacker|book{1}}{127}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Process Hacker}{128}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Process Monitor|book{2}}{48}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Process Explorer|book{2}}{54}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RUNAS.EXE}}{54}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Process Explorer}{57}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Process Hacker@ |book{2}}{57}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WHOAMI.EXE}}{57}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{PSEXEC.EXE}}{57}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{EXPLORER.EXE}@ |book{2}}{57}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RUNAS.EXE}}{57}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CONSENT.EXE}|book{2}}{57}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{ICACLS.EXE}|book{2}}{58-60}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Process Hacker@ |book{2}}{58}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{CHML.EXE}|book{2}}{58-60}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{REGIL.EXE}|book{2}}{58}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{RUNASIL.EXE}|book{2}}{58}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CMD.EXE}@ |book{2}}{60-62}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!PASSFILT|book{2}}{72}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!Specops Password Policy|book{2}}{73}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!NFront Password Filter|book{2}}{73}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!Hitachi ID|book{2}}{73}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!Password Policy Enforcer|book{2}}{73}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!PasswordFilter|book{2}}{73}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!Dictionary Password Filter|book{2}}{73}
+\indexentry{200@\textbf{Tools \win}!Password@\textbf{Password Filters}!DictionaryFilter|book{2}}{73}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{LDIFDE.EXE}|book{2}}{77-79}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Network Password Recovery|book{2}}{86}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{NET.EXE}}{87}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CMDKEY.EXE}|book{2}}{87}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{VAULTCMD.EXE}|book{2}}{87}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{CONTROL.EXE}|book{2}}{87}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{RUNDLL32.EXE}|book{2}}{87}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!KeePass|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!Password Safe|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!Cyber-Ark|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!IronKey|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!Lieberman Software|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!LastPass Pocket|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!Kapersky Password Manager|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!SplashID|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!RoboForm|book{2}}{88}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{CHML.EXE}}{90}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{gpprefdecrypt.py}|book{2}}{94}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!Cyber-Ark}{95}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!Lieberman Software}{95}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!ManageEngine|book{2}}{95}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!Thycotic Secret Server|book{2}}{96}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!PasswordCourier|book{2}}{96}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!NetWrix Privileged Account Manager|book{2}}{96}
+\indexentry{200@\textbf{Tools \win}!Password2@\textbf{Password Managers}!AutoCipher|book{2}}{96}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{MMC.EXE}@ |book{2}}{99}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REGSVR32.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{LDP.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{DCPROMO.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{ACLDIAG.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{ENUMPROP.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{SDCHECK.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{NETDOM.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{NLTEST.EXE}|book{2}}{100}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{ADPREP.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{DS*.EXE}|book{2}}{100-101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{CSVDE.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{LDIFDE.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{MOVETREE.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{DCDIAG.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{DNSCMD.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{NETDIAG.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{NTDSUTIL.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{REPADMIN.EXE}|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!CLONEPRINCIPAL (VBS)|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!ADMT|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!JoeWare Tools|book{2}}{101}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{ADRESTORE.EXE}|book{2}}{102}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!Sysinternals|book{2}}{102}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{LDP.EXE}}{103}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{DSACLS.EXE}|book{2}\q}{110-112}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{ACLDIAG.EXE}|q}{112-113}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{SDCHECK.EXE}}{113}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{DSREVOKE.EXE}|book{2}}{113}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!Quest Software|book{2}}{118}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!FastLane ActiveRoles|book{2}}{118}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!NetIQ Directory Security Admin|book{2}}{118}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{AUDITPOL.EXE}|book{2}}{137-139}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WUAUCLT.EXE}|book{2}}{160}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WSUSUTIL.EXE}|book{2}}{160}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!SolarWinds Patch Manager|book{2}}{162}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Citrix GoToManage|book{2}}{162}
+\indexentry{200@\textbf{Tools \win}!MSI@\textbf{MSI Package Editors}!Advanced Installer|book{2}}{163}
+\indexentry{200@\textbf{Tools \win}!MSI@\textbf{MSI Package Editors}!ITNinja|book{2}}{163}
+\indexentry{200@\textbf{Tools \win}!MSI@\textbf{MSI Package Editors}!CapaInstaller|book{2}}{163}
+\indexentry{200@\textbf{Tools \win}!MSI@\textbf{MSI Package Editors}!EMCO MSI Package Builder|book{2}}{163}
+\indexentry{200@\textbf{Tools \win}!MSI@\textbf{MSI Package Editors}!Flexera InstallShield \& AdminStudio|book{2}}{163}
+\indexentry{200@\textbf{Tools \win}!MSI@\textbf{MSI Package Editors}!WinINSTALL|book{2}}{163}
+\indexentry{200@\textbf{Tools \win}!MSI@\textbf{MSI Package Editors}!ScriptLogic/Quest MSI Studio|book{2}}{163}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Secunia PSI/OSI|book{2}}{167-168}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Ninite|book{2}}{168}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!TechTracker|book{2}}{168}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!FileHippo Update Checker|book{2}}{168}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!\texttt{MBSACLI.EXE}|book{2}}{169-171}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!IBM Endpoint Manager|book{2}}{171}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Altiris|book{2}}{171}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Ecora|book{2}}{171}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Gravity Storm|book{2}}{171}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Lumension Patch|book{2}}{172}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!Shavlik Technologies|book{2}}{172}
+\indexentry{200@\textbf{Tools \win}!Patch@\textbf{Patch Managers}!System Center Config Manager|book{2}}{172}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!CA/Cert/Templates MMC Snap-ins|book{3}}{13}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTSRV.EXE}|book{3}}{13}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Enterprise PKI MMC Snap-in|book{3}}{14-15}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Powershell Certificates Provider|book{3}}{15}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Certificate Services Websites|book{3}}{15-16}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Key Recovery Tool|book{3}}{16}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Group Policy Settings For PKI|book{3}}{13}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{DSSTORE.EXE}|book{3}}{17}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTUTIL.EXE}|book{3}}{17-18}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{WINHTTPCERTCFG.EXE}|book{3}}{18}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTSRV.EXE}}{18}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTREQ.EXE}|book{3}}{19}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Quest Software's Powershell Cmdlets|book{3}}{19}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!ADSI|book{3}}{19}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!MSDN CryptoAPI Tools|book{3}}{20}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CMGETCER.DLL}|book{3}}{20}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{MSCEP.DLL}|book{3}}{20}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SETSPN.EXE}|book{3}}{17}
+\indexentry{200@\textbf{Tools \win}!AD@\textbf{Active Directory}!\texttt{ADPREP.EXE}@ |book{3}}{49}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{W32TM.EXE}|book{3}}{52}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTUTIL.EXE}}{67}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REGEDIT.EXE}@  |book{3}}{71}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTUTIL.EXE}}{71}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTUTIL.EXE}}{74}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{LSASS.EXE}@ |book{3}}{90}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SYSKEY.EXE}|book{3}}{91}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SYSKEY.EXE}}{95}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REGEDIT.EXE}@  }{95}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Cain@ |book{3}}{96}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{LSADUMP2.EXE}|book{3}}{96}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SYSKEY.EXE}}{99-102}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTUTIL.EXE}}{107}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTUTIL.EXE}|q}{113}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REGEDIT.EXE}@  }{118}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!\texttt{CERTUTIL.EXE}}{124}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Versatile Security|book{3}}{139}
+\indexentry{200@\textbf{Tools \win}!PKI@\textbf{Public Key Infrastructure}!Forefront Identity Manager|book{3}}{140}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Manage-BDE|book{3}}{142}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{TPMVSCMGR.EXE}|book{3}}{144}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{DISKPART.EXE}|book{3}}{155}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Manage-BDE}{155}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Manage-BDE}{158-159}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!Manage-BDE}{175-177}
+\indexentry{200@\textbf{Tools \win}!Proxy@\textbf{Proxy Servers}!Blue Coat ProxySG|book{4}}{10}
+\indexentry{200@\textbf{Tools \win}!Proxy@\textbf{Proxy Servers}!Websense Gateway|book{4}}{10}
+\indexentry{200@\textbf{Tools \win}!Proxy@\textbf{Proxy Servers}!Squid|book{4}}{10}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}|book{4}}{16}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETDIAG.EXE}|book{4}}{19}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IPSECCMD.EXE}|book{4}}{19}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IPSECPOL.EXE}|book{4}}{20}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}}{39}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IPSECCMD.EXE}}{39}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IPSECPOL.EXE}}{39}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{CEPSETUP.EXE}|book{4}}{40}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!Vanilla DH|book{4}}{54}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}}{65}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}}{92-95}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IPSECCMD.EXE}}{92}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IPSECPOL.EXE}}{92-93}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NBTSTAT.EXE}|book{4}}{98}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{DNSCMD.EXE}|book{4}}{103}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IPCONFIG.EXE}|book{4}}{105}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NSLOOKUP.EXE}|book{4}}{105}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{DIG.EXE}|book{4}}{105}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{DNSCMD.EXE}}{105}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{DNSLINT.EXE}|book{4}}{106}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{DNSDIAG.EXE}|book{4}}{106}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!Performance Monitor|book{4}}{106}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}}{127}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{DIG.EXE}}{129}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!Performance Monitor}{135}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NSLOOKUP.EXE}}{135}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!CoWPAtty|book{4}}{143}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!CloudCracker|book{4}}{143}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Aircrack-ng|book{4}}{143}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Elcomsoft Wireless Security Auditor|book{4}}{143}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Pyrit|book{4}}{143}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Cain \& Abel|book{4}}{144}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!NirSoft's Wireless Key View|book{4}}{144}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{RASUSERS.EXE}|book{4}}{135}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}}{183}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Metageek inSSIDer|book{4}}{184}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Metageek Chanalyzer|book{4}}{184}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Metageek Wi-Spy|book{4}}{184}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!McAfee ePolicy Orchestrator|book{4}}{185}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Fluke AirMagnet|book{4}}{185}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!EMCO MAC Address Scanner|book{4}}{185}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}}{185}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Airpwn|book{4}}{187}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NETSH.EXE}}{194}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{Dot11WLogoTests.exe}|book{4}}{197}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{IASPARSE.EXE}|book{4}}{213}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SCW.EXE}|book{5}}{18}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SCWCMD.EXE}|book{5}}{19-21}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SECEDIT.EXE}@ |book{5}}{23}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SC.EXE}|book{5}}{29}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SC.EXE}}{32-36}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!NirSoft's LSA Secrets View|book{5}}{35}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SC.EXE}}{39}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{DISM.EXE}|book{5}}{46}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SCHTASKS.EXE}|book{5}}{53}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{PSEXEC.EXE}@ |book{5}}{53}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{SCHTASKS.EXE}}{57}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{CSDIFF.EXE}|book{5}}{66}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{WINDIFF.EXE}|book{5}}{66}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{FC.EXE}|book{5}}{66}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{SHA256DEEP.EXE}|book{5}}{66-67}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{AUDITPOL.EXE}@ |book{5}}{70}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{W32TM.EXE}@ |book{5}}{77}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{FSUTIL.EXE}|book{5}}{79}
+\indexentry{200@\textbf{Tools \win}!Network@\textbf{Network}!\texttt{NBTSTAT.EXE}@ |book{5}}{84}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{MSTSC.EXE}@ |book{5}}{105}
+\indexentry{200@\textbf{Tools \win}!Wireless@\textbf{Wireless Network}!Cain \& Abel@ |book{5}}{109}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{MSTSC.EXE}@ }{111}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WHOAMI.EXE}@ |book{5}}{145}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{KLIST.EXE}|book{5}}{145}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{DSAC.EXE}|book{5}}{146}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{WHOAMI.EXE}@ }{169}
+\indexentry{200@\textbf{Tools \win}!Tool@\textbf{Tool}!\texttt{STREAMS.EXE}|book{5}}{175}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{REG.EXE}|book{5}}{176}
+\indexentry{200@\textbf{Tools \win}!System@\textbf{System}!\texttt{AUDITPOL.EXE}@ }{215}
+
+\indexentry{209@\blankline|comment}{0}
+
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{Set-ExecutionPolicy}|book{1}}{13}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{import-module}|book{1}}{35}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}|book{1}}{35}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AppLocker@\textbf{AppLocker}!\cmd{new-applockerpolicy}|book{1}}{95}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AppLocker@\textbf{AppLocker}!\cmd{set-applockerpolicy}|book{1}}{96}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AppLocker@\textbf{AppLocker}!\cmd{get-applockerpolicy}|book{1}}{96}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AppLocker@\textbf{AppLocker}!\cmd{get-applockerfileinformation}|book{1}}{96}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AppLocker@\textbf{AppLocker}!\cmd{test-applockerpolicy}|book{1}}{96}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{set-executionpolicy}}{97}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-executionpolicy}|book{1}}{97}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}}{98}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Inventory@\textbf{Inventory}!\cmd{get-wmiobject}|book{1}}{120}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{export-csv}|book{1}}{120}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-content}|book{1}}{121}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{select-object}|book{1}}{121}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}}{165}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Inventory@\textbf{Inventory}!\cmd{get-wmiobject}@ |book{2}}{28}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Account@\textbf{Account Policy}!\cmds{get-addefaultdomainpasswordpolicy}|book{2}}{75}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Account@\textbf{Account Policy}!\cmds{set-addefaultdomainpasswordpolicy}|book{2}}{75}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Account@\textbf{Account Policy}!\cmds{get-addomain}|book{2}}{75}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Account@\textbf{Account Policy}!\cmds{get-adfinegrainedpasswordpolicy}|book{2}}{76}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Account@\textbf{Account Policy}!\cmds{new-adfinegrainedpasswordpolicy}|book{2}}{76}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Account@\textbf{Account Policy}!\cmds{set-adfinegrainedpasswordpolicy}|book{2}}{76}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Account@\textbf{Account Policy}!\cmdxs{add-adfinegrainedpasswordpolicysubject}|book{2}}{76}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Inventory@\textbf{Inventory}!\cmd{get-wmiobject}@ }{92}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{import-module}@ |book{2}}{100}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@ |book{2}}{100}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-content}@ |book{2}}{170-171}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@  |book{3}}{15}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{dir}|book{3}}{15}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@  }{156}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@   |book{4}}{16}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@   }{93}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Set-DnsServerGlobalNameZone}|book{4}}{103}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Resolve-DnsName}|book{4}}{119}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Add-DnsServerTrustAnchor}|book{4}}{121}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Get-DnsServerDnsSecZoneSetting}|book{4}}{123}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Get-DnsServerTrustAnchor}|book{4}}{124}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@   }{127}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Get-DnsClientNrptPolicy}|book{4}}{127}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Resolve-DnsName}}{129}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{import-module}@  |book{5}}{16}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@    |book{5}}{16}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Install@\textbf{Installation \& Configuration}!\cmd{Install-WindowsFeature}|book{5}}{16-17}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Install@\textbf{Installation \& Configuration}!\cmd{Uninstall-WindowsFeature}|book{5}}{17}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-service}|book{5}}{34-36}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@    }{37-38}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Install@\textbf{Installation \& Configuration}!\cmd{Remove-WindowsFeature}|book{5}}{45}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Install@\textbf{Installation \& Configuration}!\cmd{Get-WindowsImage}|book{5}}{45}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Install@\textbf{Installation \& Configuration}!\cmd{Install-WindowsFeature}}{46}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Get-SmbConnection}|book{5}}{93}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Set-SmbServerConfiguration}|book{5}}{94}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Set-SmbShare}|book{5}}{94}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Get-SmbShare}|book{5}}{94}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Network@\textbf{Network}!\cmd{Set-SmbServerConfiguration}}{96}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Install@\textbf{Installation \& Configuration}!\cmd{Set-ItemProperty}|book{5}}{96}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@    }{145}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Permissions@\textbf{Permissions}!\cmd{Get-Acl}|book{5}}{145}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Permissions@\textbf{Permissions}!\cmd{Set-Acl}|book{5}}{145}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Install@\textbf{Installation \& Configuration}!\cmd{Install-WindowsFeature}}{146}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AD@\textbf{Active Directory}!\cmd{Get-ADClaimType}|book{5}}{165}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AD@\textbf{Active Directory}!\cmd{Get-ADComputer}|book{5}}{167}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AD@\textbf{Active Directory}!\cmd{Set-ADObject}|book{5}}{167}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AD@\textbf{Active Directory}!\cmd{Get-ADUser}|book{5}}{169}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{Format-Table}|book{5}}{169}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{get-help}@    }{170}
+\indexentry{210@\textbf{PowerShell Cmdlets}!Classification@\textbf{Classification}!\cmds{Update-FSRMClassificationpropertyDefinition}|book{5}}{176}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AD@\textbf{Active Directory}!\cmd{Get-ADResourceProperty}|book{5}}{179}
+\indexentry{210@\textbf{PowerShell Cmdlets}!AD@\textbf{Active Directory}!\cmd{Get-ADResourcePropertyList}|book{5}}{181-182}
+\indexentry{210@\textbf{PowerShell Cmdlets}!PowerShell@\textbf{PowerShell}!\cmd{select-object}@ |book{5}}{182}
+
+\indexentry{229@\blankline|comment}{0}
+
+\indexentry{230@\textbf{Locations \win}!\texttt{C:\textbackslash Users\bs \textit{username}\bs Documents\bs}!\texttt{Security\bs Templates}|book{1}}{15}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%PrgFiles\%\bs}!\texttt{Gpmc\bs Scripts}|book{1}}{34}
+\indexentry{230@\textbf{Locations \win}!\texttt{\bs \bs \textit{server}\bs SYSVOL\bs \textit{domain}\bs Policies\bs}|book{1}}{39}
+\indexentry{230@\textbf{Locations \win}!\texttt{\bs \bs \textit{server}\bs SYSVOL\bs \textit{domain}\bs Policies\bs}!\texttt{\textit{GPO-GUID}\bs Adm}|book{1}}{57}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{Inf}|book{1}}{57-59}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{SYSVOL}|book{1}}{57}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{PolicyDefinitions}|book{1}}{59}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{PolicyDefinitions\bs en-US}|book{1}}{59}
+\indexentry{230@\textbf{Locations \win}!\texttt{\bs \bs \textit{server}\bs SYSVOL\bs \textit{domain}\bs Policies\bs}!\texttt{\textit{GPO-GUID}\bs Adm}}{59}
+\indexentry{230@\textbf{Locations \win}!\texttt{\bs \bs \textit{controller}\bs SYSVOL\bs \textit{domain}\bs Policies\bs}!\texttt{PolicyDefinitions}|book{1}}{59}
+\indexentry{230@\textbf{Locations \win}!\texttt{\bs \bs \textit{controller}\bs SYSVOL\bs \textit{domain}\bs Policies\bs}!\texttt{PolicyDefinitions\bs en-US}|book{1}}{59}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{System32}|book{2}}{108}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{System32}}{123}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{Inf}@ |book{2}}{159}
+\indexentry{230@\textbf{Locations \win}!\texttt{\bs \bs \textit{server}\bs SYSVOL\bs \textit{domain}\bs Policies\bs}!\texttt{PolicyDefinitions}|book{2}}{159}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%PrgFiles\%\bs}!\texttt{Update Services\bs Tools}|book{2}}{160}
+\indexentry{230@\textbf{Locations \win}!\texttt{http://\textit{server}/certsrv/}|book{3}}{27-28}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{CAPOLICY.INF}|book{3}}{50-51}
+\indexentry{230@\textbf{Locations \win}!\texttt{http://\textit{server}/certsrv/}}{60}
+\indexentry{230@\textbf{Locations \win}!\texttt{http://\textit{server}/certsrv/}}{67}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{System32}\texttt{\bs CertLog}|book{3}}{65}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%AppData\%\bs Microsoft\bs}!\texttt{Crypto}|book{3}}{88-89}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%AppData\%\bs Microsoft\bs}!\texttt{System Certificates}|book{3}}{89}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%UserProfile\%\bs Application Data\bs Microsoft\bs}!\texttt{Protect\bs CREDHIST}|book{3}}{92}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%AllUsersAppData\%\bs Microsoft\bs}!\texttt{Crypto}|book{3}}{95}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{ServiceProfiles}|book{3}}{95}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{System32\bs Certsrv\bs Certenroll}|book{3}}{124}
+\indexentry{230@\textbf{Locations \win}!\texttt{http://\textit{server}/certsrv/}}{149}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{System32\bs dns}|book{4}}{124}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{System32\bs Drivers\bs Etc\bs hosts}|book{4}}{131}
+\indexentry{230@\textbf{Locations \win}!\texttt{\%SysRoot\%\bs}!\texttt{System32\bs dns}}{138}
+
+\indexentry{249@\blankline|comment}{0}
+
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}|book{1}}{12}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}}{20}
+%\indexentry{250@\textbf{Websites}!\texttt{nist.gov}|book{1}}{20}
+%\indexentry{250@\textbf{Websites}!\texttt{technet.com}|book{1}}{20}
+%\indexentry{250@\textbf{Websites}!\texttt{disa.mil}|book{1}}{21}
+%\indexentry{250@\textbf{Websites}!\texttt{cisecurity.org}|book{1}}{21}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}}{61}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}}{64}
+%\indexentry{250@\textbf{Websites}!\texttt{metasploit.org}|book{1}}{77}
+%\indexentry{250@\textbf{Websites}!\texttt{coresecurity.com}|book{1}}{77}
+%\indexentry{250@\textbf{Websites}!\texttt{immunityinc.com}|book{1}}{77}
+%\indexentry{250@\textbf{Websites}!\texttt{bit9.com}|book{1}}{82}
+%\indexentry{250@\textbf{Websites}!\texttt{coretrace.com}|book{1}}{82}
+%\indexentry{250@\textbf{Websites}!\texttt{lumension.com}|book{1}}{82}
+%\indexentry{250@\textbf{Websites}!\texttt{mcafee.com}|book{1}}{82}
+%\indexentry{250@\textbf{Websites}!\texttt{signacert.com}|book{1}}{82}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}}{82}
+%\indexentry{250@\textbf{Websites}!\texttt{activestate.com}|book{1}}{96}
+%\indexentry{250@\textbf{Websites}!\texttt{bit9.com}}{99}
+%\indexentry{250@\textbf{Websites}!\texttt{securingthehuman.org}|book{1}}{103}
+%\indexentry{250@\textbf{Websites}!\texttt{nist.gov}}{103}
+%\indexentry{250@\textbf{Websites}!\texttt{bit9.com}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{endpointprotector.com}|book{1}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{devicelock.com}|book{1}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{kapersky.com}|book{1}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{lumension.com}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{mcafee.com}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{sophos.com}|book{1}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{symantec.com}|book{1}}{107}
+%\indexentry{250@\textbf{Websites}!\texttt{nsslabs.com}|book{1}}{135}
+%\indexentry{250@\textbf{Websites}!\texttt{foxitsoftware.com}|book{1}}{156}
+%\indexentry{250@\textbf{Websites}!\texttt{oracle.com}|book{1}}{165}
+%\indexentry{250@\textbf{Websites}!\texttt{sourceforge.net}|book{2}}{29}
+%\indexentry{250@\textbf{Websites}!\texttt{ollydbg.de}|book{2}}{31}
+%\indexentry{250@\textbf{Websites}!\texttt{oxid.it}|book{2}}{31}
+%\indexentry{250@\textbf{Websites}!\texttt{metasploit.org}@ |book{2}}{32}
+%\indexentry{250@\textbf{Websites}!\texttt{truesec.com}|book{2}}{32}
+%\indexentry{250@\textbf{Websites}!\texttt{ampliasecurity.com}|book{2}}{32}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@ |book{2}}{45}
+%\indexentry{250@\textbf{Websites}!\texttt{didierstevens.com}|book{2}}{58}
+%\indexentry{250@\textbf{Websites}!\texttt{minasi.com}|book{2}}{58}
+%\indexentry{250@\textbf{Websites}!\texttt{sourceforge.net}}{58}
+%\indexentry{250@\textbf{Websites}!\texttt{sans.org}|book{2}}{64}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@ }{72}
+%\indexentry{250@\textbf{Websites}!\texttt{specopssoft.com}|book{2}}{73}
+%\indexentry{250@\textbf{Websites}!\texttt{nfrontsecurity.com}|book{2}}{73}
+%\indexentry{250@\textbf{Websites}!\texttt{hitachi-id.com}|book{2}}{73}
+%\indexentry{250@\textbf{Websites}!\texttt{anixis.com}|book{2}}{73}
+%\indexentry{250@\textbf{Websites}!\texttt{denglernet.de}|book{2}}{73}
+%\indexentry{250@\textbf{Websites}!\texttt{tripod.com}|book{2}}{73}
+%\indexentry{250@\textbf{Websites}!\texttt{specopssoft.com}}{75}
+%\indexentry{250@\textbf{Websites}!\texttt{joeware.net}|book{2}}{75}
+%\indexentry{250@\textbf{Websites}!\texttt{powergui.org}|book{2}}{75}
+%\indexentry{250@\textbf{Websites}!\texttt{msdn.com}|book{2}}{82}
+%\indexentry{250@\textbf{Websites}!\texttt{nirsoft.net}|book{2}}{86}
+%\indexentry{250@\textbf{Websites}!\texttt{keepass.info}|book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{cyber-ark.com}|book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{sourceforge.net}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{ironkey.com}|book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{liebsoft.com}|book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{lastpass.com}|book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{kapersky.com}@ |book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{splashdata.com}|book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{roboform.com}|book{2}}{88}
+%\indexentry{250@\textbf{Websites}!\texttt{cyber-ark.com}}{95}
+%\indexentry{250@\textbf{Websites}!\texttt{liebsoft.com}}{95}
+%\indexentry{250@\textbf{Websites}!\texttt{manageengine.com}|book{2}}{95}
+%\indexentry{250@\textbf{Websites}!\texttt{thycotic.com}|book{2}}{96}
+%\indexentry{250@\textbf{Websites}!\texttt{courion.com}|book{2}}{96}
+%\indexentry{250@\textbf{Websites}!\texttt{netwrix.com}|book{2}}{96}
+%\indexentry{250@\textbf{Websites}!\texttt{autocipher.com}|book{2}}{96}
+%\indexentry{250@\textbf{Websites}!\texttt{quest.com}|book{2}}{118}
+%\indexentry{250@\textbf{Websites}!\texttt{netiq.com}|book{2}}{118}
+%\indexentry{250@\textbf{Websites}!\texttt{sans.org}}{146}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@ }{146}
+%\indexentry{250@\textbf{Websites}!\texttt{securityfocus.com}|book{2}}{146}
+%\indexentry{250@\textbf{Websites}!\texttt{adobe.com}|book{2}}{146}
+%\indexentry{250@\textbf{Websites}!\texttt{packetstormsecurity.com}|book{2}}{146}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@ }{153}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@ }{161}
+%\indexentry{250@\textbf{Websites}!\texttt{solarwinds.com}|book{2}}{162}
+%\indexentry{250@\textbf{Websites}!\texttt{citrix.com}|book{2}}{162}
+%\indexentry{250@\textbf{Websites}!\texttt{advancedinstaller.com}|book{2}}{163}
+%\indexentry{250@\textbf{Websites}!\texttt{itninja.com}|book{2}}{163}
+%\indexentry{250@\textbf{Websites}!\texttt{cpainstaller.com}|book{2}}{163}
+%\indexentry{250@\textbf{Websites}!\texttt{emcosoftware.com}|book{2}}{163}
+%\indexentry{250@\textbf{Websites}!\texttt{flexerasoftware.com}|book{2}}{163}
+%\indexentry{250@\textbf{Websites}!\texttt{scalable.com}|book{2}}{163}
+%\indexentry{250@\textbf{Websites}!\texttt{scriptlogic.com}|book{2}}{163}
+%\indexentry{250@\textbf{Websites}!\texttt{secunia.com}|book{2}}{167}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@ }{169}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@  |book{3}}{20}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@  }{21}
+%\indexentry{250@\textbf{Websites}!\texttt{distributed.net}|book{3}}{31}
+%\indexentry{250@\textbf{Websites}!\texttt{keylength.com}|book{3}}{32}
+%\indexentry{250@\textbf{Websites}!\texttt{verysign.com}|book{3}}{41}
+%\indexentry{250@\textbf{Websites}!\texttt{ncipher.com}|book{3}}{49}
+%\indexentry{250@\textbf{Websites}!\texttt{safenet-inc.com}|book{3}}{49}
+%\indexentry{250@\textbf{Websites}!\texttt{ntp.org}|book{3}}{51}
+%\indexentry{250@\textbf{Websites}!\texttt{pgp.com}|book{3}}{54}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@  }{75}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@  }{115}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@  }{134}
+%\indexentry{250@\textbf{Websites}!\texttt{versasec.com}|book{3}}{139}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@  }{140}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@   |book{4}}{70}
+%\indexentry{250@\textbf{Websites}!\texttt{networksolutions.com}|book{4}}{136}
+%\indexentry{250@\textbf{Websites}!\texttt{microsoft.com}@   }{194}
+%\indexentry{250@\textbf{Websites}!\texttt{wi-fi.org}|book{4}}{197}
+%
+%\indexentry{299@\blankline|comment}{0}
+
+%\indexentry{300@\textbf{Download Sources}!Blocklist Text Files For Firewalls|book{4}}{10}
+%\indexentry{300@\textbf{Download Sources}!Popular Web Proxy Servers|book{4}}{11}
+%\indexentry{300@\textbf{Download Sources}!Host-Based Firewalls|book{4}}{14}
+%\indexentry{300@\textbf{Download Sources}!IPSec Diagnostic Tool|book{4}}{18}
+%\indexentry{300@\textbf{Download Sources}!List Of Undesirable FQDN|book{4}}{132}
+%\indexentry{300@\textbf{Download Sources}!DNS Sinkhole Tools Malware Blocking|book{4}}{132}
+%\indexentry{300@\textbf{Download Sources}!PSK Cracking Tools|book{4}}{143}
+%\indexentry{300@\textbf{Download Sources}!PSK Local Extraction Tools \win|book{4}}{143}
+%\indexentry{300@\textbf{Download Sources}!Wireless Metageek Tools|book{4}}{184}
+%\indexentry{300@\textbf{Download Sources}!Network Inventory Tools|book{4}}{184}
+%\indexentry{300@\textbf{Download Sources}!Auditing \& Pentesting Tools|book{4}}{203}
+%\indexentry{300@\textbf{Download Sources}!Security \& Patch Bulletins|book{5}}{10}
+%\indexentry{300@\textbf{Download Sources}!Security Websites|book{5}}{10}
+%\indexentry{300@\textbf{Download Sources}!Server Core GUI Tools|book{5}}{43}
+%\indexentry{300@\textbf{Download Sources}!Log Consolidation Products|book{5}}{76}
+%\indexentry{300@\textbf{Download Sources}!FCI/DAC Integration Products|book{5}}{230}
+%\indexentry{300@\textbf{Download Sources}!Auditing \& Reporting Products|book{5}}{235}
+%
+%\indexentry{349@\blankline|comment}{0}
+%
+%\indexentry{350@\textbf{CD-ROM Files}!\cmd{Set-ServiceRecoveryOptions.ps1}|book{5}}{32}
+%\indexentry{350@\textbf{CD-ROM Files}!\cmd{Snapshot.bat}|book{5}}{62-65}
+%\indexentry{350@\textbf{CD-ROM Files}!\cmd{Disable\_SSL\_KB245030.reg}|book{5}}{100}
+%\indexentry{350@\textbf{CD-ROM Files}!\cmds{Enable\_TLS\_All\_Versions\_KB245030.reg}|book{5}}{101}
+%\indexentry{350@\textbf{CD-ROM Files}!\cmd{CipherSuiteOrder.txt}|book{5}}{101}
+%\indexentry{350@\textbf{CD-ROM Files}!\cmd{CipherSuiteOrder.txt}}{103}
+%
+\indexentry{999@\blankline|newpage \comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Control Points|book{1}}{7}
+\indexentry{PowerShell|book{1}}{13}
+\indexentry{INF|book{1}}{15}
+\indexentry{Security Templates|book{1}}{15-23}
+\indexentry{MMC!Security Templates Snap-in|book{1}}{15}
+\indexentry{Generic@\texttt{Generic.inf}|book{1}}{15-16}
+\indexentry{Local Policies|book{1}}{17}
+\indexentry{Security Templates!Permissions|book{1}}{18-19}
+\indexentry{NTFS!File System Permissions|book{1}\q}{18}
+\indexentry{CIS|book{1}}{19}
+\indexentry{FDCC|book{1}}{20}
+\indexentry{NIST|book{1}}{20}
+\indexentry{Security Templates!Available|book{1}}{20-21}
+\indexentry{GPO|book{1}}{21}
+\indexentry{SCM|book{1}}{21}
+\indexentry{DISA|book{1}}{21}
+\indexentry{ADM/ADMX Templates|book{1}}{21}
+\indexentry{MMC|book{1}}{24}
+\indexentry{MMC!Security Config \& Analysis Snap-in|book{1}\q}{24}
+\indexentry{Security Templates!Incremental|book{1}}{25}
+\indexentry{SCA databases|book{1}\q}{24}
+%\indexentry{KB|book{1}}{25}
+\indexentry{GPO!Refresh|book{1}}{31-32}
+\indexentry{ADM/ADMX Templates}{31}
+\indexentry{Group Policy|book{1}}{31}
+\indexentry{Group Policy!Capabilities|book{1}}{31}
+\indexentry{Group Policy!Tools|book{1}}{31}
+\indexentry{Group Policy!Enhancements|book{1}}{36-37}
+\indexentry{IPSec|book{1}}{31}
+\indexentry{MSI|book{1}}{31}
+\indexentry{ZAP|book{1}}{31}
+\indexentry{PKI|book{1}}{31}
+%\indexentry{KB}{32}
+\indexentry{GPMC|book{1}}{32}
+\indexentry{GPO!Backup/Restore|book{1}}{33}
+\indexentry{GPO!HTML/XML reports|book{1}}{32}
+\indexentry{RSAT|book{1}}{32}
+%\indexentry{KB}{33}
+\indexentry{AGPM|book{1}}{35}
+\indexentry{MDOP|book{1}}{35}
+%\indexentry{KB}{36}
+\indexentry{FullArmor|book{1}}{36}
+\indexentry{GPMC!Replacements|book{1}}{37}
+\indexentry{Specops|book{1}}{37}
+\indexentry{PolicyPak|book{1}}{37}
+\indexentry{Avecto Privilege Guard|book{1}}{37}
+\indexentry{BeyondTrust PowerBroker Desktops|book{1}}{37}
+\indexentry{Centrify DirectControl|book{1}}{37}
+\indexentry{LDAP|book{1}}{39}
+\indexentry{GPO!Applicability (which, when)|book{1}}{39}
+\indexentry{GPO!Creation|book{1}}{40}
+\indexentry{GPO!Configurations|book{1}}{41}
+\indexentry{GPO!Links|book{1}}{42}
+\indexentry{GPO!Precedence|book{1}}{44}
+\indexentry{GPO!Inheritance|book{1}}{45}
+\indexentry{GPO!Enforced|book{1}}{46}
+\indexentry{GPO!Acces Control Lists|book{1}}{47}
+\indexentry{GPO!Delegation of Control|book{1}}{48}
+\indexentry{Active Directory!Delegation Of Control|book{1}}{48}
+\indexentry{GPO!Slow Link Detection|book{1}}{49}
+\indexentry{GPO!Refresh}{50}
+\indexentry{GPO!Loopback Mode|book{1}}{50-52}
+\indexentry{GPO!WMI Filtering|book{1}}{50}
+\indexentry{WMI|book{1}}{52}
+\indexentry{Enterprise-Scale Registry Editor|book{1}}{55}
+\indexentry{GPO!Options visibility|book{1}}{57}
+\indexentry{Resource Kit|book{1}}{58}
+\indexentry{ADM/ADMX Templates|q}{57-61}
+\indexentry{ADM/ADMX Templates!Import|book{1}}{57}
+\indexentry{ADM/ADMX Templates!Central Store|book{1}}{58-60}
+\indexentry{ADML File|book{1}}{58-59}
+\indexentry{ADM/ADMX Templates!Convert|book{1}}{61}
+\indexentry{ADM/ADMX Templates!Create|book{1}}{61}
+\indexentry{Outlook|book{1}}{61}
+\indexentry{ADM/ADMX Templates!Migration|book{1}}{61}
+\indexentry{GPO!Preferences|book{1}}{63-68}
+\indexentry{RSAT}{63}
+\indexentry{CSE|book{1}}{64}
+\indexentry{Passwords Management|book{1}}{65}
+\indexentry{GPO!Passwords|book{1}}{65}
+\indexentry{ILT|book{1}}{67}
+\indexentry{PowerShell}{35}
+\indexentry{WQL|book{1}}{53}
+\indexentry{SYSVOL|book{1}}{57}
+\indexentry{SYSVOL}{59}
+\indexentry{SYSVOL}{65}
+\indexentry{VBScript|book{1}}{69}
+\indexentry{JScript|book{1}}{69}
+\indexentry{PowerShell}{69}
+\indexentry{GPO!Scripts|book{1}}{69-74}
+\indexentry{Maximum Wait Time|book{1}\q}{73}
+\indexentry{Windows Script Host|book{1}}{70}
+\indexentry{Logon/Logoff Scripts|book{1}}{72}
+\indexentry{Startup/Shutdown Scripts|book{1}}{73}
+\indexentry{SYSVOL}{73}
+\indexentry{Malware Automation Tools|book{1}}{77}
+\indexentry{Stuxnet|book{1}}{77}
+\indexentry{Flame|book{1}}{77}
+\indexentry{Metasploit|book{1}}{77}
+\indexentry{Core Impact|book{1}}{77}
+\indexentry{Immunity Canvas|book{1}}{77}
+\indexentry{Conficker|book{1}}{77}
+\indexentry{Antivirus|book{1}}{79-81}
+\indexentry{Bit9 Security Platform|book{1}}{82}
+\indexentry{Application Whitelisting|book{1}}{82-88}
+\indexentry{Internet Explorer|book{1}}{85}
+\indexentry{Windows Explorer|book{1}}{85}
+\indexentry{MMC}{85}
+\indexentry{Task Scheduler|book{1}}{85}
+\indexentry{Administrative Templates!Windows Components|book{1}}{85}
+\indexentry{Administrative Templates!Start Menu|book{1}}{85}
+\indexentry{Administrative Templates!Desktop|book{1}}{85}
+\indexentry{Administrative Templates!Control Panel|book{1}}{85-86}
+\indexentry{Administrative Templates!Network|book{1}}{86}
+\indexentry{Administrative Templates!System|book{1}}{86}
+\indexentry{PowerShell}{88}
+\indexentry{AppLocker|book{1}}{88}
+\indexentry{Task Manager|book{1}}{88}
+\indexentry{Bit9 Security Platform}{88}
+\indexentry{AppLocker}{89-98}
+\indexentry{Event Viewer|book{1}}{90}
+\indexentry{AppLocker!Default Rules|book{1}}{91}
+\indexentry{NTFS|book{1}}{94}
+\indexentry{AppLocker!Rules Precedence|book{1}\q}{95}
+\indexentry{GPO!Tech Support Link|book{1}}{95}
+\indexentry{AppLocker!Import/Export XML Files|book{1}}{95}
+\indexentry{PowerShell}{95}
+\indexentry{PowerShell}{97}
+\indexentry{Windows Script Host}{96}
+\indexentry{Perl|book{1}}{96}
+\indexentry{Python|book{1}}{96}
+\indexentry{VBScript}{96}
+\indexentry{JScript}{96}
+\indexentry{Bit9 Security Platform}{99-100}
+\indexentry{AutoRun.inf@\texttt{AutoRun.inf}|book{1}}{101}
+\indexentry{Conficker}{101}
+\indexentry{AutoPlay \& AutoRun|book{1}}{101-103}
+\indexentry{Stuxnet}{101}
+\indexentry{Removable Devices|book{1}}{102}
+\indexentry{Security Awareness|book{1}}{102-103}
+\indexentry{Securing The Human|book{1}}{103}
+\indexentry{Removable Devices}{104-105}
+\indexentry{Removable Devices}{106-107}
+\indexentry{Hardware Identifier Strings|book{1}}{105}
+\indexentry{INF}{105}
+\indexentry{BitLocker|book{1}}{106}
+\indexentry{Device Control|book{1}}{107}
+\indexentry{Data Loss Prevention|book{1}}{107}
+\indexentry{DLP|book{1}}{107}
+\indexentry{Virtual Desktop Infrastructure|book{1}}{109-113}
+\indexentry{VDI|book{1}}{109}
+\indexentry{ICA|book{1}}{109}
+\indexentry{ICA}{110}
+\indexentry{RDP|book{1}}{109}
+\indexentry{Streaming|book{1}}{109}
+\indexentry{RDS Server|book{1}}{109}
+\indexentry{RDP}{110}
+\indexentry{VMWare|book{1}}{110}
+\indexentry{PCoIP|book{1}}{110}
+\indexentry{BYOD|book{1}}{110}
+\indexentry{Windows To Go|book{1}}{110}
+\indexentry{BitLocker}{110}
+\indexentry{USB Boot|book{1}}{111}
+\indexentry{BSOD crash|book{1}}{111}
+\indexentry{BitLocker To Go|book{1}}{111}
+\indexentry{Windows Recovery Environment|book{1}}{111}
+\indexentry{Roaming|book{1}}{111}
+\indexentry{Acronis|book{1}}{112}
+\indexentry{Ghost|book{1}}{112}
+\indexentry{SteadyState|book{1}}{112}
+\indexentry{App-V|book{1}}{112}
+\indexentry{SoftGrid|book{1}}{112}
+\indexentry{Sandbox|book{1}}{112}
+\indexentry{Streaming}{113}
+\indexentry{Deep Freeze|book{1}}{113}
+\indexentry{Virtual Desktop Infrastructure!Advantages/Disadvantages|book{1}}{114-116}
+\indexentry{VDI}{114}
+\indexentry{VDI}{117}
+\indexentry{Anti-Malware|book{1}}{114}
+\indexentry{Desktop Management|book{1}}{114}
+\indexentry{Data Segregation|book{1}}{115}
+\indexentry{Nuke From Orbit|book{1}}{115}
+\indexentry{BYOD}{115}
+\indexentry{Amazon|book{1}}{115}
+\indexentry{Cloud|book{1}}{115}
+\indexentry{Virtual Desktop Infrastructure!Deployment|book{1}}{117-118}
+\indexentry{RDP}{117}
+\indexentry{RDS Server}{117}
+\indexentry{Server Manager!Roles \& Features|book{1}}{117}
+\indexentry{Hyper-V|book{1}}{117}
+\indexentry{Pooled VM|book{1}}{118}
+\indexentry{UPD|book{1}}{118}
+\indexentry{VHDX|book{1}}{118}
+\indexentry{User Profile Disk|book{1}}{118}
+\indexentry{Roaming}{118}
+\indexentry{RDS Server}{118}
+\indexentry{EMS|book{1}}{120}
+\indexentry{PowerShell}{120}
+\indexentry{WMI}{121}
+\indexentry{Active Directory!Inventory|book{1}}{121}
+\indexentry{EMET|book{1}}{122-129}
+\indexentry{ACT|book{1}}{122}
+\indexentry{ADM/ADMX Templates}{122}
+\indexentry{XML|book{1}}{122}
+\indexentry{MSI}{122}
+%\indexentry{KB}{123}
+\indexentry{BitLocker}{124}
+\indexentry{Group Policy}{124-126}
+\indexentry{ASLR|book{1}}{125}
+\indexentry{DEP|book{1}}{125}
+\indexentry{SEHOP|book{1}}{125}
+\indexentry{ADM/ADMX Templates}{125}
+\indexentry{DEP}{126}
+\indexentry{ASLR}{127}
+\indexentry{Process Hacker|book{1}}{127}
+\indexentry{BitLocker}{127}
+\indexentry{ACT}{127}
+%\indexentry{KB}{128}
+\indexentry{SEHOP}{128-129}
+\indexentry{PE Header|book{1}}{128}
+\indexentry{Process Hacker}{128}
+%\indexentry{KB}{129}
+\indexentry{Internet Explorer!Hardening|book{1}}{130-131}
+\indexentry{Javascript|book{1}}{130}
+\indexentry{ActiveX|book{1}}{130}
+\indexentry{Security Guide|book{1}}{131}
+\indexentry{Desktop IE|book{1}}{132}
+\indexentry{Metro IE|book{1}\q}{132}
+\indexentry{EPM|book{1}}{132-134}
+\indexentry{ASLR}{133}
+\indexentry{AppContainer Sandbox|book{1}}{133}
+\indexentry{ActiveX}{133}
+\indexentry{Internet Explorer!Protected Mode|book{1}}{134}
+\indexentry{Internet Explorer!Enhanced Protected Mode|book{1}}{132-134}
+\indexentry{Low Integrity Level|book{1}}{133}
+\indexentry{MIC|book{1}}{134}
+\indexentry{UAC|book{1}}{134}
+\indexentry{NTFS}{134}
+\indexentry{Internet Explorer!SmartScreen Filter|book{1}}{135}
+\indexentry{Internet Explorer!XSS Filter|book{1}}{135}
+\indexentry{Internet Explorer!Zones|book{1}}{136-140}
+\indexentry{ActiveX}{136}
+%\indexentry{KB}{141-145}
+\indexentry{ActiveX}{141-142}
+\indexentry{WPAD|book{1}}{143}
+\indexentry{Javascript}{144}
+\indexentry{Web Proxy|book{1}}{143}
+\indexentry{DHCP|book{1}}{144}
+\indexentry{DNS|book{1}}{144}
+\indexentry{NetBIOS|book{1}}{144}
+\indexentry{WINS Server|book{1}}{144}
+\indexentry{Metasploit}{145}
+\indexentry{Flamer|book{1}}{145}
+\indexentry{WPAD!Attack|book{1}}{145}
+\indexentry{WPAD!Hardening|book{1}}{146-148}
+\indexentry{Roaming}{148}
+\indexentry{Google Chrome|book{1}}{149-151}
+\indexentry{MSI}{149}
+\indexentry{SAT|book{1}}{150}
+\indexentry{EMS}{150}
+\indexentry{Chrome Frame|book{1}}{150}
+\indexentry{Sandbox}{150}
+\indexentry{Low Integrity Level}{150}
+\indexentry{ADM/ADMX Templates!Hardening|book{1}}{151}
+\indexentry{MSI}{152}
+\indexentry{Adobe Reader/Acrobat|book{1}}{152}
+\indexentry{SCCM|book{1}}{152}
+\indexentry{Roaming}{152}
+\indexentry{Javascript}{153}
+\indexentry{ASLR}{153}
+\indexentry{DEP}{153}
+\indexentry{SEHOP}{153}
+\indexentry{SAT}{153}
+\indexentry{Protected View|book{1}}{155}
+\indexentry{Low Integrity Level}{153}
+\indexentry{ADM/ADMX Templates!Hardening}{154}
+\indexentry{Javascript}{154}
+\indexentry{Adobe Reader/Acrobat!Alternatives|book{1}}{156-157}
+\indexentry{Java|book{1}}{158-166}
+\indexentry{Java!Editions|book{1}}{159}
+\indexentry{Java!Control Panel|book{1}}{160}
+\indexentry{Java!Security Levels|book{1}}{162}
+\indexentry{WMI}{164}
+\indexentry{SYSVOL}{164}
+\indexentry{PowerShell}{164}
+\indexentry{Java!Configuration Files|book{1}}{164}
+\indexentry{Java!Deployment Rule Sets|book{1}}{165}
+\indexentry{Trusted Signing Certificate|book{1}}{165}
+\indexentry{ADM/ADMX Templates!Hardening}{167}
+\indexentry{ActiveX}{167}
+\indexentry{Microsoft Office|book{1}}{167-170}
+\indexentry{SAT}{168}
+\indexentry{Protected View}{167}
+\indexentry{Security Guide}{167}
+\indexentry{Low Integrity Level}{168}
+\indexentry{MSI}{170}
+\indexentry{ADM/ADMX Templates!Hardening}{170}
+\indexentry{Security Guide}{170}
+\indexentry{ADM/ADMX Templates!Custom|book{1}\q}{192-197}
+\indexentry{Domain Controller|book{1}}{172-179}
+\indexentry{Social Engineering|book{1}}{180-185}
+\indexentry{Security Templates!By Hand|book{1}}{186-191}
+\indexentry{SID!Well-Known|book{1}}{190-191}
+\indexentry{Class User/Machine|book{1}\q}{193}
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{High-Value Target|book{2}}{9}
+\indexentry{Ultimate Goal|book{2}}{10}
+\indexentry{SCADA|book{2}}{10}
+\indexentry{Initial Soft Target|book{2}}{11}
+\indexentry{IDS/IPS|book{2}}{13}
+\indexentry{Power|book{2}}{13}
+\indexentry{RADIUS|book{2}}{13}
+\indexentry{VPN|book{2}}{13}
+\indexentry{Domain Admin|book{2}}{14}
+\indexentry{LSA!Secrets|book{2}}{14}
+\indexentry{Social Engineering! |book{2}}{11}
+\indexentry{SAT! |book{2}}{15}
+\indexentry{WinRT|book{2}}{15}
+\indexentry{User Rights|book{2}}{16-18}
+\indexentry{SAT! }{16}
+\indexentry{Conficker! |book{2}}{16}
+\indexentry{SMB|book{2}}{16}
+\indexentry{IPSec! |book{2}}{17}
+\indexentry{LSA!Secrets}{17}
+\indexentry{SID|book{2}}{18}
+\indexentry{RADIUS}{19}
+\indexentry{IPSec!Port Permissions|book{2}}{19-20}
+\indexentry{VPN}{19}
+\indexentry{RDP! |book{2}}{20}
+\indexentry{Smart Card/Token!      Overview|book{2}}{21}
+\indexentry{SAT! }{22}
+\indexentry{Process Hacker! |book{2}}{22}
+\indexentry{User Rights}{22}
+\indexentry{Privileges|book{2}}{22-24}
+\indexentry{NTFS! |book{2}}{22}
+\indexentry{Backdoor|book{2}}{25}
+\indexentry{Rootkit|book{2}}{25}
+\indexentry{DLL Injection|book{2}}{25}
+\indexentry{SAT!Exposure|book{2}}{25-26}
+\indexentry{ACL|book{2}}{26}
+\indexentry{RDP! }{26}
+\indexentry{NTFS! }{26}
+\indexentry{Privileges!Maleficent Seven|book{2}}{25-26}
+\indexentry{SAT!Definition|book{2}}{27-28}
+\indexentry{SMB}{27}
+\indexentry{SID}{27}
+\indexentry{Kerberos|book{2}}{28}
+\indexentry{PowerShell! |book{2}}{28}
+\indexentry{SAT!Impersonation|book{2}}{28}
+\indexentry{SAT!Delegation|book{2}}{28}
+\indexentry{Token Abuse/Stealing|book{2}}{29}
+\indexentry{Incognito|book{2}}{29}
+\indexentry{Administrators|book{2}}{29}
+\indexentry{Metasploit! |book{2}}{30}
+\indexentry{Interactive Logon|book{2}}{30}
+\indexentry{Network Logon|book{2}}{30}
+\indexentry{RDP! }{30}
+\indexentry{Debug Programs Privilege|book{2}}{31-32}
+\indexentry{DLL Injection}{31}
+\indexentry{Debugger|book{2}}{31}
+\indexentry{OllyDbg|book{2}}{31}
+\indexentry{Cain|book{2}}{31}
+\indexentry{Administrators}{31}
+\indexentry{Pass-the-hash|book{2}}{31-32}
+\indexentry{NTLM|book{2}}{32}
+\indexentry{Hash|book{2}}{32}
+\indexentry{SAM|book{2}}{32}
+\indexentry{UAC! |book{2}}{32}
+\indexentry{RDP! }{32}
+\indexentry{Kerberos}{32}
+\indexentry{Metasploit! }{32}
+\indexentry{Windows Credentials Editor|book{2}}{32}
+\indexentry{Runhash|book{2}}{32}
+\indexentry{RDP! }{33}
+\indexentry{Pass-the-hash!Mitigation|book{2}}{33-39}
+\indexentry{Token Abuse/Stealing!Mitigation|book{2}}{33-39}
+\indexentry{Kernel Mode|book{2}}{33}
+%\indexentry{KB! |book{2}}{33}
+\indexentry{LSA!Secrets}{34}
+\indexentry{DLL Injection}{34}
+\indexentry{HIPS|book{2}}{34}
+\indexentry{Secure Boot|book{2}}{34}
+\indexentry{SAT!Delegation}{34}
+\indexentry{Network Logon}{34}
+\indexentry{SAT!Exposure}{34}
+\indexentry{Interactive Logon}{35}
+\indexentry{PowerShell!Provided Scripts|book{2}}{35}
+\indexentry{RDP! }{35}
+\indexentry{VNC|book{2}}{35}
+\indexentry{iDRAC|book{2}}{35}
+\indexentry{iLO|book{2}}{35}
+\indexentry{KVMoIP|book{2}}{35}
+\indexentry{MMC! |book{2}}{35}
+\indexentry{WMI! |book{2}}{36}
+\indexentry{CredSSP|book{2}}{36}
+%\indexentry{KB! }{37}
+\indexentry{TGT|book{2}}{37}
+\indexentry{Kerberos}{37}
+\indexentry{Interactive Logon}{38}
+\indexentry{Cached Credentials|book{2}}{38}
+\indexentry{Protected Users|book{2}}{39}
+\indexentry{NTLM}{39}
+\indexentry{Digest|book{2}}{39}
+\indexentry{CredSSP}{39}
+\indexentry{AES|book{2}}{39}
+\indexentry{DES|book{2}}{39}
+\indexentry{Kerberos}{39}
+\indexentry{TGT}{39}
+\indexentry{Administrators}{40}
+\indexentry{Administrators}{41}
+\indexentry{Active Directory|book{2}}{43}
+\indexentry{Administrators}{44}
+\indexentry{GPO!Apply Changes|book{2}}{44}
+\indexentry{GPO!Preferences! |book{2}}{45}
+\indexentry{CSE! |book{2}}{45}
+\indexentry{XMLLite|book{2}}{45}
+\indexentry{MSI! |book{2}}{47}
+\indexentry{Pass-the-hash}{47}
+\indexentry{DLL Injection}{47}
+\indexentry{Rootkit}{47}
+\indexentry{Application Control|book{2}}{47}
+\indexentry{NTFS! }{48}
+\indexentry{ACT! |book{2}}{48}
+\indexentry{Process Monitor|book{2}}{48}
+\indexentry{UAC! }{49}
+\indexentry{UAC! }{50}
+\indexentry{AutoIt|book{2}}{50}
+\indexentry{VDI! |book{2}}{51}
+\indexentry{IPSec! }{51}
+\indexentry{RDP! }{51}
+\indexentry{Smart Card/Token|book{2}}{51}
+\indexentry{UAC! }{52-55}
+\indexentry{MIC! |book{2}}{53}
+\indexentry{SID}{53}
+\indexentry{SAT! }{53}
+\indexentry{Running As ...|book{2}}{53}
+\indexentry{Process Explorer|book{2}}{54}
+\indexentry{Integrity Labels|book{2}}{54}
+\indexentry{PE|book{2}}{54}
+\indexentry{Requested Execution Level|book{2}}{54}
+\indexentry{Trust Level|book{2}}{54}
+\indexentry{MIC! }{56-61}
+\indexentry{MIC! Labels|book{2}}{56-58}
+\indexentry{Biba Model|book{2}}{56}
+\indexentry{SAT! }{57}
+\indexentry{SID}{57}
+\indexentry{SAT!Labels|book{2}}{57}
+\indexentry{Process Hacker! }{57}
+\indexentry{Process Explorer}{57}
+\indexentry{Integrity Control Tools|book{2}}{58}
+\indexentry{NTFS! }{58}
+\indexentry{No Read/Write/Execute|book{2}}{59}
+\indexentry{UIPI|book{2}}{59}
+\indexentry{Shatter Attack|book{2}}{59}
+\indexentry{SAT! }{63}
+\indexentry{DAC!Claims|book{2}}{63}
+\indexentry{Account Policies|book{2}\q}{63-69}
+\indexentry{Lockout Policies|book{2}\q}{66-69}
+\indexentry{Lockout Policies!Screensaver Password|book{2}\q}{68}
+\indexentry{Password/Passphrase Policy|book{2}}{63}
+\indexentry{Password/Passphrase Policy}{65}
+\indexentry{RADIUS}{65-66}
+\indexentry{CHAP|book{2}}{65}
+\indexentry{DES}{65}
+%\indexentry{KB! }{66}
+\indexentry{Social Engineering! }{68}
+\indexentry{Password/Passphrase Policy!Length VS Complexity|book{2}}{70-73}
+\indexentry{Password/Passphrase Policy!Filters|book{2}}{72-73}
+\indexentry{LDAP! |book{2}}{72}
+\indexentry{NDS|book{2}}{72}
+%\indexentry{KB! }{72}
+\indexentry{Password/Passphrase Policy}{74}
+\indexentry{Lockout Policies}{74}
+\indexentry{ADAC|book{2}}{75}
+\indexentry{PowerShell! }{75}
+\indexentry{Active Directory}{77}
+\indexentry{ADSI|book{2}}{77}
+\indexentry{LDF|book{2}}{77}
+\indexentry{LDF!Provided File|book{2}}{77}
+\indexentry{I8|book{2}}{78-79}
+%\indexentry{KB! }{79}
+\indexentry{ADSI}{79}
+\indexentry{LDF}{79}
+\indexentry{Picture Password|book{2}}{80-84}
+\indexentry{PIN|book{2}}{80-84}
+\indexentry{DPAPI|book{2}}{81-82}
+\indexentry{SID}{81}
+\indexentry{Password/Passphrase Policy}{81}
+\indexentry{Secure Boot}{82}
+\indexentry{TPM|book{2}}{82}
+\indexentry{Password/Passphrase Policy}{83}
+\indexentry{Roaming! |book{2}}{85-86}
+\indexentry{Credentials Manager|book{2}}{85}
+\indexentry{Task Scheduler! |book{2}}{87}ment
+\indexentry{KeePass|book{2}}{88-90}
+\indexentry{IronKey|book{2}}{88}
+\indexentry{Password Safe|book{2}}{88}
+\indexentry{SplashID|book{2}}{88}
+\indexentry{Password Managers|book{2}}{88}
+\indexentry{Roaming! }{88}
+\indexentry{DPAPI}{89}
+\indexentry{BitLocker! |book{2}}{90}
+\indexentry{MIC! }{90}
+\indexentry{UAC! }{90}
+\indexentry{SMB}{90}
+\indexentry{IPSec! }{90}
+\indexentry{GPO!Preferences! }{92}
+\indexentry{XMLLite}{92}
+\indexentry{CSE! }{92}
+\indexentry{EMS! |book{2}}{92}
+\indexentry{Administrators}{92-93}
+\indexentry{PowerShell! }{92}
+\indexentry{Accounts Inventory|book{2}}{92}
+\indexentry{GPO!Preferences! }{93-94}
+\indexentry{SYSVOL! |book{2}}{94}
+\indexentry{AES}{94}
+\indexentry{SAT!Exposure}{94}
+\indexentry{PowerShell!Provided Scripts}{94-95}
+\indexentry{GPO!Scripts! |book{2}}{94-95}
+\indexentry{GPO!Scheduled Jobs|book{2}}{94-95}
+\indexentry{Startup/Shutdown Scripts! |book{2}}{94}
+\indexentry{SMB}{95}
+\indexentry{NTLM}{96}
+\indexentry{ADSI}{96}
+\indexentry{Kerberos}{96}
+\indexentry{ADAC}{98}
+\indexentry{Server Manager!Roles \& Features! |book{2}}{98}
+\indexentry{Active Directory!Tools|book{2}}{98-103}
+\indexentry{MMC!AD Snap-ins|book{2}}{98}
+\indexentry{WinRT}{98}
+\indexentry{WinAPI|book{2}}{99}
+\indexentry{ADSI}{99}
+\indexentry{GPMC! |book{2}}{99}
+\indexentry{Active Directory!Command-Line Tools|book{2}}{100-101}
+\indexentry{MMC!Register Snap-in DLL|book{2}}{100}
+\indexentry{LDAP! }{100}
+%\indexentry{KB! }{100-103}
+\indexentry{RSAT! |book{2}}{100}
+\indexentry{PowerShell! }{100}
+\indexentry{Migration Tools|book{2}}{101}
+\indexentry{ADMT|book{2}}{101}
+\indexentry{VBScript! |book{2}}{101-102}
+\indexentry{JScript! |book{2}}{102}
+\indexentry{Perl! |book{2}}{102}
+\indexentry{ADSI!Scripting Support|book{2}}{102}
+\indexentry{LDAP! }{103}
+\indexentry{MSI! }{103}
+\indexentry{Port Numbers|book{2}\q}{103}
+\indexentry{Port Numbers!LDAP|book{2}}{103}
+\indexentry{Active Directory!Permissions|book{2}}{104-110}
+%\indexentry{KB! }{106-110}
+\indexentry{ACE|book{2}}{106}
+\indexentry{ACL!Discretionary (DACL)|book{2}}{106}
+\indexentry{ACL!System (SACL)|book{2}}{106}
+\indexentry{Active Directory!DSSEC@\texttt{DSSEC.DAT}|book{2}}{108}
+\indexentry{Active Directory!Properties Visibility|book{2}}{108}
+\indexentry{ACL}{109}
+\indexentry{PDC Emulator|book{2}}{109}
+\indexentry{AdminSDHolder|book{2}}{109}
+\indexentry{ACL!Tools|book{2}\q}{111-114}
+\indexentry{ADSI}{111}
+\indexentry{Active Directory!Permissions!Fix Procedure|book{2}}{112}
+\indexentry{ADSI}{114}
+\indexentry{VBScript! }{114}
+\indexentry{Perl! }{114}
+\indexentry{ADSI!Scripting Support}{114}
+\indexentry{Active Directory!Delegation Of Control! |book{2}}{115-118}
+\indexentry{Active Directory!Tools}{118}
+\indexentry{Delegation Of Control Wizard|book{2}\q}{119-121}
+%\indexentry{KB! }{119}
+\indexentry{DELEGWIZ@\texttt{DELEGWIZ.INF}|book{2}}{119}
+\indexentry{DAC|book{2}}{122}
+\indexentry{DLP! |book{2}}{122}
+\indexentry{Active Directory!DSSEC@\texttt{DSSEC.DAT}}{123}
+\indexentry{Network Logon}{126}
+\indexentry{RPC|book{2}}{126}
+\indexentry{Kerberos}{126}
+\indexentry{NTLM}{126}
+\indexentry{Domain Join|book{2}}{126}
+\indexentry{Authenticated Users|book{2}}{126}
+%\indexentry{KB! }{126}
+\indexentry{Active Directory!Provided Scripts|book{2}}{127}
+\indexentry{Active Directory!Permissions}{127}
+%\indexentry{KB! }{129}
+\indexentry{Domain Join}{129}
+\indexentry{OU Admins|book{2}}{130}
+\indexentry{Full Control Delegation|book{2}}{130}
+\indexentry{Administrators}{130-131}
+\indexentry{IT Authority Delegation|book{2}}{132}
+\indexentry{High-Value Target}{132-133}
+\indexentry{Domain Admin|book{2}}{132-133}
+\indexentry{OU Admins}{132-133}
+\indexentry{Power}{133}
+\indexentry{Token Abuse/Stealing}{133}
+\indexentry{Pass-the-hash}{133}
+\indexentry{ACL!System (SACL)}{134-135}
+\indexentry{Active Directory!Auditing|book{2}}{134-139}
+\indexentry{Event Viewer! |book{2}}{134}
+\indexentry{ACL!Discretionary (DACL)}{135}
+\indexentry{Active Directory!Generic Auditing|book{2}}{135}
+\indexentry{GPO!Audit Policy|book{2}}{135-137}
+\indexentry{SAT! }{136}
+\indexentry{Audit Policies|book{2}\q}{136-137}
+%\indexentry{KB! }{139}
+\indexentry{Patch Management|book{2}}{141}
+\indexentry{Update Cycle|book{2}}{142-143}
+\indexentry{Microsoft Critical Patches|book{2}}{142}
+\indexentry{EMS! }{142}
+\indexentry{AutoIt}{144}
+\indexentry{Bulletins|book{2}}{146}
+\indexentry{AIK|book{2}}{148}
+\indexentry{MDT|book{2}}{148}
+\indexentry{WDS|book{2}\q}{148-150}
+\indexentry{Acronis! |book{2}}{148}
+\indexentry{AES}{148}
+\indexentry{Installation Disk Image|book{2}}{149}
+\indexentry{Solution Accelerator|book{2}}{149}
+\indexentry{SCCM! |book{2}}{149}
+\indexentry{Patch Management!Tools|book{2}}{149}
+\indexentry{Server Manager!Roles \& Features! }{150}
+\indexentry{WSUS|book{2}}{151-156}
+\indexentry{BITS|book{2}}{152}
+\indexentry{BDC|book{2}}{152}
+\indexentry{MSDE|book{2}}{152}
+\indexentry{MSI! }{152}
+\indexentry{Server Manager!Roles \& Features! }{153}
+\indexentry{Windows Update Catalog|book{2}}{153}
+\indexentry{WSUS!Console|book{2}}{157-158}
+\indexentry{WSUS!Requirements|book{2}}{157}
+\indexentry{Server Manager!Roles \& Features! }{157}
+\indexentry{MSDE}{157}
+\indexentry{BITS}{157}
+\indexentry{WSUS!Client Administration|book{2}\q}{159-161}
+\indexentry{Administrative Templates!WSUS|book{2}}{159}
+\indexentry{WUAU@\texttt{WUAU.ADM}|book{2}}{159}
+\indexentry{SYSVOL! }{159}
+\indexentry{Patch Management!Tools}{160}
+\indexentry{WLBS|book{2}}{160}
+\indexentry{WSUS!Tools|book{2}}{160}
+\indexentry{WSUS!Disappointments|book{2}}{162-164}
+\indexentry{VBScript! }{160}
+\indexentry{PowerShell! }{160}
+\indexentry{Script Center|book{2}}{160}
+\indexentry{WSUS!API|book{2}}{160}
+\indexentry{Patch Manager|book{2}}{162}
+\indexentry{Patch Management!Tools}{163}
+\indexentry{MSI! }{163-164}
+\indexentry{BITS}{166}
+\indexentry{Secunia PSI|book{2}}{165}
+\indexentry{VPN|book{2}}{165-166}
+\indexentry{DirectAccess|book{2}}{165-166}
+\indexentry{Secunia PSI|book{2}}{167-168}
+\indexentry{Patch Management!Tools}{168}
+\indexentry{MBSA|book{2}}{169-170}
+\indexentry{KB!List Article Numbers (PowerShell)|book{2}}{170}
+\indexentry{PowerShell! }{170}
+\indexentry{MSI! }{171}
+\indexentry{SCCM! }{171}
+\indexentry{Patch Management!Tools}{171}
+\indexentry{Rogue Computer|book{2}}{173-174}
+\indexentry{WMI! }{173-174}
+\indexentry{Nmap|book{2}}{174}
+\indexentry{NAC|book{2}}{175-176}
+\indexentry{Network Access Control|book{2}}{175-176}
+\indexentry{NAP|book{2}}{175}
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{PKI!Definition And Characteristics|book{3}}{8-9}
+\indexentry{NIST! |book{3}}{9}
+\indexentry{IETF|book{3}}{9}
+\indexentry{PKI!Standards|book{3}}{9}
+\indexentry{CryptoAPI/CNG|book{3}}{9}
+\indexentry{SSPI|book{3}}{9}
+\indexentry{Roaming!  |book{3}}{9}
+\indexentry{Active Directory!PKI|book{3}}{9}
+\indexentry{IPSec!      @Definition|book{3}}{10}
+\indexentry{Kerberos! |book{3}}{10}
+\indexentry{S/MIME|book{3}}{10}
+\indexentry{Secure E-Mail|book{3}}{10}
+\indexentry{Smart Card/Token!Support|book{3}}{10}
+\indexentry{PIN! |book{3}}{10}
+\indexentry{SSL/TLS|book{3}}{11-12}
+\indexentry{VPN! |book{3}}{11}
+\indexentry{File System Encryption|book{3}}{11}
+\indexentry{IIS|book{3}}{11}
+\indexentry{PEAP|book{3}}{11}
+\indexentry{UAG|book{3}}{11}
+\indexentry{TMG|book{3}}{11}
+\indexentry{RRAS|book{3}}{11}
+\indexentry{DirectAccess! |book{3}}{11}
+\indexentry{NTFS!  |book{3}}{11}
+\indexentry{LDAP!  |book{3}}{11}
+\indexentry{PKI!Custom Applications|book{3}}{12}
+\indexentry{CryptoAPI/CNG!     @Definition|book{3}}{12}
+\indexentry{MMC!Certification Authority Snap-in|book{3}}{13}
+\indexentry{MMC!Certificates Snap-in|book{3}}{13}
+\indexentry{PKI!Tools|book{3}}{13-24}
+\indexentry{Resource Kit! |book{3}}{16-18}
+\indexentry{PKI!Web Enrollment Support|book{3}}{15}
+\indexentry{IIS}{16}
+\indexentry{PFX|book{3}}{18}
+\indexentry{IIS}{18}
+\indexentry{PKCS|book{3}}{19}
+\indexentry{PowerShell!  |book{3}}{19}
+\indexentry{CEnroll|book{3}}{19}
+\indexentry{PKI!Custom Applications}{19}
+\indexentry{CryptoAPI/CNG}{19-23}
+\indexentry{CryptoAPI/CNG!MSDN Tools|book{3}\q}{20}
+\indexentry{SCEP|book{3}}{20}
+\indexentry{CMGetCer|book{3}}{20}
+\indexentry{Resource Kit! }{20}
+\indexentry{CSP|book{3}}{21-23}
+\indexentry{AES! |book{3}}{21}
+\indexentry{CRL|book{3}}{22}
+\indexentry{CTL|book{3}}{22}
+\indexentry{PKCS}{22}
+\indexentry{ADSI! |book{3}}{22}
+\indexentry{Active Directory!Certificate Services|book{3}}{22}
+\indexentry{PKI!Certificate Stores|book{3}}{22-23}
+\indexentry{PKI!Protected Stores|book{3}}{23}
+\indexentry{MMC!Certificates Snap-in}{25}
+\indexentry{PKI!Certificate Wizards|book{3}}{26}
+\indexentry{Active Directory!Certificate Services}{27-28}
+\indexentry{PKI!Certificate Renewal|book{3}\q}{28}
+\indexentry{MMC!Certificates Snap-in}{28}
+\indexentry{Active Directory!Certificate Services!Website|book{3}}{27-28}
+\indexentry{Cryptography|book{3}}{29-40}
+\indexentry{Cryptography!Security Benefits|book{3}}{29}
+\indexentry{Authentication|book{3}}{29}
+\indexentry{Data Integrity|book{3}}{30}
+\indexentry{Non-Repudiation|book{3}}{30}
+\indexentry{Confidentiality|book{3}}{30}
+\indexentry{Key|book{3}}{31-35}
+\indexentry{AES! }{32}
+\indexentry{Key!Private|book{3}}{33}
+\indexentry{Key!Session|book{3}}{33}
+\indexentry{RSA|book{3}}{32-33}
+\indexentry{Cryptography!Definitions|book{3}}{31-33}
+\indexentry{Hash! |book{3}}{35-36}
+\indexentry{Diffie-Hellman|book{3}}{35}
+\indexentry{IPSec!  |book{3}}{35}
+\indexentry{Cryptography!Certification Authority|book{3}}{37}
+\indexentry{PKI! |book{3}}{37}
+\indexentry{CryptoAPI/CNG!Documentation|book{3}}{38}
+\indexentry{Cryptography!Acronyms And Abbreviations|book{3}}{38-39}
+\indexentry{PKCS!Message Types|book{3}}{40}
+\indexentry{Cryptography!Certification Authority}{41-47}
+\indexentry{VerySign|book{3}}{41-42}
+\indexentry{Digital Certificate|book{3}}{43-45}
+\indexentry{PKI!Certificate Structure|book{3}}{43-45}
+\indexentry{Cryptography!X.509v3 Certificate Structure|book{3}\q}{43-45}
+\indexentry{IETF}{43}
+\indexentry{PKI! }{43}
+\indexentry{PGP|book{3}}{43}
+\indexentry{CRL}{44}
+\indexentry{CDP|book{3}}{44}
+\indexentry{AIA|book{3}}{45}
+\indexentry{Thumbprint|book{3}\q}{45}
+\indexentry{CryptoAPI/CNG!Path Validation Procedure|book{3}}{46}
+\indexentry{HSM|book{3}}{49}
+\indexentry{CA|book{3}}{49-52}
+\indexentry{PKI! }{49}
+\indexentry{CRL}{50}
+\indexentry{CDP}{50}
+\indexentry{AIA}{50}
+\indexentry{Active Directory!Certificate Services!Pre-Install|book{3}}{49-52}
+%\indexentry{KB!  |book{3}}{49-50}
+\indexentry{CA!CAPOLICY@\texttt{CAPOLICY.INF}|book{3}}{50-51}
+\indexentry{OCSP|book{3}}{50}
+\indexentry{PDC Emulator! |book{3}}{51}
+\indexentry{NTP|book{3}}{51}
+\indexentry{Active Directory!Global Catalog|book{3}}{52}
+\indexentry{CRL}{52}
+\indexentry{PKI!Hierarchy Design|book{3}\q}{53-58}
+\indexentry{CA}{53-58}
+\indexentry{CTL}{54}
+\indexentry{PGP}{54}
+\indexentry{Web-of-Trust Model|book{3}}{54}
+\indexentry{VerySign}{57}
+\indexentry{Active Directory!Certificate Services!Install|book{3}}{59-68}
+\indexentry{Server Manager!Roles \& Features!  |book{3}}{59-60}
+\indexentry{OCSP}{60}
+\indexentry{SCEP}{60}
+\indexentry{CSP}{62}
+\indexentry{HSM}{62}
+\indexentry{RSA}{62}
+\indexentry{TTL|book{3}}{64}
+\indexentry{BitLocker!  |book{3}}{64}
+\indexentry{CA!Enterprise|book{3}\q}{65-66}
+\indexentry{Active Directory!Certificate Services!Policy Module|book{3}\q}{65-67}
+\indexentry{Active Directory!  }{66-67}
+\indexentry{CA!Stand-Alone|book{3}}{65-66}
+\indexentry{Password/Passphrase Policy! |book{3}}{67}
+\indexentry{Lockout Policies! |book{3}}{67}
+\indexentry{Global Catalog|book{3}}{67}
+\indexentry{Active Directory!Certificate Services!Website}{67}
+\indexentry{CRL}{67-68}
+\indexentry{PKCS}{68}
+\indexentry{Active Directory!Certificate Services!Post-Install|book{3}}{69-76}
+\indexentry{PKCS}{70}
+\indexentry{CDP}{71}
+\indexentry{AIA}{71}
+\indexentry{Active Directory!Certificate Services!Policy Module}{71}
+\indexentry{CA!Stand-Alone}{71}
+\indexentry{Active Directory!  }{71}
+\indexentry{CRL}{71}
+\indexentry{Active Directory!Groups!Cert Publishers|book{3}\q}{73}
+%\indexentry{KB!  }{74}
+\indexentry{CCITSE|book{3}}{74}
+\indexentry{CA!Roles|book{3}}{74}
+\indexentry{VBScript!  |book{3}}{75}
+\indexentry{Script Center! |book{3}}{75}
+\indexentry{CA!CAMONITOR@\texttt{CAMONITOR.VBS}|book{3}}{75}
+\indexentry{CA!CAPICOM@\texttt{CAPICOM.DLL}|book{3}}{75}
+\indexentry{CA!Monitoring Events|book{3}}{75}
+\indexentry{Active Directory!Certificate Services!Best Practices Analyzer|book{3}}{76}
+\indexentry{Server Manager!Roles \& Features!  }{76}
+\indexentry{MMC!Certificate Templates Snap-in|book{3}}{77}
+\indexentry{PKI!Certificate Templates|book{3}}{77-80}
+\indexentry{PKI!Private Key Archival|book{3}}{78}
+\indexentry{PKI!Certificate Templates!Cross-Forest Replication|book{3}}{80}
+\indexentry{PKI!Certificate Templates!Built-in|book{3}}{83}
+\indexentry{PKI!Certificate Enrollment|book{3}}{81-85}
+\indexentry{CA!Permissions|book{3}}{81}
+\indexentry{ACL! |book{3}}{83}
+\indexentry{CA!Enterprise}{83}
+\indexentry{CA!Stand-Alone}{84}
+\indexentry{PKI! }{87}
+\indexentry{Smart Card/Token! |book{3}}{87}
+\indexentry{Roaming!  |q}{87}
+\indexentry{Key!Private}{87-90}
+\indexentry{SID! |book{3}}{88}
+\indexentry{User Profile|book{3}}{88}
+\indexentry{CryptoAPI/CNG}{89}
+\indexentry{CNG|book{3}}{89-90}
+\indexentry{DPAPI! |book{3}}{89-90}
+\indexentry{DES! |book{3}}{90}
+\indexentry{AES! }{90}
+\indexentry{Key!Session|q}{91}
+%\indexentry{Salt|book{3}}{91}
+\indexentry{Key!Master|book{3}}{91}
+\indexentry{MKPK|book{3}}{91-92}
+\indexentry{PKCS}{91-92}
+\indexentry{Key!System|book{3}}{91}
+\indexentry{Roaming!  }{93}
+\indexentry{Key!Private}{94-95}
+\indexentry{CSP}{94}
+\indexentry{CNG|book{3}}{95}
+\indexentry{LSA!Secrets! |book{3}}{95}
+\indexentry{Key!Private}{98}
+\indexentry{TPM! |book{3}}{98}
+\indexentry{Secure Boot! |book{3}}{98}
+\indexentry{HSM}{99}
+\indexentry{Roaming!  }{100}
+\indexentry{Key!System}{100}
+\indexentry{KVMoIP! |book{3}}{101}
+\indexentry{DPAPI! }{102}
+\indexentry{LSA!Secrets! }{104}
+\indexentry{Key!Session}{104}
+\indexentry{PKI!Auto-Enrollment|book{3}}{107-110}
+\indexentry{CA!Enterprise}{107}
+\indexentry{Internet Explorer!Certificates|book{3}}{108}
+\indexentry{Key!Private}{111}
+\indexentry{Roaming!  }{111}
+\indexentry{PKI!Private Key Archival}{111-113}
+\indexentry{DES! }{112}
+\indexentry{AES! }{112}
+\indexentry{Key!Protection|book{3}}{112}
+\indexentry{Key!Recovery Procedure|book{3}}{113}
+\indexentry{PKCS}{113}
+\indexentry{MMC!Certificates Snap-in}{113}
+\indexentry{Credential Roaming}{114-116}
+\indexentry{Roaming!  }{114}
+%\indexentry{KB!  }{115-116}
+\indexentry{Firefox|book{3}}{117}
+\indexentry{PKI!Certificate Stores}{117}
+\indexentry{CryptoAPI/CNG}{117}
+\indexentry{CA!Trusted|book{3}}{117}
+\indexentry{MMC!Certificates Snap-in}{117}
+\indexentry{VerySign}{117}
+%\indexentry{KB!  }{118}
+\indexentry{CTL}{119-121}
+\indexentry{Enterprise Trust|book{3}}{119}
+\indexentry{MMC!Certification Authority Snap-in}{123}
+\indexentry{CA!Enterprise}{124}
+\indexentry{CA!Stand-Alone}{124}
+\indexentry{Active Directory!Certificate Services!Website}{124}
+\indexentry{CRL|q}{123-125}
+\indexentry{CDP}{123-125}
+\indexentry{CA!CAPOLICY@\texttt{CAPOLICY.INF}}{124}
+\indexentry{OCSP}{127-132}
+\indexentry{IIS}{127}
+\indexentry{MMC!Certificate Templates Snap-in}{128}
+\indexentry{MMC!Certification Authority Snap-in}{128}
+\indexentry{MMC!Online Responder Snap-in|book{3}}{129}
+\indexentry{MMC!Online Responder Snap-in}{132}
+\indexentry{Smart Card/Token! }{133-137}
+\indexentry{CSP}{133}
+\indexentry{CryptoAPI/CNG}{133}
+\indexentry{Kerberos! }{134}
+\indexentry{TGT! |book{3}}{136-137}
+\indexentry{Kerberos! }{136-137}
+\indexentry{Smart Card/Token!Kerberos Combined|book{3}\q}{136-137}
+\indexentry{Lockout Policies! }{138}
+\indexentry{Smart Card/Token!PIN Management \& Crypto HW|book{3}}{138-140}
+\indexentry{Smart Card/Token!TPM Virtual Smart Card|book{3}}{141-145}
+\indexentry{Smart Card/Token!Smart Cards Deployment|book{3}}{146-152}
+\indexentry{TPM! }{141}
+\indexentry{MMC!TPM Management Snap-in|book{3}}{142}
+\indexentry{BitLocker!  }{142}
+\indexentry{TBS|book{3}}{142}
+\indexentry{DirectAccess! }{143}
+\indexentry{CA!Enterprise}{146}
+\indexentry{CA!Stand-Alone}{146}
+\indexentry{Smart Card/Token!Certificate Templates|book{3}\q}{146}
+\indexentry{Smart Card/Token!Removal|book{3}\q}{147}
+\indexentry{Station Hop|book{3}}{147}
+\indexentry{MMC!Certificates Snap-in}{148}
+\indexentry{Active Directory!Certificate Services!Website}{149-152}
+\indexentry{PKI!Enrollment Agent|book{3}}{146-152}
+\indexentry{CA!Enterprise}{151}
+\indexentry{BitLocker!  }{154-160}
+\indexentry{BitLocker To Go! |book{3}}{154-155}
+\indexentry{TPM! }{154-158}
+\indexentry{BitLocker!Tools|book{3}}{155-156}
+\indexentry{MDOP! |book{3}}{156}
+\indexentry{PCR|book{3}}{156}
+\indexentry{BitLocker!Password Recovery Viewer|book{3}\q}{156}
+\indexentry{PK|book{3}}{157-158}
+\indexentry{VMK|book{3}\q}{157-158}
+\indexentry{FVEK|book{3}}{157-158}
+\indexentry{AES! }{157-159}
+\indexentry{RSA}{158}
+\indexentry{Secure Boot! |book{3}}{160}
+\indexentry{BitLocker!TPM Options|book{3}\q}{163-166}
+\indexentry{WMI!  |book{3}}{164}
+\indexentry{BitLocker!On USB Drives|book{3}}{167-171}
+\indexentry{BitLocker To Go! }{167-169}
+\indexentry{BitLocker To Go!Enable|book{3}}{168}
+\indexentry{Windows Explorer! |book{3}}{168-169}
+\indexentry{Auto-Unlock|book{3}\q}{169}
+\indexentry{Windows To Go! |book{3}}{170}
+\indexentry{BitLocker To Go! }{171}
+\indexentry{Hibernation|book{3}}{170}
+\indexentry{BitLocker!Emergency Recovery|book{3}\q}{172-176}
+\indexentry{FVEK}{175}
+%\indexentry{KB!  }{175}
+\indexentry{ADSI! }{175}
+\indexentry{BitLocker!Data Recovery Agent|book{3}}{175-176}
+\indexentry{BitLocker To Go! }{176}
+\indexentry{PowerShell!  |book{3}}{177}
+\indexentry{UAC!  |book{3}}{178}
+\indexentry{Rootkit! |book{3}}{178}
+\indexentry{Cold Boot Attack|book{3}}{179}
+\indexentry{Firewire Port Attack|book{3}}{179}
+\indexentry{Hibernation}{179}
+\indexentry{Password/Passphrase Policy! }{179}
+\indexentry{AES! }{180-181}
+\indexentry{VHDX! |book{3}}{180}
+\indexentry{BitLocker!  }{183}
+\indexentry{Network Unlock|book{3}}{183-185}
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Enclave|book{4}}{8}
+\indexentry{SDN|book{4}}{8}
+\indexentry{Malware Analysis Lab|book{4}}{9}
+\indexentry{Choke Points|book{4}}{9}
+\indexentry{WPAD|book{4}}{11}
+\indexentry{Thin-Client|book{4}}{11}
+\indexentry{DirectAccess!  |book{4}}{11-12}
+\indexentry{VPN!  |book{4}}{11-12}
+\indexentry{Conficker!  |book{4}}{13}
+\indexentry{Backdoor! |book{4}}{13}
+\indexentry{MMC!Windows Firewall Snap-in|book{4}}{15}
+\indexentry{Windows Firewall!Tools|book{4}\q}{15-20}
+\indexentry{IPSec!Tools|book{4}}{15-20}
+\indexentry{PowerShell!   |book{4}}{15}
+\indexentry{MMC!IP Security Monitor Snap-in|book{4}}{16}
+\indexentry{MMC!IP Security Policies Snap-in|book{4}}{17}
+\indexentry{Event Viewer!  |book{4}}{20}
+\indexentry{Windows Firewall|book{4}}{21-22}
+\indexentry{Windows Firewall!Network Profiles|book{4}}{23-26}
+\indexentry{LDAP!   |book{4}}{24}
+\indexentry{Roaming!   |book{4}}{24}
+\indexentry{NLA|book{4}}{24-25}
+\indexentry{Windows Firewall}{25}
+\indexentry{Windows Firewall!Default Settings|book{4}\q}{27-29}
+\indexentry{WinRT! |book{4}}{31}
+\indexentry{AH|book{4}}{32}
+\indexentry{ESP|book{4}}{32}
+\indexentry{Netcat|book{4}}{33}
+\indexentry{MMC!Windows Firewall Snap-in}{33}
+\indexentry{Windows Firewall!Rule Precedence|book{4}}{34}
+\indexentry{IPSec!      @Overview|book{4}}{36-42}
+\indexentry{DoD Protocol Model|book{4}\q}{36}
+\indexentry{PGP! |book{4}\q}{36-37}
+\indexentry{SSH|book{4}}{37}
+\indexentry{Stunnel|book{4}}{37}
+\indexentry{SSL/TLS! |book{4}}{36-37}
+\indexentry{VPN!  }{37}
+\indexentry{Kerberos!  |book{4}}{38}
+\indexentry{AES!  |book{4}}{38-39}
+\indexentry{IPSec!Benefits|book{4}}{38-41}
+\indexentry{Hash!  |book{4}}{38}
+\indexentry{CHAP! |book{4}}{39}
+%\indexentry{KB!   |book{4}}{39}
+\indexentry{IPSec!Windows Firewall|book{4}}{39}
+\indexentry{NAT|book{4}}{40}
+\indexentry{Resource Kit!  |book{4}}{40}
+%\indexentry{KB!   |book{4}}{41}
+\indexentry{VPN!  }{41}
+\indexentry{IPSec!Drawbacks|book{4}}{41}
+\indexentry{IPSec!Flooding|book{4}}{42}
+\indexentry{IKE|book{4}}{42}
+\indexentry{IPSec!Scenarios And Uses|book{4}}{43-46}
+\indexentry{IPSec!Wireless|book{4}}{44}
+\indexentry{IPSec!Requiring|book{4}}{45}
+\indexentry{Roaming!   }{46}
+\indexentry{AH}{47-48}
+\indexentry{ESP}{47-48}
+\indexentry{IKE}{47}
+\indexentry{IPSec!Protocols|book{4}}{47-48}
+\indexentry{NAT}{47-48}
+\indexentry{IPSec!Internet Key Exchange|book{4}\q}{49-55}
+\indexentry{IKE|q}{49-55}
+\indexentry{DOI|book{4}}{49}
+\indexentry{SA|book{4}\q}{49-52}
+\indexentry{ISAKMP|book{4}}{50-53}
+\indexentry{IPSec!Negociation|book{4}}{51-52}
+\indexentry{IPSec!Modes (Phases)|book{4}}{52}
+\indexentry{Diffie-Hellman! |book{4}}{52}
+\indexentry{Diffie-Hellman! }{54}
+\indexentry{AH}{52}
+\indexentry{ESP}{52}
+\indexentry{Hash!  }{51-52}
+\indexentry{OAKLEY|book{4}}{53}
+\indexentry{SKEME|book{4}}{53}
+%\indexentry{KB!   }{53-54}
+\indexentry{Man-In-The-Middle Attack|book{4}}{54}
+\indexentry{AuthIP|book{4}}{54-55}
+\indexentry{NTLM! |book{4}}{55}
+\indexentry{IPSec!Encapsulating Security Payload|book{4}}{56-59}
+\indexentry{ESP}{56-61}
+\indexentry{AH|q}{56-61}
+\indexentry{IPSec!Modes (AH/ESP)|book{4}}{56-59}
+\indexentry{VPN!  }{57}
+\indexentry{IPSec!AH/ESP Differences|book{4}\q}{59}
+\indexentry{IPSec!Null Encapsulation|book{4}}{60-61}
+\indexentry{IPSec!Default Settings|book{4}}{62-63}
+\indexentry{ESP}{63}
+\indexentry{Diffie-Hellman! }{63-65}
+\indexentry{Key!Master! |book{4}}{64}
+\indexentry{Diffie-Hellman!Types \& Groups|book{4}}{64}
+\indexentry{AuthIP}{64}
+\indexentry{NTLM! }{64}
+\indexentry{Kerberos!  }{64}
+\indexentry{IPSec!Advanced Options -- Phase I \& II|book{4}}{64-67}
+\indexentry{PFS|book{4}\q}{65}
+\indexentry{ESP}{66}
+\indexentry{AH}{66}
+\indexentry{AES!  }{67}
+\indexentry{DES!  |book{4}}{67}
+\indexentry{IPSec!Authentication Options|book{4}}{68-74}
+\indexentry{NTLM! }{68}
+\indexentry{Authentication!Precedence|book{4}}{68}
+\indexentry{Kerberos!  }{68-70}
+\indexentry{VerySign! |book{4}}{69}
+\indexentry{CA! |book{4}}{69}
+\indexentry{CA!Enterprise! |book{4}}{69}
+\indexentry{Health Certificate|book{4}}{70}
+\indexentry{NAP! |book{4}}{70}
+\indexentry{IPSec!Channel|book{4}}{71}
+\indexentry{Key!Preshared|book{4}}{71-72}
+\indexentry{Key!Master! }{71}
+%\indexentry{KB!   }{71}
+\indexentry{Diffie-Hellman! }{71}
+\indexentry{AuthIP}{71}
+\indexentry{IKE}{71}
+\indexentry{Man-In-The-Middle Attack}{71}
+\indexentry{RSA! |book{4}}{73}
+\indexentry{ECDSA|book{4}}{73}
+\indexentry{Port Numbers!Querying Group Memberships On DC|book{4}}{74}
+\indexentry{Port Numbers!IPSec|book{4}}{74}
+\indexentry{IPSec!Connection Security Rules|book{4}}{75-83}
+\indexentry{Windows Firewall!Connection Security Rules|book{4}}{75-83}
+\indexentry{MMC!Windows Firewall Snap-in}{76}
+\indexentry{Roaming!   }{77}
+\indexentry{IPSec!Connection Security Rules!Precedence|book{4}}{81}
+\indexentry{IPSec!Tunneling|book{4}\q}{80-81}
+\indexentry{IPSec!Policy!Rules Priority|book{4}\q}{81}
+\indexentry{MMC!Windows Firewall Snap-in}{81}
+\indexentry{IPSec!Policy|book{4}}{81}
+\indexentry{MMC!IP Security Monitor Snap-in}{81}
+\indexentry{IPSec!Order Of Specificity|book{4}}{82}
+%\indexentry{KB!   }{82-83}
+\indexentry{Security Zone|book{4}}{85-88}
+\indexentry{Security Zone!IP Addressing Scheme|book{4}}{86-87}
+\indexentry{High-Value Target! |book{4}}{85}
+\indexentry{IPSec!Policy}{90}
+\indexentry{GPO!IPSec \& Firewall Policies|book{4}}{89-91}
+\indexentry{MMC!IP Security Policies Snap-in}{89}
+\indexentry{GPO!Precedence! |book{4}}{90}
+\indexentry{IPSec!Policy!Scripting|book{4}}{92-95}
+\indexentry{Windows Firewall!Policy Scripting|book{4}}{92-95}
+\indexentry{PowerShell!   }{92}
+\indexentry{IPSec!Command-Line Tools|book{4}}{92}
+\indexentry{IPSec!Command-Line Tools!Dynamic/Static Mode|book{4}}{93}
+\indexentry{GPO!Scripts!  |book{4}}{93}
+\indexentry{NetBIOS!Disable|book{4}}{97-103}
+\indexentry{SMB! |book{4}\q}{97-98}
+\indexentry{WINS Server! |book{4}}{97}
+\indexentry{NetBT|book{4}}{98-99}
+\indexentry{Port Numbers!NetBIOS|book{4}}{100}
+\indexentry{Windows Firewall}{100}
+\indexentry{SMB! }{100}
+\indexentry{LLMNR|book{4}}{101-103}
+\indexentry{Port Numbers!LLMNR|book{4}}{101}
+\indexentry{DNS!Cache Poisoning Attack|book{4}}{102}
+\indexentry{Man-In-The-Middle Attack}{102}
+\indexentry{NRPT|book{4}}{102}
+\indexentry{CNAME|book{4}}{103}
+\indexentry{DNS!Single-Label Name Resolution|book{4}}{103}
+\indexentry{DNS!GlobalNames Zone|book{4}}{103}
+\indexentry{DNS!Tools|book{4}}{104-106}
+\indexentry{MMC!DNS Snap-in|book{4}}{104}
+\indexentry{WMI!   |book{4}}{106}
+\indexentry{PowerShell!   }{106}
+\indexentry{Event Viewer!  }{106}
+\indexentry{Performance Monitor|book{4}}{106}
+%\indexentry{KB!   }{106}
+\indexentry{Resource Kit!  }{106}
+\indexentry{PowerShell!Provided Scripts! |book{4}}{106}
+\indexentry{Active Directory!DNS|book{4}}{107-108}
+\indexentry{DNS!Active Directory|book{4}}{107-108}
+\indexentry{DNS!Zone|book{4}}{107}
+\indexentry{DNS!AD-Integrated|book{4}}{108-109}
+\indexentry{Kerberos!  }{109}
+\indexentry{DNS!Secure Dynamic Updates|book{4}}{109-114}
+\indexentry{DNS!Records Permissions|book{4}}{110}
+\indexentry{ADSI!  |book{4}}{110}
+\indexentry{DHCP|book{4}}{110}
+\indexentry{MMC!DHCP Snap-in|book{4}}{110}
+\indexentry{Active Directory!Groups!Everyone|book{4}}{110}
+\indexentry{Active Directory!Groups!DNSUpdateProxy|book{4}}{111-113}
+\indexentry{DNS!Cache Poisoning Attack}{113}
+\indexentry{DNS!AD-Integrated}{115}
+\indexentry{DNS!DNSSEC|book{4}}{115-120}
+\indexentry{DoS Attack|book{4}}{115}
+\indexentry{DNS!Zone!Signing|book{4}}{116}
+\indexentry{Trust Anchor|book{4}}{117}
+\indexentry{Man-In-The-Middle Attack}{119}
+\indexentry{DNS!DNSSEC!Management|book{4}}{121-130}
+\indexentry{DNS!Zone}{123}
+\indexentry{DNS!Key Master|book{4}}{125}
+\indexentry{NRPT}{126}
+\indexentry{IPSec!DNSSEC|book{4}}{128}
+\indexentry{NRPT}{128}
+\indexentry{DNS!Authoritative Server|book{4}}{128}
+\indexentry{LLMNR}{130}
+\indexentry{DNS!Sinkhole|book{4}}{131}
+\indexentry{Roaming!   }{131-132}
+\indexentry{PowerShell!Provided Scripts! }{132}
+\indexentry{TDSS Rootkit|book{4}}{132}
+\indexentry{DNS!AD-Integrated}{134-135}
+\indexentry{Performance Monitor}{135}
+\indexentry{DNS!Internal/External|book{4}}{133-135}
+\indexentry{MMC!DNS Snap-in}{136}
+\indexentry{Whois Lookup|book{4}}{136}
+\indexentry{DNS!Zone!Stub|book{4}}{136}
+%\indexentry{KB!   }{138}
+\indexentry{DNS!Cache Poisoning Attack}{138}
+\indexentry{DoS Attack}{141}
+\indexentry{Wireless!DoS Attack Vulnerabilities|book{4}}{141-142}
+\indexentry{Backtrack|book{4}}{142}
+\indexentry{Wireless!Pre-Shared Key Issues|book{4}}{143-144}
+\indexentry{PSK|book{4}}{143}
+\indexentry{RADIUS! |book{4}}{145}
+\indexentry{RADIUS!Benefits|book{4}}{145-146}
+\indexentry{RADIUS!NPS|book{4}}{147-150}
+\indexentry{Active Directory!Groups!RAS And IAS Servers|book{4}}{148}
+\indexentry{MMC!Network Policy Server Snap-in|book{4}}{148}
+\indexentry{NPS|book{4}}{147-150}
+\indexentry{NPS!Client|book{4}}{149}
+\indexentry{VPN!  }{149}
+\indexentry{NAP! }{150}
+\indexentry{RADIUS!Policies|book{4}}{151-156}
+\indexentry{NPS!Network Policies|book{4}}{151-156}
+\indexentry{Resource Kit!  }{155}
+\indexentry{NPS!Network Policies!Constraints|book{4}}{157-158}
+\indexentry{Hash!  }{158}
+\indexentry{Wireless!EAP|book{4}}{159-160}
+\indexentry{Wireless!PEAP|book{4}}{160-161}
+\indexentry{EAP \win|book{4}}{162}
+\indexentry{Wireless!EAP-TLS \& Smart Card Support|book{4}}{162-164}
+\indexentry{Cryptography!X.509v3 Certificate Structure! |book{4}}{162}
+\indexentry{PKI!Auto-Enrollment! |book{4}}{163}
+\indexentry{CA!Enterprise! }{163}
+\indexentry{MMC!Certificates Snap-in! |book{4}}{163}
+\indexentry{NPS!Certificates|book{4}}{163}
+\indexentry{Wireless!EAP}{162}
+\indexentry{Wireless!PEAP}{163}
+\indexentry{CRL! |book{4}}{164}
+\indexentry{NPS!Network Policies!Constraints}{165-168}
+\indexentry{NPS!Network Policies!Settings|book{4}}{169-172}
+\indexentry{PPTP|book{4}}{167-168}
+\indexentry{MPPE|book{4}}{167-168}
+\indexentry{BAP|book{4}}{170}
+\indexentry{Multilink|book{4}}{170}
+\indexentry{Wireless!PEAP}{171-177}
+\indexentry{Port Numbers!RADIUS|book{4}}{171}
+\indexentry{NPS!Configuration|book{4}}{173-177}
+\indexentry{NPS|book{4}}{173}
+\indexentry{SAM! |book{4}}{173}
+\indexentry{RADIUS! |book{4}}{173}
+\indexentry{CA! }{174-175}
+\indexentry{Active Directory!Groups!RAS And IAS Servers}{174-175}
+\indexentry{MMC!Internet Authentication Service Snap-in|book{4}}{175}
+\indexentry{Active Directory!Groups!Wireless Users}{175}
+\indexentry{IAS|book{4}}{175-177}
+%\indexentry{KB!   }{178}
+\indexentry{Wireless!Client Configuration|book{4}}{178-180}
+\indexentry{BYOD!Tethering|book{4}}{181-183}
+\indexentry{Network Bridging|book{4}}{182-183}
+\indexentry{Connection Sharing|book{4}}{182}
+\indexentry{Wireless!Access Points -- Rogue \& Public|book{4}}{183-189}
+\indexentry{Nmap! |book{4}}{185}
+\indexentry{PowerShell!   }{185}
+\indexentry{ARP Poisoning|book{4}}{187}
+\indexentry{NetBIOS! |book{4}}{188}
+\indexentry{LLMNR}{188}
+\indexentry{VPN!  }{188-189}
+\indexentry{Cloud! |book{4}}{188}
+\indexentry{Ethernet Switches|book{4}}{190-192}
+\indexentry{Ethernet Switches!Requirements|book{4}}{191}
+\indexentry{Ethernet Switches!Wired AutoConfig Service|book{4}}{191}
+\indexentry{MMC!Services Snap-in|book{4}}{192}
+\indexentry{Wireless!Tunneled TLS|book{4}}{192}
+\indexentry{RADIUS!Clients|book{4}}{196}
+\indexentry{NPS!Clients|book{4}}{196}
+%\indexentry{KB!   }{197-198}
+%\indexentry{KB!   }{202}
+\indexentry{Wireless!802.11|book{4}}{205}
+\indexentry{Wireless!Infrastructure/Ad Hoc Mode|book{4}}{206}
+\indexentry{WEP|book{4}}{207}
+\indexentry{WPA/WPA2|book{4}\q}{208}
+\indexentry{EAP \win}{208}
+\indexentry{MMC!Network Policy Server Snap-in}{211}
+\indexentry{Event Viewer!  }{211}
+\indexentry{RADIUS!Account Lockout|book{4}}{215}
+\indexentry{DoS Attack}{215}
+
+\comment{********************************************************************************************
+                                      FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Bulletins! |book{5}}{10}
+\indexentry{Security Websites|book{5}}{10}
+\indexentry{Server Manager|book{5}}{12-14}
+\indexentry{Hardening!Start|book{5}}{12-15}
+\indexentry{Hardening!Base Principle|book{5}}{13}
+%\indexentry{KB!    |book{5}}{13}
+\indexentry{Server Manager!Scripting|book{5}}{16-17}
+\indexentry{SCW|book{5}}{18-19}
+\indexentry{INF! |book{5}}{22-24}
+\indexentry{Security Templates! |book{5}}{22-24}
+\indexentry{XML! |book{5}}{22-24}
+\indexentry{MMC!Security Templates Snap-in! |book{5}}{23}
+\indexentry{SCW}{23}
+\indexentry{MMC!Security Config \& Analysis Snap-in! |book{5}}{23}
+\indexentry{Hardening!Disable Unnecessary Services|book{5}}{29-32}
+\indexentry{IIS!Services Not Required|book{5}}{29-30}
+\indexentry{IIS!Services Required|book{5}}{31}
+\indexentry{Service \win!Recovery|book{5}}{31-32}
+\indexentry{PowerShell!Provided Scripts!  |book{5}}{32}
+%\indexentry{KB!    }{32}
+\indexentry{CSE!  |book{5}}{32}
+\indexentry{Service \win|book{5}}{33}
+\indexentry{Service \win!Identity Preference List|book{5}}{33}
+\indexentry{Service \win!Account|book{5}}{33-40}
+\indexentry{Hardening!Service Account Identities|book{5}}{33-40}
+\indexentry{Service \win!Account!Global|book{5}}{34}
+\indexentry{LSA!Secrets!  |book{5}}{34}
+\indexentry{Debug Programs Privilege! |book{5}}{34}
+\indexentry{Service \win!Compromission|book{5}}{35}
+\indexentry{VSA|book{5}}{35}
+\indexentry{MSA|book{5}}{37-38}
+\indexentry{Debug Programs Privilege! }{37}
+\indexentry{Service \win!Account!Step-By-Step Guide|book{5}}{37}
+\indexentry{GMSA|book{5}}{38}
+\indexentry{VSA}{38-40}
+\indexentry{IIS! |book{5}}{38-39}
+\indexentry{Port Numbers! |book{5}}{48}
+\indexentry{Hardening!Server Installation|book{5}}{41-48}
+\indexentry{Server Installation|book{5}}{41-48}
+\indexentry{Server Installation!Core|book{5}}{41-48}
+\indexentry{Server Installation!Minimal|book{5}}{45-46}
+\indexentry{Server Installation!Full|book{5}}{45-46}
+\indexentry{Hardening!Dangerous Files|book{5}}{49-51}
+\indexentry{Resource Kit!   |book{5}}{51}
+\indexentry{SDK|book{5}}{51}
+\indexentry{Internet Explorer! |book{5}}{51}
+\indexentry{Google Chrome! |book{5}}{51}
+\indexentry{Firefox! |book{5}}{51}
+\indexentry{Opera|book{5}}{51}
+\indexentry{Hardening!Scheduled/Immediate Tasks|book{5}}{52-59}
+\indexentry{MMC!Task Scheduler Snap-in|book{5}}{57}
+\indexentry{Null Session|book{5}}{58}
+\indexentry{Windows Firewall! |book{5}}{58}
+\indexentry{Event Viewer!    |book{5}}{58}
+\indexentry{Hardening!Pre-Forensics|book{5}}{60-81}
+\indexentry{Hardening!Pre-Forensics!System Snapshots|book{5}}{60-67}
+\indexentry{Hardening!Provided Scripts|book{5}}{62-65}
+\indexentry{Event Viewer!    }{68}
+\indexentry{Hardening!Pre-Forensics!Logging \& Audit|book{5}}{68-76}
+\indexentry{Audit Policy|book{5}}{68-70}
+\indexentry{Audit Policy!Advanced Configuration|book{5}}{70-72}
+%\indexentry{KB!    }{74-75}
+\indexentry{BSOD crash! |book{5}}{75}
+\indexentry{DoS Attack! |book{5}}{76}
+\indexentry{SIEM|book{5}}{76}
+\indexentry{Hardening!Pre-Forensics!Miscellaneous Settings|book{5}}{77-81}
+\indexentry{NTP! |book{5}}{77}
+\indexentry{Audit Policy!Process Creation/Termination|book{5}}{78}
+\indexentry{Audit Policy!DNS Logging|book{5}}{78}
+\indexentry{Event Viewer!ID 4688, 4689 (Process)|book{5}}{78}
+\indexentry{DNS!Logging|book{5}}{78}
+\indexentry{MMC!DNS Snap-in! |book{5}}{78}
+\indexentry{Audit Policy!Windows Firewall|book{5}}{78}
+\indexentry{Windows Firewall!Logging|book{5}}{78}
+\indexentry{NTFS!Last Access Timestamps|book{5}}{79}
+\indexentry{Audit Policy!NTFS Last Access Timestamps|book{5}}{79}
+%\indexentry{KB!    }{80}
+\indexentry{System Restore/Protection|book{5}}{80}
+\indexentry{Volume Shadow Copy|book{5}}{80}
+\indexentry{Hardening!Unnecessary Networking Components|book{5}}{82-88}
+\indexentry{NetBIOS!Disable! |book{5}}{83-86}
+\indexentry{DNS!DNS Name Resolution Only|book{5}}{83}
+\indexentry{NetBT! |book{5}}{83-85}
+\indexentry{IPv6|book{5}}{89-92}
+%\indexentry{KB!    }{90}
+\indexentry{Port Numbers!SMB|book{5}}{93}
+\indexentry{SMB!Description|book{5}}{93}
+\indexentry{SMB!Hardening|book{5}}{93-98}
+\indexentry{SMB!Encryption|book{5}}{94}
+\indexentry{Server Manager!Services|book{5}}{94}
+\indexentry{Event Viewer!ID 1001, 1005 (SMB)|book{5}}{95-96}
+%\indexentry{KB!    }{96-97}
+\indexentry{SMB!Encryption}{96}
+\indexentry{Man-In-The-Middle Attack! |book{5}}{97}
+\indexentry{SMB!Message Signing|book{5}}{97}
+\indexentry{SSL/TLS!Hardening|book{5}}{99-104}
+%\indexentry{KB!    }{99-100}
+\indexentry{SSL/TLS!  |book{5}}{99-100}
+\indexentry{PFS! |book{5}\q}{102}
+\indexentry{Key! |book{5}\q}{102}
+\indexentry{SSL/TLS!Cipher Suite Order|book{5}}{101-103}
+\indexentry{RDP!With TLS|book{5}}{103}
+\indexentry{Man-In-The-Middle Attack! }{103}
+%\indexentry{KB!    }{103}
+\indexentry{RDP!Description|book{5}}{105-113}
+\indexentry{Port Numbers!RDP|book{5}}{105}
+\indexentry{RDS|book{5}}{105-107}
+\indexentry{Man-In-The-Middle Attack! }{105}
+\indexentry{VDI! |book{5}}{106}
+\indexentry{Port Numbers!RDP}{107-108}
+\indexentry{MMC!RDS Host Config Snap-in|book{5}}{108-110}
+\indexentry{Man-In-The-Middle Attack! }{109-110}
+\indexentry{NLA! |book{5}}{110}
+\indexentry{CredSSP! |book{5}}{110}
+\indexentry{DoS Attack! }{110-111}
+\indexentry{Kerberos!Vs NTLM|book{5}}{110-111}
+\indexentry{NTLM!Vs Kerberos|book{5}}{110-111}
+\indexentry{RDP!Hardening|book{5}}{105-113}
+\indexentry{RDP!Thin Client|book{5}}{111}
+\indexentry{Kerberos!Hardening|book{5}}{114-116}
+\indexentry{Kerberos!Armoring|book{5}}{114-116}
+\indexentry{FAST|book{5}}{114}
+\indexentry{Man-In-The-Middle Attack! }{114}
+\indexentry{TGT! |book{5}}{114}
+\indexentry{DAC! |book{5}}{115}
+\indexentry{NTLM!Auth Restriction (Hardening)|book{5}}{117-120}
+\indexentry{Active Directory!Groups!Protected Users|book{5}}{119}
+\indexentry{Hardening!IPSec \& Windows Firewall|book{5}}{121-123}
+\indexentry{IPSec!Hardening|book{5}}{121-123}
+\indexentry{Windows Firewall!Hardening|book{5}}{121-123}
+\indexentry{ESP! |book{5}}{121}
+\indexentry{Hardening!Servers Exposure To Internal Forest|book{5}}{124-125}
+\indexentry{Cross-Forest Trusts|book{5}\q}{126-130}
+\indexentry{MMC!AD Domains \& Trusts Snap-in|book{5}}{128}
+\indexentry{Active Directory!Functional Level|book{5}}{128}
+\indexentry{Hardening!Extranet Forest For Exposed Servers|book{5}}{131-134}
+\indexentry{ILM|book{5}}{134}
+\indexentry{Hardening!Extranet Forest FW Design Issues|book{5}}{135-137}
+%\indexentry{KB!    }{137}
+\indexentry{DAC!      @Overview|book{5}\q}{139-144}
+\indexentry{DAC!Components|book{5}}{140}
+\indexentry{DAC!Requirements|book{5}\q}{141-142}
+\indexentry{FCI|book{5}}{140}
+\indexentry{FSRM|book{5}}{140}
+\indexentry{ADS|book{5}}{140}
+\indexentry{DAC!Glossary|book{5}}{143-144}
+\indexentry{Protocol Transition|book{5}}{142}
+\indexentry{Kerberos!Armoring}{142}
+\indexentry{DAC!Tools|book{5}}{145-146}
+\indexentry{ADAC! |book{5}}{145-146}
+\indexentry{MMC!File Server Resource Manager Snap-in|book{5}}{145}
+\indexentry{Windows Explorer!  |book{5}}{145}
+\indexentry{FSRM!Installation|book{5}}{146}
+\indexentry{Conditional Expressions!Without Claims|book{5}}{148-153}
+\indexentry{AuthZ API|book{5}}{150}
+\indexentry{AppLocker!Conditional Expressions|book{5}}{150}
+\indexentry{Conditional Expressions!Strings|book{5}}{151}
+\indexentry{Effective Permissions|book{5}}{152-155}
+\indexentry{ACL!Discretionary (DACL)! |book{5}}{152}
+\indexentry{DAC!Claims! |book{5}}{157-158}
+\indexentry{Kerberos!Compound Authentication|book{5}}{158-162}
+\indexentry{Kerberos!Ticket|book{5}}{158}
+\indexentry{PAC|book{5}}{158-162}
+\indexentry{Kerberos!Armoring}{158}
+\indexentry{Kerberos!Armoring}{160}
+\indexentry{Kerberos!Compound Authentication!Enable|book{5}}{160}
+\indexentry{Protocol Transition}{160}
+\indexentry{S4U2Self|book{5}}{160}
+\indexentry{Kerberos!Compound Authentication!Restrictions|book{5}}{161}
+\indexentry{DAC!Claims!Valid|book{5}}{162}
+\indexentry{DAC!Claims!Types|book{5}}{164-165}
+\indexentry{Conditional Expressions!With Claims|book{5}}{172-174}
+\indexentry{Kerberos!Compound Authentication}{172}
+\indexentry{Active Directory!Delegation Of Control!  |book{5}}{174}
+\indexentry{DAC!Classification Tags|book{5}}{175}
+\indexentry{ADS}{175}
+\indexentry{FSRM}{176}
+\indexentry{Resource Properties|book{5}}{178-182}
+\indexentry{DAC!Resource|book{5}}{178}
+\indexentry{Resource Properties!Suggested Values|book{5} \q}{179}
+\indexentry{Resource Properties!Reference|book{5}}{180}
+\indexentry{Resource Properties!Lists|book{5}\q}{181}
+\indexentry{Conditional Expressions!With Resource Tags|book{5}}{186-187}
+\indexentry{DAC!Big Picture|book{5}}{190-191}
+\indexentry{CAP|book{5}}{190-191}
+\indexentry{CAR|book{5}\q}{190}
+\indexentry{FSRM}{191}
+\indexentry{LSA|book{5}}{191}
+\indexentry{GOAA|book{5}}{191}
+\indexentry{DAC!Central Access Rules \& Policy|book{5}}{192-209}
+\indexentry{CAR}{192-195}
+\indexentry{CAP}{197-198}
+\indexentry{CAP!Publication Through GPO|book{5}}{200-202}
+\indexentry{Effective Permissions!NTFS \& CAP|book{5}}{204-207}
+\indexentry{LSA}{204}
+\indexentry{SAT!  |book{5}}{204}
+\indexentry{FSRM!Access-Denied Assistance|book{5}\q}{210-213}
+\indexentry{CAP!Staging|book{5}}{215}
+%\indexentry{KB!    }{215}
+\indexentry{Event Viewer!ID 4817, 4818 (GOAA)|book{5}\q}{214}
+\indexentry{Active Directory!Permissions!Proposed|book{5}}{214-216}
+\indexentry{Proposed Permissions|book{5}\q}{214-216}
+\indexentry{DAC!Classification Tags!Automatic Application|book{5}}{217-220}
+\indexentry{FCI}{218}
+\indexentry{FSRM}{218}
+\indexentry{IFilter|book{5}}{218-219}
+\indexentry{FCI}{221}
+\indexentry{FSRM}{221}
+\indexentry{FSRM!Automatic Classification Rules|book{5}\q}{221}
+\indexentry{FCI!Third-Party Additions|book{5}}{230}
+\indexentry{DAC!Third-Party Additions|book{5}}{230}
+\indexentry{GOAA|q}{231-235}
+\indexentry{GOAA!Compatibility Issues|book{5}}{232}
+\indexentry{Event Viewer!ID 4817, 4818 (GOAA)}{233}
+\indexentry{DAC!Classification Tags!Products Using Tags|book{5}}{236-237}
+\indexentry{RMS|book{5}}{236}
+\indexentry{SharePoint|book{5}}{236}
+\indexentry{NTLM!Authentication (v2)|book{5}}{239-248}
+\indexentry{Anonymous Access Restriction|book{5}}{249-253}
+\indexentry{Null Session}{249}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{Claims \goto DAC|comment}{0}
+\indexentry{Classification Tags \goto DAC|comment}{0}
+\indexentry{Model \goto Biba, DoD, Web-of-Trust|comment}{0}
+\indexentry{Suggested Values \goto Resource Properties|comment}{0}
+\indexentry{Master Key \goto Key|comment}{0}
+\indexentry{Perfect Forward Secrecy \goto PFS|comment}{0}
+\indexentry{Active Directory!Central Access Rules \& Policy \goto CAR|comment}{0}
+\indexentry{Active Directory \goto Resource Properties|comment}{0}
+\indexentry{Active Directory!Tools! \goto ACL Tools|comment}{0}
+\indexentry{Certificate \goto Cryptography, PKI|comment}{0}
+\indexentry{PKI!Certificate Services \goto Active Directory|comment}{0}
+\indexentry{PKI!Policy Module \goto Active Directory|comment}{0}
+\indexentry{CA!Enterprise!Certificates (Template) \goto PKI|comment}{0}
+\indexentry{DAC!Kerberos Compound Auth \goto Kerberos|comment}{0}
+\indexentry{DAC!Test Permissions \goto Proposed Permissions|comment}{0}
+\indexentry{DAC!Access-Denied Assistance \goto FSRM|comment}{0}
+\indexentry{Access-Denied Assistance \goto FSRM|comment}{0}
+\indexentry{Hardening!IPv6 \goto IPv6|comment}{0}
+\indexentry{Hardening!Kerberos Armoring \goto Kerberos|comment}{0}
+\indexentry{Hardening!NTLM Auth Restriction \goto NTLM|comment}{0}
+\indexentry{Hardening!SSL/TLS \goto SSL/TLS|comment}{0}
+\indexentry{Hardening!SMB \goto SMB|comment}{0}
+\indexentry{Hardening!RDP \goto RDP|comment}{0}
+\indexentry{Hardening!Cross-Forest Trusts \goto Cross-Forest Trusts|comment}{0}
+\indexentry{Classification Rules \goto FSRM|comment}{0}
+\indexentry{IPSec!Policy!Rules \goto Connection Security Rules|comment}{0}
+\indexentry{Security Association \goto SA|comment}{0}
+\indexentry{Software Restriction \goto AppLocker|comment}{0}
+\indexentry{Audit Policies \goto Active Directory|comment}{0}

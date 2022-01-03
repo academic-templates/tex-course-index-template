@@ -1,0 +1,1854 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!1@Introduction|book{1}}{9-17}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!2@Cloud Assessment Methodology|book{1}}{18-21}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!3@Terms of Serv. \& Demarcatoin Points|book{1}}{22-34}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!4@Ngrok|book{1}}{35-39}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!5@Recon at Cloud Scale|book{1}}{42-54}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!6@Discovery Tools \& Wordlists|book{1}}{55-59}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!7@IP Addressing \& Hosts|book{1}}{63-77}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!8@Mapping URLs|book{1}}{81-90}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!9@Commonspeak2 Wordlists|book{1}}{91-96}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!10@Visualizations During Recon|book{1}}{100-105}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!11@Asset Discovery Frameworks|book{1}}{106-112}
+\indexentry{1a@\textbf{Architecture, Discovery, \& Recon at Scale}!12@Appendix|book{1}}{117-128}
+
+\indexentry{1b@\blankline|comment}{0}
+
+\indexentry{1c@\textbf{Attacking Identity Systems}!1@Mapping Process|book{2}}{5-12}
+\indexentry{1c@\textbf{Attacking Identity Systems}!2@Authentications \& Key Material|book{2}}{13-19}
+\indexentry{1c@\textbf{Attacking Identity Systems}!3@AWS CLI|book{2}}{22-28}
+\indexentry{1c@\textbf{Attacking Identity Systems}!4@URL and URIs|book{2}}{31-37}
+\indexentry{1c@\textbf{Attacking Identity Systems}!5@AWS IAM|book{2}}{38-48}
+\indexentry{1c@\textbf{Attacking Identity Systems}!6@Azure CLI|book{2}}{49-53}
+\indexentry{1c@\textbf{Attacking Identity Systems}!7@Username Harvesting in the Cloud|book{2}}{54-56}
+\indexentry{1c@\textbf{Attacking Identity Systems}!8@Unauthenticated File Shares|book{2}}{59-62}
+\indexentry{1c@\textbf{Attacking Identity Systems}!9@Introduction to Microsoft Services|book{2}}{65-68}
+\indexentry{1c@\textbf{Attacking Identity Systems}!10@Microsoft Identity Services|book{2}}{69-78}
+\indexentry{1c@\textbf{Attacking Identity Systems}!11@Azure AD \& RBAC|book{2}}{79-85}
+\indexentry{1c@\textbf{Attacking Identity Systems}!12@Authentication Standards|book{2}}{86-105}
+\indexentry{1c@\textbf{Attacking Identity Systems}!13@Golden SAML Attacks|book{2}}{106-110}
+\indexentry{1c@\textbf{Attacking Identity Systems}!14@Postman for APIs|book{2}}{111-123}
+
+\indexentry{1d@\blankline|comment}{0}
+
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!1@Mimikatz \& PRT|book{3}}{5-9}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!2@Microsoft Graph|book{3}}{10-16}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!3@AWS IAM Privilege Escalation|book{3}}{19-28}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!4@Introduction to socat|book{3}}{29-37}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!5@AWS Compute|book{3}}{40-43}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!6@Compute Attack Scenarios|book{3}}{46-51}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!7@Amazon KMS|book{3}}{54-57}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!8@Pacu|book{3}}{58-67}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!9@Azure VMs|book{3}}{70-74}
+\indexentry{1e@\textbf{Attacking \& Abusing Cloud Services}!10@Code Execution on Azure|book{3}}{77-83}
+
+\indexentry{1f@\blankline|comment}{0}
+
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!1@Introduction to Cloud Native Attacks|book{4}}{4-10}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!2@Cloud Native Applications|book{4}}{11-16}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!3@Deployment Pipelines \& Attacks|book{4}}{17-29}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!4@Web Application Injections|book{4}}{32-34}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!5@Server-Side Request Forgeries|book{4}}{35-41}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!6@Command Line Injections in Appls|book{4}}{44-50}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!7@Serverless Function with Lambda|book{4}}{53-60}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!8@Serverless Function with Azure|book{4}}{61-64}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!9@Exposed Databases|book{4}}{67-79}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!10@SQLi in a Hosted Environment|book{4}}{82-95}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!11@Containers \& Microservices|book{4}}{98-106}
+\indexentry{1g@\textbf{Vulnerabilities in Cloud-Native Applications}!12@Appendix|book{4}}{107-111}
+
+\indexentry{1h1@\blankline|comment}{0}
+\indexentry{1h2@\blankline|comment}{0}
+
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!1@Kubernetes \& Service Meshes|book{5}}{4-23}
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!2@Backdooring Containers|book{5}}{26-39}
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!3@Red Team \& Exploitation|book{5}}{42-46}
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!4@Payloads \& Payload Selections|book{5}}{47-59}
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!5@Red Team Ops in the Cloud|book{5}}{62-72}
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!6@Passwords Attacks|book{5}}{73-77}
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!7@Pswd Attack Types \& Methodologies|book{5}}{78-89}
+\indexentry{1i@\textbf{Infrastructure Attacks and Red Teaming}!8@Obfuscating Architectures|book{5}}{92-102}
+
+\indexentry{1j@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{100@\textbf{Labs}!Getting Started|book{1}}{40-41}
+\indexentry{100@\textbf{Labs}!Getting Started! |book{W}}{8-18}
+\indexentry{100@\textbf{Labs}!Domain Discovery Lab|book{1}}{60-62}
+\indexentry{100@\textbf{Labs}!Domain Discovery Lab! |book{W}}{19-26}
+\indexentry{100@\textbf{Labs}!Port Scans at Scale in the Cloud|book{1}}{78-80}
+\indexentry{100@\textbf{Labs}!Port Scans at Scale in the Cloud! |book{W}}{27-34}
+\indexentry{100@\textbf{Labs}!Gobuster \& CommonSpeak2 WLs|book{1}}{97-99}
+\indexentry{100@\textbf{Labs}!Gobuster \& CommonSpeak2 WLs! |book{W}}{35-44}
+\indexentry{100@\textbf{Labs}!Scaling Discovery|book{1}}{113-116}
+\indexentry{100@\textbf{Labs}!Scaling Discovery! |book{W}}{45-50}
+\indexentry{100@\textbf{Labs}!Hunting Key Material|book{2}}{20-21}
+\indexentry{100@\textbf{Labs}!Hunting Key Material! |book{W}}{51-58}
+\indexentry{100@\textbf{Labs}!AWS User Enumerations|book{2}}{29-30}
+\indexentry{100@\textbf{Labs}!AWS User Enumerations! |book{W}}{59-67}
+\indexentry{100@\textbf{Labs}!Username Harvesting \& Azure CLI|book{2}}{57-58}
+\indexentry{100@\textbf{Labs}!Username Harvesting \& Azure CLI! |book{W}}{68-74}
+\indexentry{100@\textbf{Labs}!Hunting for Open File Shares|book{2}}{63-64}
+\indexentry{100@\textbf{Labs}!Hunting for Open File Shares! |book{W}}{75-80}
+\indexentry{100@\textbf{Labs}!Postman|book{2}}{124-125}
+\indexentry{100@\textbf{Labs}!Postman! |book{W}}{81-89}
+\indexentry{100@\textbf{Labs}!Microsoft Graph API|book{3}}{17-18}
+\indexentry{100@\textbf{Labs}!Microsoft Graph API! |book{W}}{90-100}
+\indexentry{100@\textbf{Labs}!Socat|book{3}}{38-39}
+\indexentry{100@\textbf{Labs}!Socat! |book{W}}{101-108}
+\indexentry{100@\textbf{Labs}!EC2 Attack Setup|book{3}}{44-45}
+\indexentry{100@\textbf{Labs}!EC2 Attack Setup! |book{W}}{109-117}
+\indexentry{100@\textbf{Labs}!Attacking with EC2|book{3}}{52-53}
+\indexentry{100@\textbf{Labs}!Attacking with EC2! |book{W}}{118-124}
+\indexentry{100@\textbf{Labs}!PACU|book{3}}{68-69}
+\indexentry{100@\textbf{Labs}!PACU! |book{W}}{125-136}
+\indexentry{100@\textbf{Labs}!Azure VMs|book{3}}{75-76}
+\indexentry{100@\textbf{Labs}!Azure VMs! |book{W}}{137-148}
+\indexentry{100@\textbf{Labs}!Running Commands on Azure VMs|book{3}}{84-85}
+\indexentry{100@\textbf{Labs}!Running Commands on Azure VMs! |book{W}}{149-158}
+\indexentry{100@\textbf{Labs}!Backdooring CI/CD Pipelines|book{4}}{30-31}
+\indexentry{100@\textbf{Labs}!Backdooring CI/CD Pipelines! |book{W}}{159-169}
+\indexentry{100@\textbf{Labs}!SSRF Attack|book{4}}{42-43}
+\indexentry{100@\textbf{Labs}!SSRF Attack! |book{W}}{170-174}
+\indexentry{100@\textbf{Labs}!Command Line Injections|book{4}}{51-52}
+\indexentry{100@\textbf{Labs}!Command Line Injections! |book{W}}{175-184}
+\indexentry{100@\textbf{Labs}!Backdoors in Serverless Functions|book{4}}{65-66}
+\indexentry{100@\textbf{Labs}!Backdoors in Serverless Functions! |book{W}}{185-190}
+\indexentry{100@\textbf{Labs}!Databases \& Exposed Ports|book{4}}{80-81}
+\indexentry{100@\textbf{Labs}!Databases \& Exposed Ports! |book{W}}{191-199}
+\indexentry{100@\textbf{Labs}!SQL Injections|book{4}}{96-97}
+\indexentry{100@\textbf{Labs}!SQL Injections! |book{W}}{200-207}
+\indexentry{100@\textbf{Labs}!Kubernetes \& Peirates|book{5}}{24-25}
+\indexentry{100@\textbf{Labs}!Kubernetes \& Peirates! |book{W}}{208-217}
+\indexentry{100@\textbf{Labs}!Backdooring Containers|book{5}}{40-41}
+\indexentry{100@\textbf{Labs}!Backdooring Containers! |book{W}}{218-229}
+\indexentry{100@\textbf{Labs}!Heavy \& Light Web Shells|book{5}}{60-61}
+\indexentry{100@\textbf{Labs}!Heavy \& Light Web Shells! |book{W}}{230-242}
+\indexentry{100@\textbf{Labs}!Password Attacks|book{5}}{90-91}
+\indexentry{100@\textbf{Labs}!Password Attacks! |book{W}}{243-249}
+\indexentry{100@\textbf{Labs}!Domain Fronting Attacks|book{5}}{103-104}
+\indexentry{100@\textbf{Labs}!Domain Fronting Attacks! |book{W}}{250-255}
+\indexentry{100@\textbf{Labs}!CTF Challenge|book{W}}{256-258}
+
+\indexentry{101@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools}!Ngrok|book{1}}{36-41}
+\indexentry{200@\textbf{Tools}!Ngrok!    |book{W}}{15-18}
+\indexentry{200@\textbf{Tools}!Ngrok!Options|book{1}}{38}
+\indexentry{200@\textbf{Tools}!Socat|book{1}}{39}
+\indexentry{200@\textbf{Tools}!DNSRecon|book{1}}{54}
+\indexentry{200@\textbf{Tools}!ShuffleDNS|book{1}}{54}
+\indexentry{200@\textbf{Tools}!Gobuster|book{1}}{54}
+\indexentry{200@\textbf{Tools}!DNSRecon}{57-59}
+\indexentry{200@\textbf{Tools}!Commonspeak2! |book{W}}{21}
+\indexentry{200@\textbf{Tools}!DNSRecon! |book{W}}{22-24}
+\indexentry{200@\textbf{Tools}!ShuffleDNS! |book{W}}{25}
+\indexentry{200@\textbf{Tools}!Masscan|book{1}}{68-74}
+\indexentry{200@\textbf{Tools}!Masscan!Workflow|book{1}}{73}
+\indexentry{200@\textbf{Tools}!Zmap|book{1}}{68}
+\indexentry{200@\textbf{Tools}!Unicornscan|book{1}}{68}
+\indexentry{200@\textbf{Tools}!Scanrand|book{1}}{68}
+\indexentry{200@\textbf{Tools}!Ntop|book{1}}{71}
+\indexentry{200@\textbf{Tools}!Masscan}{77}
+\indexentry{200@\textbf{Tools}!Masscan! |book{W}}{27-31}
+\indexentry{200@\textbf{Tools}!Nmap|book{1}}{75-77}
+\indexentry{200@\textbf{Tools}!Nmap!   |book{W}}{31-33}
+\indexentry{200@\textbf{Tools}!NetSPI Microburst|book{1}}{83}
+\indexentry{200@\textbf{Tools}!Gobuster}{85-90}
+\indexentry{200@\textbf{Tools}!Commonspeak2|book{1}}{92-95}
+\indexentry{200@\textbf{Tools}!Commonspeak2! }{35-38}
+\indexentry{200@\textbf{Tools}!Gobuster!   |book{W}}{40-43}
+\indexentry{200@\textbf{Tools}!EyeWitness|book{1}}{103-105}
+\indexentry{200@\textbf{Tools}!EyeWitness! |book{W}}{45}
+\indexentry{200@\textbf{Tools}!EyeWitness! }{47}
+\indexentry{200@\textbf{Tools}!Nmap}{103-104}
+\indexentry{200@\textbf{Tools}!Intrigue|book{1}}{108-112}
+\indexentry{200@\textbf{Tools}!Intrigue!Ident|book{1}}{111-112}
+\indexentry{200@\textbf{Tools}!Intrigue!Ident@ |book{W}}{46}
+\indexentry{200@\textbf{Tools}!Intrigue!Ident@ }{48-49}
+\indexentry{200@\textbf{Tools}!Docker|book{1}}{109}
+\indexentry{200@\textbf{Tools}!Docker}{112}
+\indexentry{200@\textbf{Tools}!Nuclei|book{W}}{49}
+\indexentry{200@\textbf{Tools}!RunC|book{1}}{123}
+\indexentry{200@\textbf{Tools}!Containerd|book{1}}{123-125}
+\indexentry{200@\textbf{Tools}!Docker}{125-126}
+\indexentry{200@\textbf{Tools}!RunC}{125}
+\indexentry{200@\textbf{Tools}!Docker-Compose|book{1}}{125}
+\indexentry{200@\textbf{Tools}!Nabuu|book{W}}{48}
+\indexentry{200@\textbf{Tools}!Httpx|book{W}}{48-49}
+\indexentry{200@\textbf{Tools}!Aws|book{2}}{11}
+\indexentry{200@\textbf{Tools}!Az|book{2}}{11}
+\indexentry{200@\textbf{Tools}!Jq|book{2}}{11}
+\indexentry{200@\textbf{Tools}!GrayHatWarfare Buckets|book{2}}{12}
+\indexentry{200@\textbf{Tools}!Gobuster!   }{53}
+\indexentry{200@\textbf{Tools}!ShhGit|book{W}}{54}
+\indexentry{200@\textbf{Tools}!GitLeaks|book{W}}{54}
+\indexentry{200@\textbf{Tools}!ShhGit}{56}
+\indexentry{200@\textbf{Tools}!GitLeaks}{56}
+\indexentry{200@\textbf{Tools}!BFG Repo Cleaner|book{W}}{58}
+\indexentry{200@\textbf{Tools}!GitLeaks}{58}
+\indexentry{200@\textbf{Tools}!Aws}{24-25}
+\indexentry{200@\textbf{Tools}!Aws}{28}
+\indexentry{200@\textbf{Tools}!Aws!EC2|book{2}}{25}
+\indexentry{200@\textbf{Tools}!Aws!S3|book{2}}{25}
+\indexentry{200@\textbf{Tools}!Aws!EC2}{28}
+\indexentry{200@\textbf{Tools}!Jq}{27-28}
+\indexentry{200@\textbf{Tools}!Aws!STS|book{W}}{64}
+\indexentry{200@\textbf{Tools}!Aws!S3@   |book{W}}{65}
+\indexentry{200@\textbf{Tools}!Jq|book{2}}{11}
+\indexentry{200@\textbf{Tools}!Jq!   |book{W}}{66}
+\indexentry{200@\textbf{Tools}!Aws!EC2@ |book{W}}{66}
+\indexentry{200@\textbf{Tools}!Az}{50-51}
+\indexentry{200@\textbf{Tools}!Az!VM|book{2}}{50}
+\indexentry{200@\textbf{Tools}!Az!AD|book{2}}{51}
+\indexentry{200@\textbf{Tools}!Az!VM}{53}
+\indexentry{200@\textbf{Tools}!Jq}{53}
+\indexentry{200@\textbf{Tools}!Az!Login|book{W}}{70}
+\indexentry{200@\textbf{Tools}!Az!AD@ |book{W}}{71}
+\indexentry{200@\textbf{Tools}!Az!Role|book{W}}{72}
+\indexentry{200@\textbf{Tools}!Az!VM@    |book{W}}{72-73}
+\indexentry{200@\textbf{Tools}!Az}{70-74}
+\indexentry{200@\textbf{Tools}!Gobuster! |book{2}}{60}
+\indexentry{200@\textbf{Tools}!Storage Explorer \all|book{2}}{60}
+\indexentry{200@\textbf{Tools}!Intrigue!Ident@ }{76}
+\indexentry{200@\textbf{Tools}!Gobuster! }{77}
+\indexentry{200@\textbf{Tools}!Storage Explorer \all!    |book{W}}{78-80}
+\indexentry{200@\textbf{Tools}!SHIMIT \python|book{2}}{105}
+\indexentry{200@\textbf{Tools}!Mimikatz|book{2}}{107}
+\indexentry{200@\textbf{Tools}!SHIMIT \python}{109-110}
+\indexentry{200@\textbf{Tools}!Postman|book{2}}{112-123}
+\indexentry{200@\textbf{Tools}!Postman!Limitations|book{2}}{114}
+\indexentry{200@\textbf{Tools}!Postman!Supported Methods|book{2}}{119}
+\indexentry{200@\textbf{Tools}!Mimikatz! |book{3}}{6-9}
+\indexentry{200@\textbf{Tools}!Postman!Microsoft Graph Collection|book{3}}{14}
+\indexentry{200@\textbf{Tools}!Socat! |book{3}}{30-34}
+\indexentry{200@\textbf{Tools}!Netcat|book{3}}{30-31}
+\indexentry{200@\textbf{Tools}!IpTables \linux|book{3}}{35-36}
+\indexentry{200@\textbf{Tools}!NfTables \linux|book{3}}{35}
+\indexentry{200@\textbf{Tools}!PortProxy (Netsh interface) \win|book{3}}{35}
+\indexentry{200@\textbf{Tools}!Netsh \win|book{3}}{35}
+\indexentry{200@\textbf{Tools}!Netsh \win}{37}
+\indexentry{200@\textbf{Tools}!Apache|book{3}}{35}
+\indexentry{200@\textbf{Tools}!Nginx|book{3}}{35}
+\indexentry{200@\textbf{Tools}!Postman!    |book{W}}{93-99}
+\indexentry{200@\textbf{Tools}!Jq!   }{100}
+\indexentry{200@\textbf{Tools}!MailSniper|book{W}}{100}
+\indexentry{200@\textbf{Tools}!Socat!    |book{W}}{101-104}
+\indexentry{200@\textbf{Tools}!Socat!Bash Support|book{W}}{102}
+\indexentry{200@\textbf{Tools}!Ngrok!    }{104}
+\indexentry{200@\textbf{Tools}!Aws!KMS|book{3}}{57}
+\indexentry{200@\textbf{Tools}!Aws!KMS@    |book{W}}{124}
+\indexentry{200@\textbf{Tools}!PACU \python|book{3}}{59-67}
+\indexentry{200@\textbf{Tools}!PACU \python!Recon|book{3}}{62}
+\indexentry{200@\textbf{Tools}!PACU \python!Enum|book{3}}{62}
+\indexentry{200@\textbf{Tools}!PACU \python!Proxy|book{3}}{67}
+\indexentry{200@\textbf{Tools}!Az!VM@ |book{3}}{72}
+\indexentry{200@\textbf{Tools}!Dism \win|book{3}}{73-74}
+\indexentry{200@\textbf{Tools}!Storage Explorer \all! |book{3}}{74}
+\indexentry{200@\textbf{Tools}!Az!VM@ }{80}
+\indexentry{200@\textbf{Tools}!Storage Explorer \all!    }{138-140}
+\indexentry{200@\textbf{Tools}!Az!VM@    }{141}
+\indexentry{200@\textbf{Tools}!Az!Disk|book{W}}{141}
+\indexentry{200@\textbf{Tools}!Secretsdump.py \python|book{W}}{142}
+\indexentry{200@\textbf{Tools}!Secretsdump.py \python}{147}
+\indexentry{200@\textbf{Tools}!John The Ripper|book{W}}{148}
+\indexentry{200@\textbf{Tools}!Az!VM@    }{150-151}
+\indexentry{200@\textbf{Tools}!PowerCat|book{W}}{151}
+\indexentry{200@\textbf{Tools}!PowerShell Empire|book{W}}{151}
+\indexentry{200@\textbf{Tools}!Ngrok!  |book{4}}{28}
+\indexentry{200@\textbf{Tools}!Netcat! |book{4}}{28-29}
+\indexentry{200@\textbf{Tools}!Meterpreter|book{4}}{28}
+\indexentry{200@\textbf{Tools}!Aws!Lambda|book{4}}{55}
+\indexentry{200@\textbf{Tools}!Aws!Lambda}{58}
+\indexentry{200@\textbf{Tools}!Aws!Lambda}{60}
+\indexentry{200@\textbf{Tools}!Nmap! |book{4}}{69}
+\indexentry{200@\textbf{Tools}!SQLmap \python|book{4}}{91-94}
+\indexentry{200@\textbf{Tools}!Sequelize \web|book{4}}{95}
+\indexentry{200@\textbf{Tools}!Mimikatz!  |book{4}}{111}
+\indexentry{200@\textbf{Tools}!Kubeadm \icon{go}|book{5}}{10}
+\indexentry{200@\textbf{Tools}!Kubeadm \icon{go}}{13}
+\indexentry{200@\textbf{Tools}!Kubectl|book{5}}{13}
+\indexentry{200@\textbf{Tools}!Kubectl!Secrets|book{5}}{16}
+\indexentry{200@\textbf{Tools}!Kube-Hunter \python|book{5}}{21}
+\indexentry{200@\textbf{Tools}!Peirates \icon{go}|book{5}}{22-23}
+\indexentry{200@\textbf{Tools}!Kubeadm \icon{go}}{22}
+\indexentry{200@\textbf{Tools}!AutoSSH|book{5}}{27-28}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}|book{5}}{29-37}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}!msfconsole|book{5}}{29-34}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}!msfvenom|book{5}}{35-37}
+\indexentry{200@\textbf{Tools}!Meterpreter! |book{5}}{31-36}
+\indexentry{200@\textbf{Tools}!Docker!Build|book{5}}{37}
+\indexentry{200@\textbf{Tools}!Kubectl}{39}
+\indexentry{200@\textbf{Tools}!MosDef \python|book{5}}{48}
+\indexentry{200@\textbf{Tools}!CURL|book{5}}{49}
+\indexentry{200@\textbf{Tools}!GCC|book{5}}{49}
+\indexentry{200@\textbf{Tools}!Meterpreter! }{51}
+\indexentry{200@\textbf{Tools}!MosDef \python}{51}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}!msfconsole}{51}
+\indexentry{200@\textbf{Tools}!Cobalt Strike|book{5}}{52}
+\indexentry{200@\textbf{Tools}!China Chopper|book{5}}{54}
+\indexentry{200@\textbf{Tools}!ProxyCannon-NG|book{5}}{65}
+\indexentry{200@\textbf{Tools}!Aws!S3@ |book{5}}{69}
+\indexentry{200@\textbf{Tools}!AzCopy|book{5}}{70}
+\indexentry{200@\textbf{Tools}!Hashes.org \web|book{5}}{76}
+\indexentry{200@\textbf{Tools}!HaveIBeenPwned \web|book{5}}{76}
+\indexentry{200@\textbf{Tools}!CeWL \icon{ruby}|book{5}}{77}
+\indexentry{200@\textbf{Tools}!Hydra|book{5}}{86-88}
+\indexentry{200@\textbf{Tools}!Patator|book{5}}{86}
+\indexentry{200@\textbf{Tools}!Burp Suite|book{5}}{86}
+\indexentry{200@\textbf{Tools}!PW-Inspector|book{5}}{89}
+\indexentry{200@\textbf{Tools}!Domain Hunter \python|book{5}}{94-95}
+\indexentry{200@\textbf{Tools}!Flippa \web|book{5}}{96}
+\indexentry{200@\textbf{Tools}!Meterpreter! }{98}
+\indexentry{200@\textbf{Tools}!Wappalyzer|book{5}}{99}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}!msfvenom}{99}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}}{99-102}
+\indexentry{200@\textbf{Tools}!Certbot|book{5}}{99-100}
+\indexentry{200@\textbf{Tools}!Redis-CLI|book{W}}{194}
+\indexentry{200@\textbf{Tools}!Mongo|book{W}}{196-198}
+\indexentry{200@\textbf{Tools}!SQLmap \python! |book{W}}{202}
+\indexentry{200@\textbf{Tools}!SQLmap \python! }{206-207}
+\indexentry{200@\textbf{Tools}!Kubectl! |book{W}}{212-217}
+\indexentry{200@\textbf{Tools}!Docker! |book{W}}{225}
+\indexentry{200@\textbf{Tools}!Docker! }{227}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}!msfconsole@ |book{W}}{226}
+\indexentry{200@\textbf{Tools}!Metasploit \icon{ruby}!msfconsole@ }{228}
+\indexentry{200@\textbf{Tools}!Env@\texttt{env} \linux|book{4}}{50}
+\indexentry{200@\textbf{Tools}!Set@\texttt{set} \win|book{4}}{50}
+\indexentry{200@\textbf{Tools}!Hydra! |book{W}}{246-248}
+
+\indexentry{900@\blankline|comment}{0}
+\indexentry{901@\blankline|comment}{0}
+\indexentry{902@\blankline|comment}{0}
+\indexentry{903@\blankline|comment}{0}
+\indexentry{904@\blankline|comment}{0}
+\indexentry{905@\blankline|comment}{0}
+\indexentry{906@\blankline|comment}{0}
+\indexentry{907@\blankline|comment}{0}
+\indexentry{908@\blankline|comment}{0}
+\indexentry{909@\blankline|comment}{0}
+\indexentry{910@\blankline|comment}{0}
+\indexentry{911@\blankline|comment}{0}
+\indexentry{912@\blankline|comment}{0}
+\indexentry{913@\blankline|comment}{0}
+\indexentry{914@\blankline|comment}{0}
+\indexentry{915@\blankline|comment}{0}
+\indexentry{916@\blankline|comment}{0}
+\indexentry{917@\blankline|comment}{0}
+\indexentry{918@\blankline|comment}{0}
+\indexentry{919@\blankline|comment}{0}
+\indexentry{920@\blankline|comment}{0}
+\indexentry{921@\blankline|comment}{0}
+\indexentry{922@\blankline|comment}{0}
+
+%\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Cloud Computing|book{1}}{15-16}
+\indexentry{NIST SP 500-291|book{1}}{16}
+\indexentry{Cloud Computing!Types|book{1}}{17}
+\indexentry{SaaS|book{1}}{17}
+\indexentry{IaaS|book{1}}{17}
+\indexentry{PaaS|book{1}}{17}
+\indexentry{Digital Ocean|book{1}}{17}
+\indexentry{Amazon Web Services|book{1}}{17}
+\indexentry{IBM Cloud|book{1}}{17}
+\indexentry{Penetration Testing!Methodology|book{1}}{19-21}
+\indexentry{Data Collection|book{1}}{20}
+\indexentry{Reconnaissance|book{1}}{20}
+\indexentry{S3 Buckets|book{1}}{20}
+\indexentry{Data Analysis|book{1}}{20}
+\indexentry{Scanning|book{1}}{20}
+\indexentry{Mapping|book{1}}{20}
+\indexentry{Vulnerability Discovery|book{1}}{20}
+\indexentry{Exploitation|book{1}}{20}
+\indexentry{Elevation|book{1}}{20}
+\indexentry{Azure|book{1}}{20}
+\indexentry{Amazon Web Services}{20}
+\indexentry{Google Cloud|book{1}}{20}
+\indexentry{Post Exploit Recon|book{1}}{21}
+\indexentry{Persistence|book{1}}{21}
+\indexentry{Pivot|book{1}}{21}
+\indexentry{Lessons Learned|book{1}}{21}
+\indexentry{Terms of Service|book{1}}{23}
+\indexentry{Demarcation Points|book{1}}{23-24}
+\indexentry{Scope|book{1}}{23}
+\indexentry{Bug Bounty|book{1}}{23}
+\indexentry{Rules of Engagement|book{1}}{23}
+\indexentry{Management Layer|book{1}}{23}
+\indexentry{Buckets|book{1}}{23}
+\indexentry{IAM|book{1}}{23}
+\indexentry{Penetration Testing!Guidance|book{1}}{23}
+\indexentry{Allowances|book{1}}{23}
+\indexentry{Shared Responsibility|book{1}}{24}
+\indexentry{Force.com|book{1}}{24}
+\indexentry{OpenShift|book{1}}{24}
+\indexentry{PaaS}{24}
+\indexentry{SaaS!Attack|book{1}}{25}
+\indexentry{Office365|book{1}}{25}
+\indexentry{Salesforce|book{1}}{25-26}
+\indexentry{Box|book{1}}{25}
+\indexentry{Dropbox|book{1}}{25}
+\indexentry{GSuite|book{1}}{25}
+\indexentry{SharePoint|book{1}}{25}
+\indexentry{OneDrive|book{1}}{25}
+\indexentry{PaaS!Attack|book{1}}{26}
+\indexentry{Containers|book{1}}{26}
+\indexentry{Docker|book{1}}{26}
+\indexentry{Force.com}{26}
+\indexentry{OpenShift}{26}
+\indexentry{IaaS!Attack|book{1}}{27}
+\indexentry{AaaS|book{1}}{27}
+\indexentry{ADaaS|book{1}}{27}
+\indexentry{DBaaS|book{1}}{27}
+\indexentry{Load Balancer|book{1}}{27}
+\indexentry{Shared File System|book{1}}{27}
+\indexentry{FWaaS|book{1}}{27}
+\indexentry{Testing Policies|book{1}}{28-34}
+\indexentry{Amazon Web Services}{28}
+\indexentry{Amazon Web Services!Testing Policy|book{1}}{29-30}
+\indexentry{Azure}{28}
+\indexentry{Azure!Testing Policy|book{1}}{31-34}
+\indexentry{Denial of Service|book{1}}{30}
+\indexentry{Lambda|book{1}}{30}
+\indexentry{Performance Hogging|book{1}}{30}
+\indexentry{Rules of Engagement}{31-32}
+\indexentry{Sysinternals|book{1}}{31}
+\indexentry{Notification Form|book{1}}{33}
+\indexentry{Serverless Function|book{1}}{33}
+\indexentry{MDM|book{1}}{33}
+\indexentry{MAM|book{1}}{33}
+\indexentry{Sandbox!Escape|book{1}}{33}
+\indexentry{Serverless Infrastructure|book{1}}{33}
+\indexentry{Rules and Permissions|book{1}}{33}
+\indexentry{Denial of Service}{34}
+\indexentry{Proof of Concept|book{1}}{34}
+\indexentry{Pivot}{34}
+\indexentry{Shell Access|book{1}}{34}
+\indexentry{Netcat as a Service|book{1}}{36}
+\indexentry{NAT|book{1}}{37}
+\indexentry{Web Redirection|book{1}}{39}
+\indexentry{Python|book{1}}{39}
+\indexentry{Socket Redirection|book{1}}{39}
+\indexentry{Reconnaissance}{43}
+\indexentry{Data Mining|book{1}}{43}
+\indexentry{Dataset|book{1}}{43}
+\indexentry{Passive Collection|book{1}}{43}
+\indexentry{Asset Discovery Pipeline|book{1}}{44}
+\indexentry{Port Scanner|book{1}}{44}
+\indexentry{DNS|book{1}}{45}
+\indexentry{NS Record|book{1}}{45}
+\indexentry{MX Record|book{1}}{45}
+\indexentry{PTR Record|book{1}}{45}
+\indexentry{CNAME|book{1}}{45}
+\indexentry{Seed|book{1}}{46}
+\indexentry{Facebook|book{1}}{46}
+\indexentry{Passive Technique|book{1}}{47-54}
+\indexentry{Active Technique|book{1}}{47}
+\indexentry{Certificate!Transparency|book{1}}{47-48}
+\indexentry{Scrubbing|book{1}}{47}
+\indexentry{Host Discovery|book{1}}{47-51}
+\indexentry{Merkle Hash Tree|book{1}}{48}
+\indexentry{Man-In-The-Middle|book{1}}{48}
+\indexentry{Chrome|book{1}}{48}
+\indexentry{SAN|book{1}}{49-50}
+\indexentry{ACME|book{1}}{49-50}
+\indexentry{Certificate!Authority|book{1}}{49-50}
+\indexentry{Certificate|book{1}}{49}
+\indexentry{Microsoft Exchange|book{1}}{49}
+\indexentry{FQDN|book{1}}{49}
+\indexentry{Let's Encrypt|book{1}}{50}
+\indexentry{Cert Bot|book{1}}{50}
+\indexentry{Route53|book{1}}{50}
+\indexentry{RFC 8555 (ACME)|book{1}}{50}
+\indexentry{Amazon Web Services}{50}
+\indexentry{Certification Manager|book{1}}{50}
+\indexentry{Amazon Web Services!Certification Manager|book{1}}{50}
+\indexentry{Cron|book{1}}{50}
+\indexentry{Censys|book{1}}{51}
+\indexentry{Certificate!Transparency}{51}
+\indexentry{Shodan|book{1}}{52}
+\indexentry{DNSdb|book{1}}{52}
+\indexentry{IntelX|book{1}}{52}
+\indexentry{SecurityTrails|book{1}}{52}
+\indexentry{Project Sonar|book{1}}{52-53}
+\indexentry{Inetdata|book{1}}{53}
+\indexentry{Dataset}{53}
+\indexentry{Certificate!Transparency}{53-54}
+\indexentry{Censys}{53}
+\indexentry{Premium Drops|book{1}}{53}
+\indexentry{Whois XML API|book{1}}{53}
+\indexentry{Grep|book{1}}{53}
+\indexentry{Discovery Tools|book{1}}{56}
+\indexentry{CNAME}{56}
+\indexentry{Wordlists|book{1}}{56}
+\indexentry{Zone Transfer|book{1}}{57}
+\indexentry{Google Enumeration|book{1}}{57}
+\indexentry{Certificate!Transparency}{57}
+\indexentry{Google Cache|book{1}}{57}
+\indexentry{SRV Record|book{1}}{57}
+\indexentry{Wildcard Enumeration|book{1}}{58}
+\indexentry{DNS!Bruteforce|book{1}}{58}
+\indexentry{IP Addressing|book{1}}{64}
+\indexentry{PTR Record}{64-65}
+\indexentry{Technologies|book{1}}{65}
+\indexentry{S3 Buckets}{65}
+\indexentry{CSP|book{1}}{65}
+\indexentry{Buckets}{65}
+\indexentry{CNAME}{65}
+\indexentry{Host Discovery}{66}
+\indexentry{Port Scanner}{66}
+\indexentry{Virtual Hosting|book{1}}{66}
+\indexentry{Host Header|book{1}}{66}
+\indexentry{DNS!Lookup|book{1}}{66}
+\indexentry{Azure}{67}
+\indexentry{Amazon Web Services}{67}
+\indexentry{BGP|book{1}}{67}
+\indexentry{ASN|book{1}}{67}
+\indexentry{CSP!Mappings|book{1}}{67}
+\indexentry{IP Ranges|book{1}}{67}
+\indexentry{Port Scanner}{68}
+\indexentry{Banner Grabbing|book{1}}{68}
+\indexentry{CIDR|book{1}}{69}
+\indexentry{TCP Handshake|book{1}}{70}
+\indexentry{Spoofing|book{1}}{70}
+\indexentry{Theoretical Limit (packets/sec)|book{1}}{70}
+\indexentry{PF\_RING|book{1}}{71}
+\indexentry{PPS|book{1}}{71}
+\indexentry{TCP Half Open|book{1}}{72}
+\indexentry{SYN|book{1}}{72}
+\indexentry{ACK|book{1}}{72}
+\indexentry{RST|book{1}}{72}
+\indexentry{Acceptable Rate|book{1}}{73}
+\indexentry{Accuracy|book{1}}{74}
+\indexentry{NSE|book{1}}{74}
+\indexentry{SMTP|book{1}}{74}
+\indexentry{SMB|book{1}}{74}
+\indexentry{OS Fingerprinting|book{1}}{75}
+\indexentry{Traceroute|book{1}}{75}
+\indexentry{NSE}{76-77}
+\indexentry{Lua|book{1}}{76}
+\indexentry{Redis|book{1}}{76}
+\indexentry{Voldemort DB|book{1}}{76}
+\indexentry{Memcached|book{1}}{76}
+\indexentry{MongoDB|book{1}}{76}
+\indexentry{CouchDB|book{1}}{76}
+\indexentry{Scanning!Workflow|book{1}}{77}
+\indexentry{URL|book{1}}{82}
+\indexentry{Amazon Web Services}{82}
+\indexentry{EC2|book{1}}{82}
+\indexentry{ELB|book{1}}{82}
+\indexentry{Monitoring|book{1}}{82}
+\indexentry{NetSPI|book{1}}{83}
+\indexentry{Endpoint Services|book{1}}{83}
+\indexentry{Azure!URL's|book{1}}{83-84}
+\indexentry{CNAME}{83}
+\indexentry{Microsoft Services|book{1}}{84}
+\indexentry{Virtual Hosting}{85}
+\indexentry{DNS!Bruteforce}{86}
+\indexentry{Directory Bruteforce|book{1}}{87}
+\indexentry{Redirect|book{1}}{87}
+\indexentry{S3 Buckets}{88}
+\indexentry{Fuzzing|book{1}}{88}
+\indexentry{Assetnote|book{1}}{92}
+\indexentry{Google BigQuery|book{1}}{92}
+\indexentry{Google Cloud}{92}
+\indexentry{Reddit|book{1}}{92}
+\indexentry{BigTable|book{1}}{92}
+\indexentry{Dataset}{92}
+\indexentry{Wordlists}{92-96}
+\indexentry{SQL|book{1}}{93}
+\indexentry{getSubdomain@\texttt{getSubdomain}|book{1}}{93}
+\indexentry{Credentials|book{1}}{95}
+\indexentry{JavaScript|book{1}}{95}
+\indexentry{S3 Buckets}{96}
+\indexentry{Assetnote}{96}
+\indexentry{Banner Grabbing}{101}
+\indexentry{Lighttpd|book{1}}{101}
+\indexentry{Visualization|book{1}}{101}
+\indexentry{JavaScript}{102}
+\indexentry{Screenshot|book{1}}{103}
+\indexentry{Selenium|book{1}}{103}
+\indexentry{User-Agent|book{1}}{104}
+\indexentry{SCADA|book{1}}{105}
+\indexentry{OT|book{1}}{105}
+\indexentry{Asset Collection!Frameworks|book{1}}{107}
+\indexentry{Assetnote}{107}
+\indexentry{Spiderfoot|book{1}}{107}
+\indexentry{Rumble.run|book{1}}{107}
+\indexentry{Bug Bounty}{107}
+\indexentry{Vagrant|book{1}}{109}
+\indexentry{Docker}{109}
+\indexentry{Discovery Tools}{109}
+\indexentry{Screenshot}{109}
+\indexentry{Fingerprinting!Tools|book{1}}{109}
+\indexentry{Facebook}{110}
+\indexentry{Instagram|book{1}}{110}
+\indexentry{WhatsApp|book{1}}{110}
+\indexentry{Fingerprinting|book{1}}{111}
+\indexentry{Vulnerability Scanner|book{1}}{111}
+\indexentry{Docker}{111}
+\indexentry{CVE|book{1}}{111}
+\indexentry{Asset Collection|book{1}}{112}
+\indexentry{Cloud Native Applications|book{1}}{118}
+\indexentry{Public Infrastructure Cloud|book{1}}{118}
+\indexentry{CSP}{118}
+\indexentry{Technologies}{118}
+\indexentry{Software Portability|book{1}}{118}
+\indexentry{Containers}{118}
+\indexentry{Docker}{118}
+\indexentry{Kubernetes|book{1}}{118}
+\indexentry{Service Orchestration|book{1}}{118}
+\indexentry{Serverless Computing|book{1}}{118}
+\indexentry{Function as a Service|book{1}}{118}
+\indexentry{Primitive|book{1}}{118}
+\indexentry{Compute|book{1}}{119}
+\indexentry{IaaS}{119}
+\indexentry{Virtual Machines|book{1}}{119}
+\indexentry{Ingress Access|book{1}}{119}
+\indexentry{Scripting|book{1}}{119}
+\indexentry{Boot Features|book{1}}{119}
+\indexentry{Network Components|book{1}}{120}
+\indexentry{VPN|book{1}}{120}
+\indexentry{CSP}{120}
+\indexentry{File Systems|book{1}}{121}
+\indexentry{NFS|book{1}}{121}
+\indexentry{SMB}{121}
+\indexentry{HTTP!REST API|book{1}}{121}
+\indexentry{POSIX|book{1}}{121}
+\indexentry{S3 Buckets}{121}
+\indexentry{Azure!Blob|book{1}}{121}
+\indexentry{Google Cloud!Storage|book{1}}{121}
+\indexentry{Service Orchestration}{122}
+\indexentry{Kubernetes}{122}
+\indexentry{Pods \icon{k8s}|book{1}}{122}
+\indexentry{Containers}{122}
+\indexentry{RBAC|book{1}}{122}
+\indexentry{Docker}{123-124}
+\indexentry{Kubernetes}{124-125}
+\indexentry{GRPC|book{1}}{124}
+\indexentry{CRI-O|book{1}}{124}
+\indexentry{Namespaces|book{1}}{124}
+\indexentry{Protocol Buffers|book{1}}{124}
+\indexentry{Chroot|book{1}}{124}
+\indexentry{File Systems}{124}
+\indexentry{OCI|book{1}}{125}
+\indexentry{Containers!Management System|book{1}}{125}
+\indexentry{Docker!Datasheet|book{1}}{125}
+\indexentry{Docker!Hub|book{1}}{126}
+\indexentry{Security Isolation Environment|book{1}}{125}
+\indexentry{Dirty Container|book{1}}{126}
+\indexentry{Supply Chain!Attack|book{1}}{126}
+\indexentry{Function as a Service}{127}
+\indexentry{IaaS!Attacker's View|book{1}}{128}
+\indexentry{Autoscaling|book{1}}{128}
+\indexentry{Shared Service|book{1}}{128}
+\indexentry{Scope}{128}
+\indexentry{Compute}{128}
+\indexentry{Serverless Function}{128}
+\indexentry{Primitive}{128}
+\indexentry{EC2}{128}
+\indexentry{NAT}{128}
+\indexentry{Lambda}{128}
+\indexentry{Containers!Escape|book{1}}{128}
+\indexentry{Rules of Engagement}{128}
+\indexentry{Disclosure Process|book{1}}{128}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Data Analysis! |book{2}}{6}
+\indexentry{Data Collection! |book{2}}{6}
+\indexentry{Mapping! |book{2}}{6-12}
+\indexentry{Reconnaissance! |book{2}}{6-12}
+\indexentry{Penetration Testing!Methodology! |book{2}}{6}
+\indexentry{Attack Surface|book{2}}{7}
+\indexentry{Port Scanner! |book{2}}{7}
+\indexentry{Autoscaling! |book{2}}{7}
+\indexentry{IP Addressing!Space|book{2}}{7}
+\indexentry{Load Balancer! |book{2}}{7-8}
+\indexentry{Mapping!Workflow|book{2}}{8}
+\indexentry{WAF|book{2}}{8}
+\indexentry{Firewalling|book{2}}{8}
+\indexentry{Logging|book{2}}{8}
+\indexentry{Serverless Function! |book{2}}{8}
+\indexentry{Storage Blob|book{2}}{8}
+\indexentry{Containers! |book{2}}{8}
+\indexentry{Docker! |book{2}}{8}
+\indexentry{Kubernetes! |book{2}}{8}
+\indexentry{Scope! |book{2}}{9}
+\indexentry{Bug Bounty! |book{2}}{9}
+\indexentry{Attack Surface}{9}
+\indexentry{CI/CD|book{2}}{9}
+\indexentry{SCM|book{2}}{9}
+\indexentry{VPN! |book{2}}{9}
+\indexentry{API|book{2}}{10}
+\indexentry{Credentials! |book{2}}{10}
+\indexentry{Virtual Machines! |book{2}}{10}
+\indexentry{Port Restriction|book{2}}{10}
+\indexentry{Scanning! |book{2}}{10}
+\indexentry{Host Discovery! |book{2}}{10}
+\indexentry{Amazon Web Services! |book{2}}{11}
+\indexentry{Amazon Web Services!CLI|book{2}}{11}
+\indexentry{Azure! |book{2}}{11}
+\indexentry{Azure!CLI|book{2}}{11}
+\indexentry{EC2! |book{2}}{11}
+\indexentry{SG|book{2}}{11}
+\indexentry{Wordlists! |book{2}}{12}
+\indexentry{Dataset! |book{2}}{12}
+\indexentry{Privacy Law|book{2}}{12}
+\indexentry{Unsecured Resource|book{2}}{12}
+\indexentry{ACL|book{2}}{12}
+\indexentry{S3 Buckets!Restrictions|book{2}}{12}
+\indexentry{IAM! |book{2}}{12}
+\indexentry{Breach Notification|book{2}}{12}
+\indexentry{Amazon Web Services!CLI}{14}
+\indexentry{Azure!CLI}{14}
+\indexentry{Credentials! }{14}
+\indexentry{API!Key|book{2}}{14}
+\indexentry{Key Format|book{2}}{14}
+\indexentry{OAuth2|book{2}}{14}
+\indexentry{MFA|book{2}}{14}
+\indexentry{Authentication|book{2}}{14}
+\indexentry{Access Token|book{2}}{14}
+\indexentry{JWT|book{2}}{14}
+\indexentry{Key Material|book{2}}{14-15}
+\indexentry{JavaScript! |book{2}}{15}
+\indexentry{Environment Variable|book{2}}{15}
+\indexentry{SSRF|book{2}}{15}
+\indexentry{GitHub|book{2}}{15}
+\indexentry{Key Format}{16}
+\indexentry{Secrets Format|book{2}}{16}
+\indexentry{Secrets Manager|book{2}}{16}
+\indexentry{GPG|book{2}}{16}
+\indexentry{PEM|book{2}}{16}
+\indexentry{OpenSSH|book{2}}{16}
+\indexentry{ECDSA|book{2}}{16}
+\indexentry{Env File|book{2}}{17-19}
+\indexentry{Yml File|book{2}}{17-18}
+\indexentry{YAML|book{2}}{18}
+\indexentry{TOML|book{2}}{18}
+\indexentry{JSON|book{2}}{18}
+\indexentry{ARM|book{2}}{18}
+\indexentry{Useful Strings|book{2}}{18}
+\indexentry{Environment Variable}{18}
+\indexentry{Laravel|book{2}}{19}
+\indexentry{NodeJS|book{2}}{19}
+\indexentry{JavaScript! }{19}
+\indexentry{IIS|book{2}}{19}
+\indexentry{Web.config|book{2}}{19}
+\indexentry{Amazon Web Services!SDK|book{2}}{23}
+\indexentry{Amazon Web Services!CLI}{23-28}
+\indexentry{Amazon Web Services!IAM|book{2}}{23}
+\indexentry{Azure!CLI}{23}
+\indexentry{Amazon Web Services!CLI!Credentials|book{2}}{24}
+\indexentry{Amazon Web Services!CLI!Profile|book{2}}{24}
+\indexentry{Amazon Web Services!CLI!Options|book{2}}{24-26}
+\indexentry{S3 Buckets!Administration|book{2}}{24}
+\indexentry{Environment Variable}{24}
+\indexentry{EC2! }{25}
+\indexentry{JSON}{27}
+\indexentry{EC2!Instances|book{2}}{28}
+\indexentry{SPA|book{2}}{33}
+\indexentry{RESTful API|book{2}}{33}
+\indexentry{JavaScript! }{33}
+\indexentry{URI|book{2}}{33-34}
+\indexentry{RFC 3986 (URI)|book{2}}{33}
+\indexentry{URL! |book{2}}{34}
+\indexentry{URN|book{2}}{34}
+\indexentry{ARN|book{2}}{35-37}
+\indexentry{Privilege Escalation|book{2}}{35}
+\indexentry{Azure! }{36}
+\indexentry{RESTful API}{36}
+\indexentry{API!Key}{39}
+\indexentry{Amazon Web Services!IAM}{39-48}
+\indexentry{AAA|book{2}}{39}
+\indexentry{RBAC! |book{2}}{39}
+\indexentry{ABAC|book{2}}{39}
+\indexentry{Permission Policy|book{2}}{39}
+\indexentry{ADFS|book{2}}{39}
+\indexentry{Azure!AD|book{2}}{39}
+\indexentry{Federation|book{2}}{39}
+\indexentry{Pentester Tip|book{2}}{39}
+\indexentry{Amazon Web Services!Root|book{2}}{40-41}
+\indexentry{Defender Tip|book{2}}{40}
+\indexentry{CloudWatch|book{2}}{40}
+\indexentry{CloudTrail|book{2}}{40}
+\indexentry{MFA}{40}
+\indexentry{Domain Administrator|book{2}}{40}
+\indexentry{Deny Model|book{2}}{41}
+\indexentry{Anti-Pattern|book{2}}{41}
+\indexentry{Amazon Web Services!IAM!Deny|book{2}}{41}
+\indexentry{GovCloud|book{2}}{41}
+\indexentry{Beijing|book{2}}{41}
+\indexentry{Lateral Movement|book{2}}{41}
+\indexentry{Amazon Web Services!IAM!Policy|book{2}}{42-48}
+\indexentry{Identity Policy|book{2}}{42}
+\indexentry{Resource Policy|book{2}}{42}
+\indexentry{Service Control Policy|book{2}}{42}
+\indexentry{Access Control List|book{2}}{42}
+\indexentry{Session Policy|book{2}}{42}
+\indexentry{Permission Boundary|book{2}}{42}
+\indexentry{Loose Access Control|book{2}}{42}
+\indexentry{JSON}{43}
+\indexentry{Conditional Access|book{2}}{43}
+\indexentry{IP Blocking|book{2}}{43}
+\indexentry{VPC!Blocking|book{2}}{43}
+\indexentry{EC2!Conditional Access|book{2}}{43}
+\indexentry{S3 Buckets!Conditional Access|book{2}}{43}
+\indexentry{Permission Boundary}{44}
+\indexentry{EC2! }{44}
+\indexentry{S3 Buckets! |book{2}}{44}
+\indexentry{Allow Model|book{2}}{44}
+\indexentry{RBAC! }{44}
+\indexentry{Identity Policy}{45}
+\indexentry{Resource Policy}{45}
+\indexentry{Permission Removal|book{2}}{45}
+\indexentry{Amazon Web Services!IAM!Administrator \icon{note}|book{2}}{45}
+\indexentry{Policy Boundary|book{2}}{46}
+\indexentry{Service Control Policy}{47}
+\indexentry{Lambda! |book{2}}{47}
+\indexentry{CloudWatch}{47}
+\indexentry{Pivot! |book{2}}{47}
+\indexentry{Elastic Container|book{2}}{47}
+\indexentry{Conditional Access}{48}
+\indexentry{ABAC}{48}
+\indexentry{TBAC|book{2}}{48}
+\indexentry{Azure!CLI}{50-52}
+\indexentry{JSONC|book{2}}{50}
+\indexentry{Azure!Login|book{2}}{51}
+\indexentry{Azure!Resource Manager (RM)|book{2}}{51}
+\indexentry{RBAC! }{51}
+\indexentry{Certificate-Based Authentication|book{2}}{51}
+\indexentry{OAuth|book{2}}{51}
+\indexentry{SP|book{2}}{51-52}
+\indexentry{Tenant ID|book{2}}{51-52}
+\indexentry{JMESPath|book{2}}{53}
+\indexentry{JSON!Query|book{2}}{53}
+\indexentry{Username!Harvesting|book{2}}{55}
+\indexentry{Password!Guessing|book{2}}{55}
+\indexentry{SAML|book{2}}{55}
+\indexentry{ID Provider|book{2}}{55}
+\indexentry{Landing Page|book{2}}{56}
+\indexentry{Abuse|book{2}}{56}
+\indexentry{Okta|book{2}}{56}
+\indexentry{Sailpoint|book{2}}{56}
+\indexentry{Google Apps|book{2}}{56}
+\indexentry{CyberArk|book{2}}{60}
+\indexentry{Azure!Files|book{2}}{60-62}
+\indexentry{File Shares|book{2}}{60}
+\indexentry{Storage Area|book{2}}{60}
+\indexentry{Comp=list@\texttt{?comp=list}|book{2}}{60}
+\indexentry{Storage Blob}{61}
+\indexentry{SMB! |book{2}}{61-62}
+\indexentry{RESTful API}{61}
+\indexentry{Storage Environments|book{2}}{61}
+\indexentry{NoSQL|book{2}}{61}
+\indexentry{FIFO|book{2}}{61}
+\indexentry{Azure!AD!Domain Services|book{2}}{61}
+\indexentry{Compute!Instance|book{2}}{62}
+\indexentry{Microsoft Cloud Services|book{2}}{66-68}
+\indexentry{Service Names Comparison|book{2}}{67}
+\indexentry{Amazon Web Services!Service Names|book{2}}{67}
+\indexentry{Azure!Service Names|book{2}}{67}
+\indexentry{Azure! }{66}
+\indexentry{Office365! |book{2}}{66}
+\indexentry{VPC|book{2}}{66-67}
+\indexentry{AzureStack|book{2}}{66}
+\indexentry{Lambda! }{67}
+\indexentry{Key Vault|book{2}}{67}
+\indexentry{RBAC! }{67}
+\indexentry{Amazon Web Services!IAM}{67}
+\indexentry{Amazon Web Services!Roles|book{2}}{68}
+\indexentry{Azure!Roles|book{2}}{68}
+\indexentry{On Premise Roles|book{2}}{68}
+\indexentry{Roles Comparison|book{2}}{68}
+\indexentry{Compute! |book{2}}{68}
+\indexentry{Microsoft Identity Services|book{2}}{70-71}
+\indexentry{Azure!AD!Domain Services}{70}
+\indexentry{Active Directory|book{2}}{70}
+\indexentry{Active Directory!Domain Services|book{2}}{70}
+\indexentry{Active Directory!Federated Services|book{2}}{70}
+\indexentry{ADFS}{70}
+\indexentry{DMZ|book{2}}{70}
+\indexentry{SAML}{70-71}
+\indexentry{ADaaS! |book{2}}{70}
+\indexentry{Federation}{70}
+\indexentry{LDAP|book{2}}{71-72}
+\indexentry{OAuth}{71}
+\indexentry{OAuth2}{71}
+\indexentry{Kerberos|book{2}}{71-72}
+\indexentry{NTLM|book{2}}{71-72}
+\indexentry{Active Directory!Authentication|book{2}}{71}
+\indexentry{Azure!AD!Authentication|book{2}}{71}
+\indexentry{Domain/Forest Structure|book{2}}{71}
+\indexentry{Tenant/Subscription Model|book{2}}{71}
+\indexentry{Active Directory}{72}
+\indexentry{RPC|book{2}}{72}
+\indexentry{ADFS}{73}
+\indexentry{Active Directory!Federated Services}{73}
+\indexentry{Domain Controller|book{2}}{73}
+\indexentry{Office365! }{73}
+\indexentry{Federation}{73}
+\indexentry{Federated Identity Service|book{2}}{73}
+\indexentry{Azure!AD}{74}
+\indexentry{OAuth2}{74}
+\indexentry{SAML}{74}
+\indexentry{RBAC! }{74-75}
+\indexentry{Azure!AD!Roles|book{2}}{75}
+\indexentry{Azure!Resource Manager (RM)}{75}
+\indexentry{Tenant/Subscription Model}{75}
+\indexentry{Classic Subscription Model|book{2}}{75}
+\indexentry{Administrator Roles|book{2}}{75}
+\indexentry{Azure!AD!Domain Services}{76-77}
+\indexentry{Abuse}{76}
+\indexentry{ADaaS! }{76}
+\indexentry{Active Directory!Connector|book{2}}{76}
+\indexentry{Azure!Files}{76}
+\indexentry{SMB! }{76}
+\indexentry{Azure!AD!Synchronization|book{2}}{76}
+\indexentry{Synchronization (AD)|book{2}}{76}
+\indexentry{Domain Controller}{76-77}
+\indexentry{Pentester Tip}{77-78}
+\indexentry{Microsoft Identity Services!Attacker's View|book{2}}{77}
+\indexentry{Azure!Compute|book{2}}{77}
+\indexentry{ADFS}{77}
+\indexentry{Azure!AD}{77}
+\indexentry{Key Material}{77}
+\indexentry{Scope! }{77}
+\indexentry{Shared Infrastructure|book{2}}{77}
+\indexentry{Active Directory!Connector!Attacker's View|book{2}}{78}
+\indexentry{Password!Hash!Synchronization|book{2}}{78}
+\indexentry{Passthru Authentication|book{2}}{78}
+\indexentry{Office365! }{78}
+\indexentry{NTHash|book{2}}{78}
+\indexentry{MD4|book{2}}{78}
+\indexentry{Azure!AD!Synchronization}{78}
+\indexentry{Okta}{78}
+\indexentry{Sailpoint}{78}
+\indexentry{Auth0|book{2}}{78}
+\indexentry{Azure!AD!Connector|book{2}}{78}
+\indexentry{Abuse}{78}
+\indexentry{Azure!AD!Roles}{80-85}
+\indexentry{RBAC! }{80}
+\indexentry{Contributor|book{2}}{80}
+\indexentry{Reader|book{2}}{80}
+\indexentry{Owner|book{2}}{80}
+\indexentry{Service Administrator|book{2}}{80}
+\indexentry{Co-Administrator|book{2}}{80}
+\indexentry{User Access Administrator|book{2}}{80}
+\indexentry{Domain Administrator}{81}
+\indexentry{Enterprise Administrator|book{2}}{81}
+\indexentry{Global Administrator|book{2}}{81}
+\indexentry{Billing Administrator|book{2}}{81}
+\indexentry{User Administrator|book{2}}{81}
+\indexentry{Azure!AD!Scope|book{2}}{82}
+\indexentry{Transitivity (Permissions)|book{2}}{82}
+\indexentry{Management Group|book{2}}{82-83}
+\indexentry{Global Administrator}{83-85}
+\indexentry{Billing Administrator}{83}
+\indexentry{User Administrator}{83-84}
+\indexentry{Contributor}{83}
+\indexentry{Reader}{83}
+\indexentry{Owner}{83}
+\indexentry{RBAC! }{83}
+\indexentry{Service Administrator}{83}
+\indexentry{Co-Administrator}{83}
+\indexentry{Classic Subscription Model}{83}
+\indexentry{Azure!AD!Roles}{84}
+\indexentry{Office365!Administrators|book{2}}{84}
+\indexentry{Azure!AD!Privilege Escalation|book{2}}{85}
+\indexentry{Authentication!Standards|book{2}}{87}
+\indexentry{MFA}{87}
+\indexentry{Certificate-Based Authentication}{87}
+\indexentry{Non-Password-Based Authentication|book{2}}{87}
+\indexentry{Authentication!Standards!Web|book{2}}{88}
+\indexentry{Basic Authentication|book{2}}{88}
+\indexentry{Bearer Authentication|book{2}}{88}
+\indexentry{SAML}{88}
+\indexentry{OAuth}{88-91}
+\indexentry{OpenIDConnect|book{2}}{88}
+\indexentry{SSO|book{2}}{88}
+\indexentry{Federation}{88}
+\indexentry{RFC 5849 (OAuth)|book{2}}{90}
+\indexentry{RFC 6749 (OAuth2)|book{2}}{90}
+\indexentry{Authorization!Grant|book{2}}{91}
+\indexentry{Authorization!Server|book{2}}{91-92}
+\indexentry{Scope (OAuth)|book{2}}{91}
+\indexentry{Access Token}{91}
+\indexentry{OAuth2}{92}
+\indexentry{Resource Owner|book{2}}{92}
+\indexentry{Client|book{2}}{92}
+\indexentry{Resource Server|book{2}}{92}
+\indexentry{OAuth2!Flow Types|book{2}}{93-94}
+\indexentry{Client!Credentials|book{2}}{93}
+\indexentry{Authentication!Code Grant|book{2}}{93}
+\indexentry{Code Flow|book{2}}{93-95}
+\indexentry{Implicit Flow|book{2}}{93}
+\indexentry{Token Flow|book{2}}{93}
+\indexentry{Resource Owner!Password Credentials|book{2}}{93}
+\indexentry{Revocation Flow|book{2}}{93}
+\indexentry{Access Token}{93}
+\indexentry{Bearer Authentication}{93}
+\indexentry{OAuth2!Flow Types!Code|book{2}}{94-95}
+\indexentry{Bearer Authentication}{95}
+\indexentry{Secret Exchange|book{2}}{95}
+\indexentry{OpenIDConnect}{96-98}
+\indexentry{JWT}{96}
+\indexentry{ID Token|book{2}}{96}
+\indexentry{Userinfo Endpoint|book{2}}{96}
+\indexentry{Standardized Scopes|book{2}}{96}
+\indexentry{Standardized Authorization Implementation|book{2}}{96}
+\indexentry{OpenIDConnect!Flow|book{2}}{97-98}
+\indexentry{Scope (OAuth)}{97}
+\indexentry{Login Hint|book{2}}{97}
+\indexentry{Realm|book{2}}{97}
+\indexentry{Bearer Authentication}{98}
+\indexentry{JWT}{99-101}
+\indexentry{RFC 7519 (JWT)|book{2}}{99}
+\indexentry{Integrity Check|book{2}}{99}
+\indexentry{JWT!Attacker's View|book{2}}{100}
+\indexentry{Symmetric Shared Keys|book{2}}{100}
+\indexentry{Asymmetric Certificates|book{2}}{100}
+\indexentry{HS256|book{2}}{100}
+\indexentry{HMAC-SHA256|book{2}}{100}
+\indexentry{Weak Password|book{2}}{100}
+\indexentry{Private Key Check Bypass|book{2}}{100}
+\indexentry{Bearer Authentication}{101}
+\indexentry{Authentication!System-API|book{2}}{101}
+\indexentry{Bearer Token|book{2}}{101}
+\indexentry{SAML}{102-105}
+\indexentry{OASIS Group|book{2}}{102}
+\indexentry{SSO}{102}
+\indexentry{ID Provider}{102}
+\indexentry{Federation}{102}
+\indexentry{XML|book{2}}{102-103}
+\indexentry{SAML!Protocols|book{2}}{103}
+\indexentry{Authentication!Request|book{2}}{103-104}
+\indexentry{Assertion Query and Request|book{2}}{103}
+\indexentry{Artifact Resolution Protocol|book{2}}{103}
+\indexentry{Name Identifier Management Protocol|book{2}}{103}
+\indexentry{Single Logout Protocol|book{2}}{103}
+\indexentry{Name Identifier Mapping Protocol|book{2}}{103}
+\indexentry{OpenIDConnect}{103}
+\indexentry{URN}{104}
+\indexentry{SP}{105}
+\indexentry{ID Provider}{105}
+\indexentry{SAML!Token|book{2}}{105}
+\indexentry{Golden SAML Attack|book{2}}{105-110}
+\indexentry{CyberArk}{105}
+\indexentry{ADFS}{105}
+\indexentry{CyberArk}{107}
+\indexentry{Kerberos!Golden Ticket Attack|book{2}}{107}
+\indexentry{ID Provider!Public Certificate|book{2}}{107}
+\indexentry{Token-Signing Private Key|book{2}}{107}
+\indexentry{ADFS}{108}
+\indexentry{SAML!Flow|book{2}}{108}
+\indexentry{SAML!Insertion Message|book{2}}{108}
+\indexentry{Tenant ID}{109}
+\indexentry{RESTful API}{112-113}
+\indexentry{Cookie Jar|book{2}}{116}
+\indexentry{Microsoft Graph|book{2}}{118}
+\indexentry{Okta}{118}
+\indexentry{Auth0}{118}
+\indexentry{Qualys|book{2}}{118}
+\indexentry{F5|book{2}}{118}
+\indexentry{HTTP!Methods|book{2}}{119}
+\indexentry{Microsoft Graph}{120}
+\indexentry{MIME-Encoding|book{2}}{121}
+\indexentry{URL!Encoding|book{2}}{121}
+\indexentry{Authentication}{122}
+\indexentry{Authorization|book{2}}{122}
+\indexentry{Basic Authentication}{122}
+\indexentry{OAuth}{127}
+\indexentry{Client}{127}
+\indexentry{Resource Owner}{127}
+\indexentry{Resource Server}{127}
+\indexentry{Authorization!Server}{127}
+\indexentry{OAuth!Issues|book{2}}{128}
+\indexentry{Forged Key|book{2}}{128}
+\indexentry{SAML!Flow}{129}
+\indexentry{Office365! }{129}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{LSASS|book{3}}{6}
+\indexentry{Cleartext Passwords|book{3}}{6}
+\indexentry{LANMAN|book{3}}{6}
+\indexentry{NTLM! |book{3}}{6}
+\indexentry{CredentialGuard|book{3}}{6}
+\indexentry{SAM Database|book{3}}{7-8}
+\indexentry{Certificate Store|book{3}}{7}
+\indexentry{Sekurlsa|book{3}}{8-9}
+\indexentry{Lsadump|book{3}}{8}
+\indexentry{DPAPI|book{3}}{8}
+\indexentry{WLAN Passwords|book{3}}{8}
+\indexentry{Web Browser Secrets|book{3}}{8}
+\indexentry{LANMAN}{8}
+\indexentry{Pass-the-Hash Attack|book{3}}{8-9}
+\indexentry{Pass-the-Ticket Attack|book{3}}{8}
+\indexentry{Sensitive Information|book{3}}{8}
+\indexentry{Pass-the-PRT Attack|book{3}}{9}
+\indexentry{JWT! |book{3}}{9}
+\indexentry{x-ms-RefreshTokenCredential@\texttt{x-ms-RefreshTokenCredential}|book{3}}{9}
+\indexentry{JWT!HTTP Header|book{3}}{9}
+\indexentry{SSO! |book{3}}{9}
+\indexentry{CloudAP Service|book{3}}{9}
+\indexentry{Proof of Session Key|book{3}}{9}
+\indexentry{Microsoft Graph! |book{3}}{11-16}
+\indexentry{Microsoft Graph!Constraints|book{3}}{12}
+\indexentry{OneDrive! |book{3}}{12}
+\indexentry{Microsoft Graph!Postman Collection|book{3}}{14}
+\indexentry{Microsoft Graph!API Examples|book{3}}{15-16}
+\indexentry{Privilege Escalation! |book{3}}{20-21}
+\indexentry{IAM!Privilege Escalation|book{3}}{20}
+\indexentry{Amazon Web Services!IAM!Privilege Escalation|book{3}}{20}
+\indexentry{CyberArk! |book{3}}{20}
+\indexentry{Shadow Admins|book{3}}{20}
+\indexentry{Jailbreak|book{3}}{21}
+\indexentry{SUID|book{3}}{21}
+\indexentry{Amazon Web Services!IAM!User Versioning|book{3}}{22-24}
+\indexentry{Abuse! |book{3}}{24}
+\indexentry{SetDefault Policy|book{3}}{24}
+\indexentry{PassRole Capability|book{3}}{25}
+\indexentry{Amazon Web Services!Roles!PassRole|book{3}}{25}
+\indexentry{Pivot!  |book{3}}{25}
+\indexentry{Undocumented Feature|book{3}}{26}
+\indexentry{Security Credentials|book{3}}{26}
+\indexentry{meta-data/iam/security-credentials@\texttt{meta-data/iam/security-credentials}|book{3}}{26}
+\indexentry{Instance Metadata Service|book{3}}{26-28}
+\indexentry{Amazon Web Services!Session Tokens|book{3}}{27-28}
+\indexentry{Access Token! |book{3}}{27}
+\indexentry{Amazon Web Services!CLI!Credentials@ |book{3}}{27}
+\indexentry{Refreshed Token|book{3}}{28}
+\indexentry{IMD|book{3}}{28}
+\indexentry{Socket Connector|book{3}}{30}
+\indexentry{Pipe|book{3}}{30}
+\indexentry{Software Router|book{3}}{31}
+\indexentry{Pivot!  }{31}
+\indexentry{Redirection|book{3}}{31}
+\indexentry{OneDrive! }{31}
+\indexentry{Slack|book{3}}{31}
+\indexentry{Discord|book{3}}{31}
+\indexentry{IRC|book{3}}{31}
+\indexentry{Network Socket|book{3}}{32}
+\indexentry{Pipe}{32}
+\indexentry{OpenSSL Connection|book{3}}{32}
+\indexentry{Serial Connection|book{3}}{32}
+\indexentry{SOCKS4|book{3}}{32}
+\indexentry{File Descriptor|book{3}}{32}
+\indexentry{Self-Signed Certificate|book{3}}{33}
+\indexentry{Port Proxy|book{3}}{35}
+\indexentry{NAT! |book{3}}{35-36}
+\indexentry{Pivot!  }{35}
+\indexentry{Redirection}{35-36}
+\indexentry{Web Server|book{3}}{35}
+\indexentry{IP Forwarding|book{3}}{36-37}
+\indexentry{PAT|book{3}}{36}
+\indexentry{Svchost|book{3}}{37}
+\indexentry{Kernel|book{3}}{37}
+\indexentry{Port Forwarding|book{3}}{37}
+\indexentry{EC2!  |book{3}}{41-43}
+\indexentry{Compute!  |book{3}}{41}
+\indexentry{EBS|book{3}}{41}
+\indexentry{ECS|book{3}}{41}
+\indexentry{LightSail|book{3}}{41}
+\indexentry{KVM Hypervisor|book{3}}{41}
+\indexentry{System Hardening|book{3}}{41}
+\indexentry{PACU Exploit|book{3}}{41}
+\indexentry{VPC! |book{3}}{42}
+\indexentry{EC2!Properties|book{3}}{42}
+\indexentry{NAT! }{42}
+\indexentry{Instance Metadata Service}{42}
+\indexentry{EC2!Security Groups|book{3}}{42}
+\indexentry{Orphaned Security Groups|book{3}}{42}
+\indexentry{Bridge|book{3}}{42}
+\indexentry{EIP|book{3}}{42}
+\indexentry{Routing (Attack)|book{3}}{43}
+\indexentry{Makeshift Router|book{3}}{43}
+\indexentry{Socket Router|book{3}}{43}
+\indexentry{Privilege Escalation! }{43}
+\indexentry{Backdoor!Implantation|book{3}}{43}
+\indexentry{EC2!Attacks|book{3}}{43}
+\indexentry{Pivot!  }{43}
+\indexentry{Bastion Host|book{3}}{43}
+\indexentry{Compute!Attack Scenarios|book{3}}{47}
+\indexentry{PassRole Capability}{47}
+\indexentry{Amazon Web Services!Roles!PassRole}{47}
+\indexentry{EIP}{47}
+\indexentry{EC2!Public IP Address|book{3}}{47}
+\indexentry{EC2!Attacks}{47-51}
+\indexentry{Pivot!  }{47-48}
+\indexentry{Routing (Attack)}{48}
+\indexentry{Backdoor!Implantation}{49}
+\indexentry{Data Center|book{3}}{48}
+\indexentry{DirectConnect|book{3}}{48}
+\indexentry{IKEv2|book{3}}{48}
+\indexentry{VPN!  |book{3}}{48}
+\indexentry{Site-to-Site VPN|book{3}}{48}
+\indexentry{Bastion Host}{49}
+\indexentry{Amazon Web Services!Roles!Start/Stop Instances|book{3}}{49}
+\indexentry{EC2!UserData|book{3}}{49-51}
+\indexentry{Bash|book{3}}{50}
+\indexentry{PowerShell|book{3}}{50}
+\indexentry{SSM|book{3}}{50}
+\indexentry{Key Material! |book{3}}{50}
+\indexentry{Instance Metadata Service}{50-51}
+\indexentry{AV Bypass|book{3}}{50}
+\indexentry{PACU Exploit}{51}
+\indexentry{SSRF! |book{3}}{51}
+\indexentry{Amazon Web Services!EKS|book{3}}{51}
+\indexentry{KMS|book{3}}{55-57}
+\indexentry{Key Material! }{55}
+\indexentry{Access Token! }{55}
+\indexentry{Key Management|book{3}}{56}
+\indexentry{Lambda!Data Decryption|book{3}}{56}
+\indexentry{KMS!Features|book{3}}{56}
+\indexentry{HSM|book{3}}{56}
+\indexentry{BLOB|book{3}}{57}
+\indexentry{Privilege Escalation! }{59}
+\indexentry{Reconnaissance!  |book{3}}{59}
+\indexentry{Enumeration|book{3}}{59}
+\indexentry{Persistence! |book{3}}{59}
+\indexentry{Lambda!  |book{3}}{63}
+\indexentry{Codebuild|book{3}}{63}
+\indexentry{Lateral Movement! |book{3}}{64}
+\indexentry{DirectConnect}{64}
+\indexentry{VPN!  }{64}
+\indexentry{Payload!Injection|book{3}}{64}
+\indexentry{Payload|book{3}}{64}
+\indexentry{EC2!Exploit|book{3}}{65}
+\indexentry{LightSail!Exploit|book{3}}{65}
+\indexentry{EBS!Exploit|book{3}}{65}
+\indexentry{API!Gateway!Exploit|book{3}}{65}
+\indexentry{SSH Keys|book{3}}{65}
+\indexentry{Snapshots|book{3}}{65}
+\indexentry{System Manager Agent|book{3}}{65}
+\indexentry{Evasion|book{3}}{66}
+\indexentry{GuardDuty|book{3}}{66-67}
+\indexentry{Amazon Web Services!WAF|book{3}}{66}
+\indexentry{VPC!Flow Logs|book{3}}{66}
+\indexentry{CloudTrail! |book{3}}{66}
+\indexentry{CloudWatch! |book{3}}{66}
+\indexentry{Compute!Instance! |book{3}}{67}
+\indexentry{Backdoor!Implantation}{67}
+\indexentry{Security Bypass|book{3}}{67}
+\indexentry{Pivot!  }{67}
+\indexentry{Azure!VM|book{3}}{71-74}
+\indexentry{Hyper-V|book{3}}{71}
+\indexentry{VHD|book{3}}{71}
+\indexentry{RDP|book{3}}{71}
+\indexentry{PowerShell}{71}
+\indexentry{WinRM|book{3}}{71}
+\indexentry{Pentester Tip! |book{3}}{72}
+\indexentry{Reconnaissance!Tip|book{3}}{72}
+\indexentry{Backdoor!Implantation}{72-73}
+\indexentry{Azure!Storage!Manager|book{3}}{73}
+\indexentry{RBAC!  |book{3}}{73}
+\indexentry{Image Mount|book{3}}{74}
+\indexentry{Snapshots}{74}
+\indexentry{Code Execution|book{3}}{78}
+\indexentry{CSE (Azure)|book{3}}{79}
+\indexentry{Local System|book{3}}{79}
+\indexentry{JSON! |book{3}}{79}
+\indexentry{Azure!Files! |book{3}}{79}
+\indexentry{RunCommand|book{3}}{80}
+\indexentry{RDP}{80}
+\indexentry{PowerShell}{80-82}
+\indexentry{Administrator Account|book{3}}{80}
+\indexentry{Azure!CLI! |book{3}}{80}
+\indexentry{Azure!Automation|book{3}}{81}
+\indexentry{CI/CD! |book{3}}{81}
+\indexentry{Backdoor!Implantation}{81-82}
+\indexentry{Python! |book{3}}{81}
+\indexentry{Hybrid Workers|book{3}}{81-82}
+\indexentry{Deployment!Automation|book{3}}{81}
+\indexentry{Watcher Task|book{3}}{82}
+\indexentry{Net.WebClient@\texttt{Net.WebClient} \icon{powershell}|book{3}}{82}
+\indexentry{WinRM}{83}
+\indexentry{WinRM!Ports (5985/5986)|book{3}}{83}
+\indexentry{Kerberos! |book{3}}{83}
+\indexentry{Enter-PSSession@\texttt{Enter-PSSession} \icon{powershell}|book{3}}{83}
+\indexentry{Invoke-Command@\texttt{Invoke-Command} \icon{powershell}|book{3}}{83}
+\indexentry{Set-Item@\texttt{Set-Item} \icon{powershell}|book{3}}{83}
+\indexentry{Restart-Service@\texttt{Restart-Service} \icon{powershell}|book{3}}{83}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Cloud Native Attacks|book{4}}{5}
+\indexentry{Initial Foothold|book{4}}{5}
+\indexentry{Social Engineering|book{4}}{5}
+\indexentry{Exploitation! |book{4}}{5}
+\indexentry{Mapping!  |book{4}}{6-7}
+\indexentry{Kubernetes!  |book{4}}{6}
+\indexentry{IaaS!  |book{4}}{6}
+\indexentry{Infrastructure Mapping|book{4}}{7}
+\indexentry{Application Mapping|book{4}}{7}
+\indexentry{Document Type|book{4}}{7-9}
+\indexentry{Method Type|book{4}}{7}
+\indexentry{Brute Force|book{4}}{7}
+\indexentry{HTTP!Request|book{4}}{8-9}
+\indexentry{Mapping!Client-Side|book{4}}{10}
+\indexentry{Developer Tools|book{4}}{10}
+\indexentry{Client-Side Proxy|book{4}}{10}
+\indexentry{Cloud Native Applications! |book{4}}{12-16}
+\indexentry{Cloud Native Applications!Properties|book{4}}{12}
+\indexentry{CNCF|book{4}}{12}
+\indexentry{Docker!  |book{4}}{12}
+\indexentry{Containerd|book{4}}{12}
+\indexentry{Microservices|book{4}}{12-13}
+\indexentry{CI/CD!   |book{4}}{12}
+\indexentry{Netflix|book{4}}{13}
+\indexentry{CNCF}{14}
+\indexentry{HTTP|book{4}}{15}
+\indexentry{RPC! |book{4}}{15}
+\indexentry{SMB!  |book{4}}{15}
+\indexentry{Database Protocols|book{4}}{15}
+\indexentry{SOA Bus|book{4}}{15}
+\indexentry{Network Socket! |book{4}}{15}
+\indexentry{REST|book{4}}{16}
+\indexentry{GRPC! |book{4}}{16}
+\indexentry{Session State Storage|book{4}}{16}
+\indexentry{Redis! |book{4}}{16}
+\indexentry{Memcached! |book{4}}{16}
+\indexentry{CVS|book{4}}{18}
+\indexentry{SVN|book{4}}{18}
+\indexentry{Git|book{4}}{18-19}
+\indexentry{Sensitive Information!Commit|book{4}}{18}
+\indexentry{Source Control Tools|book{4}}{18}
+\indexentry{SCM! |book{4}}{18-19}
+\indexentry{Development Pipeline|book{4}}{18}
+\indexentry{Deployment!Pipeline|book{4}}{20-21}
+\indexentry{Jenkins|book{4}}{20-22}
+\indexentry{Backdoor!Implantation! |book{4}}{20}
+\indexentry{CI Systems|book{4}}{21}
+\indexentry{Build Systems|book{4}}{21-29}
+\indexentry{Travis CI|book{4}}{21-28}
+\indexentry{Atlassian Bamboo|book{4}}{21}
+\indexentry{Codebuild! |book{4}}{21}
+\indexentry{CI/CD!Detection|book{4}}{22}
+\indexentry{CI/CD!Attack|book{4}}{23}
+\indexentry{Drone|book{4}}{22}
+\indexentry{Circle CI|book{4}}{22}
+\indexentry{Supply Chain|book{4}}{23}
+\indexentry{Root|book{4}}{23}
+\indexentry{Backdoor!Implantation! }{23}
+\indexentry{Lateral Movement!  |book{4}}{26}
+\indexentry{Environment Variable! |book{4}}{25}
+\indexentry{Backdoor!Implantation! }{26-29}
+\indexentry{Terms of Service! |book{4}}{26}
+\indexentry{Sensitive Information!   |book{4}}{27}
+\indexentry{Build Systems!Output|book{4}}{27}
+\indexentry{Domain Fronting|book{4}}{28}
+\indexentry{Foreground Process|book{4}}{28}
+\indexentry{Injections|book{4}}{33-34}
+\indexentry{Proxy Attacks|book{4}}{34}
+\indexentry{SSRF!  |book{4}}{36-41}
+\indexentry{RFI|book{4}}{36}
+\indexentry{Cloud Native Applications! }{36}
+\indexentry{CRLF|book{4}}{38}
+\indexentry{Link-Local Address|book{4}}{39}
+\indexentry{Sensitive Information!   }{39}
+\indexentry{Abuse!  |book{4}}{39}
+\indexentry{Instance Metadata Service! |book{4}}{39}
+\indexentry{Amazon Web Services!Roles!List|book{4}}{39}
+\indexentry{Instance Metadata Service!Token Protections|book{4}}{40}
+\indexentry{TTL|book{4}}{40}
+\indexentry{WAF! |book{4}}{40}
+\indexentry{X-aws-ec2-metadata-token@\texttt{X-aws-ec2-metadata-token}|book{4}}{40}
+\indexentry{HackerOne|book{4}}{41}
+\indexentry{CGI-BIN|book{4}}{45-46}
+\indexentry{MOD-PHP|book{4}}{45}
+\indexentry{ASAPI|book{4}}{45}
+\indexentry{HTTP!Proxy Redirect|book{4}}{45}
+\indexentry{PHP-FPM|book{4}}{45}
+\indexentry{WSGI|book{4}}{45}
+\indexentry{LigHTTPD|book{4}}{46}
+\indexentry{Command Injection|book{4}}{47-50}
+\indexentry{Blind Injection|book{4}}{47}
+\indexentry{Command Injection!Primitives|book{4}}{48}
+\indexentry{Shell Environments|book{4}}{48}
+\indexentry{Cloud Native Applications!Injections|book{4}}{48}
+\indexentry{Alpine Linux|book{4}}{50}
+\indexentry{Windows Server Core|book{4}}{50}
+\indexentry{Environment Information|book{4}}{50}
+\indexentry{Lambda!   |book{4}}{50}
+\indexentry{Lambda!Attacks|book{4}}{54-60}
+\indexentry{Function as a Service! |book{4}}{54}
+\indexentry{Managed Container|book{4}}{54}
+\indexentry{Kubernetes!  }{54}
+\indexentry{Serverless Computing! |book{4}}{54}
+\indexentry{API!Gateway|book{4}}{55-56}
+\indexentry{HTTP!Gateway|book{4}}{55}
+\indexentry{Amazon Web Services!Lambda|book{4}}{55}
+\indexentry{Amazon Web Services!Lambda!Constraints|book{4}}{56}
+\indexentry{JavaScript!  |book{4}}{57}
+\indexentry{NodeJS!Lambda|book{4}}{57}
+\indexentry{ExpressJS|book{4}}{57}
+\indexentry{Amazon Web Services!Lambda!Manually|book{4}}{58}
+\indexentry{Code Injection|book{4}}{59}
+\indexentry{Amazon Web Services!Lambda!Shells|book{4}}{60}
+\indexentry{Command Injection}{60}
+\indexentry{Lambda!Shell|book{4}}{60}
+\indexentry{Lateral Movement!  }{60}
+\indexentry{Spin-Down|book{4}}{60}
+\indexentry{Azure!Serverless|book{4}}{62}
+\indexentry{Azure!Functions|book{4}}{62-64}
+\indexentry{Azure!Functions!Differences with AWS Lambda|book{4}}{62}
+\indexentry{Amazon Web Services!Lambda!Differences with Azure Functions|book{4}}{62}
+\indexentry{Windows Functions|book{4}}{62-64}
+\indexentry{Windows Functions!Attacker's View|book{4}}{63}
+\indexentry{Kudu|book{4}}{63}
+\indexentry{App (Windows Functions)|book{4}}{63}
+\indexentry{Environment Variable! }{63}
+\indexentry{Windows Functions!Attacks|book{4}}{64}
+\indexentry{Serverless Function!Attacks|book{4}}{64}
+\indexentry{Vulnerable Function|book{4}}{64}
+\indexentry{Exposed Databases|book{4}}{68-79}
+\indexentry{Google Functions|book{4}}{68}
+\indexentry{Digital Ocean! |book{4}}{68}
+\indexentry{Linode|book{4}}{68}
+\indexentry{Exposed Services|book{4}}{69}
+\indexentry{MongoDB! |book{4}}{69-70}
+\indexentry{Redis! }{69-71}
+\indexentry{ElasticSearch|book{4}}{69}
+\indexentry{Shodan! |book{4}}{69}
+\indexentry{SASL|book{4}}{69}
+\indexentry{Orphaned Database|book{4}}{69}
+\indexentry{Command-and-Control Server|book{4}}{69}
+\indexentry{Databases|book{4}}{70}
+\indexentry{Cassandra|book{4}}{70}
+\indexentry{NoSQL! |book{4}}{70}
+\indexentry{RDBM|book{4}}{70}
+\indexentry{MariaDB|book{4}}{70}
+\indexentry{PostgreSQL|book{4}}{70}
+\indexentry{DBaaS! |book{4}}{70}
+\indexentry{Amazon DocumentDB|book{4}}{70}
+\indexentry{Key-Value Store|book{4}}{70-71}
+\indexentry{In-Memory Database|book{4}}{70-71}
+\indexentry{Exposed Databases!Risks|book{4}}{71}
+\indexentry{Redis!as a Service|book{4}}{71}
+\indexentry{NoSQL!Injection|book{4}}{72}
+\indexentry{SQL!Injection|book{4}}{72}
+\indexentry{MongoDB!Port (27001)|book{4}}{73}
+\indexentry{Redis!Port (6379)|book{4}}{73}
+\indexentry{BSON|book{4}}{73}
+\indexentry{Session State Storage}{74-75}
+\indexentry{Data Exposure|book{4}}{76}
+\indexentry{Privilege Escalation!  |book{4}}{76}
+\indexentry{SQL!Query|book{4}}{77}
+\indexentry{MongoDB!Query|book{4}}{77-78}
+\indexentry{MongoDB!Cheat Sheet|book{4}}{79}
+\indexentry{Document Object-Storage|book{4}}{79}
+\indexentry{SQL!Injection}{83}
+\indexentry{Shared Database|book{4}}{83}
+\indexentry{Stand-Alone Database|book{4}}{83}
+\indexentry{DBaaS!Managed/Unmanaged|book{4}}{83}
+\indexentry{IaaS!  }{83}
+\indexentry{RDS \icon{aws}|book{4}}{84-85}
+\indexentry{Aurora|book{4}}{84}
+\indexentry{SQL!Injection}{86-95}
+\indexentry{Cloud Native Applications!Injections}{86}
+\indexentry{Prepared Statements|book{4}}{86}
+\indexentry{ORM|book{4}}{86}
+\indexentry{Struts|book{4}}{86}
+\indexentry{Ruby on Rails|book{4}}{86}
+\indexentry{Spring|book{4}}{86}
+\indexentry{Laravel! |book{4}}{86}
+\indexentry{ActiveRecord|book{4}}{86}
+\indexentry{Hibernate|book{4}}{86}
+\indexentry{SQLAlchemy|book{4}}{86}
+\indexentry{SQL!Injection!Workflow|book{4}}{87}
+\indexentry{NodeJS!SQL Injection|book{4}}{88-90}
+\indexentry{SQL!Injection!Discovery|book{4}}{89}
+\indexentry{WAF! }{90}
+\indexentry{Terms of Service! }{93}
+\indexentry{Proof of Concept! |book{4}}{93}
+\indexentry{User-Agent! |book{4}}{94}
+\indexentry{WAF! }{94}
+\indexentry{SQL!Injection!Defenses|book{4}}{95}
+\indexentry{ORM}{95}
+\indexentry{NodeJS!ORM|book{4}}{95}
+\indexentry{Prepared Statements}{95}
+\indexentry{Microservices}{99}
+\indexentry{Containers!  |book{4}}{99-106}
+\indexentry{Classic Application|book{4}}{99}
+\indexentry{Linux Containers|book{4}}{100-101}
+\indexentry{Windows Containers|book{4}}{100}
+\indexentry{Windows Desktop|book{4}}{100}
+\indexentry{Deployment|book{4}}{100}
+\indexentry{Chroot! |book{4}}{100-101}
+\indexentry{Silo Processes|book{4}}{100}
+\indexentry{Hyper-V! |book{4}}{100}
+\indexentry{Namespaces! |book{4}}{100-101}
+\indexentry{Kernel!API Call|book{4}}{100}
+\indexentry{Containers!Architectures|book{4}}{101-102}
+\indexentry{Network Bridge|book{4}}{101}
+\indexentry{Jail|book{4}}{101}
+\indexentry{Linux Kernel|book{4}}{101}
+\indexentry{Docker!  }{101-102}
+\indexentry{Windows Containers}{102}
+\indexentry{Windows Desktop}{102}
+\indexentry{Windows Kernel|book{4}}{102}
+\indexentry{Ntdll.dll / Ntfs.dll|book{4}}{102}
+\indexentry{Silo Processes}{102}
+\indexentry{Hyper-V! }{102}
+\indexentry{Windows Server Core}{102}
+\indexentry{Deployment}{103}
+\indexentry{Linux Containers}{103}
+\indexentry{Jail}{103}
+\indexentry{Sandbox|book{4}}{103}
+\indexentry{Virtual Machines!  |book{4}}{103}
+\indexentry{Docker!Dockerfile|book{4}}{104}
+\indexentry{Docker!Container|book{4}}{104}
+\indexentry{Containers!Cross-Communication|book{4}}{105}
+\indexentry{Namespaces! }{105}
+\indexentry{IPC|book{4}}{105}
+\indexentry{SHM|book{4}}{105}
+\indexentry{Memory Sharing|book{4}}{105}
+\indexentry{Privileged Container|book{4}}{105}
+\indexentry{Microservices}{106}
+\indexentry{Cloud Native Applications! }{106}
+\indexentry{Service Mesh|book{4}}{106}
+\indexentry{Service Chaining|book{4}}{106}
+\indexentry{Routing and Switching|book{4}}{106}
+\indexentry{Lifecycle Management|book{4}}{106}
+\indexentry{Proprietary Stack|book{4}}{106}
+\indexentry{Universal Stack|book{4}}{106}
+\indexentry{Amazon Web Services!Lambda!Example \python|book{4}}{109}
+\indexentry{Amazon Web Services!Lambda!Language Support|book{4}}{109}
+\indexentry{Amazon Web Services!Lambda}{110}
+\indexentry{Serverless Computing! }{110}
+\indexentry{Windows Containers}{111}
+\indexentry{Containers!Escape! |book{4}}{111}
+\indexentry{LSASS! |book{4}}{111}
+\indexentry{Windows Defender|book{4}}{111}
+\indexentry{Obfuscation|book{4}}{111}
+
+
+\comment{********************************************************************************************
+                                     FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Kubernetes!   |book{5}}{5-21}
+\indexentry{Kubernetes!Features|book{5}}{5}
+\indexentry{Automated Rollout and Rollback|book{5}}{5}
+\indexentry{Horizontal Scaling|book{5}}{5}
+\indexentry{Self-Healing|book{5}}{5}
+\indexentry{Secrets Configuration and Management|book{5}}{5}
+\indexentry{CNCF! |book{5}}{5}
+\indexentry{RBAC!   |book{5}}{5}
+\indexentry{Node Controller \icon{k8s}|book{5}}{6}
+\indexentry{Endpoints Controller \icon{k8s}|book{5}}{6}
+\indexentry{Replication Controller \icon{k8s}|book{5}}{6}
+\indexentry{Token \icon{k8s}!Controller|book{5}}{6}
+\indexentry{Cloud Controller \icon{k8s}|book{5}}{6}
+\indexentry{Kubernetes!Master|book{5}}{6}
+\indexentry{Scheduler \icon{k8s}|book{5}}{7}
+\indexentry{API!Server \icon{k8s}|book{5}}{7}
+\indexentry{Etcd \icon{k8s}|book{5}}{7}
+\indexentry{Key-Value Store! |book{5}}{7}
+\indexentry{CoreOS|book{5}}{7}
+\indexentry{RBAC!   }{7}
+\indexentry{Kubernetes!Nodes|book{5}}{8}
+\indexentry{Containers!   |book{5}}{8}
+\indexentry{CRI-O! |book{5}}{8}
+\indexentry{Kubelet \icon{k8s}|book{5}}{8-10}
+\indexentry{Worker Node \icon{k8s}|book{5}}{9}
+\indexentry{Scheduler \icon{k8s}}{9}
+\indexentry{API!Server \icon{k8s}}{9}
+\indexentry{Etcd \icon{k8s}}{9}
+\indexentry{Kubernetes!Master}{9}
+\indexentry{Kubernetes!Certificate|book{5}}{10}
+\indexentry{Kubernetes!Config (Default Location)|book{5}}{10}
+\indexentry{Token \icon{k8s}|book{5}}{10}
+\indexentry{Kubelet \icon{k8s}!Namespace|book{5}}{10}
+\indexentry{Kubernetes!Secrets|book{5}}{10}
+\indexentry{Ca.crt@\texttt{ca.crt}|book{5}}{10}
+\indexentry{Kubernetes!Attacker's View|book{5}}{11}
+\indexentry{Kubernetes!API|book{5}}{11}
+\indexentry{RBAC!   }{11}
+\indexentry{Kubernetes!Managed/Unmanaged|book{5}}{12}
+\indexentry{ECS! |book{5}}{12}
+\indexentry{Turnkey Cloud|book{5}}{12}
+\indexentry{Kubelet \icon{k8s}}{13}
+\indexentry{Service Mesh! |book{5}}{13}
+\indexentry{Pods \icon{k8s}! |book{5}}{14-16}
+\indexentry{Pods \icon{k8s}!Privileged|book{5}}{15}
+\indexentry{Environment Variable!  |book{5}}{14}
+\indexentry{Secrets Location|book{5}}{14}
+\indexentry{Host Mounts|book{5}}{15}
+\indexentry{Busy Box|book{5}}{15}
+\indexentry{Kubernetes!API}{16}
+\indexentry{Kubernetes!Secrets}{16}
+\indexentry{Environment Variable!  }{16}
+\indexentry{Tesla|book{5}}{17}
+\indexentry{Kubernetes!Dashboard UI|book{5}}{17}
+\indexentry{RBAC!     @\icon{k8s} V1.8+|book{5}}{18-20}
+\indexentry{Kubernetes!Certificate}{18}
+\indexentry{Kubelet \icon{k8s}!Rights|book{5}}{18}
+\indexentry{RBAC!     @\icon{k8s} V1.8+!Example|book{5}}{19}
+\indexentry{YAML! |book{5}}{19}
+\indexentry{Kubernetes!Certificate}{20}
+\indexentry{Privilege Escalation!    |book{5}}{20}
+\indexentry{Lateral Movement!   |book{5}}{20}
+\indexentry{Aqua Security|book{5}}{21}
+\indexentry{Vulnerability Hunting|book{5}}{21}
+\indexentry{Vulnerability Scanner! |book{5}}{21}
+\indexentry{Health Check|book{5}}{21}
+\indexentry{Kubernetes!Vulnerabilities|book{5}}{21}
+\indexentry{Lateral Movement!   }{23}
+\indexentry{Backdoor!Implantation!  |book{5}}{27}
+\indexentry{Containers!Backdooring|book{5}}{27}
+\indexentry{Supply Chain! |book{5}}{27}
+\indexentry{Initial Foothold! |book{5}}{27}
+\indexentry{Dirty Container! |book{5}}{27}
+\indexentry{SSH Tunnel|book{5}}{28}
+\indexentry{Port Forwarding! |book{5}}{28}
+\indexentry{SMB!Port (445)|book{5}}{28}
+\indexentry{PEM! |book{5}}{28}
+\indexentry{Hostkeys|book{5}}{28}
+\indexentry{Exploit Multi Handler|book{5}}{32}
+\indexentry{Backdoor|book{5}}{31}
+\indexentry{Payload! |book{5}}{31-32}
+\indexentry{Encrypted Command Channel|book{5}}{31}
+\indexentry{Command Channel|book{5}}{31}
+\indexentry{Port Forwarding! }{31}
+\indexentry{Network Forwarding|book{5}}{31}
+\indexentry{Listener|book{5}}{32}
+\indexentry{Payload!Stages|book{5}}{33-35}
+\indexentry{Network IPS/IDS|book{5}}{33}
+\indexentry{Payload!Build|book{5}}{35}
+\indexentry{Dirty Container! }{36-39}
+\indexentry{Kubernetes!Meterpreter|book{5}}{36-39}
+\indexentry{Pods \icon{k8s}!Privileged}{36-39}
+\indexentry{Docker!Hub! |book{5}}{36}
+\indexentry{Amazon Web Services!ECR|book{5}}{36}
+\indexentry{Containers!Backdooring}{37}
+\indexentry{Backdoor!Implantation!Workflow|book{5}}{37-39}
+\indexentry{Docker!Dockerfile! |book{5}}{37}
+\indexentry{Deployment! |book{5}}{38-39}
+\indexentry{StatufulSets \icon{k8s}|book{5}}{38}
+\indexentry{DaemonSet \icon{k8s}|book{5}}{38}
+\indexentry{Stateless/Stateful Application|book{5}}{38}
+\indexentry{Exploit Multi Handler}{37-38}
+\indexentry{YAML! }{39}
+\indexentry{Red Team|book{5}}{43-45}
+\indexentry{Post Exploitation|book{5}}{43}
+\indexentry{Penetration Testing|book{5}}{44}
+\indexentry{Attack Rotation|book{5}}{45}
+\indexentry{Terms of Service!  |book{5}}{45}
+\indexentry{CSP! |book{5}}{45}
+\indexentry{Payload!Challenges|book{5}}{48}
+\indexentry{Payload!Traditional|book{5}}{48}
+\indexentry{Software Router! |book{5}}{48}
+\indexentry{CoreOS}{49}
+\indexentry{Alpine Linux! |book{5}}{49}
+\indexentry{Statically Compiled Binary|book{5}}{49}
+\indexentry{Payload!Deployment|book{5}}{50}
+\indexentry{RAT|book{5}}{50}
+\indexentry{Payload!Traditional}{51}
+\indexentry{Agent|book{5}}{51-54}
+\indexentry{Raw Socket|book{5}}{51}
+\indexentry{TLS-Encrypted Channel|book{5}}{51}
+\indexentry{Command Channel}{51}
+\indexentry{Beacon|book{5}}{52-53}
+\indexentry{C2!Implant|book{5}}{52}
+\indexentry{Payload!Beacon|book{5}}{52-53}
+\indexentry{Command-and-Control Arthicecture|book{5}}{53}
+\indexentry{C2|book{5}}{53}
+\indexentry{Command-and-Control Server! |book{5}}{53}
+\indexentry{Job Control Channel|book{5}}{53}
+\indexentry{Redirection!Server|book{5}}{53}
+\indexentry{API!Gateway! |book{5}}{53}
+\indexentry{Shared Hosting|book{5}}{54}
+\indexentry{Web Shells|book{5}}{54-57}
+\indexentry{Persistence!  |book{5}}{55}
+\indexentry{Heavy Shell|book{5}}{55}
+\indexentry{Lightweight Shell|book{5}}{56-57}
+\indexentry{Heavy Shell}{57}
+\indexentry{Payload!Design Choices|book{5}}{58-59}
+\indexentry{Encryption|book{5}}{58}
+\indexentry{Google Tink|book{5}}{58}
+\indexentry{Command-and-Control Arthicecture!Hardening|book{5}}{58}
+\indexentry{C2!Hardening|book{5}}{58}
+\indexentry{Kerckhoffs' Principle|book{5}}{58}
+\indexentry{Cryptography|book{5}}{58}
+\indexentry{Integrity Check! |book{5}}{58}
+\indexentry{Bearer Authentication! |book{5}}{59}
+\indexentry{Red Team}{63}
+\indexentry{Penetration Testing}{63}
+\indexentry{Attack Rotation}{63}
+\indexentry{CSP! }{64}
+\indexentry{Load Balancer!  |book{5}}{64}
+\indexentry{Serverless Function!  |book{5}}{64}
+\indexentry{Terms of Service!  }{64}
+\indexentry{Routing (Attack)! |book{5}}{64-65}
+\indexentry{VPN!    |book{5}}{65}
+\indexentry{Shunning|book{5}}{65}
+\indexentry{Data Pivoting|book{5}}{66}
+\indexentry{SMB!    |book{5}}{66}
+\indexentry{Cross-Account Copy|book{5}}{66-67}
+\indexentry{Delegated Access|book{5}}{67}
+\indexentry{S3 Buckets!Policy|book{5}}{67}
+\indexentry{Amazon Web Services!IAM!Permissions|book{5}}{67-68}
+\indexentry{Data Exfiltration|book{5}}{69}
+\indexentry{CSP!Data|book{5}}{69}
+\indexentry{Cross-Account Copy}{70}
+\indexentry{VHD! |book{5}}{70}
+\indexentry{Data Smuggling|book{5}}{71}
+\indexentry{Dropbox! |book{5}}{71}
+\indexentry{OneDrive!  |book{5}}{72}
+\indexentry{Office365!  |book{5}}{72}
+\indexentry{Windows 10|book{5}}{72}
+\indexentry{Command Channel}{72}
+\indexentry{Password|book{5}}{74}
+\indexentry{Key Material!  |book{5}}{74}
+\indexentry{Man-In-The-Middle! |book{5}}{74}
+\indexentry{Password!Attacks|book{5}}{75-89}
+\indexentry{Authentication!Bypass|book{5}}{75}
+\indexentry{Token!Hijacking|book{5}}{75}
+\indexentry{Password!Hash|book{5}}{75}
+\indexentry{Password!Lists|book{5}}{76}
+\indexentry{Collection \#1|book{5}}{76}
+\indexentry{Wordlists!   |book{5}}{76-77}
+\indexentry{Password!Attacks!Types|book{5}}{79}
+\indexentry{Brute Force! |book{5}}{79-80}
+\indexentry{Dictionary Attack|book{5}}{79}
+\indexentry{Credential Stuffing|book{5}}{79}
+\indexentry{Password!Spraying|book{5}}{79}
+\indexentry{Bad Password Count|book{5}}{79}
+\indexentry{Dictionary Attack}{80-81}
+\indexentry{Password!Spraying}{82}
+\indexentry{Account Lockout|book{5}}{80-83}
+\indexentry{Credential Stuffing}{83-84}
+\indexentry{Shunning}{81}
+\indexentry{Account Attack|book{5}}{84}
+\indexentry{Password!Spraying}{84}
+\indexentry{Dictionary Attack}{84}
+\indexentry{Username|book{5}}{84-85}
+\indexentry{Credential Stuffing}{86-87}
+\indexentry{Obfuscation! |book{5}}{93}
+\indexentry{C2}{93}
+\indexentry{Command-and-Control Arthicecture!Obfuscation|book{5}}{93}
+\indexentry{Valid Domains|book{5}}{94}
+\indexentry{Expired Domains|book{5}}{94}
+\indexentry{Content Filter!Database|book{5}}{94-95}
+\indexentry{Abuse!   |book{5}}{97}
+\indexentry{SNI (TLS Field)|book{5}}{97}
+\indexentry{Domain Fronting! |book{5}}{97-101}
+\indexentry{TLS Handshake|book{5}}{97}
+\indexentry{DNS!Filter|book{5}}{97}
+\indexentry{Content Filter|book{5}}{97}
+\indexentry{CNAME! |book{5}}{98}
+\indexentry{Fastly (Proxy) \web|book{5}}{98-99}
+\indexentry{Akamai (Proxy) \web|book{5}}{98}
+\indexentry{Let's Encrypt! |book{5}}{99-100}
+\indexentry{ACME! |book{5}}{100}
+\indexentry{Cryptography}{100}
+\indexentry{Exploit Multi Handler}{101}
+\indexentry{PEM! }{101}
+\indexentry{Pivot!   |book{5}}{101}
+\indexentry{DMZ! |book{5}}{101}
+\indexentry{Hop.php|book{5}}{101}
+\indexentry{C2!Implant}{101}
+\indexentry{Agent}{101}
+
+
+\comment{********************************************************************************************
+                                      WORKBOOK SECTION
+*****************************************************************************************************}
+\indexentry{Asset Discovery Pipeline! |book{W}}{27}
+\indexentry{Wordlists!    |book{W}}{35-37}
+\indexentry{Assetnote! |book{W}}{35-37}
+\indexentry{URL!Bruteforce|book{W}}{43}
+\indexentry{AMZN Header|book{W}}{48}
+\indexentry{Port Scanner!    |book{W}}{48}
+\indexentry{Vulnerability Hunting! |book{W}}{49}
+\indexentry{Heroku|book{W}}{50}
+\indexentry{Swagger API|book{W}}{50}
+\indexentry{Exposed Secrets|book{W}}{54}
+\indexentry{Developer Tools!    |book{W}}{57}
+\indexentry{Key Exposure Recommendations|book{W}}{58}
+\indexentry{MFA! |book{W}}{58}
+\indexentry{Amazon Web Services!IAM! |book{W}}{65}
+\indexentry{Azure!Portal|book{W}}{69-70}
+\indexentry{Orphaned Disk|book{W}}{73}
+\indexentry{Comp=list@\texttt{?comp=list}! |book{W}}{78}
+\indexentry{JWT!Decoding|book{W}}{97}
+\indexentry{Port Forwarding!     |book{W}}{37}
+\indexentry{KMS!    |book{W}}{112}
+\indexentry{PassRole Capability!    |book{W}}{114}
+\indexentry{AMI|book{W}}{114}
+\indexentry{RunCommand!   |book{W}}{151}
+\indexentry{CSE (Azure)!   |book{W}}{152-156}
+\indexentry{OpenSSH!Private Key|book{W}}{198}
+\indexentry{RSA Private Key|book{W}}{199}
+\indexentry{RESTful API! |book{W}}{202-206}
+\indexentry{Htaccess@\texttt{.htaccess}|book{W}}{204}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{IaaS!Testing Policies \goto Testing Policies|comment}{0}
+\indexentry{Hogging \goto Performance Hogging|comment}{0}
+\indexentry{Network Firewall as a Service \goto FWaaS|comment}{0}
+\indexentry{Authentication!as a Service \goto AaaS|comment}{0}
+\indexentry{Active Directory!as a Service \goto ADaaS|comment}{0}
+\indexentry{Databases as a Service \goto DBaaS|comment}{0}
+\indexentry{K8s \goto Kubernetes|comment}{0}
+\indexentry{OIDC \goto OpenIDConnect|comment}{0}
+\indexentry{PRT Attack \goto Pass-the-PRT Attack|comment}{0}
+\indexentry{Custom Script Extension \goto CSE|comment}{0}
+\indexentry{Policy Versioning \goto AWS IAM User Versioning|comment}{0}
+\indexentry{Elastic Kurbenetes Services \goto AWS EKS|comment}{0}
+\indexentry{Elastic Container!Registry \goto AWS ECR|comment}{0}

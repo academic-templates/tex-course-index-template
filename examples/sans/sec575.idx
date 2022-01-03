@@ -1,0 +1,1933 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{Device Architecture \& Application Interaction}!1@Mobile Probles \& Opportunities|book{1}}{7-14}
+\indexentry{1a@\textbf{Device Architecture \& Application Interaction}!2@SANS Integrated Lab Platform|book{1}}{15-25}
+\indexentry{1a@\textbf{Device Architecture \& Application Interaction}!3@About iOS|book{1}}{28-48}
+\indexentry{1a@\textbf{Device Architecture \& Application Interaction}!4@About Android|book{1}}{49-80}
+\indexentry{1a@\textbf{Device Architecture \& Application Interaction}!5@Building Your Lab|book{1}}{81-97}
+\indexentry{1a@\textbf{Device Architecture \& Application Interaction}!6@iOS Application Interaction|book{1}}{98-106}
+\indexentry{1a@\textbf{Device Architecture \& Application Interaction}!7@Android Application Interaction|book{1}}{107-118}
+
+\indexentry{1b1@\blankline|comment}{0}
+\indexentry{1b2@\blankline|comment}{0}
+\indexentry{1b3@\blankline|comment}{0}
+
+\indexentry{1c@\textbf{The Stolen Device Threat \& Mobile Malware}!1@The Stolen Device Threat|book{2}}{4-26}
+\indexentry{1c@\textbf{The Stolen Device Threat \& Mobile Malware}!2@Jailbreaking iOS|book{2}}{28-45}
+\indexentry{1c@\textbf{The Stolen Device Threat \& Mobile Malware}!3@Rooting Android|book{2}}{47-61}
+\indexentry{1c@\textbf{The Stolen Device Threat \& Mobile Malware}!4@Data Storage on Android|book{2}}{63-82}
+\indexentry{1c@\textbf{The Stolen Device Threat \& Mobile Malware}!5@Data Storage on iOS|book{2}}{86-119}
+\indexentry{1c@\textbf{The Stolen Device Threat \& Mobile Malware}!6@Mitigating Malware|book{2}}{123-147}
+
+\indexentry{1d1@\blankline|comment}{0}
+\indexentry{1d2@\blankline|comment}{0}
+\indexentry{1d3@\blankline|comment}{0}
+
+\indexentry{1e@\textbf{Static Application Analysis}!1@Introduction|book{3}}{4-5}
+\indexentry{1e@\textbf{Static Application Analysis}!2@Manual Static Analysis|book{3}}{7-27}
+\indexentry{1e@\textbf{Static Application Analysis}!3@Automating App Analysis|book{3}}{31-43}
+\indexentry{1e@\textbf{Static Application Analysis}!4@Obfuscated Apps|book{3}}{47-72}
+\indexentry{1e@\textbf{Static Application Analysis}!5@Third-Party App Platforms|book{3}}{76-103}
+
+\indexentry{1f1@\blankline|comment}{0}
+\indexentry{1f2@\blankline|comment}{0}
+\indexentry{1f3@\blankline|comment}{0}
+
+\indexentry{1g@\textbf{Dynamic Mobile App Analysis \& Manipulation}!1@Introduction|book{4}}{4}
+\indexentry{1g@\textbf{Dynamic Mobile App Analysis \& Manipulation}!2@Android Analysis with Drozer|book{4}}{6-13}
+\indexentry{1g@\textbf{Dynamic Mobile App Analysis \& Manipulation}!3@iOS Analysis with Needle|book{4}}{17-25}
+\indexentry{1g@\textbf{Dynamic Mobile App Analysis \& Manipulation}!4@Modifying Mobile Applications|book{4}}{27-43}
+\indexentry{1g@\textbf{Dynamic Mobile App Analysis \& Manipulation}!5@Mobile App Runtime Manip|book{4}}{47-84}
+\indexentry{1g@\textbf{Dynamic Mobile App Analysis \& Manipulation}!6@Runtime Manip with Objection|book{4}}{86-95}
+\indexentry{1g@\textbf{Dynamic Mobile App Analysis \& Manipulation}!7@Application Security Verification|book{4}}{99-142}
+
+\indexentry{1h1@\blankline|comment}{0}
+\indexentry{1h2@\blankline|comment}{0}
+\indexentry{1h3@\blankline|comment}{0}
+
+\indexentry{1i@\textbf{Mobile Penetration Testing}!1@Introduction|book{5}}{4-8}
+\indexentry{1i@\textbf{Mobile Penetration Testing}!2@Network Activity Analysis|book{5}}{10-23}
+\indexentry{1i@\textbf{Mobile Penetration Testing}!3@Network Manipulation Attacks|book{5}}{27-48}
+\indexentry{1i@\textbf{Mobile Penetration Testing}!4@Network Traffic Manipulation|book{5}}{50-60}
+\indexentry{1i@\textbf{Mobile Penetration Testing}!5@SSL/TLS Attacks|book{5}}{62-79}
+\indexentry{1i@\textbf{Mobile Penetration Testing}!6@Intercepting SSL/TLS Traffic|book{5}}{81-107}
+\indexentry{1i@\textbf{Mobile Penetration Testing}!7@Leveraging Mobile Malware|book{5}}{111-136}
+
+\indexentry{1j1@\blankline|comment}{0}
+\indexentry{1j2@\blankline|comment}{0}
+\indexentry{1j3@\blankline|comment}{0}
+
+\indexentry{1k@\textbf{Capture the Flag}|book{6}}{2-15}
+
+\indexentry{1l@\blankline|comment}{0}
+\indexentry{1m@\blankline|comment}{0}
+\indexentry{1n@\blankline|comment}{0}
+\indexentry{1o@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{100@\textbf{Labs}!Evil Bank|book{1}}{27}
+\indexentry{100@\textbf{Labs}!Android Emulation|book{1}}{96}
+\indexentry{100@\textbf{Labs}!ADB Access|book{1}}{98}
+\indexentry{100@\textbf{Labs}!Android IPC|book{1}}{121}
+\indexentry{100@\textbf{Labs}!Android Backup Analysis|book{2}}{84}
+\indexentry{100@\textbf{Labs}!iPhone Data Analysis|book{2}}{121}
+\indexentry{100@\textbf{Labs}!Android Malware Analysis|book{2}}{149}
+\indexentry{100@\textbf{Labs}!Android App Static Analysis|book{3}}{29}
+\indexentry{100@\textbf{Labs}!MobSF|book{3}}{45}
+\indexentry{100@\textbf{Labs}!Obfuscated Android App Analysis|book{3}}{74}
+\indexentry{100@\textbf{Labs}!Xamarin App Analysis|book{3}}{105}
+\indexentry{100@\textbf{Labs}!PhoneGap App Analysis|book{3}}{107}
+\indexentry{100@\textbf{Labs}!Manipulating Android Intents|book{4}}{15}
+\indexentry{100@\textbf{Labs}!Modifying Android Applications|book{4}}{45}
+\indexentry{100@\textbf{Labs}!Frida \& Objection|book{4}}{97}
+\indexentry{100@\textbf{Labs}!MobApp Network Traffic Analysis|book{5}}{25}
+\indexentry{100@\textbf{Labs}!Manipulating Web Browser Activity|book{5}}{62}
+\indexentry{100@\textbf{Labs}!Banking Transaction Manipulation|book{5}}{109}
+\indexentry{100@\textbf{Labs}!Meterpreter RAT Deployment|book{5}}{138}
+
+\indexentry{101@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools}!iOS SDK|book{1}}{85}
+\indexentry{200@\textbf{Tools}!Qemu|book{1}}{86}
+\indexentry{200@\textbf{Tools}!Android SDK|book{1}}{86-87}
+\indexentry{200@\textbf{Tools}!Android Studio|book{1}}{86-90}
+\indexentry{200@\textbf{Tools}!ADB|book{1}}{92}
+\indexentry{200@\textbf{Tools}!Rduck-pinbrute|book{2}}{18}
+\indexentry{200@\textbf{Tools}!Google Find My Device|book{2}}{23}
+\indexentry{200@\textbf{Tools}!iOS Find My iPhone|book{2}}{23}
+\indexentry{200@\textbf{Tools}!Unc0ver \ios|book{2}}{35-36}
+\indexentry{200@\textbf{Tools}!Cydia|book{2}}{35-37}
+\indexentry{200@\textbf{Tools}!Chimera \ios|book{2}}{36}
+\indexentry{200@\textbf{Tools}!Sileo|book{2}}{36}
+\indexentry{200@\textbf{Tools}!Electra|book{2}}{36}
+\indexentry{200@\textbf{Tools}!Cydia!Impactor|book{2}}{37-38}
+\indexentry{200@\textbf{Tools}!Unc0ver \ios}{38-40}
+\indexentry{200@\textbf{Tools}!Cydia!App Store|book{2}}{41}
+\indexentry{200@\textbf{Tools}!Sileo!App Store|book{2}}{42}
+\indexentry{200@\textbf{Tools}!Electra}{42}
+\indexentry{200@\textbf{Tools}!Cydia}{42}
+\indexentry{200@\textbf{Tools}!BigBoss|book{2}}{43}
+\indexentry{200@\textbf{Tools}!OpenSSH|book{2}}{43}
+\indexentry{200@\textbf{Tools}!Zip|book{2}}{43}
+\indexentry{200@\textbf{Tools}!GDB|book{2}}{43}
+\indexentry{200@\textbf{Tools}!SQLite3|book{2}}{43}
+\indexentry{200@\textbf{Tools}!WGet|book{2}}{43}
+\indexentry{200@\textbf{Tools}!CURL|book{2}}{43}
+\indexentry{200@\textbf{Tools}!Git|book{2}}{43}
+\indexentry{200@\textbf{Tools}!Apt-Get|book{2}}{43}
+\indexentry{200@\textbf{Tools}!Cydia}{44}
+\indexentry{200@\textbf{Tools}!Cydia!App Store}{44}
+\indexentry{200@\textbf{Tools}!Filza File Manager|book{2}}{44}
+\indexentry{200@\textbf{Tools}!Appinst|book{2}}{44}
+\indexentry{200@\textbf{Tools}!iOS-Deploy|book{2}}{44}
+\indexentry{200@\textbf{Tools}!TWRP|book{2}}{48}
+\indexentry{200@\textbf{Tools}!Android SDK! |book{2}}{49}
+\indexentry{200@\textbf{Tools}!Fastboot|book{2}}{49}
+\indexentry{200@\textbf{Tools}!Magisk \android|book{2}}{50}
+\indexentry{200@\textbf{Tools}!SuperSU|book{2}}{50}
+\indexentry{200@\textbf{Tools}!SuperSU}{53}
+\indexentry{200@\textbf{Tools}!TWRP}{53}
+\indexentry{200@\textbf{Tools}!Android SDK! }{53}
+\indexentry{200@\textbf{Tools}!SuperSU}{55}
+\indexentry{200@\textbf{Tools}!TWRP}{57-58}
+\indexentry{200@\textbf{Tools}!Smart Phone Flash Tool|book{2}}{57}
+\indexentry{200@\textbf{Tools}!SuperSU}{58}
+\indexentry{200@\textbf{Tools}!Kingo Root|book{2}}{61}
+\indexentry{200@\textbf{Tools}!Framaroot|book{2}}{61}
+\indexentry{200@\textbf{Tools}!Android SDK! }{64}
+\indexentry{200@\textbf{Tools}!AXMLPrinter2|book{2}}{72}
+\indexentry{200@\textbf{Tools}!SQLiteSpy|book{2}}{74}
+\indexentry{200@\textbf{Tools}!Firebase Scanner|book{2}}{76}
+\indexentry{200@\textbf{Tools}!Keychain Dumper \ios|book{2}}{91}
+\indexentry{200@\textbf{Tools}!SQLiteSpy}{94}
+\indexentry{200@\textbf{Tools}!Plist Substractor \python|book{2}}{96}
+\indexentry{200@\textbf{Tools}!Binary Cookie Reader \python|book{2}}{98}
+\indexentry{200@\textbf{Tools}!Needle \python|book{2}}{100}
+\indexentry{200@\textbf{Tools}!PVRTexTool|book{2}}{104}
+\indexentry{200@\textbf{Tools}!PowerVR|book{2}}{104}
+\indexentry{200@\textbf{Tools}!AMRPlayer|book{2}}{105}
+\indexentry{200@\textbf{Tools}!FFmpeg|book{2}}{105}
+\indexentry{200@\textbf{Tools}!Plutil \mac|book{2}}{110}
+\indexentry{200@\textbf{Tools}!Plist Editor \win|book{2}}{110}
+\indexentry{200@\textbf{Tools}!SQLiteSpy}{112}
+\indexentry{200@\textbf{Tools}!ExifTool|book{2}}{113}
+\indexentry{200@\textbf{Tools}!iExplorer|book{2}}{114-115}
+\indexentry{200@\textbf{Tools}!Hashcat|book{2}}{116}
+\indexentry{200@\textbf{Tools}!itunes\_backup2hashcat \script|book{2}}{116}
+\indexentry{200@\textbf{Tools}!Rasticrac|book{2}}{140}
+\indexentry{200@\textbf{Tools}!DumpDecrypted|book{2}}{140}
+\indexentry{200@\textbf{Tools}!Real APK Leecher|book{3}}{7}
+\indexentry{200@\textbf{Tools}!APK Downloader|book{3}}{7}
+\indexentry{200@\textbf{Tools}!ApkMonk \web|book{3}}{7}
+\indexentry{200@\textbf{Tools}!ApkPure \web|book{3}}{7}
+\indexentry{200@\textbf{Tools}!ApkOnline \web|book{3}}{7}
+\indexentry{200@\textbf{Tools}!Jadx|book{3}}{10-12}
+\indexentry{200@\textbf{Tools}!DEX2JAR|book{3}}{10}
+\indexentry{200@\textbf{Tools}!Jadx!GUI|book{3}}{11}
+\indexentry{200@\textbf{Tools}!Otool|book{3}}{15}
+\indexentry{200@\textbf{Tools}!DumpDecrypted! |book{3}}{18}
+\indexentry{200@\textbf{Tools}!Lipo|book{3}}{20}
+\indexentry{200@\textbf{Tools}!Otool}{22}
+\indexentry{200@\textbf{Tools}!ClassDump|book{3}}{23-24}
+\indexentry{200@\textbf{Tools}!Otool}{25}
+\indexentry{200@\textbf{Tools}!Hopper|book{3}}{26}
+\indexentry{200@\textbf{Tools}!IDA Pro|book{3}}{26}
+\indexentry{200@\textbf{Tools}!MobSF|book{3}}{35-37}
+\indexentry{200@\textbf{Tools}!QARK \python|book{3}}{38-39}
+\indexentry{200@\textbf{Tools}!Koodous \web|book{3}}{40}
+\indexentry{200@\textbf{Tools}!Androsim \all|book{3}}{41-42}
+\indexentry{200@\textbf{Tools}!Jadx}{47}
+\indexentry{200@\textbf{Tools}!Android Studio! |book{3}}{49}
+\indexentry{200@\textbf{Tools}!ProGuard|book{3}}{49}
+\indexentry{200@\textbf{Tools}!ProGuard}{52}
+\indexentry{200@\textbf{Tools}!Jadx}{54}
+\indexentry{200@\textbf{Tools}!Jadx!GUI}{54}
+\indexentry{200@\textbf{Tools}!Android Studio! }{55-56}
+\indexentry{200@\textbf{Tools}!Jadx}{56}
+\indexentry{200@\textbf{Tools}!Bytecode Viewer|book{3}}{57}
+\indexentry{200@\textbf{Tools}!Android Studio! }{58-68}
+\indexentry{200@\textbf{Tools}!DexGuard \coin|book{3}}{69}
+\indexentry{200@\textbf{Tools}!DexProtector|book{3}}{69}
+\indexentry{200@\textbf{Tools}!Simplify|book{3}}{70-71}
+\indexentry{200@\textbf{Tools}!Jadx}{71}
+\indexentry{200@\textbf{Tools}!Unity|book{3}}{77-81}
+\indexentry{200@\textbf{Tools}!ApkMonk \web}{78}
+\indexentry{200@\textbf{Tools}!DotPeek|book{3}}{82-83}
+\indexentry{200@\textbf{Tools}!DotPeek}{87}
+\indexentry{200@\textbf{Tools}!Xamarin|book{3}}{88-91}
+\indexentry{200@\textbf{Tools}!ApkMonk \web}{89}
+\indexentry{200@\textbf{Tools}!JustDecompile|book{3}}{93}
+\indexentry{200@\textbf{Tools}!DevCraft \coin|book{3}}{93}
+\indexentry{200@\textbf{Tools}!DotPeek}{93}
+\indexentry{200@\textbf{Tools}!Visual Studio|book{3}}{93-94}
+\indexentry{200@\textbf{Tools}!PhoneGap|book{3}}{95-102}
+\indexentry{200@\textbf{Tools}!ApkMonk \web}{96}
+\indexentry{200@\textbf{Tools}!JScrambler|book{3}}{100}
+\indexentry{200@\textbf{Tools}!ECMAObfuscator|book{3}}{100}
+\indexentry{200@\textbf{Tools}!Drozer|book{4}}{6-13}
+\indexentry{200@\textbf{Tools}!Needle \python! |book{4}}{17-25}
+\indexentry{200@\textbf{Tools}!Drozer!Agent|book{4}}{8-9}
+\indexentry{200@\textbf{Tools}!Drozer!Console|book{4}}{9-13}
+\indexentry{200@\textbf{Tools}!Java Decompiler|book{4}}{11}
+\indexentry{200@\textbf{Tools}!Cydia!App Store@ |book{4}}{21}
+\indexentry{200@\textbf{Tools}!Plist Editor \win! |book{4}}{23}
+\indexentry{200@\textbf{Tools}!SQLiteSpy! |book{4}}{23}
+\indexentry{200@\textbf{Tools}!Binary Cookie Reader \python! |book{4}}{23}
+\indexentry{200@\textbf{Tools}!ApkTool|book{4}}{31}
+\indexentry{200@\textbf{Tools}!JDK|book{4}}{39}
+\indexentry{200@\textbf{Tools}!JarSigner|book{4}}{40}
+\indexentry{200@\textbf{Tools}!ZipAlign|book{4}}{41}
+\indexentry{200@\textbf{Tools}!Android SDK!  |book{4}}{41}
+\indexentry{200@\textbf{Tools}!GDB! |book{4}}{48}
+\indexentry{200@\textbf{Tools}!Cydia!Substrate|book{4}}{49-50}
+\indexentry{200@\textbf{Tools}!ClassDump! |book{4}}{49}
+\indexentry{200@\textbf{Tools}!Cycript \ios|book{4}}{50-63}
+\indexentry{200@\textbf{Tools}!ClassDump! }{53}
+\indexentry{200@\textbf{Tools}!ClassDump! }{59}
+\indexentry{200@\textbf{Tools}!Cydia!Substrate}{62}
+\indexentry{200@\textbf{Tools}!Xposed \android|book{4}}{64}
+\indexentry{200@\textbf{Tools}!Magisk \android! |book{4}}{64}
+\indexentry{200@\textbf{Tools}!Frida \all|book{4}}{65-84}
+\indexentry{200@\textbf{Tools}!Frida \all!Client|book{4}}{65}
+\indexentry{200@\textbf{Tools}!Frida \all!Server|book{4}}{65}
+\indexentry{200@\textbf{Tools}!Needle \python! }{66}
+\indexentry{200@\textbf{Tools}!Objection \python|book{4}}{66}
+\indexentry{200@\textbf{Tools}!Passionfruit|book{4}}{66}
+\indexentry{200@\textbf{Tools}!Magisk \android! }{67}
+\indexentry{200@\textbf{Tools}!Frida \all!Server}{67-69}
+\indexentry{200@\textbf{Tools}!Frida \all!Internals|book{4}}{70}
+\indexentry{200@\textbf{Tools}!Frida \all!Client}{70}
+\indexentry{200@\textbf{Tools}!Frida \all!CLI|book{4}}{71-74}
+\indexentry{200@\textbf{Tools}!Frida \all!Capabilities|book{4}}{75}
+\indexentry{200@\textbf{Tools}!Frida \all!CLI}{76}
+\indexentry{200@\textbf{Tools}!Frida \all!Limitation|book{4}}{75}
+\indexentry{200@\textbf{Tools}!ApkTool}{77}
+\indexentry{200@\textbf{Tools}!DEX2JAR! |book{4}}{77}
+\indexentry{200@\textbf{Tools}!Frida \all!Examples|book{4}}{77-83}
+\indexentry{200@\textbf{Tools}!Frida \all!Server}{84}
+\indexentry{200@\textbf{Tools}!Frida \all!Non-Rooted Device|book{4}}{84}
+\indexentry{200@\textbf{Tools}!Objection \python}{86-95}
+\indexentry{200@\textbf{Tools}!Frida \all}{86}
+\indexentry{200@\textbf{Tools}!Frida \all!Server}{87}
+\indexentry{200@\textbf{Tools}!Objection \python!CLI|book{4}}{88}
+\indexentry{200@\textbf{Tools}!Objection \python!Reconnaissance|book{4}}{90}
+\indexentry{200@\textbf{Tools}!Objection \python!Examples|book{4}}{92-95}
+\indexentry{200@\textbf{Tools}!Otool! |book{4}}{103}
+\indexentry{200@\textbf{Tools}!Needle \python! }{103}
+\indexentry{200@\textbf{Tools}!Hopper! |book{4}}{104}
+\indexentry{200@\textbf{Tools}!IDA Pro! |book{4}}{104}
+\indexentry{200@\textbf{Tools}!Burp Suite|book{4}}{107}
+\indexentry{200@\textbf{Tools}!Cydia!Substrate}{110-111}
+\indexentry{200@\textbf{Tools}!SSL Kill Switch|book{4}}{111-112}
+\indexentry{200@\textbf{Tools}!iExplorer! |book{4}}{115}
+\indexentry{200@\textbf{Tools}!Keychain Dumper \ios! |book{4}}{117}
+\indexentry{200@\textbf{Tools}!EPB|book{4}}{118}
+\indexentry{200@\textbf{Tools}!Elcomsoft Phone Breaker|book{4}}{118}
+\indexentry{200@\textbf{Tools}!Keychain Dumper \ios! }{119}
+\indexentry{200@\textbf{Tools}!DumpDecrypted!  |book{4}}{120}
+\indexentry{200@\textbf{Tools}!Cydia!Substrate}{121}
+\indexentry{200@\textbf{Tools}!Cycript \ios}{121-122}
+\indexentry{200@\textbf{Tools}!Drozer}{124}
+\indexentry{200@\textbf{Tools}!Jadx! |book{4}}{124}
+\indexentry{200@\textbf{Tools}!Drozer}{126}
+\indexentry{200@\textbf{Tools}!Drozer}{128}
+\indexentry{200@\textbf{Tools}!Drozer}{131}
+\indexentry{200@\textbf{Tools}!Jadx! }{131}
+\indexentry{200@\textbf{Tools}!Jadx! }{136}
+\indexentry{200@\textbf{Tools}!Drozer}{137}
+\indexentry{200@\textbf{Tools}!DexGuard \coin! |book{4}}{138}
+\indexentry{200@\textbf{Tools}!Android Studio!  |book{4}}{138}
+\indexentry{200@\textbf{Tools}!ProGuard! |book{4}}{138}
+\indexentry{200@\textbf{Tools}!Rvictl \ios|book{5}}{12-13}
+\indexentry{200@\textbf{Tools}!TcpDump|book{5}}{14}
+\indexentry{200@\textbf{Tools}!Wireshark|book{5}}{15-16}
+\indexentry{200@\textbf{Tools}!NetworkMiner|book{5}}{18-20}
+\indexentry{200@\textbf{Tools}!Burp Suite!Decoder|book{5}}{21}
+\indexentry{200@\textbf{Tools}!Cain \win|book{5}}{32-37}
+\indexentry{200@\textbf{Tools}!Ettercap|book{5}}{37-42}
+\indexentry{200@\textbf{Tools}!Bettercap|book{5}}{43-47}
+\indexentry{200@\textbf{Tools}!Bettercap}{51}
+\indexentry{200@\textbf{Tools}!Iptables \linux|book{5}}{52-53}
+\indexentry{200@\textbf{Tools}!Burp Suite! |book{5}}{53-56}
+\indexentry{200@\textbf{Tools}!Burp Suite!Site Map|book{5}}{55}
+\indexentry{200@\textbf{Tools}!Mitmproxy|book{5}}{58}
+\indexentry{200@\textbf{Tools}!Ettercap}{69-71}
+\indexentry{200@\textbf{Tools}!Bettercap}{69-70}
+\indexentry{200@\textbf{Tools}!Ettercap!Certificate Impersonation|book{5}}{70-71}
+\indexentry{200@\textbf{Tools}!Ettercap!Configuration|book{5}}{70}
+\indexentry{200@\textbf{Tools}!Cain \win}{70}
+\indexentry{200@\textbf{Tools}!Iptables \linux}{70}
+\indexentry{200@\textbf{Tools}!SslStrip|book{5}}{73-74}
+\indexentry{200@\textbf{Tools}!SslStrip2|book{5}}{76-77}
+\indexentry{200@\textbf{Tools}!Bettercap}{76-78}
+\indexentry{200@\textbf{Tools}!SslStrip}{78}
+\indexentry{200@\textbf{Tools}!Bettercap!Filter|book{5}}{78}
+\indexentry{200@\textbf{Tools}!Burp Suite! }{87-94}
+\indexentry{200@\textbf{Tools}!Burp Suite!Certificate|book{5}}{90-91}
+\indexentry{200@\textbf{Tools}!Cydia! |book{5}}{92}
+\indexentry{200@\textbf{Tools}!Mobile Assistant|book{5}}{92-93}
+\indexentry{200@\textbf{Tools}!Burp Suite!Mobile Assistant|book{5}}{92-93}
+\indexentry{200@\textbf{Tools}!Burp Suite!Certificate}{94}
+\indexentry{200@\textbf{Tools}!Iptables \linux}{95}
+\indexentry{200@\textbf{Tools}!ProxyDroid \android|book{5}}{95}
+\indexentry{200@\textbf{Tools}!Burp Suite!Certificate}{96}
+\indexentry{200@\textbf{Tools}!ApkTool! |book{5}}{96}
+\indexentry{200@\textbf{Tools}!JarSigner! |book{5}}{96}
+\indexentry{200@\textbf{Tools}!Magisk \android!TrustUserCerts|book{5}}{97}
+\indexentry{200@\textbf{Tools}!Mobile Assistant}{100}
+\indexentry{200@\textbf{Tools}!Burp Suite!Mobile Assistant}{100}
+\indexentry{200@\textbf{Tools}!Frida \all! |book{5}}{100}
+\indexentry{200@\textbf{Tools}!Objection \python! |book{5}}{100-101}
+\indexentry{200@\textbf{Tools}!SSL Kill Switch!v2|book{5}}{100}
+\indexentry{200@\textbf{Tools}!SSLUnpinning|book{5}}{100}
+\indexentry{200@\textbf{Tools}!SSL Kill Switch!v2}{102}
+\indexentry{200@\textbf{Tools}!Cain \win}{103}
+\indexentry{200@\textbf{Tools}!Ettercap}{103}
+\indexentry{200@\textbf{Tools}!Burp Suite! }{103}
+\indexentry{200@\textbf{Tools}!Iptables \linux}{103}
+\indexentry{200@\textbf{Tools}!Burp Suite!Repeater|book{5}}{104-105}
+\indexentry{200@\textbf{Tools}!OmniRAT \android|book{5}}{115}
+\indexentry{200@\textbf{Tools}!OmniRAT \android!Server \all|book{5}}{115}
+\indexentry{200@\textbf{Tools}!Metasploit|book{5}}{116}
+\indexentry{200@\textbf{Tools}!Metasploit!Handler|book{5}}{116}
+\indexentry{200@\textbf{Tools}!Meterpreter|book{5}}{116-123}
+\indexentry{200@\textbf{Tools}!Metasploit}{118-119}
+\indexentry{200@\textbf{Tools}!MsfVenom|book{5}}{117}
+\indexentry{200@\textbf{Tools}!Meterpreter!Android Capabilities|book{5}}{119}
+\indexentry{200@\textbf{Tools}!Meterpreter!RAT Permissions|book{5}}{119}
+\indexentry{200@\textbf{Tools}!MsfVenom}{120-122}
+\indexentry{200@\textbf{Tools}!Meterpreter!Pivoting|book{5}}{123}
+\indexentry{200@\textbf{Tools}!Metasploit!SOCKS Server|book{5}}{123}
+\indexentry{200@\textbf{Tools}!Meterpreter!Persistence|book{5}}{123}
+\indexentry{200@\textbf{Tools}!Google Voice \web|book{5}}{126}
+\indexentry{200@\textbf{Tools}!Ez Texting \web|book{5}}{126}
+\indexentry{200@\textbf{Tools}!SMSGANG \web|book{5}}{127}
+\indexentry{200@\textbf{Tools}!Metasploit!\texttt{adb\_server\_exec}|book{5}}{129}
+\indexentry{200@\textbf{Tools}!Meterpreter!APK|book{5}}{129-131}
+\indexentry{200@\textbf{Tools}!VirusTotal \web|book{5}}{130-131}
+\indexentry{200@\textbf{Tools}!Newsstand \ios|book{5}}{132}
+\indexentry{200@\textbf{Tools}!XAgent \ios|book{5}}{132}
+
+\indexentry{201@\blankline|comment}{0}
+
+\indexentry{300@\textbf{Terminal Commands}!\texttt{emulator}|book{1}}{89}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android|book{1}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{connect}|book{1}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{devices}|book{1}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{install}|book{1}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{logcat}|book{1}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{root}|book{1}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{uninstall}|book{1}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{shell service list}|book{1}}{112}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{shell am}|book{1}}{118}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{fastboot}|book{2}}{49}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{push}|book{2}}{55}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{devices}@ |book{2}}{59}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{shell}|book{2}}{59}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{push}}{60}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{java}|book{2}}{72}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{logcat}@ |book{2}}{79-80}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{dmesg}|book{2}}{79}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{dumpsys}|book{2}}{79}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{backup}|book{2}}{81}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{dd}|book{2}}{82}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{openssl}|book{2}}{82}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{keychain-dumper}|book{2}}{91}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{date}|book{2}}{94}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{plutil} \ios|book{2}}{110}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{exiftool}|book{2}}{113}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{hashcat}|book{2}}{116}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{pull}|book{3}}{7}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{strings}|book{3}}{9}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{grep}|book{3}}{9}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{jadx}|book{3}}{11}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{grep}}{11-12}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{findstr} \win|book{3}}{12}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{nm}|book{3}}{15}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{otool}|book{3}}{15}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{archtype}|book{3}}{20}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{lipo}|book{3}}{20}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{otool}}{22}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{class-dump} \ios|book{3}}{23-24}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{otool}}{25}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{jadx}}{56}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{unzip}|book{3}}{81}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{pull}}{81}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{unzip}}{89}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{strings}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{unzip}}{97}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{grep}}{97-99}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{apktool} \android!\texttt{b}|book{3}}{101}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{forward}|book{4}}{9}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{logcat}@  |book{4}}{13}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{ondeviceconsole}|book{4}}{21}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{keychain-dumper}! |book{4}}{23}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{apktool} \android!\texttt{d}|book{4}}{31}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{apktool} \android!\texttt{d}}{37}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{apktool} \android!\texttt{b}@ |book{4}}{38}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{keytool}|book{4}}{39}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{jarsigner}|book{4}}{40}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{zipalign}|book{4}}{41}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{install}@ |book{4}}{42}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{uninstall}@ |book{4}}{42}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{cycript} \ios|book{4}}{52}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{cycript} \ios}{60}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{push}@ |book{4}}{67}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{shell}@ |book{4}}{67}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{frida} \all|book{4}}{71}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{frida} \all}{73-74}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{frida} \all}{76}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{objection} \all|book{4}}{87-95}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{android}|book{4}}{91-95}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{android}!\texttt{hooking}|book{4}}{91-93}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{android}!\texttt{intent}|book{4}}{91}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{ios hooking}|book{4}}{92}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{memory dump}|book{4}}{94}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{android}!\texttt{root}|book{4}}{95}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{android}!\texttt{sslspinning}|book{4}}{95}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{otool}! |book{4}}{103}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{ondeviceconsole}}{106}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{rvictl}|book{4}}{113}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{tcpdump}|book{4}}{113}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{diff}|book{4}}{115}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{sqlite3}|book{4}}{115}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{keychain-dumper}! }{117}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{debugdetect}|book{4}}{120}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{gdb}|book{4}}{120}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{cycript} \ios}{122}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{logcat}@  }{127}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{logcat}@  }{130}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{egrep}|book{4}}{130}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{unzip}! |book{4}}{131}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{openssl}! |book{4}}{131}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{java}! |book{4}}{137}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{unzip}! }{137}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{keytool}}{139-140}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{jarsigner}}{139}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{shell}@ }{139}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{install}@ }{139}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{uninstall}@ }{139}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{tcpdump}! |book{5}}{11}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{rvictl}! |book{5}}{13}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{ifconfig}|book{5}}{13}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{tcpdump}! }{13-14}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{scp}|book{5}}{14}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{strings}! |book{5}}{17}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{arp}|book{5}}{31}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{ettercap}|book{5}}{38-40}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{stty sane}}{42}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{ettercap}}{42}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{bettercap}|book{5}}{45-46}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{iptables}|book{5}}{52}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{iptables}}{70}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{ettercap}}{71}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{bettercap}}{77}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{objection} \all! |book{5}}{101}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{msfconsole}|book{5}}{116}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{msfvenom}|book{5}}{116}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{msfvenom}}{121}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{id}|book{5}}{122}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{connect}@  |book{5}}{129}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{install}@  |book{5}}{129}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{adb} \android!\texttt{shell}@  |book{5}}{129}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{nmap}|book{5}}{129}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{apktool} \android!\texttt{d}@  |book{5}}{131}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{apktool} \android!\texttt{b}@  |book{5}}{131}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{keytool}! |book{5}}{131}
+\indexentry{300@\textbf{Terminal Commands}!\texttt{jarsigner}! |book{5}}{131}
+
+\indexentry{301@\blankline|comment}{0}
+
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/cache} \android|book{2}}{64}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/system} \android|book{2}}{64}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/mnt} \android|book{2}}{64}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android|book{2}}{64}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}|book{2}}{66}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.apk} \android|book{2}}{67}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{AndroidManifest.xml} \android|book{2}}{67}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{classes.dex} \android|book{2}}{67}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{resources.arsc} \android|book{2}}{67}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{META-INF} \android|book{2}}{67}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{res/} \android|book{2}}{67}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android}{68-69}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{misc/wifi/wpa\_supplicant.conf}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.calendar/calendar.db}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.contacts/contacts2.db}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.contacts/profile.db}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.downloads/downloads.db}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.telephony/telephony.db}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.telephony/mmssms.db}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.userdictionary/user\_dict.db}|book{2}}{68}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.maps/}|book{2}}{69}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{*.quicksearchbox/qsb-log.db}|book{2}}{69}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{data/}@\hspace{1em}\texttt{system/accounts.db}|book{2}}{69}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.apk} \android!\texttt{/res/values/strings.xml}|book{2}}{77}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.apk} \android!\texttt{local.properties}|book{2}}{77}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.apk} \android!\texttt{gradle.properties}|book{2}}{77}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.ab} \android|book{2}}{81}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{app}|book{2}}{82}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library@\texttt{mobile/Library/}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/AddressBook@\hspace{1em}\texttt{Add\ldots ook/AddressBook.sqlitedb}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Calendar@\hspace{1em}\texttt{Calendar/Calendar.sqlitedb}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/SMS@\hspace{1em}\texttt{SMS/sms.db}|book{2}}{93-94}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Safari@\hspace{1em}\texttt{Safari/Bookmarks.db}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Voicemail@\hspace{1em}\texttt{Voicemail/voicemail.db}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Notes@\hspace{1em}\texttt{Notes/notes.sqlite}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Keyboard/UserDictionary@\hspace{1em}\texttt{Keyboard/UserDictionary.sqlite}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!wireless/Library@\texttt{wireless/Library/}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!wireless/Library/call@\hspace{1em}\texttt{call\_history.db}|book{2}}{93}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.plist} \ios|book{2}}{95-96}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!containers/Bundle/Application@\texttt{containers/Bundle/Application/}|book{2}}{97}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!containers/Bundle/Application/*@\hspace{1em}\texttt{*/*.app/Info.plist}|book{2}}{97}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.binarycookies} \ios|book{2}}{98}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Keyboard/dynamic-text.dat1@\hspace{1em}\texttt{Keyboard/dynamic-text.dat}|book{2}}{100}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios|book{2}}{101}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Applications@\texttt{mobile/Applications}|book{2}}{102}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Containers@\texttt{mobile/Containers/}|book{2}}{102-104}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!containers@\texttt{containers}|book{2}}{103}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library@\texttt{mobile/Library/}}{104-105}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Caches@\hspace{1em}\texttt{Caches/Snapshots}|book{2}}{104}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Voicemail@\hspace{1em}\texttt{Voicemail/voicemail.db}}{105}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.amr}|book{2}}{105}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/var/root/Library/} \ios|book{2}}{106}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/var/root/Library/} \ios!\texttt{Keyboard/dynamic-text.dat}|book{2}}{106}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.plist} \ios}{109-110}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.mddata} \ios|book{2}}{109}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{Status.plist} \ios|book{2}}{109}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{Manifest.plist} \ios|book{2}}{109}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{Info.plist} \ios|book{2}}{109-110}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.mddata} \ios}{111-112}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{Manifest.plist} \ios}{116}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{Info.plist} \ios}{142}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/data/} \android!\texttt{app}@ |book{3}}{7}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/mnt} \android! |book{3}}{7}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{AndroidManifest.xml} \android! |book{3}}{8}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{classes.dex} \android! |book{3}}{8-9}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{resources.arsc} \android! |book{3}}{8}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!containers/Bundle/Application/<GUID>@\hspace{1em}\texttt{<GUID>/Name.app/Name}|book{3}}{17-18}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.dylib} \ios|book{3}}{18}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.armvX} \ios|book{3}}{20-23}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.armvX} \ios}{25}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{classes.dex} \android! }{78}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{libunity.so}|book{3}}{81}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{NOTICE}|book{3}}{90}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Library/Keyboard/dynamic-text.dat2@\hspace{1em}|book{4}}{23}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{frida-agent.so}|book{4}}{69}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{frida-agent.so}}{84}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{FridaGadget.dylib}|book{4}}{84}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{.plist} \ios! |book{4}}{86}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!containers/Bundle/Application/*2@\hspace{1em}|book{4}}{104}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{/private/var/} \ios!mobile/Containers/Data/Applications@\hspace{1em}\texttt{Data/Applications}|book{4}}{119}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{AndroidManifest.xml} \android!  |book{4}}{131}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{META-INF} \android! |book{4}}{132}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{AndroidManifest.xml} \android!  }{137}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{jdwp}@\texttt{"@jdwp-control} \android|book{4}}{137}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{META-INF} \android! }{139}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{Info.plist} \ios! |book{5}}{84}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{AndroidManifest.xml} \android!   |book{5}}{85}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{network\_security\_config.xml} \android|book{5}}{96}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{network\_security\_config.xml} \android}{99}
+\indexentry{400@\textbf{Files \& Folders}!\texttt{AndroidManifest.xml} \android!   }{119}
+
+\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Threats|book{1}}{8-9}
+\indexentry{BYOD|book{1}}{8}
+\indexentry{WiFi|book{1}}{8}
+\indexentry{Bluetooth|book{1}}{8}
+\indexentry{NFC|book{1}}{8}
+\indexentry{RFID|book{1}}{8}
+\indexentry{Patching|book{1}}{8}
+\indexentry{Theft|book{1}}{8}
+\indexentry{Vulnerability Period|book{1}}{8}
+\indexentry{Server-side Controls|book{1}}{8}
+\indexentry{Application Flaws|book{1}}{10}
+\indexentry{Resistance|book{1}}{11}
+\indexentry{Workforce|book{1}}{11}
+\indexentry{Mobile Security Approach|book{1}}{13}
+\indexentry{Threats}{14}
+\indexentry{Visibility|book{1}}{14}
+\indexentry{Identity Management|book{1}}{14}
+\indexentry{SANS Integrated Lab Platform|book{1}}{15-20}
+\indexentry{SANS Integrated Lab Platform}{25}
+\indexentry{iOS|book{1}}{29}
+\indexentry{iPhone|book{1}}{29}
+\indexentry{iTouch|book{1}}{29}
+\indexentry{iPad|book{1}}{29}
+\indexentry{Ownership Model|book{1}}{29}
+\indexentry{MO|book{1}}{29}
+\indexentry{iOS!Tech Specs|book{1}}{30}
+\indexentry{ARM|book{1}}{30}
+\indexentry{XNU|book{1}}{30}
+\indexentry{HFSX|book{1}}{30}
+\indexentry{Mach-O|book{1}}{30}
+\indexentry{OS X|book{1}}{30}
+\indexentry{Reverse Engineering|book{1}}{30}
+\indexentry{SoC|book{1}}{30}
+\indexentry{System-on-Chip|book{1}}{30}
+\indexentry{iOS!OS Security|book{1}}{31}
+\indexentry{Boot ROM|book{1}}{31}
+\indexentry{Code Signing|book{1}}{31}
+\indexentry{Sandboxing|book{1}}{31}
+\indexentry{DEP|book{1}}{31}
+\indexentry{ASLR|book{1}}{31}
+\indexentry{File System!Encryption|book{1}}{31}
+\indexentry{iOS!Apps|book{1}}{32}
+\indexentry{iOS!Languages|book{1}}{32-33}
+\indexentry{Objective-C|book{1}}{32-34}
+\indexentry{Swift|book{1}}{32-34}
+\indexentry{Languages|book{1}}{32-33}
+\indexentry{DEP}{35}
+\indexentry{W\^{}X|book{1}}{35}
+\indexentry{ROP|book{1}}{35}
+\indexentry{Gadgets|book{1}}{35}
+\indexentry{ASLR}{35}
+\indexentry{Javascript!Engine|book{1}}{36}
+\indexentry{UIWebView|book{1}}{36}
+\indexentry{Safari|book{1}}{36}
+\indexentry{JIT Compilation|book{1}}{36}
+\indexentry{ASLR}{37}
+\indexentry{DEP}{37}
+\indexentry{ROP}{37-38}
+\indexentry{DoS|book{1}}{37}
+\indexentry{iPhone!XS|book{1}}{38}
+\indexentry{PAC|book{1}}{38}
+\indexentry{Bionic|book{1}}{38}
+\indexentry{Jailbreak|book{1}}{38}
+\indexentry{JIT Compilation}{38-39}
+\indexentry{JOP|book{1}}{38}
+\indexentry{ARM}{38}
+\indexentry{MAC|book{1}}{38}
+\indexentry{PAC!Bypass|book{1}}{38}
+\indexentry{WebKit|book{1}}{38}
+\indexentry{Javascript!Engine}{38}
+\indexentry{Code Signing}{39}
+\indexentry{Xcode|book{1}}{39}
+\indexentry{Developer Certificate \ios|book{1}}{39}
+\indexentry{MobileSafari|book{1}}{39}
+\indexentry{Safari}{39}
+\indexentry{Javascript!Nitro JIT RWX|book{1}}{39}
+\indexentry{Objective-C}{39}
+\indexentry{App Store|book{1}}{39}
+\indexentry{iOS!Code Signing|book{1}}{39}
+\indexentry{iOS!Data Protection|book{1}}{40}
+\indexentry{iOS!Encryption|book{1}}{40}
+\indexentry{NSFileProtection|book{1}}{40}
+\indexentry{Data Encryption|book{1}}{40}
+\indexentry{File System!Encryption}{40}
+\indexentry{NAND|book{1}}{40}
+\indexentry{Entitlement|book{1}}{40}
+\indexentry{Sandbox Directory|book{1}}{40}
+\indexentry{Dumping Attack|book{1}}{40}
+\indexentry{Flash Storage|book{1}}{40}
+\indexentry{iOS!Privileges|book{1}}{41-43}
+\indexentry{Sandboxing}{41}
+\indexentry{Contacts!Access|book{1}}{42}
+\indexentry{ASL|book{1}}{43}
+\indexentry{MobileSafari}{43}
+\indexentry{App Store}{43}
+\indexentry{iOS!Updates|book{1}}{44}
+\indexentry{OTA|book{1}}{44}
+\indexentry{Keyboard|book{1}}{45}
+\indexentry{iOS!Support|book{1}}{46}
+\indexentry{iOS!Versions|book{1}}{46}
+\indexentry{Support Lifetime|book{1}}{46}
+\indexentry{Android|book{1}}{50}
+\indexentry{OHA|book{1}}{50}
+\indexentry{NFC}{50}
+\indexentry{Android!Tech Specs|book{1}}{51}
+\indexentry{ARM}{51}
+\indexentry{MIPS|book{1}}{51}
+\indexentry{Monolithic Kernel|book{1}}{51}
+\indexentry{YAFFS|book{1}}{51}
+\indexentry{VFAT|book{1}}{51}
+\indexentry{FAT|book{1}}{51}
+\indexentry{Ext4|book{1}}{51}
+\indexentry{ELF|book{1}}{51}
+\indexentry{Android!Versions|book{1}}{52}
+\indexentry{Android!OS Security|book{1}}{53}
+\indexentry{Boot ROM}{53}
+\indexentry{Boot Loader|book{1}}{53}
+\indexentry{Locked Bootloader|book{1}}{53}
+\indexentry{Passcode!Bypass Attack|book{1}}{53}
+\indexentry{SD|book{1}}{53}
+\indexentry{Zygote|book{1}}{53}
+\indexentry{Dalvik|book{1}}{53-56}
+\indexentry{ART|book{1}}{53-54}
+\indexentry{Android!Apps|book{1}}{54}
+\indexentry{Android!Languages|book{1}}{54}
+\indexentry{Android!SDK|book{1}}{54}
+\indexentry{Android!VM|book{1}}{54}
+\indexentry{Java|book{1}}{54}
+\indexentry{Kotlin|book{1}}{54}
+\indexentry{Objective-C}{54}
+\indexentry{Languages}{54}
+\indexentry{DEX|book{1}}{54}
+\indexentry{JIT Compilation}{55-57}
+\indexentry{Process Isolation|book{1}}{55}
+\indexentry{Sandboxing}{55}
+\indexentry{AOT|book{1}}{56-57}
+\indexentry{ART}{56-57}
+\indexentry{Update|book{1}}{57}
+\indexentry{Account Isolation|book{1}}{58}
+\indexentry{Android!Privileges|book{1}}{58-65}
+\indexentry{GID|book{1}}{58}
+\indexentry{UID|book{1}}{58}
+\indexentry{Android!Manifest|book{1}}{59-60}
+\indexentry{Permission Groups|book{1}}{61}
+\indexentry{API 23|book{1}}{61}
+\indexentry{Phone Service Abuse|book{1}}{62}
+\indexentry{Permission Groups!Normal|book{1}}{63}
+\indexentry{API 23}{63-64}
+\indexentry{API 28|book{1}}{64}
+\indexentry{Permission Groups!Dangerous|book{1}}{64}
+\indexentry{Android!Manifest}{64}
+\indexentry{MDM|book{1}}{65}
+\indexentry{Admin Privilege|book{1}}{65}
+\indexentry{Activate Device Administrator|book{1}}{65}
+\indexentry{Accessibility Service|book{1}}{66}
+\indexentry{Sensitive Information|book{1}}{66}
+\indexentry{Code Signing}{67}
+\indexentry{Identity Validation|book{1}}{67}
+\indexentry{Legitimate Application|book{1}}{67}
+\indexentry{Android!Code Signing|book{1}}{67}
+\indexentry{Exploit!Mitigation|book{1}}{68}
+\indexentry{Android!OS Security}{68-69}
+\indexentry{ASLR}{68}
+\indexentry{DEP}{68}
+\indexentry{Dalvik}{68}
+\indexentry{SELinux|book{1}}{69}
+\indexentry{MAC}{69}
+\indexentry{Android!Data Protection|book{1}}{70}
+\indexentry{Android!Encryption|book{1}}{70}
+\indexentry{Data Encryption}{70}
+\indexentry{AES|book{1}}{70}
+\indexentry{Master Key|book{1}}{70}
+\indexentry{Passcode|book{1}}{70}
+\indexentry{Android!Passcode|book{1}}{70}
+\indexentry{Keychain|book{1}}{70}
+\indexentry{Android!Updates|book{1}}{71-78}
+\indexentry{OTA}{71}
+\indexentry{Android!Fragmentation|book{1}}{72-73}
+\indexentry{OHA}{73}
+\indexentry{NDA|book{1}}{73}
+\indexentry{Treble|book{1}}{74-77}
+\indexentry{OEM|book{1}}{74}
+\indexentry{HAL|book{1}}{75}
+\indexentry{HIDL|book{1}}{75}
+\indexentry{ADB|book{1}}{75}
+\indexentry{Cyanogen|book{1}}{76}
+\indexentry{Stagefright|book{1}}{78}
+\indexentry{SAW|book{1}}{79}
+\indexentry{Bubbles API|book{1}}{79}
+\indexentry{Adiantum|book{1}}{79}
+\indexentry{Android!Vulnerabilities|book{1}}{78}
+\indexentry{Project Mainline|book{1}}{78}
+\indexentry{Emulators|book{1}}{84}
+\indexentry{Simulators|book{1}}{84}
+\indexentry{iOS!Simulator|book{1}}{85}
+\indexentry{Xcode}{85}
+\indexentry{SDK|book{1}}{85-87}
+\indexentry{Android!Emulator|book{1}}{86}
+\indexentry{Qemu|book{1}}{86}
+\indexentry{AVD|book{1}}{86-92}
+\indexentry{Android!Studio|book{1}}{86-90}
+\indexentry{AVD!Management|book{1}}{89}
+\indexentry{TcpDump|book{1}}{89}
+\indexentry{Qemu}{89}
+\indexentry{APK|book{1}}{90}
+\indexentry{Android!Emulator}{91}
+\indexentry{Android!x86|book{1}}{91}
+\indexentry{AVD!Creation|book{1}}{91}
+\indexentry{AVD!Interaction|book{1}}{92}
+\indexentry{ADB}{92}
+\indexentry{IPC|book{1}}{100}
+\indexentry{URL Schemes|book{1}}{100-103}
+\indexentry{iOS!IPC|book{1}}{100-107}
+\indexentry{MobileSafari}{100}
+\indexentry{iOS!OS Security}{101-102}
+\indexentry{Universal Links|book{1}}{103-104}
+\indexentry{AASA|book{1}}{103-104}
+\indexentry{Chrome for iOS|book{1}}{105}
+\indexentry{URL Schemes!Vulnerability|book{1}}{105}
+\indexentry{FaceTime|book{1}}{105}
+\indexentry{CVE|book{1}}{105}
+\indexentry{XSS|book{1}}{105}
+\indexentry{iOS!Apps!Extensions|book{1}}{106-107}
+\indexentry{Action Extension|book{1}}{106-107}
+\indexentry{IPC}{106}
+\indexentry{MobileSafari}{107}
+\indexentry{Sensitive Information}{107}
+\indexentry{Android!Components|book{1}}{109}
+\indexentry{Android!IPC|book{1}}{110-118}
+\indexentry{Activities|book{1}}{109}
+\indexentry{Fragments|book{1}}{109}
+\indexentry{Intents|book{1}}{109}
+\indexentry{Services|book{1}}{109}
+\indexentry{Content Providers|book{1}}{109}
+\indexentry{Broadcast Receivers|book{1}}{109}
+\indexentry{Zygote}{110}
+\indexentry{Activities}{111}
+\indexentry{Intents}{111}
+\indexentry{Services}{111-112}
+\indexentry{Broadcast Receivers}{111}
+\indexentry{ServiceManager|book{1}}{112}
+\indexentry{Content Providers}{113}
+\indexentry{Android!Manifest}{113-115}
+\indexentry{URL Schemes!\texttt{content://}|book{1}}{113}
+\indexentry{Broadcast Receivers}{114}
+\indexentry{Intents}{114}
+\indexentry{Intents!Filter|book{1}}{114}
+\indexentry{IPC}{115}
+\indexentry{Android!IPC!Permissions|book{1}}{115-116}
+\indexentry{Protection Levels|book{1}}{115}
+\indexentry{Permission Groups!Normal}{115}
+\indexentry{Permission Groups!Dangerous}{115}
+\indexentry{API 23}{115}
+\indexentry{Android!Components}{116-117}
+\indexentry{Activities}{116-118}
+\indexentry{Services}{116-117}
+\indexentry{Content Providers}{116-117}
+\indexentry{Broadcast Receivers}{116-117}
+\indexentry{Intents!Filter}{117}
+\indexentry{Android!Manifest}{117}
+\indexentry{Attack Surface|book{1}}{117}
+\indexentry{Exported Attribute|book{1}}{117}
+\indexentry{AM|book{1}}{118}
+\indexentry{Heap|book{1}}{118}
+\indexentry{ADB}{118}
+\indexentry{Broadcast Intents|book{1}}{118}
+\indexentry{Attack Surface}{119}
+\indexentry{Boot ROM! |book{2}}{34}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Threats! |book{2}}{4}
+\indexentry{Stolen Device|book{2}}{4}
+\indexentry{Impact|book{2}}{5}
+\indexentry{Loss Impact|book{2}}{5}
+\indexentry{Jailbreak! |book{2}}{5}
+\indexentry{Backdoor|book{2}}{5}
+\indexentry{Rootkit|book{2}}{5}
+\indexentry{Passcode! |book{2}}{6}
+\indexentry{Passcode!Bypass Attack! |book{2}}{7}
+\indexentry{PIN|book{2}}{8-9}
+\indexentry{MDM! |book{2}}{6}
+\indexentry{Data Loss|book{2}}{6}
+\indexentry{iOS!Passcode|book{2}}{7}
+\indexentry{GrayKey|book{2}}{8-13}
+\indexentry{Cellebrite|book{2}}{8}
+\indexentry{GrayKey!Password Guessing|book{2}}{9}
+\indexentry{Passwords!Guessing|book{2}}{9}
+\indexentry{SEP|book{2}}{9}
+\indexentry{USB!Restricted Mode|book{2}}{10-13}
+\indexentry{Cellebrite}{12}
+\indexentry{Faraday Bag|book{2}}{13}
+\indexentry{Emergency SOS|book{2}}{14}
+\indexentry{Face ID|book{2}}{15}
+\indexentry{Locked Device|book{2}}{16}
+\indexentry{MDM! }{16}
+\indexentry{Passcode!Bypass Attack! }{17}
+\indexentry{Passcode!Failed Guesses|book{2}}{17}
+\indexentry{Android!Passcode! |book{2}}{17}
+\indexentry{Wipe|book{2}}{17}
+\indexentry{PIN}{17-18}
+\indexentry{PIN!Top-20|book{2}}{18}
+\indexentry{Brute Force|book{2}}{18}
+\indexentry{Rubber Ducky|book{2}}{18}
+\indexentry{USB!On-the-Go Adapter|book{2}}{18}
+\indexentry{Duckyscript|book{2}}{18}
+\indexentry{Passcode!Recommendations|book{2}}{19}
+\indexentry{Notification of Loss|book{2}}{19}
+\indexentry{Lockdown Mode|book{2}}{20}
+\indexentry{Emergency SOS}{20}
+\indexentry{Smart Lock|book{2}}{20-21}
+\indexentry{PIN}{21}
+\indexentry{GPS|book{2}}{21}
+\indexentry{Bluetooth! |book{2}}{21}
+\indexentry{MDM!Solutions|book{2}}{22}
+\indexentry{GPS}{23}
+\indexentry{Lost Device|book{2}}{23-25}
+\indexentry{Google Find My Device|book{2}}{23}
+\indexentry{iOS!Find My iPhone|book{2}}{23}
+\indexentry{Wipe!Policy|book{2}}{26}
+\indexentry{Jailbreaking \ios|book{2}}{28}
+\indexentry{Rooting \android|book{2}}{28}
+\indexentry{Unlocking \win|book{2}}{28}
+\indexentry{Jailbreaking \ios!Motivators|book{2}}{29-31}
+\indexentry{Rooting \android!Motivators|book{2}}{29-31}
+\indexentry{Unlocking \win!Motivators|book{2}}{29-31}
+\indexentry{Unrestricted Device|book{2}}{28-31}
+\indexentry{Unrestricted Device!Legality|book{2}}{30}
+\indexentry{DMCA|book{2}}{30}
+\indexentry{Unrestricted Device!Recommendations|book{2}}{32}
+\indexentry{Jailbreaking \ios!Recommendations|book{2}}{32}
+\indexentry{Rooting \android!Recommendations|book{2}}{32}
+\indexentry{Unlocking \win!Recommendations|book{2}}{32}
+\indexentry{EULA|book{2}}{32-33}
+\indexentry{Jailbreaking \ios!Revert|book{2}}{33}
+\indexentry{Jailbreaking \ios!Untethered@(Un)Tethered|book{2}}{33}
+\indexentry{Jailbreaking \ios!Details|book{2}}{33-45}
+\indexentry{Unrestricted Device}{33}
+\indexentry{Jailbreaking \ios!Boot|book{2}}{34}
+\indexentry{iBoot|book{2}}{34}
+\indexentry{iOS!Boot Process|book{2}}{34}
+\indexentry{Boot Loader! |book{2}}{34}
+\indexentry{LiberiOS Exploit|book{2}}{35}
+\indexentry{IPA|book{2}}{37}
+\indexentry{Jailbreak!Signature|book{2}}{37}
+\indexentry{iTunes|book{2}}{37}
+\indexentry{APT|book{2}}{41}
+\indexentry{Banned Applications|book{2}}{41}
+\indexentry{IPA!Install|book{2}}{44}
+\indexentry{iOS!App Store|book{2}}{44}
+\indexentry{SpringBoard|book{2}}{44}
+\indexentry{iFunBox|book{2}}{44}
+\indexentry{Rooting \android}{47-61}
+\indexentry{Userland Exploit|book{2}}{47}
+\indexentry{OEM! |book{2}}{47-49}
+\indexentry{Boot Loader! }{47}
+\indexentry{ROM|book{2}}{47-48}
+\indexentry{Engineer Mode|book{2}}{47}
+\indexentry{Android!Components! |book{2}}{48}
+\indexentry{Android!Factory Reset|book{2}}{48}
+\indexentry{Boot Loader! }{48-49}
+\indexentry{Recovery|book{2}}{48}
+\indexentry{ClockworkMod|book{2}}{48}
+\indexentry{TWRP|book{2}}{48}
+\indexentry{LineageOS|book{2}}{48}
+\indexentry{AOSP|book{2}}{48}
+\indexentry{Cyanogen! |book{2}}{48}
+\indexentry{Android!Updates! |book{2}}{48-49}
+\indexentry{ADB! |book{2}}{48}
+\indexentry{Google SafetyNet|book{2}}{50}
+\indexentry{MITM|book{2}}{50}
+\indexentry{Userland Exploit}{51}
+\indexentry{BLU|book{2}}{52-58}
+\indexentry{ADB! }{53}
+\indexentry{TWRP}{53}
+\indexentry{USB!Debugging|book{2}}{54}
+\indexentry{Rooting \android!Root Access|book{2}}{59}
+\indexentry{ADB! }{59}
+\indexentry{Dirty Cow Exploit|book{2}}{60}
+\indexentry{COW|book{2}}{60}
+\indexentry{CVE! |book{2}}{60}
+\indexentry{XDA Developers|book{2}}{61}
+\indexentry{Data Storage|book{2}}{63}
+\indexentry{Android!File System|book{2}}{64-82}
+\indexentry{Android!Market|book{2}}{64}
+\indexentry{Signed Applications|book{2}}{64}
+\indexentry{Database|book{2}}{65}
+\indexentry{APK! |book{2}}{65}
+\indexentry{DEX! |book{2}}{65}
+\indexentry{Application Data|book{2}}{66}
+\indexentry{Android!Manifest! |book{2}}{67}
+\indexentry{Android!Resources|book{2}}{67}
+\indexentry{APK!Structure|book{2}}{67}
+\indexentry{WEP|book{2}}{68}
+\indexentry{WPA|book{2}}{68}
+\indexentry{Browser!History|book{2}}{68}
+\indexentry{Calendar|book{2}}{68}
+\indexentry{Contacts|book{2}}{68}
+\indexentry{Google Maps|book{2}}{68}
+\indexentry{SMS|book{2}}{68}
+\indexentry{Dialer History|book{2}}{68}
+\indexentry{Autocorrect Keywords|book{2}}{68}
+\indexentry{Search Terms|book{2}}{68}
+\indexentry{Passwords|book{2}}{68}
+\indexentry{Credentials|book{2}}{68}
+\indexentry{Emails|book{2}}{68}
+\indexentry{Location Tracking Information|book{2}}{69}
+\indexentry{GPS}{69}
+\indexentry{Android!Data Storage|book{2}}{70}
+\indexentry{Android!Shared Preferences|book{2}}{71}
+\indexentry{Android!Security Library|book{2}}{71}
+\indexentry{Master Key! |book{2}}{71}
+\indexentry{Keyset|book{2}}{71}
+\indexentry{XML|book{2}}{71-72}
+\indexentry{Key-Value|book{2}}{71}
+\indexentry{Android!Manifest!Binary Format|book{2}}{72}
+\indexentry{SQLite DB|book{2}}{73}
+\indexentry{SQLCipher|book{2}}{73}
+\indexentry{Android!Keystore|book{2}}{73}
+\indexentry{AES! |book{2}}{73}
+\indexentry{Realm DB|book{2}}{75}
+\indexentry{AES! }{75}
+\indexentry{Android!Keystore}{75}
+\indexentry{Firebase DB|book{2}}{76}
+\indexentry{JSON|book{2}}{76}
+\indexentry{Android!Manifest! }{77}
+\indexentry{MODEWORLD@\texttt{MODE\_WORLD\_READABLE} \android|book{2}}{77}
+\indexentry{API 17|book{2}}{77}
+\indexentry{Android!Keystore}{78}
+\indexentry{Trusted Execution Environment|book{2}}{78}
+\indexentry{BouncyCastle|book{2}}{78}
+\indexentry{BKS|book{2}}{78}
+\indexentry{API 18|book{2}}{78}
+\indexentry{Android!Logs|book{2}}{79-80}
+\indexentry{Debuggable Flag|book{2}}{79}
+\indexentry{Android!Manifest! }{79}
+\indexentry{Android!Backup|book{2}}{81-82}
+\indexentry{AES! }{81}
+\indexentry{iOS!Data Protection! |book{2}}{86-88}
+\indexentry{SEP}{86}
+\indexentry{AES! }{86}
+\indexentry{Key Hierarchy|book{2}}{87}
+\indexentry{File Key|book{2}}{87}
+\indexentry{Class Key|book{2}}{87}
+\indexentry{Hardware Key|book{2}}{87}
+\indexentry{Passcode Key|book{2}}{87}
+\indexentry{File Protection Classes|book{2}}{88}
+\indexentry{Keychain! |book{2}}{89-91}
+\indexentry{iOS!Keychain|book{2}}{89-91}
+\indexentry{Accessibility Attributes|book{2}}{90}
+\indexentry{iOS!Keychain!Accessibility Attributes|book{2}}{90}
+\indexentry{iOS!Data Storage|book{2}}{92}
+\indexentry{NSUserDefaults|book{2}}{92}
+\indexentry{CoreData|book{2}}{92}
+\indexentry{SQLite DB}{92-93}
+\indexentry{Firebase DB}{92}
+\indexentry{Realm DB}{92}
+\indexentry{Couchbase|book{2}}{92}
+\indexentry{Bookmarks|book{2}}{93}
+\indexentry{Calendar}{93}
+\indexentry{Contacts}{93}
+\indexentry{SMS}{93-94}
+\indexentry{Dictionary Preferences|book{2}}{93}
+\indexentry{Dialer History}{93}
+\indexentry{Notes|book{2}}{93}
+\indexentry{Voicemail|book{2}}{93}
+\indexentry{Passwords}{93}
+\indexentry{Credentials}{93}
+\indexentry{SQLite DB!Data Decoding|book{2}}{94}
+\indexentry{Epoch Time|book{2}}{94}
+\indexentry{Plist|book{2}}{95-97}
+\indexentry{XML}{95}
+\indexentry{Xcode! |book{2}}{96}
+\indexentry{MobileMail|book{2}}{97}
+\indexentry{IMAP|book{2}}{97}
+\indexentry{POP3|book{2}}{97}
+\indexentry{Passwords}{97}
+\indexentry{Binary Cookies|book{2}}{98}
+\indexentry{WebViews|book{2}}{98}
+\indexentry{Xcode! }{99}
+\indexentry{iOS!Logs|book{2}}{99}
+\indexentry{iOS!File System|book{2}}{101-106}
+\indexentry{Keyboard!Cache|book{2}}{100}
+\indexentry{Keychain! }{101}
+\indexentry{Keybag|book{2}}{101}
+\indexentry{Key Escrow Storage|book{2}}{101}
+\indexentry{MobileKeyBag|book{2}}{101}
+\indexentry{OTA! |book{2}}{101}
+\indexentry{iOS!Logs}{101}
+\indexentry{GUID|book{2}}{101}
+\indexentry{Sandbox Directory! |book{2}}{101}
+\indexentry{Screenshots|book{2}}{104}
+\indexentry{Snapshots|book{2}}{104}
+\indexentry{Zoom-In|book{2}}{104}
+\indexentry{Task Switching|book{2}}{104}
+\indexentry{KTX|book{2}}{104}
+\indexentry{Voicemail}{105}
+\indexentry{User Dictionary|book{2}}{106}
+\indexentry{Passwords!Guessing}{106}
+\indexentry{Wordlist|book{2}}{106}
+\indexentry{Jailbreaking \ios!Artifacts|book{2}}{106}
+\indexentry{iOS!Backup|book{2}}{107-118}
+\indexentry{iTunes}{107-109}
+\indexentry{Apple Pay|book{2}}{107}
+\indexentry{iCloud|book{2}}{107}
+\indexentry{iCloud!Backup|book{2}}{107}
+\indexentry{Touch ID|book{2}}{107}
+\indexentry{Face ID}{107}
+\indexentry{Keychain! }{107}
+\indexentry{iTunes!Backup|book{2}}{107-108}
+\indexentry{MobileSync|book{2}}{108}
+\indexentry{SHA1|book{2}}{108-109}
+\indexentry{iOS!Backup!Resources|book{2}}{109}
+\indexentry{ICCID|book{2}}{109}
+\indexentry{IMEI|book{2}}{109}
+\indexentry{SMS}{109}
+\indexentry{Calendar}{109}
+\indexentry{Contacts}{109}
+\indexentry{Passcode! }{109}
+\indexentry{XML}{110}
+\indexentry{iTunes}{111}
+\indexentry{GPS}{113}
+\indexentry{iTunes}{114}
+\indexentry{iOS!Backup!Encrypted|book{2}}{116}
+\indexentry{iOS!Backup!Password|book{2}}{116-117}
+\indexentry{HMAC|book{2}}{116}
+\indexentry{iTunes}{117}
+\indexentry{Touch ID}{117}
+\indexentry{Face ID}{117}
+\indexentry{Forensic Acquisition|book{2}}{117}
+\indexentry{SQLite DB}{119}
+\indexentry{Malware|book{2}}{123-124}
+\indexentry{Credentials!Theft|book{2}}{125}
+\indexentry{SMS}{125-126}
+\indexentry{Two-Factor Authentication|book{2}}{125}
+\indexentry{Zitmo|book{2}}{125}
+\indexentry{MTAN@mTAN|book{2}}{125}
+\indexentry{ZeuS|book{2}}{125}
+\indexentry{SMS!Short Code|book{2}}{126}
+\indexentry{SMS!Auto-Send|book{2}}{126}
+\indexentry{Malware!Authors Motivator|book{2}}{126}
+\indexentry{Malware!Delivery Methods|book{2}}{127}
+\indexentry{App Store! |book{2}}{127}
+\indexentry{Android!Malware|book{2}}{128-137}
+\indexentry{Legitimate Application! |book{2}}{128}
+\indexentry{Android!Fragmentation! |book{2}}{128}
+\indexentry{SMS!Short Code}{129-130}
+\indexentry{Trojan|book{2}}{129-130}
+\indexentry{SuiConFo|book{2}}{130}
+\indexentry{Foncy|book{2}}{130-132}
+\indexentry{Command \& Control|book{2}}{130}
+\indexentry{Android!Manifest! }{131}
+\indexentry{GPS}{131}
+\indexentry{SMS!Short Code}{132}
+\indexentry{Command \& Control}{132}
+\indexentry{Ransomware|book{2}}{133}
+\indexentry{Svpeng|book{2}}{133}
+\indexentry{FBI|book{2}}{133}
+\indexentry{MoneyPack|book{2}}{133}
+\indexentry{Kaspersky Labs|book{2}}{133}
+\indexentry{Cloak \& Dagger Attack|book{2}}{134-136}
+\indexentry{Accessibility Service!Abuse|book{2}}{134-136}
+\indexentry{SYSTEMALERT@\texttt{SYSTEM\_ALERT\_WINDOW} \android|book{2}}{134}
+\indexentry{BINDACCESS@\texttt{BIND\_ACCESSIBILITY\_SERVICE} \android|book{2}}{134}
+\indexentry{Overlay|book{2}}{134-136}
+\indexentry{Clickjacking Attack|book{2}}{135}
+\indexentry{Invisible Grid Attack|book{2}}{135}
+\indexentry{BINDACCESS@\texttt{BIND\_ACCESSIBILITY\_SERVICE} \android}{136}
+\indexentry{REQUIRESINSTALL@\texttt{REQUIRES\_INSTALL\_PACKAGES} \android|book{2}}{137}
+\indexentry{Third-Party Applications|book{2}}{137}
+\indexentry{Unknown Sources|book{2}}{137}
+\indexentry{ADB! }{137}
+\indexentry{iOS!Malware|book{2}}{138-139}
+\indexentry{SMS}{138}
+\indexentry{SMS!Short Code}{138}
+\indexentry{SMS!Auto-Send}{138}
+\indexentry{Storm8|book{2}}{138}
+\indexentry{MogoRoad|book{2}}{138}
+\indexentry{Sensitive Information! |book{2}}{138}
+\indexentry{Phishing|book{2}}{139}
+\indexentry{Popup|book{2}}{139}
+\indexentry{Apple ID|book{2}}{139}
+\indexentry{Yispecter|book{2}}{141-142}
+\indexentry{App Store!Certificates|book{2}}{140}
+\indexentry{App Store! }{140-141}
+\indexentry{Xcode! }{140}
+\indexentry{QVOD|book{2}}{141}
+\indexentry{SpringBoard}{142}
+\indexentry{Command \& Control}{142}
+\indexentry{MobileSafari! |book{2}}{142}
+\indexentry{Enterprise Certificate|book{2}}{142}
+\indexentry{Malware!Defense|book{2}}{143}
+\indexentry{Sandboxing! |book{2}}{143}
+\indexentry{Antivirus|book{2}}{143}
+\indexentry{Parental Control|book{2}}{143}
+\indexentry{Google Play Protect|book{2}}{144}
+\indexentry{Scanning|book{2}}{144}
+\indexentry{Android!Device Manager|book{2}}{144}
+\indexentry{Safe Browsing|book{2}}{144}
+\indexentry{Side Loading|book{2}}{145}
+\indexentry{Jailbreaking \ios}{145}
+\indexentry{Unknown Sources}{145}
+\indexentry{MDM! }{145}
+\indexentry{Training|book{2}}{146}
+\indexentry{Cut the Rope|book{2}}{146}
+\indexentry{Angry Birds|book{2}}{146}
+\indexentry{MO! |book{2}}{146}
+\indexentry{Purchase Blocker|book{2}}{146}
+\indexentry{Parental Control}{146}
+\indexentry{BYOD! |book{2}}{146}
+\indexentry{SMS!Short Code}{146}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Static Analysis|book{3}}{4}
+\indexentry{Reverse Engineering! |book{3}}{4-5}
+\indexentry{DMCA! |book{3}}{5}
+\indexentry{EULA! |book{3}}{5}
+\indexentry{Computer Programs Directive|book{3}}{5}
+\indexentry{Fair Practice|book{3}}{5}
+\indexentry{Android!Apps!Retrieval|book{3}}{7}
+\indexentry{Android!Reverse Engineering|book{3}}{8}
+\indexentry{Android!Static Analysis|book{3}}{8-12}
+\indexentry{Ninja Slider|book{3}}{8-9}
+\indexentry{Dalvik! |book{3}}{8}
+\indexentry{DEX!  |book{3}}{8}
+\indexentry{APK!  |book{3}}{8}
+\indexentry{Dalvik!Decompiler|book{3}}{10}
+\indexentry{DEX!  }{10}
+\indexentry{APK!  }{10}
+\indexentry{JAR|book{3}}{10}
+\indexentry{Android!Sensitive Code|book{3}}{12}
+\indexentry{Socket|book{3}}{12}
+\indexentry{Contacts!Contract|book{3}}{12}
+\indexentry{SMS!Manager|book{3}}{12}
+\indexentry{Telephony Manager|book{3}}{12}
+\indexentry{Location Manager|book{3}}{12}
+\indexentry{Process Builder|book{3}}{12}
+\indexentry{Intents!ACTIONC@\texttt{ACTION\_CALL}|book{3}}{12}
+\indexentry{Android!Market|book{3}}{12}
+\indexentry{iOS!Reverse Engineering|book{3}}{13}
+\indexentry{iOS!Static Analysis|book{3}}{13}
+\indexentry{Static Analysis}{13}
+\indexentry{Legitimate Application!  |book{3}}{13}
+\indexentry{Swift! |book{3}}{14-15}
+\indexentry{Objective-C! |book{3}}{14-15}
+\indexentry{Flappy Bird|book{3}}{14}
+\indexentry{Integer Overflow|book{3}}{14}
+\indexentry{Buffer Overflow|book{3}}{14}
+\indexentry{ASLR! |book{3}}{14}
+\indexentry{Name Mangling|book{3}}{15}
+\indexentry{Jailbreaking \ios!Binary Identification|book{3}}{15}
+\indexentry{iOS!Reverse Engineering}{16}
+\indexentry{Mach-O! |book{3}}{16-17}
+\indexentry{Xcode!  |book{3}}{16}
+\indexentry{iOS!Apps!Retrieval|book{3}}{17}
+\indexentry{App Store!  |book{3}}{17}
+\indexentry{iOS!Apps!Encrypted|book{3}}{17-18}
+\indexentry{ARM! |book{3}}{19}
+\indexentry{ARM!v5|book{3}}{19}
+\indexentry{ARM!v6|book{3}}{19}
+\indexentry{ARM!v7(s)|book{3}}{19}
+\indexentry{Mach-O! }{19}
+\indexentry{Architecture|book{3}}{19-20}
+\indexentry{iOS!Apps!Unencrypted|book{3}}{21}
+\indexentry{Objective-C! }}{23-24}
+\indexentry{Mach-O! }{23}
+\indexentry{iOS!Apps!Disassembly|book{3}}{25-26}
+\indexentry{Mach-O! }{25}
+\indexentry{ARM! }{25}
+\indexentry{Xcode!  }{25}
+\indexentry{Disassembler|book{3}}{26}
+\indexentry{Automated Analysis|book{3}}{31-43}
+\indexentry{Automated Analysis!When ?|book{3}}{33}
+\indexentry{Automated Analysis!Tools|book{3}}{34}
+\indexentry{Static Analysis}{34}
+\indexentry{Android!Static Analysis}{34-35}
+\indexentry{Dynamic Analysis|book{3}}{35}
+\indexentry{IPA!Analysis|book{3}}{36}
+\indexentry{APK!Analysis|book{3}}{36}
+\indexentry{Static Analysis}{37}
+\indexentry{Dynamic Analysis}{37}
+\indexentry{APK!Analysis}{38}
+\indexentry{Static Analysis}{38}
+\indexentry{Exploit!APK|book{3}}{38}
+\indexentry{APK!Vulnerabilities|book{3}}{38-39}
+\indexentry{APK!Comparison|book{3}}{41}
+\indexentry{Legitimate Application!  }{41}
+\indexentry{RAT|book{3}}{41}
+\indexentry{BCS|book{3}}{41}
+\indexentry{Cajino|book{3}}{41}
+\indexentry{Reverse Engineering!Obfuscated Application|book{3}}{47}
+\indexentry{Android!Apps!Obfuscated|book{3}}{47}
+\indexentry{PhoneGap|book{3}}{47}
+\indexentry{Xamarin|book{3}}{47}
+\indexentry{Unity|book{3}}{47}
+\indexentry{Stack Overflow|book{3}}{48}
+\indexentry{ProGuard|book{3}}{49}
+\indexentry{Android!Studio! |book{3}}{49}
+\indexentry{Android!Apps!Obfuscated}{49-50}
+\indexentry{Android!Obfuscation|book{3}}{49-54}
+\indexentry{Android!Obfuscation!Scope|book{3}}{51}
+\indexentry{Android!Apps!Obfuscated}{52}
+\indexentry{ProGuard}{52}
+\indexentry{PRNG|book{3}}{52}
+\indexentry{Android!Studio! }{55-56}
+\indexentry{APK!Source|book{3}}{56}
+\indexentry{Decompiler|book{3}}{57-58}
+\indexentry{Procyon|book{3}}{57}
+\indexentry{CFR|book{3}}{57}
+\indexentry{FernFlower|book{3}}{57}
+\indexentry{Android!Studio! }{58-68}
+\indexentry{APK!Deobfuscation|book{3}}{57-68}
+\indexentry{Deobfuscation|book{3}}{57-68}
+\indexentry{Stack Overflow}{63}
+\indexentry{Scope|book{3}}{64}
+\indexentry{Go To Declaration|book{3}}{64}
+\indexentry{ProGuard}{69}
+\indexentry{DexGuard|book{3}}{69}
+\indexentry{DexProtector|book{3}}{69}
+\indexentry{Obfuscator|book{3}}{69}
+\indexentry{Deobfuscator|book{3}}{70}
+\indexentry{APK!  }{70}
+\indexentry{DEX!  }{70}
+\indexentry{Dalvik! }{70}
+\indexentry{Smali!VM|book{3}}{70}
+\indexentry{Dead Code|book{3}}{70}
+\indexentry{Hybrid App Development|book{3}}{76}
+\indexentry{Development Platforms|book{3}}{76}
+\indexentry{Third-Party Applications! |book{3}}{76}
+\indexentry{Reverse Engineering!Platforms|book{3}}{76-103}
+\indexentry{Unity}{77-81}
+\indexentry{C\#|book{3}}{77}
+\indexentry{BOO|book{3}}{77}
+\indexentry{Javascript|book{3}}{77}
+\indexentry{APK!  }{77}
+\indexentry{IPA! |book{3}}{77}
+\indexentry{Pokemon Go|book{3}}{78}
+\indexentry{Unity!Compiled Binaries|book{3}}{78}
+\indexentry{CIL|book{3}}{79}
+\indexentry{DLL|book{3}}{79}
+\indexentry{JAR}{79}
+\indexentry{CPU-Agnostic Code|book{3}}{79}
+\indexentry{Reverse Engineering! }{79}
+\indexentry{Android!Reverse Engineering!Example|book{3}}{80-87}
+\indexentry{Ouija|book{3}}{80-87}
+\indexentry{C\#}{82-83}
+\indexentry{Decompiler}{82}
+\indexentry{CIL}{82}
+\indexentry{Java! |book{3}}{83}
+\indexentry{Microsoft|book{3}}{88}
+\indexentry{Development Platforms}{88}
+\indexentry{Mono|book{3}}{88}
+\indexentry{NET@.NET|book{3}}{88}
+\indexentry{C\#}{88}
+\indexentry{CIL}{88}
+\indexentry{Xamarin}{88-91}
+\indexentry{Android!Reverse Engineering!Example}{89-94}
+\indexentry{Tink|book{3}}{89-94}
+\indexentry{DLL}{89}
+\indexentry{CIL}{91}
+\indexentry{DLL}{91-93}
+\indexentry{Bolts|book{3}}{91}
+\indexentry{Tesseract|book{3}}{91}
+\indexentry{OCR|book{3}}{91}
+\indexentry{NET@.NET}{92}
+\indexentry{Big Endian|book{3}}{92}
+\indexentry{Little Endian|book{3}}{92}
+\indexentry{Telerik|book{3}}{93}
+\indexentry{CIL}{93}
+\indexentry{C\#}{93}
+\indexentry{Microsoft}{94}
+\indexentry{AppFlyers|book{3}}{94}
+\indexentry{Disclosure|book{3}}{94}
+\indexentry{Adobe|book{3}}{95}
+\indexentry{Apache Cordova|book{3}}{95}
+\indexentry{HTML5|book{3}}{95}
+\indexentry{CSS|book{3}}{95}
+\indexentry{Javascript}{95}
+\indexentry{Android!Reverse Engineering!Example}{96-102}
+\indexentry{FanReact|book{3}}{96-102}
+\indexentry{HTML5}{97}
+\indexentry{CSS}{97}
+\indexentry{Javascript}{97-98}
+\indexentry{SQL Injection|book{3}}{99}
+\indexentry{MITM! |book{3}}{99}
+\indexentry{Javascript!Obfuscation|book{3}}{100}
+\indexentry{Obfuscator}}{100}
+\indexentry{Disclosure}{100}
+\indexentry{PhoneGap!Security Issues|book{3}}{102}
+\indexentry{Server-Side Filtering|book{3}}{102}
+\indexentry{Javascript!Obfuscation}{102}
+\indexentry{Bytecode|book{3}}{103}
+\indexentry{CIL}{103}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Static Analysis! |book{4}}{4}
+\indexentry{Dynamic Analysis! |book{4}}{4}
+\indexentry{Android!IPC! |book{4}}{6}
+\indexentry{Metasploit|book{4}}{6}
+\indexentry{Android!Components!Exposure|book{4}}{7}
+\indexentry{AVD! |book{4}}{9}
+\indexentry{FourGoats|book{4}}{9}
+\indexentry{GoatDroid|book{4}}{9}
+\indexentry{OWASP|book{4}}{9}
+\indexentry{Attack Surface! |book{4}}{9-10}
+\indexentry{Java!Decompiler|book{4}}{11}
+\indexentry{GetExtra@\texttt{getExtra}|book{4}}{11}
+\indexentry{DoS! |book{4}}{12}
+\indexentry{Intents! |book{4}}{11-13}
+\indexentry{Activities!Extra|book{4}}{13}
+\indexentry{Intents!Populated|book{4}}{13}
+\indexentry{Extra|book{4}}{13}
+\indexentry{GetExtra@\texttt{getExtra}}{13}
+\indexentry{Metasploit}{17}
+\indexentry{iOS!Apps!Analysis|book{4}}{19-21}
+\indexentry{IPA!Install! |book{4}}{19}
+\indexentry{Application Data|book{4}}{19}
+\indexentry{Shared Libraries|book{4}}{19}
+\indexentry{HTTP|book{4}}{20}
+\indexentry{Registered Protocols|book{4}}{20}
+\indexentry{NSAllowsArbitraryLoads@\texttt{NSAllowsArbitraryLoads}|book{4}}{20}
+\indexentry{Jailbreak!Detection|book{4}}{21}
+\indexentry{ASL! |book{4}}{21}
+\indexentry{Syslog|book{4}}{21}
+\indexentry{Session Data|book{4}}{22}
+\indexentry{Binary Cookies! |book{4}}{24}
+\indexentry{Sidejacking Attack|book{4}}{24}
+\indexentry{Metasploit}{25}
+\indexentry{Manipulation|book{4}}{27-29}
+\indexentry{Purchase Systems|book{4}}{27}
+\indexentry{iOS!Apps!Manipulation|book{4}}{28}
+\indexentry{Android!Apps!Manipulation|book{4}}{29}
+\indexentry{ARM!  |book{4}}{28}
+\indexentry{Assembly|book{4}}{28}
+\indexentry{Java!  |book{4}}{29}
+\indexentry{Dalvik!  |book{4}}{29}
+\indexentry{Runtime Debugger|book{4}}{29}
+\indexentry{Decompilation|book{4}}{29-31}
+\indexentry{Disassembler! |book{4}}{30}
+\indexentry{Dalvik!Bytecode|book{4}}{30-38}
+\indexentry{Smali|book{4}}{30-32}
+\indexentry{DEX!   |book{4}}{30}
+\indexentry{Registers|book{4}}{33}
+\indexentry{Dalvik!Bytecode!Types|book{4}}{34}
+\indexentry{Invoke|book{4}}{34-35}
+\indexentry{Dalvik!Bytecode!Instructions|book{4}}{35}
+\indexentry{Smali}{37}
+\indexentry{Eclipse|book{4}}{37}
+\indexentry{Android!Code Signing! |book{4}}{39-40}
+\indexentry{Signed Applications! |book{4}}{39-40}
+\indexentry{Signing Keys|book{4}}{39}
+\indexentry{Keystore|book{4}}{39}
+\indexentry{ZIP Alignment|book{4}}{41}
+\indexentry{RAM|book{4}}{41}
+\indexentry{Android!SDK! |book{4}}{41}
+\indexentry{Local File Headers|book{4}}{41}
+\indexentry{Android!Apps!Manipulation}{43}
+\indexentry{Runtime Manipulation|book{4}}{47}
+\indexentry{iOS!Apps!Manipulation}{48}
+\indexentry{Jailbreaking \ios!Runtime Manipulation|book{4}}{48-49}
+\indexentry{Decompilation}{48}
+\indexentry{Objective-C!  |book{4}}{48-50}
+\indexentry{Machine Language|book{4}}{48}
+\indexentry{Restrictions Bypass|book{4}}{49}
+\indexentry{SpringBoard! |book{4}}{49}
+\indexentry{Reflective Programming Language|book{4}}{49}
+\indexentry{Javascript! |book{4}}{50}
+\indexentry{Objective-C!Basics|book{4}}{51}
+\indexentry{Swift!  |book{4}}{51}
+\indexentry{RootViewController|book{4}}{54}
+\indexentry{UIApp|book{4}}{54}
+\indexentry{WHFSViewController|book{4}}{54-55}
+\indexentry{iPhone!DevWiki|book{4}}{55}
+\indexentry{Method Swizzling|book{4}}{59}
+\indexentry{Javascript! }{59}
+\indexentry{Jailbreak!Detection!Evasion|book{4}}{61}
+\indexentry{WHFSViewController}{61}
+\indexentry{Swift!  }{62}
+\indexentry{Swift!a@"@objc Header|book{4}}{62}
+\indexentry{Objective-C!a@"@objc Header|book{4}}{62}
+\indexentry{iOS!Apps!Manipulation}{63}
+\indexentry{APK!   |book{4}}{64}
+\indexentry{Java!   |book{4}}{64}
+\indexentry{Runtime Manipulation}{65}
+\indexentry{Duktape|book{4}}{65}
+\indexentry{V8|book{4}}{65}
+\indexentry{Javascript! }{65}
+\indexentry{Reverse Engineering!  |book{4}}{65}
+\indexentry{SSL!Pinning|book{4}}{65}
+\indexentry{Jailbreak!Detection!Bypass|book{4}}{65}
+\indexentry{Javascript!Engine! |book{4}}{65}
+\indexentry{Bootstrapper|book{4}}{69}
+\indexentry{Malware! |book{4}}{69}
+\indexentry{Duktape}{70}
+\indexentry{V8}{70}
+\indexentry{Javascript!Runtime|book{4}}{70}
+\indexentry{USB|book{4}}{73}
+\indexentry{Keychain!  |book{4}}{75}
+\indexentry{Duktape}{76}
+\indexentry{V8}{76}
+\indexentry{Javascript! }{76}
+\indexentry{Java!   }{76}
+\indexentry{Java!VM|book{4}}{76}
+\indexentry{Java.perform@\texttt{Java.perform} Call|book{4}}{76}
+\indexentry{Method Hooking|book{4}}{77-83}
+\indexentry{SSL!Pinning}{79}
+\indexentry{Jailbreak!Detection!Bypass}{79}
+\indexentry{Java.use@\texttt{Java.use} Wrapper|book{4}}{77}
+\indexentry{Intents!ACTIONV@\texttt{ACTION\_VIEW}|book{4}}{83}
+\indexentry{Java.use@\texttt{Java.use} Wrapper}{83}
+\indexentry{Activities!Thread|book{4}}{83}
+\indexentry{Runtime Manipulation}{86}
+\indexentry{SSL!Pinning}{86}
+\indexentry{Jailbreak!Detection!Bypass}{86}
+\indexentry{Rooting \android!Detection Bypass|book{4}}{86}
+\indexentry{Touch ID Bypass|book{4}}{86}
+\indexentry{Hardening Techniques|book{4}}{86}
+\indexentry{Security Controls|book{4}}{86}
+\indexentry{Keychain!  }{86}
+\indexentry{SQLite DB! |book{4}}{86}
+\indexentry{Memory Dump|book{4}}{94}
+\indexentry{Hardening Techniques!Bypass|book{4}}{95}
+\indexentry{Security Controls!Bypass|book{4}}{95}
+\indexentry{SSL!Pinning}{95}
+\indexentry{Jailbreak!Detection!Bypass}{95}
+\indexentry{Rooting \android!Detection Bypass}{95}
+\indexentry{Touch ID Bypass}{95}
+\indexentry{TrustManager|book{4}}{95}
+\indexentry{Audit|book{4}}{99}
+\indexentry{Application Security|book{4}}{99}
+\indexentry{OWASP}{100}
+\indexentry{MASVS|book{4}}{100-101}
+\indexentry{MSTG|book{4}}{100}
+\indexentry{Security Controls}{100}
+\indexentry{Security Levels|book{4}}{100-101}
+\indexentry{Security Assessment|book{4}}{101}
+\indexentry{Report Card|book{4}}{101}
+\indexentry{ooVoo|book{4}}{102-123}
+\indexentry{Binary Test|book{4}}{103}
+\indexentry{PIE|book{4}}{103}
+\indexentry{Canary Protection|book{4}}{103}
+\indexentry{Stack Canary|book{4}}{103}
+\indexentry{ARC|book{4}}{103}
+\indexentry{Memory Management|book{4}}{103}
+\indexentry{Garbage Collection|book{4}}{103}
+\indexentry{Double-Free Threat|book{4}}{103}
+\indexentry{Xcode!   |book{4}}{103}
+\indexentry{URL Schemes!Identification|book{4}}{104}
+\indexentry{CFBundleURLSchemes@\texttt{CFBundleURLSchemes}|book{4}}{104}
+\indexentry{Reverse Engineering!  }{104}
+\indexentry{ASL! }{106}
+\indexentry{Xcode!   }{106}
+\indexentry{Xcode!Device Organizer|book{4}}{106}
+\indexentry{PIN! |book{4}}{106}
+\indexentry{Sensitive Information!  |book{4}}{106}
+\indexentry{Personal Information|book{4}}{106}
+\indexentry{PII|book{4}}{106}
+\indexentry{TLS|book{4}}{107-109}
+\indexentry{Proxy|book{4}}{107}
+\indexentry{Objective-C!Certificate Pinning|book{4}}{109}
+\indexentry{Certificate Pinning|book{4}}{108-112}
+\indexentry{CA Trust|book{4}}{108}
+\indexentry{DER|book{4}}{109}
+\indexentry{CA Trust}{110}
+\indexentry{Local Certificate Copy|book{4}}{110}
+\indexentry{SSL|book{4}}{111}
+\indexentry{MITM!  |book{4}}{111}
+\indexentry{TLS!Eavesdropping|book{4}}{111}
+\indexentry{Traffic Analysis|book{4}}{112}
+\indexentry{Disclosure! |book{4}}{113}
+\indexentry{SSL}{113}
+\indexentry{TLS}{113}
+\indexentry{XMPP|book{4}}{113-114}
+\indexentry{Jabber|book{4}}{113-114}
+\indexentry{Xcode!   }{113}
+\indexentry{File System|book{4}}{115-116}
+\indexentry{iFunBox! |book{4}}{115}
+\indexentry{Checksum|book{4}}{116}
+\indexentry{Keychain!  }{117}
+\indexentry{Accessibility Attributes! |book{4}}{118}
+\indexentry{iOS!Keychain!Accessibility Attributes@ |book{4}}{118}
+\indexentry{Keychain!Dump|book{4}}{118-119}
+\indexentry{iOS!Keychain!Dump|book{4}}{118-119}
+\indexentry{iTunes! |book{4}}{118}
+\indexentry{iOS!Backup! |book{4}}{118}
+\indexentry{Passwords!Storage|book{4}}{119}
+\indexentry{iOS!How To Store Passwords|book{4}}{119}
+\indexentry{NSUserDefaults! |book{4}}{119}
+\indexentry{Device-Specific Key|book{4}}{119}
+\indexentry{Authentication Token|book{4}}{119}
+\indexentry{Debug Detection|book{4}}{120-121}
+\indexentry{ptrace@\texttt{ptrace}|book{4}}{120}
+\indexentry{Library Preload|book{4}}{120}
+\indexentry{Runtime Manipulation}{121}
+\indexentry{Table of Critical Addresses|book{4}}{121}
+\indexentry{Implementation Check|book{4}}{121}
+\indexentry{iOS!Apps!Report Card|book{4}}{123}
+\indexentry{Report Card}{123-124}
+\indexentry{Android!Apps!Report Card|book{4}}{124}
+\indexentry{Zillow|book{4}}{125-141}
+\indexentry{Android!Apps!Report Card}{141}
+\indexentry{Report Card}{141}
+\indexentry{Attack Surface! }{126}
+\indexentry{IPC! |book{4}}{126}
+\indexentry{Broadcast Receivers! |book{4}}{126}
+\indexentry{Activities!Invocation|book{4}}{127}
+\indexentry{Activities!Extra}{127}
+\indexentry{GetExtra@\texttt{getExtra}}{127}
+\indexentry{NullPointer@\texttt{NullPointerException}|book{4}}{127}
+\indexentry{Disclosure! }{128}
+\indexentry{Disclosure! }{130}
+\indexentry{Debug Mode|book{4}}{130}
+\indexentry{BuildConfig@\texttt{BuildConfig.DEBUG} Flag|book{4}}{130}
+\indexentry{Android!Apps!Signature|book{4}}{131}
+\indexentry{Android!Apps!Certificate|book{4}}{131}
+\indexentry{Traffic Analysis}{133}
+\indexentry{Disclosure! }{133}
+\indexentry{HTTP}{133}
+\indexentry{File System}{134}
+\indexentry{TowelRoot Exploit|book{4}}{134}
+\indexentry{Keystore}{135-136}
+\indexentry{Android!Keystore! |book{4}}{135-136}
+\indexentry{API 18! |book{4}}{135}
+\indexentry{RSA|book{4}}{136}
+\indexentry{ECC|book{4}}{136}
+\indexentry{AES!  |book{4}}{136}
+\indexentry{Key Handling|book{4}}{136}
+\indexentry{Debug Detection}{137}
+\indexentry{Debuggable Flag! |book{4}}{137}
+\indexentry{Jdwp@\texttt{jdwp-control}|book{4}}{137}
+\indexentry{Socket! |book{4}}{137}
+\indexentry{Obfuscator! |book{4}}{138}
+\indexentry{Object Obfuscation|book{4}}{138}
+\indexentry{DexGuard! |book{4}}{138}
+\indexentry{ProGuard! |book{4}}{138}
+\indexentry{Eclipse}{138}
+\indexentry{Anti-Reverse Engineering|book{4}}{138}
+\indexentry{Android!Apps!Signature}{139}
+\indexentry{Android!Code Signing! }{139}
+\indexentry{Public Key|book{4}}{139}
+\indexentry{Signature Validation|book{4}}{139-140}
+\indexentry{MASVS}{142}
+
+
+\comment{********************************************************************************************
+                                     FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Penetration Testing|book{5}}{4-8}
+\indexentry{Risk|book{5}}{4}
+\indexentry{Reconnaissance|book{5}}{4}
+\indexentry{Scanning|book{5}}{4}
+\indexentry{Exploitation|book{5}}{4}
+\indexentry{Post-Exploitation|book{5}}{4}
+\indexentry{Pillaging|book{5}}{4-5}
+\indexentry{Wireless Infrastructure|book{5}}{6}
+\indexentry{AP|book{5}}{6}
+\indexentry{Cloud Systems|book{5}}{6}
+\indexentry{Penetration Testing!Roles|book{5}}{8}
+\indexentry{Traffic Analysis! |book{5}}{10}
+\indexentry{Cellular Interface|book{5}}{10}
+\indexentry{Packet Capture|book{5}}{11}
+\indexentry{Hub|book{5}}{11}
+\indexentry{Network Tap|book{5}}{11}
+\indexentry{Span Port|book{5}}{11}
+\indexentry{Proxy! |book{5}}{11}
+\indexentry{USB! |book{5}}{12}
+\indexentry{UDID|book{5}}{12-13}
+\indexentry{Traffic Duplication|book{5}}{12}
+\indexentry{Xcode!    |book{5}}{12}
+\indexentry{iTunes!  |book{5}}{12}
+\indexentry{Packet Sniffer|book{5}}{13}
+\indexentry{Packet Capture}{14}
+\indexentry{DNS|book{5}}{14}
+\indexentry{Name Resolution|book{5}}{14}
+\indexentry{Snap Length|book{5}}{14}
+\indexentry{Traffic Analysis! }{15}
+\indexentry{TCP Stream|book{5}}{15}
+\indexentry{Big Endian! |book{5}}{17}
+\indexentry{Little Endian! |book{5}}{17}
+\indexentry{ASCII|book{5}}{17}
+\indexentry{Unicode|book{5}}{17}
+\indexentry{Host Fingerprinting|book{5}}{18}
+\indexentry{Session Data! |book{5}}{18}
+\indexentry{DNS}{19}
+\indexentry{MAC! |book{5}}{19}
+\indexentry{OUI|book{5}}{19}
+\indexentry{TTL|book{5}}{19}
+\indexentry{Sensitive Information!    |book{5}}{21}
+\indexentry{IMEI! |book{5}}{21-22}
+\indexentry{Risk!Posture|book{5}}{21}
+\indexentry{Hashing|book{5}}{21-22}
+\indexentry{TAC|book{5}}{22}
+\indexentry{Data Loss|book{5}}{22}
+\indexentry{MAC! }{22}
+\indexentry{OUI}{22}
+\indexentry{Disclosure!  |book{5}}{23}
+\indexentry{PPTP|book{5}}{23}
+\indexentry{LAN!Mirror|book{5}}{23}
+\indexentry{Network Manipulation|book{5}}{27-28}
+\indexentry{Running Services|book{5}}{27}
+\indexentry{Direct Exploit Delivery|book{5}}{27}
+\indexentry{MITM!   |book{5}}{28}
+\indexentry{DoS!  |book{5}}{28}
+\indexentry{ARP Spoofing|book{5}}{28-29}
+\indexentry{LAN|book{5}}{29}
+\indexentry{Default Gateway|book{5}}{29}
+\indexentry{HSRP|book{5}}{29}
+\indexentry{VRRP|book{5}}{29}
+\indexentry{ARP Spoofing!Example|book{5}}{30-31}
+\indexentry{MITM!Tools|book{5}}{32}
+\indexentry{APR|book{5}}{32}
+\indexentry{Windows Firewall|book{5}}{32-33}
+\indexentry{Passwords!Sniffing|book{5}}{32}
+\indexentry{Passwords!Cracking|book{5}}{32}
+\indexentry{Passwords!Dumping|book{5}}{32}
+\indexentry{DoS!  }{32}
+\indexentry{APR}{34-36}
+\indexentry{Full Routing|book{5}}{35-36}
+\indexentry{ARP Spoofing}{36}
+\indexentry{DoS!  }{36}
+\indexentry{MITM!Tools}{37}
+\indexentry{Passwords!Sniffing}{37}
+\indexentry{Network Manipulation}{37}
+\indexentry{Full Routing}{38}
+\indexentry{ARP Spoofing}{38}
+\indexentry{DNS}{39}
+\indexentry{Name Resolution}{39}
+\indexentry{SNMP|book{5}}{40}
+\indexentry{ARP Spoofing}{42}
+\indexentry{Proxy! }{43}
+\indexentry{CSS! |book{5}}{43}
+\indexentry{HTML|book{5}}{43}
+\indexentry{Javascript!  |book{5}}{43}
+\indexentry{Default Gateway}{44}
+\indexentry{Javascript!  }{45}
+\indexentry{Packet Sniffer}{45}
+\indexentry{BPF|book{5}}{45-46}
+\indexentry{SOP|book{5}}{45}
+\indexentry{DNS}{45}
+\indexentry{HTTP! |book{5}}{45}
+\indexentry{ARP Spoofing}{46}
+\indexentry{MITM!   }{46}
+\indexentry{Network Manipulation}{50}
+\indexentry{MITM!   }{50-52}
+\indexentry{Network Fuzzing|book{5}}{50}
+\indexentry{Protocol Robustness Testing|book{5}}{50}
+\indexentry{MITM!Tools}{51-59}
+\indexentry{Linux Firewall|book{5}}{51}
+\indexentry{Prerouting|book{5}}{51-52}
+\indexentry{Nat Table@\texttt{nat} Table|book{5}}{52}
+\indexentry{NAT|book{5}}{52}
+\indexentry{Web Scanner|book{5}}{53}
+\indexentry{Invisible Proxy|book{5}}{53-54}
+\indexentry{Network Manipulation}{56-57}
+\indexentry{MITM!Limitations|book{5}}{59}
+\indexentry{SSL!Pinning! |book{5}}{59}
+\indexentry{Chrome|book{5}}{59}
+\indexentry{MITM!Limitations}{64}
+\indexentry{Encrypted Traffic|book{5}}{64}
+\indexentry{SSL!Attacks|book{5}}{64}
+\indexentry{TLS!Attacks|book{5}}{64}
+\indexentry{Plaintext Credentials|book{5}}{64}
+\indexentry{Passwords!Reuse|book{5}}{64}
+\indexentry{SSL!Connection Validation|book{5}}{65}
+\indexentry{Trusted CA|book{5}}{65}
+\indexentry{Root CA|book{5}}{65}
+\indexentry{CA Trust! |book{5}}{65}
+\indexentry{SCEP|book{5}}{65}
+\indexentry{Untrusted Certificate|book{5}}{66-68}
+\indexentry{MITM!   }{67}
+\indexentry{Certificate Details|book{5}}{69}
+\indexentry{Root Certificate|book{5}}{69}
+\indexentry{SSL!MITM|book{5}}{69-71}
+\indexentry{Certificate Impersonation|book{5}}{70-72}
+\indexentry{IP Forwarding|book{5}}{70}
+\indexentry{HTTPS|book{5}}{70}
+\indexentry{IMAPS|book{5}}{70}
+\indexentry{POP3S|book{5}}{70}
+\indexentry{Prerouting}{70}
+\indexentry{Browser|book{5}}{72}
+\indexentry{HTTPS!Avoidance|book{5}}{72}
+\indexentry{HTTP!Traffic Manipulation|book{5}}{73}
+\indexentry{SslStrip Attack|book{5}}{74}
+\indexentry{HSTS|book{5}}{75-77}
+\indexentry{Strict Transport Security|book{5}}{75}
+\indexentry{Browser}{75}
+\indexentry{SSL!MITM}{75}
+\indexentry{HSTS!Bypass|book{5}}{76}
+\indexentry{No-Cert-Warning|book{5}}{75-76}
+\indexentry{Slashdot|book{5}}{77}
+\indexentry{Scope! |book{5}}{78-79}
+\indexentry{SslStrip Attack}{79}
+\indexentry{SSL!Interception|book{5}}{81}
+\indexentry{TLS!Interception|book{5}}{81}
+\indexentry{SSL!Pinning! }{81}
+\indexentry{Web Application Attacks|book{5}}{82}
+\indexentry{Penetration Testing}{82}
+\indexentry{SSL!Enforcement|book{5}}{83}
+\indexentry{TLS!Enforcement|book{5}}{83}
+\indexentry{Unencrypted Traffic|book{5}}{83-85}
+\indexentry{ATS|book{5}}{84}
+\indexentry{TLS! |book{5}}{84}
+\indexentry{Network Security Configuration|book{5}}{85}
+\indexentry{CleartextTraffic@\texttt{cleartextTrafficPermitted} Flag|book{5}}{85}
+\indexentry{UseCleartextTraffic@\texttt{useCleartextTraffic} Flag|book{5}}{85}
+\indexentry{Android!Manifest!  |book{5}}{85}
+\indexentry{HTTPS!Intercept|book{5}}{86-87}
+\indexentry{Untrusted Certificate}{89}
+\indexentry{Root CA}{90-91}
+\indexentry{iOS!Trusted CA|book{5}}{91}
+\indexentry{Trusted CA}{90}
+\indexentry{SSL!Pinning!Bypass|book{5}}{93}
+\indexentry{Trusted CA}{94}
+\indexentry{Rules Set|book{5}}{95}
+\indexentry{HTTPS!Intercept}{96}
+\indexentry{API 24|book{5}}{96}
+\indexentry{System Store|book{5}}{97}
+\indexentry{Root CA}{98-99}
+\indexentry{Social Engineering|book{5}}{98}
+\indexentry{Captive Portal|book{5}}{98}
+\indexentry{Free Wi-Fi|book{5}}{98}
+\indexentry{AP}{98}
+\indexentry{Malicious Certificates|book{5}}{99-100}
+\indexentry{SSL!Pinning!Explained|book{5}}{100}
+\indexentry{SSL!Pinning!Bypass}{101}
+\indexentry{OkHttp|book{5}}{100}
+\indexentry{Network Security Configuration}{99-100}
+\indexentry{HTTP!Parameter Tampering|book{5}}{103}
+\indexentry{SSL!Attacks}{103}
+\indexentry{TLS!Attacks}{103}
+\indexentry{Replay Attack|book{5}}{104-105}
+\indexentry{MIC|book{5}}{104}
+\indexentry{Session Timeout|book{5}}{104}
+\indexentry{Network Manipulation}{106}
+\indexentry{SQL Injection! |book{5}}{106}
+\indexentry{XSS! |book{5}}{106}
+\indexentry{CGI|book{5}}{106}
+\indexentry{Privilege Escalation|book{5}}{106}
+\indexentry{Malware!  |book{5}}{111}
+\indexentry{Exploit|book{5}}{111}
+\indexentry{Phishing! |book{5}}{111}
+\indexentry{RAT! |book{5}}{111-116}
+\indexentry{RAT!Capabilities|book{5}}{112}
+\indexentry{Pivoting|book{5}}{112}
+\indexentry{Stored Data|book{5}}{112}
+\indexentry{Dark Matter|book{5}}{113}
+\indexentry{Hacking Team|book{5}}{113-115}
+\indexentry{Keylogger|book{5}}{115}
+\indexentry{Exploit!Payload|book{5}}{116}
+\indexentry{Metasploit! |book{5}}{116}
+\indexentry{Android!RAT|book{5}}{117-122}
+\indexentry{MainActivity|book{5}}{118-120}
+\indexentry{Privilege Escalation}{119}
+\indexentry{Root Exploit|book{5}}{119}
+\indexentry{Persistence|book{5}}{123}
+\indexentry{RAT!Deployment|book{5}}{124}
+\indexentry{Android!RAT!Deployment|book{5}}{124}
+\indexentry{Unknown Sources! |book{5}}{124}
+\indexentry{Developer Mode|book{5}}{124}
+\indexentry{Phishing! }{125-126}
+\indexentry{Reconnaissance}{125}
+\indexentry{Emails! |book{5}}{125}
+\indexentry{Messaging|book{5}}{125}
+\indexentry{Google Voice|book{5}}{126}
+\indexentry{Ez Texting|book{5}}{126}
+\indexentry{SMS!Phishing|book{5}}{126}
+\indexentry{SMS!Spoofing|book{5}}{127}
+\indexentry{Exploit!Delivery|book{5}}{128}
+\indexentry{Stagefright|book{5}}{128}
+\indexentry{Android!Emulator! |book{5}}{129}
+\indexentry{Antivirus!Evasion|book{5}}{130-131}
+\indexentry{VirusTotal|book{5}}{130-131}
+\indexentry{PUP|book{5}}{130}
+\indexentry{iOS!RAT|book{5}}{132}
+\indexentry{Data Exfiltration|book{5}}{132}
+\indexentry{Keylogger}{132}
+\indexentry{Operation Pawn Storm|book{5}}{132}
+\indexentry{Pegasus Attack|book{5}}{133}
+\indexentry{MDM!  |book{5}}{135}
+\indexentry{MAM|book{5}}{135}
+\indexentry{Defense Techniques|book{5}}{135}
+\indexentry{End-User Training|book{5}}{135}
+\indexentry{VMI|book{5}}{135}
+\indexentry{GPWN|book{5}}{143}
+\indexentry{Mailing List|book{5}}{143}
+\indexentry{OPML|book{5}}{144}
+\indexentry{RSS|book{5}}{144}
+\indexentry{Carnal0wnage|book{5}}{145}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{Khronos Texture \goto KTX|comment}{0}
+\indexentry{Mobile Operator \goto MO|comment}{0}
+\indexentry{Position Independent Executable \goto PIE|comment}{0}
+\indexentry{Automatic Reference Counting \goto ARC|comment}{0}
+\indexentry{Apple System Log \goto ASL|comment}{0}
+\indexentry{Application Report Card \goto Report Card|comment}{0}
+\indexentry{Information Disclosure \goto Disclosure|comment}{0}
+\indexentry{Network Activity Analysis \goto Traffic Analysis|comment}{0}
+\indexentry{Network Capture \goto Packet Capture|comment}{0}
+\indexentry{Proxy!Transparent \goto Invisible Proxy|comment}{0}
+\indexentry{Cleartext Traffic \goto Unencrypted Traffic|comment}{0}
+\indexentry{Application Transport Security \goto ATS|comment}{0}
+\indexentry{Remote Access Trojan \goto RAT|comment}{0}
+\indexentry{Mobile Device Management \goto MDM|comment}{0}
+\indexentry{Mobile Application Management \goto MAM|comment}{0}
