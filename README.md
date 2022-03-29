@@ -1,4 +1,4 @@
-## Introduction
+## :information_source: Introduction
 
 The goal of this template is to provide a way to write very condensed indexes typically for courses with multiple books. It leverages [LaTeX indexing](https://en.wikibooks.org/wiki/LaTeX/Indexing) by using a `.idx` file for organizing the index entries. The way this template can be used is by directly editing the `.idx` file.
 
@@ -9,7 +9,7 @@ Here is an example preview:
 <p align="center"><img src="https://raw.githubusercontent.com/dhondta/tex-course-index-template/master/doc/preview.png">
 <sub><sup>Preview image generated with <a href="https://gist.github.com/dhondta/f57dfde304905644ca5c43e48c249125">this tool</a></sup></sub></p>
 
-## Structure
+## :card_file_box: Structure
 
 The template is structured in the following way:
 
@@ -18,7 +18,7 @@ The template is structured in the following way:
 - [`data.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/data.tex): This defines a few course-related variables (title, code, date and version) to be used in [`main.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.tex).
 - [`lib`](https://github.com/dhondta/tex-course-index-template/blob/master/src/lib): This folder contains the images called in [`main.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.tex) and for use in [`main.idx`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.idx) (useful e.g. for mentioning that a tool is only for linux ; then use the `\linux` command in the `\indexentry`).
 
-## Compilation
+## :gear: Compilation
 
 The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org/wiki/Texmaker) by defining a *Quick Build Command*:
 
@@ -45,7 +45,7 @@ NB: Do not forget to edit [`data.tex`](https://github.com/dhondta/tex-course-ind
 
 > **Important**: It could happen that Texmaker is configured to remove temporary files while exiting, including `main.idx`. That's why the *Quick Build* herebefore includes `cp %.idx %.idx.bak` to backup this file and not to loose hours of work adding index entries. If removal still occurred, simply restore `main.idx.bak` to `main.idx`. Note that, consequently, the **backup is not made if you do not build the document**. So, **mind clicking regularly on the *Quick Build* button** !
 
-## Making your index
+## :bookmark_tabs: Making your index
 
 The only files to be edited when making a new index are:
 
@@ -146,4 +146,21 @@ For convenience, multiple shorcuts are predefined in [`main.tex`](https://github
 - `\solaris`: Soralis
 - `\web`: Web-related asset
 - `\win`: Windows
+
+
+## :star: Related Projects
+
+You may also like these:
+
+- [TeX Book Template](https://github.com/dhondta/tex-book-template): A template for writing a nice book with LaTeX.
+- [TeX Master Thesis Template](https://github.com/dhondta/tex-master-thesis-template): A template for writing a nice master thesis dissertation with LaTeX.
+
+
+## :clap:  Supporters
+
+[![Stargazers repo roster for @dhondta/tex-course-index-template](https://reporoster.com/stars/dark/dhondta/tex-course-index-template)](https://github.com/dhondta/tex-course-index-template/stargazers)
+
+[![Forkers repo roster for @dhondta/tex-course-index-template](https://reporoster.com/forks/dark/dhondta/tex-course-index-template)](https://github.com/dhondta/tex-course-index-template/network/members)
+
+<p align="center"><a href="#"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
