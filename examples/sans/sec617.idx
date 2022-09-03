@@ -1,0 +1,1846 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{WiFi Data Collection \& Analysis}!1@Wireless Threats|book{1}}{2-32}
+\indexentry{1a@\textbf{WiFi Data Collection \& Analysis}!2@Sniffing|book{1}}{33-89}
+\indexentry{1a@\textbf{WiFi Data Collection \& Analysis}!3@Rogue AP Analysis|book{1}}{90-123}
+\indexentry{1a@\textbf{WiFi Data Collection \& Analysis}!4@Bridging the Airgap|book{1}}{124-152}
+
+\indexentry{1b@\blankline|comment}{0}
+
+\indexentry{2a@\textbf{WiFi Attack \& Exploitation Techniques}!1@Hotspots|book{2}}{3-30}
+\indexentry{2a@\textbf{WiFi Attack \& Exploitation Techniques}!2@WiFi Client|book{2}}{31-62}
+\indexentry{2a@\textbf{WiFi Attack \& Exploitation Techniques}!3@WEP|book{2}}{63-83}
+\indexentry{2a@\textbf{WiFi Attack \& Exploitation Techniques}!4@DoS|book{2}}{84-122}
+\indexentry{2a@\textbf{WiFi Attack \& Exploitation Techniques}!5@WiFi Fuzzing|book{2}}{123-147}
+
+\indexentry{2b@\blankline|comment}{0}
+
+\indexentry{3a@\textbf{Enterprise WiFi, DECT \& Zigbee Attacks}!1@WPA2 PSK|book{3}}{3-49}
+\indexentry{3a@\textbf{Enterprise WiFi, DECT \& Zigbee Attacks}!2@WPA2 Enterprise|book{3}}{50-77}
+\indexentry{3a@\textbf{Enterprise WiFi, DECT \& Zigbee Attacks}!3@DECT|book{3}}{78-105}
+\indexentry{3a@\textbf{Enterprise WiFi, DECT \& Zigbee Attacks}!4@Zigbee|book{3}}{106-149}
+
+\indexentry{3b@\blankline|comment}{0}
+
+\indexentry{4a@\textbf{Bluetooth \& SDR Attacks}!1@Bluetooth|book{4}}{3-49}
+\indexentry{4a@\textbf{Bluetooth \& SDR Attacks}!2@Bluetooth Low Energy|book{4}}{50-95}
+\indexentry{4a@\textbf{Bluetooth \& SDR Attacks}!3@SDR|book{4}}{96-132}
+
+\indexentry{4b@\blankline|comment}{0}
+
+\indexentry{5a@\textbf{RFID, Smart Cards \& NFC Hacking}!1@RFID|book{5}}{3-67}
+\indexentry{5a@\textbf{RFID, Smart Cards \& NFC Hacking}!2@Smart Cards|book{5}}{68-115}
+\indexentry{5a@\textbf{RFID, Smart Cards \& NFC Hacking}!3@NFC|book{5}}{116-137}
+
+\indexentry{5b@\blankline|comment}{0}
+
+\indexentry{6a@\textbf{Capture the Flag}|book{6}}{2-15}
+
+\indexentry{6b@\blankline|comment}{0}
+
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+%\indexentry{100@\textbf{Labs}!1@Lab Setup|book{4}\lab}{1}
+
+%\indexentry{101@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Summaries}!Wireless Threat|book{1}}{31}
+\indexentry{200@\textbf{Summaries}!Sniffing WiFi|book{1}}{87}
+\indexentry{200@\textbf{Summaries}!Rogue AP Analysis|book{1}}{121}
+\indexentry{200@\textbf{Summaries}!Bridging the Airgap|book{1}}{152}
+\indexentry{200@\textbf{Summaries}!Exploiting WiFi Hotspots|book{2}}{30}
+\indexentry{200@\textbf{Summaries}!WiFi Client Attacks|book{2}}{61}
+\indexentry{200@\textbf{Summaries}!WEP Attacks|book{2}}{80}
+\indexentry{200@\textbf{Summaries}!Denial-of-Service Attacks|book{2}}{120}
+\indexentry{200@\textbf{Summaries}!WiFi Fuzzing for Bug Discovery|book{2}}{145}
+\indexentry{200@\textbf{Summaries}!WPA2 PSK Attacks|book{3}}{48}
+\indexentry{200@\textbf{Summaries}!WPA2 Enterprise Attacks|book{3}}{76}
+\indexentry{200@\textbf{Summaries}!DECT Attacks|book{3}}{104}
+\indexentry{200@\textbf{Summaries}!Zigbee Attacks|book{3}}{148}
+\indexentry{200@\textbf{Summaries}!Bluetooth Attacks|book{4}}{47-48}
+\indexentry{200@\textbf{Summaries}!Bluetooth LE Attacks|book{4}}{94}
+\indexentry{200@\textbf{Summaries}!SDR|book{4}}{130}
+\indexentry{200@\textbf{Summaries}!RFID|book{5}}{14}
+\indexentry{200@\textbf{Summaries}!RFID!Tracking \& Privacy Attacks|book{5}}{32}
+\indexentry{200@\textbf{Summaries}!RFID!Low-Frequency Attacks|book{5}}{66}
+\indexentry{200@\textbf{Summaries}!RFID!Contactless Smart Card Attacks|book{5}}{113}
+\indexentry{200@\textbf{Summaries}!NFC Attacks|book{5}}{137}
+
+\indexentry{201@\blankline|comment}{0}
+
+\indexentry{300@\textbf{Tools}!Tcpdump|book{1}}{37-38}
+\indexentry{300@\textbf{Tools}!AirPcap|book{1}}{40}
+\indexentry{300@\textbf{Tools}!Wireshark|book{1}}{40}
+\indexentry{300@\textbf{Tools}!WinPcap|book{1}}{40}
+\indexentry{300@\textbf{Tools}!Kismet|book{1}}{40}
+\indexentry{300@\textbf{Tools}!Windump|book{1}}{40}
+\indexentry{300@\textbf{Tools}!Cain \& Abel|book{1}}{40}
+\indexentry{300@\textbf{Tools}!NetMon|book{1}}{41-42}
+\indexentry{300@\textbf{Tools}!MS Message Analyzer (MMA)|book{1}}{42}
+\indexentry{300@\textbf{Tools}!LibPcap|book{1}}{43}
+\indexentry{300@\textbf{Tools}!Airport|book{1}}{43}
+\indexentry{300@\textbf{Tools}!Aircrack-ng|book{1}}{45}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Airmon-ng|book{1}}{45}
+\indexentry{300@\textbf{Tools}!Tcpdump}{53}
+\indexentry{300@\textbf{Tools}!Wireshark}{53}
+\indexentry{300@\textbf{Tools}!Kismet}{53}
+\indexentry{300@\textbf{Tools}!Android Pcap Capture|book{1}}{53}
+\indexentry{300@\textbf{Tools}!Tcpdump}{55-58}
+\indexentry{300@\textbf{Tools}!Tcpdump!Options|book{1}}{56}
+\indexentry{300@\textbf{Tools}!Tcpdump!Filters|book{1}}{58}
+\indexentry{300@\textbf{Tools}!Wireshark}{59}
+\indexentry{300@\textbf{Tools}!WildPackets AiroPeek NX|book{1}}{59}
+\indexentry{300@\textbf{Tools}!Network Chemistry WSP-100|book{1}}{59}
+\indexentry{300@\textbf{Tools}!Network Associates Sniffer|book{1}}{59}
+\indexentry{300@\textbf{Tools}!Wireshark!Filters|book{1}}{61-65}
+\indexentry{300@\textbf{Tools}!Kismet}{67-74}
+\indexentry{300@\textbf{Tools}!Kismet!Features|book{1}}{68-69}
+\indexentry{300@\textbf{Tools}!Kismet!Aircrack-PTW Plugin|book{1}}{69}
+\indexentry{300@\textbf{Tools}!Kismet!Channel Control|book{1}}{74}
+\indexentry{300@\textbf{Tools}!GISKismet|book{1}}{77}
+\indexentry{300@\textbf{Tools}!Android Pcap Capture}{79-80}
+\indexentry{300@\textbf{Tools}!Ekahau HeatMapper|book{1}}{82}
+\indexentry{300@\textbf{Tools}!Kismapping|book{1}}{83-84}
+\indexentry{300@\textbf{Tools}!GPSMap|book{1}}{83}
+\indexentry{300@\textbf{Tools}!Kismet!Oldcore|book{1}}{83}
+\indexentry{300@\textbf{Tools}!MyKismap|book{1}}{83-84}
+\indexentry{300@\textbf{Tools}!Kismet!Postprocessing Analysis|book{1}}{85-86}
+\indexentry{300@\textbf{Tools}!Nmap|book{1}}{99}
+\indexentry{300@\textbf{Tools}!Nmap!RogueAP (NSE Script)|book{1}}{99}
+\indexentry{300@\textbf{Tools}!Kismet!Filtering|book{1}}{101-104}
+\indexentry{300@\textbf{Tools}!Vistumbler|book{1}}{105}
+\indexentry{300@\textbf{Tools}!InSSIDer|book{1}}{105-106}
+\indexentry{300@\textbf{Tools}!AirMagnet Laptop Analyzer|book{1}}{105}
+\indexentry{300@\textbf{Tools}!RFProtect Mobile|book{1}}{105}
+\indexentry{300@\textbf{Tools}!Android WiFi Analyzer|book{1}}{107}
+\indexentry{300@\textbf{Tools}!WiFiFoFum|book{1}}{107}
+\indexentry{300@\textbf{Tools}!Aruba AirMonitor|book{1}}{110}
+\indexentry{300@\textbf{Tools}!Kismet!Signal Quality|book{1}}{113}
+\indexentry{300@\textbf{Tools}!NetScout AirCheck G2|book{1}}{115}
+\indexentry{300@\textbf{Tools}!Netdisco|book{1}}{119}
+\indexentry{300@\textbf{Tools}!Metasploit|book{1}}{130}
+\indexentry{300@\textbf{Tools}!Metasploit!MsfVenom|book{1}}{130}
+\indexentry{300@\textbf{Tools}!Metasploit!Meterpreter|book{1}}{130-132}
+\indexentry{300@\textbf{Tools}!WirelessKeyView|book{1}}{134}
+\indexentry{300@\textbf{Tools}!Metasploit!Meterpreter}{137}
+\indexentry{300@\textbf{Tools}!Metasploit!Meterpreter}{141-143}
+\indexentry{300@\textbf{Tools}!NetMon}{137-138}
+\indexentry{300@\textbf{Tools}!Wireshark}{138}
+\indexentry{300@\textbf{Tools}!CrowbarKC|book{1}}{148}
+\indexentry{300@\textbf{Tools}!Iodine|book{2}}{12}
+\indexentry{300@\textbf{Tools}!Nstx|book{2}}{12}
+\indexentry{300@\textbf{Tools}!ICMPTX|book{2}}{12}
+\indexentry{300@\textbf{Tools}!Pickupline|book{2}}{17}
+\indexentry{300@\textbf{Tools}!Cpscam|book{2}}{17}
+\indexentry{300@\textbf{Tools}!Zillow|book{2}}{19}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Aireplay-ng|book{2}}{21}
+\indexentry{300@\textbf{Tools}!Metasploit! |book{2}}{22}
+\indexentry{300@\textbf{Tools}!Ferret|book{2}}{24}
+\indexentry{300@\textbf{Tools}!Hamster|book{2}}{24}
+\indexentry{300@\textbf{Tools}!Wireshark!TCP Stream|book{2}}{25}
+\indexentry{300@\textbf{Tools}!Cookies Manager+|book{2}}{26}
+\indexentry{300@\textbf{Tools}!Burp Suite|book{2}}{27}
+\indexentry{300@\textbf{Tools}!AirPWN|book{2}}{36-38}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Airtun-ng|book{2}}{42}
+\indexentry{300@\textbf{Tools}!ISniff-GPS|book{2}}{44-46}
+\indexentry{300@\textbf{Tools}!Metasploit! }{47}
+\indexentry{300@\textbf{Tools}!Cain Password Sniffer|book{2}}{50}
+\indexentry{300@\textbf{Tools}!Metasploit!Meterpreter@ |book{2}}{56-59}
+\indexentry{300@\textbf{Tools}!Aircrack-ng! |book{2}}{73-74}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Aireplay-ng}{77}
+\indexentry{300@\textbf{Tools}!Wifite2|book{2}}{78}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Airdecap-ng|book{2}}{79}
+\indexentry{300@\textbf{Tools}!Hwk|book{2}}{95}
+\indexentry{300@\textbf{Tools}!File2Air|book{2}}{99-100}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Aireplay-ng}{101}
+\indexentry{300@\textbf{Tools}!MDK3|book{2}}{102}
+\indexentry{300@\textbf{Tools}!File2Air}{104}
+\indexentry{300@\textbf{Tools}!Scapy|book{2}}{105}
+\indexentry{300@\textbf{Tools}!File2Air}{110}
+\indexentry{300@\textbf{Tools}!JRockets|book{2}}{115}
+\indexentry{300@\textbf{Tools}!Scapy}{131-139}
+\indexentry{300@\textbf{Tools}!Nmap! |book{2}}{131}
+\indexentry{300@\textbf{Tools}!Tshark|book{2}}{143}
+\indexentry{300@\textbf{Tools}!CoWPAtty|book{3}}{21-23}
+\indexentry{300@\textbf{Tools}!Hashcat|book{3}}{26-28}
+\indexentry{300@\textbf{Tools}!Hashcat!HCCAPX Format|book{3}}{26}
+\indexentry{300@\textbf{Tools}!Reaver|book{3}}{35-37}
+\indexentry{300@\textbf{Tools}!WirelessKeyView! |book{3}}{39}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Airdecap-ng! |book{3}}{40}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Airodump-ng|book{3}}{52}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Airgraph-ng|book{3}}{52}
+\indexentry{300@\textbf{Tools}!SniffAir|book{3}}{60}
+\indexentry{300@\textbf{Tools}!Hostapd-WPE|book{3}}{69-71}
+\indexentry{300@\textbf{Tools}!Aircrack-ng!Hostapd-WPE|book{3}}{69-71}
+\indexentry{300@\textbf{Tools}!Eaphammer|book{3}}{71}
+\indexentry{300@\textbf{Tools}!Asleap|book{3}}{72}
+\indexentry{300@\textbf{Tools}!John the Ripper|book{3}}{73}
+\indexentry{300@\textbf{Tools}!DECT CLI|book{3}}{92}
+\indexentry{300@\textbf{Tools}!DECTShark|book{3}}{93-94}
+\indexentry{300@\textbf{Tools}!Wireshark! |book{3}}{95}
+\indexentry{300@\textbf{Tools}!DECT Decoder|book{3}}{97}
+\indexentry{300@\textbf{Tools}!G72X Decoder|book{3}}{97}
+\indexentry{300@\textbf{Tools}!DECT CLI}{98}
+\indexentry{300@\textbf{Tools}!DECT Decoder}{99-100}
+\indexentry{300@\textbf{Tools}!Re-DECTed|book{3}}{103}
+\indexentry{300@\textbf{Tools}!Wireshark! }{103}
+\indexentry{300@\textbf{Tools}!KillerBee|book{3}}{126-141}
+\indexentry{300@\textbf{Tools}!KillerBee!Arsenal|book{3}}{130}
+\indexentry{300@\textbf{Tools}!KillerBee!Attack Example|book{3}}{132}
+\indexentry{300@\textbf{Tools}!KillerBee!Attack Example}{134}
+\indexentry{300@\textbf{Tools}!KillerBee!Attack Example}{136}
+\indexentry{300@\textbf{Tools}!Wireshark! }{141}
+\indexentry{300@\textbf{Tools}!KillerZee|book{3}}{144-147}
+\indexentry{300@\textbf{Tools}!BTCrack|book{4}}{27-28}
+\indexentry{300@\textbf{Tools}!BlueScannner|book{4}}{39}
+\indexentry{300@\textbf{Tools}!BTScannner|book{4}}{39}
+\indexentry{300@\textbf{Tools}!Bluetooth Scannner|book{4}}{39}
+\indexentry{300@\textbf{Tools}!BLE Scannner|book{4}}{39}
+\indexentry{300@\textbf{Tools}!BTCrack}{40}
+\indexentry{300@\textbf{Tools}!BTScannner}{43}
+\indexentry{300@\textbf{Tools}!CarWhisperer|book{4}}{43}
+\indexentry{300@\textbf{Tools}!Bluesnarfer|book{4}}{43}
+\indexentry{300@\textbf{Tools}!Hcitool|book{4}}{44-45}
+\indexentry{300@\textbf{Tools}!Rfcomm|book{4}}{44-45}
+\indexentry{300@\textbf{Tools}!Ussp-Push|book{4}}{44-45}
+\indexentry{300@\textbf{Tools}!Obexftp|book{4}}{44-45}
+\indexentry{300@\textbf{Tools}!Bluetooth Stack Smasher|book{4}}{46}
+\indexentry{300@\textbf{Tools}!BLE Sniffer|book{4}}{67}
+\indexentry{300@\textbf{Tools}!Wireshark!  |book{4}}{68}
+\indexentry{300@\textbf{Tools}!Crackle|book{4}}{71}
+\indexentry{300@\textbf{Tools}!BlueZ Suite|book{4}}{74-75}
+\indexentry{300@\textbf{Tools}!NRF Connect|book{4}}{76-78}
+\indexentry{300@\textbf{Tools}!BLESuite|book{4}}{79-80}
+\indexentry{300@\textbf{Tools}!BLEReplay|book{4}}{79}
+\indexentry{300@\textbf{Tools}!BLESuiteCLI|book{4}}{80}
+\indexentry{300@\textbf{Tools}!Crackle}{81}
+\indexentry{300@\textbf{Tools}!BlueZ Suite}{84-85}
+\indexentry{300@\textbf{Tools}!Scapy! |book{4}}{84}
+\indexentry{300@\textbf{Tools}!BLE Fuzzer|book{4}}{85}
+\indexentry{300@\textbf{Tools}!BLESuite}{85}
+\indexentry{300@\textbf{Tools}!BLEFuzz|book{4}}{86}
+\indexentry{300@\textbf{Tools}!BLEAH|book{4}}{86}
+\indexentry{300@\textbf{Tools}!BLEReplay}{89}
+\indexentry{300@\textbf{Tools}!Blue Hydra|book{4}}{94}
+\indexentry{300@\textbf{Tools}!Vapor Trail|book{4}}{101}
+\indexentry{300@\textbf{Tools}!Responder|book{4}}{101}
+\indexentry{300@\textbf{Tools}!SpectrumSpy|book{4}}{107}
+\indexentry{300@\textbf{Tools}!RTL Power \& Heatmap|book{4}}{109}
+\indexentry{300@\textbf{Tools}!RTL Power \& Heatmap}{112-114}
+\indexentry{300@\textbf{Tools}!Dump1090|book{4}}{116}
+\indexentry{300@\textbf{Tools}!RTL-FM|book{4}}{120}
+\indexentry{300@\textbf{Tools}!Multimon-ng|book{4}}{120}
+\indexentry{300@\textbf{Tools}!RX-Tools|book{4}}{120}
+\indexentry{300@\textbf{Tools}!Kalibrate|book{4}}{122}
+\indexentry{300@\textbf{Tools}!RTL\_433|book{4}}{125}
+\indexentry{300@\textbf{Tools}!RFIDIOt|book{5}}{38-39}
+\indexentry{300@\textbf{Tools}!Proxmark 3|book{5}}{45-52}
+\indexentry{300@\textbf{Tools}!ProxBrute|book{5}}{50-52}
+\indexentry{300@\textbf{Tools}!Easy Flasher|book{5}}{51}
+\indexentry{300@\textbf{Tools}!Proxmark 3!Data Plot|book{5}}{58-61}
+\indexentry{300@\textbf{Tools}!Proxmark 3!Data Decoding|book{5}}{63-64}
+\indexentry{300@\textbf{Tools}!Pwnpass|book{5}}{74}
+\indexentry{300@\textbf{Tools}!NFC Smart Card Info|book{5}}{75}
+\indexentry{300@\textbf{Tools}!Squareless|book{5}}{75}
+\indexentry{300@\textbf{Tools}!NFCProxy|book{5}}{77}
+\indexentry{300@\textbf{Tools}!PCSC-Lite|book{5}}{79-80}
+\indexentry{300@\textbf{Tools}!NFC Tag Info|book{5}}{81}
+\indexentry{300@\textbf{Tools}!Mfoc|book{5}}{85-87}
+\indexentry{300@\textbf{Tools}!Mfcuk|book{5}}{85}
+\indexentry{300@\textbf{Tools}!Mfcuk}{88-89}
+\indexentry{300@\textbf{Tools}!Mfoc}{90-91}
+\indexentry{300@\textbf{Tools}!NFC MFClassic|book{5}}{94-95}
+\indexentry{300@\textbf{Tools}!Mifare Classic Tool|book{5}}{95-96}
+\indexentry{300@\textbf{Tools}!NFC Tag Info}{101}
+\indexentry{300@\textbf{Tools}!UltraReset|book{5}}{105}
+\indexentry{300@\textbf{Tools}!NFC Tag Cloner|book{5}}{106}
+\indexentry{300@\textbf{Tools}!MIFARE SmartHack|book{5}}{108}
+\indexentry{300@\textbf{Tools}!NFC Tag Info}{110}
+\indexentry{300@\textbf{Tools}!MIFARE SmartHack}{111-112}
+\indexentry{300@\textbf{Tools}!NFC Tag Writer|book{5}}{124}
+\indexentry{300@\textbf{Tools}!Ulread|book{5}}{128}
+\indexentry{300@\textbf{Tools}!TagMo|book{5}}{131-132}
+
+\indexentry{301@\blankline|comment}{0}
+
+\indexentry{500@\textbf{Commands}!\texttt{tcpdump}|book{1}}{37-38}
+\indexentry{500@\textbf{Commands}!\texttt{airport}|book{1}}{43}
+\indexentry{500@\textbf{Commands}!\texttt{iw}|book{1}}{44-46}
+\indexentry{500@\textbf{Commands}!\texttt{iwconfig}|book{1}}{44-46}
+\indexentry{500@\textbf{Commands}!\texttt{ifconfig}|book{1}}{44-46}
+\indexentry{500@\textbf{Commands}!\texttt{airmon-ng}|book{1}}{45}
+\indexentry{500@\textbf{Commands}!\texttt{iw}}{51-52}
+\indexentry{500@\textbf{Commands}!\texttt{tcpdump}}{57}
+\indexentry{500@\textbf{Commands}!\texttt{kismet}|book{1}}{70}
+\indexentry{500@\textbf{Commands}!\texttt{giskismet}|book{1}}{75-77}
+\indexentry{500@\textbf{Commands}!\texttt{netsh}|book{1}}{96}
+\indexentry{500@\textbf{Commands}!\texttt{nmap}|book{1}}{99}
+\indexentry{500@\textbf{Commands}!\texttt{netsh}}{129}
+\indexentry{500@\textbf{Commands}!\texttt{msfvenom}|book{1}}{130}
+\indexentry{500@\textbf{Commands}!\texttt{msfconsole}|book{1}}{130}
+\indexentry{500@\textbf{Commands}!\texttt{netsh}}{133-135}
+\indexentry{500@\textbf{Commands}!\texttt{msiexec}|book{1}}{137}
+\indexentry{500@\textbf{Commands}!\texttt{nmwifi}|book{1}}{137}
+\indexentry{500@\textbf{Commands}!\texttt{nmcap}|book{1}}{137}
+\indexentry{500@\textbf{Commands}!\texttt{idletime}|book{1}}{137}
+\indexentry{500@\textbf{Commands}!\texttt{netsh}}{139-143}
+\indexentry{500@\textbf{Commands}!\texttt{nm2lp}|book{1}}{138}
+\indexentry{500@\textbf{Commands}!\texttt{winenum}|book{1}}{141}
+\indexentry{500@\textbf{Commands}!\texttt{rogueap}|book{1}}{142}
+\indexentry{500@\textbf{Commands}!\texttt{getsystem}|book{1}}{142}
+\indexentry{500@\textbf{Commands}!\texttt{airport}}{145-146}
+\indexentry{500@\textbf{Commands}!\texttt{sw\_vers}|book{1}}{147}
+\indexentry{500@\textbf{Commands}!\texttt{security}|book{1}}{148}
+\indexentry{500@\textbf{Commands}!\texttt{networksetup}|book{1}}{150}
+\indexentry{500@\textbf{Commands}!\texttt{macshift}|book{2}}{16}
+\indexentry{500@\textbf{Commands}!\texttt{ifconfig}! |book{2}}{16}
+\indexentry{500@\textbf{Commands}!\texttt{airpwn}|book{2}}{38}
+\indexentry{500@\textbf{Commands}!\texttt{airtun-ng}|book{2}}{42}
+\indexentry{500@\textbf{Commands}!\texttt{ncpa.cpl}|book{2}}{49}
+\indexentry{500@\textbf{Commands}!\texttt{neighbor.sh}|book{2}}{52-55}
+\indexentry{500@\textbf{Commands}!\texttt{neighbor.sh}}{57}
+\indexentry{500@\textbf{Commands}!\texttt{msfvenom}! |book{2}}{56}
+\indexentry{500@\textbf{Commands}!\texttt{msfconsole}! |book{2}}{57}
+\indexentry{500@\textbf{Commands}!\texttt{aircrack-ng}|book{2}}{74}
+\indexentry{500@\textbf{Commands}!\texttt{aireplay-ng}|book{2}}{77}
+\indexentry{500@\textbf{Commands}!\texttt{wifite2}|book{2}}{78}
+\indexentry{500@\textbf{Commands}!\texttt{airdecap-ng}|book{2}}{79}
+\indexentry{500@\textbf{Commands}!\texttt{hwk}|book{2}}{95}
+\indexentry{500@\textbf{Commands}!\texttt{file2air}|book{2}}{100}
+\indexentry{500@\textbf{Commands}!\texttt{aireplay-ng}}{101}
+\indexentry{500@\textbf{Commands}!\texttt{mdk3}|book{2}}{102}
+\indexentry{500@\textbf{Commands}!\texttt{jrockets}|book{2}}{115}
+\indexentry{500@\textbf{Commands}!\texttt{scapy}|book{2}}{132}
+\indexentry{500@\textbf{Commands}!\texttt{tshark}|book{2}}{143}
+\indexentry{500@\textbf{Commands}!\texttt{cowpatty}|book{3}}{23}
+\indexentry{500@\textbf{Commands}!\texttt{aircrack-ng}! |book{3}}{24}
+\indexentry{500@\textbf{Commands}!\texttt{genpmk}|book{3}}{25}
+\indexentry{500@\textbf{Commands}!\texttt{cowpatty}}{25}
+\indexentry{500@\textbf{Commands}!\texttt{hashcat}|book{3}}{27-28}
+\indexentry{500@\textbf{Commands}!\texttt{cap2hccapx}|book{3}}{27}
+\indexentry{500@\textbf{Commands}!\texttt{reaver}|book{3}}{36}
+\indexentry{500@\textbf{Commands}!\texttt{wirelesskeyview}|book{3}}{39}
+\indexentry{500@\textbf{Commands}!\texttt{airdecap-ng}! |book{3}}{40}
+\indexentry{500@\textbf{Commands}!\texttt{airodump-ng}|book{3}}{52}
+\indexentry{500@\textbf{Commands}!\texttt{airgraph-ng}|book{3}}{52}
+\indexentry{500@\textbf{Commands}!\texttt{sniffair.py}|book{3}}{60}
+\indexentry{500@\textbf{Commands}!\texttt{hostapd-wpe}|book{3}}{71}
+\indexentry{500@\textbf{Commands}!\texttt{airmon-ng}! |book{3}}{71}
+\indexentry{500@\textbf{Commands}!\texttt{asleap}|book{3}}{72}
+\indexentry{500@\textbf{Commands}!\texttt{john}|book{3}}{73}
+\indexentry{500@\textbf{Commands}!\texttt{dect\_cli}|book{3}}{92}
+\indexentry{500@\textbf{Commands}!\texttt{dectshark}|book{3}}{93}
+\indexentry{500@\textbf{Commands}!\texttt{dect\_cli}}{98}
+\indexentry{500@\textbf{Commands}!\texttt{dect-decoder.sh}|book{3}}{100}
+\indexentry{500@\textbf{Commands}!\texttt{play}|book{3}}{100}
+\indexentry{500@\textbf{Commands}!\texttt{zbid}|book{3}}{131}
+\indexentry{500@\textbf{Commands}!\texttt{zbstumbler}|book{3}}{131}
+\indexentry{500@\textbf{Commands}!\texttt{zbdump}|book{3}}{131}
+\indexentry{500@\textbf{Commands}!\texttt{zbdsniff}|book{3}}{133}
+\indexentry{500@\textbf{Commands}!\texttt{zbreplay}|book{3}}{135}
+\indexentry{500@\textbf{Commands}!\texttt{zbfind}|book{3}}{137}
+\indexentry{500@\textbf{Commands}!\texttt{zbgoodfind}|book{3}}{140}
+\indexentry{500@\textbf{Commands}!\texttt{zwdump}|book{3}}{147}
+\indexentry{500@\textbf{Commands}!\texttt{zwreplay}|book{3}}{147}
+\indexentry{500@\textbf{Commands}!\texttt{btcrack}|book{4}}{28}
+\indexentry{500@\textbf{Commands}!\texttt{tshark}! |book{4}}{32}
+\indexentry{500@\textbf{Commands}!\texttt{hcitool}|book{4}}{32}
+\indexentry{500@\textbf{Commands}!\texttt{ubertooth-lap}|book{4}}{35}
+\indexentry{500@\textbf{Commands}!\texttt{ubertooth-lap}}{37}
+\indexentry{500@\textbf{Commands}!\texttt{ubertooth-uap}|book{4}}{37}
+\indexentry{500@\textbf{Commands}!\texttt{hcitool}}{37}
+\indexentry{500@\textbf{Commands}!\texttt{hcitool}}{44}
+\indexentry{500@\textbf{Commands}!\texttt{sdptool}|book{4}}{45}
+\indexentry{500@\textbf{Commands}!\texttt{bss}|book{4}}{46}
+\indexentry{500@\textbf{Commands}!\texttt{btmon}|book{4}}{70}
+\indexentry{500@\textbf{Commands}!\texttt{ubertooth-btle}|book{4}}{72}
+\indexentry{500@\textbf{Commands}!\texttt{hcitool}}{75}
+\indexentry{500@\textbf{Commands}!\texttt{gatttool}|book{4}}{75}
+\indexentry{500@\textbf{Commands}!\texttt{blesuite-runner.py}|book{4}}{80}
+\indexentry{500@\textbf{Commands}!\texttt{ubertooth-btle}}{82}
+\indexentry{500@\textbf{Commands}!\texttt{crackle}|book{4}}{82}
+\indexentry{500@\textbf{Commands}!\texttt{bleah}|book{4}}{87-88}
+\indexentry{500@\textbf{Commands}!\texttt{rtl\_power}|book{4}}{113}
+\indexentry{500@\textbf{Commands}!\texttt{heatmap.py}|book{4}}{113}
+\indexentry{500@\textbf{Commands}!\texttt{dump1090}|book{4}}{116}
+\indexentry{500@\textbf{Commands}!\texttt{rtl\_fm}|book{4}}{120}
+\indexentry{500@\textbf{Commands}!\texttt{multimon-ng}|book{4}}{120}
+\indexentry{500@\textbf{Commands}!\texttt{kal}|book{4}}{122}
+\indexentry{500@\textbf{Commands}!\texttt{rtl\_433}|book{4}}{126-127}
+\indexentry{500@\textbf{Commands}!\texttt{cardselect.py}|book{5}}{38}
+\indexentry{500@\textbf{Commands}!\texttt{fdxbnum.py}|book{5}}{39}
+\indexentry{500@\textbf{Commands}!\texttt{proxmark3}|book{5}}{45-46}
+\indexentry{500@\textbf{Commands}!\texttt{proxmark3}}{56-57}
+\indexentry{500@\textbf{Commands}!\texttt{proxmark3}}{63-64}
+\indexentry{500@\textbf{Commands}!\texttt{pcsc\_scan}|book{5}}{80}
+\indexentry{500@\textbf{Commands}!\texttt{mfoc}|book{5}}{87}
+\indexentry{500@\textbf{Commands}!\texttt{mfcuk}|book{5}}{89}
+\indexentry{500@\textbf{Commands}!\texttt{mfoc}}{90}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-mfclassic}|book{5}}{94}
+\indexentry{500@\textbf{Commands}!\texttt{proxmark3}}{97-98}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-list}|book{5}}{100}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-emulate-tag}|book{5}}{101}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-emulate-uid}|book{5}}{102}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-mfultralight}|book{5}}{105}
+\indexentry{500@\textbf{Commands}!\texttt{mifare-ultralight-info}|book{5}}{108}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-mfultralightc}|book{5}}{108}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-mfdesfire-keysearch}|book{5}}{112}
+\indexentry{500@\textbf{Commands}!\texttt{nfc-mfultralight}|book{5}}{124}
+\indexentry{500@\textbf{Commands}!\texttt{ulread}|book{5}}{128}
+\indexentry{500@\textbf{Commands}!\texttt{amiitool}|book{5}}{131}
+\indexentry{500@\textbf{Commands}!\texttt{gstrings}|book{5}}{131}
+\indexentry{500@\textbf{Commands}!\texttt{msfconsole}!  |book{5}}{134}
+
+\indexentry{501@\blankline|comment}{0}
+
+\indexentry{600@\textbf{Toolkit}!SWAT|book{1}}{22}
+\indexentry{600@\textbf{Toolkit}!Panda USB Adapter|book{1}}{23-24}
+\indexentry{600@\textbf{Toolkit}!Parani SENA UD-100|book{1}}{24}
+\indexentry{600@\textbf{Toolkit}!ACR122U Smart Card Reader/Writer|book{1}}{25}
+\indexentry{600@\textbf{Toolkit}!RTL-SDR|book{1}}{26}
+\indexentry{600@\textbf{Toolkit}!Powered USB Hub|book{1}}{27}
+\indexentry{600@\textbf{Toolkit}!PiPoint Raspberry Pi|book{1}}{28}
+\indexentry{600@\textbf{Toolkit}!Canakit|book{1}}{28}
+\indexentry{600@\textbf{Toolkit}!Kali Linux|book{1}}{29}
+\indexentry{600@\textbf{Toolkit}!I Love My Neighbors|book{1}}{29}
+\indexentry{600@\textbf{Toolkit}!Verizon MiFi|book{2}}{21}
+\indexentry{600@\textbf{Toolkit}!Pineapple Nano|book{2}}{48-49}
+\indexentry{600@\textbf{Toolkit}!I Love My Neighbors! |book{2}}{51-55}
+\indexentry{600@\textbf{Toolkit}!I Love My Neighbors!Services|book{2}}{54}
+\indexentry{600@\textbf{Toolkit}!I Love My Neighbors! }{57}
+\indexentry{600@\textbf{Toolkit}!Wave Bubble|book{2}}{90}
+\indexentry{600@\textbf{Toolkit}!SWAT! |book{3}}{69}
+\indexentry{600@\textbf{Toolkit}!BladeRF|book{3}}{103}
+\indexentry{600@\textbf{Toolkit}!HackRF|book{3}}{103}
+\indexentry{600@\textbf{Toolkit}!RTL-SDR! |book{3}}{103}
+\indexentry{600@\textbf{Toolkit}!AVR RZ Raven USB Stick|book{3}}{127}
+\indexentry{600@\textbf{Toolkit}!AVR Dragon|book{3}}{128}
+\indexentry{600@\textbf{Toolkit}!YARD Stick One|book{3}}{146}
+\indexentry{600@\textbf{Toolkit}!Linksys USBBT100|book{3}}{146}
+\indexentry{600@\textbf{Toolkit}!FTS4BT|book{4}}{28}
+\indexentry{600@\textbf{Toolkit}!Ubertooth One|book{4}}{35}
+\indexentry{600@\textbf{Toolkit}!Adafruit BLE Sniffer|book{4}}{66}
+\indexentry{600@\textbf{Toolkit}!Ubertooth One}{71-72}
+\indexentry{600@\textbf{Toolkit}!Parani SENA UD-100! |book{4}}{73}
+\indexentry{600@\textbf{Toolkit}!Ubertooth One}{81}
+\indexentry{600@\textbf{Toolkit}!Ubertooth One}{84}
+\indexentry{600@\textbf{Toolkit}!LimeSDR|book{4}}{84}
+\indexentry{600@\textbf{Toolkit}!HackRF! |book{4}}{104}
+\indexentry{600@\textbf{Toolkit}!BladeRF! |book{4}}{105}
+\indexentry{600@\textbf{Toolkit}!Ubertooth One}{104}
+\indexentry{600@\textbf{Toolkit}!YARD Stick One! |book{4}}{104}
+\indexentry{600@\textbf{Toolkit}!RTL-SDR!DVB-T Tuner|book{4}}{106}
+\indexentry{600@\textbf{Toolkit}!LimeSDR}{107}
+\indexentry{600@\textbf{Toolkit}!Ettus SDR|book{4}}{107}
+\indexentry{600@\textbf{Toolkit}!AirSpy|book{4}}{107}
+\indexentry{600@\textbf{Toolkit}!Stingray|book{4}}{121}
+\indexentry{600@\textbf{Toolkit}!HackRF! }{125}
+\indexentry{600@\textbf{Toolkit}!HackRF! }{127-128}
+\indexentry{600@\textbf{Toolkit}!ACG LAHF LF/HF Reader/Writer|book{5}}{37}
+\indexentry{600@\textbf{Toolkit}!Proxmark 3 RDV2|book{5}}{44-48}
+\indexentry{600@\textbf{Toolkit}!Tastic RF Thief|book{5}}{53-54}
+\indexentry{600@\textbf{Toolkit}!VIVOPay Credit Card Reader|book{5}}{73-75}
+\indexentry{600@\textbf{Toolkit}!ACR122U Smart Card Reader/Writer! |book{5}}{79-80}
+\indexentry{600@\textbf{Toolkit}!ACR122U Smart Card Reader/Writer! }{86}
+\indexentry{600@\textbf{Toolkit}!ACR122U Smart Card Reader/Writer! }{94}
+\indexentry{600@\textbf{Toolkit}!ACR122U Smart Card Reader/Writer! }{100-102}
+\indexentry{600@\textbf{Toolkit}!ACR122U Smart Card Reader/Writer! }{112}
+\indexentry{600@\textbf{Toolkit}!ACR122U Smart Card Reader/Writer! }{128}
+
+%\indexentry{601@\blankline|comment}{0}
+
+%\indexentry{700@\textbf{Documentation}!SWAT|book{1}}{22}
+
+\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Mobility|book{1}}{7}
+\indexentry{Unauthorized Access|book{1}}{7}
+\indexentry{Unauthorized Network|book{1}}{7}
+\indexentry{User Paradigm|book{1}}{7}
+\indexentry{Information Disclosure|book{1}}{8}
+\indexentry{Passive Listening|book{1}}{8}
+\indexentry{Sniffing|book{1}}{8}
+\indexentry{Denial-of-Service|book{1}}{9}
+\indexentry{CIA|book{1}}{9}
+\indexentry{Three-Legged Stool|book{1}}{9}
+\indexentry{Medium Attack|book{1}}{9}
+\indexentry{Design Weakness|book{1}}{10}
+\indexentry{Deauthenticate Attack|book{1}}{10}
+\indexentry{TKIP|book{1}}{10}
+\indexentry{Message Integrity Check|book{1}}{10}
+\indexentry{Micheal Protocol|book{1}}{10}
+\indexentry{Wireless Card Firmware Weakness|book{1}}{10}
+\indexentry{Driver Software Weakness|book{1}}{10}
+\indexentry{Rogue Threats|book{1}}{11}
+\indexentry{No Wireless Policy|book{1}}{11}
+\indexentry{NetShair Nano|book{1}}{11}
+\indexentry{Protocol Weakness|book{1}}{12}
+\indexentry{WEP|book{1}}{12}
+\indexentry{Bluetooth!EO Cipher|book{1}}{12}
+\indexentry{MIFARE|book{1}}{12}
+\indexentry{Smart Card|book{1}}{12}
+\indexentry{HID Proxcard|book{1}}{12}
+\indexentry{LEAP (Cisco)|book{1}}{12}
+\indexentry{Zigbee|book{1}}{12}
+\indexentry{Z-Wave|book{1}}{12}
+\indexentry{DECT|book{1}}{12}
+\indexentry{EAP! -@-MS-CHAP|book{1}}{12}
+\indexentry{RFID|book{1}}{12}
+\indexentry{Mobile Operator (MO)|book{1}}{13}
+\indexentry{Hotspot|book{1}}{13}
+\indexentry{Anonymity Attack|book{1}}{14}
+\indexentry{Preferred Network|book{1}}{14}
+\indexentry{Privacy|book{1}}{14}
+\indexentry{DECT}{15}
+\indexentry{DECT!Standard Cipher|book{1}}{15}
+\indexentry{Zigbee}{16}
+\indexentry{Key Recovery Attack|book{1}}{16}
+\indexentry{Bluetooth|book{1}}{17}
+\indexentry{RFID}{18}
+\indexentry{NFC|book{1}}{18}
+\indexentry{HID Proxcard}{18}
+\indexentry{SDR|book{1}}{19}
+\indexentry{TJX|book{1}}{20}
+\indexentry{Bluetooth!Monitoring (Insufficiency)|book{1}}{21}
+\indexentry{Toolkit|book{1}}{22}
+\indexentry{SWAT|book{1}}{22}
+\indexentry{Panda|book{1}}{23}
+\indexentry{Ralink|book{1}}{23}
+\indexentry{RT2800USB Driver|book{1}}{23}
+\indexentry{RT5372 Chipset (Ralink)|book{1}}{23}
+\indexentry{RP-SMA|book{1}}{23-24}
+\indexentry{Parani Sena|book{1}}{24}
+\indexentry{Bluetooth!Adapter|book{1}}{24}
+\indexentry{Smart Card!Reader/Writer|book{1}}{25}
+\indexentry{MIFARE}{25}
+\indexentry{ISO 14443|book{1}}{25}
+\indexentry{Sony FeliCa|book{1}}{25}
+\indexentry{PN532 Chipset|book{1}}{25}
+\indexentry{RTL-SDR|book{1}}{26}
+\indexentry{SDR\#|book{1}}{26}
+\indexentry{GQRX|book{1}}{26}
+\indexentry{GNU Radio|book{1}}{26}
+\indexentry{Kernel Panic|book{1}}{27}
+\indexentry{Know Your System|book{1}}{27}
+\indexentry{PiPoint|book{1}}{28}
+\indexentry{USB!Timing Issue|book{1}}{28}
+\indexentry{LibNFC|book{1}}{28}
+\indexentry{Canakit|book{1}}{28}
+\indexentry{Kali|book{1}}{29}
+\indexentry{I-Love-My-Neighbors|book{1}}{29}
+\indexentry{Man-in-the-Middle|book{1}}{29}
+\indexentry{Kerberos|book{1}}{30}
+\indexentry{DIAMETER|book{1}}{30}
+\indexentry{XMPP|book{1}}{30}
+\indexentry{Sniffing!Modes|book{1}}{35}
+\indexentry{Master Mode|book{1}}{35}
+\indexentry{Managed Mode|book{1}}{35}
+\indexentry{Ad-hoc Mode|book{1}}{35}
+\indexentry{Monitor Mode|book{1}}{35-36}
+\indexentry{BSS|book{1}}{35}
+\indexentry{IBSS|book{1}}{35}
+\indexentry{Ethernet-Compatibility Mode|book{1}}{35-36}
+\indexentry{IEEE 802.3|book{1}}{37}
+\indexentry{Managed Mode}{37}
+\indexentry{Monitor Mode}{38}
+\indexentry{Data Frame|book{1}}{38}
+\indexentry{Control Frame|book{1}}{38}
+\indexentry{IEEE 802.11|book{1}}{38-39}
+\indexentry{IEEE 802.11!Raw Frames|book{1}}{39}
+\indexentry{IEEE 802.11!6@i|book{1}}{39}
+\indexentry{CCMP|book{1}}{39}
+\indexentry{Management Frame|book{1}}{38-39}
+\indexentry{WiFi!Management Information|book{1}}{39}
+\indexentry{Monitor Mode!Windows|book{1}}{40-42}
+\indexentry{NDIS|book{1}}{41}
+\indexentry{IHV|book{1}}{41}
+\indexentry{Monitor Mode!Mac OS|book{1}}{43}
+\indexentry{LibPCAP!Format|book{1}}{43}
+\indexentry{Monitor Mode!Linux|book{1}}{44-46}
+\indexentry{IEEE 802.11!1@a|book{1}}{47}
+\indexentry{IEEE 802.11!3@b|book{1}}{47}
+\indexentry{IEEE 802.11!5@g|book{1}}{47}
+\indexentry{IEEE 802.11!7@n|book{1}}{47-48}
+\indexentry{IEEE 802.11!2@ac|book{1}}{47}
+\indexentry{IEEE 802.11!2@ac}{49}
+\indexentry{HT20|book{1}}{48}
+\indexentry{HT40|book{1}}{48}
+\indexentry{MIMO|book{1}}{48}
+\indexentry{MU-MIMO|book{1}}{49}
+\indexentry{Multiple-Transmitter|book{1}}{49}
+\indexentry{Beamforming|book{1}}{49}
+\indexentry{Directional Transmit|book{1}}{49}
+\indexentry{Selective Transmission|book{1}}{49}
+\indexentry{TxBF|book{1}}{49}
+\indexentry{Packet Capture|book{1}}{50}
+\indexentry{Data Frame}{50}
+\indexentry{Control Frame}{50}
+\indexentry{Management Frame}{50}
+\indexentry{Physical Layer!Control|book{1}}{51-52}
+\indexentry{IEEE 802.11!2@ac}{51}
+\indexentry{Kali}{51}
+\indexentry{RTL8812AU|book{1}}{51}
+\indexentry{Domain Settings|book{1}}{52}
+\indexentry{Dynamic Frequency Selction (DFS)|book{1}}{52}
+\indexentry{LibPCAP|book{1}}{53-54}
+\indexentry{Berkeley Packet Filter (BPF)|book{1}}{55}
+\indexentry{Snap Length|book{1}}{56}
+\indexentry{IEEE 802.11!Raw Frames!Not Encrypted|book{1}}{60}
+\indexentry{Privacy Bit|book{1}}{64}
+\indexentry{WEP Bit|book{1}}{64}
+\indexentry{Beacon Frame!Display Filter|book{1}}{64}
+\indexentry{WEP!Display Filter|book{1}}{64}
+\indexentry{Oracle Traffic Display Filter|book{1}}{64}
+\indexentry{BSSID Display Filter|book{1}}{64-65}
+\indexentry{Protocol Dissector|book{1}}{66}
+\indexentry{EAP|book{1}}{66}
+\indexentry{EAP! -@-PEAP|book{1}}{66}
+\indexentry{EAPOL|book{1}}{66}
+\indexentry{RADIUS|book{1}}{66}
+\indexentry{Wardriving|book{1}}{67}
+\indexentry{GPS|book{1}}{68}
+\indexentry{WLAN IDS|book{1}}{68}
+\indexentry{Interoperability|book{1}}{68}
+\indexentry{Cisco Discovery Protocol|book{1}}{69}
+\indexentry{WEP!Advanced Analysis|book{1}}{69}
+\indexentry{WEP!Passive Cracking|book{1}}{69}
+\indexentry{IEEE 802.11!Expert Analysis|book{1}}{68}
+\indexentry{Rogue AP!Identification|book{1}}{69}
+\indexentry{Channel Hopping|book{1}}{74}
+\indexentry{Dwell|book{1}}{74}
+\indexentry{SQLite|book{1}}{75}
+\indexentry{SQLite!WEP Encryption|book{1}}{75}
+\indexentry{Google Earth|book{1}}{75}
+\indexentry{Keyhole Markup Language|book{1}}{75}
+\indexentry{GPS}{77}
+\indexentry{SQLite}{77}
+\indexentry{SQLite!ESSID|book{1}}{77}
+\indexentry{ESSID|book{1}}{77}
+\indexentry{Monitor Mode!Android|book{1}}{78}
+\indexentry{RTL8187|book{1}}{78}
+\indexentry{On-The-Go|book{1}}{78}
+\indexentry{CloudShark Uploader|book{1}}{80}
+\indexentry{Range Mapping|book{1}}{81}
+\indexentry{Amplifier|book{1}}{81}
+\indexentry{High-Gain Antenna|book{1}}{81}
+\indexentry{Heatmap|book{1}}{82}
+\indexentry{Floor Plan|book{1}}{82}
+\indexentry{Real-Time Location System|book{1}}{82}
+\indexentry{Signal Strength Capture|book{1}}{83}
+\indexentry{GPS}{83-84}
+\indexentry{Panda}{83}
+\indexentry{Keyhole Markup Language}{84}
+\indexentry{Google Earth}{84}
+\indexentry{Excel|book{1}}{86}
+\indexentry{Rogue Threats!Types|book{1}}{92}
+\indexentry{Friendly Rogue|book{1}}{92}
+\indexentry{Malicious Rogue|book{1}}{92-93}
+\indexentry{Unintended Rogue|book{1}}{92}
+\indexentry{Organizational Policy|book{1}}{92}
+\indexentry{Backdoor|book{1}}{92}
+\indexentry{Misconfigured Equipment|book{1}}{92}
+\indexentry{Keepalive Ping|book{1}}{93}
+\indexentry{IBSS!Rogue|book{1}}{94-95}
+\indexentry{Unintended Rogue}{94}
+\indexentry{Windows Bridging|book{1}}{95}
+\indexentry{Windows Hosted Network|book{1}}{96}
+\indexentry{WPA2! -@-PSK|book{1}}{96}
+\indexentry{NDIS}{96}
+\indexentry{Infrastructure Rogue|book{1}}{97}
+\indexentry{Friendly Rogue}{97}
+\indexentry{Wired-Side Analysis|book{1}}{98-99}
+\indexentry{AP!Fingerprinting|book{1}}{98}
+\indexentry{Soft AP|book{1}}{98}
+\indexentry{OS Fingerprinting|book{1}}{99}
+\indexentry{Nmap Scripting Engine|book{1}}{99}
+\indexentry{Wardriving}{100}
+\indexentry{False Positive|book{1}}{100}
+\indexentry{Warwalking|book{1}}{100-108}
+\indexentry{Rogue AP!Analysis|book{1}}{100}
+\indexentry{Cisco Systems|book{1}}{103}
+\indexentry{Warwalking!Tools|book{1}}{105}
+\indexentry{AirMagnet|book{1}}{105}
+\indexentry{AirDefense|book{1}}{105}
+\indexentry{Aruba Networks|book{1}}{105}
+\indexentry{Active Discovery|book{1}}{105}
+\indexentry{Geiger Counter|book{1}}{107}
+\indexentry{Wireless-Side Analysis|book{1}}{100-120}
+\indexentry{WLAN IDS}{108}
+\indexentry{WLAN IPS|book{1}}{109}
+\indexentry{WLAN IDS!Sensors|book{1}}{108}
+\indexentry{Deauthenticate Frame|book{1}}{109}
+\indexentry{Denial-of-Service}{109}
+\indexentry{ARP Table|book{1}}{110}
+\indexentry{NetBIOS Advertisements|book{1}}{110}
+\indexentry{Cisco Discovery Protocol!Announcements|book{1}}{110}
+\indexentry{Cisco Discovery Protocol}{111}
+\indexentry{Signal-to-Noise Ratio|book{1}}{112-114}
+\indexentry{Signal Analysis|book{1}}{112-113}
+\indexentry{Rogue AP!Localization|book{1}}{112-119}
+\indexentry{Geiger Counter}{114}
+\indexentry{Ultra Mobile PC|book{1}}{114}
+\indexentry{Law Enforcement|book{1}}{115}
+\indexentry{Triangulation|book{1}}{116-117}
+\indexentry{WLAN IDS!Triangulation|book{1}}{117}
+\indexentry{AirMagnet}{117}
+\indexentry{AirDefense}{117}
+\indexentry{Aruba Networks}{117}
+\indexentry{AirTight|book{1}}{117}
+\indexentry{Cisco Discovery Protocol}{118}
+\indexentry{Cisco Discovery Protocol!Announcements}{118}
+\indexentry{ARP Table}{119}
+\indexentry{IOS|book{1}}{119}
+\indexentry{Linksys|book{1}}{119}
+\indexentry{Bridging the Airgap|book{1}}{126-151}
+\indexentry{Bridging the Airgap!Concept|book{1}}{127}
+\indexentry{Bridging the Airgap!Limitations|book{1}}{128}
+\indexentry{Scope|book{1}}{128}
+\indexentry{NDIS}{129}
+\indexentry{Bridging the Airgap!Windows|book{1}}{129-143}
+\indexentry{Reverse Shell|book{1}}{130}
+\indexentry{Antivirus Bypass|book{1}}{130}
+\indexentry{Profile Information|book{1}}{134}
+\indexentry{WEP}{134}
+\indexentry{WPA2! -@-PSK}{134}
+\indexentry{Wireless Discovery|book{1}}{135}
+\indexentry{VNC|book{1}}{137}
+\indexentry{WEP!Cracking|book{1}}{137}
+\indexentry{WPA2! -@-PSK!Key Recovery Attack|book{1}}{137}
+\indexentry{LibPCAP!Format}{138}
+\indexentry{Windows WiFi Connection Creation|book{1}}{139}
+\indexentry{Windows Wireless Data Collection|book{1}}{141}
+\indexentry{Post-Exploitation|book{1}}{141}
+\indexentry{Soft AP}{142}
+\indexentry{Privilege Escalation|book{1}}{142}
+\indexentry{Backdoor}{142}
+\indexentry{NDIS}{142}
+\indexentry{Bridging the Airgap!Mac OS|book{1}}{144-150}
+\indexentry{LibPCAP}{144}
+\indexentry{Airport Interface|book{1}}{144}
+\indexentry{Airport Interface}{146}
+\indexentry{High Throughput|book{1}}{146}
+\indexentry{IEEE 802.11!7@n}{146}
+\indexentry{Keychain Attack|book{1}}{147-149}
+\indexentry{Dictionary Attack|book{1}}{147-148}
+\indexentry{WEP}{149}
+\indexentry{WPA2! -@-PSK}{149}
+\indexentry{Preferred Network!List|book{1}}{150}
+\indexentry{Scope}{151}
+\indexentry{NAT|book{1}}{151}
+\indexentry{VPN|book{1}}{151}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Hotspot|book{2}}{5}
+\indexentry{Hotspot!Architecture|book{2}}{5-6}
+\indexentry{Hotspot!Components|book{2}}{5-6}
+\indexentry{Controller|book{2}}{5-7}
+\indexentry{AP|book{2}}{5}
+\indexentry{Firewall|book{2}}{5}
+\indexentry{VLAN|book{2}}{5}
+\indexentry{IEEE 802.1X Authentication|book{2}}{5}
+\indexentry{Captive Web Portal|book{2}}{6-7}
+\indexentry{HTTP Filter|book{2}}{6}
+\indexentry{Authentication Server|book{2}}{6}
+\indexentry{RADIUS! |book{2}}{6}
+\indexentry{LDAP|book{2}}{6}
+\indexentry{Authentication Credentials|book{2}}{6}
+\indexentry{Cox WiFi|book{2}}{7-8}
+\indexentry{Cox WiFi!Network Access|book{2}}{9}
+\indexentry{Client Isolation|book{2}}{9}
+\indexentry{Unauthenticated Services|book{2}}{9}
+\indexentry{DNS|book{2}}{9}
+\indexentry{ICMP|book{2}}{9}
+\indexentry{Controller!Vulnerabilities|book{2}}{10}
+\indexentry{Bluesocket|book{2}}{10}
+\indexentry{Guestbox|book{2}}{11}
+\indexentry{Directory Browsing|book{2}}{11}
+\indexentry{Runtime Errors|book{2}}{11}
+\indexentry{Sequential Customer Number|book{2}}{11}
+\indexentry{Administrative Interface|book{2}}{11}
+\indexentry{IPoDNS|book{2}}{12}
+\indexentry{IPoICMP|book{2}}{12}
+\indexentry{DNS!Tunneling|book{2}}{12}
+\indexentry{ICMP!Tunneling|book{2}}{12}
+\indexentry{Service Theft|book{2}}{12-13}
+\indexentry{ICMP!Echo|book{2}}{12-14}
+\indexentry{Ping|book{2}}{13}
+\indexentry{Authentication Bypass|book{2}}{13}
+\indexentry{ICMP!Unreachable|book{2}}{13}
+\indexentry{Session Hijacking|book{2}}{15}
+\indexentry{MAC!Impersonation|book{2}}{16}
+\indexentry{Authentication Bypass}{17}
+\indexentry{Logout URL|book{2}}{17}
+\indexentry{Information Disclosure! |book{2}}{18}
+\indexentry{Weak Protocols|book{2}}{18}
+\indexentry{Spoofed Provider|book{2}}{20}
+\indexentry{Roaming|book{2}}{20}
+\indexentry{AP!Spoofing|book{2}}{20}
+\indexentry{AP!Impersonation|book{2}}{21}
+\indexentry{Open Network Impersonation|book{2}}{21}
+\indexentry{Deauthenticate Attack! |book{2}}{21}
+\indexentry{Denial-of-Service! |book{2}}{21}
+\indexentry{Hotspot!Impersonation|book{2}}{22}
+\indexentry{Site Mirroring|book{2}}{22}
+\indexentry{Fake DNS|book{2}}{22}
+\indexentry{HTTP Vulnerability|book{2}}{23}
+\indexentry{Sidejacking|book{2}}{24-27}
+\indexentry{Cookie|book{2}}{24-27}
+\indexentry{Defensive Measures|book{2}}{28-29}
+\indexentry{Personal Firewall|book{2}}{28}
+\indexentry{Group Policy|book{2}}{28}
+\indexentry{Host IPS|book{2}}{28}
+\indexentry{VPN! |book{2}}{28}
+\indexentry{WPA2|book{2}}{29}
+\indexentry{IEEE 802.1X Authentication}{29}
+\indexentry{Certificate Validation|book{2}}{29}
+\indexentry{IPSec|book{2}}{29}
+\indexentry{Account Monitoring|book{2}}{29}
+\indexentry{Weakest Link|book{2}}{32}
+\indexentry{Strong Authentication|book{2}}{32}
+\indexentry{Strong Encryption|book{2}}{32}
+\indexentry{EAP! |book{2}}{32}
+\indexentry{Hotspot!Injection|book{2}}{34-35}
+\indexentry{Race Condition|book{2}}{34}
+\indexentry{Open Authentication|book{2}}{34}
+\indexentry{L2 Encryption|book{2}}{34}
+\indexentry{Spoofed Response|book{2}}{34}
+\indexentry{Publicly Secure Packet Forwarding|book{2}}{39-41}
+\indexentry{STA-STA Attack|book{2}}{39}
+\indexentry{Routing Filter|book{2}}{39}
+\indexentry{Access Control List|book{2}}{39}
+\indexentry{IPSec!Gateway|book{2}}{39}
+\indexentry{VLAN}{39}
+\indexentry{To-DS Bit|book{2}}{40}
+\indexentry{From-DS Bit|book{2}}{40-41}
+\indexentry{AP!Filter Bypass|book{2}}{41}
+\indexentry{Publicly Secure Packet Forwarding!Bypass Attack|book{2}}{42}
+\indexentry{Preferred Network!List! |book{2}}{43-44}
+\indexentry{Probe Request|book{2}}{43-44}
+\indexentry{Network Impersonation|book{2}}{43}
+\indexentry{Network Tracking|book{2}}{44}
+\indexentry{ARP Unicast|book{2}}{44}
+\indexentry{Unicast ARP|book{2}}{44}
+\indexentry{MDNS|book{2}}{44}
+\indexentry{Apple Bonjour|book{2}}{44}
+\indexentry{Privacy! |book{2}}{44}
+\indexentry{Google Maps|book{2}}{44}
+\indexentry{Network Impersonation}{47-48}
+\indexentry{Multi-SSID Impersonation|book{2}}{47-48}
+\indexentry{Probe Request}{47}
+\indexentry{Karma Attack|book{2}}{47}
+\indexentry{Scope! |book{2}}{47}
+\indexentry{Windows ICS|book{2}}{49}
+\indexentry{Bridged Connection|book{2}}{49}
+\indexentry{ARP Poisoning|book{2}}{50}
+\indexentry{Man-in-the-Middle! |book{2}}{50}
+\indexentry{Network Impersonation}{51}
+\indexentry{I-Love-My-Neighbors! |book{2}}{51}
+\indexentry{AP!Impersonation}{52}
+\indexentry{Imposter AP|book{2}}{52}
+\indexentry{Squid|book{2}}{52}
+\indexentry{Proxy|book{2}}{52}
+\indexentry{Adobe Flash Attack|book{2}}{53}
+\indexentry{Software Update|book{2}}{54}
+\indexentry{Software Install|book{2}}{54}
+\indexentry{Shikata Ga Nai|book{2}}{56}
+\indexentry{Payload|book{2}}{56}
+\indexentry{Squid}{57}
+\indexentry{Meterpreter Commands|book{2}}{58}
+\indexentry{Defensive Measures}{60}
+\indexentry{Group Policy}{60}
+\indexentry{Active Directory|book{2}}{60}
+\indexentry{WLAN IDS! |book{2}}{60}
+\indexentry{WEP! |book{2}}{65-66}
+\indexentry{Zigbee! |book{2}}{65}
+\indexentry{DECT! |book{2}}{65}
+\indexentry{IEEE 802.15.4|book{2}}{65}
+\indexentry{Initialization Vector|book{2}}{65}
+\indexentry{Key Reuse Attack|book{2}}{65}
+\indexentry{Replay Attack|book{2}}{65}
+\indexentry{TKIP! |book{2}}{65}
+\indexentry{RC4|book{2}}{66}
+\indexentry{Integrity Check Value|book{2}}{66}
+\indexentry{Control Frame! |book{2}}{66}
+\indexentry{Management Frame! |book{2}}{66}
+\indexentry{WEP!Encryption!Coverage|book{2}}{66}
+\indexentry{CRC32|book{2}}{66}
+\indexentry{XOR|book{2}}{67}
+\indexentry{RC4}{68}
+\indexentry{Stream Cipher|book{2}}{68}
+\indexentry{Block Cipher|book{2}}{68}
+\indexentry{Shared Key|book{2}}{68}
+\indexentry{Initialization Vector}{68-69}
+\indexentry{Pre-Shared Key|book{2}}{69}
+\indexentry{PRGA|book{2}}{69}
+\indexentry{Pseudorandom Data Stream|book{2}}{69}
+\indexentry{Key Stream|book{2}}{69}
+\indexentry{Integrity Check Value}{70-71}
+\indexentry{CRC32}{70}
+\indexentry{WEP!Encryption|book{2}}{71}
+\indexentry{Pre-Shared Key}{71}
+\indexentry{PRGA}{71}
+\indexentry{RC4}{71}
+\indexentry{Initialization Vector}{71}
+\indexentry{WEP!Decryption|book{2}}{72}
+\indexentry{PTW Attack|book{2}}{73}
+\indexentry{WEP!Key Recovery|book{2}}{74}
+\indexentry{WEP!Failures|book{2}}{75}
+\indexentry{Integrity Check Value}{75}
+\indexentry{Pre-Shared Key}{75}
+\indexentry{ARP Replay|book{2}}{76}
+\indexentry{ChopChop Attack|book{2}}{77}
+\indexentry{Denial-of-Service! }{84-118}
+\indexentry{Denial-of-Service!Impact|book{2}}{84}
+\indexentry{Denial-of-Service!Types|book{2}}{87}
+\indexentry{Persistent Attack|book{2}}{87}
+\indexentry{Non-Persistent Attack|book{2}}{87}
+\indexentry{Denial-of-Service!Targets|book{2}}{88}
+\indexentry{Physical Medium Attack|book{2}}{88-89}
+\indexentry{MAC!Attack|book{2}}{88}
+\indexentry{RF Jamming|book{2}}{90-91}
+\indexentry{Programmable Logic Controller|book{2}}{90}
+\indexentry{RF Jamming!Legality|book{2}}{91}
+\indexentry{MAC!Attack}{93}
+\indexentry{Resource Starvation Attack|book{2}}{94}
+\indexentry{Association IDentifier|book{2}}{94}
+\indexentry{Association Flood|book{2}}{94}
+\indexentry{Authentication Flood|book{2}}{94}
+\indexentry{Stress Test|book{2}}{95}
+\indexentry{Disassociation Flood|book{2}}{96}
+\indexentry{Deauthentication Flood|book{2}}{96}
+\indexentry{Deauthenticate Frame! |book{2}}{96}
+\indexentry{Spoofed AP|book{2}}{96}
+\indexentry{Probe Request}{98}
+\indexentry{IEEE 802.1X Authentication}{98}
+\indexentry{Packet Injection|book{2}}{99}
+\indexentry{Deauthentication Flood}{100}
+\indexentry{Deauthenticate Frame! }{101}
+\indexentry{Beacon Flood|book{2}}{102}
+\indexentry{Deauthentication Flood}{102-103}
+\indexentry{Disassociation Flood}{102-103}
+\indexentry{Management Frame! }{102-103}
+\indexentry{WLAN IDS! }{102}
+\indexentry{WLAN IPS! |book{2}}{102}
+\indexentry{IEEE 802.11!10@w|book{2}}{103}
+\indexentry{Message Integrity Check! |book{2}}{103}
+\indexentry{Hunter Killer Attack|book{2}}{103}
+\indexentry{Management Frame!Protection|book{2}}{103}
+\indexentry{Beacon Frame|book{2}}{104}
+\indexentry{Spoofed Beacon Frame|book{2}}{104}
+\indexentry{Scapy|book{2}}{105}
+\indexentry{CSMA/CA|book{2}}{106}
+\indexentry{Clear To Send|book{2}}{106-110}
+\indexentry{Ready To Send|book{2}}{106-110}
+\indexentry{Transmit and Pray|book{2}}{106}
+\indexentry{Hidden Node Problem|book{2}}{106-107}
+\indexentry{Network Allocator Vector|book{2}}{108-109}
+\indexentry{Medium Reservation Attack|book{2}}{109}
+\indexentry{TKIP! }{111-115}
+\indexentry{AES-CCMP|book{2}}{111}
+\indexentry{Key Reuse Attack}{111}
+\indexentry{Replay Attack}{111}
+\indexentry{Rekeying|book{2}}{111}
+\indexentry{Compatibility Mode|book{2}}{111}
+\indexentry{IEEE 802.11!7@n! |book{2}}{111}
+\indexentry{TKIP!Replay Attacks|book{2}}{112}
+\indexentry{TKIP!Sequence Counter|book{2}}{112}
+\indexentry{QoS|book{2}}{113}
+\indexentry{IEEE 802.11!4@e|book{2}}{113}
+\indexentry{IEEE 802.11!6@i! |book{2}}{113}
+\indexentry{TKIP!Replay Attacks}{114-115}
+\indexentry{IEEE 802.11!7@n! }{115}
+\indexentry{Michael Countermeasures|book{2}}{115}
+\indexentry{Michael MIC|book{2}}{115}
+\indexentry{Denial-of-Service!Range|book{2}}{116}
+\indexentry{YDI|book{2}}{116}
+\indexentry{Short-Range Attack|book{2}}{116}
+\indexentry{Long-Range Attack|book{2}}{116}
+\indexentry{WiFi Blackout|book{2}}{116}
+\indexentry{IEEE 802.11!6@i! }{117}
+\indexentry{IEEE 802.11!10@w}{117}
+\indexentry{DSSS|book{2}}{117}
+\indexentry{Defensive Measures}{119}
+\indexentry{RF Barriers|book{2}}{119}
+\indexentry{WLAN IDS! }{119}
+\indexentry{Denial-of-Service!Response Plan|book{2}}{119}
+\indexentry{RF Jamming}{119}
+\indexentry{Prism2 Test Mode Jamming Attack|book{2}}{119}
+\indexentry{Triangulation}{119}
+\indexentry{Fuzzing|book{2}}{124-144}
+\indexentry{Bug Discovery|book{2}}{124}
+\indexentry{Vulnerability Discovery|book{2}}{126}
+\indexentry{SSID Information Element|book{2}}{128}
+\indexentry{Probe Request}{128}
+\indexentry{Fuzzing!Targets|book{2}}{130}
+\indexentry{RSN|book{2}}{130}
+\indexentry{Beacon Frame}{130}
+\indexentry{Scapy}{131-139}
+\indexentry{Packet Crafting|book{2}}{131}
+\indexentry{Protocol Manipulation|book{2}}{131}
+\indexentry{Sniffing! |book{2}}{131}
+\indexentry{Scapy!Useful Functions|book{2}}{135-139}
+\indexentry{Scope! }{141}
+\indexentry{Fuzzing!Plan of Attack|book{2}}{141}
+\indexentry{Fuzzing!Traffic Recording|book{2}}{142-143}
+\indexentry{Fuzzing!When ?|book{2}}{144}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Hashing|book{3}}{5}
+\indexentry{Data Integrity|book{3}}{5}
+\indexentry{HMAC|book{3}}{6}
+\indexentry{WPA2! |book{3}}{7-47}
+\indexentry{WPA2! -@-PSK! |book{3}}{7}
+\indexentry{TKIP!  |book{3}}{7}
+\indexentry{IEEE 802.1X Authentication! |book{3}}{7}
+\indexentry{CCMP! |book{3}}{7}
+\indexentry{AES-CCMP! |book{3}}{7}
+\indexentry{Pre-Shared Key! |book{3}}{8-9}
+\indexentry{Pairwise Master Key|book{3}}{8-10}
+\indexentry{Pairwise Transient Key|book{3}}{8-13}
+\indexentry{WPA2! -@-PSK!PMK Derivation|book{3}}{9}
+\indexentry{PBKDF2|book{3}}{9}
+\indexentry{HMAC! -@-SHA1|book{3}}{9}
+\indexentry{WPA2! -@-PSK!PTK Derivation|book{3}}{10-11}
+\indexentry{PRF|book{3}}{10}
+\indexentry{Pairwise Key Expansion|book{3}}{10}
+\indexentry{HMAC! -@-SHA1}{11-13}
+\indexentry{Pairwise Transient Key!Mapping|book{3}}{12}
+\indexentry{Message Integrity Check!Key|book{3}}{12}
+\indexentry{Michael Key|book{3}}{12}
+\indexentry{Key Encryption Key|book{3}}{12}
+\indexentry{TKIP!  }{12}
+\indexentry{HMAC! -@-MD5|book{3}}{12-13}
+\indexentry{EAPOL! |book{3}}{12}
+\indexentry{WPA2!a@4-Way Handshake|book{3}}{13-15}
+\indexentry{Man-in-the-Middle!  |book{3}}{13}
+\indexentry{Nonce|book{3}}{14}
+\indexentry{WPA2! -@-PSK! }{16}
+\indexentry{WPA2! -@-PSK!Beacon|book{3}}{17-18}
+\indexentry{WPA2! -@-PSK!Passphrase|book{3}}{19}
+\indexentry{Dictionary Attack! |book{3}}{19}
+\indexentry{WPA2! -@-PSK!PSK Selection|book{3}}{20}
+\indexentry{Dictionary Attack! }{21}
+\indexentry{PBKDF2}{22}
+\indexentry{WPA2! -@-PSK!PMK Derivation}{25}
+\indexentry{Salt|book{3}}{25}
+\indexentry{Precomputation Attack|book{3}}{25}
+\indexentry{Password Cracking|book{3}}{26}
+\indexentry{OpenCL|book{3}}{26}
+\indexentry{Mask Attack|book{3}}{26-27}
+\indexentry{Brute Force|book{3}}{27}
+\indexentry{Default Password|book{3}}{27}
+\indexentry{HCCAP Format|book{3}}{27}
+\indexentry{LibPCAP!Format! |book{3}}{27}
+\indexentry{Amazon AWS|book{3}}{29}
+\indexentry{WiFi Protected Setup|book{3}}{30-37}
+\indexentry{PBC|book{3}}{30}
+\indexentry{OOB|book{3}}{30}
+\indexentry{Dictionary Attack! }{31}
+\indexentry{Brute Force}{32}
+\indexentry{WiFi Protected Setup!PIN Authentication|book{3}}{32}
+\indexentry{Windows Connect Now|book{3}}{32}
+\indexentry{PIN Attack|book{3}}{33}
+\indexentry{Backoff Timer|book{3}}{33}
+\indexentry{WiFi Protected Setup!Detection|book{3}}{34}
+\indexentry{PIN Attack}{35}
+\indexentry{Backoff Timer}{35}
+\indexentry{Throttling|book{3}}{35}
+\indexentry{Stolen Device|book{3}}{38}
+\indexentry{PCI|book{3}}{38}
+\indexentry{WPA2! -@-PSK! }{38}
+\indexentry{WPA2! -@-Enterprise|book{3}}{38}
+\indexentry{IEEE 802.1X Authentication! }{38}
+\indexentry{CryptUnprotectedData()|book{3}}{39}
+\indexentry{KRACK|book{3}}{41-44}
+\indexentry{Replay Attack! |book{3}}{41}
+\indexentry{IEEE 802.11!6@i!  |book{3}}{41}
+\indexentry{IEEE 802.11!9@r|book{3}}{41}
+\indexentry{Roaming! |book{3}}{41}
+\indexentry{Nonce}{41}
+\indexentry{WPA2!a@4-Way Handshake}{41}
+\indexentry{TKIP!  }{41}
+\indexentry{CCMP! }{41}
+\indexentry{GCMP|book{3}}{41}
+\indexentry{Pairwise Master Key}{42-43}
+\indexentry{Rogue AP|book{3}}{43}
+\indexentry{Man-in-the-Middle!  }{43}
+\indexentry{WPA3|book{3}}{45-46}
+\indexentry{Simultaneous Authentication of Equals|book{3}}{45}
+\indexentry{Perfect Forward Secrecy|book{3}}{45}
+\indexentry{Device Provisioning Protocol|book{3}}{45}
+\indexentry{Opportunistic Wireless Encryption|book{3}}{45}
+\indexentry{Diffie-Hellman|book{3}}{45}
+\indexentry{AES-GCM|book{3}}{46}
+\indexentry{ECC|book{3}}{46}
+\indexentry{CNSA|book{3}}{46}
+\indexentry{Strong Passphrase|book{3}}{47}
+\indexentry{Passphrase Minimal Length|book{3}}{47}
+\indexentry{WPA2! -@-PSK!Securization|book{3}}{47}
+\indexentry{WiFi Protected Setup}{47}
+\indexentry{IEEE 802.1X Authentication! }{47}
+\indexentry{Defensive Measures! |book{3}}{47}
+\indexentry{Preferred Network!List!  |book{3}}{52}
+\indexentry{Soft AP! |book{3}}{52}
+\indexentry{Hostapd|book{3}}{52}
+\indexentry{MiFi|book{3}}{52}
+\indexentry{Protected Extensible Auth Protocol|book{3}}{53-55}
+\indexentry{WPA2! -@-Enterprise}{53}
+\indexentry{RADIUS!  |book{3}}{53}
+\indexentry{TLS|book{3}}{54}
+\indexentry{Protected Extensible Auth Protocol!Transaction|book{3}}{53-55}
+\indexentry{TLS!Tunnel|book{3}}{55}
+\indexentry{RADIUS!  }{55}
+\indexentry{EAP! -@-MS-CHAP! |book{3}}{55}
+\indexentry{WPA2! -@-Enterprise}{56}
+\indexentry{EAPOL! }{56}
+\indexentry{Pairwise Master Key}{56}
+\indexentry{Pairwise Transient Key}{56}
+\indexentry{TKIP!  }{56}
+\indexentry{CCMP! }{56}
+\indexentry{IEEE 802.1X Authentication! }{56}
+\indexentry{IV Collision Attack|book{3}}{56}
+\indexentry{WPA2! -@-Enterprise!Key Distribution|book{3}}{57}
+\indexentry{TKIP!a@4-Way Handshake|book{3}}{57}
+\indexentry{Key Encryption Key}{58}
+\indexentry{TLS!Tunnel}{58}
+\indexentry{Pairwise Transient Key}{58}
+\indexentry{EAPOL! }{58}
+\indexentry{Account Lockout|book{3}}{59}
+\indexentry{Password Spraying Attack|book{3}}{59-60}
+\indexentry{Protected Extensible Auth Protocol!Authentication Attack|book{3}}{59}
+\indexentry{Denial-of-Service!  |book{3}}{59}
+\indexentry{RADIUS!Server Validation|book{3}}{61-62}
+\indexentry{Common Name|book{3}}{62}
+\indexentry{Protected Extensible Auth Protocol!Weakness|book{3}}{62}
+\indexentry{Windows Native WiFi|book{3}}{63}
+\indexentry{Rogue RADIUS|book{3}}{63}
+\indexentry{Protected Extensible Auth Protocol!Windows Properties|book{3}}{63}
+\indexentry{Supplicant Behavior|book{3}}{64-67}
+\indexentry{Supplicant Behavior!Windows|book{3}}{64-65}
+\indexentry{EAP! -@-MS-CHAP! }{65}
+\indexentry{CA|book{3}}{65-67}
+\indexentry{Supplicant Behavior!IOS|book{3}}{66}
+\indexentry{Supplicant Behavior!Android|book{3}}{67}
+\indexentry{Untrusted Certificate|book{3}}{68}
+\indexentry{RADIUS!  }{68-69}
+\indexentry{Protected Extensible Auth Protocol!Authentication Attack}{68}
+\indexentry{Hostapd}{69}
+\indexentry{Self-Signed Certificate|book{3}}{69}
+\indexentry{EAP! -@-MS-CHAP! }{71}
+\indexentry{EAP! -@-MS-CHAP!Cracking|book{3}}{72-73}
+\indexentry{LEAP (Cisco)! |book{3}}{72}
+\indexentry{Protected Extensible Auth Protocol!Windows Properties}{74}
+\indexentry{Defensive Measures! }{74-75}
+\indexentry{WLAN IDS!  |book{3}}{75}
+\indexentry{Rogue AP}{75}
+\indexentry{DECT!  |book{3}}{80-104}
+\indexentry{DECT!Range|book{3}}{80}
+\indexentry{DECT!Interoperability|book{3}}{81}
+\indexentry{ETSI|book{3}}{80}
+\indexentry{DECT!Architecture|book{3}}{83-85}
+\indexentry{FP|book{3}}{83}
+\indexentry{PP|book{3}}{83}
+\indexentry{RFPI|book{3}}{83}
+\indexentry{RSSI|book{3}}{83}
+\indexentry{PSTN|book{3}}{83}
+\indexentry{VoIP|book{3}}{83}
+\indexentry{DECT!Frequency|book{3}}{84}
+\indexentry{DECT!PHY Layer|book{3}}{84}
+\indexentry{DECT!MAC Layer|book{3}}{85}
+\indexentry{DECT!Security|book{3}}{86-88}
+\indexentry{Security Through Obscurity|book{3}}{86}
+\indexentry{UAK|book{3}}{87-88}
+\indexentry{DSAA|book{3}}{87}
+\indexentry{GAP|book{3}}{87-88}
+\indexentry{DCK|book{3}}{88}
+\indexentry{LSFR|book{3}}{88}
+\indexentry{Stream Cipher! |book{3}}{88}
+\indexentry{Team deDECTed|book{3}}{89}
+\indexentry{DECT!Attack!HW|book{3}}{90}
+\indexentry{Com-on-Air|book{3}}{90}
+\indexentry{Ascom Voo:Doo|book{3}}{90}
+\indexentry{Greengate DA099|book{3}}{90}
+\indexentry{DECT!Network Scanning|book{3}}{92-95}
+\indexentry{Channel Hopping! |book{3}}{92}
+\indexentry{DECT!Attack|book{3}}{96}
+\indexentry{DECT!Audio Eavesdropping|book{3}}{96-100}
+\indexentry{FP!Impersonation|book{3}}{101}
+\indexentry{DECT!Standard Cipher! |book{3}}{101}
+\indexentry{Encryption Dumb-down Attack|book{3}}{101}
+\indexentry{UAK!Recovery|book{3}}{101}
+\indexentry{DECT!Attack}{101}
+\indexentry{DCK}{101}
+\indexentry{GNU Radio! |book{3}}{101}
+\indexentry{Zigbee!  |book{3}}{108-148}
+\indexentry{IEEE 802.15.4! |book{3}}{108}
+\indexentry{FHSS|book{3}}{109}
+\indexentry{Siemens APOGEE|book{3}}{112}
+\indexentry{FLC|book{3}}{112}
+\indexentry{Zigbee!Background|book{3}}{115}
+\indexentry{Zigbee!Frequency|book{3}}{115}
+\indexentry{DSSS! |book{3}}{115}
+\indexentry{IEEE 802.11!3@b! |book{3}}{115}
+\indexentry{ZC|book{3}}{116}
+\indexentry{ZR|book{3}}{116}
+\indexentry{ZED|book{3}}{116}
+\indexentry{TC|book{3}}{116}
+\indexentry{FFD|book{3}}{116}
+\indexentry{RFD|book{3}}{116}
+\indexentry{PAN ID|book{3}}{116}
+\indexentry{Zigbee!PRO|book{3}}{116}
+\indexentry{Zigbee!PHY Layer|book{3}}{117}
+\indexentry{Zigbee!Topologies|book{3}}{117}
+\indexentry{PAN ID}{118}
+\indexentry{Zigbee!Bridging|book{3}}{118}
+\indexentry{Zigbee!Router Bridging|book{3}}{118}
+\indexentry{Zigbee!MAC Layer|book{3}}{118-119}
+\indexentry{Beacon Frame! |book{3}}{118}
+\indexentry{Data Frame! |book{3}}{118}
+\indexentry{Command Frame|book{3}}{118}
+\indexentry{ACK Frame|book{3}}{118}
+\indexentry{FCS|book{3}}{119}
+\indexentry{Zigbee!NWK Layer|book{3}}{120}
+\indexentry{Network Radius|book{3}}{120}
+\indexentry{TTL|book{3}}{120}
+\indexentry{Routing Loop|book{3}}{120}
+\indexentry{AES-CCM*|book{3}}{120}
+\indexentry{Message Integrity Check!  |book{3}}{121}
+\indexentry{Replay Protection|book{3}}{121}
+\indexentry{Zigbee!PRO}{121}
+\indexentry{Zigbee!Security!Modes|book{3}}{122}
+\indexentry{Standard Security Model|book{3}}{122}
+\indexentry{Residential Mode|book{3}}{122}
+\indexentry{High Security Model|book{3}}{122}
+\indexentry{Commercial Mode|book{3}}{122}
+\indexentry{Zigbee!Key Provisioning|book{3}}{123}
+\indexentry{Zigbee!a@4-Way Handshake|book{3}}{123}
+\indexentry{SKKE|book{3}}{123}
+\indexentry{MMI|book{3}}{123}
+\indexentry{Zigbee!PRO}{123}
+\indexentry{Mutual Authentication|book{3}}{124}
+\indexentry{Challenge/Response|book{3}}{124}
+\indexentry{Access Control List! |book{3}}{124}
+\indexentry{IEEE 802.15.4! }{124}
+\indexentry{MAC!Filtering|book{3}}{124}
+\indexentry{Man-in-the-Middle!  }{124}
+\indexentry{Zigbee!Security|book{3}}{125}
+\indexentry{SEP|book{3}}{125}
+\indexentry{Smart Energy|book{3}}{125}
+\indexentry{ECC}{125}
+\indexentry{PKI|book{3}}{125}
+\indexentry{IEEE 802.15.4! }{126}
+\indexentry{RZUSB|book{3}}{127-128}
+\indexentry{PCB|book{3}}{127}
+\indexentry{Raven|book{3}}{127}
+\indexentry{Dragon|book{3}}{128}
+\indexentry{Sensor Network Analyzer|book{3}}{130}
+\indexentry{Over-the-Air|book{3}}{130}
+\indexentry{Replay Attack! }{130}
+\indexentry{Key Rotation|book{3}}{132}
+\indexentry{Over-the-Air}{132-133}
+\indexentry{Key Sniffer|book{3}}{133}
+\indexentry{IEEE 802.15.4! }{134}
+\indexentry{Replay Protection}{134}
+\indexentry{WEP!   |book{3}}{134}
+\indexentry{Replay Attack! }{134-135}
+\indexentry{WPA2! -@-PSK! }{136}
+\indexentry{Key Rotation}{136}
+\indexentry{GoodFET|book{3}}{138-140}
+\indexentry{JTAG|book{3}}{138}
+\indexentry{SparkFun|book{3}}{139}
+\indexentry{Circuit Hooks|book{3}}{139}
+\indexentry{IEEE 802.15.4! }{140}
+\indexentry{Bus Sniffing|book{3}}{140}
+\indexentry{Protocol Analyzer|book{3}}{140}
+\indexentry{Zigbee!Capture Decryption|book{3}}{141}
+\indexentry{Zigbee!Key Provisioning}{142}
+\indexentry{Zigbee!Thoughts|book{3}}{142}
+\indexentry{Stream Cipher! }{142}
+\indexentry{IV Collision Attack}{142}
+\indexentry{IV Reuse|book{3}}{142}
+\indexentry{AES-CCM*}{142}
+\indexentry{Third-Party Stack|book{3}}{142}
+\indexentry{Z-Wave! |book{3}}{144-145}
+\indexentry{Z-Wave!Frequencies|book{3}}{144}
+\indexentry{Home ID|book{3}}{144}
+\indexentry{CC2540|book{3}}{146}
+\indexentry{RFcat|book{3}}{146}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Bluetooth! |book{4}}{4-94}
+\indexentry{Bluetooth!Technology|book{4}}{4}
+\indexentry{SIG|book{4}}{5}
+\indexentry{Bluetooth!Classic|book{4}}{6-8}
+\indexentry{Bluetooth!Classic!Frequency|book{4}}{6}
+\indexentry{EDR|book{4}}{6}
+\indexentry{FHSS! |book{4}}{6}
+\indexentry{Frequency Hopping!Adaptive|book{4}}{6}
+\indexentry{Peripheral Devices|book{4}}{6}
+\indexentry{Hopping Pattern|book{4}}{7}
+\indexentry{TDD|book{4}}{7}
+\indexentry{Bluetooth!Classic!Channels|book{4}}{7}
+\indexentry{Bluetooth!Classic!Classes|book{4}}{8}
+\indexentry{Bluetooth!Range|book{4}}{8}
+\indexentry{Bluetooth!AMP|book{4}}{9}
+\indexentry{WiGLE|book{4}}{9}
+\indexentry{Bluetooth!Low Energy|book{4}}{10}
+\indexentry{SOC|book{4}}{10}
+\indexentry{IC|book{4}}{10}
+\indexentry{Bluetooth!Profiles|book{4}}{11-12}
+\indexentry{LMP|book{4}}{11}
+\indexentry{HCI|book{4}}{11}
+\indexentry{L2CAP|book{4}}{11}
+\indexentry{QoS! |book{4}}{11}
+\indexentry{Bluetooth!Protocol Stack|book{4}}{11-12}
+\indexentry{OBEX|book{4}}{12}
+\indexentry{BNEP|book{4}}{12}
+\indexentry{RFCOMM|book{4}}{12}
+\indexentry{Bluetooth!Addressing|book{4}}{13}
+\indexentry{OUI|book{4}}{13}
+\indexentry{BD\_ADDR|book{4}}{13}
+\indexentry{LAP|book{4}}{13}
+\indexentry{UAP|book{4}}{13-14}
+\indexentry{NAP|book{4}}{13}
+\indexentry{Bluetooth!Maximum \#Slaves|book{4}}{14}
+\indexentry{IEEE 802.3! |book{4}}{14}
+\indexentry{IEEE 802.11!\_@ |book{4}}{14}
+\indexentry{LT|book{4}}{14}
+\indexentry{HEC|book{4}}{14}
+\indexentry{LT\_ADDR|book{4}}{14}
+\indexentry{ARQN|book{4}}{14}
+\indexentry{SEQN|book{4}}{14}
+\indexentry{TDD}{14}
+\indexentry{LMP!Exchange|book{4}}{15}
+\indexentry{SCO|book{4}}{15}
+\indexentry{ACL|book{4}}{15}
+\indexentry{BD\_ADDR}{16}
+\indexentry{Piconet|book{4}}{16-17}
+\indexentry{Frequency Hopping|book{4}}{16-17}
+\indexentry{Discoverable Mode|book{4}}{16}
+\indexentry{Inquiry Mode|book{4}}{16}
+\indexentry{Tortoise and Hare|book{4}}{17}
+\indexentry{Hopping Speed|book{4}}{17}
+\indexentry{DAC|book{4}}{17}
+\indexentry{OBEX}{18}
+\indexentry{BNEP}{18}
+\indexentry{RFCOMM}{18}
+\indexentry{Dial-Up|book{4}}{18}
+\indexentry{Headset|book{4}}{18}
+\indexentry{Bluetooth!Classic!Profiles|book{4}}{18}
+\indexentry{Bluetooth!Classic!Security Modes|book{4}}{19}
+\indexentry{PIN|book{4}}{20}
+\indexentry{Bluetooth!PIN|book{4}}{20}
+\indexentry{BD\_ADDR}{20}
+\indexentry{SAFER+|book{4}}{20}
+\indexentry{E0|book{4}}{21}
+\indexentry{RC4! |book{4}}{21}
+\indexentry{LSFR! |book{4}}{21}
+\indexentry{SIG}{21}
+\indexentry{PRGA! |book{4}}{21}
+\indexentry{PIN}{22}
+\indexentry{Bluetooth!PIN}{22}
+\indexentry{Bluetooth!Range}{23}
+\indexentry{Bluetooth!Sniper Rifle|book{4}}{23}
+\indexentry{IEEE 802.11!3@b!  |book{4}}{23}
+\indexentry{Directional Antenna|book{4}}{23}
+\indexentry{PIN}{24}
+\indexentry{Bluetooth!PIN}{24}
+\indexentry{Bluetooth!Classic!Pairing|book{4}}{24-26}
+\indexentry{BD\_ADDR}{25}
+\indexentry{SAFER+}{25}
+\indexentry{Link Key|book{4}}{25}
+\indexentry{E22|book{4}}{25}
+\indexentry{E21|book{4}}{25-26}
+\indexentry{PIN}{26}
+\indexentry{Bluetooth!PIN}{26}
+\indexentry{Combination Key|book{4}}{25}
+\indexentry{Replay Attack!  |book{4}}{25}
+\indexentry{Mutual Authentication! |book{4}}{26}
+\indexentry{Pairing Authentication Attack|book{4}}{27}
+\indexentry{PIN Attack! |book{4}}{27}
+\indexentry{Bluetooth!Sniffer|book{4}}{28}
+\indexentry{PIN Attack! }{29}
+\indexentry{Non-Discoverable Device|book{4}}{30}
+\indexentry{BD\_ADDR}{30}
+\indexentry{Off-by-One Enumeration|book{4}}{31-32}
+\indexentry{SOC}{31}
+\indexentry{IEEE 802.11!\_@ }{32}
+\indexentry{Probe Request! |book{4}}{32}
+\indexentry{BD\_ADDR}{32}
+\indexentry{Access Code|book{4}}{33}
+\indexentry{Barker Code|book{4}}{33}
+\indexentry{Synchronization Word|book{4}}{33-34}
+\indexentry{Preamble|book{4}}{33}
+\indexentry{BER|book{4}}{33}
+\indexentry{LAP}{34-37}
+\indexentry{Bluetooth!Dongle|book{4}}{34}
+\indexentry{Channel Hopping!  |book{4}}{35}
+\indexentry{False Positive! |book{4}}{35}
+\indexentry{Inquiry Mode}{35}
+\indexentry{Non-Discoverable Device}{35-36}
+\indexentry{UAP!Discovery|book{4}}{36}
+\indexentry{Brute Force! |book{4}}{36}
+\indexentry{BD\_ADDR}{36}
+\indexentry{NAP}{36}
+\indexentry{Non-Discoverable Device}{38}
+\indexentry{Headset}{38}
+\indexentry{Wardriving! |book{4}}{39}
+\indexentry{Policy|book{4}}{39}
+\indexentry{Policy!Establishment|book{4}}{40-41}
+\indexentry{PIN Length|book{4}}{40}
+\indexentry{Sensitive Information Storage|book{4}}{40}
+\indexentry{Defensive Measures!  |book{4}}{40-43}
+\indexentry{POLP|book{4}}{42}
+\indexentry{Least Privilege|book{4}}{42}
+\indexentry{Non-Discoverable Device}{42}
+\indexentry{Bluetooth!Device Configuration|book{4}}{42}
+\indexentry{Bluetooth!Device Assessment|book{4}}{43}
+\indexentry{SDP|book{4}}{44}
+\indexentry{OBEX}{45}
+\indexentry{L2CAP}{45-46}
+\indexentry{RFCOMM}{45}
+\indexentry{BSS|book{4}}{46}
+\indexentry{SRES|book{4}}{47}
+\indexentry{Bluetooth!Low Energy}{51-54}
+\indexentry{Bluetooth!AMP}{53}
+\indexentry{SIG}{53}
+\indexentry{Zigbee!   |book{4}}{53}
+\indexentry{NFC! |book{4}}{53}
+\indexentry{Bluetooth!Range}{54}
+\indexentry{Bluetooth!Low Energy!Advantages|book{4}}{54}
+\indexentry{GFSK|book{4}}{54}
+\indexentry{Bluetooth!Low Energy!Differences with Classic|book{4}}{56-62}
+\indexentry{Bluetooth!Low Energy!Channels|book{4}}{56}
+\indexentry{Channel Hopping!  }{56}
+\indexentry{Bluetooth!Low Energy!Bonding Requirements|book{4}}{57}
+\indexentry{Bluetooth!Low Energy!Pairing|book{4}}{57}
+\indexentry{Bluetooth!Low Energy!Profiles|book{4}}{57-58}
+\indexentry{TK|book{4}}{57}
+\indexentry{STK|book{4}}{57}
+\indexentry{LTK|book{4}}{57}
+\indexentry{AES-CCM|book{4}}{57}
+\indexentry{ECDH|book{4}}{57}
+\indexentry{GATT|book{4}}{57-59}
+\indexentry{ATT|book{4}}{57-59}
+\indexentry{Just Works|book{4}}{57-58}
+\indexentry{OOB! |book{4}}{58}
+\indexentry{Brute Force! }{58}
+\indexentry{Man-in-the-Middle!   |book{4}}{58}
+\indexentry{L2CAP}{59}
+\indexentry{RFCOMM}{59}
+\indexentry{HCI}{59}
+\indexentry{Brute Force! }{60}
+\indexentry{Just Works}{60}
+\indexentry{GATT}{61}
+\indexentry{Bluetooth!Low Energy!Profiles}{62}
+\indexentry{Bluetooth!Adapter! |book{4}}{63}
+\indexentry{Ellisys Bluetooth Explorer|book{4}}{64-65}
+\indexentry{Bluetooth!Sniffer}{64}
+\indexentry{NRF51822|book{4}}{66}
+\indexentry{HCI!Snooping|book{4}}{69}
+\indexentry{Android Developer Mode|book{4}}{69}
+\indexentry{Bluetooth!Adapter! }{71}
+\indexentry{Fuzzing! |book{4}}{73}
+\indexentry{Denial-of-Service!   |book{4}}{73}
+\indexentry{Bluetooth!Adapter! }{73}
+\indexentry{Just Works}{73}
+\indexentry{PIN Attack! }{81-83}
+\indexentry{Brute Force! }{81}
+\indexentry{TK}{82}
+\indexentry{LTK}{82}
+\indexentry{Just Works}{82}
+\indexentry{TK!Recovery|book{4}}{82}
+\indexentry{Deauthenticate Attack!  |book{4}}{83}
+\indexentry{Fuzzing! }{84-88}
+\indexentry{Scapy! |book{4}}{84}
+\indexentry{BTBB|book{4}}{84}
+\indexentry{GATT!Discovery|book{4}}{84}
+\indexentry{GATT!Discovery}{86}
+\indexentry{Bluetooth!Security Enhancements|book{4}}{90}
+\indexentry{Bluetooth!  @5|book{4}}{91-93}
+\indexentry{MTU|book{4}}{92}
+\indexentry{LE1M|book{4}}{92}
+\indexentry{LE2M|book{4}}{92}
+\indexentry{Coded LE|book{4}}{92}
+\indexentry{FEC|book{4}}{92-93}
+\indexentry{Beacon Chaining|book{4}}{92}
+\indexentry{Frequency Hopping!Adaptive}{93}
+\indexentry{Signal-to-Noise Ratio! |book{4}}{93}
+\indexentry{Advertisement Packet Chaining|book{4}}{93}
+\indexentry{Wardriving! }{94}
+\indexentry{SDR! |book{4}}{98-129}
+\indexentry{SDR!Block Diagram|book{4}}{99}
+\indexentry{DAC}{99}
+\indexentry{ADC|book{4}}{99}
+\indexentry{FPGA|book{4}}{99}
+\indexentry{SDR!Threat|book{4}}{101}
+\indexentry{Network Monitoring|book{4}}{101}
+\indexentry{DLP|book{4}}{101}
+\indexentry{IDS|book{4}}{101}
+\indexentry{Raspberry Pi|book{4}}{101}
+\indexentry{RTL-SDR! |book{4}}{101}
+\indexentry{SDR!In PenTest|book{4}}{102}
+\indexentry{SDR!Platform|book{4}}{103}
+\indexentry{Osmo-fl2k|book{4}}{103}
+\indexentry{Kickstarter|book{4}}{104}
+\indexentry{Hack RF Jawbreaker|book{4}}{104}
+\indexentry{OpenBTS|book{4}}{105}
+\indexentry{OpenLTE|book{4}}{105}
+\indexentry{Man-in-the-Middle!   }{105}
+\indexentry{Cellular Tower|book{4}}{105}
+\indexentry{MTBF|book{4}}{107}
+\indexentry{SDR!Selection|book{4}}{108}
+\indexentry{GQRX! |book{4}}{109-112}
+\indexentry{SDR\#! |book{4}}{109}
+\indexentry{SDR!Visualization|book{4}}{109-114}
+\indexentry{FFT|book{4}}{110}
+\indexentry{SDR\#! }{112}
+\indexentry{Waterfall|book{4}}{114}
+\indexentry{ADS-B|book{4}}{116}
+\indexentry{Aircraft Beacon|book{4}}{116}
+\indexentry{Rogue Aircraft|book{4}}{117}
+\indexentry{POCSAG|book{4}}{118}
+\indexentry{FLEX|book{4}}{118}
+\indexentry{CAP Code|book{4}}{118-120}
+\indexentry{Red Team Tip|book{4}}{120}
+\indexentry{Phishing Campaign|book{4}}{120}
+\indexentry{RTL-SDR! }{120}
+\indexentry{Man-in-the-Middle!   }{121}
+\indexentry{Cellular Tower}{121}
+\indexentry{IMSI|book{4}}{121}
+\indexentry{IMSI!Catcher Detector|book{4}}{121-122}
+\indexentry{IMEI|book{4}}{121}
+\indexentry{Location Tracking|book{4}}{121}
+\indexentry{Rogue AP! |book{4}}{121}
+\indexentry{Privacy!  |book{4}}{121}
+\indexentry{Rogue Cellular Tower|book{4}}{122}
+\indexentry{FCCH|book{4}}{122}
+\indexentry{Mutual Authentication! }{123}
+\indexentry{Replay Attack!  }{123-124}
+\indexentry{GNU Radio!Companion|book{4}}{124}
+\indexentry{RTL-SDR! }{125}
+\indexentry{PCR800|book{4}}{126}
+\indexentry{THGR810|book{4}}{126}
+\indexentry{Weather Sensor|book{4}}{126}
+\indexentry{Contact Sensor|book{4}}{126}
+\indexentry{DSC|book{4}}{126}
+\indexentry{Alarm System|book{4}}{126}
+\indexentry{GNU Radio!  |book{4}}{128}
+\indexentry{GNU Radio!Companion}{128}
+\indexentry{POCSAG}{128}
+
+
+\comment{********************************************************************************************
+                                     FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{RFID! |book{5}}{5-113}
+\indexentry{RFID!Technology|book{5}}{5}
+\indexentry{Receiver|book{5}}{5}
+\indexentry{Transponder|book{5}}{5}
+\indexentry{RFID!Tag|book{5}}{5}
+\indexentry{RFID!Frequencies|book{5}}{6}
+\indexentry{NFC!Frequency|book{5}}{6}
+\indexentry{Zigbee!Frequency! |book{5}}{6}
+\indexentry{RFID!Tag!Active|book{5}}{7}
+\indexentry{EZ-Pass|book{5}}{7}
+\indexentry{PoE|book{5}}{7}
+\indexentry{AeroScout|book{5}}{7}
+\indexentry{RFID!Tag!Passive|book{5}}{8-9}
+\indexentry{RFID!Tag!Semi-Passive|book{5}}{8}
+\indexentry{Telemetry|book{5}}{8}
+\indexentry{Smart Card! |book{5}}{9-10}
+\indexentry{PCD|book{5}}{10-11}
+\indexentry{PICC|book{5}}{10-11}
+\indexentry{RFID!Versus NFC|book{5}}{11}
+\indexentry{NFC!Versus RFID|book{5}}{11}
+\indexentry{RFID!Attack Surface|book{5}}{12}
+\indexentry{Data Disclosure|book{5}}{12}
+\indexentry{Cloning|book{5}}{12}
+\indexentry{Data Injection|book{5}}{12}
+\indexentry{Privacy!Attack|book{5}}{12}
+\indexentry{Replay Attack!   |book{5}}{12}
+\indexentry{Relay Attack|book{5}}{13}
+\indexentry{Location Tracking! |book{5}}{17}
+\indexentry{Anonymity Attack! |book{5}}{17}
+\indexentry{Privacy!    |book{5}}{17}
+\indexentry{CALEA|book{5}}{17}
+\indexentry{ETC|book{5}}{18}
+\indexentry{IEEE 802.11!8@p|book{5}}{18}
+\indexentry{EZ-Pass}{18}
+\indexentry{FasTrak|book{5}}{18}
+\indexentry{I-Pass|book{5}}{18}
+\indexentry{SunPass|book{5}}{18}
+\indexentry{WAVE|book{5}}{18}
+\indexentry{EZ-Pass!Tracking|book{5}}{19-21}
+\indexentry{NYSDOT!Tracking|book{5}}{20-21}
+\indexentry{NJDOT!Tracking|book{5}}{20}
+\indexentry{IBeacon|book{5}}{22-29}
+\indexentry{Privacy!    }{22}
+\indexentry{Bluetooth!Low Energy!Beacon|book{5}}{23}
+\indexentry{Estimote|book{5}}{24}
+\indexentry{Beaconmaker|book{5}}{24}
+\indexentry{Roximity|book{5}}{24}
+\indexentry{Kontakt|book{5}}{24}
+\indexentry{IBeacon!Localization|book{5}}{25}
+\indexentry{IBeacon!Application|book{5}}{26-28}
+\indexentry{Obj-C|book{5}}{26}
+\indexentry{Privacy!    }{29}
+\indexentry{EZ-Pass}{29}
+\indexentry{Clothing Tag|book{5}}{31}
+\indexentry{Privacy!    }{31}
+\indexentry{WikiBeacon|book{5}}{32}
+\indexentry{RFID!LF Tag|book{5}}{35}
+\indexentry{Cloning}{35}
+\indexentry{Anomaly Analysis|book{5}}{39}
+\indexentry{Cloning}{39}
+\indexentry{HID ProxCard II|book{5}}{40-55}
+\indexentry{PCD}{41}
+\indexentry{PICC}{41}
+\indexentry{Wiegand Protocol|book{5}}{41}
+\indexentry{Atmel T5557|book{5}}{42}
+\indexentry{Wiegand Protocol}{43}
+\indexentry{Cloning!Attack|book{5}}{45-47}
+\indexentry{Keysy|book{5}}{46}
+\indexentry{HID ProxCard II!Clonability|book{5}}{46}
+\indexentry{HID ProxCard II!ID Numbers|book{5}}{49}
+\indexentry{HID MaxiProx|book{5}}{53}
+\indexentry{ESP8266|book{5}}{53}
+\indexentry{Adafruit Feather HUZZAH|book{5}}{53}
+\indexentry{Manual Tag Analysis|book{5}}{55}
+\indexentry{Frequency Detection|book{5}}{56}
+\indexentry{Data Sampling|book{5}}{57}
+\indexentry{Time Period|book{5}}{58}
+\indexentry{Datasheet|book{5}}{62}
+\indexentry{PSK|book{5}}{62}
+\indexentry{Biphase|book{5}}{62}
+\indexentry{Manchester|book{5}}{62}
+\indexentry{Cloning}{64-65}
+\indexentry{Cloning}{70}
+\indexentry{HF|book{5}}{70}
+\indexentry{Smart Card! }{70}
+\indexentry{EMV|book{5}}{71-73}
+\indexentry{ISO 14443|book{5}}{71}
+\indexentry{CVV2|book{5}}{72}
+\indexentry{CVC|book{5}}{72}
+\indexentry{EMV!Reader|book{5}}{73-75}
+\indexentry{NFC!Proxy Attack|book{5}}{76-77}
+\indexentry{CVC}{76}
+\indexentry{Android CyanogenMod|book{5}}{77}
+\indexentry{Cyanogen|book{5}}{77}
+\indexentry{PICC!Reconnaissance|book{5}}{78}
+\indexentry{HF}{79}
+\indexentry{PCD}{79}
+\indexentry{PICC}{79}
+\indexentry{Card Reader|book{5}}{79}
+\indexentry{MIFARE|book{5}}{82}
+\indexentry{ISO 14443}{82}
+\indexentry{MIFARE!Classic|book{5}}{83-98}
+\indexentry{Stream Cipher!  |book{5}}{83}
+\indexentry{CRYPTO1|book{5}}{83}
+\indexentry{MIFARE!Classic!1K/4K|book{5}}{84}
+\indexentry{MIFARE!Classic!Memory Structure|book{5}}{84}
+\indexentry{CRYPTO1!Weaknesses|book{5}}{85}
+\indexentry{Nested Authentication Attack|book{5}}{85-86}
+\indexentry{CRAPTO1|book{5}}{85}
+\indexentry{Key Guessing Attack|book{5}}{86}
+\indexentry{DarkSide Attack|book{5}}{88}
+\indexentry{Key Recovery Attack! |book{5}}{88-90}
+\indexentry{CRYPTO1}{88}
+\indexentry{Brute Force!  |book{5}}{88}
+\indexentry{Nested Authentication Attack}{90}
+\indexentry{Cloning}{90-91}
+\indexentry{MIFARE!Dump|book{5}}{91}
+\indexentry{Data Recovery|book{5}}{91}
+\indexentry{Key Diversification|book{5}}{92-93}
+\indexentry{Writable Cards|book{5}}{93}
+\indexentry{MIFARE!Writable Cards|book{5}}{93}
+\indexentry{CloneMyKey|book{5}}{93}
+\indexentry{Cloning}{94-96}
+\indexentry{MIFARE!Classic!Cloning|book{5}}{94-96}
+\indexentry{MIFARE!Classic!Attack|book{5}}{97}
+\indexentry{PCD!Emulation|book{5}}{98}
+\indexentry{EZon|book{5}}{99-102}
+\indexentry{CRYPTO1}{99}
+\indexentry{EZon!UID Analysis|book{5}}{99}
+\indexentry{ISO 14443!UID Format|book{5}}{99}
+\indexentry{UID|book{5}}{100-101}
+\indexentry{BCC|book{5}}{101}
+\indexentry{Tag Emulation|book{5}}{101}
+\indexentry{LibNFC! |book{5}}{101}
+\indexentry{UID!Impersonation|book{5}}{102}
+\indexentry{MIFARE!Ultralight|book{5}}{103-107}
+\indexentry{OTP|book{5}}{103-104}
+\indexentry{RFID!Improper Use|book{5}}{104}
+\indexentry{MIFARE!Dump}{105}
+\indexentry{LibNFC! }{105}
+\indexentry{Cloning}{106}
+\indexentry{MIFARE!Ultralight!C|book{5}}{107}
+\indexentry{DES|book{5}}{107}
+\indexentry{CRYPTO1}{107}
+\indexentry{OTP}{107}
+\indexentry{RFID!Improper Use}{107}
+\indexentry{LibNFC! }{108}
+\indexentry{MIFARE!DESFire|book{5}}{109}
+\indexentry{MIFARE!DESFire!EV1|book{5}}{109}
+\indexentry{MIFARE!DESFire!EV2|book{5}}{109}
+\indexentry{AID|book{5}}{109-111}
+\indexentry{MIFARE!DESFire!Enumeration|book{5}}{110}
+\indexentry{AN10787|book{5}}{110}
+\indexentry{Key Guessing Attack}{111}
+\indexentry{Bus Sniffing! |book{5}}{112}
+\indexentry{NFC!Technology|book{5}}{117}
+\indexentry{NFC!Versus Smart Card|book{5}}{118}
+\indexentry{Smart Card!Versus NFC|book{5}}{118}
+\indexentry{ISO 14443}{118}
+\indexentry{NFC!Data Exchange Format|book{5}}{119}
+\indexentry{NDEF|book{5}}{119}
+\indexentry{TNF|book{5}}{119-121}
+\indexentry{Smart Card! }{119}
+\indexentry{NDEF!Header|book{5}}{120}
+\indexentry{RTD|book{5}}{120}
+\indexentry{TNF!Well-Known|book{5}}{121}
+\indexentry{McDonald's|book{5}}{123}
+\indexentry{NFC!Writing|book{5}}{124}
+\indexentry{NDEF!Writing|book{5}}{124}
+\indexentry{NfcPy|book{5}}{124}
+\indexentry{NPP|book{5}}{125}
+\indexentry{SNEP|book{5}}{125}
+\indexentry{Android Beam|book{5}}{125}
+\indexentry{Google Wallet|book{5}}{126}
+\indexentry{HCE|book{5}}{126}
+\indexentry{SE|book{5}}{126-127}
+\indexentry{PoS|book{5}}{126}
+\indexentry{Apple Pay|book{5}}{127}
+\indexentry{EMV!Token|book{5}}{127}
+\indexentry{MO|book{5}}{127}
+\indexentry{NFC!Controller|book{5}}{126-127}
+\indexentry{Amiibo|book{5}}{128}
+\indexentry{NTAG215|book{5}}{128}
+\indexentry{NTAG215!Security|book{5}}{129}
+\indexentry{OTP}{129}
+\indexentry{MIFARE!Ultralight}{129}
+\indexentry{Amiibo!Security|book{5}}{130-132}
+\indexentry{UID}{130}
+\indexentry{Key Derivation|book{5}}{130}
+\indexentry{Key Recovery Attack! }{131-132}
+\indexentry{Amiibo!Key Recovery|book{5}}{131-132}
+\indexentry{Nintendo|book{5}}{131}
+\indexentry{NTAG215}{132}
+\indexentry{Amiiqo|book{5}}{132}
+\indexentry{NFC!Common Attacks|book{5}}{133}
+\indexentry{Relay Attack}{133}
+\indexentry{Google Wallet}{133}
+\indexentry{Marshmallow|book{5}}{134}
+\indexentry{Malformed MP4|book{5}}{134}
+\indexentry{RCE|book{5}}{134}
+\indexentry{NFC!UID Record Writing|book{5}}{124}
+\indexentry{NFC!Infrastructure Attacks|book{5}}{136}
+\indexentry{NDEF}{136}
+\indexentry{NPP}{136}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{RFMON \goto Monitor Mode|comment}{0}
+\indexentry{Regulatory Domain Settings \goto Domain Settings|comment}{0}
+\indexentry{DFS \goto Dynamic Frequency Selection|comment}{0}
+\indexentry{BPF \goto Berkeley Packet Filter|comment}{0}
+\indexentry{WIDS \goto WLAN IDS|comment}{0}
+\indexentry{CDP \goto Cisco Discovery Protocol|comment}{0}
+\indexentry{KYS \goto Know Your System|comment}{0}
+\indexentry{OTG \goto On-The-Go|comment}{0}
+\indexentry{RTLS \goto Real-Time Location System|comment}{0}
+\indexentry{KML \goto Keyhole Markup Language|comment}{0}
+\indexentry{NSE \goto Nmap Scripting Engine|comment}{0}
+\indexentry{SNR \goto Signal-to-Noise Ratio|comment}{0}
+\indexentry{UMPC \goto Ultra Mobile PC|comment}{0}
+\indexentry{HT \goto High Throughput|comment}{0}
+\indexentry{PNL \goto Preferred Network List|comment}{0}
+\indexentry{PSPF \goto Publicly Secure Packet Forwarding|comment}{0}
+\indexentry{ACL \goto Access Control List|comment}{0}
+\indexentry{Karmetasploit Attack \goto Karma Attack|comment}{0}
+\indexentry{ILMN \goto I-Love-My-Neighbors|comment}{0}
+\indexentry{IV \goto Initialization Vector|comment}{0}
+\indexentry{ICV \goto Integrity Check Value|comment}{0}
+\indexentry{PSK \goto Pre-Shared Key|comment}{0}
+\indexentry{PLC \goto Programmable Logic Controller|comment}{0}
+\indexentry{AID \goto Association IDentifier|comment}{0}
+\indexentry{MIC \goto Message Integrity Check|comment}{0}
+\indexentry{MFP \goto Management Frame Protection|comment}{0}
+\indexentry{CTS \goto Clear To Send|comment}{0}
+\indexentry{RTS \goto Ready To Send|comment}{0}
+\indexentry{NAV \goto Network Allocator Vector|comment}{0}
+\indexentry{Temporal Key Integrity Protocol \goto TKIP|comment}{0}
+\indexentry{TSC \goto TKIP Sequence Counter|comment}{0}
+\indexentry{Protocol Fuzzing \goto Fuzzing|comment}{0}
+\indexentry{WiFi Protected Access \goto WPA(2)|comment}{0}
+\indexentry{PMK \goto Pairwise Master Key|comment}{0}
+\indexentry{PTK \goto Pairwise Transient Key|comment}{0}
+\indexentry{KEK \goto Key Encryption Key|comment}{0}
+\indexentry{WPS \goto WiFi Protected Setup|comment}{0}
+\indexentry{SAE \goto Simultaneous Authentication of Equals|comment}{0}
+\indexentry{PFS \goto Perfect Forward Secrecy|comment}{0}
+\indexentry{DPP \goto Device Provisioning Protocol|comment}{0}
+\indexentry{OWE \goto Opportunistic Wireless Encryption|comment}{0}
+\indexentry{PEAP \goto Protected Extensible Auth Protocol|comment}{0}
+\indexentry{MS-CHAP \goto EAP-MS-CHAP|comment}{0}
+\indexentry{DSC \goto DECT Standard Cipher|comment}{0}
+\indexentry{SNA \goto Sensor Network Analyzer|comment}{0}
+\indexentry{OTA \goto Over-the-Air|comment}{0}
+\indexentry{CCM* \goto AES-CCM*|comment}{0}
+\indexentry{FH \goto Frequency Hopping|comment}{0}
+\indexentry{AFH \goto Frequency Hopping / Adaptive|comment}{0}

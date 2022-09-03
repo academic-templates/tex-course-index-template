@@ -13,12 +13,11 @@ SANS courses:
 | ![GCCC](https://www.giac.org/images/design/custom/icons/certs/small/gccc-gold.png) | [:link:](https://www.sans.org/course/implementing-auditing-critical-security-controls) [SEC566 – Implementing & Auditing CSC In Depth](sans/sec566.pdf) |
 | ![GMOB](https://www.giac.org/images/design/custom/icons/certs/small/gmob-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/mobile-device-security-ethical-hacking/) [SEC575 – Mobile Device Security and Ethical Hacking](sans/sec575.pdf) |
 | ![GCPN](https://www.giac.org/images/design/custom/icons/certs/small/gcpn-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/cloud-penetration-testing/) [SEC588 – Cloud Penetration Testing](sans/sec588.pdf) |
+| ![GAWN](https://www.giac.org/images/design/custom/icons/certs/small/gawn-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/wireless-penetration-testing-ethical-hacking/) [SEC617 – Wireless Penetration Testing and Ethical Hacking](sans/sec617.pdf) |
 
 > **Other courses**: See https://github.com/ancailliau/sans-indexes
 
-> **Disclaimer**: At the time of adding these indexes to this repository, some of these relate to outdated versions of the corresponding courses and are therefore hard to use with more recent versions.
-
-> **Sources**: You can find the `.idx` files [here](https://github.com/dhondta/tex-course-index-template/tree/master/examples/sans). Feel free to adapt/update it.
+> **Sources**: You can find the `.idx` files [here](https://github.com/dhondta/tex-course-index-template/tree/master/examples/sans). Feel free to adapt/update these.
 
 ULB course:
 

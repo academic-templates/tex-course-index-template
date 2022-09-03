@@ -1,3 +1,5 @@
+[**See examples for SANS courses here !**](https://github.com/dhondta/tex-course-index-template/tree/master/examples)
+
 ## :information_source: Introduction
 
 The goal of this template is to provide a way to write very condensed indexes typically for courses with multiple books. It leverages [LaTeX indexing](https://en.wikibooks.org/wiki/LaTeX/Indexing) by using a `.idx` file for organizing the index entries. The way this template can be used is by directly editing the `.idx` file.
