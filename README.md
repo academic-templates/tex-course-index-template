@@ -156,6 +156,7 @@ You may also like these:
 
 - [TeX Book Template](https://github.com/dhondta/tex-book-template): A template for writing a nice book with LaTeX.
 - [TeX Master Thesis Template](https://github.com/dhondta/tex-master-thesis-template): A template for writing a nice master thesis dissertation with LaTeX.
+- [TeX Poster Template](https://github.com/dhondta/tex-poster-template): A template for creating a nice scientific poster with LaTeX.
 
 
 ## :clap:  Supporters
