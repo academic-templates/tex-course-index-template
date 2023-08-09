@@ -1,26 +1,28 @@
-[**See examples for SANS courses here !**](https://github.com/dhondta/tex-course-index-template/tree/master/examples)
+[**See examples for SANS courses here !**](https://github.com/academic-templates/tex-course-index-template/tree/main/examples)
 
 ## :information_source: Introduction
 
-The goal of this template is to provide a way to write very condensed indexes typically for courses with multiple books. It leverages [LaTeX indexing](https://en.wikibooks.org/wiki/LaTeX/Indexing) by using a `.idx` file for organizing the index entries. The way this template can be used is by directly editing the `.idx` file.
+The goal of this template is to provide a way to write very condensed indexes typically for courses with multiple books. It takes advantage of [LaTeX indexing](https://en.wikibooks.org/wiki/LaTeX/Indexing) by using a `.idx` file for organizing the index entries. The way this template can be used is by directly editing the `.idx` file.
 
 > See folder [`examples`](examples/) for some real-life indexes which have already desmontrated their effectiveness.
 
 Here is an example preview:
 
-<p align="center"><img src="https://raw.githubusercontent.com/dhondta/tex-course-index-template/master/doc/preview.png">
+<p align="center"><img src="https://raw.githubusercontent.com/academic-templates/tex-course-index-template/main/doc/preview.png"><br>
 <sub><sup>Preview image generated with <a href="https://gist.github.com/dhondta/f57dfde304905644ca5c43e48c249125">this tool</a></sup></sub></p>
 
 ## :card_file_box: Structure
 
 The template is structured in the following way:
 
-- [`main.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.tex): This is the main TeX file to be compiled. No need to edit this file unless you require to adapt the layout of the course index.
-- [`main.idx`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.idx): This holds the index entries of the books of the course to be indexed.
-- [`data.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/data.tex): This defines a few course-related variables (title, code, date and version) to be used in [`main.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.tex).
-- [`lib`](https://github.com/dhondta/tex-course-index-template/blob/master/src/lib): This folder contains the images called in [`main.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.tex) and for use in [`main.idx`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.idx) (useful e.g. for mentioning that a tool is only for linux ; then use the `\linux` command in the `\indexentry`).
+- [`main.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.tex): This is the main TeX file to be compiled. No need to edit this file unless you require to adapt the layout of the course index.
+- [`main.idx`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.idx): This holds the index entries of the books of the course to be indexed.
+- [`data.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/data.tex): This defines a few course-related variables (title, code, date and version) to be used in [`main.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.tex).
+- [`lib`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/lib): This folder contains the images called in [`main.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.tex) and for use in [`main.idx`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.idx) (useful e.g. for mentioning that a tool is only for linux ; then use the `\linux` command in the `\indexentry`).
 
 ## :gear: Compilation
+
+<b>See [this fork](https://github.com/colai2zo/tex-course-index-template) for a compilation script (see [`src/compile.sh`](https://raw.githubusercontent.com/colai2zo/tex-course-index-template/main/src/compile.sh)) if you want to compile from your terminal.</b>
 
 The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org/wiki/Texmaker) by defining a *Quick Build Command*:
 
@@ -35,33 +37,35 @@ The compilation can easilly be configured in [Texmaker](https://en.wikipedia.org
 
 When editing the index with [Texmaker](https://en.wikipedia.org/wiki/Texmaker):
 
-1. Open [`main.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.tex)
+1. Open [`main.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.tex)
 2. Go to the menu *Options*
 3. Select *Define Current Document as "Master Document"*
-4. Open [`main.idx`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.idx) for edition
+4. Open [`main.idx`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.idx) for edition
 5. Click on *Quick Build* to compile
 
-This will produce [`main.pdf`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.pdf) with all the index entries organized in a two-columns document.
+This will produce [`main.pdf`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.pdf) with all the index entries organized in a two-columns document.
 
-NB: Do not forget to edit [`data.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/data.tex).
+NB: Do not forget to edit [`data.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/data.tex).
 
 > **Important**: It could happen that Texmaker is configured to remove temporary files while exiting, including `main.idx`. That's why the *Quick Build* herebefore includes `cp %.idx %.idx.bak` to backup this file and not to loose hours of work adding index entries. If removal still occurred, simply restore `main.idx.bak` to `main.idx`. Note that, consequently, the **backup is not made if you do not build the document**. So, **mind clicking regularly on the *Quick Build* button** !
 
 ## :bookmark_tabs: Making your index
 
+<b>See [this fork](https://github.com/colai2zo/tex-course-index-template) for a script (see [`src/add_entry.sh`](https://raw.githubusercontent.com/colai2zo/tex-course-index-template/main/src/add_entry.sh)) to add new entries from your terminal.</b>
+
 The only files to be edited when making a new index are:
 
-1. [`data.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/data.tex): Define the course attributes there (title, code, date, version).
-2. [`main.idx`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.idx): Define the index entries there.
+1. [`data.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/data.tex): Define the course attributes there (title, code, date, version).
+2. [`main.idx`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.idx): Define the index entries there.
 
 ### `idx` File Structure
 
-[`main.idx`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.idx) file comes organized with a few example sections. Basically, one section represents a symbol, a digit or a letter for sorting the references. In this template:
+[`main.idx`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.idx) file comes organized with a few example sections. Basically, one section represents a symbol, a digit or a letter for sorting the references. In this template:
 - Symbols are reserved for the *Topics* section (e.g. for providing the course structure)
 - Digits are reserved for the *Categories* section (e.g. for sorting interesting resources such as tools, commands, standards, ...)
 - Letters are used normally
 
-The *Topics* and *Categories* titles are defined in [`lib/std.ist`](https://github.com/dhondta/tex-course-index-template/blob/master/src/lib/std.ist).
+The *Topics* and *Categories* titles are defined in [`lib/std.ist`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/lib/std.ist).
 
 ### LaTeX Indexing Basics
 
@@ -131,7 +135,7 @@ One can format the page number by using the "`|`" symbol:
 
 ### Predefined Icons
 
-For convenience, multiple shorcuts are predefined in [`main.tex`](https://github.com/dhondta/tex-course-index-template/blob/master/src/main.tex) and the [`lib`](https://github.com/dhondta/tex-course-index-template/blob/master/src/lib) folder for displaying icons:
+For convenience, multiple shorcuts are predefined in [`main.tex`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/main.tex) and the [`lib`](https://github.com/academic-templates/tex-course-index-template/blob/main/src/lib) folder for displaying icons:
 
 - `\all`: cross-platform ; Linux, Windows and Mac
 - `\android`: Android
@@ -154,17 +158,18 @@ For convenience, multiple shorcuts are predefined in [`main.tex`](https://github
 
 You may also like these:
 
-- [TeX Book Template](https://github.com/dhondta/tex-book-template): A template for writing a nice book with LaTeX.
-- [TeX Cheat Sheet Template](https://github.com/dhondta/tex-cheat-sheet-template): A template for creating a nice cheat sheet with LaTeX.
-- [TeX Master Thesis Template](https://github.com/dhondta/tex-master-thesis-template): A template for writing a nice master thesis dissertation with LaTeX.
-- [TeX Poster Template](https://github.com/dhondta/tex-poster-template): A template for creating a nice scientific poster with LaTeX.
+- [TeX Book Template](https://github.com/academic-templates/tex-book-template): A template for writing a nice book with LaTeX.
+- [TeX Cheat Sheet Template](https://github.com/academic-templates/tex-cheat-sheet-template): A template for creating a nice cheat sheet with LaTeX.
+- [TeX Master Thesis Template](https://github.com/academic-templates/tex-master-thesis-template): A template for writing a nice master thesis dissertation with LaTeX.
+- [TeX Poster Template](https://github.com/academic-templates/tex-poster-template): A template for creating a nice scientific poster with LaTeX.
+- [TeX Slideshow Template](https://github.com/academic-templates/tex-slideshow-template): A template for making a nice presentation with LaTeX.
 
 
 ## :clap:  Supporters
 
-[![Stargazers repo roster for @dhondta/tex-course-index-template](https://reporoster.com/stars/dark/dhondta/tex-course-index-template)](https://github.com/dhondta/tex-course-index-template/stargazers)
+[![Stargazers repo roster for @academic-templates/tex-course-index-template](https://reporoster.com/stars/dark/academic-templates/tex-course-index-template)](https://github.com/academic-templates/tex-course-index-template/stargazers)
 
-[![Forkers repo roster for @dhondta/tex-course-index-template](https://reporoster.com/forks/dark/dhondta/tex-course-index-template)](https://github.com/dhondta/tex-course-index-template/network/members)
+[![Forkers repo roster for @academic-templates/tex-course-index-template](https://reporoster.com/forks/dark/academic-templates/tex-course-index-template)](https://github.com/academic-templates/tex-course-index-template/network/members)
 
 <p align="center"><a href="#"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
