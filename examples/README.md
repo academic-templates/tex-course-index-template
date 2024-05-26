@@ -13,6 +13,7 @@ SANS courses:
 | ![GPEN](https://www.giac.org/images/design/custom/icons/certs/small/gpen-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/network-penetration-testing-ethical-hacking) [SEC560 – Network Pen Testing & Ethical Hacking](sans/sec560.pdf) |
 | ![GCCC](https://www.giac.org/images/design/custom/icons/certs/small/gccc-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/implementing-auditing-critical-security-controls) [SEC566 – Implementing & Auditing CSC In Depth](sans/sec566.pdf) |
 | ![GMOB](https://www.giac.org/images/design/custom/icons/certs/small/gmob-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/mobile-device-security-ethical-hacking) [SEC575 – Mobile Device Security and Ethical Hacking](sans/sec575.pdf) |
+| ![GPYC](https://www.giac.org/images/design/custom/icons/certs/small/gpyc-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/automating-information-security-with-python/) [SEC573 - Automating Information Security with Python](sans/sec573.pdf) |
 | ![GCPN](https://www.giac.org/images/design/custom/icons/certs/small/gcpn-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/cloud-penetration-testing) [SEC588 – Cloud Penetration Testing](sans/sec588.pdf) |
 | ![GAWN](https://www.giac.org/images/design/custom/icons/certs/small/gawn-gold.png) | [:link:](https://www.sans.org/cyber-security-courses/wireless-penetration-testing-ethical-hacking) [SEC617 – Wireless Penetration Testing and Ethical Hacking](sans/sec617.pdf) |
 
