@@ -1,0 +1,1902 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{Malware Analysis Fundamentals}!1@Introduction|book{1}}{4-22}
+\indexentry{1a@\textbf{Malware Analysis Fundamentals}!2@Malware Analysis Lab|book{1}}{24-36}
+\indexentry{1a@\textbf{Malware Analysis Fundamentals}!3@Static Properties Analysis|book{1}}{38-50}
+\indexentry{1a@\textbf{Malware Analysis Fundamentals}!4@Behavioral Analysis Essentials|book{1}}{52-77}
+\indexentry{1a@\textbf{Malware Analysis Fundamentals}!5@Code Analysis Essentials|book{1}}{79-110}
+\indexentry{1a@\textbf{Malware Analysis Fundamentals}!6@Exploring Network Interactions|book{1}}{112-132}
+
+\indexentry{1b@\blankline|comment}{0}
+
+\indexentry{1c@\textbf{Reversing Malicious Code}!1@Core Reversing Concepts|book{2}}{3-59}
+\indexentry{1c@\textbf{Reversing Malicious Code}!2@Reversing Functions|book{2}}{61-96}
+\indexentry{1c@\textbf{Reversing Malicious Code}!3@Control Flow In-Depth|book{2}}{98-134}
+\indexentry{1c@\textbf{Reversing Malicious Code}!4@API Patterns in Malware|book{2}}{136-144}
+\indexentry{1c@\textbf{Reversing Malicious Code}!5@64-bit Code Analysis|book{2}}{146-161}
+
+\indexentry{1d@\blankline|comment}{0}
+
+\indexentry{1e@\textbf{Analyzing Malicious Documents and Scripts}!1@Malicious PDF File Analysis|book{3}}{3-35}
+\indexentry{1e@\textbf{Analyzing Malicious Documents and Scripts}!2@VBA Macros in MS Office Docs|book{3}}{37-78}
+\indexentry{1e@\textbf{Analyzing Malicious Documents and Scripts}!3@Examining Malicious RTF Files|book{3}}{80-100}
+\indexentry{1e@\textbf{Analyzing Malicious Documents and Scripts}!4@Deobfuscating Malicious Javascript|book{3}}{102-118}
+
+\indexentry{1f@\blankline|comment}{0}
+
+\indexentry{1g@\textbf{In-Depth Malware Analysis}!1@Recognizing Packed Malware|book{4}}{3-13}
+\indexentry{1g@\textbf{In-Depth Malware Analysis}!2@Getting Started with Unpacking|book{4}}{15-26}
+\indexentry{1g@\textbf{In-Depth Malware Analysis}!3@Using Debuggers for Dumping|book{4}}{28-42}
+\indexentry{1g@\textbf{In-Depth Malware Analysis}!4@Debugging Packed Malware|book{4}}{44-54}
+\indexentry{1g@\textbf{In-Depth Malware Analysis}!5@Analyzing Multi-Technology MW|book{4}}{56-104}
+\indexentry{1g@\textbf{In-Depth Malware Analysis}!6@Examining .NET Malware|book{4}}{106-132}
+\indexentry{1g@\textbf{In-Depth Malware Analysis}!7@Understanding Code Injection|book{4}}{134-152}
+
+\indexentry{1h@\blankline|comment}{0}
+
+\indexentry{1i@\textbf{Examining Self-Defending Malware}!1@Debugger Detection and Data Prot|book{5}}{3-41}
+\indexentry{1i@\textbf{Examining Self-Defending Malware}!2@Unpacking Process Hollowing|book{5}}{43-59}
+\indexentry{1i@\textbf{Examining Self-Defending Malware}!3@Detecting the Analysis Toolkit|book{5}}{61-92}
+\indexentry{1i@\textbf{Examining Self-Defending Malware}!4@Handling Misdirection Techniques|book{5}}{94-142}
+\indexentry{1i@\textbf{Examining Self-Defending Malware}!5@Unpacking by Anticipating Actions|book{5}}{144-167}
+
+\indexentry{2z@\blankline|comment}{0}
+
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+%\indexentry{100@\textbf{Labs}!Lab Setup|book{1}}{2}
+%\indexentry{100@\textbf{Labs}!Lab Setup}{36}
+%\indexentry{100@\textbf{Labs}!Static Properties Analysis (\texttt{brbbot.exe})|book{1}}{40}
+%\indexentry{100@\textbf{Labs}!Static Properties Analysis (\texttt{brbbot.exe})! |book{W}}{2}
+%\indexentry{100@\textbf{Labs}!Behavioral Analysis (\texttt{brbbot.exe})|book{1}}{54}
+%\indexentry{100@\textbf{Labs}!Behavioral Analysis (\texttt{brbbot.exe})! |book{W}}{3-4}
+%\indexentry{100@\textbf{Labs}!Intercepting Traffic (\texttt{brbbot.exe})|book{1}}{68}
+%\indexentry{100@\textbf{Labs}!Intercepting Traffic (\texttt{brbbot.exe})! |book{W}}{5-6}
+%\indexentry{100@\textbf{Labs}!Emulation (\texttt{brbbot.exe})|book{1}}{84}
+%\indexentry{100@\textbf{Labs}!Emulation (\texttt{brbbot.exe})! |book{W}}{7-9}
+%\indexentry{100@\textbf{Labs}!Decrypting Artifact (\texttt{brbbot.exe})|book{1}}{90}
+%\indexentry{100@\textbf{Labs}!Decrypting Artifact (\texttt{brbbot.exe})! |book{W}}{10-12}
+%
+%\indexentry{101@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools}!REM|book{1}}{2}
+\indexentry{200@\textbf{Tools}!VirusTotal|book{1}}{13-14}
+\indexentry{200@\textbf{Tools}!MetaDefender|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Malware Hash Registry|book{1}}{13}
+\indexentry{200@\textbf{Tools}!HashSets|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Winbindex|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Any.run|book{1}}{13}
+\indexentry{200@\textbf{Tools}!CAPE|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Intezer Analyze|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Hybrid Analysis|book{1}}{13}
+\indexentry{200@\textbf{Tools}!FileScan.io|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Quttera|book{1}}{13}
+\indexentry{200@\textbf{Tools}!UrlScan.io|book{1}}{13}
+\indexentry{200@\textbf{Tools}!SecurityTrails|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Shodan|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Open Threat Exchange|book{1}}{13}
+\indexentry{200@\textbf{Tools}!ThreatFox|book{1}}{13}
+\indexentry{200@\textbf{Tools}!Hybrid Analysis}{15}
+\indexentry{200@\textbf{Tools}!SecurityTrails}{16}
+\indexentry{200@\textbf{Tools}!Open Threat Exchange}{16}
+\indexentry{200@\textbf{Tools}!OpenVPN|book{1}}{19}
+\indexentry{200@\textbf{Tools}!AlgoVPN|book{1}}{19}
+\indexentry{200@\textbf{Tools}!VirusTotal}{20}
+\indexentry{200@\textbf{Tools}!Quttera}{20}
+\indexentry{200@\textbf{Tools}!UrlScan.io}{20}
+\indexentry{200@\textbf{Tools}!ChatGPT|book{1}}{21}
+\indexentry{200@\textbf{Tools}!VMWare|book{1}}{28}
+\indexentry{200@\textbf{Tools}!VirtualBox|book{1}}{28}
+\indexentry{200@\textbf{Tools}!Hyper-V|book{1}}{28}
+\indexentry{200@\textbf{Tools}!CloneZilla|book{1}}{34}
+\indexentry{200@\textbf{Tools}!FOG|book{1}}{34}
+\indexentry{200@\textbf{Tools}!Dd|book{1}}{34}
+\indexentry{200@\textbf{Tools}!CAPE!Sandbox|book{1}}{34}
+\indexentry{200@\textbf{Tools}!Pestr@\texttt{pestr} \linux|book{1}}{44}
+\indexentry{200@\textbf{Tools}!Strings@\texttt{strings} \linux|book{1}}{44}
+\indexentry{200@\textbf{Tools}!PEStudio|book{1}}{46-49}
+\indexentry{200@\textbf{Tools}!peframe@\texttt{peframe} \linux|book{1}}{48}
+\indexentry{200@\textbf{Tools}!DIE|book{1}}{49}
+\indexentry{200@\textbf{Tools}!Exeinfo PE|book{1}}{49}
+\indexentry{200@\textbf{Tools}!Process Hacker|book{1}}{53-54}
+\indexentry{200@\textbf{Tools}!Process Monitor|book{1}}{53}
+\indexentry{200@\textbf{Tools}!RegShot|book{1}}{53}
+\indexentry{200@\textbf{Tools}!ProcDOT|book{1}}{53}
+\indexentry{200@\textbf{Tools}!Wireshark|book{1}}{53}
+\indexentry{200@\textbf{Tools}!TcpLogView|book{1}}{53}
+\indexentry{200@\textbf{Tools}!Process Monitor}{55}
+\indexentry{200@\textbf{Tools}!RegShot}{56}
+\indexentry{200@\textbf{Tools}!Wireshark}{57}
+\indexentry{200@\textbf{Tools}!RegShot}{60-62}
+\indexentry{200@\textbf{Tools}!Process Monitor}{62-65}
+\indexentry{200@\textbf{Tools}!ProcDOT}{64-66}
+\indexentry{200@\textbf{Tools}!Wireshark}{67-75}
+\indexentry{200@\textbf{Tools}!fakedns@\texttt{fakedns} \linux|book{1}}{68}
+\indexentry{200@\textbf{Tools}!httpd@\texttt{httpd} \linux|book{1}}{72}
+\indexentry{200@\textbf{Tools}!xxd@\texttt{xxd} \linux|book{1}}{76}
+\indexentry{200@\textbf{Tools}!code@\texttt{code} \linux|book{1}}{76}
+\indexentry{200@\textbf{Tools}!Visual Studio Code|book{1}}{76}
+\indexentry{200@\textbf{Tools}!Ghidra|book{1}}{81}
+\indexentry{200@\textbf{Tools}!X64dbg|book{1}}{81}
+\indexentry{200@\textbf{Tools}!IDA|book{1}}{81}
+\indexentry{200@\textbf{Tools}!Windbg|book{1}}{81}
+\indexentry{200@\textbf{Tools}!Cutter|book{1}}{81}
+\indexentry{200@\textbf{Tools}!Binary Ninja|book{1}}{81}
+\indexentry{200@\textbf{Tools}!Hopper|book{1}}{81}
+\indexentry{200@\textbf{Tools}!Speakeasy|book{1}}{83-86}
+\indexentry{200@\textbf{Tools}!Capa|book{1}}{83}
+\indexentry{200@\textbf{Tools}!Visual Studio Code}{84}
+\indexentry{200@\textbf{Tools}!jq@\texttt{jq} \linux|book{1}}{86}
+\indexentry{200@\textbf{Tools}!Capa}{87-89}
+\indexentry{200@\textbf{Tools}!X64dbg}{90-99}
+\indexentry{200@\textbf{Tools}!PEStudio}{92}
+\indexentry{200@\textbf{Tools}!Process Hacker}{96}
+\indexentry{200@\textbf{Tools}!API Monitor|book{1}}{102-103}
+\indexentry{200@\textbf{Tools}!CyberChef|book{1}}{105-109}
+\indexentry{200@\textbf{Tools}!httpd@\texttt{httpd} \linux}{116-117}
+\indexentry{200@\textbf{Tools}!fakedns@\texttt{fakedns} \linux}{116}
+\indexentry{200@\textbf{Tools}!Process Hacker}{119}
+\indexentry{200@\textbf{Tools}!InetSim|book{1}}{120-123}
+\indexentry{200@\textbf{Tools}!Fiddler|book{1}}{124-125}
+\indexentry{200@\textbf{Tools}!set-static-ip@\texttt{set-static-ip} \linux|book{1}}{126}
+\indexentry{200@\textbf{Tools}!iptables@\texttt{iptables} \linux|book{1}}{127-129}
+\indexentry{200@\textbf{Tools}!accept-all-ips@\texttt{accept-all-ips} \linux|book{1}}{127}
+\indexentry{200@\textbf{Tools}!nc@\texttt{nc} \linux|book{1}}{127}
+\indexentry{200@\textbf{Tools}!httpd@\texttt{httpd} \linux}{129}
+\indexentry{200@\textbf{Tools}!accept-all-ips@\texttt{accept-all-ips} \linux}{129}
+\indexentry{200@\textbf{Tools}!Wireshark}{129}
+\indexentry{200@\textbf{Tools}!Ghidra! |book{2}}{6-59}
+\indexentry{200@\textbf{Tools}!Ghidra!CodeBrowser|book{2}}{10}
+\indexentry{200@\textbf{Tools}!Ghidra!Saved Work|book{2}}{133}
+\indexentry{200@\textbf{Tools}!Sysmon|book{2}}{19}
+\indexentry{200@\textbf{Tools}!PEStudio}{138}
+\indexentry{200@\textbf{Tools}!Ghidra! }{139}
+\indexentry{200@\textbf{Tools}!PEStudio}{142}
+\indexentry{200@\textbf{Tools}!Ghidra! }{154}
+\indexentry{200@\textbf{Tools}!Pdfid@\texttt{pdfid} \python|book{3}}{8}
+\indexentry{200@\textbf{Tools}!Pdf-parser@\texttt{pdf-parser} \python|book{3}}{9-17}
+\indexentry{200@\textbf{Tools}!Wget@\texttt{wget} \linux|book{3}}{19}
+\indexentry{200@\textbf{Tools}!Curl@\texttt{curl} \linux|book{3}}{19}
+\indexentry{200@\textbf{Tools}!Pinpoint|book{3}}{19}
+\indexentry{200@\textbf{Tools}!Scout|book{3}}{19}
+\indexentry{200@\textbf{Tools}!Thug|book{3}}{19}
+\indexentry{200@\textbf{Tools}!Burp|book{3}}{19}
+\indexentry{200@\textbf{Tools}!Fiddler! |book{3}}{19-21}
+\indexentry{200@\textbf{Tools}!Fiddler! }{26}
+\indexentry{200@\textbf{Tools}!Pdfid@\texttt{pdfid} \python}{29}
+\indexentry{200@\textbf{Tools}!Qpdf@\texttt{qpdf} \linux|book{3}}{35}
+\indexentry{200@\textbf{Tools}!Pdftk@\texttt{pdftk} \linux|book{3}}{35}
+\indexentry{200@\textbf{Tools}!Trid@\texttt{trid} \linux|book{3}}{41}
+\indexentry{200@\textbf{Tools}!Unzip@\texttt{unzip} \linux|book{3}}{43}
+\indexentry{200@\textbf{Tools}!Zipdump@\texttt{zipdump} \python|book{3}}{43}
+\indexentry{200@\textbf{Tools}!Feh@\texttt{feh} \linux|book{3}}{43}
+\indexentry{200@\textbf{Tools}!LibreOffice|book{3}}{44}
+\indexentry{200@\textbf{Tools}!OleTools|book{3}}{45}
+\indexentry{200@\textbf{Tools}!Olevba@\texttt{olevba} \linux|book{3}}{45}
+\indexentry{200@\textbf{Tools}!Oledump@\texttt{oledump} \python|book{3}}{47}
+\indexentry{200@\textbf{Tools}!Grep@\texttt{grep} \linux|book{3}}{49}
+\indexentry{200@\textbf{Tools}!Oledump@\texttt{oledump} \python}{51}
+\indexentry{200@\textbf{Tools}!Grep@\texttt{grep} \linux}{51}
+\indexentry{200@\textbf{Tools}!Re-search@\texttt{re-search} \python|book{3}}{51}
+\indexentry{200@\textbf{Tools}!Sets@\texttt{sets} \python|book{3}}{51}
+\indexentry{200@\textbf{Tools}!Sed@\texttt{sed} \linux|book{3}}{51}
+\indexentry{200@\textbf{Tools}!Exiftool@\texttt{exiftool} \linux|book{3}}{54}
+\indexentry{200@\textbf{Tools}!Strings@\texttt{strings} \linux! |book{3}}{54}
+\indexentry{200@\textbf{Tools}!Zipdump@\texttt{zipdump} \python}{55}
+\indexentry{200@\textbf{Tools}!Xmldump@\texttt{xmldump} \python|book{3}}{55}
+\indexentry{200@\textbf{Tools}!ViperMonkey|book{3}}{56}
+\indexentry{200@\textbf{Tools}!Evilclippy@\texttt{evilclippy} \linux|book{3}}{57}
+\indexentry{200@\textbf{Tools}!Oledump@\texttt{oledump} \python}{58-59}
+\indexentry{200@\textbf{Tools}!Numbers-to-string@\texttt{numbers-to-string} \python|book{3}}{59}
+\indexentry{200@\textbf{Tools}!Sed@\texttt{sed} \linux}{60}
+\indexentry{200@\textbf{Tools}!accept-all-ips@\texttt{accept-all-ips} \linux! |book{3}}{62}
+\indexentry{200@\textbf{Tools}!Process Hacker! |book{3}}{62}
+\indexentry{200@\textbf{Tools}!nc@\texttt{nc} \linux! |book{3}}{62}
+\indexentry{200@\textbf{Tools}!Oledump@\texttt{oledump} \python}{66-70}
+\indexentry{200@\textbf{Tools}!Base64dump@\texttt{base64dump} \python|book{3}}{69-71}
+\indexentry{200@\textbf{Tools}!Gunzip@\texttt{gunzip} \linux|book{3}}{71}
+\indexentry{200@\textbf{Tools}!Base64dump@\texttt{base64dump} \python}{74}
+\indexentry{200@\textbf{Tools}!Strings@\texttt{strings} \linux! }{74}
+\indexentry{200@\textbf{Tools}!Scdbgc|book{3}}{75}
+\indexentry{200@\textbf{Tools}!Yara-rules@\texttt{yara-rules} \linux|book{3}}{76}
+\indexentry{200@\textbf{Tools}!Rtfdump@\texttt{rtfdump} \python|book{3}}{83-84}
+\indexentry{200@\textbf{Tools}!Trid@\texttt{trid} \linux}{84}
+\indexentry{200@\textbf{Tools}!Rtfobj@\texttt{rtfobj} \linux|book{3}}{84}
+\indexentry{200@\textbf{Tools}!Oledump@\texttt{oledump} \python}{85}
+\indexentry{200@\textbf{Tools}!Oledump@\texttt{oledump} \python}{87-88}
+\indexentry{200@\textbf{Tools}!Format-bytes@\texttt{format-bytes} \python|book{3}}{88}
+\indexentry{200@\textbf{Tools}!Rtfdump@\texttt{rtfdump} \python}{89-91}
+\indexentry{200@\textbf{Tools}!File@\texttt{file} \linux|book{3}}{89}
+\indexentry{200@\textbf{Tools}!Xorsearch@\texttt{xorsearch} \linux|book{3}}{92-95}
+\indexentry{200@\textbf{Tools}!Scdbgc}{95-96}
+\indexentry{200@\textbf{Tools}!Runsc32|book{3}}{97}
+\indexentry{200@\textbf{Tools}!Runsc64|book{3}}{97}
+\indexentry{200@\textbf{Tools}!Rar@\texttt{rar} \linux|book{3}}{98-99}
+\indexentry{200@\textbf{Tools}!Js-beautify@\texttt{js-beautify} \linux|book{3}}{104}
+\indexentry{200@\textbf{Tools}!CyberChef! |book{3}}{104}
+\indexentry{200@\textbf{Tools}!SpiderMonkey|book{3}}{106-107}
+\indexentry{200@\textbf{Tools}!Js@\texttt{js} \linux|book{3}}{106-107}
+\indexentry{200@\textbf{Tools}!Cscript \win|book{3}}{106}
+\indexentry{200@\textbf{Tools}!Logman@\texttt{logman} \win|book{3}}{109}
+\indexentry{200@\textbf{Tools}!Cscript \win}{110}
+\indexentry{200@\textbf{Tools}!Cscript \win}{112}
+\indexentry{200@\textbf{Tools}!SpiderMonkey}{114}
+\indexentry{200@\textbf{Tools}!Js@\texttt{js} \linux}{114}
+\indexentry{200@\textbf{Tools}!BoxJs@\texttt{box-js} \linux|book{3}}{118}
+\indexentry{200@\textbf{Tools}!PEStudio! |book{4}}{10}
+\indexentry{200@\textbf{Tools}!Bytehist@\texttt{bytehist} \linux|book{4}}{11}
+\indexentry{200@\textbf{Tools}!DIE! |book{4}}{12}
+\indexentry{200@\textbf{Tools}!Exeinfo PE! |book{4}}{12}
+\indexentry{200@\textbf{Tools}!Ether|book{4}}{17}
+\indexentry{200@\textbf{Tools}!UnpacMe \web|book{4}}{17}
+\indexentry{200@\textbf{Tools}!X64dbg!Unpacking Scripts|book{4}}{17}
+\indexentry{200@\textbf{Tools}!CFF Explorer|book{4}}{19-20}
+\indexentry{200@\textbf{Tools}!SetDllCharacteritics@\texttt{SetDllCharacteritics} \win|book{4}}{19-20}
+\indexentry{200@\textbf{Tools}!Scylla|book{4}}{22-24}
+\indexentry{200@\textbf{Tools}!PE Tools|book{4}}{22}
+\indexentry{200@\textbf{Tools}!Imports Fixer|book{4}}{22}
+\indexentry{200@\textbf{Tools}!Scylla}{29}
+\indexentry{200@\textbf{Tools}!OllyDumpEx (x..dbg plugin)|book{4}}{29}
+\indexentry{200@\textbf{Tools}!X64dbg! |book{4}}{30-31}
+\indexentry{200@\textbf{Tools}!OllyDumpEx (x..dbg plugin)}{36-42}
+\indexentry{200@\textbf{Tools}!Scylla}{36}
+\indexentry{200@\textbf{Tools}!CFF Explorer}{36}
+\indexentry{200@\textbf{Tools}!Scylla (x..dbg plugin)|book{4}}{40-41}
+\indexentry{200@\textbf{Tools}!X64dbg!Cleardb@\texttt{cleardb}|book{4}}{47}
+\indexentry{200@\textbf{Tools}!Process Hacker!  |book{4}}{58-59}
+\indexentry{200@\textbf{Tools}!Process Monitor! |book{4}}{58-60}
+\indexentry{200@\textbf{Tools}!ProcDOT! |book{4}}{61-64}
+\indexentry{200@\textbf{Tools}!Registry Editor \win|book{4}}{68}
+\indexentry{200@\textbf{Tools}!Regexport@\texttt{reg\_export} \win|book{4}}{69}
+\indexentry{200@\textbf{Tools}!Sshd@\texttt{sshd} \linux|book{4}}{70}
+\indexentry{200@\textbf{Tools}!WinSCP \win|book{4}}{70}
+\indexentry{200@\textbf{Tools}!SpiderMonkey! |book{4}}{71}
+\indexentry{200@\textbf{Tools}!Js-beautify@\texttt{js-beautify} \linux! |book{4}}{71}
+\indexentry{200@\textbf{Tools}!Tr@\texttt{tr} \linux|book{4}}{71}
+\indexentry{200@\textbf{Tools}!Iconv@\texttt{iconv} \linux|book{4}}{71}
+\indexentry{200@\textbf{Tools}!Base64dump@\texttt{base64dump} \python! |book{4}}{73}
+\indexentry{200@\textbf{Tools}!WinSCP \win}{74}
+\indexentry{200@\textbf{Tools}!PowerShell ISE \win|book{4}}{76-79}
+\indexentry{200@\textbf{Tools}!ScDbg \win|book{4}}{76}
+\indexentry{200@\textbf{Tools}!ScDbg \win}{80-81}
+\indexentry{200@\textbf{Tools}!Runsc32! |book{4}}{82-86}
+\indexentry{200@\textbf{Tools}!X32dbg|book{4}}{83}
+\indexentry{200@\textbf{Tools}!PEStudio! }{102}
+\indexentry{200@\textbf{Tools}!ILSpy \win|book{4}}{108}
+\indexentry{200@\textbf{Tools}!ILSpycmd@\texttt{ilspycmd} \linux|book{4}}{108}
+\indexentry{200@\textbf{Tools}!DnSpyEx@dnSpyEx|book{4}}{108-109}
+\indexentry{200@\textbf{Tools}!De4dot@de4dot|book{4}}{108}
+\indexentry{200@\textbf{Tools}!DotDumper|book{4}}{108}
+\indexentry{200@\textbf{Tools}!DotPeek@dotPeek|book{4}}{108}
+\indexentry{200@\textbf{Tools}!PEStudio! }{109-110}
+\indexentry{200@\textbf{Tools}!ILSpycmd@\texttt{ilspycmd} \linux}{111}
+\indexentry{200@\textbf{Tools}!De4dot@de4dot}{112}
+\indexentry{200@\textbf{Tools}!ILSpy \win}{113}
+\indexentry{200@\textbf{Tools}!ILSpycmd@\texttt{ilspycmd} \linux}{113}
+\indexentry{200@\textbf{Tools}!DnSpyEx@dnSpyEx}{113}
+\indexentry{200@\textbf{Tools}!DnSpyEx@dnSpyEx}{116-126}
+\indexentry{200@\textbf{Tools}!DnSpyEx@dnSpyEx!Modules|book{4}}{120-121}
+\indexentry{200@\textbf{Tools}!DnSpyEx@dnSpyEx!Locals|book{4}}{126}
+\indexentry{200@\textbf{Tools}!PEStudio! }{127}
+\indexentry{200@\textbf{Tools}!ILSpy \win}{128}
+\indexentry{200@\textbf{Tools}!De4dot@de4dot}{129}
+\indexentry{200@\textbf{Tools}!ILSpy \win}{130}
+\indexentry{200@\textbf{Tools}!DotDumper}{131}
+\indexentry{200@\textbf{Tools}!Ghidra!  |book{4}}{139}
+\indexentry{200@\textbf{Tools}!Ghidra!Decompiler|book{4}}{143}
+\indexentry{200@\textbf{Tools}!Ghidra!Find Location (shortcut)|book{4}}{148}
+\indexentry{200@\textbf{Tools}!X64dbg!  |book{5}}{5}
+\indexentry{200@\textbf{Tools}!X64dbg!  }{10-11}
+\indexentry{200@\textbf{Tools}!ScyllaHide (x..dbg plugin)|book{5}}{15}
+\indexentry{200@\textbf{Tools}!Xorsearch@\texttt{xorsearch} \linux! |book{5}}{17}
+\indexentry{200@\textbf{Tools}!Strings@\texttt{strings} \linux!  |book{5}}{17}
+\indexentry{200@\textbf{Tools}!Brxor@\texttt{brxor} \python|book{5}}{18}
+\indexentry{200@\textbf{Tools}!Bbcrack@\texttt{bbcrack} \python|book{5}}{19}
+\indexentry{200@\textbf{Tools}!Strdeob@\texttt{strdeob} \perl|book{5}}{24-25}
+\indexentry{200@\textbf{Tools}!FLOSS|book{5}}{25-27}
+\indexentry{200@\textbf{Tools}!ScyllaHide (x..dbg plugin)}{28}
+\indexentry{200@\textbf{Tools}!X32dbg! |book{5}}{28-36}
+\indexentry{200@\textbf{Tools}!PEStudio!  |book{5}}{37}
+\indexentry{200@\textbf{Tools}!Capa! |book{5}}{45-46}
+\indexentry{200@\textbf{Tools}!PEStudio!  }{58}
+\indexentry{200@\textbf{Tools}!VBoxCloak|book{5}}{65}
+\indexentry{200@\textbf{Tools}!VMWareCloak|book{5}}{65}
+\indexentry{200@\textbf{Tools}!ScyllaHide (x..dbg plugin)}{73}
+\indexentry{200@\textbf{Tools}!ScyllaHide (x..dbg plugin)}{76}
+\indexentry{200@\textbf{Tools}!X32dbg!SEH Chain|book{5}}{99}
+\indexentry{200@\textbf{Tools}!OllyDumpEx (x..dbg plugin)! |book{5}}{108}
+\indexentry{200@\textbf{Tools}!OllyDumpEx (x..dbg plugin)! }{111}
+\indexentry{200@\textbf{Tools}!Scylla (x..dbg plugin)! |book{5}}{112}
+\indexentry{200@\textbf{Tools}!PEStudio!  }{113}
+\indexentry{200@\textbf{Tools}!Ghidra!   |book{5}}{117}
+\indexentry{200@\textbf{Tools}!Ghidra!Confused|book{5}}{119}
+\indexentry{200@\textbf{Tools}!Xanalyzer@xAnalyzer (x..dbg plugin)|book{5}}{152}
+\indexentry{200@\textbf{Tools}!PeUnmapper@\texttt{pe\_unmapper}|book{5}}{163-164}
+\indexentry{200@\textbf{Tools}!Scylla (x..dbg plugin)! }{164}
+
+\indexentry{201@\blankline|comment}{0}
+
+%\indexentry{300@\textbf{Resources}!Malware Capabilities/Behavior|book{1}}{11}
+%\indexentry{300@\textbf{Resources}!Report Template|book{1}}{12}
+%\indexentry{300@\textbf{Resources}!Automated Sandboxes|book{1}}{13}
+%\indexentry{300@\textbf{Resources}!Antivirus Scanners|book{1}}{13}
+%\indexentry{300@\textbf{Resources}!AlgoVPN|book{1}}{19}
+%\indexentry{300@\textbf{Resources}!DNS Leakage|book{1}}{19}
+%\indexentry{300@\textbf{Resources}!ChatGPT|book{1}}{21}
+%\indexentry{300@\textbf{Resources}!Yara|book{1}}{21}
+%\indexentry{300@\textbf{Resources}!Custom Virtual Network|book{1}}{30}
+%\indexentry{300@\textbf{Resources}!PXE Booting|book{1}}{34}
+%\indexentry{300@\textbf{Resources}!CAPE Sandbox|book{1}}{34}
+%\indexentry{300@\textbf{Resources}!FOG|book{1}}{34}
+%\indexentry{300@\textbf{Resources}!REMnux Tools List|book{1}}{36}
+%\indexentry{300@\textbf{Resources}!REM Workstation Tools List|book{1}}{36}
+%\indexentry{300@\textbf{Resources}!AppData|book{1}}{39}
+%\indexentry{300@\textbf{Resources}!Pev Toolkit|book{1}}{44}
+%\indexentry{300@\textbf{Resources}!PEFrame|book{1}}{48}
+%\indexentry{300@\textbf{Resources}!Detect It Easy (DIE)|book{1}}{49}
+%\indexentry{300@\textbf{Resources}!REMnux Static Properties Examination|book{1}}{50}
+%\indexentry{300@\textbf{Resources}!Process Hacker|book{1}}{53}
+%\indexentry{300@\textbf{Resources}!Process Explorer|book{1}}{53}
+%\indexentry{300@\textbf{Resources}!System Informer|book{1}}{53}
+%\indexentry{300@\textbf{Resources}!Process Monitor|book{1}}{53}
+%\indexentry{300@\textbf{Resources}!RegShot|book{1}}{53}
+%\indexentry{300@\textbf{Resources}!ProcDOT|book{1}}{53}
+%\indexentry{300@\textbf{Resources}!Wireshark|book{1}}{53}
+%\indexentry{300@\textbf{Resources}!Pending Rename|book{1}}{61}
+%\indexentry{300@\textbf{Resources}!Ghidra|book{1}}{81}
+%\indexentry{300@\textbf{Resources}!X64dbg|book{1}}{81}
+%\indexentry{300@\textbf{Resources}!IDA|book{1}}{81}
+%\indexentry{300@\textbf{Resources}!Windbg|book{1}}{81}
+%\indexentry{300@\textbf{Resources}!Speakeasy|book{1}}{84}
+%\indexentry{300@\textbf{Resources}!MITTRE ATT\&CK|book{1}}{87}
+%\indexentry{300@\textbf{Resources}!MBC|book{1}}{87}
+%\indexentry{300@\textbf{Resources}!ReadFile|book{1}}{92}
+%\indexentry{300@\textbf{Resources}!CryptDecrypt|book{1}}{98}
+%\indexentry{300@\textbf{Resources}!CyberChef|book{1}}{105}
+%
+\indexentry{301@\blankline|comment}{0}
+\indexentry{302@\blankline|comment}{0}
+\indexentry{303@\blankline|comment}{0}
+\indexentry{304@\blankline|comment}{0}
+\indexentry{305@\blankline|comment}{0}
+\indexentry{306@\blankline|comment}{0}
+\indexentry{307@\blankline|comment}{0}
+\indexentry{308@\blankline|comment}{0}
+
+\indexentry{400@\textbf{API Calls}!NtQueryInformationFile|book{1}}{21}
+\indexentry{400@\textbf{API Calls}!GetTickCount|book{1}}{47}
+\indexentry{400@\textbf{API Calls}!RegSetValueExA|book{1}}{47}
+\indexentry{400@\textbf{API Calls}!CryptDeriveKey|book{1}}{47}
+\indexentry{400@\textbf{API Calls}!GetLastError|book{1}}{48}
+\indexentry{400@\textbf{API Calls}!CreateFileA|book{1}}{85}
+\indexentry{400@\textbf{API Calls}!WriteFile|book{1}}{85}
+\indexentry{400@\textbf{API Calls}!CryptDestroyKey|book{1}}{85}
+\indexentry{400@\textbf{API Calls}!InternetReadFile|book{1}}{89}
+\indexentry{400@\textbf{API Calls}!ReadFile|book{1}}{92-98}
+\indexentry{400@\textbf{API Calls}!CryptDecrypt|book{1}}{98-100}
+\indexentry{400@\textbf{API Calls}!RegOpenKeyExA|book{2}}{20-24}
+\indexentry{400@\textbf{API Calls}!RegOpenKeyExA}{36}
+\indexentry{400@\textbf{API Calls}!CreateProcess|book{2}}{37}
+\indexentry{400@\textbf{API Calls}!RegOpenKeyExA}{43}
+\indexentry{400@\textbf{API Calls}!InternetOpenA|book{2}}{46-49}
+\indexentry{400@\textbf{API Calls}!InternetConnectA|book{2}}{46}
+\indexentry{400@\textbf{API Calls}!HttpOpenRequestA|book{2}}{46}
+\indexentry{400@\textbf{API Calls}!HttpSendRequestA|book{2}}{46}
+\indexentry{400@\textbf{API Calls}!HttpOpenRequestA}{50}
+\indexentry{400@\textbf{API Calls}!HttpSendRequestA}{51-54}
+\indexentry{400@\textbf{API Calls}!GetLastError! |book{2}}{52}
+\indexentry{400@\textbf{API Calls}!RaiseException|book{2}}{52}
+\indexentry{400@\textbf{API Calls}!InternetOpenA}{55}
+\indexentry{400@\textbf{API Calls}!InternetReadFile! |book{2}}{56}
+\indexentry{400@\textbf{API Calls}!GetTempFileNameW|book{2}}{62-64}
+\indexentry{400@\textbf{API Calls}!CreateToolHelp32Snapshot|book{2}}{76}
+\indexentry{400@\textbf{API Calls}!CreateProcessW|book{2}}{86-87}
+\indexentry{400@\textbf{API Calls}!GetTempPathW|book{2}}{121-122}
+\indexentry{400@\textbf{API Calls}!GetTempPathW}{126}
+\indexentry{400@\textbf{API Calls}!GetTempPathW}{128-129}
+\indexentry{400@\textbf{API Calls}!FreeLibrary|book{2}}{140}
+\indexentry{400@\textbf{API Calls}!SizeOfResource|book{2}}{140-141}
+\indexentry{400@\textbf{API Calls}!LockResource|book{2}}{140-141}
+\indexentry{400@\textbf{API Calls}!FindResourceW|book{2}}{140-141}
+\indexentry{400@\textbf{API Calls}!CreateFileA! |book{2}}{141}
+\indexentry{400@\textbf{API Calls}!CreateMutexA|book{2}}{143}
+\indexentry{400@\textbf{API Calls}!ShellExecuteW|book{2}}{153}
+\indexentry{400@\textbf{API Calls}!ShellExecuteA|book{2}}{155}
+\indexentry{400@\textbf{API Calls}!URLDownloadToFileA|book{3}}{45}
+\indexentry{400@\textbf{API Calls}!URLDownloadToFileA}{52}
+\indexentry{400@\textbf{API Calls}!VirtualAlloc|book{3}}{73}
+\indexentry{400@\textbf{API Calls}!LoadLibraryA|book{3}}{75}
+\indexentry{400@\textbf{API Calls}!InternetOpenA! |book{3}}{75}
+\indexentry{400@\textbf{API Calls}!HttpOpenRequestA! |book{3}}{75}
+\indexentry{400@\textbf{API Calls}!HttpSendRequestA! |book{3}}{75}
+\indexentry{400@\textbf{API Calls}!VirtualAlloc}{75}
+\indexentry{400@\textbf{API Calls}!InternetReadFile!  |book{3}}{75}
+\indexentry{400@\textbf{API Calls}!LoadLibraryA}{94-96}
+\indexentry{400@\textbf{API Calls}!GetProcAddress|book{3}}{94}
+\indexentry{400@\textbf{API Calls}!GetFileSize|book{3}}{95-96}
+\indexentry{400@\textbf{API Calls}!CreateFileA!  |book{3}}{96}
+\indexentry{400@\textbf{API Calls}!ReadFile! |book{3}}{96}
+\indexentry{400@\textbf{API Calls}!WriteFile! |book{3}}{96}
+\indexentry{400@\textbf{API Calls}!ReadFile!  |book{3}}{45}
+\indexentry{400@\textbf{API Calls}!CryptDecrypt! |book{4}}{51-53}
+\indexentry{400@\textbf{API Calls}!VirtualAlloc! |book{4}}{75}
+\indexentry{400@\textbf{API Calls}!CreateThread|book{4}}{75}
+\indexentry{400@\textbf{API Calls}!LoadLibraryA! |book{4}}{80}
+\indexentry{400@\textbf{API Calls}!RegOpenKeyExA! |book{4}}{80}
+\indexentry{400@\textbf{API Calls}!CreateThread}{81}
+\indexentry{400@\textbf{API Calls}!RegOpenKeyExA! }{87-91}
+\indexentry{400@\textbf{API Calls}!RegQueryValueA|book{4}}{91}
+\indexentry{400@\textbf{API Calls}!VirtualAlloc! }{91-100}
+\indexentry{400@\textbf{API Calls}!VirtualProtect|book{4}}{103}
+\indexentry{400@\textbf{API Calls}!CreateToolHelp32Snapshot! |book{4}}{136}
+\indexentry{400@\textbf{API Calls}!EnumProcesses|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!OpenProcess|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!VirtualAllocEx|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!WriteProcessMemory|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!CreateRemoteThread|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!Process32First|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!Process32Next|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!LoadLibrary|book{4}}{136}
+\indexentry{400@\textbf{API Calls}!CreateRemoteThread}{138}
+\indexentry{400@\textbf{API Calls}!WriteProcessMemory}{138}
+\indexentry{400@\textbf{API Calls}!OpenProcess}{142}
+\indexentry{400@\textbf{API Calls}!WriteProcessMemory}{144-151}
+\indexentry{400@\textbf{API Calls}!VirtualAllocEx}{145-151}
+\indexentry{400@\textbf{API Calls}!CreateRemoteThread}{151}
+\indexentry{400@\textbf{API Calls}!OpenProcess}{148-151}
+\indexentry{400@\textbf{API Calls}!CreateToolHelp32Snapshot! }{149-151}
+\indexentry{400@\textbf{API Calls}!Process32First}{149-150}
+\indexentry{400@\textbf{API Calls}!Process32Next}{149-150}
+\indexentry{400@\textbf{API Calls}!LoadLibrary}{151}
+\indexentry{400@\textbf{API Calls}!GetModuleHandle|book{4}}{151}
+\indexentry{400@\textbf{API Calls}!GetProcAddress! |book{4}}{151}
+\indexentry{400@\textbf{API Calls}!IsDebuggerPresent|book{5}}{6-9}
+\indexentry{400@\textbf{API Calls}!CheckRemoteDebuggerPresent|book{5}}{12}
+\indexentry{400@\textbf{API Calls}!NtQueryInformationProcess|book{5}}{12}
+\indexentry{400@\textbf{API Calls}!OutputDebugString|book{5}}{12}
+\indexentry{400@\textbf{API Calls}!GetTickCount! |book{5}}{14}
+\indexentry{400@\textbf{API Calls}!GetLocalTime|book{5}}{14}
+\indexentry{400@\textbf{API Calls}!GetSystemTime|book{5}}{14}
+\indexentry{400@\textbf{API Calls}!RtlDecompressBuffer|book{5}}{27}
+\indexentry{400@\textbf{API Calls}!RtlDecompressBuffer}{30-33}
+\indexentry{400@\textbf{API Calls}!NtQueryInformationProcess}{37-40}
+\indexentry{400@\textbf{API Calls}!CreateProcess! |book{5}}{48-49}
+\indexentry{400@\textbf{API Calls}!ResumeThread|book{5}}{49}
+\indexentry{400@\textbf{API Calls}!VirtualAllocEx! |book{5}}{50}
+\indexentry{400@\textbf{API Calls}!WriteProcessMemory! |book{5}}{50}
+\indexentry{400@\textbf{API Calls}!NtUnmapViewOfSection|book{5}}{51-52}
+\indexentry{400@\textbf{API Calls}!GetProcAddress!  |book{5}}{51}
+\indexentry{400@\textbf{API Calls}!ResumeThread}{52}
+\indexentry{400@\textbf{API Calls}!VirtualAllocEx! }{52}
+\indexentry{400@\textbf{API Calls}!WriteProcessMemory! }{52-54}
+\indexentry{400@\textbf{API Calls}!CreateProcess! }{52}
+\indexentry{400@\textbf{API Calls}!NtUnmapViewOfSection}{59}
+\indexentry{400@\textbf{API Calls}!CountClipboardFormats|book{5}}{65}
+\indexentry{400@\textbf{API Calls}!GetCursorPos|book{5}}{65}
+\indexentry{400@\textbf{API Calls}!GetTickCount|book{5}}{65}
+\indexentry{400@\textbf{API Calls}!SetWindowsHookExA|book{5}}{66-69}
+\indexentry{400@\textbf{API Calls}!GetModuleHandleA|book{5}}{69}
+\indexentry{400@\textbf{API Calls}!CallNextHookEx|book{5}}{70-71}
+\indexentry{400@\textbf{API Calls}!UnhookWindowsHookEx|book{5}}{71}
+\indexentry{400@\textbf{API Calls}!ExitProcess|book{5}}{74}
+\indexentry{400@\textbf{API Calls}!BlockInput|book{5}}{75-76}
+\indexentry{400@\textbf{API Calls}!GetModuleHandleW|book{5}}{77}
+\indexentry{400@\textbf{API Calls}!FindWindow|book{5}}{78}
+\indexentry{400@\textbf{API Calls}!FindWindowW|book{5}}{79}
+\indexentry{400@\textbf{API Calls}!GetModuleHandleW}{81}
+\indexentry{400@\textbf{API Calls}!CreateToolHelp32Snapshot!  |book{5}}{84}
+\indexentry{400@\textbf{API Calls}!Process32First! |book{5}}{84}
+\indexentry{400@\textbf{API Calls}!RegOpenKeyExW|book{5}}{88}
+\indexentry{400@\textbf{API Calls}!IsDebuggerPresent}{122-1124}
+\indexentry{400@\textbf{API Calls}!FindWindowA|book{5}}{141}
+\indexentry{400@\textbf{API Calls}!WriteProcessMemory! }{145}
+\indexentry{400@\textbf{API Calls}!RtlDecompressBuffer}{145}
+\indexentry{400@\textbf{API Calls}!VirtualAllocEx! }{145}
+\indexentry{400@\textbf{API Calls}!LoadLibrary! |book{5}}{145}
+\indexentry{400@\textbf{API Calls}!LoadLibraryA!  |book{5}}{146-151}
+\indexentry{400@\textbf{API Calls}!GetProcAddress!  }{148}
+\indexentry{400@\textbf{API Calls}!VirtualProtect! |book{5}}{153-155}
+\indexentry{400@\textbf{API Calls}!VirtualProtect! }{158-159}
+
+\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{REM|book{1}}{2}
+\indexentry{NIST SP 800-83|book{1}}{5}
+\indexentry{Malware Analysis|book{1}}{6}
+\indexentry{Malware Analysis!Stages|book{1}}{9}
+\indexentry{Metadata|book{1}}{9}
+\indexentry{Malware Analysis!Inputs/Outputs|book{1}}{10}
+\indexentry{Malware Analysis!Report|book{1}}{11-12}
+\indexentry{IOC|book{1}}{11}
+\indexentry{MAEC|book{1}}{11}
+\indexentry{MBC|book{1}}{11}
+\indexentry{MalwareBazaar|book{1}}{13}
+\indexentry{VirusTotal|book{1}}{13-14}
+\indexentry{MetaDefender|book{1}}{13}
+\indexentry{Malware Hash Registry|book{1}}{13}
+\indexentry{HashSets|book{1}}{13}
+\indexentry{Winbindex|book{1}}{13}
+\indexentry{Any.run|book{1}}{13}
+\indexentry{CAPE|book{1}}{13}
+\indexentry{Intezer Analyze|book{1}}{13}
+\indexentry{Hybrid Analysis|book{1}}{13}
+\indexentry{FileScan.io|book{1}}{13}
+\indexentry{Quttera|book{1}}{13}
+\indexentry{UrlScan.io|book{1}}{13}
+\indexentry{SecurityTrails|book{1}}{13}
+\indexentry{Shodan|book{1}}{13}
+\indexentry{Open Threat Exchange|book{1}}{13}
+\indexentry{ThreatFox|book{1}}{13}
+\indexentry{Malware Data Repositories|book{1}}{13}
+\indexentry{Antivirus Scanners|book{1}}{13}
+\indexentry{File Reputation|book{1}}{13}
+\indexentry{Sandbox|book{1}}{13}
+\indexentry{Website Investigation|book{1}}{13}
+\indexentry{IP Investigation|book{1}}{13}
+\indexentry{Threat Intelligence|book{1}}{13}
+\indexentry{DLL|book{1}}{14}
+\indexentry{Hybrid Analysis}{15}
+\indexentry{Mutex|book{1}}{15}
+\indexentry{Infection Marker|book{1}}{15}
+\indexentry{SecurityTrails}{16}
+\indexentry{Open Threat Exchange}{16}
+\indexentry{IOC}{17}
+\indexentry{OSINT|book{1}}{17-18}
+\indexentry{Beaconing|book{1}}{17}
+\indexentry{Command \& Control (C2)|book{1}}{17}
+\indexentry{Exfiltration|book{1}}{17}
+\indexentry{Phishing!Webites|book{1}}{18}
+\indexentry{Exploit!Kit|book{1}}{18}
+\indexentry{Origin Concealment|book{1}}{18}
+\indexentry{Source IP|book{1}}{18}
+\indexentry{TOR|book{1}}{19}
+\indexentry{VPN|book{1}}{19}
+\indexentry{Public Cloud|book{1}}{19}
+\indexentry{DNS Leakage|book{1}}{19}
+\indexentry{OpenVPN|book{1}}{19}
+\indexentry{AlgoVPN|book{1}}{19}
+\indexentry{WireGuard|book{1}}{19}
+\indexentry{Authoritative DNS|book{1}}{19}
+\indexentry{Internet Access|book{1}}{19}
+\indexentry{Honeypot|book{1}}{20}
+\indexentry{VirusTotal}{20}
+\indexentry{Quttera}{20}
+\indexentry{UrlScan.io}{20}
+\indexentry{AI Tools|book{1}}{21}
+\indexentry{ChatGPT|book{1}}{21}
+\indexentry{Yara|book{1}}{21}
+\indexentry{Automated Tools|book{1}}{22}
+\indexentry{OSINT}{22}
+\indexentry{Malware Analysis!Lab|book{1}}{25-26}
+\indexentry{Virtualization|book{1}}{27}
+\indexentry{VMWare|book{1}}{28-30}
+\indexentry{VirtualBox|book{1}}{28}
+\indexentry{Hyper-V|book{1}}{28}
+\indexentry{Snapshot|book{1}}{28}
+\indexentry{Isolation Measures|book{1}}{29}
+\indexentry{VM Escape|book{1}}{29}
+\indexentry{Risky Capabilities|book{1}}{29}
+\indexentry{Folder Sharing|book{1}}{29}
+\indexentry{VMWare!Tools|book{1}}{29}
+\indexentry{Virtual Network|book{1}}{30}
+\indexentry{Virtual Network!Host-Only|book{1}}{30}
+\indexentry{Virtual Network!Custom|book{1}}{30}
+\indexentry{Self-Defending Capabilities|book{1}}{31}
+\indexentry{Self-Defending Capabilities!Countermeasures|book{1}}{32}
+\indexentry{Snapshot}{33-34}
+\indexentry{PXE Booting|book{1}}{34}
+\indexentry{Disk Cloning|book{1}}{34}
+\indexentry{Snapshot!Software|book{1}}{34}
+\indexentry{Static Analysis!Tools|book{1}}{35}
+\indexentry{Behavioral Analysis!Tools|book{1}}{35}
+\indexentry{Code Analysis!Tools|book{1}}{35}
+\indexentry{REM}{36}
+\indexentry{AppData|book{1}}{39}
+\indexentry{UAC|book{1}}{41}
+\indexentry{Strings|book{1}}{44}
+\indexentry{Registry Key|book{1}}{44}
+\indexentry{IOC!Examples|book{1}}{45}
+\indexentry{Persistence|book{1}}{45}
+\indexentry{Indicators|book{1}}{46}
+\indexentry{Hash Values|book{1}}{47}
+\indexentry{IOC!Examples}{47}
+\indexentry{Sections|book{1}}{47}
+\indexentry{Import Table|book{1}}{47}
+\indexentry{Self-Defending Capabilities!Examples|book{1}}{47}
+\indexentry{Yara}{48}
+\indexentry{Anti-Debugging!Technique|book{1}}{48}
+\indexentry{Static Analysis!Findings|book{1}}{50}
+\indexentry{Triage|book{1}}{50}
+\indexentry{Behavioral Analysis!Tools}{53}
+\indexentry{Execution Monitoring|book{1}}{53}
+\indexentry{Task Manager|book{1}}{53}
+\indexentry{ASLR|book{1}}{54}
+\indexentry{Persistence}{61}
+\indexentry{Pending Rename|book{1}}{61}
+\indexentry{Process Activities|book{1}}{62}
+\indexentry{Noise Filtering|book{1}}{62}
+\indexentry{PMF \file|book{1}}{62}
+\indexentry{CSV \file|book{1}}{64}
+\indexentry{Activity Diagram|book{1}}{65}
+\indexentry{PCAP \file|book{1}}{65}
+\indexentry{Persistence}{66}
+\indexentry{ICMP|book{1}}{67}
+\indexentry{Destination Unreachable|book{1}}{67}
+\indexentry{Port Unreachable|book{1}}{67}
+\indexentry{Resource Starvation|book{1}}{71}
+\indexentry{Follow TCP Stream|book{1}}{74}
+\indexentry{Behavioral Analysis!Findings|book{1}}{77}
+\indexentry{Persistence}{77}
+\indexentry{IOC}{77}
+\indexentry{Code Analysis|book{1}}{81}
+\indexentry{Code Analysis!Tools}{81}
+\indexentry{Disassembly|book{1}}{81-82}
+\indexentry{Debugging|book{1}}{81-82}
+\indexentry{Static Analysis|book{1}}{81}
+\indexentry{Behavioral Analysis|book{1}}{81}
+\indexentry{Code Analysis!Approaches|book{1}}{82}
+\indexentry{Static Code Analysis|book{1}}{82}
+\indexentry{Dynamic Code Analysis|book{1}}{82}
+\indexentry{Emulation|book{1}}{82-84}
+\indexentry{API Calls|book{1}}{83-84}
+\indexentry{Emulation!Tools|book{1}}{83}
+\indexentry{File Handle|book{1}}{85}
+\indexentry{Emulation!Limitation|book{1}}{85}
+\indexentry{Packing|book{1}}{87}
+\indexentry{MITRE ATT\&CK|book{1}}{87}
+\indexentry{MBC}{87}
+\indexentry{Malware Analysis!Capabilities|book{1}}{87-88}
+\indexentry{Risky Capabilities}{88}
+\indexentry{Command \& Control (C2)}{88}
+\indexentry{API Calls}{89}
+\indexentry{Disassembly}{90}
+\indexentry{Debugging}{91}
+\indexentry{Breakpoint|book{1}}{91}
+\indexentry{Breakpoint}{93}
+\indexentry{SetBPX|book{1}}{93}
+\indexentry{RIP|book{1}}{94}
+\indexentry{Return Path|book{1}}{97}
+\indexentry{Call Stack|book{1}}{97}
+\indexentry{User Code|book{1}}{97}
+\indexentry{Run to User Code|book{1}}{97}
+\indexentry{Call Operand|book{1}}{98}
+\indexentry{API Calls!Spying|book{1}}{102}
+\indexentry{XOR|book{1}}{104}
+\indexentry{ROL/ROR|book{1}}{104}
+\indexentry{ROT|book{1}}{104}
+\indexentry{Decoding|book{1}}{104}
+\indexentry{Deobfuscation|book{1}}{105}
+\indexentry{Recipe|book{1}}{105}
+\indexentry{Recipe}{107}
+\indexentry{Code Analysis!Findings|book{1}}{110}
+\indexentry{Backdoor|book{1}}{114}
+\indexentry{Botnet|book{1}}{118}
+\indexentry{IOC!Network|book{1}}{118}
+\indexentry{DNS Emulator|book{1}}{120}
+\indexentry{Protocol Emulator|book{1}}{120}
+\indexentry{User-Agent|book{1}}{123}
+\indexentry{Downloader|book{1}}{122-123}
+\indexentry{HTTPS Emulator|book{1}}{123-124}
+\indexentry{Worm|book{1}}{126}
+\indexentry{Hard-Coded IP Address|book{1}}{126}
+\indexentry{NAT|book{1}}{127}
+\indexentry{Hard-Coded IP Address}{128}
+\indexentry{Affiliate ID|book{1}}{130}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Code Lifecycle|book{2}}{5}
+\indexentry{Compiler|book{2}}{5}
+\indexentry{Linker|book{2}}{5}
+\indexentry{Loader|book{2}}{5}
+\indexentry{Source Code|book{2}}{5}
+\indexentry{Object Code|book{2}}{5}
+\indexentry{Executable File|book{2}}{5}
+\indexentry{Tiny PE|book{2}}{5}
+\indexentry{Debugging! |book{2}}{5-6}
+\indexentry{Libraries|book{2}}{5}
+\indexentry{SRE|book{2}}{6}
+\indexentry{NSA|book{2}}{6}
+\indexentry{FOSS|book{2}}{6}
+\indexentry{Disassembly! |book{2}}{6}
+\indexentry{Static Code Analysis! |book{2}}{6}
+\indexentry{Decompilation|book{2}}{6}
+\indexentry{C Representation|book{2}}{6}
+\indexentry{External Parameters|book{2}}{10}
+\indexentry{Snapshot! |book{2}}{11}
+\indexentry{Listing|book{2}}{12}
+\indexentry{Program Tree|book{2}}{12}
+\indexentry{MZ|book{2}}{12}
+\indexentry{Sections! |book{2}}{12}
+\indexentry{FUN|book{2}}{13}
+\indexentry{Entry Point|book{2}}{13}
+\indexentry{Function Graph|book{2}}{14}
+\indexentry{Conditional Jump|book{2}}{14}
+\indexentry{Browser Field Formatter|book{2}}{15}
+\indexentry{DLL! |book{2}}{16-17}
+\indexentry{Exports|book{2}}{16}
+\indexentry{Symbol Tree|book{2}}{16}
+\indexentry{Entry Point}{16}
+\indexentry{IAT|book{2}}{17}
+\indexentry{API Calls!Patterns|book{2}}{18}
+\indexentry{Persistence! |book{2}}{18}
+\indexentry{API Calls! |book{2}}{19}
+\indexentry{System Calls|book{2}}{19}
+\indexentry{User Space Code|book{2}}{19}
+\indexentry{Libraries}{19}
+\indexentry{Sysinternals|book{2}}{19}
+\indexentry{Registry Key! |book{2}}{20}
+\indexentry{Persistence! }{20}
+\indexentry{IOC! |book{2}}{20}
+\indexentry{ANSI|book{2}}{20}
+\indexentry{UTF-16|book{2}}{20}
+\indexentry{Wide Character|book{2}}{20}
+\indexentry{Extended Function|book{2}}{20}
+\indexentry{CALL|book{2}}{21-22}
+\indexentry{Symbol Table|book{2}}{21}
+\indexentry{Symbol References|book{2}}{21}
+\indexentry{Conditional Jump}{22}
+\indexentry{PUSH|book{2}}{22}
+\indexentry{Instructions|book{2}}{23-24}
+\indexentry{Instructions!Components|book{2}}{23}
+\indexentry{Operands|book{2}}{23}
+\indexentry{Intel Syntax (Instruction)|book{2}}{23}
+\indexentry{Operands!Addressing Modes|book{2}}{23}
+\indexentry{SCASB|book{2}}{23}
+\indexentry{ESP|book{2}}{23}
+\indexentry{Memory Address|book{2}}{23}
+\indexentry{Immediate (Addressing)|book{2}}{23}
+\indexentry{Registers|book{2}}{23-27}
+\indexentry{X86@x86 Architecture|book{2}}{24-25}
+\indexentry{Register Machine|book{2}}{24}
+\indexentry{Register-Based CPU|book{2}}{24}
+\indexentry{CPU|book{2}}{24}
+\indexentry{Registers!General-Purpose|book{2}}{24-25}
+\indexentry{E[ABCD]X|book{2}}{25}
+\indexentry{Return Register|book{2}}{25}
+\indexentry{Argument Register|book{2}}{25}
+\indexentry{Stack!Pointer|book{2}}{25}
+\indexentry{ESP}{25-26}
+\indexentry{EDI|book{2}}{25}
+\indexentry{Registers!Special-Use|book{2}}{26}
+\indexentry{Registers!Segment|book{2}}{26}
+\indexentry{EIP|book{2}}{26}
+\indexentry{EFLAGS|book{2}}{26}
+\indexentry{Code Segment|book{2}}{26}
+\indexentry{Data Segment|book{2}}{26}
+\indexentry{Stack!Segment|book{2}}{26}
+\indexentry{Registers!32-bit, 16-bit, 8-bit|book{2}}{27}
+\indexentry{Word|book{2}}{28}
+\indexentry{Dword|book{2}}{28}
+\indexentry{Qword|book{2}}{28}
+\indexentry{PUSH}{29}
+\indexentry{Pointer|book{2}}{29-30}
+\indexentry{Dereferencing|book{2}}{29-31}
+\indexentry{Indirection|book{2}}{29-30}
+\indexentry{Addressing|book{2}}{31-33}
+\indexentry{Direct Addressing|book{2}}{31}
+\indexentry{IDA|book{2}}{31}
+\indexentry{Indirect Addressing|book{2}}{32-33}
+\indexentry{Reference|book{2}}{32}
+\indexentry{Effective Address (EA)|book{2}}{32}
+\indexentry{Base|book{2}}{32-33}
+\indexentry{Index|book{2}}{32-33}
+\indexentry{Scale|book{2}}{32-33}
+\indexentry{Dynamically Allocated Memory|book{2}}{33}
+\indexentry{Strings! |book{2}}{34}
+\indexentry{Code-Data Duality|book{2}}{35}
+\indexentry{Context|book{2}}{35}
+\indexentry{Packing! |book{2}}{35}
+\indexentry{Self-Referencing Code|book{2}}{35}
+\indexentry{Self-Modifying Code|book{2}}{35}
+\indexentry{Symbolic Constants|book{2}}{36}
+\indexentry{Equate|book{2}}{36}
+\indexentry{HKEY\_CURRENT\_USER|book{2}}{36}
+\indexentry{Flags|book{2}}{37}
+\indexentry{Boolean Instructions|book{2}}{38}
+\indexentry{Arithmetic Instructions|book{2}}{38}
+\indexentry{Bit Manipulation Instructions|book{2}}{38}
+\indexentry{Data Manipulation Instructions|book{2}}{38}
+\indexentry{Data Transfer Instructions|book{2}}{38}
+\indexentry{Branching!Instructions|book{2}}{38}
+\indexentry{Conditional Instructions|book{2}}{38}
+\indexentry{Instructions!Types|book{2}}{38}
+\indexentry{Instructions!Types!Branch|book{2}}{39}
+\indexentry{Branching|book{2}}{39}
+\indexentry{Looping|book{2}}{39}
+\indexentry{Basic Block|book{2}}{39}
+\indexentry{Jump Types|book{2}}{40}
+\indexentry{Unconditional Jump|book{2}}{40}
+\indexentry{Conditional Jump}{40-44}
+\indexentry{EFLAGS}{41}
+\indexentry{CMP|book{2}}{41}
+\indexentry{TEST|book{2}}{41}
+\indexentry{Jcc-Formatted Instructions|book{2}}{42}
+\indexentry{Carry Flag|book{2}}{42}
+\indexentry{Zero Flag|book{2}}{42-43}
+\indexentry{Overflow Flag|book{2}}{42}
+\indexentry{Sign Flag|book{2}}{42}
+\indexentry{Instructions!Equivalents|book{2}}{41-42}
+\indexentry{CALL}{43}
+\indexentry{TEST}{43}
+\indexentry{FUN}{43}
+\indexentry{Comment|book{2}}{44}
+\indexentry{Command \& Control (C2)! |book{2}}{45-47}
+\indexentry{IRC|book{2}}{45}
+\indexentry{P2P|book{2}}{45}
+\indexentry{SMS|book{2}}{45}
+\indexentry{DNS Tunneling|book{2}}{45}
+\indexentry{Control Channels|book{2}}{45}
+\indexentry{Symbol Table}{46-47}
+\indexentry{Symbol References}{47}
+\indexentry{External Parameters}{48}
+\indexentry{Data Type Manager|book{2}}{48}
+\indexentry{GDT|book{2}}{48}
+\indexentry{Symbolic Constants}{49}
+\indexentry{Equate}{49}
+\indexentry{Header File|book{2}}{49}
+\indexentry{Verb|book{2}}{50}
+\indexentry{Debugging! }{50}
+\indexentry{Decision Point|book{2}}{51-55}
+\indexentry{TEST}{52}
+\indexentry{Graph View|book{2}}{53}
+\indexentry{Local Variables|book{2}}{54}
+\indexentry{Global Variables|book{2}}{54}
+\indexentry{Static Variables|book{2}}{54}
+\indexentry{Scope|book{2}}{54}
+\indexentry{Access Restrictions|book{2}}{54}
+\indexentry{CMP}{55}
+\indexentry{Function Call Tree|book{2}}{56}
+\indexentry{Command \& Control (C2)! }{56}
+\indexentry{Function Size|book{2}}{58}
+\indexentry{Code Analysis!Key Concepts|book{2}}{59}
+\indexentry{IOC! }{62}
+\indexentry{Terminated Unicode|book{2}}{63}
+\indexentry{Unicode String|book{2}}{63}
+\indexentry{Functions|book{2}}{65-79}
+\indexentry{Functions!Basic Components|book{2}}{65}
+\indexentry{Functions!Control Transfers|book{2}}{66}
+\indexentry{Prologue|book{2}}{67-69}
+\indexentry{Epilogue|book{2}}{67}
+\indexentry{POP|book{2}}{67}
+\indexentry{ESP}{67-68}
+\indexentry{MOV!Equivalent|book{2}}{67}
+\indexentry{Instructions!Equivalents}{67}
+\indexentry{NOP|book{2}}{67}
+\indexentry{Hot Patching|book{2}}{67}
+\indexentry{Long Jump|book{2}}{67}
+\indexentry{Stack|book{2}}{68-70}
+\indexentry{LIFO|book{2}}{68}
+\indexentry{EBP|book{2}}{68}
+\indexentry{Frame Pointer|book{2}}{68}
+\indexentry{Local Variables}{68}
+\indexentry{Parameter|book{2}}{68}
+\indexentry{SFP|book{2}}{68}
+\indexentry{Stack!Pointer}{68}
+\indexentry{Functions!Leave|book{2}}{69}
+\indexentry{Functions!Enter|book{2}}{69}
+\indexentry{LEAVE|book{2}}{69}
+\indexentry{ENTER|book{2}}{69}
+\indexentry{Optimization|book{2}}{69}
+\indexentry{Epilogue}{69}
+\indexentry{ESP}{70}
+\indexentry{EBP}{70}
+\indexentry{SFP}{70}
+\indexentry{Local Variables}{70}
+\indexentry{Parameter}{70}
+\indexentry{Argument|book{2}}{70}
+\indexentry{Argument!Location|book{2}}{70}
+\indexentry{Local Variables!Loading|book{2}}{70}
+\indexentry{Functions!Calling Conventions|book{2}}{72-75}
+\indexentry{Cdecl|book{2}}{72}
+\indexentry{Stdcall|book{2}}{72}
+\indexentry{Fastcall|book{2}}{73}
+\indexentry{Thiscall|book{2}}{73}
+\indexentry{Microsoft Compiler|book{2}}{73}
+\indexentry{GNU Compiler|book{2}}{73}
+\indexentry{Instructions!Equivalents}{74}
+\indexentry{Cdecl}{74}
+\indexentry{Stdcall}{74}
+\indexentry{Fastcall}{75}
+\indexentry{Thiscall}{75}
+\indexentry{Self|book{2}}{75}
+\indexentry{LEA|book{2}}{75}
+\indexentry{Argument}{76}
+\indexentry{MOV|book{2}}{76}
+\indexentry{MOV!Substraction|book{2}}{76}
+\indexentry{MOV!Optimization|book{2}}{76}
+\indexentry{PUSH}{76}
+\indexentry{PUSH!Substraction|book{2}}{76}
+\indexentry{Optimization}{76-78}
+\indexentry{ESP}{76}
+\indexentry{Functions!Control Transfers}{77}
+\indexentry{Inlining|book{2}}{77-78}
+\indexentry{Strlen|book{2}}{78}
+\indexentry{Functions!Examples|book{2}}{79-96}
+\indexentry{Reference!Example|book{2}}{80}
+\indexentry{Parameter!Example|book{2}}{81}
+\indexentry{Argument!Example|book{2}}{81}
+\indexentry{Local Variables!Example|book{2}}{82}
+\indexentry{Prologue!Example|book{2}}{83}
+\indexentry{ENTER}{83}
+\indexentry{Epilogue!Example|book{2}}{84}
+\indexentry{RET|book{2}}{84-85}
+\indexentry{RET!Equivalent|book{2}}{85}
+\indexentry{Instructions!Equivalents}{85}
+\indexentry{LEAVE}{84-85}
+\indexentry{Functions!Calling Conventions}{85}
+\indexentry{Cdecl}{85}
+\indexentry{Reference!Example}{88}
+\indexentry{Parameter!Example}{89}
+\indexentry{Argument!Example}{89}
+\indexentry{Local Variables!Example}{89}
+\indexentry{Prologue!Example}{90}
+\indexentry{Epilogue!Example}{91}
+\indexentry{Functions!Calling Conventions}{92}
+\indexentry{Cdecl}{92}
+\indexentry{LEA}{93}
+\indexentry{Local Variables!Example}{93}
+\indexentry{Data Structure|book{2}}{93-95}
+\indexentry{PROCESS\_INFORMATION|book{2}}{94}
+\indexentry{STARTUPINFOW|book{2}}{95}
+\indexentry{Functions}{96}
+\indexentry{If-Else|book{2}}{99-102}
+\indexentry{Branching!Primitive|book{2}}{99}
+\indexentry{Conditional Jump}{99}
+\indexentry{Defined Strings|book{2}}{103-104}
+\indexentry{Strings! }{103-104}
+\indexentry{Reference}{105}
+\indexentry{Loop|book{2}}{106-119}
+\indexentry{JB/JC|book{2}}{106}
+\indexentry{JB/JC!Equivalence|book{2}}{106}
+\indexentry{Wcsicmp|book{2}}{106}
+\indexentry{Instructions!Equivalents}{106}
+\indexentry{Function Graph}{107}
+\indexentry{Decision Point}{107}
+\indexentry{Loop!Usage|book{2}}{108}
+\indexentry{Conditional Jump}{109}
+\indexentry{LOOP(cc)|book{2}}{109}
+\indexentry{Loop!Components|book{2}}{110}
+\indexentry{Loop!Example|book{2}}{111}
+\indexentry{Strlen}{111}
+\indexentry{Loop!Types|book{2}}{112}
+\indexentry{For Loop|book{2}}{112-113}
+\indexentry{While Loop|book{2}}{112}
+\indexentry{Do While Loop|book{2}}{112}
+\indexentry{While Loop}{114}
+\indexentry{JGE|book{2}}{114}
+\indexentry{Loop!Example}{116-119}
+\indexentry{JB/JC}{116}
+\indexentry{Stopping Condition|book{2}}{116}
+\indexentry{Wcsicmp}{116}
+\indexentry{Control Variable|book{2}}{117-118}
+\indexentry{Decompilation}{120}
+\indexentry{Do While Loop!Example|book{2}}{120}
+\indexentry{Conditional Jump}{122}
+\indexentry{Compound Expression|book{2}}{123-126}
+\indexentry{JNL/JNG|book{2}}{124}
+\indexentry{Code Block|book{2}}{127}
+\indexentry{Compound Expression}{128}
+\indexentry{Decompilation}{129}
+\indexentry{Switch Statement|book{2}}{130-132}
+\indexentry{Optimization}{131}
+\indexentry{Compiler}{131}
+\indexentry{JMP}{132}
+\indexentry{REP \file|book{2}}{133}
+\indexentry{GPR \file|book{2}}{133}
+\indexentry{GAR \file|book{2}}{133}
+\indexentry{DLL! }{137-139}
+\indexentry{Rundll32.exe|book{2}}{137}
+\indexentry{Ordinal|book{2}}{138}
+\indexentry{Resource Section|book{2}}{140}
+\indexentry{Dropper|book{2}}{140}
+\indexentry{Outgoing Calls|book{2}}{141}
+\indexentry{Resource Extraction|book{2}}{142}
+\indexentry{Mutex! |book{2}}{143}
+\indexentry{Dropper}{144}
+\indexentry{BHO|book{2}}{147}
+\indexentry{Device Drivers|book{2}}{147}
+\indexentry{Rootkits|book{2}}{147}
+\indexentry{Internet Explorer|book{2}}{147}
+\indexentry{Malware 32/64-bits|book{2}}{147}
+\indexentry{Windows Vista/Server 2008|book{2}}{147}
+\indexentry{Digital Signature|book{2}}{147}
+\indexentry{Trusted Certificate|book{2}}{147}
+\indexentry{Kernel-Mode Malware|book{2}}{147}
+\indexentry{Syswow64|book{2}}{148}
+\indexentry{Software Hive|book{2}}{148}
+\indexentry{Registry Redirection|book{2}}{148}
+\indexentry{Assembly (64-bit)|book{2}}{149}
+\indexentry{Registers!General-Purpose}{149}
+\indexentry{Registers!Special-Use}{149}
+\indexentry{Functions!Calling Conventions}{149}
+\indexentry{Fastcall}{149}
+\indexentry{Addressing}{149}
+\indexentry{RIP! |book{2}}{149}
+\indexentry{Qword}{149}
+\indexentry{RIP-Relative Addressing|book{2}}{149}
+\indexentry{PIC|book{2}}{149}
+\indexentry{Loader}{149}
+\indexentry{Registers!64-bit|book{2}}{150-151}
+\indexentry{DLL! }{152}
+\indexentry{IDS|book{2}}{152}
+\indexentry{API References|book{2}}{153}
+\indexentry{Command Execution|book{2}}{153}
+\indexentry{Parameter!Information|book{2}}{154}
+\indexentry{Prologue}{154}
+\indexentry{Frame Pointer}{154}
+\indexentry{Wsprintf|book{2}}{154-157}
+\indexentry{Argument!64-bit|book{2}}{155}
+\indexentry{Argument!Location}{155}
+\indexentry{Local Variables!Loading}{155}
+\indexentry{SYSTEM|book{2}}{156}
+\indexentry{Parameter!64-bit|book{2}}{157}
+\indexentry{Schtasks (command)|book{2}}{157}
+\indexentry{PUSH}{157}
+\indexentry{Decompilation}{158}
+\indexentry{Assembly (64-bit)!Comparison 32-bit|book{2}}{159-160}
+\indexentry{Code Analysis!Comparison 32/64-bit|book{2}}{159-160}
+\indexentry{Key Differences 32/64-bit|book{2}}{160}
+\indexentry{Code Analysis! |book{2}}{161}
+\indexentry{Code Analysis!Start|book{2}}{161}
+\indexentry{Cross-References|book{2}}{161}
+\indexentry{Debugging! }{161}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{PDF|book{3}}{4-5}
+\indexentry{PDF!Keywords|book{3}}{4}
+\indexentry{Embedded Javascript|book{3}}{4}
+\indexentry{Embedded Links|book{3}}{4}
+\indexentry{Embedded Program|book{3}}{4}
+\indexentry{Launch (keyword)|book{3}}{4}
+\indexentry{ISO/IEC 32000|book{3}}{4}
+\indexentry{Arbitrary Code|book{3}}{4}
+\indexentry{Shellcode|book{3}}{4}
+\indexentry{Xref|book{3}}{5}
+\indexentry{Cross-Reference Table|book{3}}{5}
+\indexentry{PDF!Trailer|book{3}}{5}
+\indexentry{Root Object|book{3}}{5}
+\indexentry{PDF!Objects|book{3}}{6}
+\indexentry{Indirect Object|book{3}}{6}
+\indexentry{Stream|book{3}}{6}
+\indexentry{Object Number|book{3}}{6}
+\indexentry{Generation Number|book{3}}{6}
+\indexentry{Version Number|book{3}}{6}
+\indexentry{PDF!Objects!Unique Identifier|book{3}}{6}
+\indexentry{Automatic Action|book{3}}{6}
+\indexentry{Filter|book{3}}{6}
+\indexentry{Embedded Javascript}{7}
+\indexentry{Embedded Links}{7}
+\indexentry{Suspicious Keywords|book{3}}{8}
+\indexentry{Phishing|book{3}}{8-9}
+\indexentry{PDF!Triage|book{3}}{8-17}
+\indexentry{Detection Evasion|book{3}}{8}
+\indexentry{OpenAction (keyword)|book{3}}{8}
+\indexentry{URI (keyword)|book{3}}{8}
+\indexentry{XObject (keyword)|book{3}}{9}
+\indexentry{Embedded Image|book{3}}{9}
+\indexentry{URI (keyword)}{10-11}
+\indexentry{Detection Evasion}{11}
+\indexentry{Embedded Links}{11}
+\indexentry{IOC!  |book{3}}{11}
+\indexentry{XObject (keyword)}{12-15}
+\indexentry{Phishing}{12}
+\indexentry{Embedded Image}{12}
+\indexentry{DCTDecode|book{3}}{13}
+\indexentry{JPEG|book{3}}{13}
+\indexentry{PDF!Objects!Extraction|book{3}}{14}
+\indexentry{PDF!Objects!Dump|book{3}}{14}
+\indexentry{PDF!Objects!Reference|book{3}}{15-16}
+\indexentry{Annot (keyword)|book{3}}{16-17}
+\indexentry{Popup|book{3}}{16}
+\indexentry{Detection Evasion}{18}
+\indexentry{Exploit!Kit! |book{3}}{19}
+\indexentry{HTTP Headers Spoofing|book{3}}{19}
+\indexentry{SSL Keys|book{3}}{19}
+\indexentry{TLS Keys|book{3}}{19}
+\indexentry{Web Debugger|book{3}}{20}
+\indexentry{SAZ \file|book{3}}{20}
+\indexentry{Expect-CT|book{3}}{22}
+\indexentry{Cloudflare|book{3}}{22}
+\indexentry{Redirect|book{3}}{22-24}
+\indexentry{Location (header)|book{3}}{24}
+\indexentry{Content-Disposition (header)|book{3}}{24}
+\indexentry{HypeVPN|book{3}}{26}
+\indexentry{SEO|book{3}}{27}
+\indexentry{PDF!Lessons Learned|book{3}}{28}
+\indexentry{ObjStm (keyword)|book{3}}{29-34}
+\indexentry{Object Stream|book{3}}{29}
+\indexentry{PDF!Version 1.5|book{3}}{29}
+\indexentry{Detection Evasion}{31}
+\indexentry{Annot (keyword)}{33}
+\indexentry{PDF!Objects!Reference}{32-33}
+\indexentry{PDF!Analysis|book{3}}{35}
+\indexentry{PDF!Objects!Dump}{35}
+\indexentry{Javascript|book{3}}{35}
+\indexentry{PDF!Lessons Learned}{35}
+\indexentry{Macros|book{3}}{38-39}
+\indexentry{Detection Evasion}{38}
+\indexentry{Dropper! |book{3}}{38}
+\indexentry{ADS|book{3}}{39}
+\indexentry{MOTW|book{3}}{39}
+\indexentry{MITRE ATT\&CK! |book{3}}{39}
+\indexentry{Macros!Prevention|book{3}}{39}
+\indexentry{Macros!Major Change|book{3}}{39}
+\indexentry{Macros!Security Risk|book{3}}{39}
+\indexentry{NTFS|book{3}}{39}
+\indexentry{Zone.Identifier|book{3}}{39}
+\indexentry{Trusted Location|book{3}}{39}
+\indexentry{Digital Signature! |book{3}}{39}
+\indexentry{Trusted Publisher|book{3}}{39}
+\indexentry{ADMX|book{3}}{39}
+\indexentry{Cloud Policy|book{3}}{39}
+\indexentry{Group Policy|book{3}}{39}
+\indexentry{Trusted Document|book{3}}{39}
+\indexentry{ISO \file|book{3}}{39}
+\indexentry{MS Office Documents! Formats|book{3}}{40}
+\indexentry{OLE2|book{3}}{40}
+\indexentry{Structured Storage|book{3}}{40}
+\indexentry{SS|book{3}}{40}
+\indexentry{CFBF|book{3}}{40}
+\indexentry{CDFV2|book{3}}{40}
+\indexentry{Storage|book{3}}{40}
+\indexentry{File System|book{3}}{40}
+\indexentry{Stream}{40}
+\indexentry{OOXML|book{3}}{40}
+\indexentry{P-code|book{3}}{40}
+\indexentry{ZIP \file|book{3}}{40}
+\indexentry{MS Office Documents|book{3}}{42}
+\indexentry{Enable Content|book{3}}{42-43}
+\indexentry{Macros!Extraction|book{3}}{45}
+\indexentry{MS Office Documents!Analysis|book{3}}{45}
+\indexentry{Risky Capabilities! |book{3}}{45}
+\indexentry{Downloader! |book{3}}{45}
+\indexentry{AutoOpen|book{3}}{45-46}
+\indexentry{Workbook\_Open|book{3}}{46}
+\indexentry{Microsoft Word|book{3}}{46}
+\indexentry{Microsoft Excel|book{3}}{46}
+\indexentry{Obfuscation|book{3}}{46}
+\indexentry{Detection Evasion}{46}
+\indexentry{Stream}{47}
+\indexentry{Stream!Bytes|book{3}}{47}
+\indexentry{P-code}{47}
+\indexentry{OLE2}{47}
+\indexentry{OOXML}{47}
+\indexentry{Macros!Extraction}{49}
+\indexentry{Regsrv32 \win|book{3}}{53}
+\indexentry{LOLBIN|book{3}}{53}
+\indexentry{LOLBAS|book{3}}{53}
+\indexentry{OLE Control|book{3}}{53}
+\indexentry{ActiveX Control|book{3}}{53}
+\indexentry{Windows Registry|book{3}}{53}
+\indexentry{Macros!Cached Version|book{3}}{54}
+\indexentry{SRP Streams|book{3}}{54}
+\indexentry{Metadata! |book{3}}{54-55}
+\indexentry{XML Source Code|book{3}}{54}
+\indexentry{OOXML!Examination (Without Decompressing)|book{3}}{55}
+\indexentry{Settings.xml|book{3}}{55}
+\indexentry{Language Code|book{3}}{55}
+\indexentry{ThemeFontLang|book{3}}{55}
+\indexentry{ISO 639-1|book{3}}{55}
+\indexentry{Macros!Emulation|book{3}}{56}
+\indexentry{Deobfuscation! |book{3}}{56-57}
+\indexentry{Valak|book{3}}{56}
+\indexentry{Debugging!  |book{3}}{57}
+\indexentry{Macros!Debugging|book{3}}{57}
+\indexentry{Breakpoint! |book{3}}{57}
+\indexentry{AutoOpen}{59}
+\indexentry{Workbook\_Open}{59}
+\indexentry{PowerShell|book{3}}{60-63}
+\indexentry{Reverse Shell|book{3}}{61}
+\indexentry{Backdoor! |book{3}}{61}
+\indexentry{Listener|book{3}}{61}
+\indexentry{RFC 1918|book{3}}{61}
+\indexentry{Lateral Movement|book{3}}{61}
+\indexentry{Behavioral Analysis! |book{3}}{63}
+\indexentry{Macros!Lessons Learned|book{3}}{64}
+\indexentry{CDFV2}{65}
+\indexentry{AutoOpen}{67}
+\indexentry{PowerShell}{67-73}
+\indexentry{NoProfile|book{3}}{67}
+\indexentry{WindowStyle|book{3}}{67}
+\indexentry{UTF-16! |book{3}}{67}
+\indexentry{Base64|book{3}}{67-72}
+\indexentry{UTF-16! }{69-70}
+\indexentry{Gzip|book{3}}{70}
+\indexentry{Invoke-Expression \powershell|book{3}}{70}
+\indexentry{Deobfuscation! }{70-72}
+\indexentry{XOR! |book{3}}{72}
+\indexentry{Shellcode}{73-75}
+\indexentry{Marshal|book{3}}{73}
+\indexentry{Machine Code|book{3}}{74}
+\indexentry{XOR! }{74}
+\indexentry{Emulation! |book{3}}{74-75}
+\indexentry{Disassembly!  |book{3}}{74}
+\indexentry{Debugging!  }{74}
+\indexentry{User-Agent! |book{3}}{75}
+\indexentry{Yara! |book{3}}{76}
+\indexentry{Known Patterns|book{3}}{76}
+\indexentry{Signatures|book{3}}{76}
+\indexentry{Cobalt Strike|book{3}}{76}
+\indexentry{Backdoor! }{76}
+\indexentry{License ID|book{3}}{76}
+\indexentry{Post-Infection|book{3}}{76-77}
+\indexentry{Macros!Infection Scenario|book{3}}{77}
+\indexentry{Macros!Lessons Learned|book{3}}{78}
+\indexentry{Macros!Support|book{3}}{78}
+\indexentry{RTF|book{3}}{81-82}
+\indexentry{RTF!Threat|book{3}}{81}
+\indexentry{OLE1|book{3}}{81}
+\indexentry{Package Object Server|book{3}}{81}
+\indexentry{Container|book{3}}{81}
+\indexentry{Payload|book{3}}{81}
+\indexentry{Shellcode}{81}
+\indexentry{Embedded Objects|book{3}}{81-85}
+\indexentry{Microsoft Word}{81-82}
+\indexentry{Control Words|book{3}}{82}
+\indexentry{Group|book{3}}{82}
+\indexentry{Serialization|book{3}}{82}
+\indexentry{Binary Content|book{3}}{82}
+\indexentry{Magic Number|book{3}}{83}
+\indexentry{Leetspeak|book{3}}{83}
+\indexentry{OLE2}{83-84}
+\indexentry{Equation Editor|book{3}}{85}
+\indexentry{Vulnerability|book{3}}{86}
+\indexentry{Exploit|book{3}}{86}
+\indexentry{Payload}{86}
+\indexentry{Shellcode}{86}
+\indexentry{Equation Editor}{87-88}
+\indexentry{LOLBIN}{87}
+\indexentry{MSI|book{3}}{87}
+\indexentry{Shellcode}{88}
+\indexentry{Remainder|book{3}}{88-89}
+\indexentry{Overlay|book{3}}{89}
+\indexentry{Binary Content}{90}
+\indexentry{Shellcode}{91-97}
+\indexentry{Shellcode!Presence|book{3}}{91}
+\indexentry{NOP!Sled|book{3}}{91}
+\indexentry{Kernel32.dll|book{3}}{92}
+\indexentry{GetEIP (pattern)|book{3}}{92-95}
+\indexentry{False Positive|book{3}}{92}
+\indexentry{EIP! |book{3}}{93}
+\indexentry{Assembly|book{3}}{93}
+\indexentry{CALL! |book{3}}{93}
+\indexentry{POP! |book{3}}{93}
+\indexentry{Detection Evasion}{93-94}
+\indexentry{Signatures}{93-94}
+\indexentry{Shellcode!Preliminary|book{3}}{93-94}
+\indexentry{Shellcode!API Calls|book{3}}{94}
+\indexentry{DLL!Loading (shellcode)|book{3}}{94}
+\indexentry{PEB|book{3}}{94}
+\indexentry{TIB|book{3}}{94}
+\indexentry{FS (segment register)|book{3}}{94}
+\indexentry{ASLR! |book{3}}{94}
+\indexentry{Kernel32.dll}{94}
+\indexentry{Open File Handle Scanning|book{3}}{95}
+\indexentry{Emulation! }{95}
+\indexentry{Overlay}{96}
+\indexentry{Shellcode!Emulation|book{3}}{96}
+\indexentry{Shellcode!Execution|book{3}}{97}
+\indexentry{RAR|book{3}}{98-99}
+\indexentry{RTF!Lessons Learned|book{3}}{100}
+\indexentry{Social Engineering|book{3}}{100}
+\indexentry{Malicious Scripts|book{3}}{103}
+\indexentry{Browser Attacks|book{3}}{103}
+\indexentry{Javascript|book{3}}{103}
+\indexentry{Exploit}{103}
+\indexentry{Redirect}{103}
+\indexentry{Downloader! }{103}
+\indexentry{Dropper! }{103}
+\indexentry{Javascript!Deobfuscation|book{3}}{104-111}
+\indexentry{Javascript!Beautify|book{3}}{104}
+\indexentry{Recipe! |book{3}}{104}
+\indexentry{Eval|book{3}}{105-107}
+\indexentry{Browser Script|book{3}}{106}
+\indexentry{HTML Components|book{3}}{106}
+\indexentry{Javascript!Interpreters|book{3}}{106}
+\indexentry{ActiveX Object|book{3}}{106}
+\indexentry{Javascript!Object Definitions|book{3}}{107}
+\indexentry{Document.write|book{3}}{107}
+\indexentry{ShellExecute \powershell|book{3}}{108}
+\indexentry{Wscript.Shell|book{3}}{108}
+\indexentry{Net.WebClient|book{3}}{108}
+\indexentry{PowerShell}{108-111}
+\indexentry{AMSI Monitoring \win|book{3}}{109}
+\indexentry{ETL \file|book{3}}{109}
+\indexentry{ActiveX Object}{110}
+\indexentry{Wscript.Echo|book{3}}{112-113}
+\indexentry{Eval}{112-113}
+\indexentry{Location.href|book{3}}{115-116}
+\indexentry{Obfuscation!Layers|book{3}}{117}
+\indexentry{Browser Script}{118}
+\indexentry{Arguments.callee \script|book{3}}{118}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Packing!  |book{4}}{5}
+\indexentry{Unpacking|book{4}}{5-6}
+\indexentry{Intellectual Property|book{4}}{5}
+\indexentry{Packing!Manipulations|book{4}}{7}
+\indexentry{Sections!  |book{4}}{7}
+\indexentry{Entry Point! |book{4}}{7}
+\indexentry{IAT! |book{4}}{7}
+\indexentry{API Calls!  |book{4}}{7}
+\indexentry{PE Header|book{4}}{7}
+\indexentry{AddressOfEntryPoint|book{4}}{7}
+\indexentry{Packing!Options|book{4}}{8}
+\indexentry{UPX|book{4}}{8}
+\indexentry{Scrambling|book{4}}{8}
+\indexentry{Armadillo|book{4}}{8}
+\indexentry{FSG|book{4}}{8}
+\indexentry{Themida|book{4}}{8}
+\indexentry{Packing!Symptoms|book{4}}{9}
+\indexentry{Entropy|book{4}}{9-10}
+\indexentry{Signatures! |book{4}}{9}
+\indexentry{Readable Strings|book{4}}{10}
+\indexentry{Raw Size|book{4}}{10}
+\indexentry{Virtual Size|book{4}}{10}
+\indexentry{Byte-Usage Histogram|book{4}}{11}
+\indexentry{Packing!Byte Values|book{4}}{11}
+\indexentry{UPX}{12}
+\indexentry{Tampared File|book{4}}{12}
+\indexentry{Packing!Verification|book{4}}{13}
+\indexentry{Code Analysis!Prior Step|book{4}}{13}
+\indexentry{UPX!Unpacking|book{4}}{14}
+\indexentry{Unpacking!Manually|book{4}}{17}
+\indexentry{ASLR!Disable|book{4}}{18-20}
+\indexentry{ImageBase|book{4}}{18}
+\indexentry{Predictable Memory Locations|book{4}}{18}
+\indexentry{Relocation|book{4}}{18}
+\indexentry{DllCharacteristics|book{4}}{19}
+\indexentry{DynamicBase|book{4}}{19-20}
+\indexentry{Optional Header|book{4}}{19-20}
+\indexentry{Rebasing|book{4}}{19}
+\indexentry{Packing!Bypass|book{4}}{21}
+\indexentry{Unpacking!Dump|book{4}}{22}
+\indexentry{Dumping|book{4}}{22-26}
+\indexentry{OEP|book{4}}{22}
+\indexentry{PE Header}{22}
+\indexentry{Entry Point! }{22}
+\indexentry{IAT! }{22}
+\indexentry{DynamicBase}{23}
+\indexentry{IAT!AutoSearch|book{4}}{24}
+\indexentry{IAT!Fix|book{4}}{24}
+\indexentry{Get Imports|book{4}}{24}
+\indexentry{Fix Dump|book{4}}{24}
+\indexentry{Entry Point! }{24-26}
+\indexentry{PE Header}{26}
+\indexentry{Static Analysis! |book{4}}{26}
+\indexentry{Dumping!Issues|book{4}}{26}
+\indexentry{Debugging!   |book{4}}{29}
+\indexentry{Unpacking!Debugging|book{4}}{29}
+\indexentry{PE Header}{29}
+\indexentry{IAT! }{29}
+\indexentry{Entry Point! }{29}
+\indexentry{Unpacking!Code Location|book{4}}{31}
+\indexentry{Unpacking!Breakpoint|book{4}}{31}
+\indexentry{UPX!Unpacking!End|book{4}}{31}
+\indexentry{JMP|book{4}}{31-33}
+\indexentry{CALL!Step Into/Over|book{4}}{33}
+\indexentry{Referenced Strings|book{4}}{34}
+\indexentry{Strings!References|book{4}}{34}
+\indexentry{Intermodular Calls|book{4}}{34}
+\indexentry{OEP}{36-37}
+\indexentry{OEP!RIP (64-bit)|book{4}}{37}
+\indexentry{OEP!EIP (32-bit)|book{4}}{37}
+\indexentry{Get RIP as OEP|book{4}}{37}
+\indexentry{Get EIP as OEP|book{4}}{37}
+\indexentry{RIP!OEP|book{4}}{37}
+\indexentry{EIP!OEP|book{4}}{37}
+\indexentry{ImageBase}{37}
+\indexentry{Memory Access Violation|book{4}}{38}
+\indexentry{MEM\_WRITE|book{4}}{38}
+\indexentry{Dumping}{39-42}
+\indexentry{IAT!Fix}{40-41}
+\indexentry{IAT!AutoSearch}{41}
+\indexentry{Get Imports}{41}
+\indexentry{Fix Dump}{41}
+\indexentry{Dumping!Lessons Learned|book{4}}{42}
+\indexentry{UPX!Unpacking}{42}
+\indexentry{Dumping!Debugging Without|book{4}}{45-46}
+\indexentry{Debugging!Without Dumping Packed Code|book{4}}{45-46}
+\indexentry{SetBPX! |book{4}}{46}
+\indexentry{API Calls!  }{46}
+\indexentry{Behavioral Analysis!  |book{4}}{46}
+\indexentry{Memory Map|book{4}}{46}
+\indexentry{Cleardb (x64dbg)|book{4}}{47}
+\indexentry{Memory Map}{48}
+\indexentry{Execute Flag|book{4}}{48}
+\indexentry{Unpacking!Code Location}{48}
+\indexentry{Follow In Disassembler|book{4}}{49}
+\indexentry{Intermodular Calls}{50}
+\indexentry{API Calls!  }{50-51}
+\indexentry{Referenced Strings}{50}
+\indexentry{Strings!References}{50}
+\indexentry{Follow In Disassembler}{51}
+\indexentry{Breakpoint!Hardware|book{4}}{52}
+\indexentry{Breakpoint!Software|book{4}}{52}
+\indexentry{Run Until Selection|book{4}}{52}
+\indexentry{Dumping!Debugging Without}{54}
+\indexentry{Debugging!Without Dumping Packed Code}{54}
+\indexentry{Scripting|book{4}}{57}
+\indexentry{Windows Internals|book{4}}{57}
+\indexentry{Behavioral Analysis!Initial|book{4}}{57}
+\indexentry{Explorer.exe|book{4}}{59}
+\indexentry{Detection Evasion! |book{4}}{59}
+\indexentry{Code Injection|book{4}}{59}
+\indexentry{HTML Applications \win|book{4}}{60}
+\indexentry{HTA|book{4}}{60}
+\indexentry{WMI|book{4}}{60}
+\indexentry{HKCU Software!Classes|book{4}}{64}
+\indexentry{BAT \file|book{4}}{65}
+\indexentry{Start (command)|book{4}}{65}
+\indexentry{HKCU Software Classes}{66-67}
+\indexentry{HTML Applications \win}{68}
+\indexentry{HTA}{68}
+\indexentry{Eval! |book{4}}{68}
+\indexentry{Wscript.Shell! |book{4}}{68}
+\indexentry{HKCU Software|book{4}}{68-69}
+\indexentry{Registry Content Extraction|book{4}}{69}
+\indexentry{Javascript!Deobfuscation! |book{4}}{69-72}
+\indexentry{SSH Daemon|book{4}}{70}
+\indexentry{Unicode String|book{4}}{71}
+\indexentry{UTF-16!  |book{4}}{71}
+\indexentry{Invoke-Expression \powershell! |book{4}}{72}
+\indexentry{Base64! |book{4}}{72-73}
+\indexentry{Shellcode! |book{4}}{75}
+\indexentry{VirtualAlloc|book{4}}{75}
+\indexentry{VirtualAlloc!Argument 0x40|book{4}}{75}
+\indexentry{PAGE\_EXECUTE\_READWRITE|book{4}}{75}
+\indexentry{Marshal! |book{4}}{75}
+\indexentry{PowerShell!ISE|book{4}}{76-79}
+\indexentry{PowerShell!Debugging|book{4}}{76}
+\indexentry{Breakpoint!  |book{4}}{78}
+\indexentry{WriteAllBytes \powershell|book{4}}{79}
+\indexentry{Shellcode!Emulation! |book{4}}{80}
+\indexentry{Emulation!  |book{4}}{80}
+\indexentry{Shellcode! }{80-81}
+\indexentry{GetEIP (pattern)! |book{4}}{81}
+\indexentry{Debug Shell|book{4}}{81}
+\indexentry{Shellcode!Address|book{4}}{82}
+\indexentry{Shellcode!Attach|book{4}}{83}
+\indexentry{SetBPX! }{84}
+\indexentry{Breakpoint!  }{84}
+\indexentry{Shellcode!Address}{84}
+\indexentry{Suspended State|book{4}}{84}
+\indexentry{ResumeAllThreads|book{4}}{85}
+\indexentry{Shellcode!Debugging|book{4}}{86}
+\indexentry{GetEIP (pattern)! }{86}
+\indexentry{Shellcode!Dynamic Code Analysis|book{4}}{87}
+\indexentry{Dynamic Code Analysis!Shellcode|book{4}}{87}
+\indexentry{SetBPX! }{87}
+\indexentry{SetBPX!DLL Name|book{4}}{87}
+\indexentry{Call Stack! |book{4}}{89}
+\indexentry{Run to User Code! |book{4}}{89}
+\indexentry{Run Until Selection}{90}
+\indexentry{VirtualAlloc}{92}
+\indexentry{Unpacking!Memory Allocation|book{4}}{92}
+\indexentry{SetBPX! }{93}
+\indexentry{Memory Region Extract|book{4}}{93-101}
+\indexentry{Execute Until Return|book{4}}{94}
+\indexentry{Follow In Dump|book{4}}{95}
+\indexentry{EAX|book{4}}{95}
+\indexentry{VirtualAlloc!EAX|book{4}}{95}
+\indexentry{Shellcode!Debugging!Extraction|book{4}}{96-101}
+\indexentry{Dumping}{96-101}
+\indexentry{Execute Until Return}{98}
+\indexentry{Follow In Dump}{99}
+\indexentry{Follow In Memory Map|book{4}}{101}
+\indexentry{Dump Memory To File|book{4}}{101}
+\indexentry{API Calls!Risky|book{4}}{102}
+\indexentry{Malware Analysis!Experimentation|book{4}}{104}
+\indexentry{Fileless Software|book{4}}{104}
+\indexentry{Registry Key!Obfuscated Software|book{4}}{104}
+\indexentry{Persistence!Fileless|book{4}}{104}
+\indexentry{NET Framework@.NET Framework|book{4}}{107}
+\indexentry{Compiler!JIT|book{4}}{107}
+\indexentry{CIL|book{4}}{107}
+\indexentry{CLR|book{4}}{107}
+\indexentry{Assemblies|book{4}}{107}
+\indexentry{Intermediate Bytecode|book{4}}{107}
+\indexentry{Native Code|book{4}}{107}
+\indexentry{Runtime Environment|book{4}}{107}
+\indexentry{Deobfuscation!  |book{4}}{108}
+\indexentry{Memory Region Extract}{108}
+\indexentry{Decompilation! |book{4}}{108}
+\indexentry{Debugging!   }{108}
+\indexentry{Execution Monitoring! |book{4}}{108}
+\indexentry{Obfuscated Decompiled Code|book{4}}{111-112}
+\indexentry{Debugging!   }{113}
+\indexentry{Single Stepping|book{4}}{113}
+\indexentry{Breakpoint!  }{113}
+\indexentry{Reflective Code Loading|book{4}}{114-116}
+\indexentry{Code Injection}{114}
+\indexentry{Detection Evasion! }{115}
+\indexentry{Invoke \dotnet|book{4}}{115}
+\indexentry{DynamicInvoke \dotnet|book{4}}{115}
+\indexentry{InvokeMember \dotnet|book{4}}{115-116}
+\indexentry{Assembly.Load \dotnet|book{4}}{115-119}
+\indexentry{PowerShell!Net@.NET|book{4}}{115}
+\indexentry{NET Framework@.NET Framework!PowerShell|book{4}}{115}
+\indexentry{GetTypes \dotnet|book{4}}{116}
+\indexentry{Assembly Explorer|book{4}}{117}
+\indexentry{OriginalFilename|book{4}}{117}
+\indexentry{Assemblies}{120-121}
+\indexentry{Assembly Explorer}{121-122}
+\indexentry{InMemory (property)|book{4}}{121}
+\indexentry{Assembly.Load \dotnet}{123-124}
+\indexentry{Dumping}{125-126}
+\indexentry{Debugging!   }{125}
+\indexentry{NET Framework@.NET Framework!Debugging|book{4}}{125}
+\indexentry{Memory Region Extract}{126}
+\indexentry{ReZer0v4|book{4}}{130}
+\indexentry{Memory Region Extract}{131}
+\indexentry{NET Framework@.NET Framework!Lessons Learned|book{4}}{132}
+\indexentry{Code Injection}{135-136}
+\indexentry{Detection Evasion! }{135}
+\indexentry{Spyware|book{4}}{135}
+\indexentry{Rootkits! |book{4}}{135}
+\indexentry{Rootkits!User-Mode|book{4}}{135}
+\indexentry{Rootkits!Kernel-Mode|book{4}}{135}
+\indexentry{API Calls!  }{136}
+\indexentry{Native APIs|book{4}}{137}
+\indexentry{Nt-Prefixed APIs|book{4}}{137}
+\indexentry{Zw-Prefixed APIs|book{4}}{137}
+\indexentry{Rtl-Prefixed APIs|book{4}}{137}
+\indexentry{Code Injection!Static Code Analysis|book{4}}{138}
+\indexentry{Static Code Analysis!Code Injection|book{4}}{138}
+\indexentry{Code Injection!Example|book{4}}{142-143}
+\indexentry{Code Injection!Memory Allocation|book{4}}{145-147}
+\indexentry{PAGE\_EXECUTE\_READWRITE}{147}
+\indexentry{Equate! |book{4}}{147}
+\indexentry{Code Injection!Target Processes|book{4}}{148-149}
+\indexentry{Function Call Graph|book{4}}{148-149}
+\indexentry{Code Injection!Steps|book{4}}{150}
+\indexentry{Code Injection!API Calls|book{4}}{150-151}
+\indexentry{API Calls!Risky!Code Injection|book{4}}{150-151}
+\indexentry{DLL!Malicious|book{4}}{151}
+\indexentry{Malicious DLL|book{4}}{151}
+\indexentry{Kernel32.dll! |book{4}}{151}
+\indexentry{Code Injection!DLL|book{4}}{151}
+\indexentry{DLL!Injection|book{4}}{151}
+\indexentry{Code Injection!Lessons Learned|book{4}}{152}
+
+
+\comment{********************************************************************************************
+                                      FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Anti-Debugging|book{5}}{4}
+\indexentry{Debugging!Detection|book{5}}{5}
+\indexentry{DynamicBase! |book{5}}{5}
+\indexentry{Intermodular Calls! |book{5}}{5}
+\indexentry{Follow In Disassembler! |book{5}}{6}
+\indexentry{Anti-Debugging!Technique! |book{5}}{6}
+\indexentry{Anti-Debugging!Defenses|book{5}}{9}
+\indexentry{Patching|book{5}}{9-11}
+\indexentry{NOP! |book{5}}{9-11}
+\indexentry{Registers!Edit|book{5}}{9}
+\indexentry{Fill With NOP's|book{5}}{10}
+\indexentry{Debugging!Detection}{12-14}
+\indexentry{BeingDebugged|book{5}}{12}
+\indexentry{Anti-Debugging!Technique! }{12-14}
+\indexentry{PEB! |book{5}}{12-13}
+\indexentry{FS (segment register)! |book{5}}{12}
+\indexentry{NtGlobalFlag|book{5}}{13}
+\indexentry{DS (segment register)|book{5}}{13}
+\indexentry{FLG\_HEAP\_*|book{5}}{13}
+\indexentry{Timing Execution|book{5}}{14}
+\indexentry{RDTSC|book{5}}{14}
+\indexentry{Cloaking Capabilities|book{5}}{15}
+\indexentry{Counter-Defenses|book{5}}{15}
+\indexentry{Debugging!Concealment|book{5}}{15}
+\indexentry{Anti-Debugging!Defenses}{15}
+\indexentry{XOR!  |book{5}}{16-19}
+\indexentry{Affiliate ID! |book{5}}{17}
+\indexentry{URL Pattern|book{5}}{19}
+\indexentry{Balbuzard Toolkit|book{5}}{19}
+\indexentry{Decoding Patterns|book{5}}{19}
+\indexentry{ROL/ROR! |book{5}}{19}
+\indexentry{Stack!Strings|book{5}}{20-25}
+\indexentry{Malicious Pattern|book{5}}{21}
+\indexentry{Key Binding|book{5}}{22-23}
+\indexentry{Tight Strings|book{5}}{25}
+\indexentry{API Calls!Risky! |book{5}}{26-27}
+\indexentry{Code Injection!API Calls! |book{5}}{27}
+\indexentry{API Calls!Risky!Code Injection@ |book{5}}{27}
+\indexentry{Exceptions|book{5}}{29}
+\indexentry{Do Not Break|book{5}}{29}
+\indexentry{Follow In Dump! |book{5}}{31}
+\indexentry{Call Stack!  |book{5}}{32}
+\indexentry{Single Stepping! |book{5}}{34-35}
+\indexentry{Memory Region Extract! |book{5}}{36}
+\indexentry{Dumping! |book{5}}{36}
+\indexentry{Follow In Memory Map! |book{5}}{36}
+\indexentry{Dump Memory To File! |book{5}}{36}
+\indexentry{Debugging!Detection}{37}
+\indexentry{Malicious Pattern}{39}
+\indexentry{ProcessInformationClass|book{5}}{40}
+\indexentry{Anti-Debugging!Lessons Learned|book{5}}{41}
+\indexentry{Malware Self-Defense Techniques|book{5}}{41}
+\indexentry{Satana (ransomware)|book{5}}{41}
+\indexentry{Malicious Pattern}{49-50}
+\indexentry{CREATE\_SUSPENDED|book{5}}{49}
+\indexentry{PAGE\_EXECUTE\_READWRITE! |book{5}}{50}
+\indexentry{Code Injection!Pattern|book{5}}{50}
+\indexentry{HModule@hModule|book{5}}{51}
+\indexentry{LpProcName@lpProcName|book{5}}{51}
+\indexentry{Code Injection!Pattern}{52}
+\indexentry{Malicious Pattern}{52}
+\indexentry{Process Hollowing|book{5}}{52-53}
+\indexentry{Process Replacement|book{5}}{52}
+\indexentry{RunPE|book{5}}{52}
+\indexentry{Follow In Dump! }{55}
+\indexentry{Follow In Memory Map! }{56}
+\indexentry{Dump Memory To File! }{57}
+\indexentry{Memory Region Extract! }{57}
+\indexentry{Process Hollowing}{59}
+\indexentry{Malicious Pattern}{59}
+\indexentry{Code Injection!Combined With Packing|book{5}}{59}
+\indexentry{Packing!Combined With Code Injection|book{5}}{59}
+\indexentry{API Calls!Risky!Process Hollowing|book{5}}{59}
+\indexentry{Process Hollowing!API Calls|book{5}}{59}
+\indexentry{IAT!  |book{5}}{59}
+\indexentry{Toolkit Detection|book{5}}{62}
+\indexentry{Analysis Lab|book{5}}{62}
+\indexentry{Virtualization!Software|book{5}}{62}
+\indexentry{Automated Analysis Sandbox|book{5}}{62}
+\indexentry{Missing Applications|book{5}}{62}
+\indexentry{Hardware Components|book{5}}{62}
+\indexentry{VMWare!Tools! |book{5}}{62-63}
+\indexentry{Malware Analysis!Lab!Detection|book{5}}{62}
+\indexentry{Internal IP Addressing Scheme|book{5}}{62}
+\indexentry{Virtualization!Artifacts|book{5}}{62-63}
+\indexentry{Default Hardware|book{5}}{63}
+\indexentry{Default Configuration|book{5}}{63}
+\indexentry{MAC Address|book{5}}{63}
+\indexentry{VMWare!OUI|book{5}}{63}
+\indexentry{VirtualBox Guest Additions|book{5}}{63}
+\indexentry{Video Controller|book{5}}{63}
+\indexentry{Unique Identifier|book{5}}{63}
+\indexentry{Virtualization!Detection|book{5}}{63-64}
+\indexentry{QEMU|book{5}}{64}
+\indexentry{Wine|book{5}}{64}
+\indexentry{WMI! |book{5}}{64}
+\indexentry{SCISI Disk Identifier|book{5}}{64}
+\indexentry{Clipboard|book{5}}{65}
+\indexentry{Mouse Cursor|book{5}}{65}
+\indexentry{CPU Core|book{5}}{65}
+\indexentry{Patching}{65}
+\indexentry{Dyre|book{5}}{65}
+\indexentry{Timba|book{5}}{65}
+\indexentry{Upatre|book{5}}{65}
+\indexentry{User-Interaction Events|book{5}}{66}
+\indexentry{Hook|book{5}}{69}
+\indexentry{WH\_MOUSE\_LL|book{5}}{69}
+\indexentry{WM\_MOUSEMOVE|book{5}}{70-71}
+\indexentry{Hook!Information|book{5}}{70}
+\indexentry{WM\_LBUTTON*|book{5}}{71}
+\indexentry{Mouse Hooking|book{5}}{71}
+\indexentry{GUI Interactions|book{5}}{72}
+\indexentry{Automated Analysis Sandbox}{72}
+\indexentry{DynamicBase! }{73}
+\indexentry{Input Event Blocking|book{5}}{73}
+\indexentry{Mouse Event Blocking|book{5}}{73}
+\indexentry{Keyboard Event Blocking|book{5}}{73}
+\indexentry{Security Tools Presence|book{5}}{77-81}
+\indexentry{Code Injection!Security Tools|book{5}}{77}
+\indexentry{AVG Security Software|book{5}}{77}
+\indexentry{Avghookx.dll|book{5}}{77}
+\indexentry{OllyDbg|book{5}}{78}
+\indexentry{WinDbgFrameClass|book{5}}{79}
+\indexentry{Immunity Debugger|book{5}}{79}
+\indexentry{Zeta Debugger|book{5}}{79}
+\indexentry{Rock Debugger|book{5}}{79}
+\indexentry{ObsidianGUI|book{5}}{79}
+\indexentry{Kernel-Mode Debugger|book{5}}{79}
+\indexentry{KdDebuggerEnabled|book{5}}{79}
+\indexentry{KUSER\_SHARED\_DATA|book{5}}{79}
+\indexentry{Vmcheck.dll|book{5}}{81}
+\indexentry{Security Tools Presence}{83}
+\indexentry{Disk Drive Identifier|book{5}}{88}
+\indexentry{HARDWARE\_DEVICEMAP|book{5}}{88}
+\indexentry{EAX!Set To Zero|book{5}}{90}
+\indexentry{Patching}{90}
+\indexentry{Toolkit Detection!Lessons Learned|book{5}}{92}
+\indexentry{Detection Evasion!  |book{5}}{92}
+\indexentry{Hardware Characteristics|book{5}}{92}
+\indexentry{System Anomalies|book{5}}{92}
+\indexentry{Process Attributes|book{5}}{92}
+\indexentry{SEH|book{5}}{98}
+\indexentry{Compiler!SEH|book{5}}{98}
+\indexentry{SEH!Structure|book{5}}{98}
+\indexentry{SEH!Table-Based|book{5}}{98}
+\indexentry{Try-except|book{5}}{98}
+\indexentry{Vectored Exception Handling|book{5}}{98}
+\indexentry{PE Header! |book{5}}{98}
+\indexentry{SEH!32/64-bit|book{5}}{98}
+\indexentry{SEH!Chain|book{5}}{99}
+\indexentry{SEH!Frame-Based|book{5}}{99-100}
+\indexentry{SEH!First Record|book{5}}{99}
+\indexentry{EXCEPTION\_REGISTRATION|book{5}}{99}
+\indexentry{FS (segment register)! }{99}
+\indexentry{FS:[0]|book{5}}{99}
+\indexentry{GS (segment register)|book{5}}{99}
+\indexentry{Linked List|book{5}}{99}
+\indexentry{TIB! |book{5}}{99}
+\indexentry{SEH!Handler|book{5}}{101}
+\indexentry{Misdirection Technique|book{5}}{101}
+\indexentry{Jump Concealed|book{5}}{101}
+\indexentry{MOV DWORD PTR|book{5}}{101}
+\indexentry{SEH!Handler}{103}
+\indexentry{OEP! |book{5}}{105-111}
+\indexentry{Breakpoint!Hardware! |book{5}}{105}
+\indexentry{Trial and Error|book{5}}{105}
+\indexentry{Stack!Breakpoint|book{5}}{106-107}
+\indexentry{Hardware-Based Access Dword Breakpoint|book{5}}{106}
+\indexentry{Trial and Error}{107}
+\indexentry{Unpacking!Check|book{5}}{108}
+\indexentry{Get EIP as OEP! |book{5}}{111}
+\indexentry{Dumping! }{111-112}
+\indexentry{IAT!AutoSearch! |book{5}}{112}
+\indexentry{IAT!Fix! |book{5}}{112}
+\indexentry{Misdirection Technique!Lessons Learned|book{5}}{114}
+\indexentry{Stack!Breakpoint}{114}
+\indexentry{Entry Point!Executing Code Before|book{5}}{115}
+\indexentry{TLS Callback Functions|book{5}}{115-125}
+\indexentry{Code Analysis!True Beginning|book{5}}{115}
+\indexentry{TLS Callback Functions!Static Analysis|book{5}}{117}
+\indexentry{CALL!Tricky Jump|book{5}}{118}
+\indexentry{CALL!Suspicious|book{5}}{118}
+\indexentry{Tricky Jump|book{5}}{118}
+\indexentry{Disassembly!Obfuscated Code|book{5}}{118}
+\indexentry{Entry Breakpoint|book{5}}{120}
+\indexentry{System Breakpoint|book{5}}{120}
+\indexentry{DynamicBase! }{120}
+\indexentry{Do Not Break}{121}
+\indexentry{Breakpoint!Software! |book{5}}{122}
+\indexentry{Breakpoint!Software!Failure|book{5}}{122}
+\indexentry{Breakpoint!Hardware! }{122}
+\indexentry{Registers!Segment! |book{5}}{127}
+\indexentry{Selector|book{5}}{127}
+\indexentry{GDT! |book{5}}{127}
+\indexentry{MOV!Suspicious|book{5}}{127-128}
+\indexentry{GS (segment register)}{127-128}
+\indexentry{FS (segment register)! }{128}
+\indexentry{Selector!FS|book{5}}{128}
+\indexentry{GS (segment register)!Confusion|book{5}}{128-130}
+\indexentry{FS (segment register)!Confusion|book{5}}{128-130}
+\indexentry{SEH}{128-136}
+\indexentry{FS:[0]}{128-130}
+\indexentry{GS:[0]|book{5}}{128-130}
+\indexentry{Patching}{129-130}
+\indexentry{SEH!Structure}{131}
+\indexentry{SEH!Handler}{132-136}
+\indexentry{SEH!Structure}{133}
+\indexentry{Breakpoint!Hardware! }{136}
+\indexentry{SEH!Structure}{136}
+\indexentry{Detection Evasion!  }{139}
+\indexentry{NanoLocker|book{5}}{141}
+\indexentry{Execution Flow Concealment|book{5}}{142}
+\indexentry{Misdirection Technique!Lessons Learned}{142}
+\indexentry{Unpacking!Techniques|book{5}}{145}
+\indexentry{OEP!Preliminary Actions|book{5}}{145}
+\indexentry{Trial and Error}{145}
+\indexentry{Stack Cleanup|book{5}}{145}
+\indexentry{Stack Reuse|book{5}}{145}
+\indexentry{Assembly.Load \dotnet! |book{5}}{145}
+\indexentry{Pre-OEP Actions|book{5}}{145}
+\indexentry{API Calls!Risky!DLL Loading At Runtime|book{5}}{146-148}
+\indexentry{SetBPX!  |book{5}}{147}
+\indexentry{IAT!Absent DLL|book{5}}{148-149}
+\indexentry{Unexpected DLL|book{5}}{148}
+\indexentry{Kernel32.dll!Reload|book{5}}{148}
+\indexentry{Ntdll.dll|book{5}}{149}
+\indexentry{Follow Dword in Disassembler|book{5}}{149}
+\indexentry{Strings!References! |book{5}}{151}
+\indexentry{Intermodular Calls! }{151}
+\indexentry{Local Variables!Display|book{5}}{152}
+\indexentry{Argument!Display|book{5}}{152}
+\indexentry{Malicious Pattern}{153}
+\indexentry{SetBPX!  }{154}
+\indexentry{Follow In Dump! }{155}
+\indexentry{Unpacking!Code Extraction|book{5}}{156}
+\indexentry{OEP! }{156}
+\indexentry{Memory Breakpoint|book{5}}{157-158}
+\indexentry{PAGE\_EXECUTE\_READ|book{5}}{158}
+\indexentry{Follow In Dump! }{159}
+\indexentry{Memory Breakpoint!Singleshoot|book{5}}{160-161}
+\indexentry{Breakpoint!Hardware!Trigger|book{5}}{160}
+\indexentry{Follow In Memory Map! }{162}
+\indexentry{Dump Memory To File! }{162}
+\indexentry{Memory Segment Attributes|book{5}}{162}
+\indexentry{Dumping! }{162-163}
+\indexentry{Virtual Alignment|book{5}}{163}
+\indexentry{Raw Alignment|book{5}}{163}
+\indexentry{TrickBot|book{5}}{163}
+\indexentry{IAT!AutoSearch! }{164}
+\indexentry{IAT!Fix! }{164}
+\indexentry{Fix Dump! |book{5}}{164}
+\indexentry{TrickBot}{165}
+\indexentry{Breakpoint!Defense|book{5}}{166}
+\indexentry{Breakpoint!Software! }{167}
+\indexentry{Breakpoint!Software!Failure}{167}
+\indexentry{Breakpoint!Hardware! }{167}
+\indexentry{INT3 (opcode)|book{5}}{167}
+\indexentry{RDTSC}{167}
+\indexentry{Patching}{167}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{Lab \goto Malware Analysis|comment}{0}
+\indexentry{Capabilities \goto Malware Analysis|comment}{0}
+\indexentry{General-Purpose Registers \goto Registers|comment}{0}
+\indexentry{Special-Use Registers \goto Registers|comment}{0}
+\indexentry{Segment Registers \goto Registers|comment}{0}
+\indexentry{Propagate Ext Params \goto External Parameters|comment}{0}
+\indexentry{Calling Conventions \goto Functions|comment}{0}
+\indexentry{Compiled Code \goto P-code|comment}{0}
+\indexentry{Compressed Source Code \goto P-code|comment}{0}
+\indexentry{VBA \goto Macros|comment}{0}
+\indexentry{IEX \goto Invoke-Expression|comment}{0}
+\indexentry{API Calls!Examples \goto see \textbf{Categories}|comment}{0}
+\indexentry{Anti-Malware Scan Interface \goto AMSI|comment}{0}
+\indexentry{Access Violation \goto Memory Access Violation|comment}{0}
+\indexentry{Breakpoint!Set \goto SetBPX|comment}{0}
+\indexentry{JIT \goto Compiler|comment}{0}
+\indexentry{Malware Analysis!Initial Look \goto PEStudio (see \textbf{Categories})|comment}{0}
+\indexentry{Exception Handling \goto SEH|comment}{0}
+\indexentry{Hardware Breakpoint \goto Breakpoint|comment}{0}
+\indexentry{Software Breakpoint \goto Breakpoint|comment}{0}
