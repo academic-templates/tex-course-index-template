@@ -1,0 +1,2064 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{SOC Design \& Operational Planning}!1@Introduction|book{1}}{7-20}
+\indexentry{1a@\textbf{SOC Design \& Operational Planning}!2@SOC Planning|book{1}}{21-40}
+\indexentry{1a@\textbf{SOC Design \& Operational Planning}!3@SOC Functions|book{1}}{43-55}
+\indexentry{1a@\textbf{SOC Design \& Operational Planning}!4@Team Creation, Hiring \& Training|book{1}}{58-92}
+\indexentry{1a@\textbf{SOC Design \& Operational Planning}!5@Cyber Threat Intelligence|book{1}}{95-118}
+\indexentry{1a@\textbf{SOC Design \& Operational Planning}!6@Building the SOC|book{1}}{121-134}
+
+\indexentry{1b@\blankline|comment}{0}
+
+\indexentry{1c@\textbf{SOC Telemetry \& Analysis}!1@Cyber Def Theory \& Mental Models|book{2}}{8-28}
+\indexentry{1c@\textbf{SOC Telemetry \& Analysis}!2@SOC Tools \& Technology|book{2}}{31-41}
+\indexentry{1c@\textbf{SOC Telemetry \& Analysis}!3@SOC Data Collection|book{2}}{42-68}
+\indexentry{1c@\textbf{SOC Telemetry \& Analysis}!4@MITRE ATT\&CK to Plan Collection|book{2}}{69-78}
+\indexentry{1c@\textbf{SOC Telemetry \& Analysis}!5@Capacity Planning|book{2}}{81-103}
+\indexentry{1c@\textbf{SOC Telemetry \& Analysis}!6@Protecting SOC Data/Capabilities|book{2}}{106-125}
+
+\indexentry{1d@\blankline|comment}{0}
+
+\indexentry{1d@\textbf{Attack Detection, Threat Hunting \& Triage}!1@Analytic Frameworks \& Tools|book{3}}{6-19}
+\indexentry{1d@\textbf{Attack Detection, Threat Hunting \& Triage}!2@Detection \& Analytic Design|book{3}}{20-36}
+\indexentry{1d@\textbf{Attack Detection, Threat Hunting \& Triage}!3@Efficient Alert Triage|book{3}}{39-55}
+\indexentry{1d@\textbf{Attack Detection, Threat Hunting \& Triage}!4@Detection Engineering|book{3}}{56-75}
+\indexentry{1d@\textbf{Attack Detection, Threat Hunting \& Triage}!5@SOC-Assisted Use Cases|book{3}}{78-106}
+\indexentry{1d@\textbf{Attack Detection, Threat Hunting \& Triage}!6@Threat Hunting|book{3}}{107-130}
+\indexentry{1d@\textbf{Attack Detection, Threat Hunting \& Triage}!7@Active Defense|book{3}}{133-147}
+
+\indexentry{1ed@\blankline|comment}{0}
+
+\indexentry{1f@\textbf{Investigation \& Response}!1@Incident Response Planning \& Prep.|book{4}}{6-27}
+\indexentry{1f@\textbf{Investigation \& Response}!2@Identification \& Coordintion|book{4}}{30-50}
+\indexentry{1f@\textbf{Investigation \& Response}!3@Forensic Analysis \& IR Tools|book{4}}{53-70}
+\indexentry{1f@\textbf{Investigation \& Response}!4@Containment \& Eradication|book{4}}{71-78}
+\indexentry{1f@\textbf{Investigation \& Response}!5@Incident Response in the Cloud|book{4}}{79-87}
+\indexentry{1f@\textbf{Investigation \& Response}!6@Investigation|book{4}}{88-111}
+\indexentry{1f@\textbf{Investigation \& Response}!7@Recovery, Post Incident \& Practice|book{4}}{114-132}
+
+\indexentry{1g@\blankline|comment}{0}
+
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!1@Staff Retention \& Burnout Prevention|book{5}}{6-24}
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!2@Building Your SOC Culture|book{5}}{25-35}
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!3@Metrics, Goals \& Effective Execution|book{5}}{36-67}
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!4@Measurements \& Prioritization Issues|book{5}}{70-92}
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!5@Automation in Security Operations|book{5}}{93-108}
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!6@Analytic Test \& Adversary Emulat°|book{5}}{109-128}
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!7@SOC Capability Assessment|book{5}}{131-140}
+\indexentry{1h@\textbf{Metrics, Automation, Continuous Improvement}!8@The Lean SOC|book{5}}{141-152}
+
+\indexentry{1i@\blankline|comment}{0}
+
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{20@\textbf{Essentials}!Average SOC|book{1}}{13-14}
+\indexentry{20@\textbf{Essentials}!Dedicated Internal SOC|book{1}}{23}
+\indexentry{20@\textbf{Essentials}!Constituency Definition|book{1}}{34}
+\indexentry{20@\textbf{Essentials}!Relationship Tracking|book{1}}{39}
+\indexentry{20@\textbf{Essentials}!SOC -- High Level|book{1}}{45}
+\indexentry{20@\textbf{Essentials}!SOC -- Functions|book{1}}{46}
+\indexentry{20@\textbf{Essentials}!SOC -- Core|book{1}}{48-54}
+\indexentry{20@\textbf{Essentials}!MITRE ATT\&CK|book{1}}{51}
+\indexentry{20@\textbf{Essentials}!SOC -- Auxiliary Functions|book{1}}{60-63}
+\indexentry{20@\textbf{Essentials}!SOC -- Tiered VS Tierless|book{1}}{64}
+\indexentry{20@\textbf{Essentials}!Duty Roles|book{1}}{65-67}
+\indexentry{20@\textbf{Essentials}!Continuous Learning|book{1}}{86}
+\indexentry{20@\textbf{Essentials}!Workforce|book{1}}{89}
+\indexentry{20@\textbf{Essentials}!Threat Data VS Info VS Intel|book{1}}{98}
+\indexentry{20@\textbf{Essentials}!Threat Intel Levels|book{1}}{100-101}
+\indexentry{20@\textbf{Essentials}!CTI Producers \& Consumers|book{1}}{103}
+\indexentry{20@\textbf{Essentials}!EASY Framework|book{1}}{108}
+\indexentry{20@\textbf{Essentials}!F3EAD Cycle|book{1}}{111}
+\indexentry{20@\textbf{Essentials}!Cyber Kill Chain|book{1}}{111}
+\indexentry{20@\textbf{Essentials}!Diamond Model|book{1}}{111}
+\indexentry{20@\textbf{Essentials}!Speed of Intel Use|book{1}}{113}
+\indexentry{20@\textbf{Essentials}!STIX|book{1}}{114}
+\indexentry{20@\textbf{Essentials}!Indicator Relationships|book{1}}{114}
+\indexentry{20@\textbf{Essentials}!SOC -- Room Layout|book{1}}{124}
+\indexentry{20@\textbf{Essentials}!Modern Defense Mindset|book{2}}{11}
+\indexentry{20@\textbf{Essentials}!Cyber Kill Chain! |book{2}}{13-14}
+\indexentry{20@\textbf{Essentials}!Pyramid of Pain|book{2}}{15}
+\indexentry{20@\textbf{Essentials}!MITRE!ATT\&CK! |book{2}}{16}
+\indexentry{20@\textbf{Essentials}!Incident Response Cycle|book{2}}{18-19}
+\indexentry{20@\textbf{Essentials}!PICERL Model|book{2}}{18}
+\indexentry{20@\textbf{Essentials}!DAIR Model|book{2}}{19}
+\indexentry{20@\textbf{Essentials}!OODA Loop|book{2}}{20-21}
+\indexentry{20@\textbf{Essentials}!SIEM|book{2}}{33}
+\indexentry{20@\textbf{Essentials}!TIP|book{2}}{34}
+\indexentry{20@\textbf{Essentials}!IMS|book{2}}{35}
+\indexentry{20@\textbf{Essentials}!Technology Selection|book{2}}{37-39}
+\indexentry{20@\textbf{Essentials}!Log Collection|book{2}}{44-46}
+\indexentry{20@\textbf{Essentials}!MITRE!ATT\&CK! }{70-71}
+\indexentry{20@\textbf{Essentials}!MITRE!ATT\&CK! }{73}
+\indexentry{20@\textbf{Essentials}!MITRE!ATT\&CK!SOC Detection|book{2}}{75}
+\indexentry{20@\textbf{Essentials}!Use Case Database Interactions|book{3}}{66}
+\indexentry{20@\textbf{Essentials}!Detection Maturity Model|book{3}}{74}
+\indexentry{20@\textbf{Essentials}!DevOps Monitoring|book{3}}{82}
+\indexentry{20@\textbf{Essentials}!CI/CD Pipeline Data Sources|book{3}}{83}
+\indexentry{20@\textbf{Essentials}!Threat Hunting Process|book{3}}{116}
+\indexentry{20@\textbf{Essentials}!MTS Goal Hierarchy (IR)|book{4}}{24-25}
+\indexentry{20@\textbf{Essentials}!Purple Team Methodology|book{5}}{118-120}
+\indexentry{20@\textbf{Essentials}!OCTAVE|book{W}}{28-30}
+\indexentry{20@\textbf{Essentials}!PIR Process|book{W}}{37-43}
+\indexentry{20@\textbf{Essentials}!Threat Profile|book{W}}{50}
+\indexentry{20@\textbf{Essentials}!Attack Tree|book{W}}{53}
+\indexentry{20@\textbf{Essentials}!Capacity Planning|book{W}}{84-85}
+\indexentry{20@\textbf{Essentials}!TaHiTI Methodology|book{W}}{138-139}
+\indexentry{20@\textbf{Essentials}!MTS Goal Hierarchy (IR)! |book{W}}{151}
+\indexentry{20@\textbf{Essentials}!Sampling with AQL Tables|book{W}}{168-172}
+\indexentry{20@\textbf{Essentials}!Investigation Review Questions List|book{W}}{175}
+\indexentry{20@\textbf{Essentials}!GQM Process|book{W}}{185-187}
+\indexentry{20@\textbf{Essentials}!FMEA Process|book{W}}{225}
+
+\indexentry{21@\blankline|comment}{0}
+
+\indexentry{100@\textbf{Labs}!SOC Charter \& Mission|book{1}}{42}
+\indexentry{100@\textbf{Labs}!SOC Charter \& Mission! |book{W}}{22-27}
+\indexentry{100@\textbf{Labs}!Critical Asset Mapping|book{1}}{57}
+\indexentry{100@\textbf{Labs}!Critical Asset Mapping! |book{W}}{28-30}
+\indexentry{100@\textbf{Labs}!SOC Roles|book{1}}{94}
+\indexentry{100@\textbf{Labs}!SOC Roles! |book{W}}{31-36}
+\indexentry{100@\textbf{Labs}!Priority Intel Requirements|book{1}}{120}
+\indexentry{100@\textbf{Labs}!Priority Intel Requirements! |book{W}}{37-43}
+\indexentry{100@\textbf{Labs}!Threat Actor Assessment|book{2}}{7}
+\indexentry{100@\textbf{Labs}!Threat Actor Assessment! |book{W}}{44-51}
+\indexentry{100@\textbf{Labs}!Attack Modeling \& Data Src Assessment|book{2}}{30}
+\indexentry{100@\textbf{Labs}!Attack Modeling \& Data Src Assessment! |book{W}}{52-63}
+\indexentry{100@\textbf{Labs}!ATT\&CK Navigator for Prioritization|book{2}}{80}
+\indexentry{100@\textbf{Labs}!ATT\&CK Navigator for Prioritization! |book{2}}{64-80}
+\indexentry{100@\textbf{Labs}!Capacity Planning|book{2}}{105}
+\indexentry{100@\textbf{Labs}!Capacity Planning! |book{W}}{81-93}
+\indexentry{100@\textbf{Labs}!Detection Rule Management, Measurement and Visualization|book{3}}{38}
+\indexentry{100@\textbf{Labs}!Detection Rule Management, Measurement and Visualization! |book{W}}{94-112}
+\indexentry{100@\textbf{Labs}!Structuring, Documenting, and Organizing Use Cases|book{3}}{77}
+\indexentry{100@\textbf{Labs}!Structuring, Documenting, and Organizing Use Cases! |book{W}}{113-137}
+\indexentry{100@\textbf{Labs}!Planning a Threat Hunt|book{3}}{132}
+\indexentry{100@\textbf{Labs}!Planning a Threat Hunt! |book{W}}{138-146}
+\indexentry{100@\textbf{Labs}!Incident Response Goals and Teamwork|book{4}}{29}
+\indexentry{100@\textbf{Labs}!Incident Response Goals and Teamwork! |book{W}}{147-153}
+\indexentry{100@\textbf{Labs}!Developing \& Implementing Playbooks|book{4}}{52}
+\indexentry{100@\textbf{Labs}!Developing \& Implementing Playbooks! |book{W}}{154-166}
+\indexentry{100@\textbf{Labs}!Investigation Quality Review|book{4}}{113}
+\indexentry{100@\textbf{Labs}!Investigation Quality Review! |book{W}}{167-183}
+\indexentry{100@\textbf{Labs}!Creating, Classifying, and Communicating Your Metrics|book{5}}{69}
+\indexentry{100@\textbf{Labs}!Creating, Classifying, and Communicating Your Metrics! |book{W}}{184-200}
+\indexentry{100@\textbf{Labs}!Purple Team Assessment Planning, Execution, and Tracking|book{5}}{130}
+\indexentry{100@\textbf{Labs}!Purple Team Assessment Planning, Execution, and Tracking! |book{W}}{201-224}
+\indexentry{100@\textbf{Labs}!Improving Quality and Resilience|book{5}}{152}
+\indexentry{100@\textbf{Labs}!Improving Quality and Resilience! |book{W}}{225-235}
+\indexentry{100@\textbf{Labs}!Cyber42 Simulation Instructions|book{W}}{236-245}
+
+\indexentry{101@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools}!MISP|book{1}}{117}
+\indexentry{200@\textbf{Tools}!NXLog|book{2}}{53}
+\indexentry{200@\textbf{Tools}!Sysmon|book{2}}{58}
+\indexentry{200@\textbf{Tools}!Zeek|book{2}}{59}
+\indexentry{200@\textbf{Tools}!Suricata|book{2}}{59}
+\indexentry{200@\textbf{Tools}!JA4+|book{2}}{62}
+\indexentry{200@\textbf{Tools}!Zeek}{62}
+\indexentry{200@\textbf{Tools}!MITRE ATT\&CK Navigator|book{2}}{73-74}
+\indexentry{200@\textbf{Tools}!DeTT\&CT|book{2}}{77}
+\indexentry{200@\textbf{Tools}!FLARE|book{2}}{114}
+\indexentry{200@\textbf{Tools}!Jupyter|book{3}}{8}
+\indexentry{200@\textbf{Tools}!MITRE D3FEND|book{3}}{9}
+\indexentry{200@\textbf{Tools}!MITRE Engage|book{3}}{9}
+\indexentry{200@\textbf{Tools}!MITRE Shield|book{3}}{9}
+\indexentry{200@\textbf{Tools}!MISP! |book{3}}{11}
+\indexentry{200@\textbf{Tools}!MITRE ATT\&CK Navigator! |book{3}}{12}
+\indexentry{200@\textbf{Tools}!Jupyter}{16}
+\indexentry{200@\textbf{Tools}!Sentinel|book{3}}{16}
+\indexentry{200@\textbf{Tools}!Splunk|book{3}}{17}
+\indexentry{200@\textbf{Tools}!ADAz|book{3}}{18}
+\indexentry{200@\textbf{Tools}!Splunk Attack Range|book{3}}{18}
+\indexentry{200@\textbf{Tools}!Atomic Red Team|book{3}}{18}
+\indexentry{200@\textbf{Tools}!MITRE CALDERA|book{3}}{18}
+\indexentry{200@\textbf{Tools}!Snort|book{3}}{28}
+\indexentry{200@\textbf{Tools}!MDO|book{3}}{50-51}
+\indexentry{200@\textbf{Tools}!Jira|book{3}}{65}
+\indexentry{200@\textbf{Tools}!Redmine|book{3}}{65}
+\indexentry{200@\textbf{Tools}!Jira}{68}
+\indexentry{200@\textbf{Tools}!Redmine}{68}
+\indexentry{200@\textbf{Tools}!Palantir ADS|book{3}}{69}
+\indexentry{200@\textbf{Tools}!MaGMa UCF|book{3}}{71}
+\indexentry{200@\textbf{Tools}!MITRE CAR|book{3}}{72}
+\indexentry{200@\textbf{Tools}!Sysmon! |book{3}}{72}
+\indexentry{200@\textbf{Tools}!OSQuery|book{3}}{72}
+\indexentry{200@\textbf{Tools}!Fluentd|book{3}}{85}
+\indexentry{200@\textbf{Tools}!Beats|book{3}}{85}
+\indexentry{200@\textbf{Tools}!Syslog-ng|book{3}}{85}
+\indexentry{200@\textbf{Tools}!NXLog! |book{3}}{85}
+\indexentry{200@\textbf{Tools}!Amazon CloudTrail|book{3}}{85}
+\indexentry{200@\textbf{Tools}!Sysmon! }{118}
+\indexentry{200@\textbf{Tools}!MITRE Engage}{140-144}
+\indexentry{200@\textbf{Tools}!TheHive|book{4}}{42}
+\indexentry{200@\textbf{Tools}!Autopsy|book{4}}{57}
+\indexentry{200@\textbf{Tools}!SleuthKit|book{4}}{57}
+\indexentry{200@\textbf{Tools}!Bulk Extractor|book{4}}{57}
+\indexentry{200@\textbf{Tools}!Redline|book{4}}{57}
+\indexentry{200@\textbf{Tools}!FTK|book{4}}{57}
+\indexentry{200@\textbf{Tools}!EnCase|book{4}}{57}
+\indexentry{200@\textbf{Tools}!Velociraptor|book{4}}{57}
+\indexentry{200@\textbf{Tools}!Sysmon!  |book{4}}{57}
+\indexentry{200@\textbf{Tools}!OSQuery! |book{4}}{57}
+\indexentry{200@\textbf{Tools}!REMnux|book{4}}{57}
+\indexentry{200@\textbf{Tools}!SIFT|book{4}}{57}
+\indexentry{200@\textbf{Tools}!FLARE! |book{4}}{57}
+\indexentry{200@\textbf{Tools}!FireEye|book{4}}{64}
+\indexentry{200@\textbf{Tools}!CrowdStrike|book{4}}{64}
+\indexentry{200@\textbf{Tools}!Microsoft Defender|book{4}}{64}
+\indexentry{200@\textbf{Tools}!Wazuh|book{4}}{64}
+\indexentry{200@\textbf{Tools}!DarkTrace|book{4}}{65}
+\indexentry{200@\textbf{Tools}!Vectra|book{4}}{65}
+\indexentry{200@\textbf{Tools}!ExtraHop|book{4}}{65}
+\indexentry{200@\textbf{Tools}!Fidelis|book{4}}{65}
+\indexentry{200@\textbf{Tools}!VirusTotal|book{4}}{68}
+\indexentry{200@\textbf{Tools}!CAPE|book{4}}{68}
+\indexentry{200@\textbf{Tools}!Joe Sandbox|book{4}}{68}
+\indexentry{200@\textbf{Tools}!Hybrid Analysis|book{4}}{68}
+\indexentry{200@\textbf{Tools}!Cuckoo|book{4}}{68}
+\indexentry{200@\textbf{Tools}!Sandboxie|book{4}}{68}
+\indexentry{200@\textbf{Tools}!FLOSS|book{4}}{68}
+\indexentry{200@\textbf{Tools}!OpenBAS|book{4}}{129}
+\indexentry{200@\textbf{Tools}!MITRE TRAM|book{5}}{105}
+\indexentry{200@\textbf{Tools}!Scikit Learn|book{5}}{105}
+\indexentry{200@\textbf{Tools}!ChatGPT|book{5}}{106}
+\indexentry{200@\textbf{Tools}!Atomic Red Team! |book{5}}{113}
+\indexentry{200@\textbf{Tools}!RTA|book{5}}{113}
+\indexentry{200@\textbf{Tools}!Metta|book{5}}{113}
+\indexentry{200@\textbf{Tools}!MITRE CALDERA! |book{5}}{113}
+\indexentry{200@\textbf{Tools}!Infection Monkey|book{5}}{113}
+\indexentry{200@\textbf{Tools}!Purple Team ATT\&CK Automation|book{5}}{113}
+\indexentry{200@\textbf{Tools}!BT3|book{5}}{113}
+\indexentry{200@\textbf{Tools}!BAS|book{5}}{113}
+\indexentry{200@\textbf{Tools}!CSV|book{5}}{113}
+\indexentry{200@\textbf{Tools}!Metasploit|book{5}}{113}
+\indexentry{200@\textbf{Tools}!Armitage|book{5}}{113}
+\indexentry{200@\textbf{Tools}!Cobalt Strike|book{5}}{113}
+\indexentry{200@\textbf{Tools}!PowerShell Empire|book{5}}{113}
+\indexentry{200@\textbf{Tools}!Covenant|book{5}}{113}
+\indexentry{200@\textbf{Tools}!VECTR|book{5}}{121-122}
+\indexentry{200@\textbf{Tools}!BAS}{123-127}
+\indexentry{200@\textbf{Tools}!MITRE ATT\&CK Navigator!  |book{5}}{128}
+\indexentry{200@\textbf{Tools}!Feedly|book{W}}{43}
+\indexentry{200@\textbf{Tools}!MISP!  |book{W}}{43}
+\indexentry{200@\textbf{Tools}!MISP!  }{47}
+\indexentry{200@\textbf{Tools}!Draw.io|book{W}}{55}
+\indexentry{200@\textbf{Tools}!Draw.io}{57}
+\indexentry{200@\textbf{Tools}!MITRE ATT\&CK Navigator!   |book{W}}{64-80}
+\indexentry{200@\textbf{Tools}!MITRE TRAM! |book{W}}{78}
+\indexentry{200@\textbf{Tools}!Git|book{W}}{100-109}
+\indexentry{200@\textbf{Tools}!Redmine! |book{W}}{114}
+\indexentry{200@\textbf{Tools}!TheHive! |book{W}}{158-164}
+\indexentry{200@\textbf{Tools}!TheHive! }{178-181}
+\indexentry{200@\textbf{Tools}!PowerBI|book{W}}{195}
+\indexentry{200@\textbf{Tools}!Tableau|book{W}}{195}
+\indexentry{200@\textbf{Tools}!Grafana|book{W}}{195}
+\indexentry{200@\textbf{Tools}!Prometheus|book{W}}{195}
+\indexentry{200@\textbf{Tools}!Graphite|book{W}}{195}
+\indexentry{200@\textbf{Tools}!Kibana|book{W}}{195}
+\indexentry{200@\textbf{Tools}!Vega|book{W}}{195}
+\indexentry{200@\textbf{Tools}!VECTR! |book{W}}{202-222}
+\indexentry{200@\textbf{Tools}!MITRE ATT\&CK Navigator!   }{215}
+
+\indexentry{201@\blankline|comment}{0}
+
+\indexentry{300@\textbf{Books}!The Career Architect Development Planner { }{ }{ }{ }{ }{ }{ } (1996)|book{1}}{84}
+\indexentry{300@\textbf{Books}!Intelligence-Driven Incident Response { }{ }{ }{ }{ }{ }{ }{ }{ } (2017)|book{1}}{104}
+\indexentry{300@\textbf{Books}!The Essential Drucker (2008)|book{2}}{22}
+\indexentry{300@\textbf{Books}!The Infinite Game (2019)|book{2}}{23}
+\indexentry{300@\textbf{Books}!Analysis of Alternatives (AoA) Handbook { }{ }{ } (2017)|book{2}}{38}
+\indexentry{300@\textbf{Books}!Blue Team Handbook: SOC, SIEM, and Threat Hunting V1.02 (2019)|book{2}}{78}
+\indexentry{300@\textbf{Books}!11 Strategies of a World-Class Cybersecurity { }{ }{ } Operations Center (2022)|book{2}}{125}
+\indexentry{300@\textbf{Books}!CSIRT Effectiveness and Social Maturity (2016)|book{4}}{22}
+\indexentry{300@\textbf{Books}!Applied Incident Response (2020)|book{4}}{70}
+\indexentry{300@\textbf{Books}!Blue Team Handbook: Incident Response Edition (2014)|book{4}}{70}
+\indexentry{300@\textbf{Books}!BTFM: Blue Team Field Manual (2017)|book{4}}{70}
+\indexentry{300@\textbf{Books}!Psychology of Intelligence Analysis { }{ }{ }{ }{ }{ }{ }{ }{ }{ }{ }{ } (1999)|book{4}}{98}
+\indexentry{300@\textbf{Books}!Drive: The Surprising Truth About What { }{ }{ }{ }{ }{ } Motivates Us (2009)|book{5}}{7}
+\indexentry{300@\textbf{Books}!Peak: Secrets from the New Science of Expertise (2017)|book{5}}{20}
+\indexentry{300@\textbf{Books}!Flow: The Psychology of Optimal Experience (2008)|book{5}}{20}
+\indexentry{300@\textbf{Books}!What You Do Is Who You Are (2019)|book{5}}{26}
+\indexentry{300@\textbf{Books}!The Hard Thing About Hard Things { }{ }{ }{ }{ }{ }{ }{ }{ }{ }{ }{ } (2014)|book{5}}{30}
+\indexentry{300@\textbf{Books}!Measure What Matters: How Google, Bono, and the Gates Foundation Rock the World with OKRs (2018)|book{5}}{39}
+\indexentry{300@\textbf{Books}!The 4 Disciplines of Execution: Achieving Your Wildly Important Goals (2021)|book{5}}{39}
+\indexentry{300@\textbf{Books}!How to Measure Anything in Cybersecurity Risk (2023)|book{5}}{48}
+\indexentry{300@\textbf{Books}!Security Metrics: Replacing Fear, Uncertainty, and Doubt (2007)|book{5}}{50}
+\indexentry{300@\textbf{Books}!The One Thing: The Simple Truth Behind Extraordinary Results (2018)|book{5}}{60}
+\indexentry{300@\textbf{Books}!The Tyranny of Metrics (2018)|book{5}}{83}
+\indexentry{300@\textbf{Books}!Reinventing Jobs: A 4-Step Approach for Applying Automation to Work (2018)|book{5}}{98}
+\indexentry{300@\textbf{Books}!Statistical Process Control for Managers (2017)|book{W}}{182}
+\indexentry{300@\textbf{Books}!The Visual Display of Quantitative Information (2001)|book{W}}{196}
+
+%\indexentry{301@\blankline|comment}{0}
+
+\indexentry{800@\textbf{Other Courses}!SEC450 - Blue Team Fundamentals|book{1}}{8}
+\indexentry{800@\textbf{Other Courses}!SEC450 - Blue Team Fundamentals}{52}
+\indexentry{800@\textbf{Other Courses}!SEC511 - Continuous Monitoring|book{2}}{11}
+\indexentry{800@\textbf{Other Courses}!SEC504 - Incident Handling|book{2}}{18}
+\indexentry{800@\textbf{Other Courses}!SEC555 - Tactical SIEM|book{2}}{50}
+\indexentry{800@\textbf{Other Courses}!FOR610 - Reverse Engineering|book{2}}{114}
+\indexentry{800@\textbf{Other Courses}!SEC540 - Secure DevOps|book{3}}{83}
+\indexentry{800@\textbf{Other Courses}!SEC547 - Defending Supply Chain|book{3}}{90}
+\indexentry{800@\textbf{Other Courses}!SEC530 - Defensible Architecture|book{4}}{27}
+\indexentry{800@\textbf{Other Courses}!LDR553 - Cyber Incident Response|book{4}}{46}
+\indexentry{800@\textbf{Other Courses}!FOR610 - Reverse Engineering! |book{4}}{68}
+\indexentry{800@\textbf{Other Courses}!FOR610 - Reverse Engineering! }{70}
+\indexentry{800@\textbf{Other Courses}!SEC504 - Incident Handling! |book{4}}{70}
+\indexentry{800@\textbf{Other Courses}!SEC503 - Intrusion Detection|book{4}}{70}
+\indexentry{800@\textbf{Other Courses}!FOR508 - Digital Forensics|book{4}}{70}
+\indexentry{800@\textbf{Other Courses}!FOR500 - Windows Forensics|book{4}}{70}
+\indexentry{800@\textbf{Other Courses}!FOR518 - Mac \& iOS Forensics|book{4}}{70}
+\indexentry{800@\textbf{Other Courses}!FOR572 - Network Forensics|book{4}}{70}
+\indexentry{800@\textbf{Other Courses}!FOR509 - Cloud Forensics|book{4}}{80}
+\indexentry{800@\textbf{Other Courses}!LDR553 - Cyber Incident Response}{126}
+\indexentry{800@\textbf{Other Courses}!SEC599 - Purple Team Tactics|book{5}}{116}
+\indexentry{800@\textbf{Other Courses}!SEC699 - Advanced Purple Teaming|book{5}}{116}
+\indexentry{800@\textbf{Other Courses}!SEC450 - Blue Team Fundamentals! |book{5}}{156}
+
+\indexentry{999@\blankline|comment}{0}
+%\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Focus on Enemy|book{1}}{11-12}
+\indexentry{SOC|book{1}}{9-10}
+\indexentry{SOC!Breakdown|book{1}}{13}
+\indexentry{SOC!Average|book{1}}{13-14}
+\indexentry{SOC!Maturity|book{1}}{14-16}
+\indexentry{SOMM|book{1}}{14}
+\indexentry{Enterprise SOC|book{1}}{15}
+\indexentry{MSSP|book{1}}{15}
+\indexentry{SOC!Challenges|book{1}}{17}
+\indexentry{SOC!Internal VS External|book{1}}{23}
+\indexentry{Dedicated SOC|book{1}}{23}
+\indexentry{MSSP}{23}
+\indexentry{SOC!Scale|book{1}}{23}
+\indexentry{SOC!Planning|book{1}}{25}
+\indexentry{Mission \& Goals|book{1}}{26}
+\indexentry{Mission Statement|book{1}}{26}
+\indexentry{Threat!Modeling|book{1}}{27}
+\indexentry{Electronic Frontier Foundation|book{1}}{27}
+\indexentry{SOC!Requirements|book{1}}{28}
+\indexentry{Compliance Frameworks|book{1}}{29}
+\indexentry{GDPR|book{1}}{29}
+\indexentry{Privacy Shield|book{1}}{29}
+\indexentry{PCI-DSS|book{1}}{29}
+\indexentry{HIPAA|book{1}}{29}
+\indexentry{NIST SP 800-171|book{1}}{29}
+\indexentry{SOX|book{1}}{30}
+\indexentry{GLBA|book{1}}{30}
+\indexentry{Control Frameworks|book{1}}{31}
+\indexentry{Program Frameworks|book{1}}{31}
+\indexentry{Risk Frameworks|book{1}}{31-32}
+\indexentry{SOC!Assessment|book{1}}{31}
+\indexentry{ISO27001|book{1}}{31}
+\indexentry{SOC-CMM|book{1}}{31}
+\indexentry{NIST SP 800-53|book{1}}{31}
+\indexentry{NIST SP 800-30|book{1}}{32}
+\indexentry{NIST SP 800-37|book{1}}{32}
+\indexentry{NIST SP 800-39|book{1}}{32}
+\indexentry{ISO27005|book{1}}{32}
+\indexentry{CIS RAM|book{1}}{32}
+\indexentry{FAIR|book{1}}{32}
+\indexentry{Policies|book{1}}{33}
+\indexentry{Security Policy Templates (SANS)|book{1}}{33}
+\indexentry{Constituency|book{1}}{34}
+\indexentry{SOC!Services \& Capabilities|book{1}}{35}
+\indexentry{SOC!Charter|book{1}}{36}
+\indexentry{Mission Statement}{36}
+\indexentry{Concept of Operations|book{1}}{36}
+\indexentry{Steering Committee|book{1}}{37}
+\indexentry{Constituency!Steering|book{1}}{37}
+\indexentry{Digital Transformation|book{1}}{38}
+\indexentry{Relationship Management|book{1}}{39}
+\indexentry{Alignment Matrix|book{1}}{39}
+\indexentry{SOC!Planning!Summary|book{1}}{40}
+\indexentry{SOC!Functions|book{1}}{44}
+\indexentry{SOC!High-Level View|book{1}}{45}
+\indexentry{SOC!Functions}{46}
+\indexentry{SOC!Functions!Core|book{1}}{47-48}
+\indexentry{SOC!Functions!Auxiliary|book{1}}{47-48}
+\indexentry{D\&R Pipeline|book{1}}{48}
+\indexentry{Collection|book{1}}{49}
+\indexentry{Windows Logs|book{1}}{49}
+\indexentry{GPO|book{1}}{49}
+\indexentry{Detection|book{1}}{50}
+\indexentry{Threat!Hunting|book{1}}{50}
+\indexentry{Triage|book{1}}{51}
+\indexentry{Cyber Kill Chain|book{1}}{51}
+\indexentry{MITRE!ATT\&CK|book{1}}{51}
+\indexentry{Investigation|book{1}}{52}
+\indexentry{Investigation!Wrong Way|book{1}}{52}
+\indexentry{Incident!Response|book{1}}{53}
+\indexentry{Continuous Improvement|book{1}}{54}
+\indexentry{SOC!Functions!Summary|book{1}}{55}
+\indexentry{SOC!Team Creation|book{1}}{59}
+\indexentry{SOC!Functions!Auxiliary}{60-62}
+\indexentry{Detection}{60}
+\indexentry{Incident!Response}{60}
+\indexentry{Support|book{1}}{60}
+\indexentry{Assessment|book{1}}{60-61}
+\indexentry{Threat!Intelligence|book{1}}{60-62}
+\indexentry{SOC!Models (Org)|book{1}}{60-64}
+\indexentry{Security Director|book{1}}{62}
+\indexentry{SOC As a Peer|book{1}}{62}
+\indexentry{SOC!Manager|book{1}}{62}
+\indexentry{SOC!Tiered VS Tierless|book{1}}{63-64}
+\indexentry{Tiering|book{1}}{63-64}
+\indexentry{Retention|book{1}}{64}
+\indexentry{SOC!Duty|book{1}}{65}
+\indexentry{Shift|book{1}}{65}
+\indexentry{Constant Operations|book{1}}{65-66}
+\indexentry{Continuous Coverage in One Location|book{1}}{66}
+\indexentry{Covering 24/7|book{1}}{66}
+\indexentry{Coverage of Operations|book{1}}{66-68}
+\indexentry{Follow-the-Sun|book{1}}{67}
+\indexentry{SOC!Survey|book{1}}{67}
+\indexentry{Shift}{67}
+\indexentry{Retention}{67}
+\indexentry{MSSP}{68-70}
+\indexentry{SLA|book{1}}{68}
+\indexentry{Service Provider|book{1}}{68-70}
+\indexentry{Service Provider!Onboarding|book{1}}{69}
+\indexentry{MSSP!Onboarding|book{1}}{69}
+\indexentry{Recruitment|book{1}}{71-82}
+\indexentry{Job Advertisement/Post|book{1}}{72-73}
+\indexentry{Dream Team|book{1}}{73}
+\indexentry{Recruitment!Hiring|book{1}}{74-75}
+\indexentry{Recruitment!Interviewing|book{1}}{76-82}
+\indexentry{Candidate Personality Characteristics|book{1}}{77}
+\indexentry{Job Hopping|book{1}}{77}
+\indexentry{Recruitment!Interviewing!Technical Tests|book{1}}{78}
+\indexentry{Technical Depth Probing|book{1}}{79}
+\indexentry{Virtual Interview|book{1}}{82}
+\indexentry{Similar To Me (Bias)|book{1}}{80}
+\indexentry{Bias|book{1}}{80-81}
+\indexentry{Interview -- Should Not Do|book{1}}{80}
+\indexentry{Recruitment!Interviewing!Should Not Do|book{1}}{80}
+\indexentry{Interview Key Items|book{1}}{81}
+\indexentry{Pre-Screening|book{1}}{82}
+\indexentry{Training|book{1}}{83-92}
+\indexentry{On-The-Job Training|book{1}}{84}
+\indexentry{Formal Training|book{1}}{84}
+\indexentry{Informal Training|book{1}}{84}
+\indexentry{Continuous Learning Model|book{1}}{86}
+\indexentry{Exposure|book{1}}{86}
+\indexentry{Experience|book{1}}{86}
+\indexentry{Education|book{1}}{86}
+\indexentry{Environment|book{1}}{86}
+\indexentry{Immediate Training|book{1}}{86}
+\indexentry{Intermediate Training|book{1}}{86}
+\indexentry{Transitional Training|book{1}}{86}
+\indexentry{Training!Plan|book{1}}{88}
+\indexentry{Immediate Training}{88}
+\indexentry{Intermediate Training}{88}
+\indexentry{Transitional Training}{88}
+\indexentry{US DoD 8140|book{1}}{88}
+\indexentry{KSA|book{1}}{89}
+\indexentry{ECSF|book{1}}{89}
+\indexentry{ENISA|book{1}}{89}
+\indexentry{NIST SP 800-181|book{1}}{89}
+\indexentry{NICE Framework (NIST)|book{1}}{89-90}
+\indexentry{Certifications|book{1}}{91}
+\indexentry{ISC@(ISC)²|book{1}}{91}
+\indexentry{SOC!Team Creation!Summary|book{1}}{92}
+\indexentry{Threat!Intelligence}{96-118}
+\indexentry{CTI|book{1}}{96-118}
+\indexentry{Collaboration|book{1}}{97}
+\indexentry{Key to Success|book{1}}{97}
+\indexentry{Community|book{1}}{97}
+\indexentry{Threat!Intelligence!Data VS Info VS Intel|book{1}}{98}
+\indexentry{Human Analysis|book{1}}{98}
+\indexentry{Joint Publication 2-0 (Joint Intel)|book{1}}{99}
+\indexentry{Recorded Future|book{1}}{99}
+\indexentry{Threat!Intelligence!Levels|book{1}}{100-101}
+\indexentry{Threat!Landscape|book{1}}{100}
+\indexentry{IOC|book{1}}{100}
+\indexentry{TTP|book{1}}{100}
+\indexentry{Contextualization|book{1}}{100}
+\indexentry{CISO|book{1}}{100}
+\indexentry{Threat!Intelligence!In The SOC|book{1}}{101}
+\indexentry{Threat!Intelligence!Sources|book{1}}{102}
+\indexentry{Threat!Intelligence!Producers \& Consumers|book{1}}{103}
+\indexentry{TIP|book{1}}{103}
+\indexentry{TIP!Remark|book{1}}{104}
+\indexentry{IOC}{103}
+\indexentry{IOC!Definition|book{1}}{104}
+\indexentry{Observable Aggregator|book{1}}{104}
+\indexentry{Threat!Intelligence!Measurement|book{1}}{105-107}
+\indexentry{False Negatives|book{1}}{105}
+\indexentry{Timeliness|book{1}}{106}
+\indexentry{Context|book{1}}{106}
+\indexentry{Accuracy|book{1}}{106}
+\indexentry{Completeness|book{1}}{106}
+\indexentry{Threat!Intelligence!Production|book{1}}{108}
+\indexentry{Intel Collection Plan|book{1}}{108}
+\indexentry{Collection Plan (Intel)|book{1}}{108}
+\indexentry{EASY Framework|book{1}}{108}
+\indexentry{Quality!Requirements|book{1}}{109}
+\indexentry{Threat!Intelligence!Questions|book{1}}{110}
+\indexentry{Cyber Kill Chain}{111}
+\indexentry{Diamond Model|book{1}}{111}
+\indexentry{F3EAD Cycle|book{1}}{111}
+\indexentry{Threat!Intelligence!Mental Models|book{1}}{111-112}
+\indexentry{IOC}{113}
+\indexentry{Speed of Intel Use|book{1}}{113}
+\indexentry{Threat!Intelligence!Speed of Use|book{1}}{113}
+\indexentry{STIX|book{1}}{114}
+\indexentry{TAXII|book{1}}{114}
+\indexentry{Threat!Intelligence!Transport|book{1}}{114}
+\indexentry{TIP}{115}
+\indexentry{Threat!Intelligence!Platform|book{1}}{115-117}
+\indexentry{Malware Configurations|book{1}}{116}
+\indexentry{Fuzzy Hashing|book{1}}{117}
+\indexentry{Sharing|book{1}}{117}
+\indexentry{PIR|book{1}}{120}
+\indexentry{SOC!Building|book{1}}{122-134}
+\indexentry{Room Layout|book{1}}{124}
+\indexentry{SOC!Virtual|book{1}}{128}
+\indexentry{COVID-19|book{1}}{128}
+\indexentry{Virtual Work|book{1}}{129}
+\indexentry{SOC!Survey}{129}
+\indexentry{SOC!Virtual}{130-131}
+\indexentry{Pairing Employees|book{1}}{130}
+\indexentry{SOC!Virtual!Onboarding|book{1}}{130}
+\indexentry{Remote Team Management|book{1}}{131}
+\indexentry{Always-On Communication Channels|book{1}}{132}
+\indexentry{Virtual Team Work|book{1}}{133}
+\indexentry{Team 4-D|book{1}}{133}
+\indexentry{Four-DX (4DX)|book{1}}{133}
+\indexentry{Strong Structure|book{1}}{133}
+\indexentry{Supportive Context|book{1}}{133}
+\indexentry{Shared Mindset|book{1}}{133}
+\indexentry{Balance of Skills|book{1}}{133}
+\indexentry{HBR|book{1}}{131-133}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{SOC!Operations|book{2}}{9}
+\indexentry{SOC!Models (Mental)|book{2}}{10-28}
+\indexentry{Technical Models|book{2}}{10}
+\indexentry{Managerial Models|book{2}}{10}
+\indexentry{Modern Defense Mindset|book{2}}{11}
+\indexentry{Presumption of Compromise|book{2}}{11}
+\indexentry{Detection-Oriented Defense|book{2}}{11}
+\indexentry{Proactive Detection|book{2}}{11}
+\indexentry{Post-Exploitation!Focus|book{2}}{11}
+\indexentry{Response-Driven Teams|book{2}}{11}
+\indexentry{Risk-Informed Strategy|book{2}}{11}
+\indexentry{Cyber Kill Chain! |book{2}}{13-14}
+\indexentry{Chronological Attack Models|book{2}}{13}
+\indexentry{Mandiant Attack Cycle|book{2}}{13}
+\indexentry{APT Modeling|book{2}}{13}
+\indexentry{Defense in Depth|book{2}}{14}
+\indexentry{Pyramid of Pain|book{2}}{15}
+\indexentry{Relevance Period|book{2}}{15}
+\indexentry{Analytic!Types|book{2}}{15}
+\indexentry{IOC! |book{2}}{15}
+\indexentry{TTP-Focused Attack Models|book{2}}{16}
+\indexentry{MITRE!ATT\&CK! |book{2}}{16-17}
+\indexentry{MITRE!ATT\&CK!Matrix|book{2}}{16}
+\indexentry{Prioritization|book{2}}{16}
+\indexentry{Incident!Response!Cycle|book{2}}{18-19}
+\indexentry{PICERL|book{2}}{18-19}
+\indexentry{NIST SP 800-61|book{2}}{18}
+\indexentry{DAIR|book{2}}{19}
+\indexentry{OODA Loop|book{2}}{20-21}
+\indexentry{Key to Success! |book{2}}{20}
+\indexentry{SOC!Loop|book{2}}{21}
+\indexentry{Attacker Loop|book{2}}{21}
+\indexentry{Attacker Loop|book{2}}{21}
+\indexentry{Leadership|book{2}}{22}
+\indexentry{Management|book{2}}{22}
+\indexentry{Infinite Games|book{2}}{23-25}
+\indexentry{Finite Games|book{2}}{23-26}
+\indexentry{Infinite Strategy|book{2}}{25}
+\indexentry{Second-Order Effects|book{2}}{25}
+\indexentry{Finite Strategy|book{2}}{25}
+\indexentry{Simon Sinek|book{2}}{23-27}
+\indexentry{SOC!Operations}{26}
+\indexentry{Infinite Strategy}{27}
+\indexentry{Continuous Improvement! |book{2}}{27}
+\indexentry{Analyst Core Toolset|book{2}}{32}
+\indexentry{SOC!Reference Systems|book{2}}{32}
+\indexentry{EDR|book{2}}{32}
+\indexentry{XDR|book{2}}{32}
+\indexentry{TIP! |book{2}}{32}
+\indexentry{IMS|book{2}}{32}
+\indexentry{CMS|book{2}}{32}
+\indexentry{SOAR|book{2}}{32}
+\indexentry{KMS|book{2}}{32}
+\indexentry{SOC!Knowledge Base|book{2}}{32}
+\indexentry{SIEM|book{2}}{32-35}
+\indexentry{Correlation|book{2}}{33}
+\indexentry{Alerting|book{2}}{33}
+\indexentry{IOC!Lookup|book{2}}{34}
+\indexentry{TIP! }{34-35}
+\indexentry{CMS}{34-35}
+\indexentry{IMS}{34-35}
+\indexentry{SOAR}{35}
+\indexentry{KMS}{36}
+\indexentry{SOC!Knowledge Base}{36}
+\indexentry{Unstructured Documents|book{2}}{36}
+\indexentry{SOC!Technology!Selection|book{2}}{37-39}
+\indexentry{AoA Process|book{2}}{37-39}
+\indexentry{Alternatives Analysis|book{2}}{37}
+\indexentry{Study Plan|book{2}}{39}
+\indexentry{Box Checking Exercise|book{2}}{39}
+\indexentry{Defensive Planning|book{2}}{40}
+\indexentry{Threat-Informed Defense|book{2}}{40}
+\indexentry{Attack Tree|book{2}}{40}
+\indexentry{SOC!Technology|book{2}}{41}
+\indexentry{Collection!Topics|book{2}}{43}
+\indexentry{Collection!System|book{2}}{44-46}
+\indexentry{Audit Policy|book{2}}{44-48}
+\indexentry{NSM|book{2}}{47}
+\indexentry{CSM|book{2}}{47}
+\indexentry{Collection!Issues|book{2}}{48}
+\indexentry{Collection!Goals|book{2}}{49}
+\indexentry{Collection!Policy|book{2}}{49}
+\indexentry{Tactical Log Collection|book{2}}{50}
+\indexentry{Collection!Strategies|book{2}}{50}
+\indexentry{Log Centralization Strategies|book{2}}{50}
+\indexentry{Input-Driven Log Centralization|book{2}}{50}
+\indexentry{Output-Driven Log Centralization|book{2}}{50}
+\indexentry{Hybrid Collection|book{2}}{50}
+\indexentry{Audit Policy!Flexibilty|book{2}}{51}
+\indexentry{SIEM!Agent|book{2}}{53}
+\indexentry{Windows Event Forwarding|book{2}}{53}
+\indexentry{Syslog Daemon|book{2}}{53}
+\indexentry{NXLog|book{2}}{53}
+\indexentry{SIEM}{54}
+\indexentry{Parsing|book{2}}{55}
+\indexentry{Categorization|book{2}}{56}
+\indexentry{Tagging|book{2}}{56}
+\indexentry{Normalization|book{2}}{56}
+\indexentry{Enrichment|book{2}}{57}
+\indexentry{Data Enrichment|book{2}}{57}
+\indexentry{Log Enrichment|book{2}}{57}
+\indexentry{High-Fidelity Rules|book{2}}{57}
+\indexentry{Host Logs|book{2}}{58}
+\indexentry{Auditd|book{2}}{58}
+\indexentry{HIDS|book{2}}{58}
+\indexentry{Authentication Events|book{2}}{58}
+\indexentry{Malware Persistence|book{2}}{58}
+\indexentry{Detection!Key Data Sources|book{2}}{58-59}
+\indexentry{Network Logs|book{2}}{59}
+\indexentry{NIDS|book{2}}{59}
+\indexentry{Lateral Movement!Protocols|book{2}}{59}
+\indexentry{NetFlow|book{2}}{59-60}
+\indexentry{Suricata|book{2}}{59}
+\indexentry{PowerShell!Remoting|book{2}}{59}
+\indexentry{QUIC|book{2}}{60}
+\indexentry{NSM!Challenge|book{2}}{60}
+\indexentry{Rogue DNS Server|book{2}}{60}
+\indexentry{TLS|book{2}}{60-63}
+\indexentry{PFS|book{2}}{61}
+\indexentry{ECH|book{2}}{61}
+\indexentry{SNI|book{2}}{61}
+\indexentry{Client Hello|book{2}}{61-62}
+\indexentry{TLS!Fingerprinting|book{2}}{62}
+\indexentry{JA4+|book{2}}{62}
+\indexentry{JARM|book{2}}{62}
+\indexentry{Firefox|book{2}}{62}
+\indexentry{Tor|book{2}}{62}
+\indexentry{Emotet|book{2}}{62}
+\indexentry{DoH|book{2}}{64-65}
+\indexentry{Rogue DNS Server}{64}
+\indexentry{Cloudflare|book{2}}{64-65}
+\indexentry{Firefox}{64-65}
+\indexentry{Windows DNS|book{2}}{64}
+\indexentry{DoT|book{2}}{65}
+\indexentry{Android|book{2}}{65}
+\indexentry{TCP/853|book{2}}{65}
+\indexentry{HTTP2/3|book{2}}{66}
+\indexentry{NSM!Cloud|book{2}}{67}
+\indexentry{Cloud Logs|book{2}}{67}
+\indexentry{Traffic Capture|book{2}}{67}
+\indexentry{Azure|book{2}}{67}
+\indexentry{AWS|book{2}}{67}
+\indexentry{GCP|book{2}}{67}
+\indexentry{Virtual Network Tap|book{2}}{67}
+\indexentry{Traffic Mirroring|book{2}}{67}
+\indexentry{Packet Mirroring|book{2}}{67}
+\indexentry{VPC Flow Logs|book{2}}{67}
+\indexentry{NSG Flow Logs|book{2}}{67}
+\indexentry{Cloud Network Visibility|book{2}}{67}
+\indexentry{Collection!Summary|book{2}}{68}
+\indexentry{MITRE!ATT\&CK! }{70-76}
+\indexentry{MITRE!ATT\&CK!Data Source Planning|book{2}}{70}
+\indexentry{MITRE!ATT\&CK!Object Types|book{2}}{71}
+\indexentry{STIX! |book{2}}{71}
+\indexentry{Data Sources|book{2}}{72}
+\indexentry{Command Execution|book{2}}{72}
+\indexentry{Process Creation|book{2}}{72}
+\indexentry{File Modification|book{2}}{72}
+\indexentry{SOC!Detection Capabilities|book{2}}{75}
+\indexentry{MITRE!Cyber Analytics Repository|book{2}}{75}
+\indexentry{Cyber Analytics Repository|book{2}}{75}
+\indexentry{MITRE!ATT\&CK!Tactic Detection Capability|book{2}}{76}
+\indexentry{Detection!Capability Ranking|book{2}}{76-77}
+\indexentry{DeTT\&CT|book{2}}{77}
+\indexentry{Data Sources}{77}
+\indexentry{Detection!Key Data Sources}{78}
+\indexentry{Alert|book{2}}{82}
+\indexentry{False Positives|book{2}}{82}
+\indexentry{False Negatives! |book{2}}{82}
+\indexentry{Alert!Count|book{2}}{83}
+\indexentry{Alert!Generation|book{2}}{85}
+\indexentry{Triage! |book{2}}{85}
+\indexentry{Capacity Planning|book{2}}{86-87}
+\indexentry{Alert!Count!Estimation|book{2}}{88}
+\indexentry{Historical Data|book{2}}{88}
+\indexentry{Survey|book{2}}{88}
+\indexentry{Probability|book{2}}{88}
+\indexentry{Workload Estimation|book{2}}{88}
+\indexentry{Alert!Count}{89-93}
+\indexentry{Alert!Count!Complicating Factors|book{2}}{90}
+\indexentry{Alert!Dashboard|book{2}}{92}
+\indexentry{Probability}{93-96}
+\indexentry{Poisson Distribution|book{2}}{93-97}
+\indexentry{Binomial Distribution|book{2}}{93}
+\indexentry{Probabilistic Modeling|book{2}}{97}
+\indexentry{Survey}{97}
+\indexentry{Phishing Alert|book{2}}{99}
+\indexentry{EDR!Alert|book{2}}{99}
+\indexentry{Network Anomalies|book{2}}{99}
+\indexentry{Probabilistic Modeling}{100}
+\indexentry{Survey}{100}
+\indexentry{Beta Distribution|book{2}}{100}
+\indexentry{Log-Normal Distribution|book{2}}{100}
+\indexentry{Normal Distribution|book{2}}{100}
+\indexentry{Bell Curve|book{2}}{100}
+\indexentry{Monte Carlo Analysis|book{2}}{102}
+\indexentry{Capacity Planning!Core Variables|book{2}}{102}
+\indexentry{Capacity Planning!Summary|book{2}}{103}
+\indexentry{SOC!Members \& Data|book{2}}{107-124}
+\indexentry{Lateral Movement|book{2}}{108}
+\indexentry{Separation of Accounts|book{2}}{109-112}
+\indexentry{Privileged Accounts|book{2}}{109-112}
+\indexentry{Authentication Systems|book{2}}{113}
+\indexentry{Malware Analysis!Workstations|book{2}}{114}
+\indexentry{Quarantine!Zone|book{2}}{114}
+\indexentry{Collection!Protection|book{2}}{116}
+\indexentry{Collection!Diagram|book{2}}{117}
+\indexentry{Lateral Movement}{117}
+\indexentry{SOC!Enclave|book{2}}{118}
+\indexentry{Internet Connections|book{2}}{119}
+\indexentry{SOC!Cloud Data|book{2}}{120}
+\indexentry{SOC!Enclave}{120}
+\indexentry{Key to Success! }{120}
+\indexentry{Passkeys|book{2}}{121}
+\indexentry{FIDO|book{2}}{121}
+\indexentry{Passwordless|book{2}}{121}
+\indexentry{Authenticator|book{2}}{121}
+\indexentry{Hardware Token|book{2}}{121}
+\indexentry{Authentication Methods|book{2}}{121}
+\indexentry{Zero Trust|book{2}}{122-123}
+\indexentry{Perimeter Model|book{2}}{122}
+\indexentry{Entra ID|book{2}}{123}
+\indexentry{IdP|book{2}}{123}
+\indexentry{Ransomware|book{2}}{123}
+\indexentry{SOC!Members \& Data!Summary|book{2}}{125}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Blue Team|book{3}}{8}
+\indexentry{Standardization|book{3}}{8}
+\indexentry{YARA|book{3}}{8}
+\indexentry{Sigma|book{3}}{8}
+\indexentry{Jupyter|book{3}}{8}
+\indexentry{BinderHub|book{3}}{8}
+\indexentry{MITRE|book{3}}{9}
+\indexentry{Countermeasures|book{3}}{9}
+\indexentry{Deception|book{3}}{9}
+\indexentry{Adversary Engagement|book{3}}{9}
+\indexentry{Adversary Vulnerabilities|book{3}}{9}
+\indexentry{Goals|book{3}}{9}
+\indexentry{YARA}{10}
+\indexentry{Sigma}{11-15}
+\indexentry{Vendor Lock-In|book{3}}{12}
+\indexentry{OSCD|book{3}}{12}
+\indexentry{Gap Analysis|book{3}}{13}
+\indexentry{Sigma!Rule Format|book{3}}{13}
+\indexentry{YAML|book{3}}{13}
+\indexentry{SPL (Splunk)|book{3}}{14}
+\indexentry{AQL (QRadar)|book{3}}{14}
+\indexentry{Jupyter!Notebooks|book{3}}{16}
+\indexentry{Sentinel!Notebooks|book{3}}{16}
+\indexentry{Data Sets|book{3}}{17}
+\indexentry{Analytic!Testing!Tools|book{3}}{17}
+\indexentry{Mordor|book{3}}{17}
+\indexentry{PCAP|book{3}}{17}
+\indexentry{Splunk|book{3}}{17}
+\indexentry{Secrepo|book{3}}{17}
+\indexentry{Automated Lab Environments|book{3}}{18}
+\indexentry{Splunk!Attack Range|book{3}}{18}
+\indexentry{Atomic Red Team|book{3}}{18}
+\indexentry{CI/CD|book{3}}{18}
+\indexentry{Attack Simulation|book{3}}{18}
+\indexentry{Analytic|book{3}}{19}
+\indexentry{TTP! |book{3}}{19}
+\indexentry{File Detection Analytics|book{3}}{19}
+\indexentry{Log Detection Analytics|book{3}}{19}
+\indexentry{Detection!System|book{3}}{22-23}
+\indexentry{Analytic!Scope|book{3}}{22}
+\indexentry{Collection!System! |book{3}}{22}
+\indexentry{Centralized Events|book{3}}{22}
+\indexentry{Detection!Reliable|book{3}}{24}
+\indexentry{False Negatives!  |book{3}}{25-26}
+\indexentry{False Positives! |book{3}}{25-26}
+\indexentry{True Positives|book{3}}{25}
+\indexentry{Alerting!Threshold|book{3}}{26}
+\indexentry{Alert!Volume|book{3}}{27}
+\indexentry{Alert!Fatigue|book{3}}{27}
+\indexentry{Key to Success!  |book{3}}{28}
+\indexentry{Analytics Downstream|book{3}}{28}
+\indexentry{Correlation! |book{3}}{28}
+\indexentry{Enrichment! |book{3}}{28}
+\indexentry{Post Enrichment|book{3}}{28}
+\indexentry{CVE|book{3}}{28}
+\indexentry{False Positives!Assessment|book{3}}{29}
+\indexentry{Analytic!Accuracy|book{3}}{29}
+\indexentry{Alert!Disposition|book{3}}{30-33}
+\indexentry{Triage!Queue|book{3}}{30}
+\indexentry{IMS! |book{3}}{30}
+\indexentry{False Positives!Tuning|book{3}}{31}
+\indexentry{Alert!High Volume|book{3}}{33}
+\indexentry{Alert!Priority|book{3}}{33}
+\indexentry{Key to Success!  }{33}
+\indexentry{Use Case|book{3}}{33-34}
+\indexentry{Alert!Non-Actionable|book{3}}{34}
+\indexentry{RFC Specification|book{3}}{34}
+\indexentry{Noise|book{3}}{34}
+\indexentry{Alert!Aggregation|book{3}}{35}
+\indexentry{Risk Based Scoring|book{3}}{35}
+\indexentry{Advanced Attacks|book{3}}{35}
+\indexentry{Alert!Count!Dependencies|book{3}}{36}
+\indexentry{Detection! |book{3}}{41}
+\indexentry{Investigation! |book{3}}{41}
+\indexentry{Triage!  |book{3}}{41}
+\indexentry{Key to Success!  }{41}
+\indexentry{Tiering! |book{3}}{42}
+\indexentry{Rotating Duty|book{3}}{42}
+\indexentry{Alert!Queue|book{3}}{42-43}
+\indexentry{MSSP! |book{3}}{43-44}
+\indexentry{MSSP!Hybrid Model|book{3}}{43-44}
+\indexentry{Hybrid Model|book{3}}{43-44}
+\indexentry{High-Priority Alerts|book{3}}{44}
+\indexentry{Alert!Priority}{44}
+\indexentry{Triage!Requirements|book{3}}{45}
+\indexentry{Triage!Place|book{3}}{46}
+\indexentry{Intrusion Detection Console|book{3}}{46}
+\indexentry{IMS! }{46}
+\indexentry{Triage!Software \& Features|book{3}}{47}
+\indexentry{Key to Success!  }{47}
+\indexentry{Alert!Important|book{3}}{48}
+\indexentry{Targeted Attack|book{3}}{48}
+\indexentry{Sensitive Information|book{3}}{48}
+\indexentry{Critical Infrastructure|book{3}}{48}
+\indexentry{Vulnerability|book{3}}{48}
+\indexentry{Highly Protected Subnet|book{3}}{48}
+\indexentry{Post-Exploitation|book{3}}{48}
+\indexentry{Lateral Movement! |book{3}}{48}
+\indexentry{Exfiltration|book{3}}{49}
+\indexentry{Data Destruction|book{3}}{49}
+\indexentry{Denial Of Service|book{3}}{49}
+\indexentry{Threat!Model|book{3}}{49}
+\indexentry{Attack Tactics|book{3}}{49}
+\indexentry{Data Classification|book{3}}{49}
+\indexentry{Red Team|book{3}}{49}
+\indexentry{MDO|book{3}}{50-51}
+\indexentry{Email Triage|book{3}}{50}
+\indexentry{High-Risk Accounts|book{3}}{50}
+\indexentry{Priority Account|book{3}}{50}
+\indexentry{Account Tagging|book{3}}{50}
+\indexentry{Tagging! |book{3}}{50}
+\indexentry{Triage!Optimization|book{3}}{51}
+\indexentry{Submission Explorer|book{3}}{51}
+\indexentry{Quarantine|book{3}}{51}
+\indexentry{Threat!Explorer|book{3}}{51}
+\indexentry{Campaign View|book{3}}{51}
+\indexentry{Threat!Protection|book{3}}{51}
+\indexentry{Alert!Context|book{3}}{53}
+\indexentry{Data Classification}{54}
+\indexentry{Key to Success!  }{54}
+\indexentry{Detection Engineering|book{3}}{57}
+\indexentry{Detection as Code|book{3}}{58}
+\indexentry{Githubification|book{3}}{58}
+\indexentry{Detection Engineering!Concepts|book{3}}{59}
+\indexentry{Pipeline|book{3}}{59}
+\indexentry{Lessons Learned|book{3}}{60}
+\indexentry{Adversarial Simulation|book{3}}{60}
+\indexentry{Purple Teaming|book{3}}{60}
+\indexentry{Analytic!Classification|book{3}}{61}
+\indexentry{Anomaly Detection|book{3}}{61}
+\indexentry{Use Case}{62-71}
+\indexentry{Use Case!Tracking|book{3}}{63}
+\indexentry{Use Case!Database|book{3}}{64-69}
+\indexentry{Redmine|book{3}}{65}
+\indexentry{Detection!Coverage|book{3}}{66}
+\indexentry{Coverage Check|book{3}}{66}
+\indexentry{Use Case!Development|book{3}}{67}
+\indexentry{Redmine}{68}
+\indexentry{TIP!  |book{3}}{68}
+\indexentry{Palantir ADS|book{3}}{69}
+\indexentry{False Positives!Testing|book{3}}{69}
+\indexentry{True Positives!Testing|book{3}}{69}
+\indexentry{Use Case!Example|book{3}}{70}
+\indexentry{MaGMa UCF|book{3}}{71}
+\indexentry{FI-ISAC|book{3}}{71}
+\indexentry{Cyber Kill Chain!  |book{3}}{71}
+\indexentry{OSQuery|book{3}}{72}
+\indexentry{Autoruns|book{3}}{72}
+\indexentry{Product Agnostic Analytics|book{3}}{72}
+\indexentry{Information Domain|book{3}}{72}
+\indexentry{Pseudocode|book{3}}{72}
+\indexentry{Unit Test|book{3}}{72}
+\indexentry{Detection Engineering!Prioritization|book{3}}{73}
+\indexentry{Chokepoint|book{3}}{73}
+\indexentry{SpectreOps|book{3}}{73}
+\indexentry{Intruders in the House|book{3}}{73}
+\indexentry{Detection Engineering!Maturity Models|book{3}}{74}
+\indexentry{Detection as Code}{74}
+\indexentry{DML|book{3}}{74}
+\indexentry{Intel-Driven D\&R|book{3}}{74}
+\indexentry{Use Case!Development}{75}
+\indexentry{Key to Success!  }{75}
+\indexentry{Use Case!SOC-Assisted|book{3}}{79}
+\indexentry{Supply Chain|book{3}}{79}
+\indexentry{Social Engineering|book{3}}{79}
+\indexentry{Insider Threat|book{3}}{79}
+\indexentry{DevSecOps|book{3}}{80}
+\indexentry{DevOps|book{3}}{81-86}
+\indexentry{CI/CD}{81}
+\indexentry{IaaS|book{3}}{81}
+\indexentry{Situational Awareness|book{3}}{81}
+\indexentry{DevOps!Monitoring Goals|book{3}}{82}
+\indexentry{Monitoring Goals|book{3}}{82}
+\indexentry{Development Pipeline|book{3}}{82}
+\indexentry{CI/CD!Pipeline|book{3}}{83-86}
+\indexentry{Situational Awareness}{83}
+\indexentry{Pre-Commit|book{3}}{83}
+\indexentry{Commit|book{3}}{83}
+\indexentry{Acceptance|book{3}}{83}
+\indexentry{Production|book{3}}{83}
+\indexentry{Operations|book{3}}{83}
+\indexentry{Security Monitoring|book{3}}{83}
+\indexentry{Functional Testing|book{3}}{83}
+\indexentry{Security Scanning|book{3}}{83}
+\indexentry{Data Sources! |book{3}}{83-86}
+\indexentry{Fluentd|book{3}}{85}
+\indexentry{Beats|book{3}}{85}
+\indexentry{Syslog-ng|book{3}}{85}
+\indexentry{NXLog! |book{3}}{85}
+\indexentry{Amazon CloudTrail|book{3}}{85}
+\indexentry{OWASP|book{3}}{86}
+\indexentry{Attack Surface|book{3}}{87}
+\indexentry{Supply Chain}{87-90}
+\indexentry{Security Monitoring}{88}
+\indexentry{Supply Chain!Risk Management|book{3}}{88}
+\indexentry{SCRM|book{3}}{88}
+\indexentry{Supply Chain!Monitoring Goals|book{3}}{89}
+\indexentry{Monitoring Goals}{89}
+\indexentry{Zero Trust! |book{3}}{89}
+\indexentry{Supply Chain!Data Sources|book{3}}{90}
+\indexentry{Data Sources! }{90}
+\indexentry{Threat!Intelligence! |book{3}}{90}
+\indexentry{BEC|book{3}}{91}
+\indexentry{At-Risk Users|book{3}}{91-92}
+\indexentry{BEC}{93-100}
+\indexentry{CEO Fraud|book{3}}{94}
+\indexentry{Conversation Hijacking|book{3}}{94}
+\indexentry{False Invoice|book{3}}{94}
+\indexentry{Fake Attorney|book{3}}{94}
+\indexentry{Internal Data Request|book{3}}{94}
+\indexentry{Email Protection|book{3}}{96}
+\indexentry{Email Forwarding|book{3}}{96}
+\indexentry{SPF|book{3}}{96}
+\indexentry{DKIM|book{3}}{96}
+\indexentry{DMARC|book{3}}{96}
+\indexentry{Credential Theft Prevention|book{3}}{96}
+\indexentry{Identity Protection|book{3}}{96}
+\indexentry{Spoofed Email|book{3}}{96}
+\indexentry{BEC!Prevention|book{3}}{96}
+\indexentry{Lookalike Domain|book{3}}{96}
+\indexentry{Consent Grant Attacks|book{3}}{96}
+\indexentry{Email Protection!Testing|book{3}}{98}
+\indexentry{Red Team}{98}
+\indexentry{BEC!Prevention}{99}
+\indexentry{PII|book{3}}{99}
+\indexentry{BEC!Summary|book{3}}{100}
+\indexentry{Insider Threat}{101-105}
+\indexentry{Disgruntled Employee|book{3}}{102}
+\indexentry{Insider Threat!Monitoring Goals|book{3}}{103}
+\indexentry{Monitoring Goals}{103}
+\indexentry{Insider Threat!Data Sources|book{3}}{104}
+\indexentry{DLP|book{3}}{104}
+\indexentry{UEBA|book{3}}{104}
+\indexentry{Data Sources! }{104}
+\indexentry{Insider Threat!Best Practices|book{3}}{105}
+\indexentry{NDA|book{3}}{105}
+\indexentry{Acceptable Use Policies|book{3}}{105}
+\indexentry{Segregation of Duties|book{3}}{105}
+\indexentry{Job Rotation|book{3}}{105}
+\indexentry{Least Privilege|book{3}}{105}
+\indexentry{Use Case!SOC-Assisted}{106}
+\indexentry{Threat!Hunting! |book{3}}{108-130}
+\indexentry{Threat!Hunting!What|book{3}}{109}
+\indexentry{Threat|book{3}}{109}
+\indexentry{Threat!Hunting!Why|book{3}}{111}
+\indexentry{Unknown Unknowns|book{3}}{111}
+\indexentry{Threat!Hunting!Who|book{3}}{112}
+\indexentry{Ideal Hunter|book{3}}{112}
+\indexentry{Threat!Hunting!When|book{3}}{113}
+\indexentry{Presumption of Compromise! |book{3}}{113}
+\indexentry{Data Quality|book{3}}{114}
+\indexentry{Security Monitoring}{115}
+\indexentry{Visibility|book{3}}{115}
+\indexentry{Threat!Hunting!How|book{3}}{115-117}
+\indexentry{Threat!Hunting!Process|book{3}}{116}
+\indexentry{Threat!Hunting!Example|book{3}}{118}
+\indexentry{SMB|book{3}}{118}
+\indexentry{Event ID 4624|book{3}}{118}
+\indexentry{Threat!Hunting!Options!IOC-Focused|book{3}}{120}
+\indexentry{DGA|book{3}}{120}
+\indexentry{Threat!Hunting!Options!TTP-Focused|book{3}}{121-122}
+\indexentry{Registry Run Keys|book{3}}{121}
+\indexentry{MITRE!ATT\&CK!  |book{3}}{121-123}
+\indexentry{Cyber Kill Chain!  }{122}
+\indexentry{Mandiant Attack Cycle! |book{3}}{122}
+\indexentry{Threat!Hunting!Options!Actor-Focused|book{3}}{123}
+\indexentry{Anomaly Investigation|book{3}}{124}
+\indexentry{Stack Ranking|book{3}}{124}
+\indexentry{Long-Tail Analysis|book{3}}{124}
+\indexentry{Threat!Hunting!Options|book{3}}{125}
+\indexentry{Threat!Hunting!Where|book{3}}{126}
+\indexentry{Post-Exploitation}{126}
+\indexentry{Lateral Movement! }{126}
+\indexentry{Privileged Accounts!Usage|book{3}}{126}
+\indexentry{Local Accounts Used Over the Network|book{3}}{126}
+\indexentry{Unexpected Protocols Outbound|book{3}}{126}
+\indexentry{Persistence Mechanisms|book{3}}{126}
+\indexentry{Backdoor|book{3}}{126}
+\indexentry{Data Exfiltration|book{3}}{126}
+\indexentry{Threat!Hunting!Value|book{3}}{127}
+\indexentry{Threat!Hunting!Reference Guides|book{3}}{129}
+\indexentry{Atomic Red Team}{129}
+\indexentry{Threat!Hunting!Summary|book{3}}{130}
+\indexentry{Active Defense|book{3}}{134-147}
+\indexentry{Canaries|book{3}}{134}
+\indexentry{Deception}{134}
+\indexentry{Honeypots|book{3}}{134}
+\indexentry{Tripwires|book{3}}{134}
+\indexentry{Active Defense!Goals|book{3}}{135-139}
+\indexentry{OODA Loop! |book{3}}{136}
+\indexentry{Breach Detection|book{3}}{137}
+\indexentry{Website Clone|book{3}}{138}
+\indexentry{Social Engineering!Toolkit|book{3}}{138}
+\indexentry{Active Defense!Example|book{3}}{138}
+\indexentry{Honey Documents|book{3}}{139}
+\indexentry{Web-Bugged Email|book{3}}{139}
+\indexentry{Location Logging|book{3}}{139}
+\indexentry{Legal Approval|book{3}}{139}
+\indexentry{Active Defense!Frameworks|book{3}}{140}
+\indexentry{CISO! |book{3}}{140}
+\indexentry{Strategic Planning|book{3}}{140}
+\indexentry{Adversary Engagement}{140}
+\indexentry{TTP! }{140}
+\indexentry{MITRE!Engage Matrix|book{3}}{141}
+\indexentry{MITRE!ATT\&CK!Mapping|book{3}}{141}
+\indexentry{Active Defense!Example}{142}
+\indexentry{Lures|book{3}}{142}
+\indexentry{Adversary Engagement!Techniques|book{3}}{144}
+\indexentry{OPSEC|book{3}}{144}
+\indexentry{Active Defense!When|book{3}}{145}
+\indexentry{False Positives! }{145}
+\indexentry{Active Defense!Mistakes|book{3}}{146}
+\indexentry{Active Defense!Summary|book{3}}{147}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Preparation|book{4}}{7}
+\indexentry{Intel-Driven IR|book{4}}{7}
+\indexentry{Incident!Response!Goals|book{4}}{8}
+\indexentry{Systems|book{4}}{9}
+\indexentry{Preparation}{10}
+\indexentry{Prevention|book{4}}{10}
+\indexentry{CIS Benchmarks|book{4}}{11}
+\indexentry{Hardening Requirements|book{4}}{11-12}
+\indexentry{PCI-DSS! |book{4}}{11}
+\indexentry{ISO27001! |book{4}}{11}
+\indexentry{SOX! |book{4}}{11}
+\indexentry{HIPAA! |book{4}}{11}
+\indexentry{Hardening Resources|book{4}}{12}
+\indexentry{NIST SP 800-123|book{4}}{12}
+\indexentry{NIST National Checklist Program|book{4}}{12}
+\indexentry{DISA|book{4}}{12}
+\indexentry{STIG|book{4}}{12}
+\indexentry{HITRUST|book{4}}{12}
+\indexentry{CMMC|book{4}}{12}
+\indexentry{Australian Signals Directorate|book{4}}{12}
+\indexentry{ACSC System Configuration Guides|book{4}}{12}
+\indexentry{CIS Controls|book{4}}{13}
+\indexentry{Defense in Depth! |book{4}}{13}
+\indexentry{Offense Informs Defense|book{4}}{13}
+\indexentry{Baselines|book{4}}{14}
+\indexentry{Secure Configurations|book{4}}{14}
+\indexentry{Preventative Controls|book{4}}{14}
+\indexentry{Sources of Truth|book{4}}{14}
+\indexentry{Incident!Response!Governance|book{4}}{15}
+\indexentry{Policy|book{4}}{15}
+\indexentry{Plan|book{4}}{15}
+\indexentry{Procedure|book{4}}{15}
+\indexentry{Incident!Response!Policy|book{4}}{16}
+\indexentry{Incident!Response!Plan|book{4}}{17}
+\indexentry{Incident!Response!Procedures|book{4}}{18-19}
+\indexentry{NIST SP 800-61! |book{4}}{18}
+\indexentry{Preparation}{18}
+\indexentry{Containment|book{4}}{18}
+\indexentry{Eradication|book{4}}{18}
+\indexentry{Recovery|book{4}}{18}
+\indexentry{Post-Incident Activity|book{4}}{18}
+\indexentry{BCP|book{4}}{19}
+\indexentry{Incident!Response!Team|book{4}}{20-25}
+\indexentry{Incident!Response!Team!Staffing|book{4}}{21}
+\indexentry{Multi-Team Systems|book{4}}{22-25}
+\indexentry{Teamwork|book{4}}{23}
+\indexentry{Taskwork|book{4}}{23}
+\indexentry{Cross-Team Coordination|book{4}}{24-25}
+\indexentry{Goals!Hiearchy|book{4}}{24}
+\indexentry{Interaction Diagram|book{4}}{25}
+\indexentry{Incident!Response! |book{4}}{26}
+\indexentry{Incident!Management|book{4}}{26}
+\indexentry{CIA|book{4}}{26}
+\indexentry{SME|book{4}}{26}
+\indexentry{Preparation!Summary|book{4}}{27}
+\indexentry{Key to Success!   |book{4}}{27}
+\indexentry{Defensible Network Architecture|book{4}}{27}
+\indexentry{Incident|book{4}}{31-32}
+\indexentry{Incident!Identification|book{4}}{31}
+\indexentry{CSM! |book{4}}{32}
+\indexentry{NSM! |book{4}}{32}
+\indexentry{Forensic Analysis|book{4}}{32}
+\indexentry{Incident!Lead|book{4}}{33-34}
+\indexentry{Incident!Response!Roles|book{4}}{33-34}
+\indexentry{SME}{34}
+\indexentry{Liaison|book{4}}{34}
+\indexentry{Scribe|book{4}}{34}
+\indexentry{Intentional Evidence|book{4}}{35}
+\indexentry{Unintentional Evidence|book{4}}{35}
+\indexentry{Data Sources!Intentional|book{4}}{35}
+\indexentry{Data Sources!Unintentional|book{4}}{35}
+\indexentry{Assets Tracking|book{4}}{35}
+\indexentry{Asset Management System|book{4}}{35}
+\indexentry{Inventory Management System|book{4}}{35}
+\indexentry{Vulnerability!Management System|book{4}}{35}
+\indexentry{DHCP Lease|book{4}}{35}
+\indexentry{PCI-DSS! }{36}
+\indexentry{HIPAA! |}{36}
+\indexentry{FISMA|book{4}}{36}
+\indexentry{Compliance Requirements|book{4}}{36}
+\indexentry{Life Safety Assessment|book{4}}{36}
+\indexentry{Compliance Assessment|book{4}}{36}
+\indexentry{NIST SP 800-61! }{37}
+\indexentry{VERIS Framework|book{4}}{37-38}
+\indexentry{Event Recording Vocabulary|book{4}}{37}
+\indexentry{Functional Impact|book{4}}{37}
+\indexentry{Information Impact|book{4}}{37}
+\indexentry{Recoverability Effort|book{4}}{37}
+\indexentry{MITRE!ATT\&CK!   |book{4}}{38}
+\indexentry{Incident!Categorization|book{4}}{38}
+\indexentry{Incident!Data Tracking|book{4}}{38}
+\indexentry{TTP!  |book{4}}{38}
+\indexentry{Threat!Model! |book{4}}{38}
+\indexentry{Forensic Analysis}{39}
+\indexentry{Investigation!  |book{4}}{39}
+\indexentry{Response|book{4}}{39}
+\indexentry{Volatile Evidence|book{4}}{39}
+\indexentry{Initial Point of Entry/Infection|book{4}}{39}
+\indexentry{EDR! |book{4}}{39}
+\indexentry{SOAR! |book{4}}{39}
+\indexentry{Memory Forensics|book{4}}{39}
+\indexentry{Playbook|book{4}}{40-43}
+\indexentry{Incident!Response!Plan}{40}
+\indexentry{Incident!History|book{4}}{40}
+\indexentry{Playbook!Example|book{4}}{41}
+\indexentry{SOAR! }{41-42}
+\indexentry{Alert!Playbook Trigger|book{4}}{42}
+\indexentry{IMS!  |book{4}}{42-43}
+\indexentry{Case Templates|book{4}}{42}
+\indexentry{ACM|book{4}}{43}
+\indexentry{Case Management|book{4}}{43}
+\indexentry{Incident!Data Tracking}{44}
+\indexentry{TTP!  }{44}
+\indexentry{Cyber Kill Chain!   |book{4}}{44}
+\indexentry{Timeline|book{4}}{44-45}
+\indexentry{Initial Compromise|book{4}}{45}
+\indexentry{Communication|book{4}}{46-47}
+\indexentry{Incident!Response!Communication|book{4}}{46-47}
+\indexentry{SME}{47}
+\indexentry{Collaboration!Real-Time|book{4}}{48}
+\indexentry{OPSEC! |book{4}}{48}
+\indexentry{Data Privacy|book{4}}{48}
+\indexentry{Compromised Assets|book{4}}{49}
+\indexentry{Incident!Awareness|book{4}}{49}
+\indexentry{Incident!Identification!Summary|book{4}}{50}
+\indexentry{Key to Success!   }{50}
+\indexentry{Forensic Analysis}{54-58}
+\indexentry{Live Response|book{4}}{54}
+\indexentry{WMI|book{4}}{54}
+\indexentry{PowerShell|book{4}}{54}
+\indexentry{Full Packet Capture|book{4}}{54}
+\indexentry{Forensic Analysis!Types|book{4}}{55}
+\indexentry{Digital Media Analysis|book{4}}{56}
+\indexentry{Artifacts Analysis|book{4}}{56}
+\indexentry{Incident!Response!Toolset|book{4}}{57}
+\indexentry{PowerShell}{57}
+\indexentry{WMI}{57}
+\indexentry{OSQuery! |book{4}}{57}
+\indexentry{EDR! }{57}
+\indexentry{NDR|book{4}}{57}
+\indexentry{XDR! |book{4}}{57}
+\indexentry{Forensic Analysis!Considerations|book{4}}{58}
+\indexentry{Credentials|book{4}}{59}
+\indexentry{Interactive Logons|book{4}}{59}
+\indexentry{Noninteractive Logons|book{4}}{59}
+\indexentry{PsExec|book{4}}{59}
+\indexentry{RunAs|book{4}}{59}
+\indexentry{RDP|book{4}}{59-60}
+\indexentry{VNC|book{4}}{59}
+\indexentry{Password Hash|book{4}}{59}
+\indexentry{Remote File Share|book{4}}{59}
+\indexentry{Kerberos TGT|book{4}}{59-60}
+\indexentry{Credentials!Protection|book{4}}{60}
+\indexentry{Restricted Admin Mode|book{4}}{60}
+\indexentry{LAPS|book{4}}{60}
+\indexentry{SMB! |book{4}}{60}
+\indexentry{Windows Defender|book{4}}{60}
+\indexentry{Remote Credential Guard|book{4}}{60}
+\indexentry{Local Admin Group|book{4}}{60}
+\indexentry{Pass-the-Hash|book{4}}{60}
+\indexentry{Pass-the-Ticket|book{4}}{60}
+\indexentry{Ticket Lifetime|book{4}}{60}
+\indexentry{PowerShell!Remoting! |book{4}}{60-61}
+\indexentry{Windows 7 / Server 2008 R2|book{4}}{60}
+\indexentry{Windows 10|book{4}}{60}
+\indexentry{EDR! }{60}
+\indexentry{WinRM|book{4}}{61}
+\indexentry{Persistence Mechanisms! |book{4}}{61}
+\indexentry{Scheduled Tasks|book{4}}{61}
+\indexentry{Registry Run Keys! |book{4}}{61}
+\indexentry{Agentless|book{4}}{61}
+\indexentry{WMF|book{4}}{61}
+\indexentry{PsExec}{62}
+\indexentry{Sysinternals Suite|book{4}}{62}
+\indexentry{Telnet|book{4}}{62}
+\indexentry{Remote Command Execution|book{4}}{62}
+\indexentry{WMI}{63}
+\indexentry{Credentials}{62}
+\indexentry{Data Sources!Robust|book{4}}{63}
+\indexentry{Alerting!Real-Time|book{4}}{63}
+\indexentry{Autoruns! |book{4}}{63}
+\indexentry{EDR! }{64}
+\indexentry{HIDS! |book{4}}{64}
+\indexentry{FireEye|book{4}}{64}
+\indexentry{CrowdStrike|book{4}}{64}
+\indexentry{Microsoft!Defender|book{4}}{64}
+\indexentry{Wazuh|book{4}}{64}
+\indexentry{Threat!Hunting!Tools|book{4}}{64}
+\indexentry{Forensic Analysis!Tools|book{4}}{64-69}
+\indexentry{NDR}{65}
+\indexentry{Anomaly-Based Network Intrusion Detection|book{4}}{65}
+\indexentry{NSM! }{65}
+\indexentry{Encrypted Traffic Monitoring|book{4}}{65}
+\indexentry{DarkTrace|book{4}}{65}
+\indexentry{ExtraHop|book{4}}{65}
+\indexentry{Fidelis|book{4}}{65}
+\indexentry{XDR! }{66}
+\indexentry{Cisco|book{4}}{66}
+\indexentry{Palo Alto|book{4}}{66}
+\indexentry{FireEye}{66}
+\indexentry{VMWare|book{4}}{66}
+\indexentry{Microsoft|book{4}}{66}
+\indexentry{Malware Analysis|book{4}}{67-68}
+\indexentry{Automated Analysis|book{4}}{67}
+\indexentry{Manual Analysis|book{4}}{67}
+\indexentry{OPSEC! }{68}
+\indexentry{Malware Analysis!Tools|book{4}}{68}
+\indexentry{YARA! |book{4}}{68}
+\indexentry{FLOSS|book{4}}{68}
+\indexentry{FireEye}{68}
+\indexentry{KSA! |book{4}}{69}
+\indexentry{Incident!Response!Plan}{69}
+\indexentry{SLA! |book{4}}{69}
+\indexentry{Forensic Analysis!Training|book{4}}{70}
+\indexentry{Applied Incident Response|book{4}}{70}
+\indexentry{Incident!Response!First Actions|book{4}}{72}
+\indexentry{Containment}{72}
+\indexentry{OPSEC! }{72}
+\indexentry{PICERL! |book{4}}{72}
+\indexentry{C2 Infrastructure|book{4}}{72}
+\indexentry{Stop the Bleeding|book{4}}{72-73}
+\indexentry{Containment!Strategies|book{4}}{72}
+\indexentry{Non-Critical Systems|book{4}}{72}
+\indexentry{Containment!Procedures|book{4}}{73}
+\indexentry{Foothold|book{4}}{73}
+\indexentry{Eradication!Plan|book{4}}{73}
+\indexentry{Containment!Actions|book{4}}{74}
+\indexentry{Isolation|book{4}}{74}
+\indexentry{Blocking|book{4}}{74}
+\indexentry{Host-Based Firewall|book{4}}{74}
+\indexentry{Eradication}{75}
+\indexentry{Eradication!Strategies|book{4}}{75}
+\indexentry{Antivirus|book{4}}{75}
+\indexentry{Wiping|book{4}}{75}
+\indexentry{Rebuild|book{4}}{75}
+\indexentry{Removal|book{4}}{75}
+\indexentry{Surgical Removal|book{4}}{75}
+\indexentry{Watch \& Learn|book{4}}{75-76}
+\indexentry{Criticality|book{4}}{75}
+\indexentry{TTP!  }{75}
+\indexentry{Commodity Malware|book{4}}{76}
+\indexentry{Mass Malware|book{4}}{76}
+\indexentry{Targeted Malware|book{4}}{76}
+\indexentry{OPSEC! }{76}
+\indexentry{Evidence|book{4}}{77}
+\indexentry{Evidence!Preservation|book{4}}{77}
+\indexentry{Chain of Custody|book{4}}{77}
+\indexentry{Containment!Summary|book{4}}{78}
+\indexentry{Eradication!Summary|book{4}}{78}
+\indexentry{Incident!Response!Cloud|book{4}}{80-87}
+\indexentry{Preparation}{80}
+\indexentry{Non-Default Events|book{4}}{80}
+\indexentry{CSP|book{4}}{80}
+\indexentry{KSA! }{80}
+\indexentry{OCSF|book{4}}{82}
+\indexentry{MITRE!ATT\&CK!Cloud Matrix|book{4}}{82}
+\indexentry{Threat!Detection!Open Standard|book{4}}{82}
+\indexentry{Taxonomy|book{4}}{82}
+\indexentry{Normalization! |book{4}}{82}
+\indexentry{Prioritization! |book{4}}{83}
+\indexentry{Purple Teaming! |book{4}}{83}
+\indexentry{Threat!Detection|book{4}}{84}
+\indexentry{Anomaly Detection! |book{4}}{84}
+\indexentry{User Account Activity|book{4}}{84}
+\indexentry{Inventory|book{4}}{84}
+\indexentry{Investigation!  }{85}
+\indexentry{Retention!Strategy|book{4}}{85}
+\indexentry{Evidence!Handling|book{4}}{85}
+\indexentry{Cloud Native Tools|book{4}}{85}
+\indexentry{Funcions-as-a-Service|book{4}}{85}
+\indexentry{AWS Lambda|book{4}}{85}
+\indexentry{Google Cloud Functions|book{4}}{85}
+\indexentry{Azure Functions|book{4}}{85}
+\indexentry{Containment}{86}
+\indexentry{Eradication}{86}
+\indexentry{Service Domain|book{4}}{86}
+\indexentry{Infrastructure Domain|book{4}}{86}
+\indexentry{Application Domain|book{4}}{86}
+\indexentry{Ephemerality|book{4}}{86}
+\indexentry{Portability|book{4}}{86}
+\indexentry{Telemetry|book{4}}{87}
+\indexentry{CSP}{87}
+\indexentry{ACH|book{4}}{89}
+\indexentry{Investigation!Tactics|book{4}}{90-93}
+\indexentry{Externalization|book{4}}{90}
+\indexentry{Alexiou Principle|book{4}}{91}
+\indexentry{Decomposition|book{4}}{90-92}
+\indexentry{Cyber Kill Chain!   }{92}
+\indexentry{Diamond Model! |book{4}}{92}
+\indexentry{MITRE!ATT\&CK!   }{92}
+\indexentry{Analysis Writeup Example|book{4}}{92}
+\indexentry{IMS!  }{92}
+\indexentry{Externalization}{93}
+\indexentry{Maltego|book{4}}{93}
+\indexentry{Investigation!Mindset|book{4}}{94}
+\indexentry{Investigation!Bias|book{4}}{95-98}
+\indexentry{Disconfirmation|book{4}}{95}
+\indexentry{Evidence!Disconfirmation / Disproval|book{4}}{95}
+\indexentry{Bias! |book{4}}{96-97}
+\indexentry{Confirmation Bias|book{4}}{96}
+\indexentry{Perception!Bias|book{4}}{97}
+\indexentry{Selective Attention Test|book{4}}{97}
+\indexentry{Probability!Estimation Bias|book{4}}{97}
+\indexentry{Evidence!Evaluation Bias|book{4}}{97}
+\indexentry{Missing Information|book{4}}{97}
+\indexentry{Causality Bias|book{4}}{97}
+\indexentry{Confirmation Bias}{98}
+\indexentry{Key to Success!   }{99}
+\indexentry{Threat!Intelligence!Bias|book{4}}{98}
+\indexentry{Brainstorming|book{4}}{98}
+\indexentry{Evidence-Focused Analysis|book{4}}{98}
+\indexentry{Hypothesis Refutation|book{4}}{98}
+\indexentry{ACH}{98}
+\indexentry{Morphological Matrix|book{4}}{99}
+\indexentry{ACH!Methodology|book{4}}{100}
+\indexentry{Hypothesis Refutation}{100}
+\indexentry{Relative Likelihood|book{4}}{100}
+\indexentry{ACH}{100-103}
+\indexentry{ACH!Example|book{4}}{101}
+\indexentry{WannaCry|book{4}}{101}
+\indexentry{Lazarus Group|book{4}}{101}
+\indexentry{EternalBlue|book{4}}{101}
+\indexentry{Incident!Response!Findings|book{4}}{103}
+\indexentry{Evidence!Organization|book{4}}{103}
+\indexentry{Link Analysis Diagram|book{4}}{103-105}
+\indexentry{Event Matrix Diagram|book{4}}{103}
+\indexentry{Externalization}{103}
+\indexentry{Maltego!Casefile|book{4}}{103}
+\indexentry{Event Matrix Diagram}{105}
+\indexentry{Timeline}{105}
+\indexentry{Self-Review|book{4}}{106}
+\indexentry{Peer Review|book{4}}{106}
+\indexentry{Investigation!Quality|book{4}}{106}
+\indexentry{Premortem Analysis|book{4}}{107}
+\indexentry{Conslusion Testing|book{4}}{107}
+\indexentry{Prediction|book{4}}{107}
+\indexentry{Overconfidence|book{4}}{107}
+\indexentry{Structured Self-Critique|book{4}}{108}
+\indexentry{Investigation!Quality}{109-110}
+\indexentry{Case Review|book{4}}{109-110}
+\indexentry{Periodic Review|book{4}}{110}
+\indexentry{Quality Review|book{4}}{111}
+\indexentry{Investigation!Quality!Review|book{4}}{111}
+\indexentry{Sampling|book{4}}{111}
+\indexentry{Confirmation Bias}{111}
+\indexentry{Recovery!Activities|book{4}}{115}
+\indexentry{Post-Incident Activity}{116}
+\indexentry{Post-Recovery|book{4}}{116}
+\indexentry{Threat!Intelligence!Feedback|book{4}}{116}
+\indexentry{Incident!Report|book{4}}{117}
+\indexentry{IOC!List|book{4}}{117}
+\indexentry{Root Causes|book{4}}{117}
+\indexentry{Timeline}{117}
+\indexentry{Key to Success!   }{117}
+\indexentry{Cyber Resilience Review IG|book{4}}{117}
+\indexentry{Redacted Version|book{4}}{117}
+\indexentry{MITRE!ATT\&CK!Matrix@ |book{4}}{118}
+\indexentry{IOC!  |book{4}}{118}
+\indexentry{Threat!Intelligence!Feedback}{118}
+\indexentry{Measures|book{4}}{119}
+\indexentry{Incident!Response!Secondary Goal|book{4}}{119}
+\indexentry{NIST SP 800-53! |book{4}}{119}
+\indexentry{CIS Top 20 Controls|book{4}}{119}
+\indexentry{Additional Logging|book{4}}{120}
+\indexentry{Revision of Plans and Procedures|book{4}}{121}
+\indexentry{Evidence!Review|book{4}}{121}
+\indexentry{Timeline!Review|book{4}}{121}
+\indexentry{Lessons Learned! |book{4}}{122}
+\indexentry{Post-Incident Activity!Tracking|book{4}}{123}
+\indexentry{Momentum|book{4}}{123}
+\indexentry{Continuous Improvement!  |book{4}}{124}
+\indexentry{Key to Success!   }{124}
+\indexentry{Pre-Response Briefing|book{4}}{124}
+\indexentry{Counter-Factual Thinking|book{4}}{124}
+\indexentry{Team Feedback|book{4}}{124}
+\indexentry{SKUE|book{4}}{125}
+\indexentry{Transactive Memory|book{4}}{125}
+\indexentry{SOC!Knowledge Base! |book{4}}{125}
+\indexentry{Job Rotation! |book{4}}{125}
+\indexentry{Cross-Training|book{4}}{125}
+\indexentry{Enterprise Training|book{4}}{126}
+\indexentry{Exercise (IR)|book{4}}{127-131}
+\indexentry{Exercise (IR)!Planning|book{4}}{127}
+\indexentry{Exercise (IR)!Participants|book{4}}{128}
+\indexentry{Law Enforcement|book{4}}{128}
+\indexentry{OpenBAS|book{4}}{129}
+\indexentry{Simulation Platform|book{4}}{129}
+\indexentry{Incident!Management}{130}
+\indexentry{Exercise (IR)!Common Mistakes|book{4}}{130}
+\indexentry{Exercise (IR)!Deliverables|book{4}}{131}
+\indexentry{Incident!Management!Summary|book{4}}{132}
+
+
+\comment{********************************************************************************************
+                                     FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Intrinsic Motivation|book{5}}{7}
+\indexentry{Human Capital Management|book{5}}{7-13}
+\indexentry{Human Capital Model \volume|book{5}}{8-14}
+\indexentry{Staff Retention|book{5}}{8-24}
+\indexentry{Burnout|book{5}}{8}
+\indexentry{Grounded Theory|book{5}}{8}
+\indexentry{Growth|book{5}}{9-11}
+\indexentry{Skills|book{5}}{9}
+\indexentry{Empowerment|book{5}}{9}
+\indexentry{Creativity|book{5}}{9-10}
+\indexentry{Skills}{11}
+\indexentry{Empowerment}{12-13}
+\indexentry{Creativity}{13}
+\indexentry{Automation|book{5}}{10}
+\indexentry{Continuous Learning Model! |book{5}}{11}
+\indexentry{Trust|book{5}}{12}
+\indexentry{Threat!Detection!Analytics|book{5}}{12}
+\indexentry{Peer Review! |book{5}}{12}
+\indexentry{Operational Efficiency|book{5}}{14-16}
+\indexentry{Periodic Review! |book{5}}{15}
+\indexentry{Automation}{14-15}
+\indexentry{Reflection|book{5}}{14-15}
+\indexentry{Metrics|book{5}}{16-17}
+\indexentry{Perception|book{5}}{16}
+\indexentry{Budget|book{5}}{16}
+\indexentry{Metrics!Good|book{5}}{17}
+\indexentry{Metrics!Bad|book{5}}{17}
+\indexentry{Burnout!Mitigation|book{5}}{18-19}
+\indexentry{Growth}{18-19}
+\indexentry{Skills}{18}
+\indexentry{Creativity}{19}
+\indexentry{Cherry Picking|book{5}}{18}
+\indexentry{Continuous Improvement!   |book{5}}{19}
+\indexentry{Growth!Optimal Tasks|book{5}}{20}
+\indexentry{Flow Channel|book{5}}{20-21}
+\indexentry{Deliberate Practice|book{5}}{20}
+\indexentry{Deep Work|book{5}}{21-22}
+\indexentry{Shallow Work|book{5}}{22}
+\indexentry{BEM|book{5}}{23}
+\indexentry{External Factors|book{5}}{23}
+\indexentry{Internal Factors|book{5}}{23}
+\indexentry{Burnout!Mitigation!Summary|book{5}}{24}
+\indexentry{Staff Retention!Summary|book{5}}{8-24}
+\indexentry{Human Capital Management}{24}
+\indexentry{Culture|book{5}}{24}
+\indexentry{Culture}{26-35}
+\indexentry{Culture!Improvement|book{5}}{27}
+\indexentry{Teamwork! |book{5}}{27}
+\indexentry{Culture!Problems|book{5}}{28}
+\indexentry{Personality Types|book{5}}{28}
+\indexentry{Heretic|book{5}}{28}
+\indexentry{Flake|book{5}}{28}
+\indexentry{Jerk|book{5}}{28}
+\indexentry{Prophet of Rage|book{5}}{28}
+\indexentry{Culture!Breaking|book{5}}{28-29}
+\indexentry{Negative Incentives|book{5}}{29}
+\indexentry{Culture!Common Mistakes|book{5}}{29}
+\indexentry{Management Debt|book{5}}{30}
+\indexentry{Two in the Box|book{5}}{31}
+\indexentry{Performance Management|book{5}}{33}
+\indexentry{Seniority|book{5}}{33}
+\indexentry{Direct Feedback|book{5}}{33}
+\indexentry{Culture!Summary|book{5}}{35}
+\indexentry{Management Debt}{35}
+\indexentry{Metrics!Motivation|book{5}}{37}
+\indexentry{Execution!Disciplines \volume|book{5}}{39}
+\indexentry{OKR!System|book{5}}{39}
+\indexentry{Key to Success!    |book{5}}{40}
+\indexentry{Daily Operations|book{5}}{40}
+\indexentry{Improvement Initiatives|book{5}}{40}
+\indexentry{Metrics!Definition|book{5}}{41}
+\indexentry{KPI|book{5}}{42}
+\indexentry{Target Value|book{5}}{42}
+\indexentry{Daily Operations!Monitoring|book{5}}{42}
+\indexentry{OKR|book{5}}{42-43}
+\indexentry{Start Value|book{5}}{43}
+\indexentry{Metrics!Interaction|book{5}}{44}
+\indexentry{KPI!Interaction|book{5}}{44}
+\indexentry{OKR!Interaction|book{5}}{44}
+\indexentry{Goals! |book{5}}{45}
+\indexentry{KPI}{45}
+\indexentry{OKR}{45}
+\indexentry{Metrics!Derivation Process|book{5}}{46-56}
+\indexentry{Goals!Metrics Derivation Process|book{5}}{46-56}
+\indexentry{Goals! }{47-48}
+\indexentry{OKR!Metrics Derivation Process|book{5}}{46-56}
+\indexentry{Strategies of a World-Class SOC \volume|book{5}}{47}
+\indexentry{Metrics!Mapping to Goals|book{5}}{49}
+\indexentry{Goals!Top-Down Alignment|book{5}}{49}
+\indexentry{Top-Down Derived Metrics|book{5}}{49}
+\indexentry{GQM|book{5}}{49}
+\indexentry{Metrics!Good}{50-51}
+\indexentry{Security Metrics \volume|book{5}}{50}
+\indexentry{Metrics!Rate|book{5}}{51}
+\indexentry{OODA Loop!  |book{5}}{51}
+\indexentry{Key to Success!    }{51}
+\indexentry{Measures! |book{5}}{52}
+\indexentry{Metrics!Measurement|book{5}}{52}
+\indexentry{KPI!Identification|book{5}}{53}
+\indexentry{Target Value}{53}
+\indexentry{Customer Requirements|book{5}}{53}
+\indexentry{Stakeholder Requirements|book{5}}{53}
+\indexentry{SLA!  |book{5}}{53}
+\indexentry{MSSP!  |book{5}}{53}
+\indexentry{KPI}}{54}
+\indexentry{Metrics!Operational|book{5}}{54}
+\indexentry{VERIS Framework! |book{5}}{54}
+\indexentry{OKR!Creation|book{5}}{55}
+\indexentry{Initiatives|book{5}}{55}
+\indexentry{Objectives|book{5}}{55}
+\indexentry{Key Results|book{5}}{55}
+\indexentry{KPI!Continuous Monitoring|book{5}}{56}
+\indexentry{OKR!Continuous Monitoring|book{5}}{56}
+\indexentry{Processes|book{5}}{57}
+\indexentry{Initiatives}{57}
+\indexentry{Execution!Disciplines \volume}{58-66}
+\indexentry{Four-DX (4DX)! |book{5}}{58-66}
+\indexentry{Execution|book{5}}{58}
+\indexentry{WIG|book{5}}{58-59}
+\indexentry{Firefighting|book{5}}{58}
+\indexentry{Scoreboard|book{5}}{58}
+\indexentry{Accountability|book{5}}{58}
+\indexentry{Eisenhower Matrix|book{5}}{59}
+\indexentry{Urgency|book{5}}{59}
+\indexentry{Importance|book{5}}{59}
+\indexentry{OKR}{59}
+\indexentry{Bottleneck|book{5}}{61}
+\indexentry{Theory of Constraints|book{5}}{61}
+\indexentry{Measures! }{62}
+\indexentry{Metrics!Measurement}{62}
+\indexentry{SOC!Measurement|book{5}}{62}
+\indexentry{Measures!Lead|book{5}}{63-64}
+\indexentry{Measures!Lag|book{5}}{63-64}
+\indexentry{Scoreboard}{64-65}
+\indexentry{Accountability!Cadence|book{5}}{65}
+\indexentry{WIG}{66}
+\indexentry{Execution!Disciplines \volume!Why This Works|book{5}}{66}
+\indexentry{Metrics!Summary|book{5}}{67}
+\indexentry{Metrics!Projects|book{5}}{67}
+\indexentry{KPI!Summary|book{5}}{67}
+\indexentry{OKR!Summary|book{5}}{67}
+\indexentry{Goals!Summary|book{5}}{67}
+\indexentry{Execution!Summary|book{5}}{67}
+\indexentry{Prioritization!Importance|book{5}}{71}
+\indexentry{CVSS|book{5}}{71}
+\indexentry{Measures!Levels|book{5}}{72}
+\indexentry{Nominal|book{5}}{72-73}
+\indexentry{Ordinal|book{5}}{72-73}
+\indexentry{Interval|book{5}}{72-73}
+\indexentry{Ratio|book{5}}{72-73}
+\indexentry{Measures!Levels!Operations|book{5}}{73}
+\indexentry{Risk Matrices|book{5}}{74-75}
+\indexentry{Prioritization!Issues|book{5}}{74-82}
+\indexentry{Analysis Placebo|book{5}}{74}
+\indexentry{Ordinal}{75-76}
+\indexentry{Prioritization!Alert|book{5}}{77}
+\indexentry{Alert!Prioritization|book{5}}{77}
+\indexentry{Offense Magnitude|book{5}}{77}
+\indexentry{CVSS}{78-82}
+\indexentry{Ordinal}{78}
+\indexentry{Exploitability|book{5}}{78}
+\indexentry{Prioritization!Patching|book{5}}{78-80}
+\indexentry{Patching!Prioritization|book{5}}{78-80}
+\indexentry{FIRST|book{5}}{81}
+\indexentry{Risk of Exploitation|book{5}}{81}
+\indexentry{Exploit Availability|book{5}}{81}
+\indexentry{EPSS|book{5}}{81}
+\indexentry{Exploit Prediction|book{5}}{81}
+\indexentry{Prediction!Exploit|book{5}}{81}
+\indexentry{Temporal Score|book{5}}{81-82}
+\indexentry{Ordinal}{81}
+\indexentry{Patching|book{5}}{82}
+\indexentry{Metrics!Fixation|book{5}}{83}
+\indexentry{Goodhart's Law|book{5}}{83}
+\indexentry{Expertise|book{5}}{83}
+\indexentry{Judgement|book{5}}{83}
+\indexentry{Experience! |book{5}}{83}
+\indexentry{Gaming|book{5}}{83}
+\indexentry{Rewarding|book{5}}{83}
+\indexentry{Accountability!Cadence}{83}
+\indexentry{Measures!Problems|book{5}}{84}
+\indexentry{Qualitative Labels|book{5}}{84}
+\indexentry{Ordinal!Problem|book{5}}{84}
+\indexentry{Metrics!Problem|book{5}}{84-85}
+\indexentry{Measure Anything in Cybersecurity \volume|book{5}}{85}
+\indexentry{Analysis Placebo!Effect|book{5}}{85}
+\indexentry{Mere-Exposure Effect|book{5}}{85-86}
+\indexentry{Familiarity Principle|book{5}}{85-86}
+\indexentry{Measures!Scale|book{5}}{87}
+\indexentry{Measure Anything in Cybersecurity \volume}{87}
+\indexentry{Calibrated Probability Assessment|book{5}}{87}
+\indexentry{Probability!Calibrated Assessment|book{5}}{87}
+\indexentry{Measures!Design Recommendations|book{5}}{87-91}
+\indexentry{Metrics!Measurement!Design Recommendations|book{5}}{87-91}
+\indexentry{Ordinal!Drop Numbers|book{5}}{88}
+\indexentry{Ordinal!Mapping|book{5}}{88}
+\indexentry{Decision Tree|book{5}}{88}
+\indexentry{Qualitative Labels}{88}
+\indexentry{CVSS!Attack Vector|book{5}}{88}
+\indexentry{Patching!Prioritization!Fixed|book{5}}{88}
+\indexentry{Quantitative Risk Analysis|book{5}}{89-90}
+\indexentry{Probability! |book{5}}{89}
+\indexentry{Confidence Interval|book{5}}{89}
+\indexentry{Monte Carlo Analysis! |book{5}}{89-90}
+\indexentry{Loss Exceedance Curves|book{5}}{89-90}
+\indexentry{Risk Matrices}{89}
+\indexentry{Ransomware! |book{5}}{90}
+\indexentry{Goodhart's Law}{91}
+\indexentry{Expertise}{91}
+\indexentry{Judgement}{91}
+\indexentry{Experience! }{91}
+\indexentry{Prioritization!Issues!Summary|book{5}}{92}
+\indexentry{Measures!Problems!Summary|book{5}}{92}
+\indexentry{Automation}{94-108}
+\indexentry{Google SRE \volume|book{5}}{95-96}
+\indexentry{Automation!Evolution|book{5}}{95}
+\indexentry{Python Script|book{5}}{95}
+\indexentry{SOAR!  |book{5}}{95}
+\indexentry{EDR!  |book{5}}{95}
+\indexentry{Autonomous Systems|book{5}}{95}
+\indexentry{Engineering-First Approach|book{5}}{96}
+\indexentry{Autonomic Security Operations|book{5}}{96}
+\indexentry{Automation!Types|book{5}}{97}
+\indexentry{Integrated Automation|book{5}}{97}
+\indexentry{Conversational Automation|book{5}}{97}
+\indexentry{Cognitive Automation|book{5}}{97}
+\indexentry{Human-Like Interactions|book{5}}{97}
+\indexentry{Unstructured Data|book{5}}{97}
+\indexentry{Chat Bot|book{5}}{97}
+\indexentry{RPA|book{5}}{97}
+\indexentry{Orchestration|book{5}}{97}
+\indexentry{Playbook! |book{5}}{97}
+\indexentry{Workflow|book{5}}{97}
+\indexentry{Repetitive Tasks|book{5}}{97}
+\indexentry{Automation!4-Steps Approach|book{5}}{98-102}
+\indexentry{Opportunity for Automation|book{5}}{99}
+\indexentry{Deconstruct Task for Automation|book{5}}{100}
+\indexentry{Decomposition! |book{5}}{100}
+\indexentry{Repetitive Tasks}{100}
+\indexentry{Interactive Tasks|book{5}}{100}
+\indexentry{Consider ROI for Automation|book{5}}{101}
+\indexentry{Incremental Value|book{5}}{101}
+\indexentry{Constant Value|book{5}}{101}
+\indexentry{Negative Value|book{5}}{101}
+\indexentry{Evaluate Impact of Automation|book{5}}{102}
+\indexentry{SOAR!Categories|book{5}}{103}
+\indexentry{Enumeration|book{5}}{103}
+\indexentry{Enrichment!  |book{5}}{103-104}
+\indexentry{Incident!Response!Automation|book{5}}{103}
+\indexentry{Alert!Management|book{5}}{103}
+\indexentry{Case Management! |book{5}}{103}
+\indexentry{DNS Lookup|book{5}}{103}
+\indexentry{NETBIOS Lookup|book{5}}{103}
+\indexentry{Alert!Enrichment|book{5}}{104}
+\indexentry{Chat Bot}{104}
+\indexentry{MITRE!ATT\&CK!    |book{5}}{105}
+\indexentry{Report Processing|book{5}}{105}
+\indexentry{Threat!Report|book{5}}{105}
+\indexentry{Cognitive Automation!Example|book{5}}{105-106}
+\indexentry{Supervised Learning|book{5}}{105}
+\indexentry{Logistic Regression|book{5}}{105}
+\indexentry{Scikit Learn|book{5}}{105}
+\indexentry{Predictive Analysis|book{5}}{105}
+\indexentry{Investigative Playbook Automation|book{5}}{106}
+\indexentry{ChatGPT|book{5}}{106}
+\indexentry{Judgement!Simulation|book{5}}{106}
+\indexentry{Unstructured Data}{106}
+\indexentry{Automation!Risks|book{5}}{107}
+\indexentry{Automation!Keys to Success|book{5}}{108}
+\indexentry{Key to Success!    }{108}
+\indexentry{Analytic!Testing|book{5}}{110-113}
+\indexentry{SOC!Assessment! |book{5}}{110}
+\indexentry{Analytic!Testing!Continuous|book{5}}{111}
+\indexentry{Analytic!Testing!Methodology|book{5}}{112}
+\indexentry{Analytic!Testing!Tools@ |book{5}}{113}
+\indexentry{Atomic Red Team! |book{5}}{113}
+\indexentry{RTA|book{5}}{113}
+\indexentry{Metta|book{5}}{113}
+\indexentry{Infection Monkey|book{5}}{113}
+\indexentry{Purple Team!ATT\&CK Automation|book{5}}{113}
+\indexentry{BT3|book{5}}{113}
+\indexentry{BAS|book{5}}{113}
+\indexentry{CSV|book{5}}{113}
+\indexentry{Metasploit|book{5}}{113}
+\indexentry{Armitage|book{5}}{113}
+\indexentry{Cobalt Strike|book{5}}{113}
+\indexentry{PowerShell!Empire|book{5}}{113}
+\indexentry{Covenant|book{5}}{113}
+\indexentry{Atomic Testing|book{5}}{114}
+\indexentry{Purple Teaming!  |book{5}}{114}
+\indexentry{Red Teaming|book{5}}{114}
+\indexentry{Adversary Emulation|book{5}}{114}
+\indexentry{Blue Team! |book{5}}{115}
+\indexentry{Red Team! |book{5}}{115}
+\indexentry{Purple Team|book{5}}{115}
+\indexentry{TTP!   |book{5}}{115}
+\indexentry{Penetration Testing|book{5}}{116}
+\indexentry{Adversary Emulation}{116-117}
+\indexentry{Threat!Actor|book{5}}{116}
+\indexentry{Prevention!Testing|book{5}}{116}
+\indexentry{Detection!Testing|book{5}}{116}
+\indexentry{TTP!   }{117-118}
+\indexentry{Attack Chains|book{5}}{117}
+\indexentry{Purple Teaming!Methodology|book{5}}{118-120}
+\indexentry{Threat!Intelligence!  |book{5}}{118}
+\indexentry{Visibility! |book{5}}{119}
+\indexentry{Attack Path|book{5}}{120}
+\indexentry{Purple Teaming!Tracking Tools|book{5}}{121}
+\indexentry{Cyber Kill Chain!    |book{5}}{122}
+\indexentry{MITRE!ATT\&CK!    }{122}
+\indexentry{Assessment!Point-In-Time|book{5}}{123}
+\indexentry{Assessment!Real-Time|book{5}}{123}
+\indexentry{Compliance|book{5}}{123}
+\indexentry{BAS}{123-127}
+\indexentry{Malware Traffic|book{5}}{124-125}
+\indexentry{Cyber Kill Chain!    }{124}
+\indexentry{MITRE!ATT\&CK!    }{124}
+\indexentry{Malicious Email|book{5}}{125}
+\indexentry{Analytic!Testing}{128}
+\indexentry{SOC!Assessment!Summary|book{5}}{128}
+\indexentry{Adversary Emulation}{128}
+\indexentry{SOC!Capability Assessment|book{5}}{132-140}
+\indexentry{Capability Assessment|book{5}}{132-140}
+\indexentry{Strategic Planning! |book{5}}{132}
+\indexentry{SOC-CMM! |book{5}}{133-136}
+\indexentry{CMMI|book{5}}{133}
+\indexentry{CSF (NIST)|book{5}}{133-135}
+\indexentry{ISO27001!  |book{5}}{133}
+\indexentry{COBIT|book{5}}{133}
+\indexentry{Continuous Security Model|book{5}}{133}
+\indexentry{Technical Capability|book{5}}{133}
+\indexentry{SOC-CMM!Maturity Measurement|book{5}}{134-135}
+\indexentry{SOC-CMM!Assessment Tool|book{5}}{136}
+\indexentry{SOC!Charter! |book{5}}{136}
+\indexentry{ENISA!CSIRT Maturity Framework|book{5}}{137}
+\indexentry{SIM3 Model|book{5}}{137}
+\indexentry{FIRST! |book{5}}{137}
+\indexentry{Incident!Management!Maturity|book{5}}{137}
+\indexentry{Incident!Response!Maturity|book{5}}{138}
+\indexentry{CREST Maturity Assessment|book{5}}{138}
+\indexentry{Improvement Opportunities|book{5}}{139}
+\indexentry{SOC-CMM! }{139}
+\indexentry{Traceability Matrix|book{5}}{139}
+\indexentry{CSF (NIST)}{139}
+\indexentry{Capability Assessment!Summary|book{5}}{140}
+\indexentry{SOC!Capability Assessment!Summary|book{5}}{140}
+\indexentry{Strategic Planning! }{140}
+\indexentry{Lean SOC|book{5}}{142-152}
+\indexentry{SOC!As Production Line|book{5}}{142}
+\indexentry{Rework|book{5}}{146}
+\indexentry{Value|book{5}}{146}
+\indexentry{Activity|book{5}}{146}
+\indexentry{Waste|book{5}}{146}
+\indexentry{Lean Manufacturing|book{5}}{146-147}
+\indexentry{Waste!Types|book{5}}{147}
+\indexentry{Defects|book{5}}{147}
+\indexentry{TIMWOOD|book{5}}{147}
+\indexentry{Latency|book{5}}{148-149}
+\indexentry{Bandwidth|book{5}}{148}
+\indexentry{Quality|book{5}}{148}
+\indexentry{Bandwidth}{150}
+\indexentry{Quality}{151}
+\indexentry{FMEA|book{5}}{152}
+\indexentry{BLUEPRINT|book{5}}{156}
+\indexentry{MITRE!11 Strategies of World-Class SOC|book{5}}{156}
+
+
+\comment{********************************************************************************************
+                                       WORKBOOK SECTION
+*****************************************************************************************************}
+\indexentry{SOC!Charter!Components|book{W}}{24}
+\indexentry{Goals!Top-Level|book{W}}{24}
+\indexentry{Success Factors|book{W}}{24}
+\indexentry{Permissions|book{W}}{24}
+\indexentry{Mission Statement! |book{W}}{25}
+\indexentry{SOC!Charter!Examples|book{W}}{27}
+\indexentry{Success Factors}{28}
+\indexentry{Critical Assets|book{W}}{28}
+\indexentry{Critical Assets!Mapping Methodology|book{W}}{28}
+\indexentry{OCTAVE|book{W}}{28-30}
+\indexentry{Risk Assessment Methodology|book{W}}{28}
+\indexentry{Threat!Modeling! |book{W}}{28}
+\indexentry{Strategic Drivers|book{W}}{28}
+\indexentry{Security Requirements|book{W}}{30}
+\indexentry{Threat!Scenarios|book{W}}{30}
+\indexentry{CIA! |book{W}}{30}
+\indexentry{KSA!  |book{W}}{31-35}
+\indexentry{NICE Framework (NIST)! |book{W}}{31}
+\indexentry{NICE Framework (NIST)!Job Roles|book{W}}{32}
+\indexentry{Skills!Assessment|book{W}}{34}
+\indexentry{NICCS|book{W}}{36}
+\indexentry{Strong Requirements|book{W}}{37}
+\indexentry{PIR!Process|book{W}}{37-43}
+\indexentry{Intel Collection Plan! |book{W}}{37}
+\indexentry{Intel Drivers|book{W}}{38}
+\indexentry{Intel Requirements|book{W}}{38}
+\indexentry{Steering Committee! |book{W}}{38}
+\indexentry{Capabilities|book{W}}{39}
+\indexentry{Threat!Actor! |book{W}}{39}
+\indexentry{Initial Access Vector|book{W}}{39}
+\indexentry{Threat!Landscape! |book{W}}{39}
+\indexentry{SIR|book{W}}{40}
+\indexentry{Intel Collection Plan! }{41}
+\indexentry{Intel Collection Plan!Example|book{W}}{41}
+\indexentry{PIR!Periodicity|book{W}}{42}
+\indexentry{Intel Provider|book{W}}{42}
+\indexentry{Threat!Actor!Assessment|book{W}}{44-51}
+\indexentry{Threat!Group|book{W}}{44-46}
+\indexentry{Lazarus Group! |book{W}}{45}
+\indexentry{Exotic Lily|book{W}}{45}
+\indexentry{Conti|book{W}}{45}
+\indexentry{Diavol|book{W}}{45}
+\indexentry{Priority Threat Group Profile|book{W}}{46}
+\indexentry{TIP!   |book{W}}{47}
+\indexentry{Priority Threat Group Profile!Example|book{W}}{48}
+\indexentry{Lazarus Group!Threat Profile|book{W}}{50}
+\indexentry{Attack Modeling|book{W}}{52-63}
+\indexentry{Data Sources!Assessment|book{W}}{52}
+\indexentry{Data Sources!Assessment}{62}
+\indexentry{Attack Tree!Methodology|book{W}}{52-61}
+\indexentry{Attack Tree! |book{W}}{53}
+\indexentry{Attack Tree! }{61}
+\indexentry{Attack Technique Prioritization|book{W}}{64-80}
+\indexentry{Threat!Group!Priority|book{W}}{64}
+\indexentry{Threat!Group!Layers|book{W}}{73}
+\indexentry{Automatic Technique Extraction|book{W}}{78}
+\indexentry{Detection!Fidelity|book{W}}{78}
+\indexentry{Red Team!Testing|book{W}}{78}
+\indexentry{Capacity Planning! |book{W}}{81-93}
+\indexentry{SOC!Analyst Activities|book{W}}{83}
+\indexentry{Capacity Planning!Worksheet|book{W}}{84}
+\indexentry{Poisson Distribution! |book{W}}{87}
+\indexentry{Monte Carlo Analysis!  |book{W}}{88}
+\indexentry{Log-Normal Distribution! |book{W}}{88}
+\indexentry{Detection!Rule Management|book{W}}{94}
+\indexentry{Sigma!Example|book{W}}{95-96}
+\indexentry{Vendor Lock-In! |book{W}}{95}
+\indexentry{ElasticSearch|book{W}}{97}
+\indexentry{Use Case!Management|book{W}}{113-137}
+\indexentry{Use Case!Attributes|book{W}}{115}
+\indexentry{TaHiTI Methodology|book{W}}{138-139}
+\indexentry{FI-ISAC! |book{W}}{138}
+\indexentry{Threat!Hunting!Planning|book{W}}{138-146}
+\indexentry{MaGMa UCF!Identifiers|book{W}}{142}
+\indexentry{Incident!Response!Goals@ |book{W}}{147-153}
+\indexentry{Multi-Team Systems! |book{W}}{147}
+\indexentry{Distal Goal|book{W}}{147}
+\indexentry{Proximal Goal|book{W}}{147}
+\indexentry{Engagement Matrix|book{W}}{148}
+\indexentry{MTS Goal Hierarchy|book{W}}{148}
+\indexentry{Distal Goal}{149}
+\indexentry{MTS Goal Hierarchy!Example|book{W}}{150}
+\indexentry{Engagement Matrix}{151}
+\indexentry{Playbook!Development|book{W}}{154-166}
+\indexentry{Threat!Actor!Assessment}{155}
+\indexentry{Playbook!Workflow|book{W}}{157}
+\indexentry{PAP|book{W}}{166}
+\indexentry{Investigation!Quality!Review@ |book{W}}{167-183}
+\indexentry{AQL Tables|book{W}}{168-172}
+\indexentry{Sample Size|book{W}}{169-172}
+\indexentry{ISO2859-1|book{W}}{168}
+\indexentry{Causes Assignment|book{W}}{182}
+\indexentry{Assignable Cause|book{W}}{182}
+\indexentry{Non-Assignable Cause|book{W}}{182}
+\indexentry{Common Cause|book{W}}{182}
+\indexentry{Processes!In Control|book{W}}{183}
+\indexentry{Processes!Out of Control|book{W}}{183}
+\indexentry{Metrics!Creation|book{W}}{184-200}
+\indexentry{Metrics!Selection|book{W}}{184-200}
+\indexentry{GQM!Process|book{W}}{185-187}
+\indexentry{Success Factors}{185}
+\indexentry{KPI! |book{W}}{185}
+\indexentry{Indicators|book{W}}{186}
+\indexentry{GQIM|book{W}}{186}
+\indexentry{Metrics!Example|book{W}}{191}
+\indexentry{Metrics!Classification|book{W}}{192-193}
+\indexentry{Metrics!Prioritization|book{W}}{193}
+\indexentry{Metrics!Collection Tools|book{W}}{194-195}
+\indexentry{API|book{W}}{194}
+\indexentry{Webhooks|book{W}}{194}
+\indexentry{Agents|book{W}}{195}
+\indexentry{Business Intelligence Tools|book{W}}{195}
+\indexentry{Metrics!Display Tools|book{W}}{195}
+\indexentry{Data Sources!Visualization|book{W}}{195-197}
+\indexentry{Chart Types|book{W}}{196-198}
+\indexentry{Effective Visualization|book{W}}{196}
+\indexentry{Graph Types|book{W}}{195-197}
+\indexentry{Purple Teaming!Assessment|book{W}}{201-224}
+\indexentry{FS\_THREAT\_INDEX|book{W}}{205-207}
+\indexentry{Purple Teaming!Campaign|book{W}}{206}
+\indexentry{Cyber Kill Chain!     |book{W}}{206}
+\indexentry{Cyber Kill Chain!     }{208}
+\indexentry{Red Team!  |book{W}}{209}
+\indexentry{Blue Team!  |book{W}}{210}
+\indexentry{Purple Teaming!Assessment!Metrics|book{W}}{213}
+\indexentry{Historical Trending|book{W}}{214}
+\indexentry{Blue Team!  }{215}
+\indexentry{Lateral Movement!  |book{W}}{216}
+\indexentry{FMEA!Process|book{W}}{225-231}
+\indexentry{Failure Mode|book{W}}{225}
+\indexentry{Effects Analysis|book{W}}{225}
+\indexentry{Quality!Improvement|book{W}}{225-231}
+\indexentry{Failure Mode}{227}
+\indexentry{Effects Analysis}{227}
+\indexentry{Action Priority|book{W}}{229-230}
+\indexentry{RPN|book{W}}{229-230}
+\indexentry{Risk Register|book{W}}{229}
+\indexentry{Processes!Failures|book{W}}{229}
+\indexentry{Brainstorming! |book{W}}{230}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{CTI! \goto Threat Intelligence|comment}{0}
+\indexentry{Perfect Forward Secrecy \goto PFS|comment}{0}
+\indexentry{High-Visibility Users \goto At-Risk Users|comment}{0}
+\indexentry{Business Email Compromise \goto BEC|comment}{0}
+\indexentry{Team Coordination \goto Cross-Team Coordination|comment}{0}
+\indexentry{Coordination \goto Cross-Team Coordination|comment}{0}
+\indexentry{Adaptive Case Management \goto ACM|comment}{0}
+\indexentry{Analysis of Competing Hypotheses \goto ACH|comment}{0}
+\indexentry{Knowledge Base \goto SOC Knowledge Base|comment}{0}
+\indexentry{Incident!Response!Exercise \goto Exercise (IR)|comment}{0}
+\indexentry{Behavioral Engineering Model \goto BEM|comment}{0}
+\indexentry{Positive Team Culture \goto Culture|comment}{0}
+\indexentry{Measurement \goto Measures|comment}{0}
+\indexentry{Site Reliability Engineering \goto Google SRE|comment}{0}
+\indexentry{Network Security Monitoring \goto NSM|comment}{0}
+\indexentry{Continuous Security Monitoring \goto CSM|comment}{0}
+\indexentry{Detection Maturity Model \goto DML|comment}{0}
+\indexentry{Collection!Plan (Intel) \goto Intel Collection Plan|comment}{0}
+\indexentry{Permissible Actions Protocol \goto PAP|comment}{0}
+\indexentry{ANSI Tables \goto AQL Tables|comment}{0}
+\indexentry{Onboarding \goto Service Provider|comment}{0}
+\indexentry{Hiring \goto Recruitment|comment}{0}
+\indexentry{Interviewing \goto Recruitment|comment}{0}
+\indexentry{Sysmon \goto \textbf{Tools}|comment}{0}
