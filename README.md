@@ -1,3 +1,5 @@
+<h1 align="center">LaTeX Course Index Template <a href="https://twitter.com/intent/tweet?text=LaTeX%20Course%20Index%20Template.%0D%0ALaTeX%20template%20for%20making%20your%20course%20index%2e%20Very%20useful%20for%20SANS%20certifications%2e%2e%2e%0D%0A&hashtags=TeXLaTeX,GIAC,SANSrocks"><img src="https://img.shields.io/badge/Tweet--lightgrey?logo=twitter&style=social" alt="Tweet" height="20"/></a></h1>
+
 [**See examples for SANS courses here !**](https://github.com/academic-templates/tex-course-index-template/tree/main/examples)
 
 ## :information_source: Introduction
