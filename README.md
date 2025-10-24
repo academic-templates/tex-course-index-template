@@ -149,9 +149,10 @@ For convenience, multiple shorcuts are predefined in [`main.tex`](https://github
 - `\note`: paper note with a pen
 - `\portable`: USB key
 - `\python`: Python script
+- `\q`: red question mark (e.g. for pointing an entry related to an exam question)
 - `\script`: general-purpose script
-- `\question`: red question mark (e.g. for pointing an entry related to an exam question)
 - `\solaris`: Soralis
+- `\w`: red exclamation mark (e.g. for pointing an important note)
 - `\web`: Web-related asset
 - `\win`: Windows
 
