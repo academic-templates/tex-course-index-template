@@ -1,0 +1,2606 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{1a@\textbf{Learning Objectives}|book{1}}{16}
+
+\indexentry{1b@\blankline|comment}{0}
+\indexentry{1c@\blankline|comment}{0}
+
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!1@SOC Foundations|book{1}}{18-28}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!2@SOC Organization \& Functions|book{1}}{30-41}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!3@SOC Data Collection|book{1}}{43-55}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!4@Introduction to SIEM|book{1}}{57-68}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!5@Building SIEM Queries|book{1}}{72-84}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!6@SIEM Visualizations \& Dashboards|book{1}}{88-100}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!7@Know Your Enemy|book{1}}{104-114}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!8@Threat Intelligence Platforms|book{1}}{116-128}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!9@Alert Generation \& Processing|book{1}}{132-144}
+\indexentry{2a@\textbf{Sec Ops Teams, Tools and Mission}!10@IMS \& SOAR Platforms|book{1}}{146-162}
+
+\indexentry{2y@\blankline|comment}{0}
+\indexentry{2z@\blankline|comment}{0}
+
+\indexentry{3a@\textbf{Network Traffic Analysis}!1@Network Architecture|book{2}}{6-16}
+\indexentry{3a@\textbf{Network Traffic Analysis}!2@Traffic Capture \& Analysis|book{2}}{18-28}
+\indexentry{3a@\textbf{Network Traffic Analysis}!3@Understanding DNS|book{2}}{30-50}
+\indexentry{3a@\textbf{Network Traffic Analysis}!4@DNS Analysis \& Attacks|book{2}}{54-82}
+\indexentry{3a@\textbf{Network Traffic Analysis}!5@Understanding HTTP|book{2}}{86-101}
+\indexentry{3a@\textbf{Network Traffic Analysis}!6@HTTP(S) Analysis \& Attacks|book{2}}{105-121}
+\indexentry{3a@\textbf{Network Traffic Analysis}!7@HTTP/2 \& HTTP/3|book{2}}{123-130}
+\indexentry{3a@\textbf{Network Traffic Analysis}!8@Spotting Malicious Encrypted Traffic|book{2}}{134-143}
+\indexentry{3a@\textbf{Network Traffic Analysis}!9@Commong Protocols for Post-Exploitation|book{2}}{145-159}
+
+\indexentry{3y@\blankline|comment}{0}
+\indexentry{3z@\blankline|comment}{0}
+
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!1@Endpoint Attack Tactics|book{3}}{6-29}
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!2@Endpoint Defense In Depth|book{3}}{31-54}
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!3@How Windows Logging Works|book{3}}{56-68}
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!4@How Linux Logging Works|book{3}}{70-80}
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!5@Interpreting Important Events|book{3}}{82-113}
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!6@Log Collection, Parsing \& Normalization|book{3}}{117-129}
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!7@File Contents \& Identification|book{3}}{133-147}
+\indexentry{4a@\textbf{Endpoint Defense, Security Logging \& Malware Identification}!8@Identifying \& Handling Suspicious Files|book{3}}{149-171}
+
+\indexentry{4y@\blankline|comment}{0}
+\indexentry{4z@\blankline|comment}{0}
+
+\indexentry{5a@\textbf{Efficient Alert Triage \&n Email Analysis}!1@Alert Triage \& Prioritization|book{3}}{6-22}
+\indexentry{5a@\textbf{Efficient Alert Triage \&n Email Analysis}!2@Structure Analytical Techniques|book{3}}{26-53}
+\indexentry{5a@\textbf{Efficient Alert Triage \&n Email Analysis}!3@Models \& Concepts for Infosec|book{3}}{55-84}
+\indexentry{5a@\textbf{Efficient Alert Triage \&n Email Analysis}!4@Incident Closing \& Quality Review|book{3}}{88-97}
+\indexentry{5a@\textbf{Efficient Alert Triage \&n Email Analysis}!5@Analysis OPSEC|book{3}}{101-118}
+\indexentry{5a@\textbf{Efficient Alert Triage \&n Email Analysis}!6@Email Header Analysis|book{3}}{120-149}
+\indexentry{5a@\textbf{Efficient Alert Triage \&n Email Analysis}!7@Email Content Analysis|book{3}}{151-163}
+
+\indexentry{5s@\blankline|comment}{0}
+\indexentry{5t@\blankline|comment}{0}
+\indexentry{5u@\blankline|comment}{0}
+\indexentry{5v@\blankline|comment}{0}
+\indexentry{5w@\blankline|comment}{0}
+\indexentry{5x@\blankline|comment}{0}
+\indexentry{5y@\blankline|comment}{0}
+\indexentry{5z@\blankline|comment}{0}
+
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!1@Improving Life in the SOC|book{3}}{6-27}
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!2@Analytic Features \& Enrichment|book{3}}{29-48}
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!3@New Analytic Design, Testing \& Sharing|book{3}}{50-76}
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!4@Tuning \& False Positive Reduction|book{3}}{78-98}
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!5@Automation \& Orchestration|book{3}}{102-119}
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!6@Improving Operational Efficiency \& Workflow|book{3}}{121-131}
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!7@Containing Identified Instructions|book{3}}{135-158}
+\indexentry{6a@\textbf{Continuous Improvement, Analytics \& Automation}!8@Skill \& Career Development|book{3}}{162-175}
+
+\indexentry{6v@\blankline|comment}{0}
+\indexentry{6w@\blankline|comment}{0}
+\indexentry{6x@\blankline|comment}{0}
+\indexentry{6y@\blankline|comment}{0}
+\indexentry{6z@\blankline|comment}{0}
+
+\indexentry{7a@\textbf{Workbook}!Using a SIEM for Log Analysis|book{W}}{4-24}
+\indexentry{7a@\textbf{Workbook}!Advanced SIEM Log Search with SQL|book{W}}{25-41}
+\indexentry{7a@\textbf{Workbook}!Crafting SIEM Visualizations and Dashboards for Threat Hunting|book{W}}{42-70}
+\indexentry{7a@\textbf{Workbook}!Using MISP Threat Intel Platform|book{W}}{71-91}
+\indexentry{7a@\textbf{Workbook}!Incident Management Systems - Playbooks, Workflow, Automation|book{W}}{92-113}
+\indexentry{7a@\textbf{Workbook}!DNS Requests, Traffic \& Analysis|book{W}}{114-137}
+\indexentry{7a@\textbf{Workbook}!Analyzing Malicious DNS|book{W}}{138-146}
+\indexentry{7a@\textbf{Workbook}!Wireshark \& HTTP/1.1 Analysis|book{W}}{147-166}
+\indexentry{7a@\textbf{Workbook}!HTTP/2 \& HTTP/3 Traffic Analysis|book{W}}{167-184}
+\indexentry{7a@\textbf{Workbook}!Analyzing TLS Traffic Without Decryption|book{W}}{185-197}
+\indexentry{7a@\textbf{Workbook}!Threat Hunting with a SIEM in Windows Logs|book{W}}{198-220}
+\indexentry{7a@\textbf{Workbook}!Log Enrichment \& Visualization|book{W}}{221-234}
+\indexentry{7a@\textbf{Workbook}!Dissecting Common Malware File Types|book{W}}{235-257}
+\indexentry{7a@\textbf{Workbook}!Alert Triage \& Prioritization|book{W}}{258-289}
+\indexentry{7a@\textbf{Workbook}!Structured Analysis Challenge|book{W}}{290-314}
+\indexentry{7a@\textbf{Workbook}!Collecting \& Documenting Incident Information|book{W}}{315-352}
+\indexentry{7a@\textbf{Workbook}!Analyzing Phishing Email Headers|book{W}}{353-365}
+\indexentry{7a@\textbf{Workbook}!Alert Tuning \& False Positive Reduction|book{W}}{366-385}
+\indexentry{7a@\textbf{Workbook}!SOC Automation - File Analysis|book{W}}{386-402}
+\indexentry{7a@\textbf{Workbook}!SOC Automation - Incident Containment|book{W}}{403-419}
+\indexentry{7a@\textbf{Workbook}!CTF Instructions|book{W}}{420-422}
+
+\indexentry{7z@\blankline|newpage \comment}{0}
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{80@\textbf{Key Takeaways}!Cyber Security Operations|book{1}}{12-13}
+\indexentry{80@\textbf{Key Takeaways}!Defense Mindset|book{1}}{14}
+\indexentry{80@\textbf{Key Takeaways}!Blue Team's Mission|book{1}}{15}
+\indexentry{80@\textbf{Key Takeaways}!Cyber Security Operations}{19}
+\indexentry{80@\textbf{Key Takeaways}!Blue Team's Mission}{20}
+\indexentry{80@\textbf{Key Takeaways}!SOC Charter|book{1}}{22}
+\indexentry{80@\textbf{Key Takeaways}!Risk Appetite|book{1}}{23}
+\indexentry{80@\textbf{Key Takeaways}!Blue Team Truth|book{1}}{27-28}
+\indexentry{80@\textbf{Key Takeaways}!SOC Organization|book{1}}{31}
+\indexentry{80@\textbf{Key Takeaways}!SOC Organization}{34}
+\indexentry{80@\textbf{Key Takeaways}!SOC Organization}{36}
+\indexentry{80@\textbf{Key Takeaways}!SOC Organization}{38}
+\indexentry{80@\textbf{Key Takeaways}!Monitoring|book{1}}{44}
+\indexentry{80@\textbf{Key Takeaways}!Monitoring}{52}
+\indexentry{80@\textbf{Key Takeaways}!Monitoring}{55}
+\indexentry{80@\textbf{Key Takeaways}!SIEM|book{1}}{61}
+\indexentry{80@\textbf{Key Takeaways}!SIEM}{63}
+\indexentry{80@\textbf{Key Takeaways}!SIEM}{68}
+\indexentry{80@\textbf{Key Takeaways}!SIEM!Workflow|book{1}}{73}
+\indexentry{80@\textbf{Key Takeaways}!SIEM!Workflow}{84}
+\indexentry{80@\textbf{Key Takeaways}!SIEM!Visualization|book{1}}{89}
+\indexentry{80@\textbf{Key Takeaways}!SIEM!Visualization}{100}
+\indexentry{80@\textbf{Key Takeaways}!Enemy \& Attack Types|book{1}}{108}
+\indexentry{80@\textbf{Key Takeaways}!Enemy \& Attack Types}{114}
+\indexentry{80@\textbf{Key Takeaways}!Threat Intelligence Platform|book{1}}{118}
+\indexentry{80@\textbf{Key Takeaways}!Threat Intelligence Platform}{121}
+\indexentry{80@\textbf{Key Takeaways}!Threat Intelligence Platform}{128}
+\indexentry{80@\textbf{Key Takeaways}!Events, Alerts \& Incidents|book{1}}{133}
+\indexentry{80@\textbf{Key Takeaways}!Events, Alerts \& Incidents}{136}
+\indexentry{80@\textbf{Key Takeaways}!Events, Alerts \& Incidents}{140}
+\indexentry{80@\textbf{Key Takeaways}!Incident Management System|book{1}}{148}
+\indexentry{80@\textbf{Key Takeaways}!Incident Management System}{154}
+\indexentry{80@\textbf{Key Takeaways}!SOC Tools Together|book{1}}{160}
+\indexentry{80@\textbf{Key Takeaways}!Zones \& Traffic Flows|book{2}}{8}
+\indexentry{80@\textbf{Key Takeaways}!Visibility Points|book{2}}{10}
+\indexentry{80@\textbf{Key Takeaways}!Zero Trust Architecture|book{2}}{13}
+\indexentry{80@\textbf{Key Takeaways}!PCAP Collection|book{2}}{22}
+\indexentry{80@\textbf{Key Takeaways}!PCAP Collection}{25}
+\indexentry{80@\textbf{Key Takeaways}!DNS Lookup|book{2}}{33}
+\indexentry{80@\textbf{Key Takeaways}!DoH \& DNSSEC|book{2}}{46-47}
+\indexentry{80@\textbf{Key Takeaways}!Domain-to-IP Safe Mapping|book{2}}{57}
+\indexentry{80@\textbf{Key Takeaways}!URI Decoding|book{2}}{87}
+\indexentry{80@\textbf{Key Takeaways}!HTTP/1.1 vs HTTP/2|book{2}}{125}
+\indexentry{80@\textbf{Key Takeaways}!TLS Decryption|book{2}}{136}
+\indexentry{80@\textbf{Key Takeaways}!Protocol Tunneling|book{2}}{153}
+\indexentry{80@\textbf{Key Takeaways}!Endpoints Defense in Depth|book{3}}{31}
+\indexentry{80@\textbf{Key Takeaways}!Attack Surface Reduction Rules|book{3}}{38}
+\indexentry{80@\textbf{Key Takeaways}!Host vs Network Firewall|book{3}}{40}
+\indexentry{80@\textbf{Key Takeaways}!Windows Log Path|book{3}}{58}
+\indexentry{80@\textbf{Key Takeaways}!Linux Log Path|book{3}}{76}
+\indexentry{80@\textbf{Key Takeaways}!Log Collection Pipeline|book{3}}{118}
+\indexentry{80@\textbf{Key Takeaways}!Log Life Cycle|book{3}}{127}
+\indexentry{80@\textbf{Key Takeaways}!Log Ingestion Pipeline|book{3}}{129}
+\indexentry{80@\textbf{Key Takeaways}!Models for Information Security|book{4}}{55}
+\indexentry{80@\textbf{Key Takeaways}!When Eache Model of InfoSec Applies|book{4}}{81}
+\indexentry{80@\textbf{Key Takeaways}!SOC Human Capital Model|book{5}}{22}
+\indexentry{80@\textbf{Key Takeaways}!Sigma Signatures \& Queries|book{5}}{71-75}
+
+\indexentry{81@\blankline|comment}{0}
+
+\indexentry{150@\textbf{Common Attack Patterns}!Worm|book{2}}{14}
+\indexentry{150@\textbf{Common Attack Patterns}!DNS-Based|book{2}}{64}
+\indexentry{150@\textbf{Common Attack Patterns}!Domain Shadowing|book{2}}{68}
+\indexentry{150@\textbf{Common Attack Patterns}!DNS Tunneling|book{2}}{70-74}
+\indexentry{150@\textbf{Common Attack Patterns}!Homoglyph|book{2}}{78-79}
+\indexentry{150@\textbf{Common Attack Patterns}!Phishing With IDN|book{2}}{81}
+\indexentry{150@\textbf{Common Attack Patterns}!Phishing Served Over HTTP/3|book{W}}{183}
+\indexentry{150@\textbf{Common Attack Patterns}!Rogue Device|book{2}}{146}
+\indexentry{150@\textbf{Common Attack Patterns}!SMB Attacks|book{2}}{151}
+\indexentry{150@\textbf{Common Attack Patterns}!Microsoft Office Documents|book{3}}{155}
+\indexentry{150@\textbf{Common Attack Patterns}!Request To A Suspicious Website|book{4}}{15}
+\indexentry{150@\textbf{Common Attack Patterns}!Contact To A Sinkholed Domain|book{4}}{15}
+\indexentry{150@\textbf{Common Attack Patterns}!Malware Delivery Through SMTP|book{4}}{15}
+\indexentry{150@\textbf{Common Attack Patterns}!Data Exfiltration Through TFTP|book{4}}{15-16}
+\indexentry{150@\textbf{Common Attack Patterns}!Malware Delivery Through HTTP|book{4}}{16}
+\indexentry{150@\textbf{Common Attack Patterns}!Exploit Attempt In Perimeter|book{4}}{17-18}
+\indexentry{150@\textbf{Common Attack Patterns}!Exploit Kit Delivered To User's Browser|book{4}}{18}
+\indexentry{150@\textbf{Common Attack Patterns}!ZeroLogon Attack|book{4}}{18}
+\indexentry{150@\textbf{Common Attack Patterns}!Weaponized USB Stick|book{4}}{18}
+\indexentry{150@\textbf{Common Attack Patterns}!Spear Phishing|book{4}}{19}
+
+\indexentry{151@\blankline|comment}{0}
+
+\indexentry{200@\textbf{Tools}!Logstash|book{1}}{66}
+\indexentry{200@\textbf{Tools}!OpenSearch|book{1}}{66}
+\indexentry{200@\textbf{Tools}!OpenSearch}{81}
+\indexentry{200@\textbf{Tools}!OpenSearch!Panels|book{W}}{5-9}
+\indexentry{200@\textbf{Tools}!OpenSearch!Reference Queries|book{W}}{22}
+\indexentry{200@\textbf{Tools}!OpenSearch!Available Tables|book{W}}{29}
+\indexentry{200@\textbf{Tools}!OpenSearch!SQL Query!Important Note \w|book{W}}{37}
+\indexentry{200@\textbf{Tools}!OpenSearch!Visualizations|book{W}}{43-44}
+\indexentry{200@\textbf{Tools}!OpenSearch!Visualizations!Types|book{W}}{45}
+\indexentry{200@\textbf{Tools}!OpenSearch!Visualizations!Split Slices|book{W}}{48-49}
+\indexentry{200@\textbf{Tools}!OpenSearch!Visualizations}{54-56}
+\indexentry{200@\textbf{Tools}!OpenSearch!Visualizations!Split Series|book{W}}{58-59}
+\indexentry{200@\textbf{Tools}!OpenSearch!Dashboards|book{W}}{61-65}
+\indexentry{200@\textbf{Tools}!MISP|book{1}}{123-127}
+\indexentry{200@\textbf{Tools}!MISP!Homepage|book{W}}{74}
+\indexentry{200@\textbf{Tools}!MISP!Threat Intel Context|book{W}}{75-79}
+\indexentry{200@\textbf{Tools}!MISP!Event|book{W}}{80-82}
+\indexentry{200@\textbf{Tools}!MISP!Freetext|book{W}}{83-86}
+\indexentry{200@\textbf{Tools}!MISP!Correlation Graph|book{W}}{87-89}
+\indexentry{200@\textbf{Tools}!TheHive|book{1}}{153-154}
+\indexentry{200@\textbf{Tools}!TheHive!Workflow|book{1}}{154}
+\indexentry{200@\textbf{Tools}!TheHive!Main Interface|book{W}}{94}
+\indexentry{200@\textbf{Tools}!TheHive!Alert Handling|book{W}}{95-98}
+\indexentry{200@\textbf{Tools}!TheHive!Case|book{W}}{99}
+\indexentry{200@\textbf{Tools}!TheHive!Case!Creation|book{W}}{98-99}
+\indexentry{200@\textbf{Tools}!TheHive!Playbook|book{W}}{100}
+\indexentry{200@\textbf{Tools}!TheHive!Case!Documentation|book{W}}{107-110}
+\indexentry{200@\textbf{Tools}!TheHive!Case!Closure|book{W}}{110-112}
+\indexentry{200@\textbf{Tools}!Zeek|book{2}}{23-24}
+\indexentry{200@\textbf{Tools}!Wireshark|book{2}}{26}
+\indexentry{200@\textbf{Tools}!Wireshark!User Interface|book{2}}{26}
+\indexentry{200@\textbf{Tools}!Wireshark!Example Display Filters|book{2}}{27}
+\indexentry{200@\textbf{Tools}!Ipconfig \win|book{2}}{31}
+\indexentry{200@\textbf{Tools}!Wireshark!DoH|book{2}}{48-49}
+\indexentry{200@\textbf{Tools}!Dhclient@\texttt{dhclient} \linux|book{W}}{114}
+\indexentry{200@\textbf{Tools}!Tcpdump@\texttt{tcpdump}|book{W}}{115}
+\indexentry{200@\textbf{Tools}!Dig@\texttt{dig} \linux!    |book{W}}{117-122}
+\indexentry{200@\textbf{Tools}!Wireshark!DNS Analysis|book{W}}{124-129}
+\indexentry{200@\textbf{Tools}!Virustotal \web! |book{W}}{131}
+\indexentry{200@\textbf{Tools}!AlienVault OTX|book{W}}{131}
+\indexentry{200@\textbf{Tools}!Wireshark!DoH@\hskip10pt Analysis|book{W}}{132-134}
+\indexentry{200@\textbf{Tools}!Dig@\texttt{dig} \linux|book{2}}{58}
+\indexentry{200@\textbf{Tools}!Nslookup@\texttt{nslookup}|book{2}}{58}
+\indexentry{200@\textbf{Tools}!Whois@\texttt{whois} \linux|book{2}}{62}
+\indexentry{200@\textbf{Tools}!Domain\_Stats21@domain\_stats2|book{2}}{62}
+\indexentry{200@\textbf{Tools}!Wireshark!Protocol Hierarchy \app|book{W}}{148}
+\indexentry{200@\textbf{Tools}!Wireshark!Conversations \app|book{W}}{149-150}
+\indexentry{200@\textbf{Tools}!Wireshark!HTTP/2@\hskip10pt Carving Support|book{2}}{100}
+\indexentry{200@\textbf{Tools}!Wireshark!Follow HTTP Stream \app|book{W}}{156-157}
+\indexentry{200@\textbf{Tools}!Wireshark!Export Objects \app|book{W}}{160-161}
+\indexentry{200@\textbf{Tools}!Wireshark!HTTP Display Filters|book{W}}{164-165}
+\indexentry{200@\textbf{Tools}!Wireshark!HTTP/2|book{2}}{127}
+\indexentry{200@\textbf{Tools}!Wireshark!Follow HTTP Stream \app@\hskip10pt HTTP/2|book{2}}{127}
+\indexentry{200@\textbf{Tools}!Wireshark!HTTP/3 Support|book{2}}{129}
+\indexentry{200@\textbf{Tools}!Wireshark!HTTP/2@\hskip10pt Carving Support}{128}
+\indexentry{200@\textbf{Tools}!Wireshark!Export Objects \app@\hskip10pt HTTP/2|book{2}}{128}
+\indexentry{200@\textbf{Tools}!Wireshark!Export Packet Bytes \app|book{2}}{128}
+\indexentry{200@\textbf{Tools}!Wireshark!TLS/SSL Keylog File|book{W}}{167}
+\indexentry{200@\textbf{Tools}!Wireshark!Follow HTTP/2 Stream|book{W}}{171}
+\indexentry{200@\textbf{Tools}!Wireshark!Export Packet Bytes \app@\hskip10pt|book{W}}{176-177}
+\indexentry{200@\textbf{Tools}!Wireshark!TLS/SSL Keylog File}{179}
+\indexentry{200@\textbf{Tools}!Wireshark!HTTP/3 Support@\hskip10pt|book{W}}{179}
+\indexentry{200@\textbf{Tools}!Wireshark!Export Packet Bytes \app@\hskip10pt}{182}
+\indexentry{200@\textbf{Tools}!Zeek!    |book{W}}{194-196}
+\indexentry{200@\textbf{Tools}!Zeek-cut@\texttt{zeek-cut}|book{W}}{195-196}
+\indexentry{200@\textbf{Tools}!Tshark|book{W}}{196-197}
+\indexentry{200@\textbf{Tools}!Journalctl@\texttt{journalctl} \linux|book{3}}{78}
+\indexentry{200@\textbf{Tools}!Auditd \linux|book{3}}{79}
+\indexentry{200@\textbf{Tools}!Logger@\texttt{logger} \linux|book{3}}{79}
+\indexentry{200@\textbf{Tools}!Auditd \linux}{89}
+\indexentry{200@\textbf{Tools}!Aureport@\texttt{aureport} \linux|book{3}}{89}
+\indexentry{200@\textbf{Tools}!Auditd \linux!Output Example|book{3}}{90}
+\indexentry{200@\textbf{Tools}!Auditd \linux!Starter Rules|book{3}}{90}
+\indexentry{200@\textbf{Tools}!Eslogger@\texttt{eslogger} \mac|book{3}}{92}
+\indexentry{200@\textbf{Tools}!OpenSearch! |book{W}}{198-219}
+\indexentry{200@\textbf{Tools}!Logstash! |book{W}}{224-230}
+\indexentry{200@\textbf{Tools}!Hexdump@\texttt{hexdump}|book{3}}{133-134}
+\indexentry{200@\textbf{Tools}!File@\texttt{file}|book{3}}{134-135}
+\indexentry{200@\textbf{Tools}!Lnkinfo@\texttt{lnkinfo} \linux|book{3}}{158}
+\indexentry{200@\textbf{Tools}!LnkParse3@\texttt{LnkParse3}|book{3}}{158}
+\indexentry{200@\textbf{Tools}!OneNoteAnalyzer \win|book{3}}{158}
+\indexentry{200@\textbf{Tools}!Sigcheck@\texttt{sigcheck.exe}|book{3}}{165}
+\indexentry{200@\textbf{Tools}!File@\texttt{file}! |book{W}}{237}
+\indexentry{200@\textbf{Tools}!CyberChef|book{W}}{242}
+\indexentry{200@\textbf{Tools}!Lnkinfo@\texttt{lnkinfo} \linux! |book{W}}{247}
+\indexentry{200@\textbf{Tools}!Virustotal \web! }{252}
+\indexentry{200@\textbf{Tools}!File@\texttt{file}! }{255}
+\indexentry{200@\textbf{Tools}!Hexdump@\texttt{hexdump}! |book{W}}{255}
+\indexentry{200@\textbf{Tools}!OneNoteAnalyzer \win! |book{W}}{256}
+\indexentry{200@\textbf{Tools}!Arkime|book{W}}{259}
+\indexentry{200@\textbf{Tools}!TheHive!Triage|book{W}}{259-260}
+\indexentry{200@\textbf{Tools}!Arkime}{263-269}
+\indexentry{200@\textbf{Tools}!Arkime!Search|book{W}}{266-269}
+\indexentry{200@\textbf{Tools}!TheHive!Triage}{272-277}
+\indexentry{200@\textbf{Tools}!TheHive!Similar Cases|book{W}}{273}
+\indexentry{200@\textbf{Tools}!TheHive!Related Alerts|book{W}}{273}
+\indexentry{200@\textbf{Tools}!Virustotal \web! }{280}
+\indexentry{200@\textbf{Tools}!TheHive!Create Case From Selection|book{W}}{286-288}
+\indexentry{200@\textbf{Tools}!Maltego \coin|book{4}}{42}
+\indexentry{200@\textbf{Tools}!YEd@yEd|book{4}}{42}
+\indexentry{200@\textbf{Tools}!TheHive!Playbook Completion|book{W}}{328-351}
+\indexentry{200@\textbf{Tools}!TheHive!Credential Expose Template|book{W}}{328}
+\indexentry{200@\textbf{Tools}!Virustotal \web|book{4}}{107}
+\indexentry{200@\textbf{Tools}!Virustotal \web!Scan vs Search|book{4}}{109}
+\indexentry{200@\textbf{Tools}!URLScan.io \web|book{4}}{109}
+\indexentry{200@\textbf{Tools}!PassiveTotal (RiskIQ) \web|book{4}}{111}
+\indexentry{200@\textbf{Tools}!URLQuery.net \web|book{4}}{155}
+\indexentry{200@\textbf{Tools}!Dig@\texttt{dig} \linux!    }{356}
+\indexentry{200@\textbf{Tools}!Regexr \web|book{5}}{58}
+\indexentry{200@\textbf{Tools}!Regex101 \web|book{5}}{58}
+\indexentry{200@\textbf{Tools}!Sigma2MISP|book{5}}{75}
+\indexentry{200@\textbf{Tools}!OpenSearch!Dashboards@\hskip10pt Suricata Alerts|book{W}}{368-384}
+\indexentry{200@\textbf{Tools}!OpenSearch!Alerts Tags per Signature|book{W}}{369}
+\indexentry{200@\textbf{Tools}!OpenSearch!Alerts by Category|book{W}}{371}
+\indexentry{200@\textbf{Tools}!OpenSearch!Alerts Tags per Signature}{378}
+\indexentry{200@\textbf{Tools}!OpenSearch!Alerts by Category}{379}
+\indexentry{200@\textbf{Tools}!Node-RED|book{5}}{113}
+\indexentry{200@\textbf{Tools}!TextExpander|book{5}}{121}
+\indexentry{200@\textbf{Tools}!Autofill|book{5}}{121}
+\indexentry{200@\textbf{Tools}!Tampermonkey|book{5}}{121}
+\indexentry{200@\textbf{Tools}!Greasemonkey|book{5}}{121}
+\indexentry{200@\textbf{Tools}!Autofill}{123}
+\indexentry{200@\textbf{Tools}!Outlook Quick Parts|book{5}}{124}
+\indexentry{200@\textbf{Tools}!Firefox Smart Keywords|book{5}}{125}
+\indexentry{200@\textbf{Tools}!Chrome Smart Keywords|book{5}}{126}
+\indexentry{200@\textbf{Tools}!Pulsedive OSINT Extension|book{5}}{127}
+\indexentry{200@\textbf{Tools}!Sputnik OSINT Extension|book{5}}{127}
+\indexentry{200@\textbf{Tools}!Tampermonkey}{129}
+\indexentry{200@\textbf{Tools}!Greasemonkey}{129}
+\indexentry{200@\textbf{Tools}!AutoIt|book{5}}{130}
+\indexentry{200@\textbf{Tools}!Node-RED! |book{W}}{386-397}
+\indexentry{200@\textbf{Tools}!MailHog|book{W}}{398-400}
+\indexentry{200@\textbf{Tools}!Dig@\texttt{dig} \linux!    }{403-404}
+\indexentry{200@\textbf{Tools}!Node-RED! }{404-419}
+
+\indexentry{301@\blankline|comment}{0}
+
+\indexentry{400@\textbf{Summaries}!SOC|book{1}}{41}
+\indexentry{400@\textbf{Summaries}!SIEM - Introduction|book{1}}{68}
+\indexentry{400@\textbf{Summaries}!SIEM - Build Queries|book{1}}{84}
+\indexentry{400@\textbf{Summaries}!Know Your Enemy|book{1}}{114}
+\indexentry{400@\textbf{Summaries}!Threat Intelligence Platforms|book{1}}{128}
+\indexentry{400@\textbf{Summaries}!Events, Alerts \& Incidents|book{1}}{144}
+\indexentry{400@\textbf{Summaries}!IMS \& SOAR Platforms|book{1}}{162}
+\indexentry{400@\textbf{Summaries}!Network Architecture|book{2}}{16}
+\indexentry{400@\textbf{Summaries}!Traffic Capture \& Analysis|book{2}}{28}
+\indexentry{400@\textbf{Summaries}!Understanding DNS|book{2}}{50}
+\indexentry{400@\textbf{Summaries}!DNS Analysis \& Attacks|book{2}}{82}
+\indexentry{400@\textbf{Summaries}!Understanding HTTP|book{2}}{101}
+\indexentry{400@\textbf{Summaries}!HTTP/2 \& HTTP/3 Traffic Analysis|book{2}}{130}
+\indexentry{400@\textbf{Summaries}!Spotting Malicious Encrypted Traffic|book{2}}{143}
+\indexentry{400@\textbf{Summaries}!Network Traffic Analysis|book{2}}{161}
+\indexentry{400@\textbf{Summaries}!Endpoint Attack Tactics|book{3}}{29}
+\indexentry{400@\textbf{Summaries}!Endpoint Defense-in-Depth|book{3}}{54}
+\indexentry{400@\textbf{Summaries}!How Windows Logging Works|book{3}}{68}
+\indexentry{400@\textbf{Summaries}!How Linux Logging Works|book{3}}{80}
+\indexentry{400@\textbf{Summaries}!Interpreting Important Events|book{3}}{113}
+\indexentry{400@\textbf{Summaries}!Log Collection, Parsing, Normalization|book{3}}{129}
+\indexentry{400@\textbf{Summaries}!File Content \& Identification|book{3}}{147}
+\indexentry{400@\textbf{Summaries}!Identifying \& Handling Suspicious Files|book{3}}{171}
+\indexentry{400@\textbf{Summaries}!Alert Triage Prioritization|book{4}}{22}
+\indexentry{400@\textbf{Summaries}!Structured Analytical Techniques|book{4}}{53}
+\indexentry{400@\textbf{Summaries}!Models \& Concepts for InfoSec|book{4}}{55}
+\indexentry{400@\textbf{Summaries}!Models \& Concepts for InfoSec}{84}
+\indexentry{400@\textbf{Summaries}!Incident Closing \& Quality Review|book{4}}{97}
+\indexentry{400@\textbf{Summaries}!Analysis OPSEC|book{4}}{118}
+\indexentry{400@\textbf{Summaries}!Email Authentication Methods|book{4}}{141}
+\indexentry{400@\textbf{Summaries}!Email Header Analysis|book{4}}{149}
+\indexentry{400@\textbf{Summaries}!Email Content Analysis|book{4}}{163}
+\indexentry{400@\textbf{Summaries}!Improving Life in the SOC|book{5}}{27}
+\indexentry{400@\textbf{Summaries}!Analytic Features \& Enrichment|book{5}}{48}
+\indexentry{400@\textbf{Summaries}!Analytic Design, Testing \& Sharing|book{5}}{76}
+\indexentry{400@\textbf{Summaries}!Tuning \& False Positive Reduction|book{5}}{98}
+\indexentry{400@\textbf{Summaries}!Automation \& Orchestration|book{5}}{119}
+\indexentry{400@\textbf{Summaries}!Improving Ops Efficiency \& Workflow|book{5}}{119}
+\indexentry{400@\textbf{Summaries}!Containing Identified Intrusions|book{5}}{158}
+
+\indexentry{401@\blankline|comment}{0}
+
+\indexentry{800@\textbf{References}!LDR551 - Building and Leading Security Operations Center|book{1}}{40}
+\indexentry{800@\textbf{References}!FOR610 - Reverse Engineering Malware|book{2}}{109}
+\indexentry{800@\textbf{References}!SEC511 - Advanced Threat Detection and Monitoring|book{3}}{61}
+\indexentry{800@\textbf{References}!SEC555 - SIEM Tactical Analytics|book{W}}{230}
+\indexentry{800@\textbf{References}!FOR610 - Reverse Engineering Malware! |book{3}}{137}
+\indexentry{800@\textbf{References}!Psychology of Intelligence Analysis@\textit{Psychology of Intelligence Analysis} \volume|book{4}}{27}
+\indexentry{800@\textbf{References}!Thinking Fast \& Slow@\textit{Thinking Fast \& Slow} \volume|book{4}}{34}
+\indexentry{800@\textbf{References}!Psychology of Intelligence Analysis@\textit{Psychology of Intelligence Analysis} \volume}{36}
+\indexentry{800@\textbf{References}!Structured Analysis Techniques@\textit{Structured Analysis Techniques for Intelligence Analysis} \volume|book{4}}{37}
+\indexentry{800@\textbf{References}!On The Failure to Eliminate Hypotheses in a Conceptual Task@\textit{On The Failure to Eliminate Hypotheses in a Conceptual Task} \volume|book{4}}{45}
+\indexentry{800@\textbf{References}!Analysis of Competing Hypothesis@\textit{Analysis of Competing Hypothesis} \volume|book{4}}{46}
+\indexentry{800@\textbf{References}!FOR578 - Cyber Threat Intelligence|book{4}}{66}
+\indexentry{800@\textbf{References}!SEC595 - Applied Data Science \& Machine Learning for Cybersecurity Professionals|book{5}}{59}
+\indexentry{800@\textbf{References}!Crafting The InfoSec Playbook@\textit{Crafting The InfoSec Playbook} \volume|book{5}}{68}
+\indexentry{800@\textbf{References}!Site Reliability Engineering@\textit{Site Reliability Engineering} \volume|book{5}}{117-118}
+\indexentry{800@\textbf{References}!SEC511 - Advanced Threat Detection and Monitoring! |book{5}}{156}
+
+\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Blue Team!Fundamentals|book{1}}{7}
+\indexentry{Difficulty of SOC Work|book{1}}{8}
+\indexentry{Cybersecurity Skills Gap|book{1}}{9}
+\indexentry{Ransomware|book{1}}{10-11}
+\indexentry{DBIR|book{1}}{10}
+\indexentry{Verizon|book{1}}{10}
+\indexentry{Mandiant M-Trends|book{1}}{11}
+\indexentry{Dwell Time|book{1}}{11}
+\indexentry{Cyber Security Operations|book{1}}{12}
+\indexentry{Cyber Security Operations!Center|book{1}}{13}
+\indexentry{Blue Team|book{1}}{13}
+\indexentry{SOC|book{1}}{13}
+\indexentry{ISOC|book{1}}{13}
+\indexentry{SIRT|book{1}}{13}
+\indexentry{CSIRT|book{1}}{13}
+\indexentry{DART|book{1}}{13}
+\indexentry{Mindset|book{1}}{14}
+\indexentry{Modern Defense|book{1}}{14}
+\indexentry{SOC!Mission|book{1}}{15}
+\indexentry{SOC}{19}
+\indexentry{SOC!Components|book{1}}{19}
+\indexentry{People|book{1}}{19}
+\indexentry{Process|book{1}}{19}
+\indexentry{Technology|book{1}}{19}
+\indexentry{Mission Questions|book{1}}{20}
+\indexentry{SOC!Operating Environment|book{1}}{21}
+\indexentry{Organizational Goals|book{1}}{21}
+\indexentry{Threats|book{1}}{21}
+\indexentry{Devices|book{1}}{21}
+\indexentry{Users|book{1}}{21}
+\indexentry{Legal Context|book{1}}{21}
+\indexentry{SOC!Charter|book{1}}{22}
+\indexentry{Constituency|book{1}}{22}
+\indexentry{Scope|book{1}}{22}
+\indexentry{Concept of Operations|book{1}}{22}
+\indexentry{Steering Committee|book{1}}{22}
+\indexentry{Risk Appetite|book{1}}{23}
+\indexentry{Business Reality|book{1}}{25}
+\indexentry{Compensating Control|book{1}}{25}
+\indexentry{Risk Acceptance|book{1}}{26}
+\indexentry{Compromise|book{1}}{27}
+\indexentry{Loss Prevention|book{1}}{28}
+\indexentry{Blue Team!Truths|book{1}}{27-28}
+\indexentry{SOC!Organization|book{1}}{31}
+\indexentry{SOC!Adjacent Functions|book{1}}{31}
+\indexentry{Pen Testing|book{1}}{31-33}
+\indexentry{Red Team|book{1}}{31-33}
+\indexentry{Forensics|book{1}}{31-33}
+\indexentry{Threat Intelligence|book{1}}{31-33}
+\indexentry{Vulnerability Management|book{1}}{31-33}
+\indexentry{Detection!Engineering|book{1}}{31}
+\indexentry{System Administration|book{1}}{31}
+\indexentry{SOC!Process|book{1}}{32}
+\indexentry{SOC!Technology|book{1}}{32}
+\indexentry{SOC!Core Activities|book{1}}{32}
+\indexentry{SOC!Tangential Capabilities|book{1}}{32}
+\indexentry{Data Collection|book{1}}{32}
+\indexentry{Triage|book{1}}{32}
+\indexentry{Investigation|book{1}}{32}
+\indexentry{Incident Response|book{1}}{32}
+\indexentry{Self-Assessment|book{1}}{32-33}
+\indexentry{SOC!Process}{34}
+\indexentry{Continuous Improvement|book{1}}{34}
+\indexentry{Collection|book{1}}{34}
+\indexentry{Detection|book{1}}{34}
+\indexentry{Triage}{34}
+\indexentry{Investigation}{34}
+\indexentry{Incident Response}{34}
+\indexentry{Pen Testing}{36}
+\indexentry{Red Team}{36}
+\indexentry{Forensics}{36}
+\indexentry{Threat Intelligence}{36}
+\indexentry{SOC!Tiers|book{1}}{37}
+\indexentry{SOC!Tiered VS Tierless|book{1}}{38}
+\indexentry{SOC!Critical Information|book{1}}{39}
+\indexentry{Visibility|book{1}}{39}
+\indexentry{Network Diagram|book{1}}{39}
+\indexentry{Incident Response!Plan|book{1}}{39}
+\indexentry{Communication Plan|book{1}}{39}
+\indexentry{Data Flow Diagram|book{1}}{39}
+\indexentry{Log Flow Diagram|book{1}}{39}
+\indexentry{Critical Assets|book{1}}{39}
+\indexentry{PCAP|book{1}}{39}
+\indexentry{Metrics|book{1}}{40}
+\indexentry{ROI|book{1}}{40}
+\indexentry{GQM System|book{1}}{40}
+\indexentry{SOC!Summary|book{1}}{41}
+\indexentry{Data Collection}{43}
+\indexentry{Endpoint Monitoring|book{1}}{44}
+\indexentry{Network Monitoring|book{1}}{44-45}
+\indexentry{Visibility}{44}
+\indexentry{Network Security Monitoring|book{1}}{46-47}
+\indexentry{Data In Motion|book{1}}{46}
+\indexentry{Endpoint Monitoring}{48-49}
+\indexentry{EDR|book{1}}{48}
+\indexentry{XDR|book{1}}{48}
+\indexentry{Application Monitoring|book{1}}{49}
+\indexentry{Data At Rest|book{1}}{49}
+\indexentry{Continuous Security Monitoring|book{1}}{49}
+\indexentry{UBA|book{1}}{49}
+\indexentry{DLP|book{1}}{49}
+\indexentry{WAF|book{1}}{49}
+\indexentry{Cloud Monitoring|book{1}}{50-51}
+\indexentry{GCP|book{1}}{50}
+\indexentry{AWS|book{1}}{50}
+\indexentry{Azure \win|book{1}}{50}
+\indexentry{FaaS|book{1}}{50}
+\indexentry{SaaS|book{1}}{50}
+\indexentry{PaaS|book{1}}{50}
+\indexentry{IaaS|book{1}}{50}
+\indexentry{Management Plane|book{1}}{50-51}
+\indexentry{Crypto-Mining|book{1}}{51}
+\indexentry{AWS!Lambda Function|book{1}}{51}
+\indexentry{Endpoint or Network Monitoring ?|book{1}}{52}
+\indexentry{Network or Endpoint Monitoring ?|book{1}}{52}
+\indexentry{EDR!Failed|book{1}}{53}
+\indexentry{Endpoint Data|book{1}}{54}
+\indexentry{Defensible Network|book{1}}{55}
+\indexentry{Application Monitoring}{55}
+\indexentry{Endpoint Monitoring}{55}
+\indexentry{Network Monitoring}{55}
+\indexentry{Logging Tools|book{1}}{58}
+\indexentry{Host IPS|book{1}}{58}
+\indexentry{Network IPS|book{1}}{58}
+\indexentry{PCAP}{58}
+\indexentry{UBA}{58}
+\indexentry{Log Types|book{1}}{58}
+\indexentry{SIEM|book{1}}{59}
+\indexentry{Correlation|book{1}}{60}
+\indexentry{Visualization|book{1}}{60}
+\indexentry{SIEM!Log Collection|book{1}}{61}
+\indexentry{Network Flow|book{1}}{61}
+\indexentry{Traffic Capture|book{1}}{61}
+\indexentry{SIEM!Products|book{1}}{62}
+\indexentry{SIEM!Features|book{1}}{63}
+\indexentry{SIEM!Cloud-Native|book{1}}{64}
+\indexentry{SIEM!Log Storage|book{1}}{65}
+\indexentry{Raw Logs|book{1}}{65}
+\indexentry{Azure \win!Log Analytics|book{1}}{65}
+\indexentry{OpenSearch|book{1}}{66}
+\indexentry{Elastic Stack|book{1}}{66}
+\indexentry{OpenSearch!Query Language|book{1}}{67}
+\indexentry{SIEM!Summary|book{1}}{68}
+\indexentry{SIEM!Workflow|book{1}}{73}
+\indexentry{Threat Hunt|book{1}}{73}
+\indexentry{Threat Hunt!Workflow|book{1}}{73}
+\indexentry{SIEM!Search Approach|book{1}}{74}
+\indexentry{Selection|book{1}}{75}
+\indexentry{Filtering|book{1}}{75}
+\indexentry{Brute Force Login Attempt|book{1}}{75}
+\indexentry{Grouping|book{1}}{77-78}
+\indexentry{Aggregation|book{1}}{77-78}
+\indexentry{Calculation|book{1}}{80-81}
+\indexentry{Ordering|book{1}}{80}
+\indexentry{Sentinel \win|book{1}}{81-83}
+\indexentry{Splunk|book{1}}{81}
+\indexentry{OpenSearch!SQL Query|book{1}}{81}
+\indexentry{EventID 4624/4625|book{1}}{81-82}
+\indexentry{Failed Login|book{1}}{81-82}
+\indexentry{Search Processing Language|book{1}}{81}
+\indexentry{Kusto Query Language|book{1}}{81-83}
+\indexentry{Selection}{81}
+\indexentry{Filtering}{81}
+\indexentry{Grouping}{81}
+\indexentry{Aggregation}{81}
+\indexentry{SQL|book{1}}{81}
+\indexentry{AQL|book{1}}{81}
+\indexentry{QRadar|book{1}}{81}
+\indexentry{Azure \win!Sentinel|book{1}}{82}
+\indexentry{Kusto Query Language!Example Query|book{1}}{82}
+\indexentry{Kusto Query Language!Project|book{1}}{83}
+\indexentry{SQL}{88}
+\indexentry{SIEM!Choice|book{1}}{88}
+\indexentry{Visualization}{88}
+\indexentry{Visualization!Creation Process|book{1}}{89}
+\indexentry{Visualization!Types|book{1}}{90-91}
+\indexentry{Visualization!Quiz|book{1}}{92-93}
+\indexentry{Data Exfiltration|book{1}}{92}
+\indexentry{Password Spray Attack|book{1}}{92}
+\indexentry{Dashboards|book{1}}{94-95}
+\indexentry{Alert!Tuning|book{1}}{95}
+\indexentry{Pew Pew Map \web|book{1}}{95}
+\indexentry{Splunk!Free Tier|book{1}}{96}
+\indexentry{SecurityOnion|book{1}}{96}
+\indexentry{OSSIM|book{1}}{96}
+\indexentry{OpenSearch}{96}
+\indexentry{SIEM!Quiz|book{1}}{97}
+\indexentry{Password Spray Attack}{97}
+\indexentry{Port Scan|book{1}}{97}
+\indexentry{Uncategorized Websites|book{1}}{97}
+\indexentry{Visualization!Summary|book{1}}{99}
+\indexentry{SIEM!Summary}{100}
+\indexentry{Government-Backed Groups|book{1}}{105}
+\indexentry{APT1|book{1}}{105}
+\indexentry{Ransomware}{105}
+\indexentry{Organized Crime|book{1}}{105}
+\indexentry{BlackCat \malware|book{1}}{105}
+\indexentry{ALPHV \malware|book{1}}{105}
+\indexentry{LockBit \malware|book{1}}{105}
+\indexentry{Black Basta \malware|book{1}}{105}
+\indexentry{Hive \malware|book{1}}{105}
+\indexentry{REvil \malware|book{1}}{105}
+\indexentry{Attribution of Attacks|book{1}}{105}
+\indexentry{Extortion|book{1}}{105}
+\indexentry{Hacktivism|book{1}}{106}
+\indexentry{Hackers-for-Hire|book{1}}{107}
+\indexentry{Malicious Insider|book{1}}{107}
+\indexentry{UBA}{107}
+\indexentry{DLP}{107}
+\indexentry{Attacks General Types|book{1}}{108}
+\indexentry{Targeted Attacks|book{1}}{108}
+\indexentry{Opportunistic Attacks|book{1}}{108-109}
+\indexentry{Targeted Attacks}{110}
+\indexentry{Extortion}{108}
+\indexentry{Ransomware}{108}
+\indexentry{CEO Fraud|book{1}}{108}
+\indexentry{Botnets|book{1}}{108}
+\indexentry{Trojans|book{1}}{108}
+\indexentry{Spam|book{1}}{108}
+\indexentry{Adware|book{1}}{108}
+\indexentry{Drive-by Download|book{1}}{109}
+\indexentry{APT|book{1}}{110}
+\indexentry{Attack Group Naming|book{1}}{111}
+\indexentry{APT!Naming|book{1}}{111}
+\indexentry{APT28|book{1}}{111}
+\indexentry{Extortion!Case Study|book{1}}{112-113}
+\indexentry{Ransomware!Case Study|book{1}}{112-113}
+\indexentry{Conti Playbook \malware|book{1}}{112-113}
+\indexentry{Threats!Summary|book{1}}{114}
+\indexentry{Threat Intelligence}{116-117}
+\indexentry{Threat Intelligence!Context|book{1}}{117}
+\indexentry{Threat Intelligence!Platforms|book{1}}{118-119}
+\indexentry{Threat Intelligence!Sources|book{1}}{120}
+\indexentry{Threat Intelligence!Feed Effectiveness|book{1}}{120}
+\indexentry{Threat Intelligence!Platforms!Workflow|book{1}}{121}
+\indexentry{ISAC/ISAO|book{1}}{121}
+\indexentry{Incident Management System|book{1}}{121}
+\indexentry{SIEM!TIP Workflow|book{1}}{121}
+\indexentry{SOAR!TIP Workflow|book{1}}{121}
+\indexentry{De-Fanged Indicators|book{1}}{122}
+\indexentry{MISP|book{1}}{123-128}
+\indexentry{MISP!Terminology|book{1}}{124}
+\indexentry{Threat Intelligence!Platforms!Summary|book{1}}{128}
+\indexentry{Alert|book{1}}{133}
+\indexentry{Event|book{1}}{133}
+\indexentry{Incident|book{1}}{133}
+\indexentry{NIST SP800-61|book{1}}{133}
+\indexentry{ITIL|book{1}}{133}
+\indexentry{Event!Collection|book{1}}{134-135}
+\indexentry{Cron|book{1}}{134}
+\indexentry{Security-Relevant Logs|book{1}}{135}
+\indexentry{Event!Log Flow|book{1}}{136}
+\indexentry{Alert!Queue|book{1}}{137-138}
+\indexentry{Incident Management System}{137}
+\indexentry{TheHive \toolb|book{1}}{137}
+\indexentry{SIEM!Alerts|book{1}}{137}
+\indexentry{SOAR|book{1}}{137}
+\indexentry{Alert!Triage|book{1}}{137}
+\indexentry{Alert!Workflow|book{1}}{139}
+\indexentry{False Positive|book{1}}{139}
+\indexentry{Latency|book{1}}{140}
+\indexentry{Alert!Types|book{1}}{141}
+\indexentry{Signature-Based Alert|book{1}}{141-143}
+\indexentry{Anomaly-Based Alert|book{1}}{141-143}
+\indexentry{Weak Correlation|book{1}}{142}
+\indexentry{False Positive}{142}
+\indexentry{True Positive|book{1}}{142}
+\indexentry{IDS|book{1}}{143}
+\indexentry{Policy Alerts|book{1}}{143}
+\indexentry{Ticketing Solution|book{1}}{147}
+\indexentry{Incident Management System}{147}
+\indexentry{Incident Management System!Overview|book{1}}{148}
+\indexentry{SIEM}{148}
+\indexentry{SOAR}{148}
+\indexentry{Automated Actions|book{1}}{148}
+\indexentry{Context|book{1}}{148}
+\indexentry{Alert!Triage}{148}
+\indexentry{IOC|book{1}}{148}
+\indexentry{Incident Management System!Features|book{1}}{149}
+\indexentry{Playbook|book{1}}{149}
+\indexentry{Indicator Database|book{1}}{149}
+\indexentry{Workflow Customization|book{1}}{149}
+\indexentry{Automation!Integration|book{1}}{149}
+\indexentry{Knowledge Database|book{1}}{149}
+\indexentry{VERIS|book{1}}{150}
+\indexentry{Verizon}{150}
+\indexentry{US-CERT|book{1}}{150}
+\indexentry{Incident!Reporting|book{1}}{150}
+\indexentry{Incident!Notification|book{1}}{150}
+\indexentry{Incident!Categorization|book{1}}{150}
+\indexentry{Four A's|book{1}}{150}
+\indexentry{FISMA|book{1}}{151}
+\indexentry{Incident!Scoring|book{1}}{151}
+\indexentry{Weighted Mean|book{1}}{151}
+\indexentry{NIST SP800-61}{151}
+\indexentry{Incident!Factors|book{1}}{151}
+\indexentry{Functional Impact|book{1}}{151}
+\indexentry{Observed Activity|book{1}}{151}
+\indexentry{Actor Characterization|book{1}}{151}
+\indexentry{Information Impact|book{1}}{151}
+\indexentry{Recoverability|book{1}}{151}
+\indexentry{Cross-Sector Dependency|book{1}}{151}
+\indexentry{Potential Impact|book{1}}{151}
+\indexentry{Incident!Categorization!Success|book{1}}{152}
+\indexentry{Threshold|book{1}}{152}
+\indexentry{Phishing!Attempts|book{1}}{152}
+\indexentry{Attack Method Identification|book{1}}{152}
+\indexentry{Dwell Time}{152}
+\indexentry{TheHive \toolb}{153-154}
+\indexentry{Playbook}{153-156}
+\indexentry{Case!Template|book{1}}{153-154}
+\indexentry{Observables|book{1}}{153-154}
+\indexentry{IOC}{153-154}
+\indexentry{Worklogs|book{1}}{153-154}
+\indexentry{Cortex Engine|book{1}}{153}
+\indexentry{Analyzers|book{1}}{153}
+\indexentry{TheHive \toolb!Workflow|book{1}}{154}
+\indexentry{Alert!Queue}{154}
+\indexentry{Case|book{1}}{154}
+\indexentry{Playbook!Example|book{1}}{155}
+\indexentry{Playbook!Creation|book{1}}{156}
+\indexentry{ATC|book{1}}{156}
+\indexentry{RE\&CT|book{1}}{156}
+\indexentry{Playbook!Breakdown|book{1}}{156}
+\indexentry{Playbook!Planning|book{1}}{156}
+\indexentry{Incident Response!Techniques|book{1}}{156}
+\indexentry{Containment|book{1}}{156}
+\indexentry{SOAR}{157}
+\indexentry{SOAR!Platforms|book{1}}{158}
+\indexentry{Initial Investigation|book{1}}{159}
+\indexentry{Spam}{159}
+\indexentry{Web Exploit|book{1}}{159}
+\indexentry{Command \& Control|book{1}}{159}
+\indexentry{Virus Detection|book{1}}{159}
+\indexentry{Phishing|book{1}}{159}
+\indexentry{Enrichment|book{1}}{159}
+\indexentry{Remediation|book{1}}{159}
+\indexentry{SOC!Tools Overview|book{1}}{160}
+\indexentry{TheHive \toolb}{160}
+\indexentry{MISP}{160}
+\indexentry{SIEM}{160}
+\indexentry{SOAR}{160}
+\indexentry{Unstructured Data|book{1}}{161}
+\indexentry{Code Database|book{1}}{161}
+\indexentry{Real-Time Collaborative Editing|book{1}}{161}
+\indexentry{Learning Curve|book{1}}{161}
+\indexentry{Confluence|book{1}}{161}
+\indexentry{HackMD \tool|book{1}}{161}
+\indexentry{OneNote \win|book{1}}{161}
+\indexentry{Material Impact|book{1}}{164}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Post-Exploitation!Favorites|book{2}}{4}
+\indexentry{Network Architecture|book{2}}{6}
+\indexentry{Router|book{2}}{7}
+\indexentry{ACL|book{2}}{7}
+\indexentry{IEEE 802.1X|book{2}}{7}
+\indexentry{Perimeter|book{2}}{7-8}
+\indexentry{Network Zone|book{2}}{8}
+\indexentry{Zone|book{2}}{8}
+\indexentry{Traffic Flow|book{2}}{8}
+\indexentry{User Devices|book{2}}{8}
+\indexentry{Server|book{2}}{8}
+\indexentry{IoT|book{2}}{8}
+\indexentry{Cloud|book{2}}{8}
+\indexentry{WAN|book{2}}{8}
+\indexentry{Micro-Segmentation|book{2}}{8}
+\indexentry{Zero Trust|book{2}}{8}
+\indexentry{Switch|book{2}}{9-10}
+\indexentry{IEEE 802.1X}{9}
+\indexentry{VLAN|book{2}}{9}
+\indexentry{Least Privilege|book{2}}{9}
+\indexentry{Traffic Mirror|book{2}}{9-10}
+\indexentry{Network Flow! |book{2}}{9}
+\indexentry{SPAN|book{2}}{10}
+\indexentry{Mirror Port|book{2}}{10}
+\indexentry{Network Tap|book{2}}{10}
+\indexentry{Traffic Duplication|book{2}}{10}
+\indexentry{Bandwidth Limitation|book{2}}{10}
+\indexentry{Lateral Movement|book{2}}{10}
+\indexentry{Full Duplex|book{2}}{10}
+\indexentry{Single Port Mirror|book{2}}{10}
+\indexentry{Visibility Points|book{2}}{10}
+\indexentry{Next-Gen Firewall|book{2}}{11-12}
+\indexentry{User Identity|book{2}}{11}
+\indexentry{Application Behavior|book{2}}{11}
+\indexentry{Least Privilege}{11-12}
+\indexentry{Zero Trust}{12}
+\indexentry{Zero Trust!Architecture|book{2}}{13}
+\indexentry{Asset-Centric Security|book{2}}{13}
+\indexentry{Identity-Centric Security|book{2}}{13}
+\indexentry{BeyondCorp (Google)|book{2}}{13}
+\indexentry{Credential Theft|book{2}}{13}
+\indexentry{Man-In-The-Middle|book{2}}{13}
+\indexentry{Non-Authenticated Protocols|book{2}}{13}
+\indexentry{Micro-Segmentation}{14}
+\indexentry{Worm|book{2}}{14}
+\indexentry{NotPetya \malware|book{2}}{14}
+\indexentry{WannaCry \malware|book{2}}{14}
+\indexentry{EternalBlue \malware|book{2}}{14}
+\indexentry{Assumption of Compromise|book{2}}{14}
+\indexentry{Slow Attack Progression|book{2}}{14}
+\indexentry{Flat Network|book{2}}{14-15}
+\indexentry{Anti-Exploitation|book{2}}{15}
+\indexentry{Windows Exploit Guard|book{2}}{15}
+\indexentry{EMET \win|book{2}}{15}
+\indexentry{Packet Capture|book{2}}{18}
+\indexentry{Flow Logs|book{2}}{18-19}
+\indexentry{Service Logs|book{2}}{18}
+\indexentry{Network Data Capture Formats|book{2}}{18}
+\indexentry{PCAP!Downside|book{2}}{18}
+\indexentry{Zeek \toolb|book{2}}{18}
+\indexentry{Suricata \toolb|book{2}}{18}
+\indexentry{Network Flow! }{19}
+\indexentry{NetFlow Collector|book{2}}{19}
+\indexentry{Network Flow!Ports|book{2}}{19}
+\indexentry{RFC 3954 - NetFlow|book{2}}{19}
+\indexentry{Tshark \toolb|book{2}}{20}
+\indexentry{Botnets!Flow Logs Example|book{2}}{20}
+\indexentry{Flow Logs!Opportunities|book{2}}{21}
+\indexentry{Anomaly Hunting|book{2}}{21}
+\indexentry{Lateral Movement}{21}
+\indexentry{PCAP!Collector|book{2}}{22}
+\indexentry{Metadata Collector|book{2}}{22}
+\indexentry{Arkime \toolb|book{2}}{22}
+\indexentry{Corelight|book{2}}{22}
+\indexentry{L7 Metadata|book{2}}{23}
+\indexentry{Network Tap}{23}
+\indexentry{Application Layer Logs|book{2}}{23}
+\indexentry{Zeek \toolb}{23}
+\indexentry{Zeek \toolb!Output Example|book{2}}{24}
+\indexentry{Conn.log@\texttt{conn.log}|book{2}}{24}
+\indexentry{Full Packet Capture|book{2}}{25}
+\indexentry{PCAP! |book{2}}{25}
+\indexentry{Tcpdump \toolb|book{2}}{25}
+\indexentry{Tshark \toolb}{25}
+\indexentry{Wireshark \toolb|book{2}}{25-26}
+\indexentry{Arkime \toolb}{25}
+\indexentry{Winpcap \win|book{2}}{25}
+\indexentry{Libpcap \toolb|book{2}}{25}
+\indexentry{PCAP!Pcapng@\texttt{.pcapng}|book{2}}{25}
+\indexentry{CapTipper \toolb|book{2}}{25}
+\indexentry{NetworkMiner \toolb|book{2}}{25}
+\indexentry{DNS|book{2}}{30}
+\indexentry{DNS!Server \& Client Types|book{2}}{31}
+\indexentry{Stub Resolver|book{2}}{31}
+\indexentry{Forwarding Server|book{2}}{31}
+\indexentry{Caching Server|book{2}}{31}
+\indexentry{Recursive Server|book{2}}{31}
+\indexentry{Authoritative Nameserver|book{2}}{31-33}
+\indexentry{OpenDNS|book{2}}{31}
+\indexentry{DNS!Cache \win|book{2}}{31}
+\indexentry{DNS!Lookup|book{2}}{33}
+\indexentry{Recursive Server}{33}
+\indexentry{Root Nameserver|book{2}}{33}
+\indexentry{Stub Resolver}{33}
+\indexentry{Forwarding Server}{33}
+\indexentry{TTL|book{2}}{33}
+\indexentry{DNS!Record Types|book{2}}{34-45}
+\indexentry{A/AAAA Record|book{2}}{35}
+\indexentry{TTL}{35}
+\indexentry{PTR Record|book{2}}{37-38}
+\indexentry{RFC 1912 - DNS|book{2}}{37}
+\indexentry{RFC 2317 - DNS/PTR|book{2}}{37}
+\indexentry{A/AAAA Record}{38}
+\indexentry{DNS!Mapping|book{2}}{38}
+\indexentry{DNS!Danger of Misunderstanding|book{2}}{39}
+\indexentry{PTR Record}{40}
+\indexentry{TXT Record|book{2}}{41}
+\indexentry{RFC 1464 - DNS/TXT|book{2}}{41}
+\indexentry{Spam!Prevention|book{2}}{41}
+\indexentry{TLS Certificate!Check|book{2}}{41}
+\indexentry{Sender Policy Framework|book{2}}{41}
+\indexentry{DKIM|book{2}}{41}
+\indexentry{Proof of Domain Ownership|book{2}}{41}
+\indexentry{DNS!Tunneling|book{2}}{41}
+\indexentry{CNAME Record|book{2}}{42}
+\indexentry{MX Record|book{2}}{43}
+\indexentry{FQDN|book{2}}{43}
+\indexentry{RFC 0974@RFC 974 -DNS/MX|book{2}}{43}
+\indexentry{SRV Record|book{2}}{44}
+\indexentry{Active Directory|book{2}}{44}
+\indexentry{NS Record|book{2}}{45}
+\indexentry{TLD!Zone File|book{2}}{45}
+\indexentry{DNS!Delegation|book{2}}{45}
+\indexentry{DNSSEC|book{2}}{46}
+\indexentry{DNS!Over HTTPS|book{2}}{46-49}
+\indexentry{DNS!Over TLS|book{2}}{46}
+\indexentry{TLS Traffic Decryption|book{2}}{46-47}
+\indexentry{DNS!Rogue|book{2}}{49}
+\indexentry{Rogue DNS|book{2}}{49}
+\indexentry{DNS!Over TLS!Port|book{2}}{49}
+\indexentry{DNS!Visibility|book{2}}{55}
+\indexentry{DNS!Traffic Analysis|book{2}}{55}
+\indexentry{Caching Server}{55}
+\indexentry{Forwarding Server}{55}
+\indexentry{Passive DNS|book{2}}{57}
+\indexentry{DNS!Passive Data|book{2}}{57}
+\indexentry{DNS!Connecting Domain to IP|book{2}}{57}
+\indexentry{DNS!Malicious Traffic Detection|book{2}}{59-60}
+\indexentry{TLD|book{2}}{60}
+\indexentry{Free TLD|book{2}}{60}
+\indexentry{Uncommon TLD|book{2}}{60}
+\indexentry{Domain Reputation|book{2}}{61}
+\indexentry{DNS!Lookup!Reputation|book{2}}{61}
+\indexentry{DNS!Research Sites|book{2}}{62}
+\indexentry{Domain Age|book{2}}{62}
+\indexentry{Domain Randomness|book{2}}{63}
+\indexentry{DGA|book{2}}{63}
+\indexentry{DNS!Tunneling}{63}
+\indexentry{DNS!Attack Scenarios|book{2}}{64}
+\indexentry{DNS!Unauthorized Server Use|book{2}}{65}
+\indexentry{Malicious DNS|book{2}}{65}
+\indexentry{Malware!DNS|book{2}}{65}
+\indexentry{DNS!Over HTTPS}{65}
+\indexentry{TLS Traffic Decryption}{65}
+\indexentry{DNS!Suspicious Request|book{2}}{66}
+\indexentry{DNS!Unauthorized Server Use!Detection|book{2}}{67}
+\indexentry{Network Flow! }{67}
+\indexentry{Domain Shadowing|book{2}}{68}
+\indexentry{Traffic Interception|book{2}}{68}
+\indexentry{Domain Ownership Proof|book{2}}{68}
+\indexentry{Namecheap|book{2}}{68}
+\indexentry{Passwords Theft Attack|book{2}}{68}
+\indexentry{DNS!Record Modification Attack|book{2}}{68}
+\indexentry{DGA}{69}
+\indexentry{DNS!Tunneling}{70-74}
+\indexentry{CNAME Record!Tunneling|book{2}}{71}
+\indexentry{TXT Record!Tunneling|book{2}}{71-72}
+\indexentry{Iodine \toolr|book{2}}{71-73}
+\indexentry{DnsCat2 \toolr|book{2}}{71}
+\indexentry{NULL Record|book{2}}{72}
+\indexentry{DNS!Tunneling!Detection|book{2}}{74}
+\indexentry{Blockchain DNS|book{2}}{75}
+\indexentry{EmerDNS|book{2}}{75}
+\indexentry{ICANN|book{2}}{75}
+\indexentry{OpenNIC|book{2}}{75}
+\indexentry{International Domain Name|book{2}}{78-81}
+\indexentry{Punycode|book{2}}{78-79}
+\indexentry{Homoglyph|book{2}}{78}
+\indexentry{Webserver|book{2}}{86}
+\indexentry{HTTP|book{2}}{86-87}
+\indexentry{URI|book{2}}{87}
+\indexentry{HTTP!Methods|book{2}}{88-90}
+\indexentry{RFC 2616 - HTTP/1.1|book{2}}{90}
+\indexentry{HTTP!Request Headers|book{2}}{91-94}
+\indexentry{User-Agent|book{2}}{91-92}
+\indexentry{Referer|book{2}}{91}
+\indexentry{X-Forwarded-For|book{2}}{91}
+\indexentry{Angler Exploit Kit \malware|book{2}}{93}
+\indexentry{Referer}{94}
+\indexentry{HTTP!Response Headers|book{2}}{95-99}
+\indexentry{Content-Type|book{2}}{95}
+\indexentry{MIME Type|book{2}}{95}
+\indexentry{HTTP!Response Codes|book{2}}{96}
+\indexentry{Proxy Authentication|book{2}}{96}
+\indexentry{Octet-Stream|book{2}}{97}
+\indexentry{HTTP!Request Headers!Analysis|book{2}}{98}
+\indexentry{HTTP!Response Headers!Analysis|book{2}}{99}
+\indexentry{Octet-Stream}{99}
+\indexentry{File Extraction (PCAP)|book{2}}{100}
+\indexentry{HTTP!Evil Usage|book{2}}{105}
+\indexentry{Cyber Kill Chain|book{2}}{105}
+\indexentry{HTTP!Analysis Methods|book{2}}{106}
+\indexentry{HTTP!Request Headers!Analysis}{106}
+\indexentry{HTTP!Response Headers!Analysis}{106}
+\indexentry{HTTP!Request Headers}{106}
+\indexentry{URL Reputation Check|book{2}}{107}
+\indexentry{URL Reputation Check!Tools|book{2}}{108}
+\indexentry{Sandboxing|book{2}}{109}
+\indexentry{Beaconing|book{2}}{110}
+\indexentry{Base64|book{2}}{110}
+\indexentry{HTTP!Request Headers!Analysis}{110}
+\indexentry{HTTP!Response Headers!Analysis}{110}
+\indexentry{User-Agent!Analysis|book{2}}{111-112}
+\indexentry{Cookies|book{2}}{113}
+\indexentry{Base64}{114-115}
+\indexentry{APT19|book{2}}{115}
+\indexentry{Beaconing}{115}
+\indexentry{HTTP!File Analysis|book{2}}{116}
+\indexentry{Lazarus Group|book{2}}{116}
+\indexentry{HTTP!Suspicious Activity|book{2}}{117-121}
+\indexentry{Naked IP Address|book{2}}{118}
+\indexentry{Log4j|book{2}}{119}
+\indexentry{Cobalt Strike \toolr|book{2}}{121}
+\indexentry{BEACON|book{2}}{121}
+\indexentry{HTTP/2|book{2}}{123-124}
+\indexentry{Streams|book{2}}{123}
+\indexentry{Frames|book{2}}{123}
+\indexentry{HTTP/1.1 vs HTTP/2|book{2}}{124}
+\indexentry{HTTP/2!Frame Types|book{2}}{123-124}
+\indexentry{HTTP/2!Streams|book{2}}{125}
+\indexentry{HTTP/2!Session|book{2}}{126}
+\indexentry{HPACK|book{2}}{127}
+\indexentry{HTTP/2!File Extraction|book{2}}{128}
+\indexentry{HTTP/3|book{2}}{129}
+\indexentry{QUIC|book{2}}{129}
+\indexentry{QPACK|book{2}}{129}
+\indexentry{DCID|book{2}}{129}
+\indexentry{LetsEncrypt|book{2}}{134}
+\indexentry{TLS1.3|book{2}}{134}
+\indexentry{Transparent Proxy|book{2}}{135}
+\indexentry{Explicit Proxy|book{2}}{135}
+\indexentry{HTTP!Proxy|book{2}}{135}
+\indexentry{SOCKS Proxy|book{2}}{135}
+\indexentry{CONNECT|book{2}}{135}
+\indexentry{DNS!Over HTTPS}{134}
+\indexentry{Certificate Authority|book{2}}{135}
+\indexentry{TLS Traffic Decryption}{136-137}
+\indexentry{Metasploit \toolr|book{2}}{137}
+\indexentry{Encrypted Client Hello|book{2}}{137}
+\indexentry{TLS Certificate|book{2}}{138-139}
+\indexentry{SSL Certificate|book{2}}{138-139}
+\indexentry{TLS1.2|book{2}}{138}
+\indexentry{TLS1.3}{138}
+\indexentry{TLS Fingerprints|book{2}}{140}
+\indexentry{JA3(S)|book{2}}{140}
+\indexentry{JARM|book{2}}{140}
+\indexentry{Elliptic Curve|book{2}}{140}
+\indexentry{Emotet \malware|book{2}}{140}
+\indexentry{Malicious C2 Server Fingerprinting|book{2}}{140}
+\indexentry{TLS1.3}{142}
+\indexentry{Server Name Indication|book{2}}{142}
+\indexentry{Downgrade Attack|book{2}}{142}
+\indexentry{Perfect Forward Secrecy|book{2}}{142}
+\indexentry{RFC 8446 - TLS1.3|book{2}}{142}
+\indexentry{Encrypted Client Hello}{142}
+\indexentry{Ephemeral Key|book{2}}{142}
+\indexentry{Certificate Exchange|book{2}}{142}
+\indexentry{DHCP|book{2}}{146-148}
+\indexentry{Hostname|book{2}}{146}
+\indexentry{Network Access Control|book{2}}{146}
+\indexentry{OUI|book{2}}{146}
+\indexentry{MAC|book{2}}{146}
+\indexentry{Rogue Device|book{2}}{146}
+\indexentry{SMB \win|book{2}}{149-151}
+\indexentry{Samba \linux|book{2}}{149}
+\indexentry{Remote Login|book{2}}{149}
+\indexentry{SMB \win!Versions|book{2}}{150}
+\indexentry{EternalBlue \malware}{151}
+\indexentry{PSExec \tool|book{2}}{151}
+\indexentry{SSH|book{2}}{152-153}
+\indexentry{X11 Forwarding|book{2}}{152}
+\indexentry{SFTP|book{2}}{152}
+\indexentry{Data Exfiltration! |book{2}}{152}
+\indexentry{Dual-Home Machine|book{2}}{152}
+\indexentry{Jump Box|book{2}}{152}
+\indexentry{RDP!Tunneling|book{2}}{153}
+\indexentry{RDP|book{2}}{154}
+\indexentry{VNC|book{2}}{154}
+\indexentry{PowerShell Remoting|book{2}}{155}
+\indexentry{WinRM|book{2}}{155}
+\indexentry{PSRP|book{2}}{155}
+\indexentry{WSMV|book{2}}{155}
+\indexentry{SOAP|book{2}}{155}
+\indexentry{Windows Vista|book{2}}{155}
+\indexentry{Enter-PSSession \powershell|book{2}}{155}
+\indexentry{FTP|book{2}}{156}
+\indexentry{ICMP|book{2}}{157}
+\indexentry{Scapy|book{2}}{157}
+\indexentry{RAT|book{2}}{158}
+\indexentry{Persistence|book{2}}{158}
+\indexentry{Conti Playbook \malware! |book{2}}{158}
+\indexentry{Network Segmentation|book{2}}{159}
+\indexentry{Anomaly Detection|book{2}}{159}
+\indexentry{Protocols Safety|book{2}}{159}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Endpoint-Centric Attack Steps|book{3}}{6}
+\indexentry{Host-Centric Attack Steps|book{3}}{6-7}
+\indexentry{Network-Centric Attack Steps|book{3}}{7}
+\indexentry{Cyber Kill Chain! |book{3}}{7}
+\indexentry{Initial Exploitation|book{3}}{8}
+\indexentry{Server-Side Exploit|book{3}}{9}
+\indexentry{Listening Port|book{3}}{9}
+\indexentry{Client-Side Exploit|book{3}}{10}
+\indexentry{Post-Exploitation|book{3}}{11}
+\indexentry{MITRE ATT\&CK|book{3}}{11}
+\indexentry{Code Execution|book{3}}{12}
+\indexentry{Persistence! |book{3}}{13}
+\indexentry{Scheduled Task|book{3}}{13}
+\indexentry{Registry Key|book{3}}{13}
+\indexentry{Discovery|book{3}}{14}
+\indexentry{Enumeration|book{3}}{14}
+\indexentry{False Positive! |book{3}}{14}
+\indexentry{Privilege Escalation|book{3}}{15-16}
+\indexentry{Domain Admin|book{3}}{15}
+\indexentry{File Permissions|book{3}}{16}
+\indexentry{Operating System Permissions|book{3}}{16-17}
+\indexentry{PrivescCheck|book{3}}{17}
+\indexentry{Kernel Exploitation|book{3}}{18}
+\indexentry{Dirty Pipe|book{3}}{18}
+\indexentry{Privilege Escalation!Local|book{3}}{18}
+\indexentry{Defense Evasion|book{3}}{19}
+\indexentry{BYOVD|book{3}}{19}
+\indexentry{GhostPack|book{3}}{19}
+\indexentry{Seatbelt \toolr|book{3}}{19}
+\indexentry{AuKill \malware|book{3}}{19}
+\indexentry{MalVirt \malware|book{3}}{19}
+\indexentry{Backstab \malware|book{3}}{19-20}
+\indexentry{CredGuard \toolb|book{3}}{19}
+\indexentry{LockBit \malware! |book{3}}{19}
+\indexentry{Medusa \malware|book{3}}{19}
+\indexentry{Process Explorer|book{3}}{19}
+\indexentry{NtLoadDriver|book{3}}{20}
+\indexentry{DeviceIoControl|book{3}}{20}
+\indexentry{SE\_PRIVILEGED\_ENABLED|book{3}}{20}
+\indexentry{ProcExp \tool|book{3}}{20}
+\indexentry{Credential Dumping|book{3}}{21}
+\indexentry{Mimikatz \toolr|book{3}}{22-23}
+\indexentry{Sekurlsa|book{3}}{22}
+\indexentry{Single Sign-On|book{3}}{22}
+\indexentry{Lateral Movement! |book{3}}{23-25}
+\indexentry{PSExec \tool! |book{3}}{24}
+\indexentry{X11 Forwarding! |book{3}}{24}
+\indexentry{Staging Malware|book{3}}{24}
+\indexentry{PowerShell Remoting! |book{3}}{24}
+\indexentry{WMI|book{3}}{24}
+\indexentry{RDP! |book{3}}{24}
+\indexentry{VNC! |book{3}}{24}
+\indexentry{Collection! |book{3}}{25}
+\indexentry{Key Logging|book{3}}{25}
+\indexentry{Video Capture|book{3}}{25}
+\indexentry{Database Export|book{3}}{25}
+\indexentry{Exfiltration|book{3}}{26}
+\indexentry{Exfiltration!Example|book{3}}{27-28}
+\indexentry{Data Theft|book{3}}{26}
+\indexentry{Cyber Kill Chain! }{27}
+\indexentry{Pre-Exploitation|book{3}}{29}
+\indexentry{Post-Exploitation}{29}
+\indexentry{Endpoints Defense|book{3}}{31}
+\indexentry{Network Scanning|book{3}}{32}
+\indexentry{Active Scanning|book{3}}{32}
+\indexentry{Passive Scanning|book{3}}{32}
+\indexentry{Nmap \toolr|book{3}}{32}
+\indexentry{Software Inventory|book{3}}{32}
+\indexentry{Vulnerability Scanning|book{3}}{33}
+\indexentry{Authenticated Scanning|book{3}}{33}
+\indexentry{Unauthenticated Scanning|book{3}}{33}
+\indexentry{Patching|book{3}}{34}
+\indexentry{CIS Critical Controls|book{3}}{34}
+\indexentry{Continuous Vulnerability Management|book{3}}{34}
+\indexentry{Exploit Prediction Scoring System|book{3}}{34}
+\indexentry{Known Exploited Vulnerabilities|book{3}}{34}
+\indexentry{Anti-Exploitation! |book{3}}{35}
+\indexentry{EMET \win! |book{3}}{35}
+\indexentry{Exploit Guard \win|book{3}}{35-36}
+\indexentry{ASLR|book{3}}{35}
+\indexentry{DEP|book{3}}{35}
+\indexentry{Buffer Overflow|book{3}}{35}
+\indexentry{Exploit Protection|book{3}}{36}
+\indexentry{Folder Access|book{3}}{36}
+\indexentry{Network Protection|book{3}}{36}
+\indexentry{Attack Surface Reduction|book{3}}{36}
+\indexentry{SmartScreen|book{3}}{36}
+\indexentry{Ransomware Prevention|book{3}}{36}
+\indexentry{E3 License \win|book{3}}{36}
+\indexentry{E5 License \win|book{3}}{36}
+\indexentry{Credential Guard \win|book{3}}{37}
+\indexentry{LSA|book{3}}{37}
+\indexentry{LSASS@\texttt{lsass.exe}|book{3}}{37-38}
+\indexentry{SLAT|book{3}}{37}
+\indexentry{Credential Theft!Attacks|book{3}}{37}
+\indexentry{Pass-the-Hash|book{3}}{37}
+\indexentry{Pass-the-Ticket|book{3}}{37}
+\indexentry{Trusted Platform Module|book{3}}{37}
+\indexentry{Virtual Secure Mode|book{3}}{37}
+\indexentry{Virtualization-Based Security|book{3}}{37}
+\indexentry{Attack Surface Reduction!Rules|book{3}}{38}
+\indexentry{WMI!Event Subscription|book{3}}{38}
+\indexentry{Vulnerable Drivers|book{3}}{38}
+\indexentry{Win32 API Calls|book{3}}{38}
+\indexentry{Office Macros|book{3}}{38}
+\indexentry{PSExec \tool! }{38}
+\indexentry{EventID 1121/1122|book{3}}{38}
+\indexentry{E3 License \win}{38}
+\indexentry{E5 License \win}{38}
+\indexentry{Host Firewall|book{3}}{39-40}
+\indexentry{Lateral Movement!Prevention|book{3}}{39}
+\indexentry{Inbound Deny|book{3}}{39}
+\indexentry{Outbound Deny|book{3}}{39}
+\indexentry{Exploit Prevention|book{3}}{39}
+\indexentry{Network Firewall|book{3}}{40}
+\indexentry{Metasploit \toolr! |book{3}}{40}
+\indexentry{Antivirus|book{3}}{41}
+\indexentry{Installation Phase|book{3}}{41}
+\indexentry{In-Memory Malware Scanning|book{3}}{41}
+\indexentry{Noise!Reduction|book{3}}{41}
+\indexentry{Malware!Most Interesting|book{3}}{41-42}
+\indexentry{File Reputation|book{3}}{42}
+\indexentry{Application Control|book{3}}{43-45}
+\indexentry{Audit Mode|book{3}}{43}
+\indexentry{Block Mode|book{3}}{43}
+\indexentry{Noise!Reduction}{43}
+\indexentry{AppLocker \win|book{3}}{43}
+\indexentry{WDAC \win|book{3}}{43}
+\indexentry{Gatekeeper \mac|book{3}}{43}
+\indexentry{AppArmor \linux|book{3}}{43}
+\indexentry{SELinux|book{3}}{43}
+\indexentry{Application Control!Bypass|book{3}}{44-45}
+\indexentry{Code Injection|book{3}}{44}
+\indexentry{Living Off The Land|book{3}}{44}
+\indexentry{File Permissions}{44}
+\indexentry{Rundll@\texttt{rundll32.exe}|book{3}}{44}
+\indexentry{Opportunistic Attacks! |book{3}}{45}
+\indexentry{Stuxnet \malware|book{3}}{45}
+\indexentry{CIS Top-10|book{3}}{45}
+\indexentry{File Integrity Monitoring|book{3}}{46}
+\indexentry{Web Shell|book{3}}{46}
+\indexentry{Backdoor|book{3}}{46}
+\indexentry{HIDS/HIPS|book{3}}{46}
+\indexentry{ASEP|book{3}}{47}
+\indexentry{Autoruns \tool|book{3}}{47}
+\indexentry{Scheduled Task}{47}
+\indexentry{Browser Extension|book{3}}{47}
+\indexentry{Sysinternals \tool|book{3}}{47}
+\indexentry{Persistence! }{47}
+\indexentry{PAWS|book{3}}{48}
+\indexentry{HGS|book{3}}{48}
+\indexentry{Trusted Hyper-V|book{3}}{48}
+\indexentry{Health Attestation|book{3}}{48}
+\indexentry{Phishing!Prevention|book{3}}{48}
+\indexentry{Jump Server|book{3}}{48}
+\indexentry{Drive-by Download! |book{3}}{48}
+\indexentry{Permissions \win|book{3}}{49}
+\indexentry{Privileges \win|book{3}}{49}
+\indexentry{Privilege Escalation!Prevention|book{3}}{49}
+\indexentry{Defense-In-Depth|book{3}}{49}
+\indexentry{File Permissions!Auditing|book{3}}{49}
+\indexentry{Credential Theft!In Memory|book{3}}{49}
+\indexentry{Credential Theft!From Backup|book{3}}{49}
+\indexentry{File Integrity Monitoring}{49}
+\indexentry{EDR! |book{3}}{50}
+\indexentry{Visibility! |book{3}}{50-51}
+\indexentry{XDR! |book{3}}{50}
+\indexentry{HIDS/HIPS!Successor|book{3}}{50}
+\indexentry{Agent-Based Deployment|book{3}}{50}
+\indexentry{DLP! |book{3}}{51}
+\indexentry{HIPAA|book{3}}{51}
+\indexentry{Non-Malicious Insider|book{3}}{51}
+\indexentry{Malicious Insider! |book{3}}{51}
+\indexentry{Malicious Outsider|book{3}}{51}
+\indexentry{UBA! |book{3}}{52}
+\indexentry{UEBA|book{3}}{52}
+\indexentry{Anomaly Detection! |book{3}}{52}
+\indexentry{Audit Policies|book{3}}{53}
+\indexentry{Event!Logging|book{3}}{53}
+\indexentry{Deception|book{3}}{54}
+\indexentry{Log Collection|book{3}}{56}
+\indexentry{Event!Logging}{57-58}
+\indexentry{EVTX|book{3}}{57-58}
+\indexentry{Event Viewer \win|book{3}}{57-58}
+\indexentry{Log Channels \win|book{3}}{57-58}
+\indexentry{Windows Event Logs|book{3}}{57-58}
+\indexentry{Log Path \win|book{3}}{58}
+\indexentry{Get-WinEvent \powershell|book{3}}{58}
+\indexentry{Security Logs \win|book{3}}{59-60}
+\indexentry{Audit Policies}{59}
+\indexentry{Sysmon \win|book{3}}{59}
+\indexentry{Log Channels \win!Attributes|book{3}}{60}
+\indexentry{EventID 4624/4625! |book{3}}{60}
+\indexentry{Event!Severity Levels|book{3}}{60}
+\indexentry{XML|book{3}}{61-65}
+\indexentry{EventID 4624/4625!Example|book{3}}{61-62}
+\indexentry{XML!EventData|book{3}}{62}
+\indexentry{Windows Event Logs!Templates|book{3}}{63}
+\indexentry{EventID 4624/4625!Template|book{3}}{63}
+\indexentry{Get-WinEvent \powershell}{63}
+\indexentry{Windows Event Logs!Descriptions|book{3}}{64}
+\indexentry{Security ID|book{3}}{64}
+\indexentry{SubjectUserID|book{3}}{64}
+\indexentry{XML!System|book{3}}{65}
+\indexentry{XML!EventData}{65}
+\indexentry{Manifest Template|book{3}}{65}
+\indexentry{Log Channels \win!Most Interesting|book{3}}{66}
+\indexentry{Log Collection!Most Interesting \win|book{3}}{66}
+\indexentry{AppLocker \win}{66}
+\indexentry{Application Control!Alerts|book{3}}{66}
+\indexentry{Application Control!Violations|book{3}}{66}
+\indexentry{Collection!Cloud-Based|book{3}}{66}
+\indexentry{Security Mitigations|book{3}}{66}
+\indexentry{System Logs|book{3}}{66}
+\indexentry{Application Logs|book{3}}{66}
+\indexentry{Kernel Mode|book{3}}{66}
+\indexentry{User Mode|book{3}}{66}
+\indexentry{MDE \win|book{3}}{66}
+\indexentry{Advanced Security|book{3}}{66}
+\indexentry{Code Integrity|book{3}}{66}
+\indexentry{Attack Surface Reduction}{66}
+\indexentry{MPSSVC|book{3}}{67}
+\indexentry{Policy Change|book{3}}{67}
+\indexentry{Sysmon \win}{66-67}
+\indexentry{Event!Logging}{70}
+\indexentry{Linux Logging|book{3}}{70}
+\indexentry{Event!Severity Levels}{70}
+\indexentry{Syslog \linux|book{3}}{70-71}
+\indexentry{Facility \linux|book{3}}{70}
+\indexentry{Rsyslog \linux|book{3}}{71}
+\indexentry{Syslog \linux!Format|book{3}}{72}
+\indexentry{Syslog \linux!Example|book{3}}{72}
+\indexentry{RFC 3164 - BSD Syslog|book{3}}{72-73}
+\indexentry{RFC 5424 - Syslog|book{3}}{72-73}
+\indexentry{BSD|book{3}}{72}
+\indexentry{Syslog \linux!Network Protocol|book{3}}{73}
+\indexentry{Syslog \linux!Network Protocol!Size Limit|book{3}}{73}
+\indexentry{Syslog \linux!Network Protocol!TLS|book{3}}{73}
+\indexentry{RFC 3195 - Syslog over TCP|book{3}}{73}
+\indexentry{RFC 5425 - Syslog over TLS|book{3}}{73}
+\indexentry{RFC 5426 - Syslog over UDP|book{3}}{73}
+\indexentry{RFC 5484 - Signed Syslog|book{3}}{73}
+\indexentry{RFC 6012 - Syslog over Encrypted UDP|book{3}}{73}
+\indexentry{Syslog \linux!Daemons|book{3}}{74}
+\indexentry{Rsyslog \linux}{74}
+\indexentry{Event!Severity Levels}{75}
+\indexentry{Facility \linux}{75}
+\indexentry{Syslog \linux!Priority|book{3}}{75}
+\indexentry{RFC 5427 - Syslog Conventions|book{3}}{75}
+\indexentry{Syslog \linux!Management|book{3}}{75}
+\indexentry{Kernel Messages \linux|book{3}}{75}
+\indexentry{Authentication Logs \linux|book{3}}{75}
+\indexentry{Log Path \linux|book{3}}{76}
+\indexentry{Syslog \linux!Daemons}{76}
+\indexentry{Log Collection!Most Interesting \linux|book{3}}{77}
+\indexentry{Host Firewall!Logs|book{3}}{77}
+\indexentry{System Logs}{77}
+\indexentry{Application Logs}{77}
+\indexentry{Syslog \linux!Similarity to System Logs \win|book{3}}{77}
+\indexentry{Authentication Logs \linux}{77}
+\indexentry{Red Hat|book{3}}{77}
+\indexentry{Apache Logs|book{3}}{77}
+\indexentry{MySQL Logs|book{3}}{77}
+\indexentry{UFW|book{3}}{77}
+\indexentry{Systemd Journal|book{3}}{78}
+\indexentry{Linux Logging!New Way|book{3}}{78}
+\indexentry{Syslog \linux!Fix Pain|book{3}}{78}
+\indexentry{Journalctl@\texttt{journalctl} \linux|book{3}}{78}
+\indexentry{Command Line Logging \linux|book{3}}{79}
+\indexentry{Linux Auditing|book{3}}{79}
+\indexentry{Auditd \linux|book{3}}{79}
+\indexentry{Sysmon \linux|book{3}}{79}
+\indexentry{EventID 4624/4625!Interpretation|book{3}}{82-83}
+\indexentry{Windows Logins|book{3}}{82}
+\indexentry{Windows Logins!Failures|book{3}}{82}
+\indexentry{Failed Login! |book{3}}{82}
+\indexentry{Account Domain|book{3}}{82}
+\indexentry{Pivot|book{3}}{82}
+\indexentry{SMB \win!Connection Event|book{3}}{82}
+\indexentry{Active Directory! |book{3}}{82-83}
+\indexentry{Account Name \$|book{3}}{83}
+\indexentry{Computer Account|book{3}}{82-83}
+\indexentry{Local Account|book{3}}{82}
+\indexentry{Cached Credentials|book{3}}{82}
+\indexentry{RDP!Logon Event|book{3}}{82}
+\indexentry{Interactive Login|book{3}}{82}
+\indexentry{Network Logon|book{3}}{82}
+\indexentry{Intrusion|book{3}}{82}
+\indexentry{Windows Logins}{84}
+\indexentry{EventID 4648|book{3}}{84}
+\indexentry{RunAs Login \win|book{3}}{84}
+\indexentry{Lateral Movement! }{84}
+\indexentry{Linux Logins|book{3}}{85}
+\indexentry{Pluggable Authentication Module|book{3}}{85}
+\indexentry{SSH!Login With Key|book{3}}{85}
+\indexentry{Syslog \linux}{85}
+\indexentry{Authentication Logs \linux}{85}
+\indexentry{Linux Logins!Failures|book{3}}{86}
+\indexentry{Failed Login! }{86}
+\indexentry{LightDM \linux|book{3}}{86}
+\indexentry{Login Screen \linux|book{3}}{86}
+\indexentry{Log Collection!Most Interesting \win}{87-88}
+\indexentry{Log Collection!Most Interesting \linux}{87}
+\indexentry{Process Creation Logs|book{3}}{87-89}
+\indexentry{Sysmon \win}{87}
+\indexentry{Audit Policies}{87}
+\indexentry{Snoopy \linux|book{3}}{87}
+\indexentry{Sysdig \linux|book{3}}{87}
+\indexentry{Auditbeat \linux|book{3}}{87}
+\indexentry{Signature|book{3}}{87}
+\indexentry{Sysmon \win!Extra Information|book{3}}{88}
+\indexentry{EventID 4688|book{3}}{88}
+\indexentry{EventID 1 (Sysmon)|book{3}}{88}
+\indexentry{Log Collection!Most Interesting \linux}{89-91}
+\indexentry{Auditd \linux}{89}
+\indexentry{Execve System Call|book{3}}{89-90}
+\indexentry{ProcCreate@\texttt{proc\_create} Rule \linux|book{3}}{89}
+\indexentry{Ventura \mac|book{3}}{92}
+\indexentry{Sysmon-like \mac|book{3}}{92}
+\indexentry{Host Firewall!Logs}{93-94}
+\indexentry{Log Collection!Easy|book{3}}{93}
+\indexentry{Firewall \win|book{3}}{93}
+\indexentry{WFAS \win|book{3}}{93}
+\indexentry{PFirewall@\texttt{pfirewall.log} \win|book{3}}{93}
+\indexentry{Firewall \linux|book{3}}{94}
+\indexentry{Iptables \linux|book{3}}{94}
+\indexentry{EventID 4657/4660/4663|book{3}}{95}
+\indexentry{Object Access Auditing \win|book{3}}{95}
+\indexentry{Registry Value Modified \win|book{3}}{95}
+\indexentry{EventID 4697/7045|book{3}}{96}
+\indexentry{Service Creation|book{3}}{96}
+\indexentry{Audit Security System Extension \win|book{3}}{96}
+\indexentry{Audit Policies}{96-98}
+\indexentry{EventID 4698|book{3}}{97}
+\indexentry{Scheduled Task}{97}
+\indexentry{Persistence! }{97}
+\indexentry{Lateral Movement! }{97}
+\indexentry{Living Off The Land}{97}
+\indexentry{XML!Nested|book{3}}{97}
+\indexentry{Audit Other Object Access Events \win|book{3}}{97}
+\indexentry{EventID 6416|book{3}}{98}
+\indexentry{Vendor ID|book{3}}{98}
+\indexentry{Product ID|book{3}}{98}
+\indexentry{Audit PNP Activity|book{3}}{98}
+\indexentry{Physical Attacks|book{3}}{98}
+\indexentry{Rubber Ducky \toolr|book{3}}{98}
+\indexentry{Bash Bunny \toolr|book{3}}{98}
+\indexentry{LAN Turtle \toolr|book{3}}{98}
+\indexentry{USB Plug \& Play Logs|book{3}}{98}
+\indexentry{EventID 4720|book{3}}{100}
+\indexentry{New User Creation Logs \win|book{3}}{100}
+\indexentry{EventID 4728/4732|book{3}}{100}
+\indexentry{Group Management Logs \win|book{3}}{100}
+\indexentry{Azure \win!Sec Ops Guide|book{3}}{101-102}
+\indexentry{Azure \win!Active Directory|book{3}}{101}
+\indexentry{Entra ID Privileged Accounts Logs \win|book{3}}{101}
+\indexentry{Cloud Logs \win|book{3}}{101}
+\indexentry{MFA!Fraud Alert \win|book{3}}{101}
+\indexentry{New Device Logs \win|book{3}}{101}
+\indexentry{Cloud Sign-In Failure Logs \win|book{3}}{101}
+\indexentry{Sigma|book{3}}{101}
+\indexentry{Microsoft Graph API \win|book{3}}{101}
+\indexentry{Entra ID Sign-In Logs \win|book{3}}{101}
+\indexentry{Entra ID User Account Logs \win|book{3}}{102}
+\indexentry{Entra ID Audit Logs \win|book{3}}{102}
+\indexentry{Identity Protection \win|book{3}}{102}
+\indexentry{Risky Sign-Ins \win|book{3}}{102}
+\indexentry{Heuristic Detection|book{3}}{102}
+\indexentry{Machine Learning|book{3}}{102}
+\indexentry{Threat Intelligence! |book{3}}{102}
+\indexentry{Leaked Passwords|book{3}}{102}
+\indexentry{Anonymous IP Source Address|book{3}}{102}
+\indexentry{Suspicious Browser Usage|book{3}}{102}
+\indexentry{Password Spray Attacks|book{3}}{102}
+\indexentry{Suspicious Inbox Forwarding|book{3}}{102}
+\indexentry{New Country Sign-Ins|book{3}}{102}
+\indexentry{Windows Defender|book{3}}{103}
+\indexentry{Attack Surface Reduction}{103}
+\indexentry{Network Protection}{103}
+\indexentry{EventID 1006/1116|book{3}}{103}
+\indexentry{Malware!Detection Alert|book{3}}{103}
+\indexentry{EventID 1115|book{3}}{103}
+\indexentry{Suspicious Behavior|book{3}}{103}
+\indexentry{EventID 1121/1122|book{3}}{103}
+\indexentry{EventID 1125/1126|book{3}}{103}
+\indexentry{Rule Fired|book{3}}{103}
+\indexentry{Application Control!Rules|book{3}}{104}
+\indexentry{EventID 8003/8004/8006/8007|book{3}}{104}
+\indexentry{Kusto Query Language!Advanced Query: WDAC Events|book{3}}{104}
+\indexentry{AppLocker \win}{104}
+\indexentry{Windows Defender!Application Control|book{3}}{104}
+\indexentry{MDE \win}{104}
+\indexentry{WDAC \win}{104}
+\indexentry{Threat Hunt!Advanced|book{3}}{104}
+\indexentry{EventID 4104|book{3}}{105}
+\indexentry{PowerShel Logs|book{3}}{105}
+\indexentry{Transcription Logging|book{3}}{105}
+\indexentry{Noise|book{3}}{105}
+\indexentry{Script Block Logs|book{3}}{105}
+\indexentry{Kerberos Authentication \win|book{3}}{106-107}
+\indexentry{Authentication Server|book{3}}{106}
+\indexentry{Ticket Granting Service|book{3}}{106}
+\indexentry{Key Distribution Center|book{3}}{106-107}
+\indexentry{Domain Controller|book{3}}{106-107}
+\indexentry{Ticket Granting Ticket|book{3}}{107}
+\indexentry{Client Master Key|book{3}}{107}
+\indexentry{Service Tickets|book{3}}{107}
+\indexentry{EventID 4768/4769/4770|book{3}}{109-111}
+\indexentry{Service Tickets}{109}
+\indexentry{Supplied Realm Name|book{3}}{110}
+\indexentry{EventID 4771|book{3}}{110}
+\indexentry{Account Name \$}{110-111}
+\indexentry{Kerberos Authentication \win!Failed|book{3}}{110}
+\indexentry{Service Name/ID|book{3}}{111}
+\indexentry{Kerberos Authentication \win!Negotiate|book{3}}{112}
+\indexentry{NTLM \win|book{3}}{112}
+\indexentry{Key Length Field|book{3}}{112}
+\indexentry{Package Name Field|book{3}}{112}
+\indexentry{EventID 4624/4625! }{112}
+\indexentry{Log Collection!Pipeline|book{3}}{118}
+\indexentry{Log Collection!Methods|book{3}}{119}
+\indexentry{Log Collection!Agent vs Agentless|book{3}}{119}
+\indexentry{Agent-Based Deployment}{119}
+\indexentry{Log Source|book{3}}{119}
+\indexentry{Log Aggregator|book{3}}{119}
+\indexentry{Unstructured Logs|book{3}}{120}
+\indexentry{Syslog \linux!Unstructured Logs|book{3}}{120}
+\indexentry{Structured Logs|book{3}}{121}
+\indexentry{Log Collection!Unstructured Formats|book{3}}{120}
+\indexentry{Log Collection!Structured Formats|book{3}}{121-122}
+\indexentry{CSV|book{3}}{121}
+\indexentry{JSON|book{3}}{121}
+\indexentry{Key-Value Pairs|book{3}}{121}
+\indexentry{Indexing|book{3}}{122}
+\indexentry{Full Text Search|book{3}}{122-123}
+\indexentry{Scoped Search|book{3}}{123}
+\indexentry{Common Information/Event Model|book{3}}{124}
+\indexentry{Log Normalization|book{3}}{124-125}
+\indexentry{Tagging|book{3}}{125}
+\indexentry{Log Storage|book{3}}{126}
+\indexentry{Retention Period|book{3}}{126}
+\indexentry{SSD|book{3}}{126}
+\indexentry{Spinning Disk|book{3}}{126}
+\indexentry{Archive|book{3}}{126}
+\indexentry{Cold Storage|book{3}}{126}
+\indexentry{Fast Search|book{3}}{126}
+\indexentry{Slow Search|book{3}}{126}
+\indexentry{Log Life Cycle|book{3}}{127}
+\indexentry{SIEM!Engineer Questions|book{3}}{128}
+\indexentry{Data Collection! |book{3}}{128}
+\indexentry{Data Usage|book{3}}{128}
+\indexentry{Data Storage|book{3}}{128}
+\indexentry{Retention Period}{128}
+\indexentry{File Contents|book{3}}{133}
+\indexentry{File Contents!Identification|book{3}}{134}
+\indexentry{Magic Bytes|book{3}}{136}
+\indexentry{File Contents!Signatures|book{3}}{136}
+\indexentry{Nested Files|book{3}}{137}
+\indexentry{Polyglots|book{3}}{138}
+\indexentry{Unicode|book{3}}{139}
+\indexentry{Encoding|book{3}}{139}
+\indexentry{UTF|book{3}}{139}
+\indexentry{Code Points|book{3}}{139}
+\indexentry{ASCII|book{3}}{139}
+\indexentry{Strings|book{3}}{141}
+\indexentry{Binary File|book{3}}{141}
+\indexentry{Plaintext File|book{3}}{141}
+\indexentry{ASCII!Table|book{3}}{141}
+\indexentry{Strings!Example|book{3}}{142}
+\indexentry{Encoding}{143}
+\indexentry{Byte Order|book{3}}{143}
+\indexentry{UTF}{143}
+\indexentry{Little Endian|book{3}}{143}
+\indexentry{Big Endian|book{3}}{143}
+\indexentry{Strings!Extraction|book{3}}{145}
+\indexentry{Sandboxing! |book{3}}{145}
+\indexentry{Dynamic Analysis|book{3}}{145}
+\indexentry{Suspect File|book{3}}{149}
+\indexentry{Malicious File Handling|book{3}}{150-151}
+\indexentry{Snapshot|book{3}}{150}
+\indexentry{File Contents!Dangerousness|book{3}}{152}
+\indexentry{Executables|book{3}}{153}
+\indexentry{PE Format|book{3}}{153}
+\indexentry{Self-Extracting Archives|book{3}}{153}
+\indexentry{Scripts|book{3}}{154}
+\indexentry{Office Documents|book{3}}{155}
+\indexentry{Olevba \win|book{3}}{155-156}
+\indexentry{Embed Object Functionality|book{3}}{155}
+\indexentry{ZIP|book{3}}{155}
+\indexentry{PDF|book{3}}{157}
+\indexentry{IOC!Extraction|book{3}}{157}
+\indexentry{LNK|book{3}}{158}
+\indexentry{OneNote \win!File|book{3}}{158}
+\indexentry{LNK!Vulnerability|book{3}}{159}
+\indexentry{Stuxnet \malware}{159}
+\indexentry{File Contents!Vunerabilities|book{3}}{159}
+\indexentry{Hash Lookup|book{3}}{161}
+\indexentry{Sandboxing! }{161}
+\indexentry{Signature}{161}
+\indexentry{Static Analysis|book{3}}{161}
+\indexentry{Hashing|book{3}}{162}
+\indexentry{Fuzzy Hashing|book{3}}{162}
+\indexentry{Fingerprint|book{3}}{162}
+\indexentry{Hashing!Collision|book{3}}{162}
+\indexentry{Ssdeep|book{3}}{162}
+\indexentry{CTPH|book{3}}{162}
+\indexentry{TLSH|book{3}}{162}
+\indexentry{Vhash|book{3}}{162}
+\indexentry{Signature}{164-166}
+\indexentry{Authenticode|book{3}}{164}
+\indexentry{Authenticity|book{3}}{164}
+\indexentry{Code Signing|book{3}}{164}
+\indexentry{Certificate Authority! |book{3}}{164}
+\indexentry{PKI|book{3}}{164}
+\indexentry{Trusted Publishers Certificate Store|book{3}}{164}
+\indexentry{Signature!Verification|book{3}}{165}
+\indexentry{Sysinternals \tool}{165}
+\indexentry{HermeticWiper \malware|book{3}}{166}
+\indexentry{Hashing!Collision}{166}
+\indexentry{Hash Lookup}{167}
+\indexentry{Sandboxing! }{167}
+\indexentry{Malicious Script Detection|book{3}}{168}
+\indexentry{Obfuscator|book{3}}{168}
+\indexentry{Steganography|book{3}}{169}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Triage! |book{4}}{6}
+\indexentry{Definition of Dangerous|book{4}}{7}
+\indexentry{Data Exfiltration!  |book{4}}{8}
+\indexentry{Cyber Kill Chain!  |book{4}}{9}
+\indexentry{Cyber Attack Life Cycle|book{4}}{9-10}
+\indexentry{APT!Attack Steps|book{4}}{9}
+\indexentry{Reconnaissance|book{4}}{9}
+\indexentry{Weaponization|book{4}}{9}
+\indexentry{Exploitation|book{4}}{9}
+\indexentry{Command \& Control! |book{4}}{9}
+\indexentry{Targeted Attacks! |book{4}}{9}
+\indexentry{Initial Compromise|book{4}}{10}
+\indexentry{Foothold|book{4}}{10}
+\indexentry{Data Exfiltration!Detection|book{4}}{11}
+\indexentry{DNS!Tunneling! |book{4}}{11}
+\indexentry{Proxy Logs|book{4}}{11}
+\indexentry{Compressed Archive With Password|book{4}}{11}
+\indexentry{Data Destruction Detection|book{4}}{12}
+\indexentry{Sysinternals \tool! |book{4}}{12}
+\indexentry{Sdelete@\texttt{sdelete} \tool|book{4}}{12}
+\indexentry{Cipher@\texttt{cipher} \tool|book{4}}{12}
+\indexentry{Shred@\texttt{shred} \tool|book{4}}{12}
+\indexentry{Wipe@\texttt{wipe} \tool|book{4}}{12}
+\indexentry{Srm@\texttt{srm} \tool|book{4}}{12}
+\indexentry{EldoS|book{4}}{12}
+\indexentry{Destover \malware|book{4}}{12}
+\indexentry{Shamoon \malware|book{4}}{12}
+\indexentry{Pre-Classification|book{4}}{13}
+\indexentry{Sensitive Hosts/Users/Data|book{4}}{13}
+\indexentry{Targeted Attacks!Identification Opportunities|book{4}}{14}
+\indexentry{Triage!IDS Alerts|book{4}}{15}
+\indexentry{Alert!Triage! |book{4}}{15}
+\indexentry{Snort \toolb|book{4}}{15}
+\indexentry{FSG \tool|book{4}}{16}
+\indexentry{Executables!Packing|book{4}}{16}
+\indexentry{EternalBlue \malware! |book{4}}{17}
+\indexentry{Cyber Kill Chain!Alerts At Same Stage|book{4}}{17}
+\indexentry{Spear Phishing|book{4}}{19}
+\indexentry{Triage!Exploit Alerts|book{4}}{18-19}
+\indexentry{Alert!Triage! }{18-19}
+\indexentry{Alert!Unique|book{4}}{20}
+\indexentry{False Positive!  |book{4}}{20}
+\indexentry{Long-Tail Analysis|book{4}}{20}
+\indexentry{Alert!Low Priority|book{4}}{21}
+\indexentry{Internet Noise|book{4}}{21}
+\indexentry{Port Scan!External|book{4}}{21}
+\indexentry{Bias|book{4}}{28}
+\indexentry{Mental Model|book{4}}{28}
+\indexentry{Perception|book{4}}{29-31}
+\indexentry{Bias!Confirmation|book{4}}{31}
+\indexentry{Short-Term Memory|book{4}}{32}
+\indexentry{Perception!Issues|book{4}}{33}
+\indexentry{Bias!Confirmation}{33}
+\indexentry{Intuitive Thinking|book{4}}{34}
+\indexentry{Analytic Thinking|book{4}}{34}
+\indexentry{Systems of Judgment|book{4}}{34}
+\indexentry{Short-Term Memory!Solution|book{4}}{35}
+\indexentry{Decomposition|book{4}}{35}
+\indexentry{Externalization|book{4}}{35}
+\indexentry{Problem Modeling|book{4}}{35}
+\indexentry{Information Collection|book{4}}{36}
+\indexentry{Data Collection!  |book{4}}{36}
+\indexentry{Structured Analysis|book{4}}{37-38}
+\indexentry{Hypothesis!Generation|book{4}}{38}
+\indexentry{Data Organization|book{4}}{38}
+\indexentry{Hypothesis Testing|book{4}}{38}
+\indexentry{Challenge Analysis|book{4}}{38}
+\indexentry{Hypothesis!Generation!Exercise|book{4}}{39}
+\indexentry{Brainstorming|book{4}}{40}
+\indexentry{Deferred Judgment|book{4}}{40}
+\indexentry{Cross-Fertilization of Ideas|book{4}}{40}
+\indexentry{Link Analysis|book{4}}{41}
+\indexentry{Decomposition}{41}
+\indexentry{Externalization}{41}
+\indexentry{Link Analysis!Tools|book{4}}{42-43}
+\indexentry{Event Matrix|book{4}}{43}
+\indexentry{Incident!Event Chart|book{4}}{43}
+\indexentry{CrowdStrike|book{4}}{44}
+\indexentry{Incident Response!Tracking|book{4}}{44}
+\indexentry{Bias!Confirmation}{45}
+\indexentry{Bias!Confirmation!Fighting With ACH|book{4}}{46}
+\indexentry{Analysis of Competing Hypothesis|book{4}}{46}
+\indexentry{Audit Trail|book{4}}{46}
+\indexentry{Analysis of Competing Hypothesis!Steps|book{4}}{47}
+\indexentry{Diagnosticity|book{4}}{47}
+\indexentry{Mutually Exclusive Hypotheses|book{4}}{47}
+\indexentry{Analysis of Competing Hypothesis!Matrix|book{4}}{49}
+\indexentry{Hypothesis|book{4}}{49}
+\indexentry{Evidence|book{4}}{49}
+\indexentry{Analysis of Competing Hypothesis!Tips for Success|book{4}}{50}
+\indexentry{Hypothesis!Unproven|book{4}}{50}
+\indexentry{Hypothesis!Disproven|book{4}}{50}
+\indexentry{Hypothesis!Likelihood|book{4}}{50}
+\indexentry{Diagnosticity}{50}
+\indexentry{Evidence!Bad|book{4}}{50}
+\indexentry{Relative Likelihood|book{4}}{50}
+\indexentry{Analysis of Competing Hypothesis!Example: WannaCry Attribution|book{4}}{51}
+\indexentry{Attribution of Attacks! |book{4}}{51}
+\indexentry{WannaCry \malware! |book{4}}{51}
+\indexentry{DigitalShadows|book{4}}{51}
+\indexentry{NSA|book{4}}{51}
+\indexentry{Analysis of Competing Hypothesis!Lessons|book{4}}{52}
+\indexentry{Mental Model}{55}
+\indexentry{Encapsulation|book{4}}{56}
+\indexentry{L7 Attacks|book{4}}{56}
+\indexentry{Attacks General Types!L7|book{4}}{56}
+\indexentry{TLS Traffic Decryption! |book{4}}{56}
+\indexentry{Alexiou Principle|book{4}}{57}
+\indexentry{Investigation!Startup Principle|book{4}}{57}
+\indexentry{Decomposition}{57}
+\indexentry{OODA|book{4}}{58-60}
+\indexentry{Boyd|book{4}}{58}
+\indexentry{Ambiguity|book{4}}{58}
+\indexentry{Dealing With Uncertainty|book{4}}{58}
+\indexentry{Mental Model!Toolbox|book{4}}{59}
+\indexentry{Intelligence-Driven Network Defense|book{4}}{61}
+\indexentry{Network Defense|book{4}}{61}
+\indexentry{Cyber Kill Chain!  }{61}
+\indexentry{Courses of Action|book{4}}{61-62}
+\indexentry{APT!Model|book{4}}{61}
+\indexentry{Intrusion!APT Model: Cyber Kill Chain|book{4}}{61}
+\indexentry{Defense-In-Depth! |book{4}}{61}
+\indexentry{Campaign Analysis|book{4}}{62}
+\indexentry{Defense-In-Depth! }{63}
+\indexentry{Prevention|book{4}}{63}
+\indexentry{Detection! |book{4}}{63}
+\indexentry{Response|book{4}}{63}
+\indexentry{Incident Response!Cycle|book{4}}{64-65}
+\indexentry{NIST SP800-61! |book{4}}{64}
+\indexentry{PICERL|book{4}}{64-65}
+\indexentry{Prepration|book{4}}{64}
+\indexentry{Identification|book{4}}{64}
+\indexentry{Containment! |book{4}}{64}
+\indexentry{Eradication|book{4}}{64}
+\indexentry{Recovery|book{4}}{65}
+\indexentry{Lessons Learned|book{4}}{65}
+\indexentry{Threat Intelligence!  |book{4}}{66}
+\indexentry{Threat Intelligence!Levels|book{4}}{66-67}
+\indexentry{IOC!Intelligence Level|book{4}}{67}
+\indexentry{Executives Intelligence Level|book{4}}{67}
+\indexentry{Directors Intelligence Level|book{4}}{67}
+\indexentry{Managers Intelligence Level|book{4}}{67}
+\indexentry{SOC!Analysts' Intelligence Level|book{4}}{67}
+\indexentry{Campaign Tracking|book{4}}{67}
+\indexentry{Attribution of Attacks! }{67}
+\indexentry{Security Strategy|book{4}}{67}
+\indexentry{Risk Assessment|book{4}}{67}
+\indexentry{Intelligence Cycle|book{4}}{68}
+\indexentry{Threat Intelligence!Cycle|book{4}}{68}
+\indexentry{Collection!Intelligence Cycle|book{4}}{68}
+\indexentry{Processing of Intelligence Data|book{4}}{68}
+\indexentry{Dissemination|book{4}}{68}
+\indexentry{Direction|book{4}}{68}
+\indexentry{F3EAD Cycle|book{4}}{70}
+\indexentry{PICERL}{70}
+\indexentry{Diamond Model|book{4}}{72}
+\indexentry{Intrusion!Analysis Model: Diamond Model|book{4}}{72}
+\indexentry{Incident!Threat Intel-Centric View|book{4}}{72}
+\indexentry{Adversary|book{4}}{72}
+\indexentry{Capability|book{4}}{72}
+\indexentry{Attack Trees|book{4}}{73}
+\indexentry{Graph Thinking|book{4}}{73-74}
+\indexentry{List Thinking|book{4}}{74}
+\indexentry{Threats!Modeling|book{4}}{76}
+\indexentry{EFF|book{4}}{76}
+\indexentry{STRIDE|book{4}}{76}
+\indexentry{Pyramid of Pain|book{4}}{78}
+\indexentry{IOA vs IOC|book{4}}{78-79}
+\indexentry{Indicator of Attack|book{4}}{78-79}
+\indexentry{TTP|book{4}}{78}
+\indexentry{CrowdStrike}{78}
+\indexentry{MITRE ATT\&CK! |book{4}}{80-81}
+\indexentry{Blue Team!Checklist|book{4}}{80}
+\indexentry{Mental Model!When Applies|book{4}}{81}
+\indexentry{Threats!Modeling}{81}
+\indexentry{Attack Trees}{81}
+\indexentry{Cyber Kill Chain!  }{81}
+\indexentry{Triage!Model|book{4}}{81}
+\indexentry{Incident Response!Model|book{4}}{81}
+\indexentry{Threat Hunt!Model|book{4}}{81}
+\indexentry{Threat Intelligence!Model|book{4}}{81}
+\indexentry{Operations Tempo|book{4}}{81}
+\indexentry{PICERL}{81}
+\indexentry{IOC-less Search|book{4}}{81}
+\indexentry{Defensive Strategy|book{4}}{81}
+\indexentry{Mental Model!Importance|book{4}}{83}
+\indexentry{Decomposition}{83}
+\indexentry{Externalization}{83}
+\indexentry{Quality!Consistence|book{4}}{88}
+\indexentry{Documentation Quality Checklist|book{4}}{89}
+\indexentry{Documentation Level|book{4}}{89}
+\indexentry{Completeness|book{4}}{90}
+\indexentry{Cyber Kill Chain!  }{90}
+\indexentry{Cyber Kill Chain!Step Visible in Logs|book{4}}{90}
+\indexentry{Classification of Closed Case|book{4}}{91}
+\indexentry{Incident!Type|book{4}}{91}
+\indexentry{Initial Detection|book{4}}{91}
+\indexentry{Attribution of Attacks! }{91}
+\indexentry{Incident!Tracking Framework|book{4}}{91}
+\indexentry{VERIS! |book{4}}{91}
+\indexentry{Challenge Analysis}{92}
+\indexentry{Premortem Analysis|book{4}}{93-94}
+\indexentry{Overconfidence|book{4}}{93}
+\indexentry{Self-Critique|book{4}}{94}
+\indexentry{Dissenting Role|book{4}}{94}
+\indexentry{Evidence!Source Reliability|book{4}}{94}
+\indexentry{What-If? Analysis|book{4}}{95}
+\indexentry{Periodic Review|book{4}}{96}
+\indexentry{Quality|book{4}}{96}
+\indexentry{OPSEC|book{4}}{101}
+\indexentry{OPSEC!NATO Definition|book{4}}{102}
+\indexentry{Opportunistic Attacks!  |book{4}}{102}
+\indexentry{Targeted Attacks! }{102}
+\indexentry{OPSEC!Types|book{4}}{104}
+\indexentry{Traffic Light Protocol|book{4}}{105}
+\indexentry{Need-To-Know|book{4}}{105}
+\indexentry{Permissible Actions Protocol|book{4}}{106}
+\indexentry{Passive Search|book{4}}{107}
+\indexentry{OPSEC!Ideal|book{4}}{107}
+\indexentry{OPSEC!Tools|book{4}}{108}
+\indexentry{OSINT Tools|book{4}}{108}
+\indexentry{OSINT Tools!Scan vs Search|book{4}}{109}
+\indexentry{Sensitive Lookups|book{4}}{108}
+\indexentry{OPSEC!Failures|book{4}}{110-111}
+\indexentry{IOC!Public Submission|book{4}}{110}
+\indexentry{Attacker Infrastructure Interaction|book{4}}{111}
+\indexentry{Permissible Actions Protocol}{111}
+\indexentry{Investigation!Passive Sources|book{4}}{111}
+\indexentry{RiskIQ|book{4}}{111}
+\indexentry{Unattributed Connection|book{4}}{112}
+\indexentry{Analysis Desktop|book{4}}{112}
+\indexentry{The Onion Router|book{4}}{113}
+\indexentry{IP Anonimization|book{4}}{113}
+\indexentry{L3 Anonimization|book{4}}{113}
+\indexentry{L7 (Non-)Anonimization|book{4}}{113}
+\indexentry{OPSEC!Failures}{115}
+\indexentry{Premature Block|book{4}}{115}
+\indexentry{Phishing!Investigation Anonimization|book{4}}{116}
+\indexentry{Investigation!Anonimity|book{4}}{116}
+\indexentry{OPSEC!Failures}{117}
+\indexentry{Phishing!Investigation Anonimization!Mistake|book{4}}{117}
+\indexentry{SMTP|book{4}}{120}
+\indexentry{MDA|book{4}}{120}
+\indexentry{MTA/MUA|book{4}}{120}
+\indexentry{MX Record! |book{4}}{120}
+\indexentry{Email!Delivery|book{4}}{120-121}
+\indexentry{MTA/MUA}{122}
+\indexentry{Exchange ActiveSync|book{4}}{122}
+\indexentry{IMAP|book{4}}{122}
+\indexentry{SMTP}{123}
+\indexentry{RFC 5322 - IMF|book{4}}{123}
+\indexentry{Email|book{4}}{123}
+\indexentry{Email!Headers \& Source|book{4}}{124-125}
+\indexentry{Outlook|book{4}}{124}
+\indexentry{Gmail|book{4}}{124}
+\indexentry{Email!Content Order|book{4}}{125}
+\indexentry{Trace Headers|book{4}}{125}
+\indexentry{SMTP!Message Components|book{4}}{125-126}
+\indexentry{Received Headers|book{4}}{127-128}
+\indexentry{PTR Record! |book{4}}{128}
+\indexentry{SMTP!Spoofing|book{4}}{129-130}
+\indexentry{RFC 0821@RFC 821 - SMTP|book{4}}{129}
+\indexentry{Spoofed Email Injection|book{4}}{130}
+\indexentry{Email!Spoofed|book{4}}{130}
+\indexentry{Email!Source Verification|book{4}}{131}
+\indexentry{SPF|book{4}}{131-134}
+\indexentry{DKIM! |book{4}}{131}
+\indexentry{DMARC|book{4}}{131}
+\indexentry{ARC|book{4}}{131}
+\indexentry{RFC 7208 - SPF|book{4}}{132-134}
+\indexentry{Return-Path Field|book{4}}{132}
+\indexentry{TXT Record! |book{4}}{132}
+\indexentry{SPF!Results|book{4}}{133-134}
+\indexentry{Trace Headers}{134}
+\indexentry{RFC 7001 - SMTP Message Authentication|book{4}}{134}
+\indexentry{DKIM! }{135}
+\indexentry{Signature!Verification! |book{4}}{135}
+\indexentry{TXT Record! }{135-136}
+\indexentry{Email!Authentication|book{4}}{135}
+\indexentry{Return-Path Field}{135}
+\indexentry{DKIM!Header Components|book{4}}{136-137}
+\indexentry{Canonicalization|book{4}}{136}
+\indexentry{RFC 6376 - DKIM|book{4}}{137}
+\indexentry{DMARC}{138-139}
+\indexentry{TXT Record! }{139}
+\indexentry{Quarantine|book{4}}{139}
+\indexentry{Authentication-Results|book{4}}{140}
+\indexentry{RFC 8601 - Authentication-Results|book{4}}{140}
+\indexentry{Email!Authentication!Methods|book{4}}{141}
+\indexentry{Relayed Email Invalidation|book{4}}{141}
+\indexentry{Email!Rejected|book{4}}{141}
+\indexentry{Email!Headers \& Source!Order|book{4}}{142}
+\indexentry{ARC}{143}
+\indexentry{Email!Forwarding|book{4}}{143}
+\indexentry{Email!Rejected}{143}
+\indexentry{BIMI|book{4}}{144}
+\indexentry{DMARC}{144}
+\indexentry{TXT Record! }{144}
+\indexentry{Extended Validation Certificates|book{4}}{144}
+\indexentry{Trademark Verification|book{4}}{144}
+\indexentry{Verified Mark Certificate|book{4}}{144}
+\indexentry{Microsoft 365 \win|book{4}}{145}
+\indexentry{X-Forefront-Antispam-Report|book{4}}{145}
+\indexentry{Spam!Filtering|book{4}}{145-146}
+\indexentry{Antispam Header|book{4}}{145}
+\indexentry{SCL|book{4}}{145-146}
+\indexentry{SFTY|book{4}}{145}
+\indexentry{Quarantine}{145}
+\indexentry{Email!Junk|book{4}}{146}
+\indexentry{Domain Impersonation|book{4}}{146}
+\indexentry{User Impersonation|book{4}}{146}
+\indexentry{IP Allow List|book{4}}{146}
+\indexentry{Exchange Online Protection|book{4}}{147}
+\indexentry{Composite Identification|book{4}}{147}
+\indexentry{Email!Self-to-Self|book{4}}{147-148}
+\indexentry{Email!Intra-Organization|book{4}}{147-148}
+\indexentry{Email!Spoofed}{147-148}
+\indexentry{Email-Based Attacks|book{4}}{151}
+\indexentry{BEC|book{4}}{151}
+\indexentry{Executables!vs Scripts (Attachments)|book{4}}{151}
+\indexentry{Scripts!vs Executables (Attachments)|book{4}}{151}
+\indexentry{TIFF Exploit \win|book{4}}{152}
+\indexentry{Malicious Attachments|book{4}}{153}
+\indexentry{Email!Malicious Attachments|book{4}}{153}
+\indexentry{Sandboxing!  |book{4}}{153}
+\indexentry{Quarantine}{153}
+\indexentry{Attack Surface Reduction! |book{4}}{153}
+\indexentry{Application Guard for Office|book{4}}{153}
+\indexentry{Microsoft 365 \win!Safe Attachments Policies|book{4}}{153}
+\indexentry{Phishing!Common Tactics|book{4}}{154}
+\indexentry{Redirection|book{4}}{154}
+\indexentry{Lookalike Domain|book{4}}{154}
+\indexentry{Link Shortening Service|book{4}}{154}
+\indexentry{Phishing!Hosted on Hacked Site|book{4}}{155}
+\indexentry{Domain Shadowing! |book{4}}{155}
+\indexentry{OneDrive \win|book{4}}{156}
+\indexentry{Dropbox|book{4}}{156}
+\indexentry{Malicious File Hosting|book{4}}{156}
+\indexentry{OPSEC!Link Expansion|book{4}}{157}
+\indexentry{Link Shortening Service}{157}
+\indexentry{Open Redirects|book{4}}{158}
+\indexentry{Snapchat|book{4}}{158}
+\indexentry{Logokit \malware|book{4}}{158}
+\indexentry{OPSEC!Open Redirect|book{4}}{158}
+\indexentry{BEC!Detection|book{4}}{159}
+\indexentry{CEO Fraud! |book{4}}{159}
+\indexentry{Suspicious Inbox Rules|book{4}}{159}
+\indexentry{MFA|book{4}}{159}
+\indexentry{Expel|book{4}}{159}
+\indexentry{Cyber Awareness|book{4}}{159}
+\indexentry{User Awareness|book{4}}{159}
+\indexentry{Credential Theft!Investigation|book{4}}{160}
+\indexentry{Opportunistic Attacks!  }{161}
+\indexentry{Targeted Attacks! }{161}
+\indexentry{Phishing!Priority|book{4}}{161}
+\indexentry{Phishing!Tactics Combination|book{4}}{162}
+\indexentry{Lookalike Domain}{162}
+\indexentry{Link Shortening Service}{162}
+\indexentry{Spear Phishing}{162}
+
+
+\comment{********************************************************************************************
+                                     FIFTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{SOC!Ideal vs Reality|book{5}}{6-7}
+\indexentry{Burnout|book{5}}{9-11}
+\indexentry{Good Stress|book{5}}{10}
+\indexentry{Bad Stress|book{5}}{10}
+\indexentry{Stress Types|book{5}}{10}
+\indexentry{Human Capital Theory|book{5}}{11}
+\indexentry{Grounded Theory|book{5}}{11}
+\indexentry{SOC!Human Capital Model|book{5}}{12-16}
+\indexentry{Positive Feedback Loop|book{5}}{12}
+\indexentry{Vicious Cycle|book{5}}{12}
+\indexentry{Virtuous Cycle|book{5}}{12}
+\indexentry{Growth|book{5}}{13}
+\indexentry{Sense of Accomplishment|book{5}}{13}
+\indexentry{Skills|book{5}}{14}
+\indexentry{Formal Training|book{5}}{14}
+\indexentry{Peer-Led On-The-Job Training|book{5}}{14}
+\indexentry{Table-Top Exercises|book{5}}{14}
+\indexentry{Purple Teaming|book{5}}{14}
+\indexentry{Red Teaming|book{5}}{14}
+\indexentry{Lack of Confidence|book{5}}{14}
+\indexentry{Empowerment|book{5}}{15}
+\indexentry{Least Privilege! |book{5}}{15}
+\indexentry{Creativity|book{5}}{16}
+\indexentry{Novel Scenarios|book{5}}{16}
+\indexentry{Burnout!Mitigation|book{5}}{17}
+\indexentry{Operational Efficiency|book{5}}{17}
+\indexentry{Automation|book{5}}{17}
+\indexentry{Metrics! |book{5}}{17}
+\indexentry{Automation!Preconditions|book{5}}{19}
+\indexentry{Bottlenecks|book{5}}{19}
+\indexentry{Reflection|book{5}}{19}
+\indexentry{Creativity!Killer|book{5}}{19}
+\indexentry{Procedure Review|book{5}}{19}
+\indexentry{Automation!Benefits|book{5}}{20}
+\indexentry{Co-Creation|book{5}}{20}
+\indexentry{Operational Efficiency}{21}
+\indexentry{Bidirectional Flow	|book{5}}{21}
+\indexentry{Positive Feedback Loop}{21}
+\indexentry{Metrics! }{22}
+\indexentry{Self-Measurement|book{5}}{22}
+\indexentry{Bottlenecks}{22}
+\indexentry{Metrics!Adjustment|book{5}}{23}
+\indexentry{SOC!Common Issues|book{5}}{25}
+\indexentry{Inter-Group Cooperation|book{5}}{25}
+\indexentry{Superficial Briefing|book{5}}{25}
+\indexentry{Inadequate Compensation|book{5}}{25}
+\indexentry{Process!Improvement|book{5}}{25}
+\indexentry{Alert!Cherry-Picking|book{5}}{25}
+\indexentry{Reddit|book{5}}{26}
+\indexentry{Detection!Outcomes|book{5}}{29}
+\indexentry{True Positive! |book{5}}{29}
+\indexentry{True Negative|book{5}}{29}
+\indexentry{False Positive!   |book{5}}{29-30}
+\indexentry{False Negative|book{5}}{29}
+\indexentry{Sensitivity|book{5}}{30}
+\indexentry{Specificity|book{5}}{30}
+\indexentry{Perfect Rule|book{5}}{30}
+\indexentry{Condition Detection|book{5}}{31}
+\indexentry{Sensitivity!Medium|book{5}}{32}
+\indexentry{Specificity!Medium|book{5}}{32}
+\indexentry{Sensitivity!High|book{5}}{33}
+\indexentry{False Positive!High|book{5}}{33}
+\indexentry{False Negative!Zero|book{5}}{33}
+\indexentry{False Positive!Zero|book{5}}{34}
+\indexentry{False Negative!High|book{5}}{34}
+\indexentry{IPS Mode|book{5}}{34}
+\indexentry{Denial of Service|book{5}}{34}
+\indexentry{Enrichment! |book{5}}{35-36}
+\indexentry{Rule Tuning|book{5}}{35}
+\indexentry{False Positive!Solution|book{5}}{35}
+\indexentry{Highest Quality Data|book{5}}{36}
+\indexentry{Analytics|book{5}}{36}
+\indexentry{Alert!Fidelity|book{5}}{36-37}
+\indexentry{Features|book{5}}{37}
+\indexentry{Log Attributes|book{5}}{37}
+\indexentry{Features!High|book{5}}{38}
+\indexentry{Emotet \malware! |book{5}}{38}
+\indexentry{Features!Low|book{5}}{39}
+\indexentry{Snort \toolb! |book{5}}{40}
+\indexentry{Suricata \toolb! |book{5}}{40}
+\indexentry{Security Relevant Data|book{5}}{40}
+\indexentry{Parsing|book{5}}{41}
+\indexentry{Indexing! |book{5}}{41}
+\indexentry{Windows DNS Logs|book{5}}{41}
+\indexentry{EVTX! |book{5}}{41}
+\indexentry{Log Format Selection|book{5}}{41}
+\indexentry{Enrichment! }{42-47}
+\indexentry{SIEM!Most Important Tasks|book{5}}{42}
+\indexentry{Alert!Fidelity!High|book{5}}{42}
+\indexentry{Analytics!High Quality|book{5}}{42}
+\indexentry{Enrichment!Feature Addition|book{5}}{43}
+\indexentry{False Positive!Prevention|book{5}}{43}
+\indexentry{Domain Reputation! |book{5}}{43}
+\indexentry{GeoIP Information|book{5}}{43}
+\indexentry{ASN|book{5}}{43}
+\indexentry{Randomness Measure|book{5}}{43}
+\indexentry{Vulnerability Information|book{5}}{43}
+\indexentry{SIEM!Enrichment Capabilities|book{5}}{44}
+\indexentry{Enrichment!Capabilities|book{5}}{44}
+\indexentry{Enrichment!Asset-Based|book{5}}{45}
+\indexentry{Enrichment!User-Based|book{5}}{45}
+\indexentry{Vulnerability Information}{45}
+\indexentry{Active Directory!  |book{5}}{45}
+\indexentry{Asset Database|book{5}}{45}
+\indexentry{Vulnerability Scanning! |book{5}}{45}
+\indexentry{Enrichment!Example|book{5}}{46-47}
+\indexentry{Log Attributes!Alerting|book{5}}{50}
+\indexentry{Specific Field Match|book{5}}{50}
+\indexentry{Threshold! |book{5}}{50}
+\indexentry{Pattern Matching|book{5}}{50}
+\indexentry{Regular Expression|book{5}}{50}
+\indexentry{Metadata Analysis|book{5}}{50}
+\indexentry{Sensitivity!Problem|book{5}}{50}
+\indexentry{Over-Tuning|book{5}}{50}
+\indexentry{Log Attributes!Matching to Threat Intel|book{5}}{51-52}
+\indexentry{Threat Intelligence!Matching!Log Attributes|book{5}}{51}
+\indexentry{MISP! |book{5}}{51}
+\indexentry{IOC! |book{5}}{51}
+\indexentry{Features!Positive/Negative|book{5}}{52}
+\indexentry{Threshold! }{53}
+\indexentry{Pattern Matching}{53}
+\indexentry{Regular Expression}{53-54}
+\indexentry{Randomness Measure}{53}
+\indexentry{Domain Randomness! |book{5}}{53}
+\indexentry{Domain Age! |book{5}}{53}
+\indexentry{Traffic Size|book{5}}{53}
+\indexentry{Alert!Pattern-Based|book{5}}{53}
+\indexentry{Analytics!Metadata-Based|book{5}}{53}
+\indexentry{Vidar \malware|book{5}}{55-56}
+\indexentry{RIG Exploit Kit \malware|book{5}}{55-56}
+\indexentry{Malicious Redirect|book{5}}{55}
+\indexentry{Features!Ranking|book{5}}{56}
+\indexentry{Naked IP Address! |book{5}}{57}
+\indexentry{Regular Expression!Testing|book{5}}{58}
+\indexentry{Analytics!Machine Learning-Based|book{5}}{59}
+\indexentry{Machine Learning|book{5}}{59}
+\indexentry{Rule Logic|book{5}}{60}
+\indexentry{Allow List|book{5}}{61-63}
+\indexentry{Deny List|book{5}}{61-63}
+\indexentry{Known Bad/Good Enumeration|book{5}}{61}
+\indexentry{Threat Intelligence!Matching|book{5}}{61}
+\indexentry{CIS Top 20|book{5}}{61}
+\indexentry{Low-Cardinality Fields|book{5}}{61}
+\indexentry{Detection!Coverage|book{5}}{63}
+\indexentry{AppLocker \win!Allow List-Based|book{5}}{63}
+\indexentry{Antivirus!Deny List-Based|book{5}}{63}
+\indexentry{Threshold! }{64}
+\indexentry{Alert!Threshold-Based|book{5}}{64}
+\indexentry{Spike Rule|book{5}}{64}
+\indexentry{Flatline Rule|book{5}}{64}
+\indexentry{Frequency Rule|book{5}}{64}
+\indexentry{Data Exfiltration!Detection! |book{5}}{64}
+\indexentry{Machine Learning}{64}
+\indexentry{Brute Force Attack Detection|book{5}}{65}
+\indexentry{SQL Injection Attack Detection|book{5}}{65}
+\indexentry{New Term Rule|book{5}}{66}
+\indexentry{Allow List!Pseudo|book{5}}{66}
+\indexentry{First Contact Rule|book{5}}{66}
+\indexentry{Sequence-Based Rule|book{5}}{67}
+\indexentry{Specificity}{67}
+\indexentry{Over-Tuning}{67}
+\indexentry{Analytics!Simple Is Best|book{5}}{68}
+\indexentry{Over-Specification|book{5}}{69}
+\indexentry{False Negative}{69}
+\indexentry{Analytics!Sharing|book{5}}{70-71}
+\indexentry{Common Language for Analytics|book{5}}{71}
+\indexentry{Generic Language for Analytics|book{5}}{71}
+\indexentry{Sigma! |book{5}}{71-75}
+\indexentry{YARA|book{5}}{71}
+\indexentry{Snort \toolb! }{71}
+\indexentry{Sigma!Rule Format|book{5}}{72}
+\indexentry{Rule Generic Format|book{5}}{72}
+\indexentry{YAML|book{5}}{72}
+\indexentry{MITRE ATT\&CK!  |book{5}}{72}
+\indexentry{EventID 7036|book{5}}{73}
+\indexentry{EventID 7045|book{5}}{73}
+\indexentry{Sigma!Alert Queries|book{5}}{74}
+\indexentry{Alert!Queries From Signatures|book{5}}{74}
+\indexentry{Analytics!Sharing!Automation|book{5}}{75}
+\indexentry{MISP! }{75}
+\indexentry{Alert!Volume!Typical vs Ideal|book{5}}{78}
+\indexentry{False Positive!   }{78}
+\indexentry{True Positive! }{78}
+\indexentry{Alert!Fidelity}{79}
+\indexentry{Alert!Fidelity!High}{79}
+\indexentry{Alert!Tuning! |book{5}}{79}
+\indexentry{Alert!Volume|book{5}}{79}
+\indexentry{Alert!Generation|book{5}}{81}
+\indexentry{Alert!Triage!  |book{5}}{81}
+\indexentry{Alert!Queue! |book{5}}{81-82}
+\indexentry{Alert!Generation!Maximum|book{5}}{82}
+\indexentry{Alert!Disabling|book{5}}{83}
+\indexentry{Alert!Fatigue|book{5}}{83}
+\indexentry{Alert!Cherry-Picking}{83}
+\indexentry{Alert!Tuning!Down From Default|book{5}}{84}
+\indexentry{Alert!Tuning!Up From Zero|book{5}}{84}
+\indexentry{Analytics!Strategy|book{5}}{84}
+\indexentry{Alert!Poor Types|book{5}}{85}
+\indexentry{Alert!Fidelity!Low|book{5}}{86-87}
+\indexentry{Alert!Low Priority! |book{5}}{88}
+\indexentry{PUP|book{5}}{88}
+\indexentry{Adware! |book{5}}{88}
+\indexentry{Crypto-Mining! |book{5}}{88}
+\indexentry{Auto-Categorization|book{5}}{88}
+\indexentry{Alert!Non-Actionable|book{5}}{89}
+\indexentry{SYN|book{5}}{89}
+\indexentry{TCP Handshake|book{5}}{89}
+\indexentry{Alert!Tuning!Down From Default}{89}
+\indexentry{Alert!Tuning!Up From Zero}{89}
+\indexentry{Christmas Tree Scan|book{5}}{89}
+\indexentry{Noise! |book{5}}{89}
+\indexentry{Alert!Volume!High|book{5}}{90}
+\indexentry{Alert!Fatigue}{90}
+\indexentry{Alert!Frequency|book{5}}{90}
+\indexentry{Policy for Raising Fidelity|book{5}}{91}
+\indexentry{Alert!Fidelity!Increase|book{5}}{91}
+\indexentry{Approved Protocols List|book{5}}{91}
+\indexentry{Administrative Account Usage Location|book{5}}{91}
+\indexentry{Jump Box! |book{5}}{91-92}
+\indexentry{Remote Access|book{5}}{91-92}
+\indexentry{Help Desk Access|book{5}}{91-92}
+\indexentry{Internal Firewall|book{5}}{91-92}
+\indexentry{Free-For-All|book{5}}{91}
+\indexentry{Anomaly Detection!  |book{5}}{91}
+\indexentry{Mimikatz \toolr! |book{5}}{91}
+\indexentry{Field Analysis|book{5}}{93}
+\indexentry{False Positive!   }{93}
+\indexentry{Alert!Selection|book{5}}{94}
+\indexentry{Pareto Principle|book{5}}{94-96}
+\indexentry{Alert!Reduction|book{5}}{95}
+\indexentry{Rule Examination|book{5}}{96}
+\indexentry{Fast Lane|book{5}}{97}
+\indexentry{Fast Track Process|book{5}}{97}
+\indexentry{Alert!Low Priority! }{98}
+\indexentry{Automation}{98}
+\indexentry{SOC!Human Capital Model!Automation|book{5}}{102}
+\indexentry{Automation}{102-107}
+\indexentry{Automation!Human Capital Model|book{5}}{102}
+\indexentry{Orchestration|book{5}}{103}
+\indexentry{Automation!Should Use ?|book{5}}{104}
+\indexentry{SOAR!What ?|book{5}}{105}
+\indexentry{Playbook! |book{5}}{105}
+\indexentry{Runbook|book{5}}{105}
+\indexentry{Automation!Candidate ?|book{5}}{105}
+\indexentry{SOAR!Product Considerations|book{5}}{106}
+\indexentry{Human-in-the-Loop|book{5}}{106}
+\indexentry{Scalability|book{5}}{106}
+\indexentry{Enumeration! |book{5}}{107-108}
+\indexentry{Enrichment! }{107-108}
+\indexentry{Case!Management|book{5}}{107}
+\indexentry{SOAR!Case Management|book{5}}{107}
+\indexentry{Incident Response!SOAR|book{5}}{107}
+\indexentry{SOAR!Categories|book{5}}{107}
+\indexentry{SOAR!Enrichment|book{5}}{108}
+\indexentry{SOAR!Response|book{5}}{109-110}
+\indexentry{Containment!  |book{5}}{109}
+\indexentry{Accidental Block|book{5}}{109}
+\indexentry{Business-Critical Tool|book{5}}{109}
+\indexentry{Four-Eyes Rule|book{5}}{109}
+\indexentry{Hash Lookup! |book{5}}{110}
+\indexentry{Virus Samples Collection|book{5}}{110}
+\indexentry{Forensics Tasks|book{5}}{110}
+\indexentry{Case!Management}{111}
+\indexentry{SOAR!Case Management}{111}
+\indexentry{Incident Management System!Enrichment to SOAR|book{5}}{111}
+\indexentry{Automation!Framework|book{5}}{113}
+\indexentry{IBM|book{5}}{113}
+\indexentry{Scripting!DIY|book{5}}{114}
+\indexentry{ChatGPT|book{5}}{115}
+\indexentry{LLM|book{5}}{115}
+\indexentry{Artificial Intelligence|book{5}}{115}
+\indexentry{Zero Coding Skill|book{5}}{115}
+\indexentry{Automation!Paradox|book{5}}{116}
+\indexentry{Targeted Attacks!Automated Blocking|book{5}}{116}
+\indexentry{Automation!Full|book{5}}{116}
+\indexentry{Full Automation|book{5}}{116}
+\indexentry{Automation!Future in SecOps|book{5}}{117}
+\indexentry{SRE|book{5}}{117}
+\indexentry{SLO|book{5}}{117}
+\indexentry{Engineering|book{5}}{117}
+\indexentry{Toil!Elimination|book{5}}{117}
+\indexentry{Toil|book{5}}{118}
+\indexentry{Enduring Value|book{5}}{118}
+\indexentry{Micro-Automation|book{5}}{121}
+\indexentry{Form Auto-Fill|book{5}}{121-123}
+\indexentry{Email Template|book{5}}{121}
+\indexentry{Macro|book{5}}{121}
+\indexentry{Browser Extension!OSINT|book{5}}{121}
+\indexentry{Quick Parts|book{5}}{124}
+\indexentry{Smart Keywords|book{5}}{125-126}
+\indexentry{Browser Extension!OSINT}{127}
+\indexentry{Form Contents Caching|book{5}}{128}
+\indexentry{Form History Control|book{5}}{128}
+\indexentry{JavaScript|book{5}}{129}
+\indexentry{Webpage Modification|book{5}}{129}
+\indexentry{Automation!\win|book{5}}{130}
+\indexentry{Scripting|book{5}}{130}
+\indexentry{Containment!Decision|book{5}}{135-136}
+\indexentry{Analyst Empowerment|book{5}}{136}
+\indexentry{Trust|book{5}}{136}
+\indexentry{Trust!Strategies for Building|book{5}}{137}
+\indexentry{Four-Eyes Rule}{137}
+\indexentry{Poor Process Cost Documentation|book{5}}{138}
+\indexentry{Permission Request Process|book{5}}{138}
+\indexentry{Relationship Building|book{5}}{138}
+\indexentry{Active Intrusion Discovery|book{5}}{139}
+\indexentry{Targeted Attacks!Active Intrusion Discovery|book{5}}{139}
+\indexentry{Intrusion!Motivation|book{5}}{139}
+\indexentry{Intrusion!Nature|book{5}}{139}
+\indexentry{Targeted Attacks!Reaction|book{5}}{140}
+\indexentry{Evidence!Volatility|book{5}}{140}
+\indexentry{OPSEC! |book{5}}{140}
+\indexentry{Password Resets|book{5}}{140}
+\indexentry{IOC!Blocking|book{5}}{140}
+\indexentry{Containment!IOC-Based Blocking|book{5}}{140}
+\indexentry{Network Layers|book{5}}{141}
+\indexentry{Network Stack|book{5}}{141}
+\indexentry{Physical Isolation|book{5}}{142}
+\indexentry{Air-Gapped Networks|book{5}}{142}
+\indexentry{CAM Table|book{5}}{142}
+\indexentry{NAC|book{5}}{142-143}
+\indexentry{DHCP!Scopes|book{5}}{142}
+\indexentry{Hibernate|book{5}}{142}
+\indexentry{Shutdown|book{5}}{142}
+\indexentry{Memory Forensics|book{5}}{142}
+\indexentry{Containment!L2|book{5}}{143}
+\indexentry{Network Connectivity|book{5}}{143}
+\indexentry{Isolated VLAN|book{5}}{143}
+\indexentry{Non-Routable IP|book{5}}{143}
+\indexentry{DHCP!Reservation|book{5}}{143}
+\indexentry{Containment!Mobile Device|book{5}}{143}
+\indexentry{Containment!L3|book{5}}{144}
+\indexentry{Router ACL|book{5}}{144}
+\indexentry{Source Blackholing|book{5}}{144}
+\indexentry{Destination Blackholing|book{5}}{144}
+\indexentry{Null Routing|book{5}}{144}
+\indexentry{DNS-Based Blocking|book{5}}{144}
+\indexentry{Containment!DNS-Based Blocking|book{5}}{144}
+\indexentry{Containment!L4|book{5}}{146}
+\indexentry{Unusual Ports|book{5}}{146}
+\indexentry{Host Firewall! |book{5}}{146}
+\indexentry{Network Firewall! |book{5}}{146}
+\indexentry{Travels Block|book{5}}{146}
+\indexentry{Containment!PowerShell-Based Firewall|book{5}}{147}
+\indexentry{New-NetFirewallRule \powershell|book{5}}{147}
+\indexentry{Killing a Process|book{5}}{147}
+\indexentry{Application Protocols|book{5}}{148}
+\indexentry{RPZ Blocking|book{5}}{149}
+\indexentry{Containment!RPZ Blocking|book{5}}{149}
+\indexentry{DNS!Firewall|book{5}}{149}
+\indexentry{Known Bad/Good Domain|book{5}}{149-150}
+\indexentry{Known Bad/Good IP|book{5}}{149}
+\indexentry{RPZ Blocking!Domain-Based|book{5}}{150}
+\indexentry{Fake Response|book{5}}{150}
+\indexentry{Known Bad/Good IP}{151}
+\indexentry{DNS!Dynamic|book{5}}{152}
+\indexentry{DynDNS|book{5}}{152}
+\indexentry{DNS!Block List|book{5}}{152}
+\indexentry{Email-Based Blocking|book{5}}{153}
+\indexentry{Containment!Email-Based Blocking|book{5}}{153}
+\indexentry{Quarantine! |book{5}}{153}
+\indexentry{Dynamic Delivery|book{5}}{153}
+\indexentry{Header Injection|book{5}}{153}
+\indexentry{Spam!Identification|book{5}}{153}
+\indexentry{Safe Attachments|book{5}}{153}
+\indexentry{Spoofing Check Failures|book{5}}{153}
+\indexentry{SMTP!Response|book{5}}{154}
+\indexentry{Delivery Stage|book{5}}{154}
+\indexentry{Spam!Report|book{5}}{154}
+\indexentry{Evaluation Mode|book{5}}{154}
+\indexentry{Audit Mode! |book{5}}{154}
+\indexentry{Proxy-Based Blocking|book{5}}{155}
+\indexentry{Containment!Proxy-Based Blocking|book{5}}{155}
+\indexentry{IPS-Based Blocking|book{5}}{155}
+\indexentry{Containment!IPS-Based Blocking|book{5}}{155}
+\indexentry{NGFW-Based Blocking|book{5}}{155}
+\indexentry{Containment!NGFW-Based Blocking|book{5}}{155}
+\indexentry{Containment!L3}{155}
+\indexentry{Containment!L4}{155}
+\indexentry{Containment!L7|book{5}}{155}
+\indexentry{WAF! |book{5}}{156}
+\indexentry{HTTP!Inbound Attacks Blocking|book{5}}{156}
+\indexentry{Containment!File-Based|book{5}}{157}
+\indexentry{File-Based Containment|book{5}}{157}
+\indexentry{Containment!Host-Based|book{5}}{157}
+\indexentry{Host-Based Containment|book{5}}{157}
+\indexentry{EMET \win!  |book{5}}{157}
+\indexentry{RPZ Blocking!Domain-Based}{157}
+\indexentry{Network Traffic Blocking|book{5}}{157}
+\indexentry{Polymorphic Malware|book{5}}{157}
+\indexentry{HIDS/HIPS! |book{5}}{157}
+\indexentry{WDAC \win! |book{5}}{157}
+\indexentry{AppLocker \win! |book{5}}{157}
+\indexentry{EDR!  |book{5}}{157}
+
+
+\comment{********************************************************************************************
+                                     WORKBOOK SECTION
+*****************************************************************************************************}
+\indexentry{Sentinel \win!    |book{W}}{21}
+\indexentry{Splunk!    |book{W}}{21}
+\indexentry{Search Processing Language!    |book{W}}{21}
+\indexentry{Kusto Query Language!    |book{W}}{21}
+\indexentry{Dashboards Query Language|book{W}}{21}
+\indexentry{Dashboards Query Language!Reference Queries|book{W}}{22}
+\indexentry{SQL!    |book{W}}{26-41}
+\indexentry{Performance (Data Tables)|book{W}}{27}
+\indexentry{Accuracy (Data Tables)|book{W}}{27}
+\indexentry{JSON! |book{W}}{27}
+\indexentry{Query Workbench|book{W}}{28}
+\indexentry{Sentinel \win!    }{30}
+\indexentry{Sentinel \win!Available Tables|book{W}}{30}
+\indexentry{SQL!Query Format|book{W}}{32-33}
+\indexentry{Aggregation!SQL Functions|book{W}}{34}
+\indexentry{Discover \& Visualize (UI)|book{W}}{37}
+\indexentry{Query Workbench}{37}
+\indexentry{Management Traffic|book{W}}{68-69}
+\indexentry{Threat Intelligence!Platforms!Considerations|book{W}}{79}
+\indexentry{Case!Template! |book{W}}{94-95}
+\indexentry{Responder|book{W}}{96}
+\indexentry{Phishing!Alert Example|book{W}}{96-97}
+\indexentry{Observables! |book{W}}{97}
+\indexentry{Suricata \toolb!    |book{W}}{97}
+\indexentry{Containment!   |book{W}}{100}
+\indexentry{Playbook!Execution|book{W}}{100}
+\indexentry{Cortex Engine!Example|book{W}}{101-106}
+\indexentry{Observables! }{102-105}
+\indexentry{Observables!Automated Analysis|book{W}}{104-105}
+\indexentry{Analyzers! |book{W}}{104}
+\indexentry{Worklogs! |book{W}}{108-109}
+\indexentry{DNS!Passive Data!    |book{W}}{130-131}
+\indexentry{Passive DNS!    |book{W}}{130-131}
+\indexentry{CAA Record|book{W}}{135}
+\indexentry{Certificate Authority!  |book{W}}{135}
+\indexentry{DNS!Record Types! |book{W}}{135}
+\indexentry{SolarWinds Supply Chain Attack|book{W}}{136}
+\indexentry{Passive DNS!Hunt|book{W}}{136}
+\indexentry{DNS!Passive Data}{136}
+\indexentry{Malicious Subdomains|book{W}}{136}
+\indexentry{Server Name Indication! |book{W}}{139}
+\indexentry{Bucketing|book{W}}{141}
+\indexentry{DNS!Tunneling!  |book{W}}{144-145}
+\indexentry{DNS!Tunneling!Characteristics|book{W}}{145}
+\indexentry{DNS!Tunneling!Detection@ |book{W}}{146}
+\indexentry{HTTP!Host Header|book{W}}{151-154}
+\indexentry{File Extraction (PCAP)! |book{W}}{159-162}
+\indexentry{HTTP/2!TLS Decryption|book{W}}{167}
+\indexentry{HTTP/2!Frame Types!Most Important|book{W}}{168}
+\indexentry{HTTP/2!Stream ID|book{W}}{169-170}
+\indexentry{HTTP/2!Frame Types!Most Important}{173}
+\indexentry{HTTP/2!Stream ID}{174}
+\indexentry{File Extraction (PCAP)! }{175-177}
+\indexentry{QPACK! |book{W}}{179}
+\indexentry{File Extraction (PCAP)! }{181-183}
+\indexentry{Merlin C2|book{W}}{183}
+\indexentry{QUIC!Why Blocking|book{W}}{183}
+\indexentry{HTTP/3!Why Blocking|book{W}}{183}
+\indexentry{Server Name Indication!TLS Extension|book{W}}{185}
+\indexentry{TLS Handshake|book{W}}{186-187}
+\indexentry{TLS Certificate! |book{W}}{187-191}
+\indexentry{TLS1.3!Certificate Transfer|book{W}}{187}
+\indexentry{Self-Signed Certificate|book{W}}{189-191}
+\indexentry{JA3(S)! |book{W}}{191-193}
+\indexentry{TLS Handshake}{192}
+\indexentry{ByteSecLabs|book{W}}{193}
+\indexentry{Salesforce|book{W}}{193}
+\indexentry{JA3(S)!Creator|book{W}}{193}
+\indexentry{IP Reputation|book{W}}{194}
+\indexentry{X.509|book{W}}{195}
+\indexentry{X509.log@\texttt{x509.log}|book{W}}{195}
+\indexentry{Ssl.log@\texttt{ssl.log}|book{W}}{195-196}
+\indexentry{EventID 4624/4625!  |book{W}}{198-199}
+\indexentry{Anomalous Login Attempts|book{W}}{198}
+\indexentry{EventID 4688! |book{W}}{200-201}
+\indexentry{EventID 4624/4625!  }{202-204}
+\indexentry{NTLM \win! |book{W}}{205}
+\indexentry{Anomalous Login Attempts}{206}
+\indexentry{Dashboards! |book{W}}{206-209}
+\indexentry{Anomalous Login Attempts}{209-212}
+\indexentry{Brute Force Login Attempt! |book{W}}{212}
+\indexentry{EventID 5152/5154/5156|book{W}}{212-216}
+\indexentry{Port Scan! |book{W}}{213}
+\indexentry{Winlogbeat|book{W}}{213}
+\indexentry{Dynamic Ports (\textgreater 49152)|book{W}}{216}
+\indexentry{EventID 6416! |book{W}}{217}
+\indexentry{DLP!Event of Interest|book{W}}{217}
+\indexentry{USB Plug \& Play Logs! |book{W}}{217}
+\indexentry{EventID 1006/1116! |book{W}}{219}
+\indexentry{JSON!Log Example|book{W}}{222}
+\indexentry{Eve.json@\texttt{eve.json}|book{W}}{222}
+\indexentry{Syslog \linux!Example! |book{W}}{223}
+\indexentry{Key-Value Pairs!Log Example|book{W}}{224}
+\indexentry{UFW!Log Example|book{W}}{224}
+\indexentry{Log Agents|book{W}}{224-225}
+\indexentry{Splunk!Universal Forwarder|book{W}}{224}
+\indexentry{ElasticSearch|book{W}}{225}
+\indexentry{Beats|book{W}}{225}
+\indexentry{NXLog|book{W}}{225}
+\indexentry{SmartConnectors|book{W}}{225}
+\indexentry{WinCollect|book{W}}{225}
+\indexentry{QRadar! |book{W}}{225}
+\indexentry{ArcSight|book{W}}{225}
+\indexentry{LogRhythm|book{W}}{225}
+\indexentry{Fluentd|book{W}}{225}
+\indexentry{Snare|book{W}}{225}
+\indexentry{UFW!Log Example}{226-232}
+\indexentry{Log Aggregator! |book{W}}{225}
+\indexentry{Honeypot Kernel|book{W}}{226}
+\indexentry{Log Normalization! |book{W}}{228}
+\indexentry{Enrichment!    |book{W}}{229}
+\indexentry{SSH!Scan|book{W}}{233}
+\indexentry{LNK!Malicious File|book{W}}{237-238}
+\indexentry{PE Format!Malicious File|book{W}}{238}
+\indexentry{Executables!Malicious File|book{W}}{238}
+\indexentry{ISO!Malicious File|book{W}}{244-246}
+\indexentry{ISO|book{W}}{245}
+\indexentry{HTA|book{W}}{247}
+\indexentry{Polyglots!Example|book{W}}{247}
+\indexentry{AutoOpen|book{W}}{247-248}
+\indexentry{VBA Script|book{W}}{247-248}
+\indexentry{LNK!Malicious File}{247}
+\indexentry{Deobfuscation|book{W}}{248-250}
+\indexentry{WScript.Shell@\texttt{WScript.Shell}|book{W}}{249-250}
+\indexentry{Scripting.FileSystemObject@\texttt{Scripting.FileSystemObject}|book{W}}{249-250}
+\indexentry{DLL|book{W}}{251}
+\indexentry{Infection Chain Example|book{W}}{251}
+\indexentry{Thumbnail Pictures|book{W}}{251}
+\indexentry{Polyglots!Example}{251}
+\indexentry{Wacatac \malware|book{W}}{252}
+\indexentry{OneNote \win!Magic Bytes|book{W}}{255}
+\indexentry{Alert!Timestamp Issue|book{W}}{260}
+\indexentry{Alert!Triage!   |book{W}}{261-271}
+\indexentry{Triage!FTP Alert|book{W}}{260-261}
+\indexentry{IsDebuggerPresent@\texttt{IsDebuggerPresent} API Call \win|book{W}}{261}
+\indexentry{Executables!Short Name Alert|book{W}}{261}
+\indexentry{Community ID|book{W}}{262-266}
+\indexentry{Corelight! |book{W}}{262}
+\indexentry{Data Exfiltration!Example|book{W}}{268-271}
+\indexentry{Triage!IDS Alerts! |book{W}}{273}
+\indexentry{Executables!Malware Alert|book{W}}{274}
+\indexentry{IsDebuggerPresent@\texttt{IsDebuggerPresent} API Call \win}{274}
+\indexentry{IsDebuggerPresent@\texttt{IsDebuggerPresent} API Call \win}{277}
+\indexentry{False Positive!    |book{W}}{277}
+\indexentry{Executables!Short Name Alert}{277-283}
+\indexentry{Community ID}{278-279}
+\indexentry{Hypothesis!Generation!Example|book{W}}{294}
+\indexentry{Evidence!Gathering|book{W}}{294}
+\indexentry{Referer! |book{W}}{295}
+\indexentry{Evidence!Checking|book{W}}{295-301}
+\indexentry{Analysis of Competing Hypothesis!Matrix!Example|book{W}}{303}
+\indexentry{EventID 4688! }{299-301}
+\indexentry{Diagnosticity!Evaluation|book{W}}{302-311}
+\indexentry{Hypothesis!Disproven!Example|book{W}}{311}
+\indexentry{Analysis of Competing Hypothesis!Template|book{W}}{313}
+\indexentry{Triage!Login Alert|book{W}}{137-318}
+\indexentry{Referer! }{324}
+\indexentry{Playbook!Completion|book{W}}{328-351}
+\indexentry{Investigation!Tasks|book{W}}{328}
+\indexentry{Containment!Tasks|book{W}}{328}
+\indexentry{Phishing!Logs Example|book{W}}{335-338}
+\indexentry{Response!Tasks|book{W}}{341}
+\indexentry{Observables! }{342-349}
+\indexentry{Case!Summary|book{W}}{350}
+\indexentry{Case!Closure|book{W}}{351}
+\indexentry{Email!Headers \& Source!Example|book{W}}{354}
+\indexentry{SPF!Checks|book{W}}{358}
+\indexentry{DKIM!Checks|book{W}}{358}
+\indexentry{DMARC!Checks|book{W}}{359-360}
+\indexentry{Email!Headers \& Source!Example}{361}
+\indexentry{SPF!Checks}{362}
+\indexentry{DKIM!Checks}{363}
+\indexentry{DMARC!Checks}{363}
+\indexentry{Pareto Principle! |book{W}}{371}
+\indexentry{Noise!Filtering|book{W}}{371}
+\indexentry{File Watch|book{W}}{387-389}
+\indexentry{ThreatCrowd|book{W}}{393}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{CSM \goto Continuous Security Monitoring|comment}{0}
+\indexentry{NSM \goto Network Security Monitoring|comment}{0}
+\indexentry{SPL \goto Search Processing Language|comment}{0}
+\indexentry{KQL \goto Kusto Query Language|comment}{0}
+\indexentry{DQL \goto Dashboards Query Language|comment}{0}
+\indexentry{TIP \goto Threat Intelligence Platforms|comment}{0}
+\indexentry{ISAC/ISAO! \goto Info Sharing Analysis Center/Organization|comment}{0}
+\indexentry{IMS \goto Incident Management System|comment}{0}
+\indexentry{SPAN! \goto Switch Port ANalyzer|comment}{0}
+\indexentry{Flow Logs! \goto Network Flow|comment}{0}
+\indexentry{SPF \goto Sender Policy Framework|comment}{0}
+\indexentry{DoH \goto DNS over HTTPS|comment}{0}
+\indexentry{DoT \goto DNS over TLS|comment}{0}
+\indexentry{BDNS \goto Blockchain DNS|comment}{0}
+\indexentry{IDN \goto International Domain Name|comment}{0}
+\indexentry{SNI \goto Server Name Indication|comment}{0}
+\indexentry{ECH \goto Encrypted Client Hello|comment}{0}
+\indexentry{NAC \goto Network Access Control|comment}{0}
+\indexentry{EPSS \goto Exploit Prediction Scoring System|comment}{0}
+\indexentry{KEV \goto Known Exploited Vulnerabilities|comment}{0}
+\indexentry{FIM \goto File Integrity Monitoring|comment}{0}
+\indexentry{ASR \goto Attack Surface Reduction|comment}{0}
+\indexentry{PAM \goto Pluggable Authentication Module|comment}{0}
+\indexentry{TGS \goto Ticket Granting Service|comment}{0}
+\indexentry{KDC \goto Key Distribution Center|comment}{0}
+\indexentry{TGT \goto Ticket Granting Ticket|comment}{0}
+\indexentry{ACH \goto Analysis of Competing Hypothesis|comment}{0}
+\indexentry{TLP \goto Traffic Light Protocol|comment}{0}
+\indexentry{PAP \goto Permissible Actions Protocol|comment}{0}
+\indexentry{TOR \goto The Onion Router|comment}{0}
