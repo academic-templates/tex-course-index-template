@@ -170,9 +170,9 @@ You may also like these:
 
 ## :clap:  Supporters
 
-[![Stargazers repo roster for @academic-templates/tex-course-index-template](https://reporoster.com/stars/dark/academic-templates/tex-course-index-template)](https://github.com/academic-templates/tex-course-index-template/stargazers)
+<!-- REPOSITORY_STARS:START --> <!-- REPOSITORY_STARS:END -->
 
-[![Forkers repo roster for @academic-templates/tex-course-index-template](https://reporoster.com/forks/dark/academic-templates/tex-course-index-template)](https://github.com/academic-templates/tex-course-index-template/network/members)
+<!-- REPOSITORY_FORKS:START --><!-- REPOSITORY_FORKS:END -->
 
 <p align="center"><a href="#top"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
