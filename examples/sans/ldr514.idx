@@ -1,0 +1,1950 @@
+\comment{ AUTHOR : Alexandre D'Hondt
+
+USER DEFINED COMMANDS AND SPECIAL SYNTAX
+  a. Add a blank line between paragraphs : \blankline
+       Syntax in .idx file : \indexentry{...@\blankline|comment}{0}
+
+  b. Insert a page break : (standard) \newpage
+       Syntax in .idx file : \indexentry{...@\blankline|newpage \comment}{0}
+
+  c. Fills page number with book name : \book{x}
+       Syntax in .idx file : \indexentry{...|book{x}}{...}
+          with x = nbr of the book to display in the page number with format : [BOOKNAME][x]
+          Example : SANS SEC504 book ->  504.1--1-10
+                                     =======
+  d. Insert an entry rank : \rate{x}
+       Syntax in .idx file : \indexentry{... \rate{x}|...}{...}
+          with x = # of \star's to display between item and dotfill before page number
+          
+  e. Insert an entry with special style : \indexentry{my_entry@\text..{my_entry}|...}{...}
+       Before '@' is for indexing, after is what will be displayed
+  
+  NB :
+    - ... = sorting key
+    - \blankline is defined in the .tex file and fills the line with space
+    - \rank is defined in the .tex file and uses a the forloop package to repeat x times \star
+    - comment style (behind "|") will act as a \comment command, commenting the page number "{0}"
+
+
+*****************************************************************************************************
+                                          TOPICS SECTION
+*****************************************************************************************************
+ Sort entries consist of a number and a letter to be inserted in the standard 'Symbols' section }
+
+\indexentry{0a@\blankline|comment}{0}
+
+\indexentry{0b@\textbf{Strategic Planning Process}\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill|comment}{0}
+\indexentry{0c@\includegraphics[width=\linewidth]{img/strategic-planning-process.png}|comment}{0}
+
+\indexentry{1a@\textbf{Learning Objectives}|book{1}}{8}
+
+\indexentry{1b@\blankline|comment}{0}
+
+\indexentry{2a@\textbf{Strategic Planning Foundations}!1@Overview|book{1}}{6-22}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!2@Decipher the Business|book{1}}{36-37}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!3@Historical Analysis|book{1}}{39-52}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!4@Values \& Culture|book{1}}{54-67}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!5@Stakeholder Management|book{1}}{69-104}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!6@Asset Analysis|book{1}}{106-116}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!7@Business Strategy|book{1}}{118-134}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!8@Decipher the Threats|book{1}}{142-143}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!9@Threat Actors|book{1}}{145-159}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!10@PEST Analysis|book{1}}{161-182}
+\indexentry{2a@\textbf{Strategic Planning Foundations}!10@Threat Analysis|book{1}}{183-212}
+
+%\indexentry{2y@\blankline|comment}{0}
+\indexentry{2z@\blankline|comment}{0}
+
+\indexentry{3a@\textbf{Strategic Roadmap Development}!1@Define Current State|book{2}}{5}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!2@Vision \& Mission|book{2}}{7-26}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!3@SWOT Analysis|book{2}}{38-53}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!4@Develop the Plan|book{2}}{55}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!5@Visioning \& Innovation|book{2}}{57-73}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!6@Security Framework|book{2}}{75-98}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!7@Security Roadmap|book{2}}{100-113}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!8@Business Case Development|book{2}}{122-143}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!9@Deliver the Program|book{2}}{145}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!10@Security Metrics Program|book{2}}{147-190}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!11@Marketing Best Practices|book{2}}{192-209}
+\indexentry{3a@\textbf{Strategic Roadmap Development}!12@Board \& Executive Communication|book{2}}{211-232}
+
+\indexentry{3y@\blankline|comment}{0}
+\indexentry{3z@\blankline|comment}{0}
+
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!1@Purpose of Policy|book{3}}{5-43}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!2@Policy Pyramid|book{3}}{45-73}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!3@Language of Policy|book{3}}{75-88}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!4@Policy Structure|book{3}}{90-98}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!5@Policy \& Culture|book{3}}{100-111}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!6@Define Requirements|book{3}}{113-126}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!7@Development Examples|book{3}}{128-153}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!8@Manage Policy|book{3}}{165-177}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!9@SMART Approach|book{3}}{177-192}
+\indexentry{4a@\textbf{Security Policy Development \& Assessment}!10@Policy Assessment|book{3}}{194-196}
+
+\indexentry{4g@\blankline|comment}{0}
+\indexentry{4h@\blankline|comment}{0}
+
+\indexentry{4m@\textbf{Strategic Planning Template}\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill\hfill|comment}{0}
+\indexentry{4n@\includegraphics[width=\linewidth]{img/strategic-plan-example.png}|comment}{0}
+
+\indexentry{4y@\blankline|comment}{0}
+\indexentry{4z@\blankline|comment}{0}
+
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!1@Why Choose Leadership|book{4}}{5-17}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!2@Leadership Essentials|book{4}}{37-50}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!3@Servant Leadership|book{4}}{52-68}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!4@Effective Communications|book{4}}{70-81}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!5@Active Listening|book{4}}{83-93}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!6@Providing Feedback|book{4}}{95-102}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!7@Build Effective Teams|book{4}}{116-137}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!8@Learning to Delegate|book{4}}{139-150}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!9@Coaching, Mentoring, Sponsorship|book{4}}{156-183}
+\indexentry{5a@\textbf{Leadership \& Management Competencies}!10@Leading Change|book{4}}{185-199}
+
+\indexentry{5y@\blankline|comment}{0}
+\indexentry{5z@\blankline|comment}{0}
+
+\indexentry{6a@\textbf{Strategic Planning Workshop}!1@Background|book{5}}{4-9}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!2@iPremier Case (A)|book{5}}{11-25}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!3@iPremier Case (B)|book{5}}{27-31}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!4@iPremier Case (C)|book{5}}{33-37}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!5@PharmaCo Case (A)|book{5}}{39-45}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!6@PharmaCo Case (B)|book{5}}{47-50}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!7@PharmaCo Case (C)|book{5}}{52-53}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!8@HealthHound Case|book{5}}{55-80}
+\indexentry{6a@\textbf{Strategic Planning Workshop}!9@Course Summary|book{5}}{82-90}
+
+\indexentry{7z@\blankline|newpage \comment}{0}
+
+\comment{********************************************************************************************
+                                       CATEGORIES SECTION
+*****************************************************************************************************
+ Sort entries consist of a number to be inserted in the standard 'Numbers' section
+ Number composition : [(1) Alphabet order number] [(2) 0]
+   (1) Sorting in alphabetical number
+   (2) Allows up to 10 subsections / alphabet character }
+
+\indexentry{80@\textbf{Key Takeaways}!Strategic Planning Process|book{1}}{9}
+\indexentry{80@\textbf{Key Takeaways}!30-60-90 Day Plan|book{1}}{19}
+\indexentry{80@\textbf{Key Takeaways}!Technology Risk Graph|book{1}}{45}
+\indexentry{80@\textbf{Key Takeaways}!Business Risk Graph|book{1}}{45}
+\indexentry{80@\textbf{Key Takeaways}!Values|book{1}}{61}
+\indexentry{80@\textbf{Key Takeaways}!SIPOC Matrix|book{1}}{79}
+\indexentry{80@\textbf{Key Takeaways}!Stakeholder Mgt 3-Steps Process|book{1}}{89}
+\indexentry{80@\textbf{Key Takeaways}!Stakeholder Understanding Questions|book{1}}{90}
+\indexentry{80@\textbf{Key Takeaways}!Power/Interest Grid|book{1}}{94}
+\indexentry{80@\textbf{Key Takeaways}!Relationship Management Questions|book{1}}{96}
+\indexentry{80@\textbf{Key Takeaways}!Crown Jewels Identification Worksheet|book{1}}{112}
+\indexentry{80@\textbf{Key Takeaways}!Business Model Questions|book{1}}{118}
+\indexentry{80@\textbf{Key Takeaways}!VERIS Framework|book{1}}{145-147}
+\indexentry{80@\textbf{Key Takeaways}!VERIS Framework}{158}
+\indexentry{80@\textbf{Key Takeaways}!PEST Analysis|book{1}}{164}
+\indexentry{80@\textbf{Key Takeaways}!Threat Analysis|book{1}}{210}
+\indexentry{80@\textbf{Key Takeaways}!Strategic Planning Tools|book{1}}{212}
+\indexentry{80@\textbf{Key Takeaways}!DRIVE the Vision|book{2}}{10}
+\indexentry{80@\textbf{Key Takeaways}!Mission Statement Creation Process|book{2}}{21-26}
+\indexentry{80@\textbf{Key Takeaways}!SWOT Analysis|book{2}}{38-41}
+\indexentry{80@\textbf{Key Takeaways}!Gap Analysis|book{2}}{100-104}
+\indexentry{80@\textbf{Key Takeaways}!Roadmap Development Process|book{2}}{106-109}
+\indexentry{80@\textbf{Key Takeaways}!Decision Matrix Analysis|book{2}}{110-111}
+\indexentry{80@\textbf{Key Takeaways}!Business Case|book{2}}{138-139}
+\indexentry{80@\textbf{Key Takeaways}!Metrics Program|book{2}}{157-158}
+\indexentry{80@\textbf{Key Takeaways}!Metrics Hierarchy|book{2}}{164-166}
+\indexentry{80@\textbf{Key Takeaways}!SNAP Marketing|book{2}}{197}
+\indexentry{80@\textbf{Key Takeaways}!SNAP Marketing}{209}
+\indexentry{80@\textbf{Key Takeaways}!Strategic Planning Tools! |book{2}}{209}
+\indexentry{80@\textbf{Key Takeaways}!Board Presentation|book{2}}{215}
+\indexentry{80@\textbf{Key Takeaways}!Strategic Planning Tools! }{232}
+\indexentry{80@\textbf{Key Takeaways}!Purpose of Policy|book{3}}{6}
+\indexentry{80@\textbf{Key Takeaways}!Policy Pyramid|book{3}}{45}
+\indexentry{80@\textbf{Key Takeaways}!Security Policy Governance Life Cycle|book{3}}{49}
+\indexentry{80@\textbf{Key Takeaways}!Principles of Clear Writing|book{3}}{79}
+\indexentry{80@\textbf{Key Takeaways}!Language of Policy|book{3}}{86}
+\indexentry{80@\textbf{Key Takeaways}!Policy Document Structure|book{3}}{91}
+\indexentry{80@\textbf{Key Takeaways}!Security Posture \& Culture|book{3}}{104-105}
+\indexentry{80@\textbf{Key Takeaways}!SMART Approach|book{3}}{177}
+\indexentry{80@\textbf{Key Takeaways}!Boss -- Manager -- Leader|book{4}}{8}
+\indexentry{80@\textbf{Key Takeaways}!Generational Perspectives|book{4}}{31}
+\indexentry{80@\textbf{Key Takeaways}!Dysfunctions of a Team|book{4}}{43}
+\indexentry{80@\textbf{Key Takeaways}!Maslow's Hierarchy of Needs|book{4}}{56}
+\indexentry{80@\textbf{Key Takeaways}!Human Capital Model|book{4}}{62}
+\indexentry{80@\textbf{Key Takeaways}!FILE Model|book{4}}{97}
+\indexentry{80@\textbf{Key Takeaways}!ALCR Model|book{4}}{100}
+\indexentry{80@\textbf{Key Takeaways}!Performance Analysis Quadrant|book{4}}{102}
+\indexentry{80@\textbf{Key Takeaways}!Keys to Successful Team|book{4}}{126-127}
+\indexentry{80@\textbf{Key Takeaways}!Tuckman's Teaming Model|book{4}}{134}
+\indexentry{80@\textbf{Key Takeaways}!ABC of Delegation|book{4}}{144}
+\indexentry{80@\textbf{Key Takeaways}!Three E's of Learning|book{4}}{158}
+\indexentry{80@\textbf{Key Takeaways}!GROW Coaching Model|book{4}}{167-169}
+\indexentry{80@\textbf{Key Takeaways}!Coaching Action Plan|book{4}}{171}
+
+\indexentry{81@\blankline|comment}{0}
+
+%\indexentry{200@\textbf{Tools}!Logstash|book{1}}{66}
+
+\indexentry{500@\textbf{Labs}!CISO First Impression|book{1}}{23-27}
+\indexentry{500@\textbf{Labs}!Creating a Strategy Map|book{1}}{135-140}
+\indexentry{500@\textbf{Labs}!Creating a Mission Statement|book{2}}{27-36}
+\indexentry{500@\textbf{Labs}!Roadmap Development|book{2}}{114-120}
+\indexentry{500@\textbf{Labs}!Vulnerability Management Policy|book{3}}{154-163}
+\indexentry{500@\textbf{Labs}!Cloud Computing Policy|book{3}}{197-208}
+\indexentry{500@\textbf{Labs}!Management \& Leadership|book{4}}{18-21}
+\indexentry{500@\textbf{Labs}!Performance Review|book{4}}{103-105}
+\indexentry{500@\textbf{Labs}!Delegation|book{4}}{151-154}
+
+\indexentry{501@\blankline|comment}{0}
+
+\indexentry{600@\textbf{Cyber42}!Overview|book{1}}{29-34}
+\indexentry{600@\textbf{Cyber42}!1@Round 1 -- Challenge 1|book{1}}{50-52}
+\indexentry{600@\textbf{Cyber42}!2@Round 1 -- Challenge 2|book{1}}{100-104}
+\indexentry{600@\textbf{Cyber42}!3@Round 1 -- Challenge 3|book{1}}{115-116}
+\indexentry{600@\textbf{Cyber42}!4@Round 1 -- Challenge 4|book{1}}{181-182}
+\indexentry{600@\textbf{Cyber42}!5@Round 1 -- Challenge 5|book{2}}{52-53}
+\indexentry{600@\textbf{Cyber42}!6@Round 1 -- Challenge 6|book{2}}{72-73}
+\indexentry{600@\textbf{Cyber42}!7@Round 1 -- Challenge 7|book{2}}{142-143}
+\indexentry{600@\textbf{Cyber42}!8@Round 1 -- Challenge 8|book{2}}{188-190}
+\indexentry{600@\textbf{Cyber42}!9@Round 2 -- Challenge 9|book{3}}{64-65}
+\indexentry{600@\textbf{Cyber42}!10@Round 2 -- Challenge 10|book{3}}{87-88}
+\indexentry{600@\textbf{Cyber42}!11@Round 2 -- Challenge 11|book{3}}{125-126}
+\indexentry{600@\textbf{Cyber42}!12@Round 2 -- Challenge 12|book{3}}{194-196}
+\indexentry{600@\textbf{Cyber42}!12@Round 3 -- Challenge 13|book{4}}{37-38}
+\indexentry{600@\textbf{Cyber42}!12@Round 3 -- Challenge 14|book{4}}{67-68}
+\indexentry{600@\textbf{Cyber42}!12@Round 3 -- Challenge 15|book{4}}{91-92}
+\indexentry{600@\textbf{Cyber42}!12@Round 3 -- Challenge 16|book{4}}{131-133}
+
+\indexentry{601@\blankline|comment}{0}
+
+\indexentry{700@\textbf{Scenarios / Case Studies}!Fictional Companies in the Course|book{1}}{13}
+\indexentry{700@\textbf{Scenarios / Case Studies}!HealthHound|book{1}}{21-22}
+\indexentry{700@\textbf{Scenarios / Case Studies}!HealthHound!CISO First Impression|book{1}}{24-27}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt|book{1}}{47-49}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Business Risk Graph|book{1}}{52}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Values Statement|book{1}}{62-67}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Organization Chart|book{1}}{91}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Stakeholders|book{1}}{97-99}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Stakeholders!Management|book{1}}{102-103}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Crown Jewels|book{1}}{114}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Strategy Map|book{1}}{136-140}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo|book{2}}{22}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Mission Statement Creation|book{2}}{23-26}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!SWOT Analysis|book{2}}{43-51}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Gap Analysis|book{2}}{100-101}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Gap Analysis}{105}
+\indexentry{700@\textbf{Scenarios / Case Studies}!Thunderbolt!Roadmap Development|book{2}}{115-118}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Security Metrics|book{2}}{186}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Marketing Objectives|book{2}}{199}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Threat Analysis|book{2}}{199}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Historical Analysis|book{2}}{199}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Gap Analysis}{200}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Security Roadmap|book{2}}{200}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!SWOT Analysis|book{2}}{200-201}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Vision \& Mission|book{2}}{201}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!PEST|book{2}}{201}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Porter's Five Forces|book{2}}{201}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Values \& Cultures|book{2}}{201}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Cloud Computing Policy|book{3}}{197-208}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Promotion to Manager|book{4}}{19-20}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Performance Review|book{4}}{103-105}
+\indexentry{700@\textbf{Scenarios / Case Studies}!PharmaCo!Delegation|book{4}}{151-154}
+
+\indexentry{701@\blankline|comment}{0}
+
+%\indexentry{800@\textbf{References}!LDR551 - Building and Leading Security Operations Center|book{1}}{40}
+
+\indexentry{999@\blankline|newpage \comment}{0}
+
+% [example] add blank lines at the end of the 'S' section to shift the 'T' section
+%\indexentry{Szzzzzz@\blankline|comment}{0}
+
+\comment{********************************************************************************************
+                                       FIRST BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Security Leadership!Evolution|book{1}}{7}
+\indexentry{Strategic Planning|book{1}}{9}
+\indexentry{Strategic Planning!Process|book{1}}{9}
+\indexentry{Decipher|book{1}}{9}
+\indexentry{Develop|book{1}}{9}
+\indexentry{Deliver|book{1}}{9}
+\indexentry{Intended Audience|book{1}}{11}
+\indexentry{Fictional Companies|book{1}}{13}
+\indexentry{Strategic Planning!Need|book{1}}{14}
+\indexentry{Threat Landscape|book{1}}{15}
+\indexentry{Global Connectivity|book{1}}{15}
+\indexentry{Security Breaches|book{1}}{15}
+\indexentry{Geographic Limitations|book{1}}{15}
+\indexentry{PII|book{1}}{15}
+\indexentry{CIO {\contextnotesize (Example Reporting to CISO)}|book{1}}{16}
+\indexentry{CISO {\contextnotesize (Example Reporting To CIO)}|book{1}}{16}
+\indexentry{Security Investment Prioritization Challenges|book{1}}{17}
+\indexentry{Risk-Based Decision Making|book{1}}{18}
+\indexentry{Security Business Leaders|book{1}}{18}
+\indexentry{Threat Landscape}{18}
+\indexentry{Strategic Planning!Need}{18}
+\indexentry{Strategic Planning!30-60-90 Day Plan|book{1}}{19}
+\indexentry{Typical Planning Process|book{1}}{19}
+\indexentry{Interview {\contextnotesize (Job)}|book{1}}{19}
+\indexentry{Strategic Planning!Capabilities Testing|book{1}}{19}
+\indexentry{Key Stakeholders|book{1}}{27}
+\indexentry{Culture|book{1}}{27}
+\indexentry{Crown Jewels|book{1}}{27}
+\indexentry{Control Gaps|book{1}}{27}
+\indexentry{Vision|book{1}}{27}
+\indexentry{Security Frameworks|book{1}}{27}
+\indexentry{Roadmap|book{1}}{27}
+\indexentry{Business Case|book{1}}{27}
+\indexentry{Metrics!Program|book{1}}{27}
+\indexentry{Marketing Plan|book{1}}{27}
+\indexentry{Communication Plan|book{1}}{27}
+\indexentry{Board Presentation|book{1}}{27}
+\indexentry{Policy!Library|book{1}}{27}
+\indexentry{Team!Member Goals|book{1}}{27}
+\indexentry{Strengths \& Weaknesses|book{1}}{27}
+\indexentry{Values {\contextnotesize (Culture)}|book{1}}{27}
+\indexentry{Performance Goals|book{1}}{27}
+\indexentry{Training Plan|book{1}}{27}
+\indexentry{Hiring Plan|book{1}}{27}
+\indexentry{Career Goals|book{1}}{27}
+\indexentry{Mentoring|book{1}}{27}
+\indexentry{Sponsorship|book{1}}{27}
+\indexentry{Decipher!Business|book{1}}{36-37}
+\indexentry{Business Goals|book{1}}{36}
+\indexentry{Elevator Pitch|book{1}}{36}
+\indexentry{Business Understanding|book{1}}{37}
+\indexentry{Stakeholders Management!Plan|book{1}}{37}
+\indexentry{Strategy!Map|book{1}}{37}
+\indexentry{Porter's Five Forces|book{1}}{37}
+\indexentry{Historical Analysis|book{1}}{39-40}
+\indexentry{Business Goals}{39}
+\indexentry{Lessons Learned|book{1}}{40}
+\indexentry{History of Computing|book{1}}{41}
+\indexentry{Phases of Computing|book{1}}{41}
+\indexentry{Artificial Intelligence|book{1}}{41}
+\indexentry{Chat-Based AI|book{1}}{41}
+\indexentry{Security History|book{1}}{42-43}
+\indexentry{History of Security|book{1}}{42-43}
+\indexentry{Internet of Things|book{1}}{42}
+\indexentry{Stuxnet \malware|book{1}}{42}
+\indexentry{Buffer Overflow|book{1}}{42}
+\indexentry{SQL Injection|book{1}}{42}
+\indexentry{XSS|book{1}}{42}
+\indexentry{PLC|book{1}}{42}
+\indexentry{Morris \malware|book{1}}{42}
+\indexentry{Samy MySpace \malware|book{1}}{42}
+\indexentry{Security Team!History Example|book{1}}{44}
+\indexentry{Technology Complexity|book{1}}{45}
+\indexentry{Operational Risks {\contextnotesize (Technology)}|book{1}}{45}
+\indexentry{Technology Risk Graph|book{1}}{45}
+\indexentry{Generative AI|book{1}}{45}
+\indexentry{SolarWinds Attack|book{1}}{45}
+\indexentry{Ransomware Attacks|book{1}}{45}
+\indexentry{Organized Crime|book{1}}{45}
+\indexentry{Cloud Computing|book{1}}{45}
+\indexentry{Insider Threats|book{1}}{45}
+\indexentry{Complexity|book{1}}{45}
+\indexentry{Historical Analysis}{46}
+\indexentry{Business Goals}{46}
+\indexentry{Technology Risk Graph!Example {\contextnotesize (Thunderbolt)}|book{1}}{52}
+\indexentry{Business Risk Graph|book{1}}{52}
+\indexentry{Culture}{54}
+\indexentry{Values {\contextnotesize (Culture)}}{54-61}
+\indexentry{Acceptable Working Norms|book{1}}{54}
+\indexentry{Values {\contextnotesize (Culture)}!Statement|book{1}}{55}
+\indexentry{Guidance on How to Act|book{1}}{55}
+\indexentry{How to Act|book{1}}{55}
+\indexentry{Successfull Executive|book{1}}{55}
+\indexentry{Values {\contextnotesize (Culture)}!Statement!Primary Reason|book{1}}{56}
+\indexentry{Six-Word Story|book{1}}{58}
+\indexentry{Stability {\contextnotesize (Values)}|book{1}}{59}
+\indexentry{Values {\contextnotesize (Culture)}!Stability|book{1}}{59}
+\indexentry{Mission|book{1}}{59}
+\indexentry{Vision!Stability|book{1}}{59}
+\indexentry{Values {\contextnotesize (Culture)}!Statement!Tips for Creation|book{1}}{59}
+\indexentry{Values {\contextnotesize (Culture)}!Statement!Example {\contextnotesize (Thunderbolt)}|book{1}}{62-67}
+\indexentry{Stakeholders Management|book{1}}{69}
+\indexentry{Stakeholders Management!Strategy|book{1}}{69-71}
+\indexentry{Stakeholders Management!Type|book{1}}{70}
+\indexentry{Proactive Management|book{1}}{70}
+\indexentry{Stakeholders Management!Importance|book{1}}{72-73}
+\indexentry{Stakeholder|book{1}}{72}
+\indexentry{Stakeholders Management!Components|book{1}}{74-96}
+\indexentry{Stakeholders Management!Phases|book{1}}{74}
+\indexentry{Stakeholders Management!Steps|book{1}}{74}
+\indexentry{Trust {\contextnotesize (Stakeholders)}|book{1}}{73}
+\indexentry{Credibility {\contextnotesize (Stakeholders)}|book{1}}{73}
+\indexentry{Stakeholders Management!Components!Phase 1 {\contextnotesize (Identify)}|book{1}}{75-88}
+\indexentry{Procurement \group|book{1}}{76}
+\indexentry{Finances \group|book{1}}{76}
+\indexentry{Facilities \group|book{1}}{76}
+\indexentry{Compliance \group|book{1}}{76}
+\indexentry{Legal Counsel \group|book{1}}{76}
+\indexentry{Human Resources \group|book{1}}{76}
+\indexentry{Help Desk \group|book{1}}{76}
+\indexentry{Communications \group|book{1}}{76}
+\indexentry{SIPOC|book{1}}{78}
+\indexentry{Stakeholders Management!Identification Tool|book{1}}{78-88}
+\indexentry{SIPOC!Matrix|book{1}}{79-88}
+\indexentry{Processes {\contextnotesize (SIPOC)}|book{1}}{80}
+\indexentry{Outputs {\contextnotesize (SIPOC)}|book{1}}{82}
+\indexentry{Use Case|book{1}}{82}
+\indexentry{Project Plan|book{1}}{82}
+\indexentry{Project Management Institute|book{1}}{82}
+\indexentry{Migration Plan|book{1}}{83}
+\indexentry{Maintenance Plan|book{1}}{83}
+\indexentry{User Acceptance Testing|book{1}}{83}
+\indexentry{Customers {\contextnotesize (SIPOC)}|book{1}}{84}
+\indexentry{Inputs {\contextnotesize (SIPOC)}|book{1}}{86}
+\indexentry{Service Level Agreement|book{1}}{86}
+\indexentry{Suppliers {\contextnotesize (SIPOC)}|book{1}}{87-88}
+\indexentry{Stakeholders Management!Components!Phase 2 {\contextnotesize (Understand)}|book{1}}{89-95}
+\indexentry{Stakeholders Management!Motivations|book{1}}{89}
+\indexentry{Procurement \group}{90}
+\indexentry{Finances \group}{90}
+\indexentry{Stakeholders Management!Power \& Interest|book{1}}{92-95}
+\indexentry{Power|book{1}}{92-95}
+\indexentry{Power!Levels|book{1}}{93}
+\indexentry{Interest|book{1}}{92-95}
+\indexentry{Veto {\contextnotesize (Level of Power)}|book{1}}{92-93}
+\indexentry{Vote {\contextnotesize (Level of Power)}|book{1}}{92-93}
+\indexentry{Voice {\contextnotesize (Level of Power)}|book{1}}{92-93}
+\indexentry{View {\contextnotesize (on Project)}|book{1}}{93}
+\indexentry{Stakeholders Management!Power \& Interest!Example|book{1}}{93}
+\indexentry{Stakeholders Management!Prioritization|book{1}}{94-95}
+\indexentry{Power/Interest Grid|book{1}}{94}
+\indexentry{Stakeholders Management!Prioritization!Example|book{1}}{95}
+\indexentry{Stakeholders Management!Components!Phase 3 {\contextnotesize (Manage)}|book{1}}{96}
+\indexentry{Relationships Plan|book{1}}{96}
+\indexentry{Key Stakeholders}{104}
+\indexentry{Change|book{1}}{104}
+\indexentry{Key Business Assets|book{1}}{106-109}
+\indexentry{Tangible Assets|book{1}}{106}
+\indexentry{Critical Infrastructure|book{1}}{106}
+\indexentry{Industrial Control System|book{1}}{106}
+\indexentry{Stuxnet \malware}{106}
+\indexentry{Intangible Assets|book{1}}{107}
+\indexentry{Intellectual Property|book{1}}{107}
+\indexentry{Top Secret Plan|book{1}}{107}
+\indexentry{Employee Data|book{1}}{107}
+\indexentry{Customer Data|book{1}}{107}
+\indexentry{Business Proprietary Information|book{1}}{107}
+\indexentry{Critical Assets|book{1}}{108-109}
+\indexentry{Crown Jewels}{108-109}
+\indexentry{Crown Jewels!Changing Over Time|book{1}}{108}
+\indexentry{Financial Disclosure|book{1}}{108}
+\indexentry{Merger Announcement|book{1}}{108}
+\indexentry{Regulated Data|book{1}}{109}
+\indexentry{Crown Jewels!Identification Challenges \& Tips|book{1}}{110-113}
+\indexentry{Intellectual Property}{110}
+\indexentry{Baseline Security Controls|book{1}}{110}
+\indexentry{Business Goals}{110}
+\indexentry{Crown Jewels!Identification Challenges \& Tips!Example|book{1}}{113}
+\indexentry{Organized Crime}{113}
+\indexentry{Intellectual Property}{113}
+\indexentry{Sensitive Information|book{1}}{113}
+\indexentry{Business Model|book{1}}{118}
+\indexentry{Distribution Channel|book{1}}{118}
+\indexentry{Franchise|book{1}}{118}
+\indexentry{Freemium|book{1}}{118}
+\indexentry{Subscription|book{1}}{118}
+\indexentry{Bundling|book{1}}{119}
+\indexentry{Unbundling|book{1}}{119}
+\indexentry{Unbundling!Example|book{1}}{121}
+\indexentry{Business Model!Vertical VS Horizontal|book{1}}{122}
+\indexentry{Business Strategy|book{1}}{123-124}
+\indexentry{Business Model}{123}
+\indexentry{Porter's Five Forces}{124-129}
+\indexentry{Power of Customers|book{1}}{124}
+\indexentry{Substitute Products|book{1}}{124}
+\indexentry{Power of Suppliers|book{1}}{125}
+\indexentry{Threat of New Entrants|book{1}}{124}
+\indexentry{Competitive Rivalry|book{1}}{124}
+\indexentry{Power of Customers}{126}
+\indexentry{Substitute Products}{126}
+\indexentry{Power of Suppliers}{127}
+\indexentry{Threat of New Entrants}{127}
+\indexentry{Competitive Rivalry}{127}
+\indexentry{Power of Customers}{128}
+\indexentry{Substitute Products}{128}
+\indexentry{Power of Suppliers}{129}
+\indexentry{Threat of New Entrants}{129}
+\indexentry{Competitive Rivalry}{129}
+\indexentry{Porter's Five Forces!Example|book{1}}{128-129}
+\indexentry{Porter's Five Forces!Response Example|book{1}}{130-131}
+\indexentry{Power of Customers}{130}
+\indexentry{Substitute Products}{130}
+\indexentry{Power of Suppliers}{131}
+\indexentry{Threat of New Entrants}{131}
+\indexentry{Competitive Rivalry}{131}
+\indexentry{Strategic Objectives|book{1}}{132-133}
+\indexentry{Strategy!Map}{133-134}
+\indexentry{Decipher!Threats|book{1}}{142-143}
+\indexentry{Threat Landscape}{142}
+\indexentry{Sun Tzu}{142}
+\indexentry{PEST|book{1}}{143}
+\indexentry{Kill Chain!Analysis|book{1}}{143}
+\indexentry{MITRE ATT\&CK|book{1}}{143}
+\indexentry{Threat Landscape!Understanding|book{1}}{143}
+\indexentry{Threat Actors|book{1}}{144}
+\indexentry{VERIS|book{1}}{145}
+\indexentry{Verizon DBIR|book{1}}{145}
+\indexentry{VCDB|book{1}}{145}
+\indexentry{VERIS!Threat Actors|book{1}}{146}
+\indexentry{Threat Actors}{146-147}
+\indexentry{Nation-State {\contextnotesize (VERIS)}|book{1}}{147}
+\indexentry{Hacktivist {\contextnotesize (VERIS)}|book{1}}{147}
+\indexentry{Organized Crime {\contextnotesize (VERIS)}|book{1}}{147}
+\indexentry{Competitor {\contextnotesize (VERIS)}|book{1}}{147}
+\indexentry{Insider {\contextnotesize (VERIS)}|book{1}}{147}
+\indexentry{Partner {\contextnotesize (VERIS)}|book{1}}{147}
+\indexentry{Organized Crime!Case|book{1}}{149-151}
+\indexentry{MOVEit Breach|book{1}}{149}
+\indexentry{SQL Injection}{149-150}
+\indexentry{LEMURLOOT {\contextnotesize (Web Shell)} \malware|book{1}}{150}
+\indexentry{Nation-State!Case|book{1}}{153-159}
+\indexentry{XZ Utils Backdoor|book{1}}{153}
+\indexentry{Supply Chain Attack|book{1}}{153}
+\indexentry{Backdoor|book{1}}{153}
+\indexentry{Arbitrary Code Execution|book{1}}{153}
+\indexentry{Social Engineering|book{1}}{155}
+\indexentry{VERIS!Attacker Motivations|book{1}}{158}
+\indexentry{Attacker Motivations|book{1}}{158}
+\indexentry{Threat Actors!Motivations|book{1}}{158}
+\indexentry{Threat Landscape}{159}
+\indexentry{PEST!Analysis|book{1}}{161-180}
+\indexentry{PEST!Analysis!1@Political|book{1}}{165-168}
+\indexentry{Tax Guidelines|book{1}}{165}
+\indexentry{Trade Restrictions|book{1}}{165}
+\indexentry{Intellectual Property!Protection|book{1}}{167}
+\indexentry{PEST!Analysis!2@Economic|book{1}}{169-171}
+\indexentry{Consumer Confidence|book{1}}{169}
+\indexentry{Stability {\contextnotesize (Economic)}|book{1}}{169}
+\indexentry{PEST!Analysis!3@Social|book{1}}{172-173}
+\indexentry{Demographics|book{1}}{172}
+\indexentry{Education|book{1}}{172}
+\indexentry{Lifestyle|book{1}}{172}
+\indexentry{Cultural Limitations|book{1}}{172}
+\indexentry{COVID|book{1}}{173}
+\indexentry{Pandemic|book{1}}{173}
+\indexentry{PEST!Analysis!4@Technological|book{1}}{174-176}
+\indexentry{ACIS|book{1}}{178}
+\indexentry{Equifax Case|book{1}}{177-180}
+\indexentry{PEST!Example|book{1}}{179-180}
+\indexentry{GDPR {\contextnotesize (EU)}|book{1}}{179}
+\indexentry{CCPA|book{1}}{179}
+\indexentry{FCRA|book{1}}{179}
+\indexentry{GLBA|book{1}}{179}
+\indexentry{CFPB|book{1}}{179}
+\indexentry{FTC|book{1}}{179}
+\indexentry{SEC|book{1}}{179}
+\indexentry{FS-ISAC|book{1}}{179}
+\indexentry{ICO|book{1}}{180}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Analysis|book{1}}{184}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}|book{1}}{184}
+\indexentry{Impact {\contextnotesize (Risk)}|book{1}}{184}
+\indexentry{Likelihood {\contextnotesize (= Vulnerability x Threat)}|book{1}}{184}
+\indexentry{Vulnerability|book{1}}{184}
+\indexentry{Threat|book{1}}{184}
+\indexentry{Threat!Analysis|book{1}}{185}
+\indexentry{TTP|book{1}}{185}
+\indexentry{IOC|book{1}}{185}
+\indexentry{Assume Breach/Intrusion|book{1}}{185}
+\indexentry{Kill Chain|book{1}}{185-191}
+\indexentry{Kill Chain!Purpose|book{1}}{186}
+\indexentry{Reconnaissance {\contextnotesize (Kill Chain)}|book{1}}{187}
+\indexentry{Weaponization {\contextnotesize (Kill Chain)}|book{1}}{187}
+\indexentry{Delivery {\contextnotesize (Kill Chain)}|book{1}}{187}
+\indexentry{Exploitation {\contextnotesize (Kill Chain)}|book{1}}{187}
+\indexentry{Installation {\contextnotesize (Kill Chain)}|book{1}}{187}
+\indexentry{Command \& Control {\contextnotesize (Kill Chain)}|book{1}}{187}
+\indexentry{Actions on Objectives {\contextnotesize (Kill Chain)}|book{1}}{187}
+\indexentry{Lockheed Martin Case|book{1}}{188}
+\indexentry{Lockheed Martin Case!IOC|book{1}}{189-190}
+\indexentry{IOC}{189-190}
+\indexentry{Threat!Analysis!Based on Kill Chain|book{1}}{191}
+\indexentry{Intelligence Feedback Loop|book{1}}{191}
+\indexentry{State of Information Superiority|book{1}}{191}
+\indexentry{Information Superiority|book{1}}{191}
+\indexentry{Pyramid of Pain|book{1}}{192}
+\indexentry{TTP}{192}
+\indexentry{Domain Name|book{1}}{192}
+\indexentry{IP Address|book{1}}{192}
+\indexentry{Hash|book{1}}{192}
+\indexentry{Host Artifact|book{1}}{192}
+\indexentry{Network Artifact|book{1}}{192}
+\indexentry{Tool|book{1}}{192}
+\indexentry{Verizon DBIR}{192}
+\indexentry{MITRE ATT\&CK}{193}
+\indexentry{MITRE ATT\&CK!Purpose|book{1}}{193}
+\indexentry{Attack Lifecycle|book{1}}{193}
+\indexentry{MITRE ATT\&CK!Matrix for Enterprise|book{1}}{194}
+\indexentry{MITRE ATT\&CK!Technique Example|book{1}}{195}
+\indexentry{MITRE ATT\&CK!Navigator|book{1}}{196}
+\indexentry{Defense Prioritization|book{1}}{197}
+\indexentry{Adversary Emulation|book{1}}{197}
+\indexentry{Detection Improvement|book{1}}{197}
+\indexentry{Threat Intelligence Leverage|book{1}}{197}
+\indexentry{MITRE ATT\&CK!Use Cases|book{1}}{197-198}
+\indexentry{MITRE ATT\&CK!Data Sources|book{1}}{199-200}
+\indexentry{MITRE DeTT\&CT|book{1}}{201}
+\indexentry{Data Source!Quality|book{1}}{201-202}
+\indexentry{Visibility Coverage|book{1}}{201-202}
+\indexentry{Detection Coverage|book{1}}{201-202}
+\indexentry{MITRE DeTT\&CT!Analysis Flow|book{1}}{202}
+\indexentry{Threat Actors!Heat Map|book{1}}{202}
+\indexentry{MITRE ATT\&CK!Matrix for Enterprise!Mitigations|book{1}}{203-205}
+\indexentry{WAF|book{1}}{203}
+\indexentry{EMET|book{1}}{203}
+\indexentry{ASR|book{1}}{203}
+\indexentry{Defense Identification|book{1}}{204-205}
+\indexentry{Mitigations|book{1}}{203-205}
+\indexentry{Cyber Threat Intelligence|book{1}}{206-207}
+\indexentry{STIX|book{1}}{206}
+\indexentry{TAXII|book{1}}{206}
+\indexentry{Levels of Threat Intelligence|book{1}}{206}
+\indexentry{Strategic {\contextnotesize (CTI)}|book{1}}{206}
+\indexentry{Operational {\contextnotesize (CTI)}|book{1}}{206}
+\indexentry{Tactical {\contextnotesize (CTI)}|book{1}}{206}
+\indexentry{Courses of Action Matrix|book{1}}{208-209}
+\indexentry{Detect|book{1}}{208}
+\indexentry{Deny|book{1}}{208}
+\indexentry{Disrupt|book{1}}{208}
+\indexentry{Degrade|book{1}}{208}
+\indexentry{Deceive|book{1}}{208}
+\indexentry{Destroy|book{1}}{208}
+\indexentry{NIPS|book{1}}{208}
+\indexentry{DEP|book{1}}{208}
+\indexentry{HIPS|book{1}}{208}
+\indexentry{ACL|book{1}}{208}
+\indexentry{Tarpit|book{1}}{208}
+\indexentry{Strategic Planning!Threat Analysis|book{1}}{210}
+\indexentry{Strategic Planning!Tools|book{1}}{212}
+
+
+\comment{********************************************************************************************
+                                      SECOND BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Vision! |book{2}}{7-13}
+\indexentry{Vision!Difference with Mission|book{2}}{7}
+\indexentry{Mission!Difference with Vision|book{2}}{7}
+\indexentry{Vision!Purpose|book{2}}{8}
+\indexentry{Stretch Goals|book{2}}{8}
+\indexentry{DRIVE {\contextnotesize (Vision)}|book{2}}{10}
+\indexentry{Directional {\contextnotesize (DRIVE)}|book{2}}{10}
+\indexentry{Relevant {\contextnotesize (DRIVE)}|book{2}}{10}
+\indexentry{Inspirational {\contextnotesize (DRIVE)}|book{2}}{10}
+\indexentry{Vivid {\contextnotesize (DRIVE)}|book{2}}{10}
+\indexentry{Extremely Bold {\contextnotesize (DRIVE)}|book{2}}{10}
+\indexentry{Vision!Keywords|book{2}}{13}
+\indexentry{Mission! |book{2}}{14-36}
+\indexentry{Mission!Purpose|book{2}}{14}
+\indexentry{Mission!Keywords|book{2}}{19}
+\indexentry{Mission!Department|book{2}}{20-21}
+\indexentry{Mission!Creation Process|book{2}}{21}
+\indexentry{Mission!Decision Guidance|book{2}}{21}
+\indexentry{NonProfit Hub|book{2}}{21}
+\indexentry{Step-By-Step [...] Mission Statement|book{2}}{21}
+\indexentry{Security Team!Decision Guidance {\contextnotesize (Mission)}|book{2}}{21}
+\indexentry{Mission!Creation Process!Example|book{2}}{23-26}
+\indexentry{Cause {\contextnotesize (Mission)}|book{2}}{25}
+\indexentry{Actions {\contextnotesize (Mission)}|book{2}}{25}
+\indexentry{Impact {\contextnotesize (Mission)}|book{2}}{25}
+\indexentry{Cause {\contextnotesize (Mission)}!Example|book{2}}{35}
+\indexentry{Actions {\contextnotesize (Mission)}!Example|book{2}}{35}
+\indexentry{Impact {\contextnotesize (Mission)}!Example|book{2}}{35}
+\indexentry{SWOT|book{2}}{38-39}
+\indexentry{SWOT!Variants|book{2}}{39}
+\indexentry{Comparative SWOT|book{2}}{39}
+\indexentry{TOWS Matrix|book{2}}{39}
+\indexentry{PEST! |book{2}}{39}
+\indexentry{Porter's Five Forces! |book{2}}{39}
+\indexentry{SWOT!Purpose|book{2}}{40}
+\indexentry{SWOT!Analysis|book{2}}{41}
+\indexentry{IE Analysis/Matrix|book{2}}{41}
+\indexentry{Strengths {\contextnotesize (SWOT)}|book{2}}{41}
+\indexentry{Weaknesses {\contextnotesize (SWOT)}|book{2}}{41}
+\indexentry{Opportunities {\contextnotesize (SWOT)}|book{2}}{41}
+\indexentry{Threats {\contextnotesize (SWOT)}|book{2}}{42}
+\indexentry{Contingency Planning|book{2}}{42}
+\indexentry{Strengths {\contextnotesize (SWOT)}}{43}
+\indexentry{Value!Proposition!Unique|book{2}}{43}
+\indexentry{Weaknesses {\contextnotesize (SWOT)}}{45}
+\indexentry{Opportunities {\contextnotesize (SWOT)}}{47}
+\indexentry{Threats {\contextnotesize (SWOT)}}{49-51}
+\indexentry{PEST! }{47}
+\indexentry{PEST! }{49}
+\indexentry{Business Concerns|book{2}}{50-51}
+\indexentry{Technology Concerns|book{2}}{50-51}
+\indexentry{Security Concerns|book{2}}{50-51}
+\indexentry{SWOT!Analysis!Summary|book{2}}{51}
+\indexentry{Develop!Plan|book{2}}{55}
+\indexentry{Roadmap!Starting Point|book{2}}{55}
+\indexentry{Security Program!Starting Point|book{2}}{55}
+\indexentry{Visioning|book{2}}{57-58}
+\indexentry{Tactical Plan|book{2}}{57}
+\indexentry{Vision!VS Visioning|book{2}}{57}
+\indexentry{Visioning!Sessions|book{2}}{58}
+\indexentry{Criticism Ratio|book{2}}{58}
+\indexentry{Plausibility|book{2}}{59-61}
+\indexentry{Vision!VS Plausibility|book{2}}{59}
+\indexentry{Prediction|book{2}}{62}
+\indexentry{Innovation|book{2}}{64-71}
+\indexentry{Innovation!Types|book{2}}{65}
+\indexentry{Revenue|book{2}}{65}
+\indexentry{Innovation!Indicators|book{2}}{65}
+\indexentry{Patents|book{2}}{65}
+\indexentry{Invention|book{2}}{65}
+\indexentry{Innovation!Disruptive|book{2}}{66-67}
+\indexentry{Innovation!Sustaining|book{2}}{66}
+\indexentry{Mobile Devices|book{2}}{66}
+\indexentry{Jobs To Be Done Theory|book{2}}{66}
+\indexentry{Innovation!Key Questions|book{2}}{69}
+\indexentry{Strategic Planning!Essence|book{2}}{69}
+\indexentry{Security Team!Tips for Innovation|book{2}}{70}
+\indexentry{Simon Sinek|book{2}}{70}
+\indexentry{Golden Circle|book{2}}{70}
+\indexentry{Stakeholders Management!Commitment|book{2}}{70}
+\indexentry{Funding|book{2}}{70}
+\indexentry{Security Frameworks! |book{2}}{75-98}
+\indexentry{Security Frameworks!Need|book{2}}{75-76}
+\indexentry{ISO 27000 Series|book{2}}{75}
+\indexentry{COBIT|book{2}}{75}
+\indexentry{ENISA Evaluation Framework|book{2}}{75}
+\indexentry{Cloud Security Provider|book{2}}{75}
+\indexentry{Enterprise IT|book{2}}{75}
+\indexentry{SOX {\contextnotesize (US)}!Compliance|book{2}}{75}
+\indexentry{Security Program|book{2}}{75}
+\indexentry{KPI|book{2}}{75}
+\indexentry{Information Security Forum|book{2}}{76}
+\indexentry{Cyber Security Framework {\contextnotesize (NIST)}|book{2}}{76-83}
+\indexentry{Standard of Good Practice {\contextnotesize (InfoSec)}|book{2}}{76}
+\indexentry{Cybersecurity Posture|book{2}}{77}
+\indexentry{Cyber Security Framework {\contextnotesize (NIST)}!Functions {\contextnotesize (Core)}|book{2}}{77-79}
+\indexentry{Cyber Security Framework {\contextnotesize (NIST)}!Categories|book{2}}{79}
+\indexentry{Cyber Security Framework {\contextnotesize (NIST)}!Functions {\contextnotesize (Core)}!Govern Example|book{2}}{79-81}
+\indexentry{Cyber Security Framework {\contextnotesize (NIST)}!Usage Tips|book{2}}{82}
+\indexentry{Security Program}{82}
+\indexentry{Cyber Security Framework {\contextnotesize (NIST)}!Maturity Measurement|book{2}}{83}
+\indexentry{Maturity Measurement|book{2}}{83}
+\indexentry{Implementation Tiers {\contextnotesize (CSF)}|book{2}}{83}
+\indexentry{Maturity Models|book{2}}{84-85}
+\indexentry{CMMI|book{2}}{84}
+\indexentry{Software Development|book{2}}{84}
+\indexentry{ESG Security Maturity Model|book{2}}{84}
+\indexentry{Gartner ITScore|book{2}}{84}
+\indexentry{C2M2|book{2}}{84}
+\indexentry{BSIMM|book{2}}{84}
+\indexentry{OpenSAMM|book{2}}{85}
+\indexentry{CIMM|book{2}}{85}
+\indexentry{ESG Security Maturity Model}{86}
+\indexentry{CMMI}{87-88}
+\indexentry{Maturity Levels|book{2}}{88-89}
+\indexentry{Self-Evaluation {\contextnotesize (Maturity)}|book{2}}{84}
+\indexentry{Immaturity Model|book{2}}{85}
+\indexentry{Negative Scale {\contextnotesize (Maturity)}|book{2}}{85}
+\indexentry{Security Program}{88}
+\indexentry{Maturity {\contextnotesize (Security Program)}|book{2}}{89}
+\indexentry{Security Controls|book{2}}{90}
+\indexentry{NIST SP 800-53|book{2}}{90-91}
+\indexentry{CIS Controls|book{2}}{90}
+\indexentry{ASD Strategies to Mitigate CS Incidents|book{2}}{90}
+\indexentry{CIS Controls}{92-93}
+\indexentry{Cyber Hygiene|book{2}}{92-93}
+\indexentry{Safeguards {\contextnotesize (CIS Controls)}|book{2}}{93}
+\indexentry{Implementation Groups {\contextnotesize (CIS Controls)}|book{2}}{93}
+\indexentry{Security Controls!Mappings to Frameworks|book{2}}{94-95}
+\indexentry{CIS Mapping|book{2}}{94}
+\indexentry{NIST Informative References Program|book{2}}{94}
+\indexentry{Secure Controls Framework|book{2}}{94}
+\indexentry{Obligations {\contextnotesize (SCF)}|book{2}}{94}
+\indexentry{SP-CMM|book{2}}{94}
+\indexentry{Third-Party Certifications|book{2}}{96-97}
+\indexentry{SOC 2 Type II|book{2}}{96}
+\indexentry{ISO 27001|book{2}}{96-97}
+\indexentry{FedRAMP|book{2}}{96-97}
+\indexentry{AICPA|book{2}}{96}
+\indexentry{Trust Services Principles|book{2}}{96}
+\indexentry{Privacy|book{2}}{96}
+\indexentry{Availability|book{2}}{96}
+\indexentry{Integrity|book{2}}{96}
+\indexentry{Confidentiality|book{2}}{96}
+\indexentry{ISMS|book{2}}{96}
+\indexentry{Operational Effectiveness {\contextnotesize (SOC)}|book{2}}{96}
+\indexentry{Security Frameworks!Leveraging|book{2}}{98}
+\indexentry{Gap Analysis|book{2}}{100-104}
+\indexentry{Current State|book{2}}{101-102}
+\indexentry{Future State|book{2}}{101-102}
+\indexentry{Gap Analysis!Inputs|book{2}}{102}
+\indexentry{Business Goals! |book{2}}{102}
+\indexentry{Security Goals|book{2}}{102}
+\indexentry{Strategic Objectives! |book{2}}{102}
+\indexentry{Technical Objectives|book{2}}{102}
+\indexentry{Operational Objectives|book{2}}{102}
+\indexentry{Visioning}{102}
+\indexentry{Innovation}{102}
+\indexentry{Understanding of Organization|book{2}}{102}
+\indexentry{SWOT}{102}
+\indexentry{PEST! }{102}
+\indexentry{Asset Analysis|book{2}}{102}
+\indexentry{Historical Analysis! |book{2}}{102}
+\indexentry{Threat!Analysis! |book{2}}{102}
+\indexentry{Stakeholders Management! |book{2}}{102}
+\indexentry{Vision! }{102}
+\indexentry{Mission! }{102}
+\indexentry{Current Profile|book{2}}{103}
+\indexentry{Target Profile|book{2}}{103}
+\indexentry{DLP|book{2}}{104}
+\indexentry{Roadmap!Development Process|book{2}}{106-109}
+\indexentry{Implementation Levels|book{2}}{108}
+\indexentry{Initiatives Prioritization|book{2}}{109}
+\indexentry{Cost|book{2}}{109-111}
+\indexentry{Business Value|book{2}}{109}
+\indexentry{Threat Defense|book{2}}{109-111}
+\indexentry{Organizational Support|book{2}}{109}
+\indexentry{Ability to Execute|book{2}}{109-111}
+\indexentry{Decision Matrix Analysis|book{2}}{110}
+\indexentry{Stakeholder!Support|book{2}}{110-111}
+\indexentry{Decision Matrix Analysis!Example|book{2}}{111}
+\indexentry{Implementation Levels}{112}
+\indexentry{Roadmap!Multi-Year|book{2}}{113}
+\indexentry{Cloud Adoption Model|book{2}}{116}
+\indexentry{Cloud Security Roadmap|book{2}}{118}
+\indexentry{Tiered Approach|book{2}}{118}
+\indexentry{Strategic Planning!Scaling|book{2}}{119}
+\indexentry{Crown Jewels! |book{2}}{119}
+\indexentry{Understanding of Organization}{120}
+\indexentry{Strategic Planning!End Product|book{2}}{120}
+\indexentry{SWOT}{120}
+\indexentry{PEST! }{120}
+\indexentry{Asset Analysis}{120}
+\indexentry{Historical Analysis! }{120}
+\indexentry{Threat!Analysis! }{120}
+\indexentry{Stakeholders Management! }{120}
+\indexentry{Vision! }{120}
+\indexentry{Mission! }{120}
+\indexentry{Strategy!Map! |book{2}}{120}
+\indexentry{Business Case!Why|book{2}}{122}
+\indexentry{Business Case!What|book{2}}{123}
+\indexentry{Business Case!Traps|book{2}}{124}
+\indexentry{Business Case!Approaches|book{2}}{125}
+\indexentry{Cost!Approach|book{2}}{125-127}
+\indexentry{Cost-per-Record Lost|book{2}}{126-127}
+\indexentry{Monte Carlo Simulation|book{2}}{127}
+\indexentry{Ranges of Expected Loss|book{2}}{127}
+\indexentry{Industry Comparison Approach|book{2}}{128-134}
+\indexentry{Spending Comparison|book{2}}{130}
+\indexentry{Maturity Comparison|book{2}}{131}
+\indexentry{ISAC|book{2}}{131}
+\indexentry{Maturity Assessment|book{2}}{131}
+\indexentry{Benchmarking|book{2}}{131}
+\indexentry{Gartner|book{2}}{131}
+\indexentry{Big Four|book{2}}{131}
+\indexentry{Credibility|book{2}}{132}
+\indexentry{Maturity Comparison!Example|book{2}}{133-134}
+\indexentry{Radar Chart|book{2}}{134}
+\indexentry{Spider Chart|book{2}}{134}
+\indexentry{Star Chart|book{2}}{134}
+\indexentry{Business Innovation Approach|book{2}}{135-137}
+\indexentry{Annual Loss Expectancy|book{2}}{136}
+\indexentry{Annual Rate of Occurrence|book{2}}{136-137}
+\indexentry{Single Loss Expectancy|book{2}}{136-137}
+\indexentry{Exposure Factor|book{2}}{137}
+\indexentry{Business Case!Structure|book{2}}{138-139}
+\indexentry{Business Case!Tips for Creation|book{2}}{140-141}
+\indexentry{Deliver!Program|book{2}}{145}
+\indexentry{Security Metrics|book{2}}{147}
+\indexentry{Security Metrics!Concern|book{2}}{148}
+\indexentry{Business Consumable Language|book{2}}{148}
+\indexentry{Security Metrics!Why|book{2}}{149}
+\indexentry{Security Controls!Effectiveness!Why|book{2}}{149}
+\indexentry{Technical Measures|book{2}}{150-152}
+\indexentry{So What {\contextnotesize (Metrics)}|book{2}}{151}
+\indexentry{Security Metrics!Effective|book{2}}{152}
+\indexentry{Effective Metrics|book{2}}{152}
+\indexentry{KPI}{153-154}
+\indexentry{Measures|book{2}}{153}
+\indexentry{Measures!VS Metrics|book{2}}{153}
+\indexentry{Metrics|book{2}}{153}
+\indexentry{Baseline {\contextnotesize (Metrics)}|book{2}}{153}
+\indexentry{KRI|book{2}}{155}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Indicator Examples|book{2}}{155}
+\indexentry{Benjamin Franklin|book{2}}{155}
+\indexentry{Planning|book{2}}{155-157}
+\indexentry{Metrics!Program!Goal|book{2}}{157}
+\indexentry{So What {\contextnotesize (Metrics)}}{157}
+\indexentry{Metrics!Program!Components|book{2}}{158}
+\indexentry{Measurement Plan|book{2}}{158}
+\indexentry{Metrics!Program!Selection|book{2}}{159-161}
+\indexentry{So What {\contextnotesize (Metrics)}}{159}
+\indexentry{Security Metrics}{159}
+\indexentry{Financial Metrics|book{2}}{159-160}
+\indexentry{Customer Satisfaction|book{2}}{159-161}
+\indexentry{Stakeholder!Satisfaction|book{2}}{159-161}
+\indexentry{Business Processes|book{2}}{159-161}
+\indexentry{Value|book{2}}{159}
+\indexentry{Invisible Value|book{2}}{159}
+\indexentry{Data Source|book{2}}{159}
+\indexentry{OPEX|book{2}}{160}
+\indexentry{CAPEX|book{2}}{160}
+\indexentry{Cost!Incidents|book{2}}{160}
+\indexentry{Direct Loss|book{2}}{160}
+\indexentry{Penalties|book{2}}{160}
+\indexentry{Invisible Value}{161}
+\indexentry{Value}{161}
+\indexentry{Endpoint Protection|book{2}}{161}
+\indexentry{Security Assessment|book{2}}{161}
+\indexentry{Metrics!Program!Prioritization|book{2}}{162-163}
+\indexentry{Appealing Interface {\contextnotesize (Metrics)}|book{2}}{162}
+\indexentry{Visual Appeal {\contextnotesize (Metrics)}|book{2}}{162}
+\indexentry{Metrics!Hierarchy|book{2}}{164-166}
+\indexentry{Pyramid of Metrics|book{2}}{164-165}
+\indexentry{KPI}{164}
+\indexentry{Metrics}{164}
+\indexentry{Measures}{164}
+\indexentry{Balanced Scorecard|book{2}}{164}
+\indexentry{Security Dashboard|book{2}}{164}
+\indexentry{Trends|book{2}}{164}
+\indexentry{Executive {\contextnotesize (Metrics Layer)}|book{2}}{164-166}
+\indexentry{Operational {\contextnotesize (Metrics Layer)}|book{2}}{164-166}
+\indexentry{Technical {\contextnotesize (Metrics Layer)}|book{2}}{164-166}
+\indexentry{Charts|book{2}}{164}
+\indexentry{Strategic Objectives! }{164-165}
+\indexentry{Metrics!Hierarchy!Usage|book{2}}{166}
+\indexentry{Security Metrics!Usage|book{2}}{166}
+\indexentry{So What {\contextnotesize (Metrics)}}{166}
+\indexentry{Security Dashboard}{167-170}
+\indexentry{Financial Metrics}{167}
+\indexentry{Customer Satisfaction}{167}
+\indexentry{Stakeholder!Satisfaction}{167}
+\indexentry{OPEX}{167}
+\indexentry{CAPEX}{167}
+\indexentry{Security Metrics}{168}
+\indexentry{Business Processes}{168}
+\indexentry{Security Dashboard!Example|book{2}}{169}
+\indexentry{Trends}{169}
+\indexentry{Operational {\contextnotesize (Metrics Layer)}!Example|book{2}}{169}
+\indexentry{Business Intelligence|book{2}}{169-170}
+\indexentry{SSRS|book{2}}{169}
+\indexentry{Pentaho \app|book{2}}{169}
+\indexentry{Tableau \app|book{2}}{170}
+\indexentry{Domo \app|book{2}}{170}
+\indexentry{Qlik View \app|book{2}}{170}
+\indexentry{Birst \app|book{2}}{170}
+\indexentry{Board \app|book{2}}{170}
+\indexentry{Gemba Board|book{2}}{171-172}
+\indexentry{Gemba Walk|book{2}}{171}
+\indexentry{Lean Manufacturing|book{2}}{171}
+\indexentry{Security Team!Metrics Areas|book{2}}{171}
+\indexentry{Waste Reduction {\contextnotesize (Gemba)}|book{2}}{172}
+\indexentry{Improvement|book{2}}{173}
+\indexentry{COPQ {\contextnotesize (Concept)}|book{2}}{173}
+\indexentry{Balanced Scorecard}{174-177}
+\indexentry{Strategy|book{2}}{174}
+\indexentry{Vision! }{174}
+\indexentry{Financial Performance|book{2}}{174}
+\indexentry{Financial Stewardship|book{2}}{174}
+\indexentry{Satisfaction|book{2}}{174-177}
+\indexentry{Knowledge|book{2}}{174-175}
+\indexentry{Innovation}{174-175}
+\indexentry{Efficiency|book{2}}{174-175}
+\indexentry{Strategic Objectives! }{174}
+\indexentry{Security Capability|book{2}}{175-177}
+\indexentry{Strategic Objectives!Mapping from Balanced Scorecard|book{2}}{176}
+\indexentry{Balanced Scorecard!Mapping to Strategic Objectives|book{2}}{176}
+\indexentry{Internal Business Process|book{2}}{176}
+\indexentry{Learn \& Growth|book{2}}{176}
+\indexentry{Vision! }{176-177}
+\indexentry{Mission! }{176}
+\indexentry{Strategy!Map! }{176}
+\indexentry{Business Processes}{177}
+\indexentry{Financial Stewardship}{177}
+\indexentry{Balanced Scorecard!Example|book{2}}{178-181}
+\indexentry{Trends}{178}
+\indexentry{KPI}{178}
+\indexentry{Security Capability!Dashboard Example|book{2}}{180}
+\indexentry{Cyber Security Framework {\contextnotesize (NIST)}}{180}
+\indexentry{So What {\contextnotesize (Metrics)}}{180}
+\indexentry{Stakeholder!Objectives|book{2}}{181}
+\indexentry{Financial Objectives|book{2}}{181}
+\indexentry{Business Processes!Objectives|book{2}}{181}
+\indexentry{Security Capability!Objectives|book{2}}{181}
+\indexentry{Metrics!Visualization|book{2}}{182}
+\indexentry{Metrics!Communication|book{2}}{183}
+\indexentry{Charts}{183}
+\indexentry{Security Dashboard!Communication|book{2}}{183}
+\indexentry{Balanced Scorecard!Communication|book{2}}{183}
+\indexentry{Executive {\contextnotesize (Metrics Layer)}}{183}
+\indexentry{Operational {\contextnotesize (Metrics Layer)}}{183}
+\indexentry{Technical {\contextnotesize (Metrics Layer)}}{183}
+\indexentry{Metrics!Pitfalls|book{2}}{184}
+\indexentry{Security Metrics!Pitfalls|book{2}}{184}
+\indexentry{Metrics!Planning Worksheet|book{2}}{185}
+\indexentry{Security Metrics!Example|book{2}}{186}
+\indexentry{MDM|book{2}}{186}
+\indexentry{Stolen IP|book{2}}{186}
+\indexentry{Security Metrics!Tips|book{2}}{187}
+\indexentry{Marketing!Why|book{2}}{192-193}
+\indexentry{Marketing|book{2}}{194-195}
+\indexentry{Application Security Team|book{2}}{195}
+\indexentry{Incident Response Team|book{2}}{195}
+\indexentry{Business Enabler {\contextnotesize (Security as ...)}|book{2}}{195-196}
+\indexentry{SNAP|book{2}}{197}
+\indexentry{Specify|book{2}}{197}
+\indexentry{Niche|book{2}}{197}
+\indexentry{Audience|book{2}}{197}
+\indexentry{Promote|book{2}}{197}
+\indexentry{Marketing!Objectives|book{2}}{197-200}
+\indexentry{Value!Proposition|book{2}}{197}
+\indexentry{Target Market|book{2}}{197}
+\indexentry{Distribution Strategy|book{2}}{197}
+\indexentry{Specify}{199-200}
+\indexentry{Niche}{201}
+\indexentry{Value!Proposition}{201}
+\indexentry{USP|book{2}}{201}
+\indexentry{Audience}{202-203}
+\indexentry{Promote}{204-208}
+\indexentry{Distribution Strategy}{204-208}
+\indexentry{Inbound Marketing|book{2}}{204}
+\indexentry{Outbound Marketing|book{2}}{204}
+\indexentry{Retention {\contextnotesize (Employees)}|book{2}}{205}
+\indexentry{Lunch \& Learn|book{2}}{205}
+\indexentry{Brown Bag Session|book{2}}{205}
+\indexentry{Challenge Coin|book{2}}{205}
+\indexentry{Newsletters|book{2}}{205}
+\indexentry{Security Training|book{2}}{205}
+\indexentry{Conferences|book{2}}{205-207}
+\indexentry{Awareness|book{2}}{207}
+\indexentry{Infographic|book{2}}{208}
+\indexentry{SNAP!Planning Tools|book{2}}{209}
+\indexentry{Strategic Planning!Tools! |book{2}}{209}
+\indexentry{Executives|book{2}}{211}
+\indexentry{Business Consumable Language}{211}
+\indexentry{Board of Directors {\contextnotesize (BoD)}|book{2}}{212-214}
+\indexentry{Executive Committee|book{2}}{212}
+\indexentry{Compensation Committee|book{2}}{212}
+\indexentry{Nominating \& Governance Committee|book{2}}{212}
+\indexentry{Audit Committee|book{2}}{212}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Committee|book{2}}{212}
+\indexentry{Succession Planning|book{2}}{212}
+\indexentry{Crown Jewels! }{214}
+\indexentry{Board Presentation! |book{2}}{215-218}
+\indexentry{Pre-Read Material|book{2}}{215}
+\indexentry{CISO {\contextnotesize (Updates for the Board)}|book{2}}{217}
+\indexentry{ESAF|book{2}}{217}
+\indexentry{Engagement {\contextnotesize (BoD)}|book{2}}{219}
+\indexentry{MAYA Principle|book{2}}{219}
+\indexentry{Effective Communication|book{2}}{220}
+\indexentry{SUCCES|book{2}}{221}
+\indexentry{Idea {\contextnotesize (Making It Stick)}|book{2}}{221}
+\indexentry{Albert Einstein|book{2}}{222}
+\indexentry{Simplicity|book{2}}{222}
+\indexentry{Business Consumable Language}{223}
+\indexentry{Log4Shell \malware|book{2}}{223-225}
+\indexentry{Effective Communication!Bad Example|book{2}}{223}
+\indexentry{Effective Communication!Good Example|book{2}}{225}
+\indexentry{Email Spoofing|book{2}}{226}
+\indexentry{DMARC|book{2}}{226-227}
+\indexentry{DKIM|book{2}}{226}
+\indexentry{SPF|book{2}}{226}
+\indexentry{Effective Communication!Bad Example}{226}
+\indexentry{Effective Communication!Good Example}{227}
+\indexentry{DDoS|book{2}}{228-229}
+\indexentry{Trojan|book{2}}{228}
+\indexentry{Botnet|book{2}}{228}
+\indexentry{Effective Communication!Bad Example}{228}
+\indexentry{Effective Communication!Good Example}{229}
+\indexentry{Leonardo Da Vinci|book{2}}{230}
+\indexentry{Simplicity}{230}
+\indexentry{Strategic Planning!Tools! }{232}
+
+
+\comment{********************************************************************************************
+                                     THIRD BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Security Policy|book{3}}{5-6}
+\indexentry{Policy|book{3}}{5}
+\indexentry{Policy!Set|book{3}}{5}
+\indexentry{Policy!Purpose|book{3}}{6-7}
+\indexentry{Security Policy!Why|book{3}}{6}
+\indexentry{Policy!Well-Written|book{3}}{6}
+\indexentry{Security Policy!Effective|book{3}}{6}
+\indexentry{Acceptable Behavior|book{3}}{6}
+\indexentry{Personal Liability|book{3}}{6}
+\indexentry{Compliance {\contextnotesize (Policy)}|book{3}}{6}
+\indexentry{Reasonable Person|book{3}}{8-9}
+\indexentry{Foreseeable Risk|book{3}}{8}
+\indexentry{Law Dictionary|book{3}}{8}
+\indexentry{Acceptable Behavior}{10}
+\indexentry{Disciplinary Action|book{3}}{10}
+\indexentry{Disclosure Policy|book{3}}{11}
+\indexentry{Bug Bounty|book{3}}{11}
+\indexentry{PII!Protection|book{3}}{12}
+\indexentry{CCPA! |book{3}}{14}
+\indexentry{GDPR {\contextnotesize (EU)}! |book{3}}{14}
+\indexentry{Laws|book{3}}{15-40}
+\indexentry{Regulations|book{3}}{15-40}
+\indexentry{SEC! |book{3}}{15}
+\indexentry{PCI DSS {\contextnotesize (International)}|book{3}}{16}
+\indexentry{Regulatory Agnostic Policies|book{3}}{16}
+\indexentry{DSS Requirements|book{3}}{16}
+\indexentry{Cardholder Data|book{3}}{16}
+\indexentry{Fraud Prevention|book{3}}{16}
+\indexentry{HIPAA {\contextnotesize (US)}|book{3}}{17-18}
+\indexentry{PHI|book{3}}{17}
+\indexentry{HIPAA {\contextnotesize (US)}!Risk Assessment Tool|book{3}}{17}
+\indexentry{SRA Tool|book{3}}{18}
+\indexentry{SOX {\contextnotesize (US)}|book{3}}{19-21}
+\indexentry{Accounting Practices|book{3}}{19}
+\indexentry{PCAOB|book{3}}{19}
+\indexentry{Whistleblower|book{3}}{19}
+\indexentry{Auditor!Independence|book{3}}{19}
+\indexentry{Duty to Monitor|book{3}}{19}
+\indexentry{Individual Responsibility|book{3}}{20}
+\indexentry{Financial Disclosure|book{3}}{20}
+\indexentry{Conflicts of Interest|book{3}}{20}
+\indexentry{Fraud Accountability|book{3}}{20}
+\indexentry{White Collar Crime|book{3}}{20}
+\indexentry{SEC!Disclosure Requirements|book{3}}{22-23}
+\indexentry{Incident Disclosure|book{3}}{22}
+\indexentry{Governance Disclosure|book{3}}{22}
+\indexentry{Material Cybersecurity Incident|book{3}}{22}
+\indexentry{Unreasonable Delay|book{3}}{22}
+\indexentry{FPI|book{3}}{22-23}
+\indexentry{Materiality|book{3}}{24}
+\indexentry{SolarWinds|book{3}}{25-29}
+\indexentry{Securities Fraud|book{3}}{26}
+\indexentry{Security Statement|book{3}}{26-28}
+\indexentry{Duty to Monitor}{26}
+\indexentry{Password Policy|book{3}}{28}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Disclosure|book{3}}{29}
+\indexentry{CPRA {\contextnotesize (California)}|book{3}}{30-31}
+\indexentry{California|book{3}}{30}
+\indexentry{Personal Information|book{3}}{30}
+\indexentry{SPI|book{3}}{31}
+\indexentry{CPPA|book{3}}{31}
+\indexentry{CCPA!Enforcement|book{3}}{31}
+\indexentry{CPRA {\contextnotesize (California)}!Enforcement|book{3}}{31}
+\indexentry{Privacy Protection|book{3}}{31}
+\indexentry{GDPR {\contextnotesize (EU)}! }{32-33}
+\indexentry{GDPR {\contextnotesize (EU)}!Requirements|book{3}}{33}
+\indexentry{Breach Disclosure|book{3}}{33}
+\indexentry{Personal Data Requirements|book{3}}{33}
+\indexentry{DPO|book{3}}{33}
+\indexentry{DPIA|book{3}}{33}
+\indexentry{Security Program!Requirements {\contextnotesize (GDPR)}|book{3}}{33}
+\indexentry{DPF {\contextnotesize (EU-US)}|book{3}}{34-35}
+\indexentry{Data Privacy|book{3}}{34}
+\indexentry{Safe Harbor|book{3}}{34}
+\indexentry{Privacy Shield|book{3}}{34}
+\indexentry{DPRC|book{3}}{34}
+\indexentry{Max Schrems|book{3}}{34}
+\indexentry{Cookie Rule|book{3}}{34}
+\indexentry{NIS {\contextnotesize (EU)}|book{3}}{36}
+\indexentry{CSIRT|book{3}}{36-37}
+\indexentry{NIS2 {\contextnotesize (EU)}|book{3}}{37-38}
+\indexentry{Essential Sectors|book{3}}{37}
+\indexentry{Important Sectors|book{3}}{37}
+\indexentry{Incident Notification|book{3}}{37}
+\indexentry{Early Warning|book{3}}{37}
+\indexentry{Cybersecurity Law {\contextnotesize (China)}|book{3}}{39-40}
+\indexentry{Data Protection Requirements|book{3}}{39}
+\indexentry{Network Operators|book{3}}{39}
+\indexentry{National Security Reviews|book{3}}{40}
+\indexentry{Source Code Review|book{3}}{40}
+\indexentry{Intellectual Property! |book{3}}{40}
+\indexentry{Third-Party Evaluation|book{3}}{41}
+\indexentry{SSAE|book{3}}{41}
+\indexentry{ISO 27000 Series! |book{3}}{41-42}
+\indexentry{DPF {\contextnotesize (EU-US)}}{41}
+\indexentry{Assessments|book{3}}{41}
+\indexentry{SIG|book{3}}{41}
+\indexentry{AUP|book{3}}{41}
+\indexentry{Vendor Onboarding Process|book{3}}{41}
+\indexentry{Third-Party Onboarding Process|book{3}}{41}
+\indexentry{Security Policy}{41}
+\indexentry{Shared Assessments|book{3}}{41}
+\indexentry{Standard Contractual Clauses|book{3}}{42}
+\indexentry{Binding Corporate Rules|book{3}}{42}
+\indexentry{Penetration TEsting|book{3}}{42}
+\indexentry{Vulnerability!Scans|book{3}}{42}
+\indexentry{Security Program!Controls|book{3}}{42}
+\indexentry{GTAG|book{3}}{42}
+\indexentry{Annual Review|book{3}}{42}
+\indexentry{Breach Insurance|book{3}}{42}
+\indexentry{Indemnification Clauses|book{3}}{42}
+\indexentry{Compliance by Design|book{3}}{43}
+\indexentry{Policy!Compliance by Design|book{3}}{43}
+\indexentry{Policy!Pyramid|book{3}}{45-46}
+\indexentry{Principle|book{3}}{45}
+\indexentry{Policy}{45}
+\indexentry{Policy!Inverted Pyramid|book{3}}{47-48}
+\indexentry{Inverted Policy Pyramid|book{3}}{47-48}
+\indexentry{Standard|book{3}}{45-46}
+\indexentry{Guideline|book{3}}{45-46}
+\indexentry{Procedure|book{3}}{45-46}
+\indexentry{Baseline|book{3}}{45-46}
+\indexentry{Acceptable Use Policy|book{3}}{45}
+\indexentry{Benchmark|book{3}}{46}
+\indexentry{Security Policy!Governance Life Cycle|book{3}}{49-50}
+\indexentry{Policy!Life Cycle|book{3}}{49-50}
+\indexentry{COBIT! |book{3}}{49}
+\indexentry{Security Policy!Effective}{51}
+\indexentry{Duty to Monitor}{51}
+\indexentry{Security Policy!Risk Reduction|book{3}}{53}
+\indexentry{Due Care|book{3}}{53}
+\indexentry{Policy!Steward|book{3}}{53}
+\indexentry{Duty to Monitor}{53-56}
+\indexentry{Board of Directors {\contextnotesize (BoD)}! |book{3}}{55-56}
+\indexentry{Duty of Good Faith|book{3}}{55}
+\indexentry{Health Regulations|book{3}}{57}
+\indexentry{Medical Regulations|book{3}}{57}
+\indexentry{US Regulations|book{3}}{57}
+\indexentry{Service Provider|book{3}}{57}
+\indexentry{EU Regulations|book{3}}{58}
+\indexentry{Infrastructure Regulations|book{3}}{58}
+\indexentry{Energy Regulations|book{3}}{58}
+\indexentry{Chemical Regulations|book{3}}{58}
+\indexentry{Financial Regulations|book{3}}{58}
+\indexentry{Security Frameworks!  |book{3}}{58}
+\indexentry{Policy!Adoption|book{3}}{59}
+\indexentry{Security Policy!Adoption|book{3}}{59}
+\indexentry{Due Care}{59}
+\indexentry{SMART|book{3}}{60}
+\indexentry{GRC Database|book{3}}{60}
+\indexentry{Annual Review}{61}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Assessment|book{3}}{62}
+\indexentry{Privacy Office|book{3}}{63}
+\indexentry{Security Policy!Templates {\contextnotesize (SANS)}|book{3}}{66}
+\indexentry{Security Policy!Starters|book{3}}{66}
+\indexentry{Policy!Types|book{3}}{67}
+\indexentry{Security Policy!Types|book{3}}{67}
+\indexentry{Governance Policies|book{3}}{67}
+\indexentry{Operational Policies|book{3}}{67}
+\indexentry{Acceptable Use Policy}{67}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Appetite|book{3}}{68-70}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Appetite!Statement|book{3}}{68-69}
+\indexentry{OCC|book{3}}{69}
+\indexentry{ERM|book{3}}{69}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Profile|book{3}}{70}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Capacity|book{3}}{70}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Tolerance|book{3}}{70}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Threshold|book{3}}{71}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Appetite!Statement}{72-73}
+\indexentry{Administrative Control|book{3}}{70}
+\indexentry{Third-Party Vendor Management|book{3}}{72}
+\indexentry{Cyber Risk|book{3}}{73}
+\indexentry{Policy!Language|book{3}}{75-86}
+\indexentry{Voicing|book{3}}{75-86}
+\indexentry{Mandatory Action|book{3}}{75}
+\indexentry{Prohibited Action|book{3}}{75}
+\indexentry{Must {\contextnotesize (Keyword)}|book{3}}{75}
+\indexentry{Obligation|book{3}}{75-76}
+\indexentry{Shall {\contextnotesize (Keyword)}|book{3}}{76}
+\indexentry{Prediction|book{3}}{76}
+\indexentry{Should {\contextnotesize (Keyword)}|book{3}}{77}
+\indexentry{May {\contextnotesize (Keyword)}|book{3}}{77}
+\indexentry{Recommendation|book{3}}{77}
+\indexentry{Will {\contextnotesize (Keyword)}|book{3}}{78-79}
+\indexentry{Prediction}{78}
+\indexentry{Principles of Clear Writing|book{3}}{79}
+\indexentry{Clear Writing|book{3}}{79}
+\indexentry{Keywords {\contextnotesize (Actions)}}|book{3}}{79}
+\indexentry{Must {\contextnotesize (Keyword)}}{79}
+\indexentry{Shall {\contextnotesize (Keyword)}}{79}
+\indexentry{Should {\contextnotesize (Keyword)}}{79-80}
+\indexentry{May {\contextnotesize (Keyword)}}{79-80}
+\indexentry{Policy!Power|book{3}}{80-81}
+\indexentry{Acceptable Behavior!Definition|book{3}}{81}
+\indexentry{Restrictive Policies|book{3}}{81}
+\indexentry{Must {\contextnotesize (Keyword)}}{81}
+\indexentry{Positive Voicing|book{3}}{81-82}
+\indexentry{Negative Voicing|book{3}}{81}
+\indexentry{Empowerment to Do the Right Thing|book{3}}{81}
+\indexentry{Must {\contextnotesize (Keyword)}}{83-86}
+\indexentry{Negative Voicing}{83}
+\indexentry{Never {\contextnotesize (Keyword)}|book{3}}{83}
+\indexentry{Mixed Voicing|book{3}}{84-85}
+\indexentry{Positive Voicing}{85-86}
+\indexentry{Consistent Voicing|book{3}}{86}
+\indexentry{Positive Voicing!VS Negative|book{3}}{86}
+\indexentry{Negative Voicing!VS Positive|book{3}}{86}
+\indexentry{Policy}{90}
+\indexentry{Policy!Management|book{3}}{90}
+\indexentry{Policy!Monolithic|book{3}}{90}
+\indexentry{Policy!Structure|book{3}}{91}
+\indexentry{Policy!Components|book{3}}{91}
+\indexentry{CIO {\contextnotesize (Policies)}|book{3}}{91}
+\indexentry{Legal Counsel \group! |book{3}}{91}
+\indexentry{Human Resources \group! |book{3}}{91}
+\indexentry{Policy!Components!Purpose|book{3}}{92}
+\indexentry{Access Control|book{3}}{92}
+\indexentry{Policy!Components!Scope|book{3}}{93}
+\indexentry{Policy!Components!History|book{3}}{94}
+\indexentry{Policy!Review Period|book{3}}{94}
+\indexentry{CISO {\contextnotesize (Policies)}|book{3}}{94}
+\indexentry{Fire And Forget Tendency {\contextnotesize (Policies)}|book{3}}{94}
+\indexentry{Policy!Enforcement|book{3}}{95}
+\indexentry{Penalties! |book{3}}{95}
+\indexentry{Policy!Violations|book{3}}{95}
+\indexentry{Sanction {\contextnotesize (Policies)}|book{3}}{95}
+\indexentry{Lost Device {\contextnotesize (Policies)}|book{3}}{95}
+\indexentry{Personal Device {\contextnotesize (Policies)}|book{3}}{95}
+\indexentry{Human Resources \group! }{95}
+\indexentry{Responsible Parties {\contextnotesize (Policies)}|book{3}}{97}
+\indexentry{Roles \& Responsibilities|book{3}}{97}
+\indexentry{Internal Audit \group}{97}
+\indexentry{Related Documents|book{3}}{98}
+\indexentry{Policy!Library! |book{3}}{98}
+\indexentry{Assumptions {\contextnotesize (Culture)}|book{3}}{100}
+\indexentry{Beliefs {\contextnotesize (Culture)}|book{3}}{100}
+\indexentry{Values {\contextnotesize (Culture)}! |book{3}}{100}
+\indexentry{ABV|book{3}}{100-101}
+\indexentry{Culture! |book{3}}{100}
+\indexentry{Culture!Security|book{3}}{102}
+\indexentry{Security Culture|book{3}}{102}
+\indexentry{Farming {\contextnotesize (Culture)}|book{3}}{102}
+\indexentry{Culture! }{103}
+\indexentry{Culture!Organizational|book{3}}{103}
+\indexentry{Organizational Culture|book{3}}{103}
+\indexentry{Culture!Security}{104-105}
+\indexentry{Security Culture}{104-105}
+\indexentry{Security Posture|book{3}}{104}
+\indexentry{Mission!  |book{3}}{104}
+\indexentry{Security Posture!Checklist|book{3}}{104-105}
+\indexentry{Password Assessment Tool|book{3}}{104}
+\indexentry{Commitment {\contextnotesize (Senior Management)}|book{3}}{104}
+\indexentry{Presumption of Privacy|book{3}}{104}
+\indexentry{Configuration Management|book{3}}{105}
+\indexentry{Security Controls! |book{3}}{105}
+\indexentry{Auditor|book{3}}{105}
+\indexentry{Management!Styles|book{3}}{106-107}
+\indexentry{Policy!Steering Committee|book{3}}{107}
+\indexentry{Defense {\contextnotesize (Management Style)}|book{3}}{107}
+\indexentry{Collaborative Management|book{3}}{107}
+\indexentry{Consultative Management|book{3}}{107}
+\indexentry{Charismatic Management|book{3}}{107}
+\indexentry{Top-Down Management|book{3}}{107}
+\indexentry{Authoritarian Management|book{3}}{107}
+\indexentry{Coercive Management|book{3}}{107}
+\indexentry{Perceptions|book{3}}{108}
+\indexentry{Assumptions {\contextnotesize (Culture)}}{108}
+\indexentry{Beliefs {\contextnotesize (Culture)}}{108}
+\indexentry{Dominance|book{3}}{108}
+\indexentry{Culture!Corporate|book{3}}{108}
+\indexentry{Corporate Culture|book{3}}{108}
+\indexentry{Policy!Exception Requests|book{3}}{110}
+\indexentry{Root Cause|book{3}}{110}
+\indexentry{Situational Awareness|book{3}}{110}
+\indexentry{Maturity {\contextnotesize (Policies)}|book{3}}{111}
+\indexentry{Organizational Data Gathering|book{3}}{113}
+\indexentry{Data Gathering Techniques|book{3}}{113}
+\indexentry{Requirements!Identification|book{3}}{113}
+\indexentry{Awareness! |book{3}}{113}
+\indexentry{Trends! |book{3}}{113}
+\indexentry{PEST!  |book{3}}{113}
+\indexentry{SWOT! |book{3}}{113}
+\indexentry{Gap Analysis! |book{3}}{113}
+\indexentry{Audit Findings|book{3}}{113}
+\indexentry{Interviews {\contextnotesize (Data Gathering)}|book{3}}{113}
+\indexentry{Baseline {\contextnotesize (Documentation)}|book{3}}{114}
+\indexentry{Documentation|book{3}}{114}
+\indexentry{Security Program!Policy|book{3}}{114}
+\indexentry{Letter of Endorsement|book{3}}{114}
+\indexentry{Unstated Rules|book{3}}{114}
+\indexentry{Overarching Policy|book{3}}{114}
+\indexentry{Security Posture}{114}
+\indexentry{Mission!  }{114}
+\indexentry{Enterprise Policy|book{3}}{114}
+\indexentry{Corporate Policy|book{3}}{114}
+\indexentry{Security Policy!Statement|book{3}}{114}
+\indexentry{Approving Authority {\contextnotesize (Policies)}|book{3}}{115}
+\indexentry{Requirements!Origin|book{3}}{116}
+\indexentry{Anomalous Issues|book{3}}{116}
+\indexentry{Security Incidents|book{3}}{116}
+\indexentry{Unexpected Events|book{3}}{116}
+\indexentry{Table-Top Exercises|book{3}}{116-117}
+\indexentry{Policy!Planning|book{3}}{117}
+\indexentry{Policy!Development|book{3}}{117}
+\indexentry{Decision Making Testing|book{3}}{117}
+\indexentry{Policy!Testing|book{3}}{117}
+\indexentry{Procedure!Testing|book{3}}{117}
+\indexentry{Communication Testing {\contextnotesize (Policies)}|book{3}}{117}
+\indexentry{Table-Top Exercises!Ransomware|book{3}}{117}
+\indexentry{Law Enforcement|book{3}}{117}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Analysis! |book{3}}{118}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Management|book{3}}{118}
+\indexentry{One-Sentence Position|book{3}}{119}
+\indexentry{VPN Token|book{3}}{119}
+\indexentry{Acceptable Use Policy}{119}
+\indexentry{Remote Access Policy|book{3}}{119}
+\indexentry{Physical Security|book{3}}{119}
+\indexentry{Data Classification|book{3}}{119}
+\indexentry{Data Destruction|book{3}}{119}
+\indexentry{Digital Signatures|book{3}}{119}
+\indexentry{Economic Espionage|book{3}}{119}
+\indexentry{Electronic Mail|book{3}}{119}
+\indexentry{User Account Policy|book{3}}{119}
+\indexentry{Employee Surveillance|book{3}}{119}
+\indexentry{Presumption of Privacy}{119}
+\indexentry{Use Case! |book{3}}{120-121}
+\indexentry{Policy!Exception Requests!Reduction|book{3}}{120-121}
+\indexentry{Policy!Enforcement}{120}
+\indexentry{Bottleneck|book{3}}{120}
+\indexentry{Policy!Adoption}{121}
+\indexentry{Position Statement {\contextnotesize (Policies)}|book{3}}{122}
+\indexentry{Legal Counsel \group! }{122}
+\indexentry{SMART!Test|book{3}}{122}
+\indexentry{Policy!Levels|book{3}}{123}
+\indexentry{Enterprise Policy}{123}
+\indexentry{Corporate Policy}{123}
+\indexentry{Governing Policy}{123}
+\indexentry{Issue-Specific Policy|book{3}}{123}
+\indexentry{System-Specific Policy|book{3}}{123}
+\indexentry{Program Policy|book{3}}{123}
+\indexentry{Division-Wide Policy|book{3}}{123}
+\indexentry{Local Policy|book{3}}{123}
+\indexentry{Security Procedure|book{3}}{124}
+\indexentry{Policy!Assessment!First Step|book{3}}{124}
+\indexentry{SOP|book{3}}{124}
+\indexentry{Checklist|book{3}}{124}
+\indexentry{Policy!Hierarchy|book{3}}{124}
+\indexentry{Security Policy}{124}
+\indexentry{Generative AI {\contextnotesize (Development Example)}|book{3}}{129-145}
+\indexentry{LLM|book{3}}{129}
+\indexentry{RAG|book{3}}{129}
+\indexentry{Security Scoping Matrix|book{3}}{129}
+\indexentry{PII!With GenAI|book{3}}{130}
+\indexentry{LLM!And PII|book{3}}{130}
+\indexentry{LLM!Application Architecture|book{3}}{131}
+\indexentry{Inference|book{3}}{131}
+\indexentry{Vector Database|book{3}}{131}
+\indexentry{Embedding Model|book{3}}{131}
+\indexentry{Machine Learning|book{3}}{131}
+\indexentry{Nearest-Neighbor Search|book{3}}{131}
+\indexentry{RAG}{131}
+\indexentry{Agentic Application|book{3}}{131-132}
+\indexentry{LLM!Training|book{3}}{132}
+\indexentry{OWASP Top 10 {\contextnotesize (LLM)}|book{3}}{133}
+\indexentry{Generative AI!Top Security Concerns|book{3}}{133-134}
+\indexentry{LLM!Top Security Concerns|book{3}}{133-134}
+\indexentry{LLM!Security Issues|book{3}}{135-136}
+\indexentry{AI Act {\contextnotesize (EU)}|book{3}}{137}
+\indexentry{Risk-Based Approach {\contextnotesize (Regulations)}|book{3}}{137-140}
+\indexentry{Executive Order on AI {\contextnotesize (US)}|book{3}}{139}
+\indexentry{AI Risk Management Framework|book{3}}{139}
+\indexentry{Red Teaming {\contextnotesize (AI)}|book{3}}{139}
+\indexentry{AI Risk Management Framework}{141}
+\indexentry{RMF {\contextnotesize (NIST)}|book{3}}{141}
+\indexentry{Trustworthy AI|book{3}}{141}
+\indexentry{Generative AI {\contextnotesize (Development Example)}!Purpose Statement|book{3}}{143}
+\indexentry{Policy!Purpose!Example|book{3}}{143}
+\indexentry{Generative AI {\contextnotesize (Development Example)}!Policy Statement|book{3}}{144}
+\indexentry{HITL|book{3}}{144}
+\indexentry{Application Security {\contextnotesize (Development Example)}|book{3}}{147-153}
+\indexentry{Application Security {\contextnotesize (Development Example)}!Top Security Concerns|book{3}}{147}
+\indexentry{OWASP Top 10 {\contextnotesize (AppSec)}|book{3}}{147}
+\indexentry{Application Security {\contextnotesize (Development Example)}!Policy Statement|book{3}}{149}
+\indexentry{Secure Development Policy Statement|book{3}}{149}
+\indexentry{SDLC|book{3}}{149}
+\indexentry{Secure Development Standards|book{3}}{150-151}
+\indexentry{Secure Development Guidelines|book{3}}{152}
+\indexentry{Policy!Components}{153}
+\indexentry{Application Security {\contextnotesize (Development Example)}!Policy Components|book{3}}{153}
+\indexentry{Vulnerability!Mgt {\contextnotesize (Development Example)}|book{3}}{155-163}
+\indexentry{Current State!Example|book{3}}{159}
+\indexentry{Vulnerability!Mgt {\contextnotesize (Development Example)}!Policy Set|book{3}}{160}
+\indexentry{Policy!Set!Example|book{3}}{160}
+\indexentry{Policy!Target Example|book{3}}{161}
+\indexentry{Vulnerability!Mgt {\contextnotesize (Development Example)}!Roles \& Responsibilities|book{3}}{162}
+\indexentry{Roles \& Responsibilities!Example|book{3}}{162}
+\indexentry{Vulnerability!Mgt {\contextnotesize (Development Example)}!Institutionalization|book{3}}{163}
+\indexentry{Policy!Management!Roles|book{3}}{165}
+\indexentry{Roles \& Responsibilities}{165}
+\indexentry{Key Stakeholders! |book{3}}{165}
+\indexentry{Policy!Development!Stakeholders|book{3}}{165}
+\indexentry{Approval Process|book{3}}{166}
+\indexentry{Policy!Committee|book{3}}{166}
+\indexentry{Legal Counsel \group! }{166}
+\indexentry{Policy!Communication|book{3}}{167}
+\indexentry{Policy!Socialization|book{3}}{167}
+\indexentry{Policy!Distribution|book{3}}{167}
+\indexentry{Policy!Document Management|book{3}}{167}
+\indexentry{Approved Policies|book{3}}{167}
+\indexentry{Awareness! }{168}
+\indexentry{Policy!Awareness|book{3}}{168}
+\indexentry{Policy!Training|book{3}}{168}
+\indexentry{Policy!Measurement|book{3}}{169}
+\indexentry{Internal Audit \group}{169}
+\indexentry{Policy!Enforcement}{170-171}
+\indexentry{Policy!Exception Requests}{172}
+\indexentry{Policy!Exception Requests!Handling|book{3}}{173}
+\indexentry{Exception Process|book{3}}{173}
+\indexentry{Bottleneck}{173}
+\indexentry{Business Owner|book{3}}{173}
+\indexentry{Expiration Date {\contextnotesize (Policies)}|book{3}}{174-175}
+\indexentry{Review Date {\contextnotesize (Policies)}|book{3}}{174-175}
+\indexentry{Policy!Expiration|book{3}}{174}
+\indexentry{Policy!Review Period}{174-175}
+\indexentry{Policy!Committee}{174}
+\indexentry{SMART!Approach|book{3}}{177-192}
+\indexentry{Policy!Key for Success|book{3}}{177}
+\indexentry{SMART!Approach!1@Specific|book{3}}{178-180}
+\indexentry{Specific {\contextnotesize (SMART)}|book{3}}{178-180}
+\indexentry{Approval Process}{178}
+\indexentry{Procedure}{178}
+\indexentry{Data Classification}{178}
+\indexentry{SMART!Approach!2@Measurable|book{3}}{181-183}
+\indexentry{Measurable {\contextnotesize (SMART)}|book{3}}{181-183}
+\indexentry{Measurable Outcome|book{3}}{181}
+\indexentry{Procedure}{181}
+\indexentry{Need-To-Know Approach|book{3}}{183}
+\indexentry{Access Control}{183}
+\indexentry{SMART!Approach!3@Achievable|book{3}}{184-185}
+\indexentry{Achievable {\contextnotesize (SMART)}|book{3}}{184-185}
+\indexentry{Service Level Agreement! |book{3}}{185}
+\indexentry{SMART!Approach!4@Relevant|book{3}}{186-187}
+\indexentry{Relevant {\contextnotesize (SMART)}|book{3}}{186-187}
+\indexentry{SMART!Approach!5@Time-Bound|book{3}}{188-189}
+\indexentry{Time-Bound {\contextnotesize (SMART)}|book{3}}{188-189}
+\indexentry{Cloud Storage Policy|book{3}}{199-201}
+\indexentry{Policy!Example {\contextnotesize (Cloud Storage)}|book{3}}{199-201}
+\indexentry{Data Confidentiality Levels|book{3}}{200}
+\indexentry{Cloud Storage Policy!Scope|book{3}}{204}
+\indexentry{SMART!Approach!1@Specific}{205}
+\indexentry{Cloud Storage Policy!Language|book{3}}{207}
+\indexentry{Policy!Structure}{208}
+\indexentry{Policy!Assessment|book{3}}{209}
+\indexentry{Policy!Purpose}{210}
+\indexentry{Policy!Tips for Success|book{3}}{211}
+\indexentry{Risk-Based Approach {\contextnotesize (Policies)}|book{3}}{207}
+\indexentry{Acceptable Behavior!Bounds|book{3}}{210}
+\indexentry{Risk {\contextnotesize (= Impact x Likelihood)}!Assessment}{210}
+\indexentry{Sensitivity Levels|book{3}}{210}
+\indexentry{Protect People/Organization|book{3}}{210}
+\indexentry{Security Policy}{210}
+\indexentry{Security Posture}{211}
+\indexentry{Security Culture}{211}
+\indexentry{Security Policy!Governance Life Cycle}{211}
+\indexentry{Policy!Life Cycle}{211}
+\indexentry{Positive Voicing}{211}
+\indexentry{Policy!Development!First Step|book{3}}{211}
+
+
+\comment{********************************************************************************************
+                                     FOURTH BOOK SECTION
+*****************************************************************************************************}
+\indexentry{Change! |book{4}}{5}
+\indexentry{Habit|book{4}}{5}
+\indexentry{Leadership!Excellence|book{4}}{5}
+\indexentry{Monthly Progress Meeting|book{4}}{5}
+\indexentry{New Habits|book{4}}{5}
+\indexentry{Lead By Example|book{4}}{6}
+\indexentry{Leadership|book{4}}{7}
+\indexentry{Boss|book{4}}{8-9}
+\indexentry{Manager|book{4}}{8}
+\indexentry{Leader|book{4}}{8}
+\indexentry{McGregor Theory X/Y|book{4}}{10-11}
+\indexentry{Direction|book{4}}{10}
+\indexentry{Boss}{12}
+\indexentry{Micro-Management|book{4}}{12}
+\indexentry{Lead By Example}{12}
+\indexentry{Management|book{4}}{13}
+\indexentry{Leadership}{13}
+\indexentry{Manager}{14}
+\indexentry{Management!VS Leadership|book{4}}{15}
+\indexentry{Leadership!VS Management|book{4}}{15}
+\indexentry{Boss}{16}
+\indexentry{Leader}{16}
+\indexentry{Manager}{16}
+\indexentry{Leadership}{16}
+\indexentry{Trait Theory|book{4}}{17}
+\indexentry{Great Events Theory|book{4}}{17}
+\indexentry{Transformational Leadership!Theory|book{4}}{17}
+\indexentry{Leader!Transformational|book{4}}{17}
+\indexentry{People|book{4}}{22-23}
+\indexentry{Handling People|book{4}}{22}
+\indexentry{Changing People|book{4}}{23}
+\indexentry{Leader!Good|book{4}}{24-26}
+\indexentry{Cyber Leader|book{4}}{24}
+\indexentry{Mindset|book{4}}{25}
+\indexentry{Growth Mindset|book{4}}{25}
+\indexentry{Effective Leadership|book{4}}{26}
+\indexentry{Leadership!Effective|book{4}}{26}
+\indexentry{Leadership!Styles|book{4}}{27}
+\indexentry{Authoritarian Leadership|book{4}}{27}
+\indexentry{Paternalistic Leadership|book{4}}{27}
+\indexentry{Democratic Leadership|book{4}}{27}
+\indexentry{Laissez-Faire Leadership|book{4}}{27}
+\indexentry{Transactional Leadership|book{4}}{27}
+\indexentry{Transformational Leadership|book{4}}{27}
+\indexentry{Situational Leadership|book{4}}{28-30}
+\indexentry{Leadership!Effective}{28}
+\indexentry{Directing {\contextnotesize (Situational Leadership)}|book{4}}{29}
+\indexentry{Coaching {\contextnotesize (Situational Leadership)}|book{4}}{29}
+\indexentry{Supporting {\contextnotesize (Situational Leadership)}|book{4}}{29}
+\indexentry{Delegating {\contextnotesize (Situational Leadership)}|book{4}}{28-29}
+\indexentry{Hersey|book{4}}{28}
+\indexentry{Blanchard|book{4}}{28}
+\indexentry{Follower|book{4}}{29}
+\indexentry{Leadership!Behavior|book{4}}{29}
+\indexentry{Leadership!Styles}{29}
+\indexentry{Telling {\contextnotesize (Situational Leadership)}|book{4}}{29}
+\indexentry{Selling {\contextnotesize (Situational Leadership)}|book{4}}{29}
+\indexentry{Participating {\contextnotesize (Situational Leadership)}|book{4}}{29}
+\indexentry{Generational Perspectives|book{4}}{31-32}
+\indexentry{Baby Boomers|book{4}}{31}
+\indexentry{Gen X|book{4}}{31}
+\indexentry{Millennials|book{4}}{31}
+\indexentry{Gen Z|book{4}}{31}
+\indexentry{Leadership!Great|book{4}}{34}
+\indexentry{Leader!Becoming One|book{4}}{39}
+\indexentry{Leadership!Adjustment|book{4}}{40}
+\indexentry{Friend Management|book{4}}{42}
+\indexentry{Favoritism|book{4}}{42}
+\indexentry{Manipulation|book{4}}{42}
+\indexentry{Five Dysfunctions of a Team|book{4}}{43}
+\indexentry{Dysfunctions of a Team|book{4}}{43}
+\indexentry{Security Team!Dysfunctions|book{4}}{43}
+\indexentry{Trust|book{4}}{44-49}
+\indexentry{Circle of Trust|book{4}}{45}
+\indexentry{Honesty|book{4}}{45}
+\indexentry{Integrity! |book{4}}{45}
+\indexentry{Empathy|book{4}}{46}
+\indexentry{Contribution|book{4}}{46}
+\indexentry{Consistency|book{4}}{46}
+\indexentry{Transparency|book{4}}{46}
+\indexentry{Integrity! }{47}
+\indexentry{Simon Sinek! |book{4}}{48}
+\indexentry{Team!Building|book{4}}{48-49}
+\indexentry{Leader!True|book{4}}{52}
+\indexentry{Servant Leadership!VS Self-Serving Leadership|book{4}}{52}
+\indexentry{Servant Leadership|book{4}}{53-55}
+\indexentry{Leader!Servant|book{4}}{53}
+\indexentry{Servant Leadership!Principles|book{4}}{54}
+\indexentry{Listening|book{4}}{54}
+\indexentry{Empathy}{54}
+\indexentry{Healing|book{4}}{54}
+\indexentry{Awareness {\contextnotesize (Leadership)}|book{4}}{54}
+\indexentry{Persuasion|book{4}}{55}
+\indexentry{Conceptual Thinking|book{4}}{55}
+\indexentry{Foresight|book{4}}{55}
+\indexentry{Stewardship|book{4}}{55}
+\indexentry{Growth of People|book{4}}{55}
+\indexentry{Community|book{4}}{55}
+\indexentry{Hierarchical Management|book{4}}{55}
+\indexentry{Maslow's Hierarchy of Needs|book{4}}{56-57}
+\indexentry{Basic Needs|book{4}}{56}
+\indexentry{Growth Needs|book{4}}{56}
+\indexentry{Meta Needs|book{4}}{56}
+\indexentry{Self-Actualization|book{4}}{56}
+\indexentry{Irving Herzberg|book{4}}{57}
+\indexentry{Hygiene|book{4}}{57}
+\indexentry{Hygiene!Factors|book{4}}{57-58}
+\indexentry{Motivational Factors|book{4}}{57-58}
+\indexentry{Dissatisfaction|book{4}}{57-58}
+\indexentry{Motivator-Hygiene Theory|book{4}}{57}
+\indexentry{Motivators|book{4}}{58}
+\indexentry{Recognition|book{4}}{58}
+\indexentry{Quality of Work Life|book{4}}{59}
+\indexentry{QWL|book{4}}{59}
+\indexentry{Favorableness|book{4}}{59}
+\indexentry{Routine Job|book{4}}{59}
+\indexentry{Monotony|book{4}}{59}
+\indexentry{Job Enlargement|book{4}}{59}
+\indexentry{Job Enrichment|book{4}}{59}
+\indexentry{Self-Actualization}{59}
+\indexentry{Skill Variety|book{4}}{60}
+\indexentry{Task Identity|book{4}}{60}
+\indexentry{Autonomy|book{4}}{60}
+\indexentry{Feedback|book{4}}{60}
+\indexentry{Human Capital Model|book{4}}{61-62}
+\indexentry{Burnout|book{4}}{61}
+\indexentry{Vicious Cycle|book{4}}{61}
+\indexentry{Creativity|book{4}}{61}
+\indexentry{Growth {\contextnotesize (Human Capital)}|book{4}}{61}
+\indexentry{Skills {\contextnotesize (Human Capital)}|book{4}}{61}
+\indexentry{Empowerment {\contextnotesize (Human Capital)}|book{4}}{61}
+\indexentry{Feedback!Loops {\contextnotesize (Human Capital)}|book{4}}{62}
+\indexentry{Formal Authority|book{4}}{64}
+\indexentry{Moral Authority|book{4}}{64}
+\indexentry{Micro-Management}{64}
+\indexentry{Top-Down Leadership|book{4}}{65}
+\indexentry{Collaborative Leadership|book{4}}{65}
+\indexentry{Communication!Effective|book{4}}{70-71}
+\indexentry{Communication|book{4}}{70-76}
+\indexentry{Communication!Process|book{4}}{71}
+\indexentry{Idea {\contextnotesize (Communication)}|book{4}}{71}
+\indexentry{Encoding {\contextnotesize (Communication)}|book{4}}{71}
+\indexentry{Decoding {\contextnotesize (Communication)}|book{4}}{71}
+\indexentry{Message|book{4}}{71-72}
+\indexentry{Content {\contextnotesize (Communication)}|book{4}}{72}
+\indexentry{Context {\contextnotesize (Communication)}|book{4}}{72}
+\indexentry{Tone|book{4}}{72}
+\indexentry{Body Language|book{4}}{72}
+\indexentry{Email {\contextnotesize (Communication)}|book{4}}{72}
+\indexentry{Emojis|book{4}}{72}
+\indexentry{Written Communication|book{4}}{72-73}
+\indexentry{Communication!Written VS Verbal|book{4}}{73}
+\indexentry{Verbal Communication|book{4}}{73}
+\indexentry{Communication!Filters|book{4}}{74}
+\indexentry{Culture {\contextnotesize (Communication)}|book{4}}{74}
+\indexentry{Background {\contextnotesize (Communication)}|book{4}}{74}
+\indexentry{Bias {\contextnotesize (Communication)}|book{4}}{74}
+\indexentry{Noise {\contextnotesize (Communication)}|book{4}}{74}
+\indexentry{Perception {\contextnotesize (Communication)}|book{4}}{74}
+\indexentry{Stress {\contextnotesize (Communication)}|book{4}}{74}
+\indexentry{Communication!Effective!Tips|book{4}}{75}
+\indexentry{Body Language}{75-76}
+\indexentry{Presentations {\contextnotesize (Communication)}|book{4}}{76-81}
+\indexentry{One-Hour Talk|book{4}}{76}
+\indexentry{Joke {\contextnotesize (Presentations)}|book{4}}{76}
+\indexentry{Story {\contextnotesize (Presentations)}|book{4}}{76}
+\indexentry{Presentations {\contextnotesize (Communication)}!Good|book{4}}{76}
+\indexentry{Presentations {\contextnotesize (Communication)}!Tips|book{4}}{78}
+\indexentry{Great Presentation|book{4}}{78}
+\indexentry{Laser Pointer|book{4}}{78}
+\indexentry{Presentations {\contextnotesize (Communication)}!Intros \& Outros|book{4}}{79}
+\indexentry{Story {\contextnotesize (Presentations)}}{80}
+\indexentry{Packaging {\contextnotesize (Presentations)}}{80}
+\indexentry{Problem Statement {\contextnotesize (Presentations)}}{80}
+\indexentry{Presentations {\contextnotesize (Communication)}!Tips}{81}
+\indexentry{Presentations {\contextnotesize (Communication)}!Remote|book{4}}{81}
+\indexentry{Communication!Planned VS Unplanned|book{4}}{84}
+\indexentry{Listening!Active \& Passive|book{4}}{85}
+\indexentry{Hearing|book{4}}{85}
+\indexentry{Words per Minute {\contextnotesize (Communication)}|book{4}}{85}
+\indexentry{Active Listening|book{4}}{85}
+\indexentry{Types of Interactions|book{4}}{85}
+\indexentry{Levels of Communication|book{4}}{85}
+\indexentry{Communication!Levels|book{4}}{85}
+\indexentry{Facts {\contextnotesize (Communication)}|book{4}}{85}
+\indexentry{Clichés {\contextnotesize (Communication)}|book{4}}{85}
+\indexentry{Thoughts {\contextnotesize (Communication)}|book{4}}{85}
+\indexentry{Beliefs {\contextnotesize (Communication)}|book{4}}{85}
+\indexentry{Feelings {\contextnotesize (Communication)}|book{4}}{85}
+\indexentry{Emotions {\contextnotesize (Communication)}|book{4}}{85}
+\indexentry{Levels of Listening|book{4}}{86}
+\indexentry{Active {\contextnotesize (Listening)}|book{4}}{86}
+\indexentry{Attentive {\contextnotesize (Listening)}|book{4}}{86}
+\indexentry{Selective {\contextnotesize (Listening)}|book{4}}{86}
+\indexentry{Pretend {\contextnotesize (Listening)}|book{4}}{86}
+\indexentry{Ignore {\contextnotesize (Listening)}|book{4}}{86}
+\indexentry{Listening!Levels|book{4}}{86}
+\indexentry{Empathy}{86-87}
+\indexentry{Listening!Active \& Passive}{87}
+\indexentry{Body Language}{87}
+\indexentry{Message!Percentage of Words|book{4}}{87}
+\indexentry{Active Listening}{89}
+\indexentry{Feedback}{89}
+\indexentry{Meetings {\contextnotesize (Listening)}|book{4}}{90}
+\indexentry{Communication!Strategic|book{4}}{93}
+\indexentry{Bad News|book{4}}{95}
+\indexentry{Feedback}{96}
+\indexentry{Feedback!Providing|book{4}}{97}
+\indexentry{FILE Model|book{4}}{97}
+\indexentry{Facts {\contextnotesize (Feedback)}|book{4}}{97}
+\indexentry{Impact {\contextnotesize (Feedback)}|book{4}}{97}
+\indexentry{Listen {\contextnotesize (Feedback)}|book{4}}{97}
+\indexentry{Expectations {\contextnotesize (Feedback)}|book{4}}{97}
+\indexentry{Feedback!Providing!Examples|book{4}}{98-99}
+\indexentry{ALCR Model|book{4}}{100}
+\indexentry{Approachable {\contextnotesize (Feedback)}|book{4}}{100}
+\indexentry{Listen {\contextnotesize (Feedback)}}{100}
+\indexentry{Clarify {\contextnotesize (Feedback)}|book{4}}{100}
+\indexentry{Respond {\contextnotesize (Feedback)}|book{4}}{100}
+\indexentry{Body Language}{100}
+\indexentry{Feedback!Receiving|book{4}}{100-101}
+\indexentry{Feedback!Providing}{101}
+\indexentry{Performance Analysis Quadrant|book{4}}{102}
+\indexentry{PAQ|book{4}}{102}
+\indexentry{Root Cause!Analysis {\contextnotesize (Performance)}|book{4}}{102}
+\indexentry{Performance Review|book{4}}{107}
+\indexentry{Feedback}{107-108}
+\indexentry{Criticism {\contextnotesize (Performance)}|book{4}}{107-108}
+\indexentry{Performance Review!Tips|book{4}}{108}
+\indexentry{Radical Candor|book{4}}{109}
+\indexentry{Confrontation|book{4}}{110}
+\indexentry{Conflict Resolution|book{4}}{111}
+\indexentry{Conflict Resolution!Styles|book{4}}{112}
+\indexentry{Competitive {\contextnotesize (Conflict Resolution)}|book{4}}{112}
+\indexentry{Collaborative {\contextnotesize (Conflict Resolution)}|book{4}}{112}
+\indexentry{Compromising {\contextnotesize (Conflict Resolution)}|book{4}}{112}
+\indexentry{Accomodating {\contextnotesize (Conflict Resolution)}|book{4}}{112}
+\indexentry{Avoiding {\contextnotesize (Conflict Resolution)}|book{4}}{112}
+\indexentry{Difficult Conversations|book{4}}{113-114}
+\indexentry{Group|book{4}}{117}
+\indexentry{Team|book{4}}{117}
+\indexentry{Security Team|book{4}}{117}
+\indexentry{Low-Performing Team|book{4}}{118-119}
+\indexentry{GroupThink|book{4}}{119}
+\indexentry{Turnover|book{4}}{119}
+\indexentry{Vicious Cycle}{119}
+\indexentry{High-Performing Team|book{4}}{120}
+\indexentry{Weaknesses {\contextnotesize (Team)}|book{4}}{120}
+\indexentry{High Trust|book{4}}{121}
+\indexentry{Effective Communication! |book{4}}{122}
+\indexentry{Organizational Clarity|book{4}}{123}
+\indexentry{Roles \& Responsibilities! |book{4}}{123}
+\indexentry{Priorities|book{4}}{124}
+\indexentry{Team!Better Results|book{4}}{125}
+\indexentry{Team!Moving Forward|book{4}}{126-127}
+\indexentry{Effective Communication! }{126}
+\indexentry{Knowledge Transfer|book{4}}{126}
+\indexentry{Productive Participation|book{4}}{126}
+\indexentry{Sense of Belonging|book{4}}{127}
+\indexentry{Diversity of Thought|book{4}}{127}
+\indexentry{Self-Awareness|book{4}}{127}
+\indexentry{Risk-Taking|book{4}}{127}
+\indexentry{Team!Styles|book{4}}{128}
+\indexentry{Contributor {\contextnotesize (Team)}|book{4}}{128}
+\indexentry{Communicator {\contextnotesize (Team)}|book{4}}{128}
+\indexentry{Collaborator {\contextnotesize (Team)}|book{4}}{128}
+\indexentry{Challenger {\contextnotesize (Team)}|book{4}}{128}
+\indexentry{Team!Strong|book{4}}{129}
+\indexentry{Team!Model|book{4}}{134-136}
+\indexentry{Tuckman's Teaming Model|book{4}}{134-136}
+\indexentry{Forming {\contextnotesize (Team)}|book{4}}{134}
+\indexentry{Storming {\contextnotesize (Team)}|book{4}}{134-135}
+\indexentry{Norming {\contextnotesize (Team)}|book{4}}{134-135}
+\indexentry{Performing {\contextnotesize (Team)}|book{4}}{134-135}
+\indexentry{Adjourning {\contextnotesize (Team)}|book{4}}{134}
+\indexentry{Adjourning {\contextnotesize (Team)}}{136}
+\indexentry{Team!Work|book{4}}{137}
+\indexentry{Delegation|book{4}}{139}
+\indexentry{Micro-Management}{141}
+\indexentry{Effective Communication! }{141}
+\indexentry{Delegation!Benefits|book{4}}{142}
+\indexentry{Delegation!Levels|book{4}}{143}
+\indexentry{High Autonomy|book{4}}{143}
+\indexentry{Delegation!ABC|book{4}}{144}
+\indexentry{Assess {\contextnotesize (Delegation)}|book{4}}{145-146}
+\indexentry{Break The News {\contextnotesize (Delegation)}|book{4}}{147-148}
+\indexentry{SMART! |book{4}}{148}
+\indexentry{Communicate {\contextnotesize (Delegation)}|book{4}}{149-150}
+\indexentry{Learning!Three E's|book{4}}{157-158}
+\indexentry{Education! |book{4}}{157-158}
+\indexentry{Exposure {\contextnotesize (Learning)}|book{4}}{157-159}
+\indexentry{Experience|book{4}}{157-159}
+\indexentry{Learning|book{4}}{157-161}
+\indexentry{Learning!Development Activities|book{4}}{158-159}
+\indexentry{Shadowing|book{4}}{159}
+\indexentry{Mentor|book{4}}{159}
+\indexentry{Herrman Brain Dominance Instrument|book{4}}{160}
+\indexentry{Learning!Styles|book{4}}{160}
+\indexentry{Learning!Optimal Methods|book{4}}{160}
+\indexentry{Thinking|book{4}}{160}
+\indexentry{Analytical {\contextnotesize (Thinking \& Learning)}|book{4}}{160}
+\indexentry{Sequential {\contextnotesize (Thinking \& Learning)}|book{4}}{160}
+\indexentry{Interpersonal {\contextnotesize (Thinking \& Learning)}|book{4}}{160}
+\indexentry{Imaginative {\contextnotesize (Thinking \& Learning)}|book{4}}{160}
+\indexentry{Preferred Style {\contextnotesize (Thinking \& Learning)}|book{4}}{160}
+\indexentry{Mental Effort {\contextnotesize (Thinking \& Learning)}|book{4}}{160}
+\indexentry{Satisfaction! |book{4}}{162-163}
+\indexentry{Engagement {\contextnotesize (Employee)}|book{4}}{162-163}
+\indexentry{Strategic Alignment|book{4}}{162}
+\indexentry{Competency|book{4}}{162}
+\indexentry{Coaching|book{4}}{164-171}
+\indexentry{Coaching!What|book{4}}{166}
+\indexentry{GROW {\contextnotesize (Coaching)}|book{4}}{167-169}
+\indexentry{SMART! }{167}
+\indexentry{Brainstorming|book{4}}{168}
+\indexentry{Coaching!Do \& Don't|book{4}}{170}
+\indexentry{Coaching!Action Plan|book{4}}{171}
+\indexentry{Mentor}{172}
+\indexentry{Mentoring! |book{4}}{172-177}
+\indexentry{Self-Reflection|book{4}}{172}
+\indexentry{Mentoring!What|book{4}}{173}
+\indexentry{Mentoring!When|book{4}}{174}
+\indexentry{Onboarding|book{4}}{174}
+\indexentry{Promotion|book{4}}{174}
+\indexentry{Professional Development Plan|book{4}}{174}
+\indexentry{Mentoring!Process|book{4}}{175}
+\indexentry{Initial Meeting {\contextnotesize (Mentoring)}|book{4}}{175}
+\indexentry{Mentoring!Tips|book{4}}{176}
+\indexentry{Mentoring!How to Find|book{4}}{177}
+\indexentry{Sponsorship! |book{4}}{179}
+\indexentry{Executive {\contextnotesize (Sponsorship)}|book{4}}{179}
+\indexentry{C-Level Positions|book{4}}{179}
+\indexentry{Sponsorship!Tips|book{4}}{180}
+\indexentry{Mentor}{179}
+\indexentry{Sponsor|book{4}}{179}
+\indexentry{Coaching}{181}
+\indexentry{Mentoring! }{181}
+\indexentry{Sponsorship! }{181}
+\indexentry{Performance Improvement {\contextnotesize (Coaching)}|book{4}}{181}
+\indexentry{Personal Growth {\contextnotesize (Mentoring)}|book{4}}{181}
+\indexentry{Career Advancement {\contextnotesize (Sponsorship)}|book{4}}{181}
+\indexentry{Training {\contextnotesize (Coaching)}|book{4}}{181}
+\indexentry{Career Management|book{4}}{182}
+\indexentry{PIE|book{4}}{182}
+\indexentry{Exposure {\contextnotesize (Career)}|book{4}}{182}
+\indexentry{Performance {\contextnotesize (Career)}|book{4}}{182}
+\indexentry{Image {\contextnotesize (Career)}|book{4}}{182}
+\indexentry{Career Management!6 C's|book{4}}{183}
+\indexentry{Six C's of Job Change|book{4}}{183}
+\indexentry{Steve Katz|book{4}}{183}
+\indexentry{Job Change|book{4}}{183}
+\indexentry{Opportunity {\contextnotesize (Career)}|book{4}}{183}
+\indexentry{Challenge {\contextnotesize (Career)}|book{4}}{183}
+\indexentry{Chemistry {\contextnotesize (Career)}|book{4}}{183}
+\indexentry{Commitment {\contextnotesize (Career)}|book{4}}{183}
+\indexentry{Compensation {\contextnotesize (Career)}|book{4}}{183}
+\indexentry{Contract {\contextnotesize (Career)}|book{4}}{183}
+\indexentry{Commute {\contextnotesize (Career)}|book{4}}{183}
+\indexentry{Change! }{186-188}
+\indexentry{Stages of Change|book{4}}{186}
+\indexentry{Stages of Grief|book{4}}{187}
+\indexentry{Unfreezing {\contextnotesize (Change)}|book{4}}{186}
+\indexentry{Refreezing {\contextnotesize (Change)}|book{4}}{186}
+\indexentry{Change!Agent|book{4}}{187}
+\indexentry{Denial {\contextnotesize (Grief)}|book{4}}{187}
+\indexentry{Anger {\contextnotesize (Grief)}|book{4}}{187}
+\indexentry{Bargaining {\contextnotesize (Grief)}|book{4}}{187}
+\indexentry{Depression {\contextnotesize (Grief)}|book{4}}{187}
+\indexentry{Acceptance {\contextnotesize (Grief)}|book{4}}{187}
+\indexentry{Behavioral Economics|book{4}}{189}
+\indexentry{Herd Mentality|book{4}}{189}
+\indexentry{Status Quo Bias|book{4}}{189}
+\indexentry{Availability Heuristic|book{4}}{189}
+\indexentry{Rules|book{4}}{190}
+\indexentry{Awareness!Problem|book{4}}{190}
+\indexentry{Valence|book{4}}{191}
+\indexentry{Arousal|book{4}}{191}
+\indexentry{Choice Architecture|book{4}}{191}
+\indexentry{Senior Leadership|book{4}}{192}
+\indexentry{Talk Circle|book{4}}{192}
+\indexentry{Exclusion|book{4}}{192}
+\indexentry{Arousal}{193}
+\indexentry{Social Facilitation|book{4}}{193}
+\indexentry{Labels|book{4}}{194}
+\indexentry{Power of Labels|book{4}}{194}
+\indexentry{Issue-Specific Policy! |book{4}}{194}
+\indexentry{Change!Behavior|book{4}}{195}
+\indexentry{Trust!Equation|book{4}}{196}
+\indexentry{Credibility! |book{4}}{196}
+\indexentry{Reliability|book{4}}{196}
+\indexentry{Empathy}{196}
+\indexentry{Self-Orientation|book{4}}{196}
+\indexentry{Strategic Planning!Skills Development|book{4}}{197}
+
+
+\comment{********************************************************************************************
+                                      CROSS-KEYS SECTION
+*****************************************************************************************************}
+\indexentry{PMI \goto Project Management Institute|comment}{0}
+\indexentry{SLA \goto Service Level Agreement|comment}{0}
+\indexentry{ICS \goto Industrial Control System|comment}{0}
+\indexentry{Cyber Kill Chain \goto Kill Chain|comment}{0}
+\indexentry{Intrusion Kill Chain \goto Kill Chain|comment}{0}
+\indexentry{ISF \goto Information Security Forum|comment}{0}
+\indexentry{CSF \goto Cyber Security Framework|comment}{0}
+\indexentry{SCF \goto Secure Controls Framework|comment}{0}
+\indexentry{ALE {\contextnotesize (= ARO x SLE)} \goto Annual Loss Expectancy|comment}{0}
+\indexentry{ARO \goto Annual Rate of Occurrence|comment}{0}
+\indexentry{SLE \goto Single Loss Expectancy|comment}{0}
+\indexentry{EF \goto Exposure Factor|comment}{0}
+\indexentry{Security Metrics!Program \goto Metrics Program|comment}{0}
+\indexentry{Five Forces \goto Porter's Five Forces|comment}{0}
+\indexentry{RAS \goto Risk Appetite Statement|comment}{0}
+\indexentry{Security Policy!Requirements \goto Requirements|comment}{0}
+\indexentry{Policy!Requirements \goto Requirements|comment}{0}
+\indexentry{HBDI \goto Herrman Brain Dominance Instrument|comment}{0}
