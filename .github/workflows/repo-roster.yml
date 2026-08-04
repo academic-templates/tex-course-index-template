@@ -19,6 +19,7 @@ jobs:
       - name: Generate Roster
         uses: varunsridharan/action-repository-roster@main
         env:
+          CURL_CA_BUNDLE: /etc/ssl/certs/ca-certificates.crt
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           STARS_OUTPUT_TYPE: 'table'
           STARS_OUTPUT_STYLE: 'img-small'
