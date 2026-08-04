@@ -167,12 +167,5 @@ You may also like these:
 - [TeX Poster Template](https://github.com/academic-templates/tex-poster-template): A template for creating a nice scientific poster with LaTeX.
 - [TeX Slideshow Template](https://github.com/academic-templates/tex-slideshow-template): A template for making a nice presentation with LaTeX.
 
-
-## :clap:  Supporters
-
-<!-- REPOSITORY_STARS:START --> <!-- REPOSITORY_STARS:END -->
-
-<!-- REPOSITORY_FORKS:START --><!-- REPOSITORY_FORKS:END -->
-
 <p align="center"><a href="#top"><img src="https://img.shields.io/badge/Back%20to%20top--lightgrey?style=social" alt="Back to top" height="20"/></a></p>
 
