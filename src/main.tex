@@ -26,6 +26,7 @@
 \input{data.tex}
 % additional commands for the document
 \newcommand{\comment}[1]{}						 % allows to write comments in the .idx file
+\def\contextnotesize{\scriptsize}                % allows to set the size of text used to contextualize an entry
 % additional commands for the index references
 \newcommand{\blankline}[0]{\hspace{\linewidth}}  % fills the reference line with blank
 \newcommand{\book}[2]{\coursecode.#1--#2}		 % displays a code when using \book
@@ -64,6 +65,9 @@
 \newcommand{\toolb}[0]{\includegraphics[height=8pt]{lib/tool_blue} }
 \newcommand{\toolr}[0]{\includegraphics[height=8pt]{lib/tool_red} }
 \newcommand{\malware}[0]{\includegraphics[height=8pt]{lib/malware} }
+\newcommand{\individual}[0]{\includegraphics[height=8pt]{lib/individual} }
+\newcommand{\group}[0]{\includegraphics[height=8pt]{lib/group} }
+\newcommand{\executive}[0]{\includegraphics[height=8pt]{lib/executive} }
 % licenses
 \newcommand{\cc}[0]{\includegraphics[height=16pt]{lib/cc} }
 \newcommand{\ccby}[0]{\includegraphics[height=16pt]{lib/cc-by} }
