@@ -1,0 +1,27 @@
+name: Repository Roster
+
+on:
+  watch:
+    types: [started]
+  fork:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily as a backup to catch updates
+  workflow_dispatch: # Allows you to run it manually
+
+jobs:
+  update-roster:
+    name: "Update Latest Roster"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Generate Roster
+        uses: varunsridharan/action-repository-roster@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          STARS_OUTPUT_TYPE: 'table'
+          STARS_OUTPUT_STYLE: 'img-small'
+          FORK_OUTPUT_TYPE: 'image'
+          FORK_OUTPUT_STYLE: 'img-small,no-name'
